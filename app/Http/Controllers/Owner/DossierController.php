@@ -29,7 +29,7 @@ class DossierController extends Controller
     {
         //
         $dossiers = Projet::all()->where('owner_id',Auth::user()->id);
-        return view('/owner/dossiers/index')->with(compact('dossiers'));
+        return view('/Owner/Dossiers/index')->with(compact('dossiers'));
     }
 
 	public function getChoicesJson(Request $request){
@@ -56,7 +56,7 @@ class DossierController extends Controller
         //$variantes = Variante::all();
 	    $villes = Ville::all();
 
-        return view('/owner/dossiers/create')->with(compact('tprojets','villes'));
+        return view('/Owner/Dossiers/create')->with(compact('tprojets','villes'));
     }
 
 	/**
@@ -232,7 +232,7 @@ class DossierController extends Controller
 
 	    $projet = Projet::where(['token'=>$token])->first();
 	    //dd($dossier->bilans);
-	    return view('owner/dossiers/show')->with(compact('projet'));
+	    return view('Owner/Dossiers/show')->with(compact('projet'));
     }
 
     /**
