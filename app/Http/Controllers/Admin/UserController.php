@@ -26,7 +26,7 @@ class UserController extends Controller
         $users = User::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('admin/users/index')->with(compact('users'));
+        return view('Admin/Users/index')->with(compact('users'));
 
     }
 
