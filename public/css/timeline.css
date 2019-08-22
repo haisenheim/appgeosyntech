@@ -1,0 +1,127 @@
+/*.contenu {
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.image-fond {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-size: cover;
+    width: 100%;
+    height: 98vh;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+}*/
+
+
+/*.analyse-dialog{
+    width: auto;
+    max-width: 60%;
+    margin-top: 5%;
+}
+
+#adi-loader{
+    width: 20%;
+    margin: 0 auto;
+}*/
+
+
+.bg-blue {
+    background-color: #3498db;
+}
+
+.text-white, .bg-success-lighter-obligataire-lighter *, .bg-gray span.text-link, .bg-gray :not(.form-control), .bg-success-lighter span.text-link, .bg-success-lighter :not(.form-control), .bg-success-darker span.text-link, .bg-success-darker :not(.form-control), .bg-success span.text-link, .bg-success :not(.form-control), .bg-danger span.text-link, .bg-danger :not(.form-control), .bg-blue span.text-link, .bg-blue :not(.form-control), .bg-blue-darker span.text-link, .bg-blue-darker :not(.form-control), .bg-white-0_2 span.text-link, .bg-white-0_2 :not(.form-control), .bg-obligataire span.text-link, .bg-obligataire :not(.form-control), .bg-obligataire-lighter span.text-link, .bg-obligataire-lighter :not(.form-control) {
+    color: #fff;
+}
+.text-white, .bg-success-lighter-obligataire-lighter *, .bg-gray span.text-link, .bg-gray :not(.form-control), .bg-success-lighter span.text-link, .bg-success-lighter :not(.form-control), .bg-success-darker span.text-link, .bg-success-darker :not(.form-control), .bg-success span.text-link, .bg-success :not(.form-control), .bg-danger span.text-link, .bg-danger :not(.form-control), .bg-blue span.text-link, .bg-blue :not(.form-control), .bg-blue-darker span.text-link, .bg-blue-darker :not(.form-control), .bg-white-0_2 span.text-link, .bg-white-0_2 :not(.form-control), .bg-obligataire span.text-link, .bg-obligataire :not(.form-control), .bg-obligataire-lighter span.text-link, .bg-obligataire-lighter :not(.form-control) {
+    color: #fff;
+}
+.toppadded-30, .panel:not(.panel-primary) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/*.row{
+    display: block;
+}*/
+
+.stepwizard-step p {
+    margin-top: 10px;
+}
+.stepwizard-row {
+    display: table-row;
+}
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+
+fieldset{
+    padding: 15px;
+    border: 1px #b9b9b9 solid;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+legend{
+    font-weight: 700;
+    font-size: 11px;
+    font-family: "segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000000;
+    padding: 5px;
+    width: auto;
+}
+
+
+.btn-default:hover {
+    color: #fff;
+    background-color: #f1f8ff;
+    border-color: #b9bbbe;
+}
+
+.btn-default {
+    color: #555555;
+    background-color: #DDDDDD;
+    border-color: #BBBBBB;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #5969ff;
+    border-color: #5969ff;
+}

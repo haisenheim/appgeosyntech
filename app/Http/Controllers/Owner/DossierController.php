@@ -1,0 +1,271 @@
+<?php
+
+namespace App\Http\Controllers\Owner;
+
+use App\Http\Controllers\Controller;
+use App\Models\Bilan;
+use App\Models\ChoicesProjet;
+use App\Models\ProduitsProjet;
+use App\Models\Projet;
+use App\Models\Resultat;
+use App\Models\Tinvestissement;
+use App\Models\Tprojet;
+use App\Models\Variante;
+use App\Models\Ville;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Prevbilan;
+use App\Models\Prevresultat;
+use App\Models\Prevtresorerie;
+
+class DossierController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+        $dossiers = Projet::all()->where('owner_id',Auth::user()->id);
+        return view('/owner/dossiers/index')->with(compact('dossiers'));
+    }
+
+	public function getChoicesJson(Request $request){
+		$projet = Projet::find($request->id);
+		$choices = $projet->choices;
+
+		$choix = [];
+		foreach($choices as $choice){
+			$choix[] = $choice->choice_id;
+		}
+		return response()->json($choix);
+	}
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+        $tprojets = Tprojet::all();
+        //$tinvestissements = Tinvestissement::all();
+        //$variantes = Variante::all();
+	    $villes = Ville::all();
+
+        return view('/owner/dossiers/create')->with(compact('tprojets','villes'));
+    }
+
+	/**
+	 * @param Request $request
+	 * @return \Illuminate\Http\RedirectResponse
+	 * edit a field with a new value
+	 */
+
+	public function editFieldJson(Request $request){
+		$model = $request->model;
+		$id = $request->id;
+		$name = $request->name;
+		$value = $request->value;
+		$search = null;
+		if($model=='Prevbilan'){
+			$search = Prevbilan::find($id);
+			$search->$name=$value;
+			$search->save();
+			return response()->json($search);
+		}
+
+		//dd($model);
+
+		//$search = App\Models\$model::find($id);
+		dd($search);
+	}
+
+
+	public function uploadImage(Request $request){
+
+		//dd(public_path('img'));
+		$projet = Projet::where('token',$request->projet_token)->first();
+		$file = $request->imageUri;
+		$ext = $file->getClientOriginalExtension();
+		$arr_ext = array('jpg','png','jpeg','gif');
+		if(in_array($ext,$arr_ext)){
+			if(!file_exists(public_path('img').'/projets')){
+				mkdir(public_path('img').'/projets');
+			}
+
+			//dd($projet);
+
+			if(file_exists(public_path('img').'/projets/'.$projet->token.'.'.$ext)){
+				unlink(public_path('img').'/projets/'.$projet->token.'.'.$ext);
+			}
+			$name = $projet->token.'.'.$ext;
+			$file->move(public_path('img/projets'), $name);
+			//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
+			$projet->imageUri = 'projets/'.$name;
+			$projet->save();
+		}
+
+		return redirect()->back();
+
+	}
+
+
+	// Premiere sauvegarde du dossier
+
+	public function initJson(Request $request){
+		//$dossier = new Projet();
+
+		//dd($request->all());
+		$answers = $request->all()['answers'];
+		$produits = $request->all()['produits'];
+
+		$dossier = $request->all()['dossier'];
+		$dossier['moi_id'] = date('m');
+		$dossier['annee'] = date('Y');
+		$dossier['author_id']= Auth::user()->id;
+		$dossier['owner_id']=Auth::user()->id;
+		$dossier['description_modele_economique'] = $request->all()['bm'];
+		$dossier['capital'] = isset($dossier['capital'])?1:0;
+		$dossier['token'] = sha1(date('ymdhs').$dossier['owner_id']);
+		$dossier = Projet::create($dossier);
+		if($dossier){
+			if(!empty($request->all()['bil1']['stocks'])){
+				$bilan1 = $request->all()['bil1'];
+				$bilan1['annee'] = date('Y') -1;
+				$bilan1['moi_id'] = date('m');
+				$bilan1['projet_id'] = $dossier->id;
+				$bilan1['user_id'] =Auth::user()->id;
+				$bilan1 = Bilan::create($bilan1);
+			}
+
+			if(!empty($request->all()['bil2']['stocks'])){
+				$bilan2 = $request->all()['bil2'];
+				$bilan2['annee'] = date('Y') -2;
+				$bilan2['moi_id'] = date('m');
+				$bilan2['projet_id'] = $dossier->id;
+				$bilan2['user_id'] =Auth::user()->id;
+				$bilan2 = Bilan::create($bilan2);
+			}
+
+			if(!empty($request->all()['bil3']['stocks'])){
+				$bilan2 = $request->all()['bil3'];
+				$bilan2['annee'] = date('Y') -3;
+				$bilan2['moi_id'] = date('m');
+				$bilan2['projet_id'] = $dossier->id;
+				$bilan2['user_id'] =Auth::user()->id;
+				$bilan3 = Bilan::create($bilan2);
+			}
+
+			if(!empty($request->all()['compte1']['ca'])){
+				$res1 = $request->all()['compte1'];
+				$res1['annee'] = date('Y') -1;
+				$res1['moi_id'] = date('m');
+				$res1['projet_id'] = $dossier->id;
+				$res1['token'] =sha1(date('yhdmis').Auth::user()->id);
+				$result = Resultat::create($res1);
+			}
+
+			if(!empty($request->all()['compte2']['ca'])){
+				$res1 = $request->all()['compte2'];
+				$res1['annee'] = date('Y') -2;
+				$res1['moi_id'] = date('m');
+				$res1['projet_id'] = $dossier->id;
+				$res1['token'] =sha1(date('yhdims').Auth::user()->id);
+				$result = Resultat::create($res1);
+			}
+
+			if(!empty($request->all()['compte3']['ca'])){
+				$res1 = $request->all()['compte3'];
+				$res1['annee'] = date('Y') -3;
+				$res1['moi_id'] = date('m');
+				$res1['projet_id'] = $dossier->id;
+				$res1['token'] =sha1(date('myhsiyd').Auth::user()->id);
+				$result = Resultat::create($res1);
+			}
+
+
+
+			for($i = 0; $i<count($produits);$i++){
+				$dp = new ProduitsProjet();
+				//$dp->produi_id =
+				$dp->produit_id = $produits[$i];
+				$dp->projet_id = $dossier->id;
+				$dp->save();
+			}
+
+			foreach($answers as $answer){
+				$an= new ChoicesProjet();
+				$an->choice_id=$answer['choice_id'];
+				$an->projet_id=$dossier->id;
+				$an->save();
+			}
+		}
+
+		return response()->json($dossier->token);
+		//dd($request->all());
+	}
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Projet  $projet
+     * @return \Illuminate\Http\Response
+     */
+    public function show($token)
+    {
+        //
+
+	    $projet = Projet::where(['token'=>$token])->first();
+	    //dd($dossier->bilans);
+	    return view('owner/dossiers/show')->with(compact('projet'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Projet  $projet
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Projet $projet)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Projet  $projet
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Projet $projet)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Projet  $projet
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Projet $projet)
+    {
+        //
+    }
+}
