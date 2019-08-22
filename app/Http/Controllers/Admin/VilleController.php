@@ -41,7 +41,7 @@ class VilleController extends Controller
     {
         //
         $pays = Pay::all();
-        return view('admin/villes/create')->with(compact('pays'));
+        return view('Admin/Villes/create')->with(compact('pays'));
     }
 
     /**
@@ -74,7 +74,7 @@ class VilleController extends Controller
     {
         //
         $ville = Ville::find($ville)->first();
-        return view('admin/villes/show')->with(compact('ville'));
+        return view('Admin/Villes/show')->with(compact('ville'));
     }
 
     /**

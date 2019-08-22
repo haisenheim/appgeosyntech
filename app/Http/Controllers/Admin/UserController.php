@@ -40,7 +40,7 @@ class UserController extends Controller
         //
         $roles = Role::all();
         $pays = Pay::all();
-        return view('admin/users/create')->with(compact('roles','pays'));
+        return view('Admin/Users/create')->with(compact('roles','pays'));
     }
 
     /**
@@ -85,7 +85,7 @@ class UserController extends Controller
     {
         //
         $user = User::find($user)->first();
-        return view('admin/users/show')->with(compact('user'));
+        return view('Admin/Users/show')->with(compact('user'));
     }
 
     /**
