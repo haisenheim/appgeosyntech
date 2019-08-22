@@ -28,7 +28,7 @@ class VilleController extends Controller
        // dd($villes);
        // echo "Bonjour tout le monde!!";
        // $request->session()->flash('message','Liste des villes!!!');
-        return view('admin/villes/index')->with(compact('villes'))->with('success','Liste des villes');
+        return view('Admin/Villes/index')->with(compact('villes'))->with('success','Liste des villes');
 
     }
 
