@@ -33,24 +33,10 @@
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
-    <div class="overlay"></div>
+    <h1 class="mb-5">PLATEFORME DE FINANCEMENT DE PARTICIPATIF</h1>
     <div class="container">
       <div class="row">
-      <h1 class="mb-5">PLATEFORME DE FINANCEMENT DE PARTICIPATIF</h1>
-        <div style="height: 400px" id="map" class="col-xl-9 mx-auto">
-
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">CREER UN COMPTE</button>
-              </div>
-            </div>
-          </form>
+        <div style="height: 400px" id="map" class="">
         </div>
       </div>
     </div>
@@ -225,8 +211,8 @@
 
   <script type="text/javascript">
   			// On initialise la latitude et la longitude de Paris (centre de la carte)
-  			var lat = 48.852969;
-  			var lon = 2.349903;
+  			var lat = -4.2658300;
+  			var lon = 15.2831800;
   			var macarte = null;
   			// Fonction d'initialisation de la carte
   			function initMap() {
@@ -235,7 +221,7 @@
                   // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
                   L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
                       // Il est toujours bien de laisser le lien vers la source des données
-                      attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                      attribution: 'Plan geographique des projets <a href="//osm.org/copyright">OBAC ALERT</a> - CABINET OBAC <a href="#">PAR Alliages Technologies</a>',
                       minZoom: 1,
                       maxZoom: 20
                   }).addTo(macarte);
