@@ -24,18 +24,12 @@
 
   <!-- Favicon -->
   <link href="img/favicon.ico" rel="icon">
+  <link rel="icon" href="{{asset('img/logo-obac.png')}}"/>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}"/>
+  <link rel="stylesheet" href="{{asset('lib/font-awesome/css/font-awesome.min.css')}}"/>
+  <link rel="stylesheet" href="{{asset('css/front-style.css')}}"/>
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: Bell
@@ -54,7 +48,7 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-md-12">
-          <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="img/logo.png"></a>
+          <a class="hero-brand" href="index__.html" title="Home"><img alt="Bell Logo" src="img/logo.png"></a>
         </div>
       </div>
 
@@ -78,7 +72,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <a href="index.html"><img src="img/logo-nav.png" alt="" title="" /></img></a>
+        <a href="index__.html"><img src="img/logo-nav.png" alt="" title="" /></a>
         <!-- Uncomment below if you prefer to use a text image -->
         <!--<h1><a href="#hero">Bell</a></h1>-->
       </div>
@@ -592,7 +586,7 @@
     </div>
   </section>
   <!-- /Team -->
-  <!-- @component: footer -->
+
 
   <section id="contact">
     <div class="container">
@@ -660,43 +654,37 @@
 
           <div class="col-lg-6 col-xs-12 text-lg-left text-center">
             <p class="copyright-text">
-              © BELL Theme
+              © OBAC ALERT <?= date('Y') ?> &nbsp; Tous droits reservés
             </p>
             <div class="credits">
-              <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
-              -->
-             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+             Concu par ALLIAGES Technologies <a href="#">https://alliages-technologies.com</a>
             </div>
           </div>
 
           <div class="col-lg-6 col-xs-12 text-lg-right text-center">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="index.html">Home</a>
+                <a href="index__.html">ACCUEIL</a>
               </li>
 
               <li class="list-inline-item">
-                <a href="#about">About Us</a>
+                <a href="#about">A PROPOS</a>
               </li>
 
               <li class="list-inline-item">
-                <a href="#features">Features</a>
+                <a href="#features">OPPORTUNITES</a>
               </li>
 
               <li class="list-inline-item">
-                <a href="#portfolio">Portfolio</a>
+                <a href="#portfolio">PARTENAIRES</a>
               </li>
 
               <li class="list-inline-item">
-                <a href="#team">Team</a>
+                <a href="#team">SECTEURS D'ACTIVITE</a>
               </li>
 
               <li class="list-inline-item">
-                <a href="#contact">Contact</a>
+                <a href="#contact">CONTACT</a>
               </li>
             </ul>
           </div>
@@ -708,25 +696,29 @@
   <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
 
 
-  <!-- Required JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/tether/js/tether.min.js"></script>
-  <script src="lib/stellar/stellar.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/easing/easing.js"></script>
-  <script src="lib/stickyjs/sticky.js"></script>
-  <script src="lib/parallax/parallax.js"></script>
-  <script src="lib/lockfixed/lockfixed.min.js"></script>
+
 
   <!-- Template Specisifc Custom Javascript File -->
-  <script src="js/custom.js"></script>
 
   <script src="contactform/contactform.js"></script>
+  <script type="text/javascript" src="{{asset('lib/jquery/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/jquery/jquery-migrate.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/superfish/hoverIntent.js')}}"></script>
+
+  <script type="text/javascript" src="{{asset('lib/superfish/superfish.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/tether/js/tether.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/stellar/stellar.min.js')}}"></script>
+
+  <script type="text/javascript" src="{{asset('lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/counterup/counterup.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/waypoints/waypoints.min.js')}}"></script>
+
+  <script type="text/javascript" src="{{asset('lib/easing/easing.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/stickyjs/sticky.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/parallax/parallax.js')}}"></script>
+  <script type="text/javascript" src="{{asset('lib/lockfixed/lockfixed.min.js')}}"></script>
+
+  <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
 
 </body>
 </html>
