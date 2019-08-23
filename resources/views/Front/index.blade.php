@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
-  <link href="../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/css/landing-page.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/landing-page.css')}}"/>
 
 </head>
 
@@ -138,7 +138,7 @@
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/img/testimonials-3.jpg" alt="">
+            <img class="img-fluid rounded-circle mb-3" src="/img/testimonials-3.jpg" alt="">
             <h5>Sarah W.</h5>
             <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
           </div>
