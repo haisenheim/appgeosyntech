@@ -37,7 +37,7 @@
     <div class="container">
       <div class="row">
       <h1 class="mb-5">PLATEFORME DE FINANCEMENT DE PARTICIPATIF</h1>
-        <div id="map" class="col-xl-9 mx-auto">
+        <div style="height: 400px" id="map" class="col-xl-9 mx-auto">
 
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
