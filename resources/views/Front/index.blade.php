@@ -1,241 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app-front')
 
-<head>
+@section('content')
+      <!-- Masthead -->
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+      <header style="background-color: #FFFFFF; min-height: 400px;" class="masthead text-white text-center">
+        <h5>ICI LA CARTE DES PROJETS</h5>
+        <div class="">
+          <div class="" style="background-color: #FFFFFF">
+            <div style="min-height: 100%;" id="map" class="">
 
-  <title>OBAC ALERT</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
-  <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}"/>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-
-  <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="{{asset('css/landing-page.css')}}"/>
-
-</head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">OBAC ALERT</a>
-      <a class="btn btn-primary" href="/login">Se connecter</a>
-    </div>
-  </nav>
-
-  <!-- Masthead -->
-  <header class="masthead text-white text-center">
-    <h1 class="mb-5">PLATEFORME DE FINANCEMENT DE PARTICIPATIF</h1>
-    <div class="container">
-      <div class="row">
-        <div style="height: 400px" id="map" class="">
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Icons Grid -->
-  <section class="features-icons bg-light text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
             </div>
-            <h3>Fully Responsive</h3>
-            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
+      </header>
+
+      <!-- Icons Grid -->
+      <section class="features-icons bg-light text-center">
+        <div class="container">
+          <div class="row">
+            @foreach($projets as $projet)
+                <div class="col-md-3 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title"><?= $projet->name ?></h5>
+                    </div>
+                    <div class="panel-body">
+                         <img class="img-thumbnail" src="{{$projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo-obac.png')}}" alt=""/>
+                        <p>CONTEXTE : <?= $projet->teaser?$projet->teaser->contexte:'Non defini' ?></p>
+                    </div>
+                </div>
+
+                </div>
+            @endforeach
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Testimonials -->
+      <section class="testimonials text-center bg-light">
+        <div class="container">
+          <h2 class="mb-5">CE QUE LES GENS PENSENT DE VOTRE SITE</h2>
+
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="call-to-action text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-9 mx-auto">
+              <h2 class="mb-4">Ready to get started? Sign up now!</h2>
             </div>
-            <h3>Bootstrap 4 Ready</h3>
-            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+              <form>
+                <div class="form-row">
+                  <div class="col-12 col-md-9 mb-2 mb-md-0">
+                    <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                  </div>
+                </div>
+              </form>
             </div>
-            <h3>Easy to Use</h3>
-            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Image Showcases -->
-  <section class="showcase">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
-
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/img/bg-showcase-1.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Fully Responsive Design</h2>
-          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/img/bg-showcase-2.jpg');"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Updated For Bootstrap 4</h2>
-          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/img/bg-showcase-3.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Easy to Use &amp; Customize</h2>
-          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials text-center bg-light">
-    <div class="container">
-      <h2 class="mb-5">What people are saying...</h2>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/img/testimonials-1.jpg" alt="">
-            <h5>Margaret E.</h5>
-            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/img/testimonials-2.jpg" alt="">
-            <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="/img/testimonials-3.jpg" alt="">
-            <h5>Sarah W.</h5>
-            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="call-to-action text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-              </div>
+      <!-- Footer -->
+      <footer class="footer bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+              <ul class="list-inline mb-2">
+                <li class="list-inline-item">
+                  <a href="#">About</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="#">Contact</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="#">Terms of Use</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
+              <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
             </div>
-          </form>
+            <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mr-3">
+                  <a href="#">
+                    <i class="fab fa-facebook fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mr-3">
+                  <a href="#">
+                    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-instagram fa-2x fa-fw"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </footer>
+      <!-- Nous chargeons les fichiers CDN de Leaflet. Le CSS AVANT le JS -->
 
-  <!-- Footer -->
-  <footer class="footer bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-          <ul class="list-inline mb-2">
-            <li class="list-inline-item">
-              <a href="#">About</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Contact</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
-        </div>
-        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-facebook fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-instagram fa-2x fa-fw"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Nous chargeons les fichiers CDN de Leaflet. Le CSS AVANT le JS -->
 
-  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 
-  <script type="text/javascript">
-  			// On initialise la latitude et la longitude de Paris (centre de la carte)
-  			var lat = -4.2658300;
-  			var lon = 15.2831800;
-  			var macarte = null;
-  			// Fonction d'initialisation de la carte
-  			function initMap() {
-  				// Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
-                  macarte = L.map('map').setView([lat, lon], 11);
-                  // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
-                  L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-                      // Il est toujours bien de laisser le lien vers la source des données
-                      attribution: 'Plan geographique des projets <a href="//osm.org/copyright">OBAC ALERT</a> - CABINET OBAC <a href="#">PAR Alliages Technologies</a>',
-                      minZoom: 1,
-                      maxZoom: 20
-                  }).addTo(macarte);
-              }
-  			window.onload = function(){
-  				// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
-  				initMap();
-  			};
-  		</script>
+@endsection
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/vendor/jquery/jquery.min.js"></script>
-  <script src="../../../../../Users/owner/Downloads/startbootstrap-landing-page-gh-pages/startbootstrap-landing-page-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</body>
-
-</html>

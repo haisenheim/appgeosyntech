@@ -15,8 +15,13 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('Front/index');
+	$projets = \App\Models\Projet::all();
+    return view('Front/index')->with(compact('projets'));
 });
+
+Route::get('/about',function(){
+	return view('Front/about');
+})->name('about');
 
 /*
 

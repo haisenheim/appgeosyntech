@@ -5669,17 +5669,18 @@ tbody.collapse.in {
 }
 
 .navbar-default {
-  background-color: #fff;
-  border-color: #d3e0e9;
+
+    background-color: #096a2f;
+    border-color: #4e9546;
 }
 
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #FFF;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5d5d;
+  color: #0fd91f;
   background-color: transparent;
 }
 
@@ -5688,12 +5689,12 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: #b2ffa7;
   background-color: transparent;
 }
 
