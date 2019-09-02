@@ -4,7 +4,7 @@
       <!-- Masthead -->
 
       <header style="background-color: #FFFFFF; min-height: 400px;" class="masthead text-white text-center">
-        <h5>ICI LA CARTE DES PROJETS</h5>
+        <h5>ICI LA CARTE</h5>
         <div class="">
           <div class="" style="background-color: #FFFFFF">
             <div style="min-height: 100%;" id="map" class="">
