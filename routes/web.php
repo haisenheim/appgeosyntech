@@ -15,9 +15,16 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-	$projets = \App\Models\Projet::all();
+	$projets = \App\Models\Projet::all()->where('active',1);
     return view('Front/index')->with(compact('projets'));
 });
+
+Route::get('/getvilles',function(){
+	$villes = \App\Models\Ville::all()->where('pay_id',1);
+	return json_encode($villes);
+});
+
+Route::get('villes/{id}','VilleController@show');
 
 Route::get('/about',function(){
 	return view('Front/about');
@@ -37,7 +44,10 @@ Route::prefix('admin')
         Route::resource('villes','VilleController');
 	    Route::resource('dossiers','ProjetController');
         Route::resource('users','UserController');
-        //Route::resource('tinvess','TprojetController');
+	    Route::resource('pays','PayController');
+	    Route::resource('tinvestissements','TinvestissementController');
+	    Route::resource('tags','TagController');
+        Route::resource('porteurs','ClientController');
         Route::resource('experts','ExpertController');
         Route::resource('angels','AngelController');
         Route::resource('dossiers','ProjetController');
@@ -48,6 +58,7 @@ Route::prefix('admin')
 	    Route::get('dossier/validate-plan-strategique/{token}','ProjetController@validateDiagStrategique');
 	    Route::get('dossier/validate-plan-financier/{token}','ProjetController@validateMontageFinancier');
         //Route::resource('variantesfinancements','VfinancementController');
+	    Route::post('villes/save','VilleController@save');
     });
 
 //Liste des routes de l'investisseur
@@ -60,6 +71,9 @@ Route::prefix('angel')
         Route::resource('investissements','InvestissementController');
         Route::resource('alertes','AlerteController');
         Route::get('profil','ProfilController');
+	    Route::get('/','FrontController');
+	    Route::get('dashboard','DashboardController');
+	    Route::resource('tags','TagController');
     });
 
 //Liste des routes du consultant
@@ -102,6 +116,7 @@ Route::prefix('owner')
 	    Route::post('/dossier/initJson','DossierController@initJson');
 	    Route::get('dossier/getchoices','DossierController@getChoicesJson');
 	    Route::post('dossier/upload-image','DossierController@uploadImage');
+	    Route::post('dossier/add-tag','DossierController@addTags');
 	    Route::get('dossier/edit-field','DossierController@editFieldJson');
     });
 

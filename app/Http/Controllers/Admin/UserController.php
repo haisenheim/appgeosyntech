@@ -23,7 +23,8 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::all();
+	    $users= \App\User::all();
+        //$users = User::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
         return view('Admin/Users/index')->with(compact('users'));
@@ -84,7 +85,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         //
-        $user = User::find($user)->first();
+        //$user = User::find($user)->first();
         return view('Admin/Users/show')->with(compact('user'));
     }
 

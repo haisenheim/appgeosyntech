@@ -7,6 +7,7 @@ use App\Models\Client;
 use App\Models\Pay;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class ClientController extends Controller
@@ -57,9 +58,9 @@ class ClientController extends Controller
         $user->phone = $request['phone'];
         $user->address = $request['address'];
         $user->email = $request['email'];
-        $user->pay_id = $request['pay_id'];
+        $user->pay_id = Auth::user()->pay_id;
         $user->password=Hash::make($request['password']);
-        $user->role_id =2;
+        $user->role_id =3;
         $user->moi_id=date('m');
         $user->annee=date('Y');
         $user->male = $request['male']=='on'?1:0;
@@ -67,8 +68,8 @@ class ClientController extends Controller
         $user->active = 1;
 
         $user->save();
-        session('message','L\'expert a été correctement enregistré !!!');
-        return redirect('/admin/experts');
+        session('message','L\'entrepreneur a été correctement enregistré !!!');
+        return redirect('/admin/porteurs');
 
 
     }

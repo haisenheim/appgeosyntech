@@ -15,6 +15,19 @@ return [
 
     'name' => env('APP_NAME', 'OBAC ALERT'),
 
+	/*
+	|--------------------------------------------------------------------------
+	| Application locale for Faker Class
+	|--------------------------------------------------------------------------
+	|
+	| This value determines the "environment" your application is currently
+	| running in. This may determine how you prefer to configure various
+	| services your application utilizes. Set this in your ".env" file.
+	|
+	*/
+
+	'faker_locale' => 'fr',
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

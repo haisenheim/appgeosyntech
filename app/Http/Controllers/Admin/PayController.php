@@ -15,7 +15,11 @@ class PayController extends Controller
      */
     public function index()
     {
-        //
+	    $pays = Pay::all();
+	    // dd($villes);
+	    // echo "Bonjour tout le monde!!";
+	    // $request->session()->flash('message','Liste des villes!!!');
+	    return view('Admin/Pays/index')->with(compact('pays'))->with('success');
     }
 
     /**
@@ -34,10 +38,24 @@ class PayController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+	public function store(Request $request)
+	{
+		//
+		//dd($request->imageUri);
+		$ville = new Pay();
+		$ville->name = $request['name'];
+
+		$ville->longitude = $request['longitude'];
+		$ville->latitude = $request['latitude'];
+		$ville->code = $request['code'];
+
+
+		$ville->save();
+		$request->session()->flash('success','Le pays a été correctement enregistré !!!');
+		return redirect('/admin/pays');
+
+
+	}
 
     /**
      * Display the specified resource.

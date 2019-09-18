@@ -39,11 +39,16 @@ class User extends Authenticatable
         return $this->belongsTo('App\Models\Role');
     }
 
+	public function pays(){
+		return $this->belongsTo('App\Models\Pay','pay_id');
+	}
+
+	public function tags(){
+		return $this->belongsToMany('App\Models\Tags', 'angels_tags', 'user_id','tag_id');
+	}
+
     public function getNameAttribute(){
         return $this->last_name . "  ".$this->first_name;
     }
-
-
-
 
 }

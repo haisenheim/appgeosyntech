@@ -15,7 +15,9 @@ class TinvestissementController extends Controller
      */
     public function index()
     {
-        //
+	    $pays = Tinvestissement::all();
+
+	    return view('Admin/Tinvestissements/index')->with(compact('pays'))->with('success');
     }
 
     /**
@@ -37,6 +39,11 @@ class TinvestissementController extends Controller
     public function store(Request $request)
     {
         //
+	    $ville = new Tinvestissement();
+	    $ville->name = $request['name'];
+	    $ville->save();
+	    $request->session()->flash('success','Le type d\'investissement a été correctement enregistré !!!');
+	    return redirect('/admin/tinvestissements');
     }
 
     /**

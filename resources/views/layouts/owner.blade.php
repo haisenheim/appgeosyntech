@@ -9,7 +9,7 @@
 <body style="">
 <div class="image-fond--"></div>
 <div class="contenu">
-<nav class="navbar navbar-inverse navbar-fixed-top" style="margin-bottom: 0; box-shadow: 0 7px 7px #CCC ">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #28a745; margin-bottom: 0; box-shadow: 0 7px 7px #CCC ">
     <div class="container-fluid" style="color: #4b6584">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

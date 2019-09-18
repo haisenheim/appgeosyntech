@@ -89,80 +89,80 @@
                                               <div class="card-body">
                                                  <div class="">
                                                     <div class="" id="">
-                                                                                                         <div class="" id="segments" >
-                                                                                                             <div class="row" style="">
-                                                                                                                 <div class="col-md-2 col-sm-12">
-                                                                                                                     <div class="form-group">
-                                                                                                                         <label for="" class="control-label" title="Le nom du segment">QUI?</label>
-                                                                                                                         <input id="qui" name="name" type="text" class="form-control de"/>
-                                                                                                                     </div>
-                                                                                                                 </div>
-                                                                                                                 <div class="col-md-3 col-sm-12">
-                                                                                                                     <div class="form-group">
-                                                                                                                         <label for="" class="control-label" title="Le nom du segment">QUOI?</label>
-                                                                                                                         <input id="quoi" name="quoi" type="text" class="form-control de" placeholder=""/>
-                                                                                                                     </div>
-                                                                                                                 </div>
-                                                                                                                 <div class="col-md-3 col-sm-12">
-                                                                                                                     <div class="form-group">
-                                                                                                                         <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">OU?</label>
-                                                                                                                         <input id="ou" name="ou" type="text" class="form-control de" placeholder=""/>
-                                                                                                                     </div>
-                                                                                                                 </div>
+                                                     <div class="" id="segments" >
+                                                         <div class="row" style="">
+                                                             <div class="col-md-2 col-sm-12">
+                                                                 <div class="form-group">
+                                                                     <label for="" class="control-label" title="Le nom du segment">QUI?</label>
+                                                                     <input id="qui" name="name" type="text" class="form-control de"/>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="col-md-3 col-sm-12">
+                                                                 <div class="form-group">
+                                                                     <label for="" class="control-label" title="Le nom du segment">QUOI?</label>
+                                                                     <input id="quoi" name="quoi" type="text" class="form-control de" placeholder=""/>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="col-md-3 col-sm-12">
+                                                                 <div class="form-group">
+                                                                     <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">OU?</label>
+                                                                     <input id="ou" name="ou" type="text" class="form-control de" placeholder=""/>
+                                                                 </div>
+                                                             </div>
 
-                                                                                                                 <div class="col-md-4 col-sm-12">
-                                                                                                                     <div class="form-group">
-                                                                                                                         <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">QUAND?</label>
-                                                                                                                         <input id="quand" name="ou" type="text" class="form-control de" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
-                                                                                                                     </div>
-                                                                                                                 </div>
+                                                             <div class="col-md-4 col-sm-12">
+                                                                 <div class="form-group">
+                                                                     <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">QUAND?</label>
+                                                                     <input id="quand" name="ou" type="text" class="form-control de" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
+                                                                 </div>
+                                                             </div>
 
-                                                                                                                 <div class="col-md-4 col-sm-12">
-                                                                                                                     <div class="form-group">
-                                                                                                                         <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">COMBIEN?</label>
-                                                                                                                         <input id="combien" name="ou" type="text" class="form-control de" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
-                                                                                                                     </div>
-                                                                                                                 </div>
+                                                             <div class="col-md-4 col-sm-12">
+                                                                 <div class="form-group">
+                                                                     <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">COMBIEN?</label>
+                                                                     <input id="combien" name="ou" type="text" class="form-control de" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
+                                                                 </div>
+                                                             </div>
 
-                                                                                                                 <div class="col-md-5 col-sm-12">
-                                                                                                                     <div class="form-group">
-                                                                                                                         <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">POURQUOI?</label>
-                                                                                                                         <textarea id="pourquoi" name="ou" class="form-control de" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
-                                                                                                                     </div>
-                                                                                                                 </div>
-                                                                                                                 <div class="col-md-2 col-sm-12">
-                                                                                                                     <button style="margin-top: 40px" class="btn btn-success btn-sm" id="btn-seg-add"><i class="fa fa-plus-circle"></i></button>
-                                                                                                                 </div>
-                                                                                                             </div>
-                                                                                                             <hr/>
-                                                                                                             <div>
-                                                                                                                 <h4 class="">TABLE DES SEGMENTS</h4>
-                                                                                                                 <table class="table table-bordered table-striped" id="table-segments">
-                                                                                                                     <thead>
-                                                                                                                     <tr>
+                                                             <div class="col-md-5 col-sm-12">
+                                                                 <div class="form-group">
+                                                                     <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">POURQUOI?</label>
+                                                                     <textarea id="pourquoi" name="ou" class="form-control de" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="col-md-2 col-sm-12">
+                                                                 <button style="margin-top: 40px" class="btn btn-success btn-sm" id="btn-seg-add"><i class="fa fa-plus-circle"></i></button>
+                                                             </div>
+                                                         </div>
+                                                         <hr/>
+                                                         <div>
+                                                             <h4 class="">TABLE DES SEGMENTS</h4>
+                                                             <table class="table table-bordered table-striped" id="table-segments">
+                                                                 <thead>
+                                                                 <tr>
 
-                                                                                                                         <th>QUI</th>
-                                                                                                                         <th>QUOI</th>
-                                                                                                                         <th>OU</th>
-                                                                                                                         <th>QUAND</th>
-                                                                                                                         <th>COMBIEN</th>
-                                                                                                                         <th>POURQUOI</th>
-                                                                                                                         <th></th>
-                                                                                                                     </tr>
-                                                                                                                     </thead>
-                                                                                                                     <tbody>
+                                                                     <th>QUI</th>
+                                                                     <th>QUOI</th>
+                                                                     <th>OU</th>
+                                                                     <th>QUAND</th>
+                                                                     <th>COMBIEN</th>
+                                                                     <th>POURQUOI</th>
+                                                                     <th></th>
+                                                                 </tr>
+                                                                 </thead>
+                                                                 <tbody>
 
-                                                                                                                     </tbody>
+                                                                 </tbody>
 
-                                                                                                                 </table>
-                                                                                                             </div>
+                                                             </table>
+                                                         </div>
 
-                                                                                                         </div>
-
-
+                                                     </div>
 
 
-                                                                                                     </div>
+
+
+                                              </div>
                                                   </div>
                                               </div>
                                               <div class="card-footer text-center">
@@ -317,87 +317,87 @@
                                                                                      </div>
                                             <div class="setup-content" id="step-3">
                                                 <div class="card">
-                                                                                             <div class="card-header">
-                                                                                                 <h6>ANALYSE DE L'ENVIRONNEMENT</h6>
-                                                                                             </div>
-                                                                                             <div class="card-body">
+                                                    <div class="card-header">
+                                                        <h6>ANALYSE DE L'ENVIRONNEMENT</h6>
+                                                    </div>
+                                                    <div class="card-body">
 
-                                                                                                 <div class="" id="environnement">
-                                                                                                     <div>
-                                                                                                         <span style="display: none" id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
-                                                                                                         <table class="table table-bordered table-condensed">
-                                                                                                             <thead>
-                                                                                                             <tr >
-                                                                                                                 <th style="width: 25%"></th>
-                                                                                                                 <th>OPPORTUNUITES</th>
-                                                                                                                 <th>MENACES</th>
-                                                                                                             </tr>
-                                                                                                             </thead>
-                                                                                                             <tbody>
-                                                                                                             <tr id="ps">
-                                                                                                                 <th style="width: 25%" >POLITIQUE SECTORIELLE</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="cmep">
-                                                                                                                 <th style="width: 25%">CADRE MACRO ECONOMIQUE DU PROJET</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="asc">
-                                                                                                                 <th style="width: 25%">ASPECTS SOCIO-CULTURELS</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="et">
-                                                                                                                 <th style="width: 25%">ENVIRONNEMENT TECHNOLOGIQUES</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="iep">
-                                                                                                                 <th style="width: 25%">IMPACT ENVIRONNEMENTAL DU PROJET</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="crp">
-                                                                                                                 <th style="width: 25%">CADRE REGLEMENTAIRE DU PROJET</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="pnf">
-                                                                                                                 <th style="width: 25%">POUVOIR DE NEGOCIATION DES FOURNISSEURS</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="pnc">
-                                                                                                                 <th style="width: 25%">POUVOIR DE NEGOCIATION DES CLIENTS</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="pps">
-                                                                                                                 <th style="width: 25%">PERFORMANCES  DES PRODUITS DE SUBSTITUTION </th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
-                                                                                                             <tr id="ic">
-                                                                                                                 <th style="width: 25%">INTENSITE CONCURRENTIELLE</th>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                                 <td contenteditable="true"></td>
-                                                                                                             </tr>
+                                                        <div class="" id="environnement">
+                                                            <div>
+                                                                <span style="display: none" id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
+                                                                <table class="table table-bordered table-condensed">
+                                                                    <thead>
+                                                                    <tr >
+                                                                        <th style="width: 25%"></th>
+                                                                        <th>OPPORTUNUITES</th>
+                                                                        <th>MENACES</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <tr id="ps">
+                                                                        <th style="width: 25%" >POLITIQUE SECTORIELLE</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="cmep">
+                                                                        <th style="width: 25%">CADRE MACRO ECONOMIQUE DU PROJET</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="asc">
+                                                                        <th style="width: 25%">ASPECTS SOCIO-CULTURELS</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="et">
+                                                                        <th style="width: 25%">ENVIRONNEMENT TECHNOLOGIQUES</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="iep">
+                                                                        <th style="width: 25%">IMPACT ENVIRONNEMENTAL DU PROJET</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="crp">
+                                                                        <th style="width: 25%">CADRE REGLEMENTAIRE DU PROJET</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="pnf">
+                                                                        <th style="width: 25%">POUVOIR DE NEGOCIATION DES FOURNISSEURS</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="pnc">
+                                                                        <th style="width: 25%">POUVOIR DE NEGOCIATION DES CLIENTS</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="pps">
+                                                                        <th style="width: 25%">PERFORMANCES  DES PRODUITS DE SUBSTITUTION </th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
+                                                                    <tr id="ic">
+                                                                        <th style="width: 25%">INTENSITE CONCURRENTIELLE</th>
+                                                                        <td contenteditable="true"></td>
+                                                                        <td contenteditable="true"></td>
+                                                                    </tr>
 
-                                                                                                             </tbody>
-                                                                                                         </table>
-                                                                                                     </div>
-                                                                                                 </div>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
 
-                                                                                             </div>
-                                                                                             <div class="card-footer">
-                                                                                                 <div class="btn-div text-center">
-                                                                                                     <button class="btn btn-default prevBtn btn-sm btn-rounded" type="button"><i class="fa fa-arrow-left"></i> PRECEDENT</button>
-                                                                                                     <button id="btn-save" class="btn btn-success btn-sm btn-rounded" type="button"><i class="fa fa-save"></i>ENREGISTRER</button>
-                                                                                                 </div>
-                                                                                             </div>
-                                                                                         </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="btn-div text-center">
+                                                            <button class="btn btn-default prevBtn btn-sm btn-rounded" type="button"><i class="fa fa-arrow-left"></i> PRECEDENT</button>
+                                                            <button id="btn-save" class="btn btn-success btn-sm btn-rounded" type="button"><i class="fa fa-save"></i>ENREGISTRER</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
 

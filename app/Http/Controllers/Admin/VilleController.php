@@ -7,6 +7,7 @@ use App\Models\Pay;
 use App\Models\Ville;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
@@ -25,10 +26,11 @@ class VilleController extends Controller
     {
         //
         $villes = Ville::all();
+	    $pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
        // $request->session()->flash('message','Liste des villes!!!');
-        return view('Admin/Villes/index')->with(compact('villes'))->with('success','Liste des villes');
+        return view('Admin/Villes/index')->with(compact('villes','pays'))->with('success','Liste des villes');
 
     }
 
@@ -53,10 +55,31 @@ class VilleController extends Controller
     public function store(Request $request)
     {
         //
-        //dd($request->get('pay_id'));
+        //dd($request->imageUri);
         $ville = new Ville();
         $ville->name = $request['name'];
         $ville->pay_id = $request['pay_id'];
+	    $ville->longitude = $request['longitude'];
+	    $ville->latitude = $request['latitude'];
+	    if($request->imageUri){
+		    $file = $request->imageUri;
+		    $ext = $file->getClientOriginalExtension();
+		    $arr_ext = array('jpg','png','jpeg','gif');
+		    if(in_array($ext,$arr_ext)) {
+			    if (!file_exists(public_path('img') . '/villes')) {
+				    mkdir(public_path('img') . '/villes');
+			    }
+			    $token = sha1(date('ydmhis'));
+			    if (file_exists(public_path('img') . '/villes/' . $token . '.' . $ext)) {
+				    unlink(public_path('img') . '/villes/' . $token . '.' . $ext);
+			    }
+			    $name = $token . '.' . $ext;
+			    $file->move(public_path('img/villes'), $name);
+			    $ville->imageUri = 'villes/' . $name;
+		    }
+
+	    }
+
         $ville->save();
             $request->session()->flash('success','La ville a été correctement enregistrée !!!');
             return redirect('/admin/villes');
@@ -73,7 +96,8 @@ class VilleController extends Controller
     public function show(Ville $ville)
     {
         //
-        $ville = Ville::find($ville)->first();
+	    //dd($ville);
+        //$ville = Ville::find($ville)->first();
         return view('Admin/Villes/show')->with(compact('ville'));
     }
 
@@ -95,9 +119,36 @@ class VilleController extends Controller
      * @param  \App\Models\Ville  $ville
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ville $ville)
+    public function save(Request $request)
     {
         //
+	    $ville = Ville::find($request->id);
+	    $ville->name = $request->name?$request->name:$ville->name;
+	    $ville->latitude = $request->latitude?$request->latitude:$ville->latitude;
+	    $ville->longitude = $request->longitude?$request->longitude:$ville->longitude;
+	    $ville->pay_id = $request->pay_id?$request->pay_id:$ville->pay_id;
+	    if($request->imageUri){
+		    $file = $request->imageUri;
+		    $ext = $file->getClientOriginalExtension();
+		    $arr_ext = array('jpg','png','jpeg','gif');
+		    if(in_array($ext,$arr_ext)) {
+			    if (!file_exists(public_path('img') . '/villes')) {
+				    mkdir(public_path('img') . '/villes');
+			    }
+			    $token = sha1(date('ydmhis'));
+			    if (file_exists(public_path('img') . '/villes/' . $token . '.' . $ext)) {
+				    unlink(public_path('img') . '/villes/' . $token . '.' . $ext);
+			    }
+			    $name = $token . '.' . $ext;
+			    $file->move(public_path('img/villes'), $name);
+			    $ville->imageUri = 'villes/' . $name;
+		    }
+
+	    }
+
+	    $ville->save();
+	    $request->session()->flash('success','La ville a été correctement enregistrée !!!');
+	    return redirect('/admin/villes');
     }
 
     /**

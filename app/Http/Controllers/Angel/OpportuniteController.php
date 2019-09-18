@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Projet;
+use App\Models\TagsProjet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OpportuniteController extends Controller
 {
@@ -16,8 +19,25 @@ class OpportuniteController extends Controller
     public function index()
     {
         //
-        $dossiers = Projet::all()->where('etape',4)->where('validated_step',4);
-        return view('/angel/dossiers/index')->with(compact('dossiers'));
+
+	    $tag_ids = [];
+	    foreach(Auth::user()->tags as $tags){
+		    $tag_ids[] = $tags->id;
+	    }
+
+	   // dd($tag_ids);
+
+	    //$tps = DB::table('tags_projets')->whereIn('tag_id',[2,3])->value('projet_id');
+	    //dd($tps);
+
+	    $projets = TagsProjet::all()->whereIn('tag_id',$tag_ids);
+	    //dd($prj_tags);
+
+
+	   // dd($prj_tags);
+
+	    //$dossiers = Projet::all()->where('etape',4)->where('validated_step',4);
+        return view('/Angel/Dossiers/index')->with(compact('projets'));
     }
 
     /**
@@ -47,9 +67,13 @@ class OpportuniteController extends Controller
      * @param  \App\Models\Projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function show(Projet $projet)
+    public function show($p)
     {
         //
+
+	   // dd($p);
+	    $projet = Projet::all()->where('token',$p)->first();
+	    return view('/Angel/Dossiers/show')->with(compact('projet'));
     }
 
     /**

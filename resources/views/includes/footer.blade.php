@@ -1,8 +1,5 @@
+     <footer class="main-footer">
+        <strong>Copyright &copy; <?= date('Y') ?> <a href="#">OBAC ALERT</a>.</strong> <small>Tous droits reserés</small>
+        <script src="{{asset('dist/js/adminlte.js')}}"></script>
+      </footer>
 
-
-    <div class="footer navbar-fixed-bottom" style="color:#fff; font-weight: 700; margin-top: 0; box-shadow: 0 1px 7px #CCC ">
-            <div class="container text-center">
-                OBAC ALERT &copy;Copyright <?= date('Y') ?> <span>Tous droits reservés</span>
-            </div>
-
-     </div>

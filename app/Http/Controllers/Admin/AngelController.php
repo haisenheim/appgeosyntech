@@ -8,6 +8,7 @@ use App\Models\Role;
 use App\Models\Ville;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -23,7 +24,7 @@ class AngelController extends Controller
     public function index()
     {
         //
-        $users = User::all()->where('role_id','=',4);
+        $users = \App\User::all()->where('role_id',4);
        // dd($villes);
        // echo "Bonjour tout le monde!!";
         return view('admin/angels/index')->with(compact('users'));
@@ -59,7 +60,7 @@ class AngelController extends Controller
         $user->phone = $request['phone'];
         $user->address = $request['address'];
         $user->email = $request['email'];
-        $user->pay_id = $request['pay_id'];
+        $user->pay_id = Auth::user()->pay_id;
         $user->password=Hash::make($request['password']);
         $user->role_id =4;
         $user->moi_id=date('m');

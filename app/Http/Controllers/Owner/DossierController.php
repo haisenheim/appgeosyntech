@@ -8,6 +8,8 @@ use App\Models\ChoicesProjet;
 use App\Models\ProduitsProjet;
 use App\Models\Projet;
 use App\Models\Resultat;
+use App\Models\Tags;
+use App\Models\TagsProjet;
 use App\Models\Tinvestissement;
 use App\Models\Tprojet;
 use App\Models\Variante;
@@ -82,6 +84,20 @@ class DossierController extends Controller
 
 		//$search = App\Models\$model::find($id);
 		dd($search);
+	}
+
+	public function addTags(Request $request){
+		//dd(public_path('img'));
+
+		$projet = Projet::where('token',$request->projet_token)->first();
+		$tag = TagsProjet::all()->where('tag_id',$request->tag_id)->where('projet_id',$projet->id)->first();
+		if(!$tag){
+			$tag = new TagsProjet();
+			$tag->tag_id = $request->tag_id;
+			$tag->projet_id = $projet->id;
+			$tag->save();
+		}
+		return back();
 	}
 
 
@@ -229,10 +245,10 @@ class DossierController extends Controller
     public function show($token)
     {
         //
-
+		$tags = Tags::all();
 	    $projet = Projet::where(['token'=>$token])->first();
 	    //dd($dossier->bilans);
-	    return view('Owner/Dossiers/show')->with(compact('projet'));
+	    return view('Owner/Dossiers/show')->with(compact('projet','tags'));
     }
 
     /**

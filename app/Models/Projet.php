@@ -86,6 +86,10 @@ class Projet extends Model
 		return $this->hasMany('App\Models\ChoicesProjet');
 	}
 
+	public function tags(){
+		return $this->belongsToMany('App\Models\Tags','tags_projets','projet_id','tag_id');
+	}
+
 	public function produits(){
 		return $this->hasMany('App\Models\ProduitsProjet');
 	}
@@ -112,4 +116,20 @@ class Projet extends Model
 	public function prevtresoreries(){
 		return $this->hasMany('App\Models\Prevtresorerie');
 	}
+
+	public function getProgressAttribute(){
+		//$progress= 0;
+		return ($this->attributes['validated_step']/4) * 100;
+	}
+
+	protected function getProgresscolorAttribute(){
+		$colors = ['red','yellow','blue','cyan','green'];
+		return $colors[$this->attributes['validated_step']];
+	}
+
+	protected function getTypecolorAttribute(){
+		$colors = ['default','primary','info','success'];
+		return $colors[$this->attributes['active']];
+	}
+
 }

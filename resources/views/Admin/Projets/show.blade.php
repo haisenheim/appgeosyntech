@@ -1,447 +1,451 @@
 @extends('......layouts.admin')
 @section('content')
-    <div style="padding-top: 30px" class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="well">
-                            <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
-                            <div style="max-height: 300px; max-width: 300px">
-                                @if($projet->imageUri)
-                                    <img class="img-thumbnail" src="{{asset('img/'.$projet->imageUri)}}" alt=""/>
-                                    <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
-                                @else
-                                     <img class="img-thumbnail" src="{{asset('img/logo-obac.png')}}" alt=""/>
-                                     <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
-                                @endif
-                            </div>
-                            <p>CODE : {{ $projet->code }}</p>
-                            <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
-                            <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-                            <p>AUTEUR : {{ $projet->auteur->name }}</p>
-
-                           @if($projet->etape>=4)
-                                <ul class="list-group">
-                                    <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
-                                    <li class="list-group-item">BESOIN EN FONDS DE ROULEMENT : <span class="value"><?= $projet->bfr ?></span></li>
-                                    <li style="font-weight: bold;" class="list-group-item">COUT GLOBAL DU PROJET : <span class="value"><?= $projet->montant_investissement + $projet->bfr ?></span></li>
-                                </ul>
-
-                                <fieldset>
-                                    <legend>MOYENS DE FINANCEMENT</legend>
-                                    <ul class="list-group">
-                                        @if($projet->moyens)
-                                            @foreach($projet->financements as $moyen)
-
-                                                <li class="list-group-item"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class="value"><?= $moyen->montant ?></span></li>
-                                            @endforeach
-                                        @endif
-                                    </ul>
-                                </fieldset>
-
-                            @endif
 
 
-                            <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
-                            <p>MONTANT : {{ $projet->montant }}</p>
-                            <input type="hidden" id="id" value="<?= $projet->id ?>"/>
-                            <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-                            @if($projet->expert_id)
-                                <p>CONSULTANT : <span class="value">{{ $projet->consultant->name }}</span></p>
-                             @else
-                                <form class="form-inline"  action="/admin/dossier/expert">
-                                {{csrf_field()}}
-                                <input type="hidden" name="id" value="{{ $projet->id }}"/>
-                                    <div class="form-group">
-                                        <select class="form-text" name="expert_id" id="id">
-                                            @foreach($experts as $expert)
-                                                <option value="{{ $expert->id }}">{{ $expert->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-danger"><i class="fa fa-link"></i> LIER</button>
-                                    </div>
-                                </form>
-                            @endif
-                        </div>
+<?php //dd($projet->resultats)
 
+ ?>
+<div class="card">
+        <div class="card-header">
+          <h3 class="card-title">{{$projet->name}} - {{$projet->code}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
 
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Reduire">
+              <i class="fas fa-minus"></i></button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Fermer">
+              <i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-9 order-2 order-md-1">
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Investissement</span>
+                      <span class="info-box-number text-center text-muted mb-0"><?= $projet->montant_investissement ?></span>
                     </div>
-                    <div class="col-md-8 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-content">
-                               <fieldset>
-                                    <legend>DIAGNOSTIC INTERNE</legend>
-                                    <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                         <li role="presentation" class="active">
-                                             <a href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
-                                         </li>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Besoin en fonds de roulement</span>
+                      <span class="info-box-number text-center text-muted mb-0"><?= $projet->bfr ?></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Cout global</span>
+                      <span class="info-box-number text-center text-muted mb-0"><?= $projet->montant_investissement + $projet->bfr ?> </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                                         <li role="presentation" class="">
-                                             <a href="#risques" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> CARTOGRAPHIE DES RISQUES </a>
-                                         </li>
-
-                                         <?php if($projet->synthese_diagnostic_interne): ?>
-                                            <li role="presentation" class="">
-                                             <a href="#synthese1" role="tab" id="tab_4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> SYNTHESE </a>
-                                            </li>
-                                         <?php endif; ?>
-                                     </ul>
-
-                                     <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade active in" role="tabpanel" id="etats" aria-labelledby="tab1">
-                                             <div>
-
-
-                                                     <div>
-                                                        <h4 class="page-header">SANTE FINANCIERE</h4>
-                                                        <table class="table table-condensed table-hover">
-                                                            <thead>
-                                                            <tr>
-                                                                <th></th>
-                                                                <th><?= $projet->bilans[0]->annee ?></th>
-                                                                <th><?= $projet->bilans[1]->annee ?></th>
-                                                                <th>TAUX DE VARIATION</th>
-                                                                <th><?= $projet->bilans[2]->annee ?></th>
-                                                                <th>TAUX DE VARIATION</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>RESSOURCES DURABLES</td>
-                                                                <td><?= $projet->bilans[0]->ress_durable ?></td>
-                                                                <td><?= $projet->bilans[1]->ress_durable ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->bilans[2]->ress_durable ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>ACTIFS IMMOBILISES</td>
-                                                                <td><?= $projet->bilans[0]->actifs_immo ?></td>
-                                                                <td><?= $projet->bilans[1]->actifs_immo ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->bilans[2]->actifs_immo ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>FONDS DE ROULEMENT NET GLOBAL</td>
-                                                                <th><?= $projet->frng_0 ?></th>
-                                                                <th><?= $projet->frng_0 ?></th>
-                                                                <th></th>
-                                                                <th><?= $projet->frng_0 ?></th>
-                                                                <th></th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>CREANCES</td>
-                                                                <td><?= $projet->bilans[0]->creances ?></td>
-                                                                <td><?= $projet->bilans[1]->creances ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->bilans[2]->creances ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>STOCKS</td>
-                                                                <td><?= $projet->bilans[0]->stocks ?></td>
-                                                                <td><?= $projet->bilans[1]->stocks ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->bilans[2]->stocks ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>DETTES</td>
-                                                                <td><?= $projet->bilans[0]->dettes ?></td>
-                                                                <td><?= $projet->bilans[1]->dettes ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->bilans[2]->dettes ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>BESOIN EN FONDS DE ROULEMENT</td>
-                                                                <th><?= $projet->bilans[0]->bfr ?></th>
-                                                                <th><?= $projet->bilans[1]->bfr ?></th>
-                                                                <th><?= $projet->tvbfr_0 ?></th>
-                                                                <th><?= $projet->bilans[2]->bfr ?></th>
-                                                                <th><?= $projet->tvbfr_1 ?></th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>TRESORERIE NETTE</td>
-                                                                <th><?= $projet->tsrn_0 ?></th>
-                                                                <th><?= $projet->tsrn_1 ?></th>
-                                                                <th><?= $projet->tvtsr_0 ?></th>
-                                                                <th><?= $projet->tsrn_2 ?></th>
-                                                                <th><?= $projet->tvtsr_1 ?></th>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
+              <div class="row">
+                <div class="col-12">
+                  <h4>Progression</h4>
 
 
-                                                        <h5>PERFORMANCE FINANCIERE</h5>
-                                                        <table class="table table-bordered table-condensed">
-                                                            <thead>
-                                                            <tr>
-                                                                <th></th>
-                                                                <th><?= $projet->resultats[0]->annee ?></th>
-                                                                <th><?= $projet->resultats[1]->annee ?></th>
-                                                                <th>TAUX DE VARIATION</th>
-                                                                <th><?= $projet->resultats[2]->annee ?></th>
-                                                                <th>TAUX DE VARIATION</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>CHIFFRE D'AFFAIRE</td>
 
-                                                                <td><?= $projet->resultats[0]->ca ?></td>
-                                                                <td><?= $projet->resultats[1]->ca ?></td>
-                                                                <td><?= $projet->tvca_0 ?></td>
-                                                                <td><?= $projet->resultats[2]->ca ?></td>
-                                                                <td><?= $projet->tvca_0 ?></td>
+                  <div class="card card-danger collapsed-card">
+                    <div class="card-header">
+                        <h5 class="card-title">Diagnostic interne</h5>
 
-                                                            </tr>
-                                                            <tr>
-                                                                <td>CHARGES VARIABLES</td>
+                          <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Dérouler">
+                              <i class="fas fa-plus"></i></button>
+                               <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                               </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Fermer">
+                              <i class="fas fa-times"></i></button>
+                          </div>
+                    </div>
+                    <div class="card-body">
+                      <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                            <li role="presentation" class="nav-item">
+                             <a class="nav-link active" id="tab1" data-toggle="pill" href="#etats" role="tab" aria-controls="n1" aria-selected="true">ETATS FINANCIERS</a>
+                            </li>
 
-                                                                <td><?= $projet->resultats[0]->cv ?></td>
-                                                                <td><?= $projet->resultats[1]->cv ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->cv ?></td>
-                                                                <td></td>
+                            <li role="presentation" class="nav-item">
+                                <a class="nav-link" id="tab2" data-toggle="pill" href="#risques" role="tab" aria-controls="n2" aria-selected="false">CARTOGRAPHIE DES RISQUES</a>
+                            </li>
 
-                                                            </tr>
-                                                            <tr>
-                                                                <th>MARGE BRUTE</th>
-                                                                <th><?= $projet->mb_0 ?></th>
-                                                                <th><?= $projet->mb_1 ?></th>
-                                                                <th><?= $projet->tvmb_0 ?></th>
-                                                                <th><?= $projet->mb_2 ?></th>
-                                                                <th><?= $projet->tvmb_1 ?></th>
+                            <?php if($projet->synthese_diagnostic_interne): ?>
+                               <li role="presentation" class="nav-item">
+                               <a class="nav-link" id="tab3" data-toggle="pill" href="#synthese1" role="tab" aria-controls="n3" aria-selected="false">SYNTHESE</a>
+                               </li>
+                            <?php endif; ?>
+                        </ul>
 
-                                                            </tr>
-                                                            <tr>
-                                                                <td>CHARGES FIXES</td>
+                         <div class="tab-content" id="custom-content-below-tabContent">
+                            <div class="tab-pane fade show active" id="etats" role="tabpanel" aria-labelledby="tab1">
 
-                                                                <td><?= $projet->resultats[0]->cf ?></td>
-                                                                <td><?= $projet->resultats[1]->cf ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->cf ?></td>
-                                                                <td></td>
+                                 <div>
 
-                                                            </tr>
-                                                            <tr>
-                                                                <th>VALEUR AJOUTEE</th>
 
-                                                                <td><?= $projet->va_0 ?></td>
-                                                                <td><?= $projet->va_1 ?></td>
-                                                                <th><?= $projet->tvva_0 ?></th>
-                                                                <td><?= $projet->va_2 ?></td>
-                                                                <th><?= $projet->tvva_1 ?></th>
+                                         <div>
+                                            <h4  class="text-xs text-right text-bold page-header">SANTE FINANCIERE</h4>
+                                            <?php if(count($projet->bilans) >0): ?>
 
-                                                            </tr>
-                                                            <tr>
-                                                                <td>SALAIRES</td>
-
-                                                                <td><?= $projet->resultats[0]->salaires ?></td>
-                                                                <td><?= $projet->resultats[1]->salaires ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->salaires ?></td>
-                                                                <td></td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <th>EXCEDENT BRUT D'EXPLOITATION</th>
-
-                                                                <td><?= $projet->ebe_0 ?></td>
-                                                                <td><?= $projet->ebe_1 ?></td>
-                                                                <th><?= $projet->tvebe_0 ?></th>
-                                                                <td><?= $projet->ebe_2 ?></td>
-                                                                <th><?= $projet->tvebe_1 ?></th>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>DOTATIONS AUX AMORTISSEMENTS ET AUX PROVISIONS</td>
-                                                                <td><?= $projet->resultats[0]->dap ?></td>
-                                                                <td><?= $projet->resultats[1]->dap ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->dap ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>RESULTAT D'EXPLOITATION</th>
-
-                                                                <th><?= $projet->re_0 ?></th>
-                                                                <th><?= $projet->re_1 ?></th>
-                                                                <th><?= $projet->tvre_0 ?></th>
-                                                                <th><?= $projet->re_2 ?></th>
-                                                                <th><?= $projet->tvre_1 ?></th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>PRODUITS FINANCIERS</td>
-
-                                                                <td><?= $projet->resultats[0]->pf ?></td>
-                                                                <td><?= $projet->resultats[1]->pf ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->pf ?></td>
-                                                                <td></td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>CHARGES FINANCIERES</td>
-
-                                                                <td><?= $projet->resultats[0]->cfi ?></td>
-                                                                <td><?= $projet->resultats[1]->cfi ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->cfi ?></td>
-                                                                <td></td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <th>RESULTAT FINANCIER</th>
-
-                                                                <th><?= $projet->rf_0 ?></th>
-                                                                <th><?= $projet->rf_1 ?></th>
-                                                                <th><?= $projet->tvrf_0 ?></th>
-                                                                <th><?= $projet->rf_2 ?></th>
-                                                                <th><?= $projet->tvrf_1 ?></th>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>PRODUIT EXCEPTIONNEL</td>
-
-                                                                <td><?= $projet->resultats[0]->pe ?></td>
-                                                                <td><?= $projet->resultats[1]->pe ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->pe ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>CHARGES EXCEPTIONNELLES</td>
-
-                                                                <td><?= $projet->resultats[0]->ce ?></td>
-                                                                <td><?= $projet->resultats[1]->ce ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->ce ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>RESULTAT EXCEPTIONNEL</th>
-
-                                                                <th><?= $projet->rex_0 ?></th>
-                                                                <th><?= $projet->rex_1 ?></th>
-                                                                <th><?= $projet->tvrex_0 ?></th>
-                                                                <th><?= $projet->rex_2 ?></th>
-                                                                <th><?= $projet->tvrex_1 ?></th>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <th>RESULTAT COURANT AVANT IMPOT</th>
-
-                                                                <th><?= $projet->rcai_0 ?></th>
-                                                                <th><?= $projet->rcai_1 ?></th>
-                                                                <th><?= $projet->tvrcai_0 ?></th>
-                                                                <th><?= $projet->rcai_2 ?></th>
-                                                                <th><?= $projet->rcai_1 ?></th>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>IMPOTS</td>
-
-                                                                <td><?= $projet->resultats[0]->impots ?></td>
-                                                                <td><?= $projet->resultats[1]->impots ?></td>
-                                                                <td></td>
-                                                                <td><?= $projet->resultats[2]->impots ?></td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>RESULTAT NET</th>
-
-                                                                <th><?= $projet->rn_0 ?></th>
-                                                                <th><?= $projet->rn_1 ?></th>
-                                                                <th><?= $projet->tvrn_0 ?></th>
-                                                                <th><?= $projet->rn_2 ?></th>
-                                                                <th><?= $projet->tvrn_1 ?></th>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                     </div>
-
-                                             </div>
-
-                                        </div>
-
-                                        <div class="tab-pane fade" role="tabpanel" id="risques" aria-labelledby="">
-                                             <table id="risques-tab" class="table table-condensed table-hover table-bordered">
-                                                                            <thead>
+                                            <table class="table table-condensed table-hover table-striped">
+                                                <thead>
                                                 <tr>
                                                     <th></th>
-                                                    <th>Defaillances possibles</th>
-                                                    <th>Causes</th>
-                                                    <th>Consequences</th>
-                                                    <th>Frequence</th>
-                                                    <th>Gravite</th>
-                                                    <th>Criticite brut</th>
-
-                                                    <th>Criticite nette</th>
+                                                    <th><?= $projet->bilans[0]->annee ?></th>
+                                                    <th><?= $projet->bilans[1]->annee ?></th>
+                                                    <th>TAUX DE VARIATION</th>
+                                                    <th><?= $projet->bilans[2]->annee ?></th>
+                                                    <th>TAUX DE VARIATION</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                <tr>
+                                                    <td>RESSOURCES DURABLES</td>
+                                                    <td><?= $projet->bilans[0]->ress_durable ?></td>
+                                                    <td><?= $projet->bilans[1]->ress_durable ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->bilans[2]->ress_durable ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ACTIFS IMMOBILISES</td>
+                                                    <td><?= $projet->bilans[0]->actifs_immo ?></td>
+                                                    <td><?= $projet->bilans[1]->actifs_immo ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->bilans[2]->actifs_immo ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FONDS DE ROULEMENT NET GLOBAL</td>
+                                                    <th><?= $projet->frng_0 ?></th>
+                                                    <th><?= $projet->frng_0 ?></th>
+                                                    <th></th>
+                                                    <th><?= $projet->frng_0 ?></th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <td>CREANCES</td>
+                                                    <td><?= $projet->bilans[0]->creances ?></td>
+                                                    <td><?= $projet->bilans[1]->creances ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->bilans[2]->creances ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>STOCKS</td>
+                                                    <td><?= $projet->bilans[0]->stocks ?></td>
+                                                    <td><?= $projet->bilans[1]->stocks ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->bilans[2]->stocks ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DETTES</td>
+                                                    <td><?= $projet->bilans[0]->dettes ?></td>
+                                                    <td><?= $projet->bilans[1]->dettes ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->bilans[2]->dettes ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BESOIN EN FONDS DE ROULEMENT</td>
+                                                    <th><?= $projet->bilans[0]->bfr ?></th>
+                                                    <th><?= $projet->bilans[1]->bfr ?></th>
+                                                    <th><?= $projet->tvbfr_0 ?></th>
+                                                    <th><?= $projet->bilans[2]->bfr ?></th>
+                                                    <th><?= $projet->tvbfr_1 ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <td>TRESORERIE NETTE</td>
+                                                    <th><?= $projet->tsrn_0 ?></th>
+                                                    <th><?= $projet->tsrn_1 ?></th>
+                                                    <th><?= $projet->tvtsr_0 ?></th>
+                                                    <th><?= $projet->tsrn_2 ?></th>
+                                                    <th><?= $projet->tvtsr_1 ?></th>
+                                                </tr>
                                                 </tbody>
-                                                </table>
-                                            <div style="width: 20%; margin:10px auto">
-                                                <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
-                                            </div>
-                                        </div>
+                                            </table>
+                                            <?php endif; ?>
 
-                                        <?php if($projet->synthese_diagnostic_interne): ?>
-                                            <div class="tab-pane fade" role="tabpanel" id="synthese1" aria-labelledby="">
-                                                <p><?= $projet->synthese_diagnostic_interne ?></p>
-                                            </div>
-                                        <?php endif ?>
-                                     </div>
-                               </fieldset>
 
+                                            <h5 class="text-xs text-right text-bold page-header">PERFORMANCE FINANCIERE</h5>
+                                            <?php if(count($projet->resultats) >0): ?>
+                                            <table class="table table-striped table-hover table-condensed">
+                                                <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th><?= $projet->resultats[0]->annee ?></th>
+                                                    <th><?= $projet->resultats[1]->annee ?></th>
+                                                    <th>TAUX DE VARIATION</th>
+                                                    <th><?= $projet->resultats[2]->annee ?></th>
+                                                    <th>TAUX DE VARIATION</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>CHIFFRE D'AFFAIRE</td>
+
+                                                    <td><?= $projet->resultats[0]->ca ?></td>
+                                                    <td><?= $projet->resultats[1]->ca ?></td>
+                                                    <td><?= $projet->tvca_0 ?></td>
+                                                    <td><?= $projet->resultats[2]->ca ?></td>
+                                                    <td><?= $projet->tvca_0 ?></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>CHARGES VARIABLES</td>
+
+                                                    <td><?= $projet->resultats[0]->cv ?></td>
+                                                    <td><?= $projet->resultats[1]->cv ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->cv ?></td>
+                                                    <td></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>MARGE BRUTE</th>
+                                                    <th><?= $projet->mb_0 ?></th>
+                                                    <th><?= $projet->mb_1 ?></th>
+                                                    <th><?= $projet->tvmb_0 ?></th>
+                                                    <th><?= $projet->mb_2 ?></th>
+                                                    <th><?= $projet->tvmb_1 ?></th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>CHARGES FIXES</td>
+
+                                                    <td><?= $projet->resultats[0]->cf ?></td>
+                                                    <td><?= $projet->resultats[1]->cf ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->cf ?></td>
+                                                    <td></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>VALEUR AJOUTEE</th>
+
+                                                    <td><?= $projet->va_0 ?></td>
+                                                    <td><?= $projet->va_1 ?></td>
+                                                    <th><?= $projet->tvva_0 ?></th>
+                                                    <td><?= $projet->va_2 ?></td>
+                                                    <th><?= $projet->tvva_1 ?></th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>SALAIRES</td>
+
+                                                    <td><?= $projet->resultats[0]->salaires ?></td>
+                                                    <td><?= $projet->resultats[1]->salaires ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->salaires ?></td>
+                                                    <td></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>EXCEDENT BRUT D'EXPLOITATION</th>
+
+                                                    <td><?= $projet->ebe_0 ?></td>
+                                                    <td><?= $projet->ebe_1 ?></td>
+                                                    <th><?= $projet->tvebe_0 ?></th>
+                                                    <td><?= $projet->ebe_2 ?></td>
+                                                    <th><?= $projet->tvebe_1 ?></th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>DOTATIONS AUX AMORTISSEMENTS ET AUX PROVISIONS</td>
+                                                    <td><?= $projet->resultats[0]->dap ?></td>
+                                                    <td><?= $projet->resultats[1]->dap ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->dap ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>RESULTAT D'EXPLOITATION</th>
+
+                                                    <th><?= $projet->re_0 ?></th>
+                                                    <th><?= $projet->re_1 ?></th>
+                                                    <th><?= $projet->tvre_0 ?></th>
+                                                    <th><?= $projet->re_2 ?></th>
+                                                    <th><?= $projet->tvre_1 ?></th>
+                                                </tr>
+                                                <tr>
+                                                    <td>PRODUITS FINANCIERS</td>
+
+                                                    <td><?= $projet->resultats[0]->pf ?></td>
+                                                    <td><?= $projet->resultats[1]->pf ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->pf ?></td>
+                                                    <td></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>CHARGES FINANCIERES</td>
+
+                                                    <td><?= $projet->resultats[0]->cfi ?></td>
+                                                    <td><?= $projet->resultats[1]->cfi ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->cfi ?></td>
+                                                    <td></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>RESULTAT FINANCIER</th>
+
+                                                    <th><?= $projet->rf_0 ?></th>
+                                                    <th><?= $projet->rf_1 ?></th>
+                                                    <th><?= $projet->tvrf_0 ?></th>
+                                                    <th><?= $projet->rf_2 ?></th>
+                                                    <th><?= $projet->tvrf_1 ?></th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>PRODUIT EXCEPTIONNEL</td>
+
+                                                    <td><?= $projet->resultats[0]->pe ?></td>
+                                                    <td><?= $projet->resultats[1]->pe ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->pe ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CHARGES EXCEPTIONNELLES</td>
+
+                                                    <td><?= $projet->resultats[0]->ce ?></td>
+                                                    <td><?= $projet->resultats[1]->ce ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->ce ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>RESULTAT EXCEPTIONNEL</th>
+
+                                                    <th><?= $projet->rex_0 ?></th>
+                                                    <th><?= $projet->rex_1 ?></th>
+                                                    <th><?= $projet->tvrex_0 ?></th>
+                                                    <th><?= $projet->rex_2 ?></th>
+                                                    <th><?= $projet->tvrex_1 ?></th>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>RESULTAT COURANT AVANT IMPOT</th>
+
+                                                    <th><?= $projet->rcai_0 ?></th>
+                                                    <th><?= $projet->rcai_1 ?></th>
+                                                    <th><?= $projet->tvrcai_0 ?></th>
+                                                    <th><?= $projet->rcai_2 ?></th>
+                                                    <th><?= $projet->rcai_1 ?></th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>IMPOTS</td>
+
+                                                    <td><?= $projet->resultats[0]->impots ?></td>
+                                                    <td><?= $projet->resultats[1]->impots ?></td>
+                                                    <td></td>
+                                                    <td><?= $projet->resultats[2]->impots ?></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>RESULTAT NET</th>
+
+                                                    <th><?= $projet->rn_0 ?></th>
+                                                    <th><?= $projet->rn_1 ?></th>
+                                                    <th><?= $projet->tvrn_0 ?></th>
+                                                    <th><?= $projet->rn_2 ?></th>
+                                                    <th><?= $projet->tvrn_1 ?></th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <?php endif; ?>
+                                         </div>
+
+                                 </div>
 
                             </div>
-                        </div>
+
+                            <div class="tab-pane fade" role="tabpanel" id="risques" aria-labelledby="tab2">
+                                 <table id="risques-tab" class="table table-condensed table-hover table-bordered">
+                                  <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Defaillances possibles</th>
+                                        <th>Causes</th>
+                                        <th>Consequences</th>
+                                        <th>Frequence</th>
+                                        <th>Gravite</th>
+                                        <th>Criticite brut</th>
+
+                                        <th>Criticite nette</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                    </table>
+                                <div style="width: 20%; margin:10px auto">
+                                    <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
+                                </div>
+                            </div>
+
+                            <?php if($projet->synthese_diagnostic_interne): ?>
+                                <div class="tab-pane fade" role="tabpanel" id="synthese1" aria-labelledby="">
+                                    <p><?= $projet->synthese_diagnostic_interne ?></p>
+                                </div>
+                            <?php endif ?>
+                                     </div>
                     </div>
-                </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="widget">
-                <div class="widget-content">
-                     @if($projet->etape>=2)
+                  </div>
 
-                               <fieldset>
-                                   <legend>DIAGNOSTIC EXTERNE</legend>
-                                   <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                         <li role="presentation" class="active">
-                                             <a href="#segments" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ANALYSE DE LA DEMANDE </a>
+                  @if($projet->etape>=2)
+                    <div class="card card-primary collapsed-card">
+                        <div class="card-header">
+                            <h5 class="card-title">Diagnostic externe</h5>
+
+                              <div class="card-tools">
+
+                                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                  </button>
+
+                                <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Fermer">
+                                  <i class="fas fa-times"></i></button>
+                              </div>
+                        </div>
+                        <div class="card-body">
+                                 <ul class="nav nav-tabs" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link active" href="#segments" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-selected="true"><span class=""></span> ANALYSE DE LA DEMANDE </a>
                                          </li>
 
-                                         <li role="presentation" class="">
-                                             <a href="#concurrents" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'OFFRE </a>
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#concurrents" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> ANALYSE DE L'OFFRE </a>
                                          </li>
 
-                                         <li role="presentation" class="">
-                                             <a href="#environnement" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'ENVIRONNMENT </a>
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#environnement" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> ANALYSE DE L'ENVIRONNMENT </a>
                                          </li>
 
                                          <?php if($projet->synthese_diagnostic_externe): ?>
-                                            <li role="presentation" class="">
-                                             <a href="#synthese2" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> SYNTHESE </a>
+                                            <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#synthese2" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> SYNTHESE </a>
                                          </li>
                                          <?php endif; ?>
                                     </ul>
 
                                     <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade active in" role="tabpanel" id="segments" aria-labelledby="tab1">
+                                        <div class="tab-pane fade active show" role="tabpanel" id="segments" aria-labelledby="tab1">
                                              <div>
-                                                     <div>
+                                                     <div class="table-responsive">
 
 
-                                                            <?php if($projet->segments): ?>
+                                                            <?php if(count($projet->segments)): ?>
 
-                                                            <table class="table table-bordered">
+                                                            <table class="table table-bordered ">
 
                                                                 <tbody>
                                                                 <?php $i=0; $quoi=""; $qui=""; $ou=""; $comment=""; $combien=""; $quand="";
@@ -479,7 +483,7 @@
                                         </div>
 
                                         <div class="tab-pane fade" role="tabpanel" id="concurrents" aria-labelledby="">
-                                        <?php if($projet->concurrents): ?>
+                                        <?php if(count($projet->concurrents)): ?>
                                             <table class="table table-bordered">
 
                                             <tbody>
@@ -525,7 +529,7 @@
                                         </div>
 
                                         <div class="tab-pane fade" role="tabpanel" id="environnement" aria-labelledby="">
-                                              <?php if($projet->environnement): ?>
+                                              <?php if(count($projet->environnement)): ?>
                                                     <table class="table table-bordered table-condensed">
                                                         <thead>
                                                         <tr >
@@ -600,50 +604,64 @@
 
                                         <?php endif; ?>
                                      </div>
-                               </fieldset>
-                               @endif
-                </div>
-            </div>
-        </div>
 
-        @if($projet->etape>=3)
-         <div class="col-md-12 col-sm-12">
-               <div class="widget">
-                <div class="widget-content">
-                       <fieldset>
-                          <legend>DIAGNOSTIC STRATEGIQUE</legend>
-                           <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#swot" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> SWOT </a>
+                        </div>
+                    </div>
+
+                  @endif
+
+
+                  @if($projet->etape>=3)
+                    <div class="card card-info collapsed-card">
+                        <div class="card-header">
+                            <h5 class="card-title">Diagnostic stratégique</h5>
+
+                              <div class="card-tools">
+
+                                  <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                  </button>
+
+                                <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Fermer">
+                                  <i class="fas fa-times"></i></button>
+                              </div>
+                        </div>
+                        <div class="card-body">
+
+                           <ul class="nav nav-tabs"  id="objTabs" role="tablist">
+                                <li role="presentation" class="nav-item">
+                                    <a class="nav-link active" href="#swot" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-selected="true"><span class=""></span> SWOT </a>
                                 </li>
 
-                                <li role="presentation" class="">
-                                    <a href="#objectifs" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> OBJECTIFS </a>
+                                <li role="presentation" class="nav-item">
+                                    <a class="nav-link" href="#objectifs" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> OBJECTIFS </a>
                                 </li>
 
-                                <li role="presentation" class="">
-                                    <a href="#organisation" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ORGANISATION DU TRAVAIL </a>
+                                <li role="presentation" class="nav-item">
+                                    <a class="nav-link" href="#organisation" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> ORGANISATION DU TRAVAIL </a>
                                 </li>
 
-                                <li role="presentation" class="">
-                                     <a href="#actions" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ACTIONS DE MAITRISE </a>
+                                <li role="presentation" class="nav-item">
+                                     <a class="nav-link" href="#actions" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> ACTIONS DE MAITRISE </a>
                                 </li>
 
-                                <li role="presentation" class="">
-                                    <a href="#etapes" role="tab" id="tab5" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> PLAN D'ACTION STRATEGIQUE </a>
+                                <li role="presentation" class="nav-item">
+                                    <a class="nav-link" href="#etapes" role="tab" id="tab5" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> PLAN D'ACTION STRATEGIQUE </a>
                                 </li>
 
-                                <li role="presentation" class="">
-                                    <a href="#faisabilite" role="tab" id="tab6" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ETUDE DE FAISABILITE</a>
+                                <li role="presentation" class="nav-item">
+                                    <a class="nav-link" href="#faisabilite" role="tab" id="tab6" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> ETUDE DE FAISABILITE</a>
                                 </li>
                            </ul>
 
                            <div class="tab-content" id="myTabContent">
-                             <div class="tab-pane fade active in" role="tabpanel" id="swot" aria-labelledby="tab1">
+                             <div class="tab-pane fade active show" role="tabpanel" id="swot" aria-labelledby="tab1">
                                   <div>
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-12">
+                                        @if($projet->swot)
                                             <fieldset>
                                                 <legend>SYNTHESE DES OPPORTUNITES</legend>
                                                 <?= $projet->swot->synt_op ?>
@@ -666,7 +684,9 @@
                                                 <legend>SYNTHESE DES FAIBLESSES</legend>
                                                     <?= $projet->swot->synt_faiblesses ?>
                                             </fieldset>
+                                            @endif
                                         </div>
+
                                     </div>
 
                                   </div>
@@ -777,107 +797,260 @@
 
 
                           </div>
-                       </fieldset>
-                </div>
-            </div>
 
-            <script>
+                      </div>
+                    </div>
+                        <script>
                 $(document).ready(function(){
                     getPlan($('#plan_id').val());
                 });
             </script>
-        </div>
-        @endif
 
-        @if($projet->etape>=4)
-         <div class="col-md-12 col-sm-12">
-               <div class="widget">
-                <div class="widget-content">
-                       <fieldset>
-                          <legend>PLAN FINANCIER</legend>
+                  @endif
+
+                  @if($projet->etape>=4)
+                    <div class="card card-success collapsed-card">
+                        <div class="card-header">
+                            <h5 class="card-title">Plan financier</h5>
+
+                              <div class="card-tools">
+
+                                  <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                  </button>
+
+                                <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Fermer">
+                                  <i class="fas fa-times"></i></button>
+                              </div>
+                        </div>
+                        <div class="card-body">
+
                            <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#prevresultats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> COMPTE d'EXPLOITATION </a>
+                                <li role="presentation" class="active nav-item">
+                                    <a class="nav-link" href="#prevresultats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-selected="true"><span class=""></span> COMPTE d'EXPLOITATION </a>
                                 </li>
 
-                                <li role="presentation" class="">
-                                    <a href="#prevbilans" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> BILAN </a>
+                                <li role="presentation" class="nav-item">
+                                    <a class="nav-link" href="#prevbilans" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> BILAN </a>
                                 </li>
 
-                                <li role="presentation" class="">
-                                    <a href="#prevtresoreries" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> FLUX DE TRESORERIE  </a>
+                                <li role="presentation" class="nav-item">
+                                    <a class="nav-link" href="#prevtresoreries" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> FLUX DE TRESORERIE  </a>
                                 </li>
 
-                                <li role="presentation" class="">
-                                     <a href="#montage" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> MONTAGE FINANCIER </a>
+                                <li role="presentation" class="nav-item">
+                                     <a class="nav-link" href="#montage" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> MONTAGE FINANCIER </a>
                                 </li>
 
 
                            </ul>
 
-                           <div class="tab-content" id="myTabContent">
-                             <div class="tab-pane fade active in" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
-                                  <div>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade active show" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
+                                           <div>
 
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-12">
-                                            <fieldset>
-                                                <legend>COMPTE D'EXPLOITATION PREVISIONNEL</legend>
+                                             <div class="row">
+                                                 <div class="col-md-6 col-sm-12">
+                                                     <fieldset>
+                                                         <legend>COMPTE D'EXPLOITATION PREVISIONNEL</legend>
 
-                                            </fieldset>
-                                        </div>
+                                                     </fieldset>
+                                                 </div>
 
-                                    </div>
+                                             </div>
 
-                                  </div>
+                                           </div>
 
-                             </div>
+                                      </div>
 
-                             <div class="tab-pane fade" role="tabpanel" id="prevbilans" aria-labelledby="">
-                                <p></p>
-                                <br/>
-                                <hr/>
-                                <h6 class="page-header">BILAN PREVISIONNEL</h6>
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-12">
+                                      <div class="tab-pane fade" role="tabpanel" id="prevbilans" aria-labelledby="">
+                                         <p></p>
+                                         <br/>
+                                         <hr/>
+                                         <h6 class="page-header">BILAN PREVISIONNEL</h6>
+                                         <div class="row">
+                                             <div class="col-md-4 col-sm-12">
 
-                                    </div>
+                                             </div>
 
-                                </div>
+                                         </div>
 
-                             </div>
+                                      </div>
 
-                             <div class="tab-pane fade" role="tabpanel" id="prevtresoreries" aria-labelledby="">
-                                <p></p>
+                                      <div class="tab-pane fade" role="tabpanel" id="prevtresoreries" aria-labelledby="">
+                                         <p></p>
 
-                                <h6 class="page-header">FLUX DE TRESORERIE PREVISIONNELS</h6>
+                                         <h6 class="page-header">FLUX DE TRESORERIE PREVISIONNELS</h6>
 
-                             </div>
+                                      </div>
 
-                             <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
-                                <h6 class="page-header">MONTAGE FINANCIER</h6>
-                             </div>
+                                      <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
+                                         <h6 class="page-header">MONTAGE FINANCIER</h6>
+                                      </div>
+                                   </div>
+                         </div>
+                    </div>
+                  @endif
+                    <div class="post">
+                      <div class="user-block">
+                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
+                        <span class="username">
+                          <a href="#">Jonathan Burke Jr.</a>
+                        </span>
+                        <span class="description">Shared publicly - 7:45 PM today</span>
+                      </div>
+                      <!-- /.user-block -->
+                      <p>
+                        Lorem ipsum represents a long-held tradition for designers,
+                        typographers and the like. Some people hate it and argue for
+                        its demise, but others ignore.
+                      </p>
 
-                          </div>
-                       </fieldset>
+                      <p>
+                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
+                      </p>
+                    </div>
+
+                    <div class="post clearfix">
+                      <div class="user-block">
+                        <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
+                        <span class="username">
+                          <a href="#">Sarah Ross</a>
+                        </span>
+                        <span class="description">Sent you a message - 3 days ago</span>
+                      </div>
+                      <!-- /.user-block -->
+                      <p>
+                        Lorem ipsum represents a long-held tradition for designers,
+                        typographers and the like. Some people hate it and argue for
+                        its demise, but others ignore.
+                      </p>
+                      <p>
+                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
+                      </p>
+                    </div>
+
+                    <div class="post">
+                      <div class="user-block">
+                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
+                        <span class="username">
+                          <a href="#">Jonathan Burke Jr.</a>
+                        </span>
+                        <span class="description">Shared publicly - 5 days ago</span>
+                      </div>
+                      <!-- /.user-block -->
+                      <p>
+                        Lorem ipsum represents a long-held tradition for designers,
+                        typographers and the like. Some people hate it and argue for
+                        its demise, but others ignore.
+                      </p>
+
+                      <p>
+                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v1</a>
+                      </p>
+                    </div>
                 </div>
+              </div>
             </div>
+            <div class="col-12 col-md-12 col-lg-3 order-1 order-md-2">
+              <div style="max-height: 240px; max-width: 300px">
+                  @if($projet->imageUri)
+                      <img class="img-thumbnail" src="{{asset('img/'.$projet->imageUri)}}" alt=""/>
+                      <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
+                  @else
+                       <img class="img-thumbnail" src="{{asset('img/logo-obac.png')}}" alt=""/>
+                       <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
+                  @endif
+              </div>
+              <h3 class="text-primary"> {{$projet->name}}</h3>
+              <p class="text-muted"><?= $projet->description_modele_economique ?></p>
+              <br>
+              <div class="text-muted">
+                <p class="text-sm">Porteur de projet:
+                  <b class="d-block">{{$projet->owner->name}}</b>
+                  <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->owner->email}}</b>
+                  <b class="d-block"><i class="far fa-fw fa-telegram"></i> {{$projet->owner->phone}}</b>
+                </p>
+                <p class="text-sm">Consultant
+                   @if($projet->consultant)
+                   </p>
+                   <p class="text-sm">
+                   <b class="d-block">{{$projet->consultant->name}}</b>
+                       <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
+                   </p>
+                   @else
+                                <form class="form-inline"  action="/admin/dossier/expert">
+                                {{csrf_field()}}
+                                <input type="hidden" name="id" value="{{ $projet->id }}"/>
+                                    <div class="form-group">
+                                        <select class="form-text" name="expert_id" id="id">
+                                            @foreach($experts as $expert)
+                                                <option value="{{ $expert->id }}">{{ $expert->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-danger"><i class="fa fa-link"></i> LIER</button>
+                                    </div>
+                                </form>
 
-            <script>
-                $(document).ready(function(){
-                    getPlan($('#plan_id').val());
-                });
-            </script>
+                     @endif
+              </div>
+
+              <h5 class="mt-4 text-muted">Moyens de financements</h5>
+              <ul class="list-unstyled">
+                @if($projet->moyens)
+                    @foreach($projet->financements as $moyen)
+                        <li class="btn-link text-secondary"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class="value"><?= $moyen->montant ?></span></li>
+                    @endforeach
+                @endif
+              </ul>
+
+
+              <div class="text-center mt-5 mb-3">
+                @if($projet->etape==2)
+                    @if($projet->validated_step!=2)
+
+                        <a class="btn btn-sm btn-warning" href="/admin/dossier/validate-diag-externe/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le deuxième paiement</a>
+
+                    @endif
+                @endif
+                @if($projet->etape==3)
+                    @if($projet->validated_step!=3)
+
+                        <a class="btn btn-sm btn-primary" href="/admin/dossier/validate-plan-strategique/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le troisième paiement</a>
+
+                    @endif
+                @endif
+                @if($projet->etape==4)
+                    @if($projet->validated_step!=4)
+                        <a class="btn btn-sm btn-info" href="/admin/dossier/validate-plan-financier/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le quatrième paiement</a>
+                    @endif
+                @endif
+
+                @if($projet->etape==5)
+                    @if($projet->validated_step!=5)
+
+                        <a class="btn btn-sm btn-success" href="/admin/dossier/validate-plan-financier/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le cinquième paiement</a>
+
+                    @endif
+                @endif
+                <a href="#" class="btn btn-sm btn-primary">Add files</a>
+                <a href="#" class="btn btn-sm btn-warning">Report contact</a>
+              </div>
+            </div>
+          </div>
         </div>
-        @endif
+        <!-- /.card-body -->
+      </div>
 
 
-    </div>
 
      <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script>
         $(document).ready(function(){
-            var orm = 'http://localhost/ormsys/api/';
+           // var orm = 'http://localhost/ormsys/api/';
             $.ajax({
                 url: "/admin/dossier/getchoices",
                 type:'Get',
@@ -993,44 +1166,3 @@
 
 @endsection
 
-@section('action')
-
-<span style="color: white; box-shadow: none; padding: 5px 0 0 0; margin-right: 100px" class=" btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-     <i class="fa fa-cogs"></i>&nbsp;Actions <i class="fa fa-caret-down"></i>
- </span>
-     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        @if($projet->etape==2)
-            @if($projet->validated_step!=2)
-            <li>
-                <a class="" href="/admin/dossier/validate-diag-externe/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le deuxième paiement</a>
-            </li>
-            @endif
-
-        @endif
-
-        @if($projet->etape==3)
-            @if($projet->validated_step!=3)
-            <li>
-                <a class="" href="/admin/dossier/validate-plan-strategique/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le troisième paiement</a>
-            </li>
-            @endif
-        @endif
-
-        @if($projet->etape==4)
-            @if($projet->validated_step!=4)
-            <li>
-                <a class="" href="/admin/dossier/validate-plan-financier/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le quatrième paiement</a>
-            </li>
-            @endif
-        @endif
-
-        @if($projet->etape==5)
-            @if($projet->validated_step!=5)
-                <li>
-                <a class="" href="/admin/dossier/validate-plan-financier/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le cinquième paiement</a>
-                </li>
-            @endif
-        @endif
-    </ul>
-
-@endsection

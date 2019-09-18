@@ -22,6 +22,13 @@
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
                             <p>AUTEUR : {{ $projet->auteur->name }}</p>
 
+
+                            <p>MOTS CLEFS : <a data-toggle="modal" data-target="#addTagModal" href="" title="ajout de mots clefs"><i class="fa fa-plus"></i></a></p>
+                            <ul class="list-inline">
+                                @foreach($projet->tags as $tag)
+                                    <li class="list-inline-item">{{$tag->name}}</li>
+                                @endforeach
+                            </ul>
                             @if($projet->etape>=4)
                                 <ul class="list-group">
                                     <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
@@ -1574,6 +1581,37 @@
                     });
                   </script>
         </div>
+
+        <div class="modal fade" id="addTagModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+                	<form enctype="multipart/form-data" method="post" action="/owner/dossier/add-tag">
+                		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
+                		{{csrf_field()}}
+                		<div class="modal-dialog modal-lg" role="document">
+                			<div class="modal-content">
+                				<div class="modal-header">
+                					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> Chargement de l'image du projet</span></h5>
+                				</div>
+                				<div class="modal-body">
+                					<div class="form-group">
+                						 <select class="form-control" name="tag_id" id="tag_id">
+                                            @foreach($tags as $tag)
+                                                <option value="{{$tag->id}}">{{$tag->name}}</option>
+                                            @endforeach
+                                          </select>
+                					</div>
+                				</div>
+                				<div class="modal-footer">
+                					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+                				</div>
+
+                			</div>
+                		</div>
+                	</form>
+
+
+
+                </div>
 
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script>
