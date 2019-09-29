@@ -240,7 +240,6 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
        @yield('content-header')
-
     </div>
     <!-- /.content-header -->
 

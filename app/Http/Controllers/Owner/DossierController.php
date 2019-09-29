@@ -58,7 +58,9 @@ class DossierController extends Controller
         //$variantes = Variante::all();
 	    $villes = Ville::all();
 
-        return view('/Owner/Dossiers/create')->with(compact('tprojets','villes'));
+	    $variantes = Variante::all();
+
+        return view('/Owner/Dossiers/create')->with(compact('tprojets','villes','variantes'));
     }
 
 	/**
@@ -136,8 +138,8 @@ class DossierController extends Controller
 		//$dossier = new Projet();
 
 		//dd($request->all());
-		$answers = $request->all()['answers'];
-		$produits = $request->all()['produits'];
+		$answers = isset($request->all()['answers'])?$request->all()['answers']:null;
+		$produits = isset($request->all()['produits'])?$request->all()['produits']:null;
 
 		$dossier = $request->all()['dossier'];
 		$dossier['moi_id'] = date('m');
@@ -213,12 +215,16 @@ class DossierController extends Controller
 				$dp->save();
 			}
 
-			foreach($answers as $answer){
-				$an= new ChoicesProjet();
-				$an->choice_id=$answer['choice_id'];
-				$an->projet_id=$dossier->id;
-				$an->save();
+			if($answers){
+				foreach($answers as $answer){
+					$an= new ChoicesProjet();
+					$an->choice_id=$answer['choice_id'];
+					$an->projet_id=$dossier->id;
+					$an->save();
+				}
 			}
+
+
 		}
 
 		return response()->json($dossier->token);

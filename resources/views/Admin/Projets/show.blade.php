@@ -1009,6 +1009,12 @@
 
 
               <div class="text-center mt-5 mb-3">
+                @if($projet->etape==1)
+                    @if($projet->validated_step!=1)
+                        <a class="btn btn-sm btn-warning" href="/admin/dossier/validate-diag-interne/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le premier paiement</a>
+                    @endif
+                @endif
+
                 @if($projet->etape==2)
                     @if($projet->validated_step!=2)
 

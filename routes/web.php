@@ -30,6 +30,8 @@ Route::get('/about',function(){
 	return view('Front/about');
 })->name('about');
 
+Route::get('/pdf','FrontController@makePdf');
+
 /*
 
 Route::get('/roles/',

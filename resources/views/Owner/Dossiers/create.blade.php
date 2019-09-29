@@ -66,9 +66,20 @@
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-5 col-sm-12">
+                                                         <div class="col-md-6 col-sm-12">
                                                              <div class="form-group">
-                                                                 <label class="control-label">TYPE DE PROJET</label>
+                                                                 <label class="control-label">CLASSE  PROJET (Variante)</label>
+                                                                 <select class="form-control" name="variante_id" id="variante_id">
+                                                                    @foreach($variantes as $p)
+                                                                       <option value='{!! $p->id !!}'>{{$p->name}}</option>
+                                                                    @endforeach
+                                                                 </select>
+                                                             </div>
+                                                         </div>
+
+                                                         <div class="col-md-6 col-sm-12">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">TYPE DE FINANCEMENT</label>
                                                                  <select class="form-control" name="tprojet_id" id="tprojet_id">
                                                                     @foreach($tprojets as $p)
                                                                        <option value='{!! $p->id !!}'>{{$p->name}}</option>
@@ -77,7 +88,7 @@
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-4 col-sm-12">
+                                                         <div class="col-md-6 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">VILLE</label>
                                                                  <select class="form-control" name="ville_id" id="ville_id">

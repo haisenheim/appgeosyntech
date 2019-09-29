@@ -960,7 +960,7 @@
 
             <script type="text/javascript">
                 $(document).ready(function() {
-                  $('#synthese1').summernote({
+                  $('#synthes').summernote({
                     height: 300,
                     tabsize: 2,
                     followingToolbar: true,
@@ -1120,7 +1120,7 @@
                 <script type="text/javascript">
                     $(document).ready(function() {
                       $('textarea').summernote({
-                        height: 100,
+                        height: 300,
                         tabsize: 2,
                         followingToolbar: true,
                         lang:'fr-FR'
@@ -1147,7 +1147,7 @@
 @section('action')
 @if($projet->etape==1)
     @if($projet->validated_step==1)
-        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-pencil"></i> Editer le diagnostic strategique</a>
+        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-diag-externe/{{$projet->token}}"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
     @endif
 @endif
 
