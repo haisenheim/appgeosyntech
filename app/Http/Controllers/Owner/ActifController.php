@@ -86,6 +86,7 @@ class ActifController extends Controller
     public function store(Request $request)
     {
         //
+	    dd($request);
 	    $token = sha1(date('ydmhis') . Auth::user()->id);
 	    $actif = new Actif();
         $actif->name = $request['name'];
