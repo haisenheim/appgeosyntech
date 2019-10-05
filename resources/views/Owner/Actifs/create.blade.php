@@ -39,8 +39,8 @@
                                  </div>
                                  <div class="col-md-6">
                                      <div class="form-group">
-                                         <label class="control-label">PHOTO DE L'ARTICLE</label>
-                                         <input id="name" name="imageUri" type="file"  class="form-control" placeholder="">
+                                         <label for="imageUri" class="control-label">PHOTO DE L'ARTICLE</label>
+                                         <input id="imageUri" name="imageUri" type="file"  class="form-control" placeholder="">
                                      </div>
                                  </div>
                                  <div class="col-md-12 col-sm-12">
