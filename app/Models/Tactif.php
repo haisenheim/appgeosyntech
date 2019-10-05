@@ -10,7 +10,7 @@ class Tactif extends Model
 	protected $guarded =[];
 
 	public function actifs(){
-		return $this->hasMany('App\Models\Actif');
+		return $this->hasMany('App\Models\Actif','tactif_id');
 	}
 	
 	public function root(){

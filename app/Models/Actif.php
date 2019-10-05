@@ -10,8 +10,8 @@ class Actif extends Model
 
 	protected $guarded = [];
 
-	public function type(){
-		return $this->belongsTo('App\Models\Tactif');
+	public function tactif(){
+		return $this->belongsTo('App\Models\Tactif','tactif_id');
 	}
 
 	public function ville(){
