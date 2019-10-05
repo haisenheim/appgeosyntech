@@ -31,7 +31,7 @@ class ActifController extends Controller
     {
         //
         $dossiers = Actif::all()->where('owner_id',Auth::user()->id);
-        return view('/Owner/Dossiers/index')->with(compact('dossiers'));
+        return view('/Owner/Actifs/index')->with(compact('dossiers'));
     }
 
 
