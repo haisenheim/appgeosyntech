@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Tactif extends Model
 {
     //
+	protected $guarded =[];
+
 	public function actifs(){
 		return $this->hasMany('App\Models\Actif');
 	}
