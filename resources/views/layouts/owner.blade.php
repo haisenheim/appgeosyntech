@@ -26,6 +26,9 @@
                     <a href="/owner/dossiers"><i class="fa fa-th-large" ></i>&nbsp; MES DOSSIERS</a>
                 </li>
                 <li>
+                    <a href="/owner/actifs"><i class="fa fa-coins" ></i>&nbsp; CESSIONS D'ACTIFS</a>
+                </li>
+                <li>
                     <a href="/owner/about/"><i class="fa fa-file" ></i>&nbsp; A PROPOS DU CABINET OBAC</a>
                 </li>
             </ul>

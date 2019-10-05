@@ -113,6 +113,7 @@ Route::prefix('owner')
     ->name('owner.')
     ->group(function(){
         Route::resource('dossiers','DossierController');
+	    Route::resource('actifs','ActifController');
         Route::get('about','AboutController');
         Route::get('profil','ProfilController');
 	    Route::post('/dossier/initJson','DossierController@initJson');
