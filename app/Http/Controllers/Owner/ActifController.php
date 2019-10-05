@@ -147,7 +147,9 @@ class ActifController extends Controller
         //
 	    $actif = Actif::where(['token'=>$token])->first();
 	   // dd($actif);
-	    return view('Owner/Actifs/edit')->with(compact('actif'));
+	    $tactifs = Tactif::all();
+	    $villes = Ville::all();
+	    return view('Owner/Actifs/edit')->with(compact('actif','villes','tactifs'));
     }
 
     /**
