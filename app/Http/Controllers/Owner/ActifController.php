@@ -86,6 +86,38 @@ class ActifController extends Controller
     public function store(Request $request)
     {
         //
+	    $token = sha1(date('ydmhis') . Auth::user()->id);
+	    $actif = new Actif();
+        $actif->name = $request['name'];
+        $actif->ville_id = $request['ville_id'];
+	    $actif->tactif_id = $request['tactif_id'];
+	    $actif->description = $request['description'];
+	    $actif->caracteristiques = $request['caracteristiques'];
+	    $actif->prix = $request['prix'];
+	    $actif->owner_id = Auth::user()->id;
+	    $actif->token = $token;
+	    if($request->imageUri){
+		    $file = $request->imageUri;
+		    $ext = $file->getClientOriginalExtension();
+		    $arr_ext = array('jpg','png','jpeg','gif');
+		    if(in_array($ext,$arr_ext)) {
+			    if (!file_exists(public_path('img') . '/actifs')) {
+				    mkdir(public_path('img') . '/actifs');
+			    }
+
+			    if (file_exists(public_path('img') . '/actifs/' . $token . '.' . $ext)) {
+				    unlink(public_path('img') . '/actifs/' . $token . '.' . $ext);
+			    }
+			    $name = $token . '.' . $ext;
+			    $file->move(public_path('img/actifs'), $name);
+			    $actif->imageUri = 'actifs/' . $name;
+		    }
+
+	    }
+
+        $actif->save();
+	    $request->session()->flash('success','L\'article a été correctement enregistré !!!');
+	    return redirect('/owner/actifs');
     }
 
     /**

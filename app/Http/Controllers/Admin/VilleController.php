@@ -81,8 +81,8 @@ class VilleController extends Controller
 	    }
 
         $ville->save();
-            $request->session()->flash('success','La ville a été correctement enregistrée !!!');
-            return redirect('/admin/villes');
+	    $request->session()->flash('success','La ville a été correctement enregistrée !!!');
+	    return redirect('/admin/villes');
 
 
     }

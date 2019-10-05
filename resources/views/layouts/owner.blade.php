@@ -23,7 +23,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="/owner/dossiers"><i class="fa fa-th-large" ></i>&nbsp; MES DOSSIERS</a>
+                    <a href="/owner/dossiers"><i class="fa fa-th-large" ></i>&nbsp; PROJETS</a>
                 </li>
                 <li>
                     <a href="/owner/actifs"><i class="fa fa-filter" ></i>&nbsp; CESSIONS D'ACTIF</a>
