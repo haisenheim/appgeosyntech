@@ -145,6 +145,7 @@ class ActifController extends Controller
     public function edit(Projet $projet)
     {
         //
+	    dd($projet);
     }
 
     /**
