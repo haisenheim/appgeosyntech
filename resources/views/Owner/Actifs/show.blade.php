@@ -64,7 +64,7 @@
 
 
         <div class="modal fade" id="addTagModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-                	<form enctype="multipart/form-data" method="post" action="/owner/dossier/add-tag">
+                	<form enctype="multipart/form-data" method="post" action="/owner/actif/add-tag">
                 		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
                 		{{csrf_field()}}
                 		<div class="modal-dialog modal-lg" role="document">
@@ -254,5 +254,5 @@
 @endsection
 
 @section('action')
-     <a class="btn btn-xs btn-success" href="/owner/actifs/{{$projet}}/edit"><i class="fa fa-pencil"></i> Modifier</a>
+     <a class="btn btn-xs btn-success" href="/owner/actifs/{{$projet->token}}/edit"><i class="fa fa-pencil"></i> Modifier</a>
 @endsection
