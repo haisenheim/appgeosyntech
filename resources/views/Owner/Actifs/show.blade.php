@@ -18,7 +18,7 @@
                                 @endif
                             </div>
 
-                            <p>CODE : {{ $projet->code }}</p>
+                            <p>TYPE D'IMMOBILISATION : {{ $projet->tactif->name }}</p>
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
 
