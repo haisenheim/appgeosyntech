@@ -13,7 +13,7 @@
                         <div class="widget-content">
                             <div class="">
                                 <div class="">
-                                    <span style="font-weight: 600; font-size: 1.3rem" class="text-primary"><i class="fa fa-th-large"></i> </span>
+                                    <span style="font-weight: 600; font-size: 1.3rem" class="text-primary"><i class="fa fa-th-large"></i> {{  $projet->type->name }}</span>
                                 </div>
                                 <div class="text text-danger text-bold"> <i class="fa fa-credit-card"></i> {{ $projet->prix }} </div>
                                 <div class="">
