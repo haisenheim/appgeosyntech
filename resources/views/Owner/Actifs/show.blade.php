@@ -22,13 +22,6 @@
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
 
-                            <p>MOTS CLEFS : <a data-toggle="modal" data-target="#addTagModal" href="" title="ajout de mots clefs"><i class="fa fa-plus"></i></a></p>
-                            <ul class="list-inline">
-                                @foreach($projet->tags as $tag)
-                                    <li class="list-inline-item">{{$tag->name}}</li>
-                                @endforeach
-                            </ul>
-
 
 
                             <p>PRIX INITIAL : {{ $projet->prix }}</p>
