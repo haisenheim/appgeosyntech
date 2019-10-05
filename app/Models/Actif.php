@@ -17,4 +17,11 @@ class Actif extends Model
 	public function ville(){
 		return $this->belongsTo('App\Models\Ville');
 	}
+
+	public function owner(){
+		return $this->belongsTo('App\User','owner_id');
+	}
+	public function consultant(){
+		return $this->belongsTo('App\User','expert_id');
+	}
 }

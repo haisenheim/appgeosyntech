@@ -2,7 +2,7 @@
 
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
-                <?php dd($dossiers) ?>
+
                 <div class="row">
                     @foreach($dossiers as $projet)
                     <div class="col-sm-12 col-md-3">
