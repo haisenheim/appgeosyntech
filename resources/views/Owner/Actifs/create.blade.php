@@ -5,6 +5,9 @@
         <div class="widget">
 
             <div class="widget-content">
+            <div class="page-header">
+                <h3 class="text-center">NOUVELLE CESSION D'ACTIF</h3>
+            </div>
                 <form enctype="multipart/form-data" class="form" action="{{route('owner.actifs.store')}}" method="post">
                     {{csrf_field()}}
 
