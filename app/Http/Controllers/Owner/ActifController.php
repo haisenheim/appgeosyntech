@@ -142,10 +142,11 @@ class ActifController extends Controller
      * @param  \App\Models\Projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function edit(Projet $projet)
+    public function edit($token)
     {
         //
-	    dd($projet);
+	    $actif = Actif::where(['token'=>$token])->first();
+	    dd($actif);
     }
 
     /**
