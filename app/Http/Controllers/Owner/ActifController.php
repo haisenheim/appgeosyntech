@@ -146,7 +146,8 @@ class ActifController extends Controller
     {
         //
 	    $actif = Actif::where(['token'=>$token])->first();
-	    dd($actif);
+	   // dd($actif);
+	    return view('Owner/Actifs/edit')->with(compact('actif'));
     }
 
     /**
@@ -156,9 +157,10 @@ class ActifController extends Controller
      * @param  \App\Models\Projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Projet $projet)
+    public function update(Request $request, Actif $actif)
     {
         //
+	    dd($request);
     }
 
     /**
