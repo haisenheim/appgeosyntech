@@ -848,10 +848,9 @@
         });
       </script>
 
+      <script type="text/javascript" src="{{ asset('js') }}"></script>
+
     <script>
-
-
-         var orm = 'http://localhost/ormsys/api/';
 
                 $(document).ready(function() {
 

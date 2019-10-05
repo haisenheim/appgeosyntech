@@ -64,6 +64,7 @@
     </div>
 
     <div class="">
+        <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
         @yield('content')
     </div>
      @include('includes.footer')

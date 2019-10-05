@@ -250,7 +250,9 @@
             @include('includes.flash-message')
        </div>
         <div style="background: url({{asset('img/logo-obac.png')}}); background-size: cover">
+            <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
              @yield('content')
+
         </div>
 
 
