@@ -6,7 +6,7 @@
 
             <div class="widget-content">
             <div class="page-header">
-                <h3 class="text-center">Modification de {{$article->name}}</h3>
+                <h3 class="text-center">Modification de {{$actif->name}}</h3>
             </div>
                 <form enctype="multipart/form-data" class="form" action="{{route('owner.actifs.update')}}" method="post">
                     {{csrf_field()}}
