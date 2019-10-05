@@ -65,7 +65,7 @@
                              </div>
 
                              <div class="btn-div card-footer text-center">
-                                 <button class="btn btn-success  btn-sm  btn-rounded" type="button"> Enregister <i class="fa fa-save"></i></button>
+                                 <button class="btn btn-success  btn-sm " type="submit"> Enregister <i class="fa fa-save"></i></button>
                             </div>
 
                      </fieldset>
