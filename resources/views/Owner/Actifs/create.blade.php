@@ -3,57 +3,78 @@
 @section('content')
     <div class="md-container">
         <div class="widget">
-            <div class="widget-header">
-                <h5 class=""><i class="fa fa-user"></i> NOUVEAU DOSSIER</h5>
-            </div>
+
             <div class="widget-content">
-                <form enctype="multipart/form-data" class="form" action="{{route('owner.dossiers.store')}}" method="post">
+                <form enctype="multipart/form-data" class="form" action="{{route('owner.actifs.store')}}" method="post">
                     {{csrf_field()}}
 
+                    <fieldset>
+                        <legend>INFORMATIONS SUR L'ARTICLE</legend>
+                            <div class="row">
+                                 <div class="col-md-8">
+                                     <div class="form-group">
+                                         <label class="control-label">NOM</label>
+                                         <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <div class="form-group">
+                                         <label for="prix" class="control-label">PRIX INITIAL</label>
+                                         <input id="prix" name="prix"  type="number"  class="form-control" placeholder="">
+                                     </div>
+                                 </div>
 
+                                 <div class="col-md-6 col-sm-12">
+                                     <div class="form-group">
+                                         <label class="control-label">TYPE D'IMMOBILISATION</label>
+                                         <select class="form-control" name="tactif_id" id="variante_id">
+                                            @foreach($tactifs as $p)
+                                               <option value='{!! $p->id !!}'>{{$p->name}}</option>
+                                            @endforeach
+                                         </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                     <div class="form-group">
+                                         <label class="control-label">PHOTO DE L'ARTICLE</label>
+                                         <input id="name" name="imageUri" type="file"  class="form-control" placeholder="">
+                                     </div>
+                                 </div>
+                                 <div class="col-md-12 col-sm-12">
+                                     <div class="form-group">
+                                         <label for="description" class="control-label">DESCRIPTION</label>
+                                         <textarea name="description" id="description" cols="30" rows="3"></textarea>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-12 col-sm-12">
+                                     <div class="form-group">
+                                         <label for="caracteristiques" class="control-label">CARACTERISTIQUES</label>
+                                         <textarea name="caracteristiques" id="caracteristiques" cols="30" rows="3"></textarea>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6 col-sm-12">
+                                     <div class="form-group">
+                                         <label for="ville_id" class="control-label">VILLE</label>
+                                         <select class="form-control" name="ville_id" id="ville_id">
+                                            @foreach($villes as $p)
+                                               <option value='{!! $p->id !!}'>{{$p->name}}</option>
+                                            @endforeach
+                                         </select>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="btn-div card-footer text-center">
+                                 <button class="btn btn-success  btn-sm  btn-rounded" type="button"> Enregister <i class="fa fa-save"></i></button>
+                            </div>
+
+                     </fieldset>
                 </form>
             </div>
         </div>
     </div>
 
     <style>
-
-        .loader {
-                position: relative;
-                text-align: center;
-                margin: 15px auto 35px auto;
-                z-index: 9999;
-                display: block;
-                width: 80px;
-                height: 80px;
-                border: 10px solid rgba(0, 0, 0, .3);
-                border-radius: 50%;
-                border-top-color: #000;
-                animation: spin 1s ease-in-out infinite;
-
-                -webkit-animation-name: spin;
-                -webkit-animation-duration: 600ms;
-                -webkit-animation-timing-function: ease-in-out;
-                -webkit-animation-iteration-count: infinite;
-            }
-
-            @keyframes spin {
-               from{
-                   transform: rotate(0deg);
-               }
-                to {
-                    -webkit-transform: rotate(360deg);
-                }
-            }
-
-            @-webkit-keyframes spin {
-                to {
-                    -webkit-transform: rotate(360deg);
-                }
-            }
-
-
-
 
 
 
@@ -73,7 +94,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
           $('textarea').summernote({
-            height: 300,
+            height: 200,
             tabsize: 2,
             followingToolbar: true,
             lang:'fr-FR'
