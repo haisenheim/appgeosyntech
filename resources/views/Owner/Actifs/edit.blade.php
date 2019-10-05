@@ -10,7 +10,7 @@
             </div>
                 <form enctype="multipart/form-data" class="form" action="{{route('owner.actifs.update',$actif->token)}}"  method="post">
                     {{csrf_field()}}
-                    @method('put')
+                    @method('PUT')
 
                     <fieldset>
                         <legend>INFORMATIONS SUR L'ARTICLE</legend>
