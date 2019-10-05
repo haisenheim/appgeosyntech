@@ -2,6 +2,7 @@
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
                 <div class="row">
+
                     <div class="col-md-4 col-sm-12">
                         <div class="well">
 
@@ -20,7 +21,7 @@
                             <p>CODE : {{ $projet->code }}</p>
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-                            <p>AUTEUR : {{ $projet->auteur->name }}</p>
+
                             <p>MOTS CLEFS : <a data-toggle="modal" data-target="#addTagModal" href="" title="ajout de mots clefs"><i class="fa fa-plus"></i></a></p>
                             <ul class="list-inline">
                                 @foreach($projet->tags as $tag)
