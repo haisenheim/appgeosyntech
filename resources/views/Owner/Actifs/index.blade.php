@@ -35,5 +35,5 @@
 
 @section('action')
 
-<a class="btn btn-sm btn-primary" href="/owner/dossiers/create"><i class="fa fa-plus-circle"></i> NOUVEAU DOSSIER</a>
+<a class="btn btn-sm btn-primary" href="/owner/actifs/create"><i class="fa fa-plus-circle"></i> NOUVELLE CESSION</a>
 @endsection
