@@ -13,11 +13,11 @@
                         <div class="widget-content">
                             <div class="">
                                 <div class="">
-                                    <span style="font-weight: 600; font-size: 1.3rem" class="text-primary"><i class="fa fa-th-large"></i> {{  $projet->type->name }}</span>
+                                    <span style="font-weight: 600; font-size: 1.3rem" class="text-primary"><i class="fa fa-th-large"></i> </span>
                                 </div>
-                                <div class="text text-danger text-bold"> <i class="fa fa-credit-card"></i> {{ $projet->montant }} </div>
+                                <div class="text text-danger text-bold"> <i class="fa fa-credit-card"></i> {{ $projet->prix }} </div>
                                 <div class="">
-                                    <span class=""><i class="fa fa-user"></i> {{  $projet->owner->name }}</span>
+                                    <span class=""><i class="fa fa-user"></i> </span>
                                 </div>
                             </div>
                             <div>
