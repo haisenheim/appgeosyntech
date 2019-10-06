@@ -57,7 +57,7 @@ class ActifController extends Controller
     public function show($token)
     {
 	    $projet = Actif::where('token',$token)->first();
-	    dd($projet);
+	    //dd($projet);
 
 	    $experts = User::all()->where('role_id',2);
 	    return view('/Admin/Actifs/show')->with(compact('projet','experts'));
@@ -71,16 +71,16 @@ class ActifController extends Controller
 		return redirect()->back();
 	}
 
-	public function disable(Request $request){
-		$projet = Actif::find($request->id);
+	public function disable($id){
+		$projet = Actif::find($id);
 		$projet->active = 0;
 		$projet->save();
 
 		return redirect()->back();
 	}
 
-	public function enable(Request $request){
-		$projet = Actif::find($request->id);
+	public function enable($id){
+		$projet = Actif::find($id);
 		$projet->active = 1;
 		$projet->save();
 
