@@ -73,10 +73,10 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Dossiers/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6557377" vertical-offset="192" max-vertical-offset="2608">
-              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.29508197" vertical-offset="192" max-vertical-offset="2624">
+              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
-                <element signature="e#1763#1887#0#HTML" expanded="true" />
+                <element signature="e#1809#1933#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1087,10 +1087,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Dossiers/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6557377" vertical-offset="192" max-vertical-offset="2608">
-          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.29508197" vertical-offset="192" max-vertical-offset="2624">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding>
-            <element signature="e#1763#1887#0#HTML" expanded="true" />
+            <element signature="e#1809#1933#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
