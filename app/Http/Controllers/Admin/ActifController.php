@@ -57,6 +57,7 @@ class ActifController extends Controller
     public function show($token)
     {
 	    $projet = Actif::where('token',$token)->first();
+	    dd($projet);
 
 	    $experts = User::all()->where('role_id',2);
 	    return view('/Admin/Actifs/show')->with(compact('projet','experts'));

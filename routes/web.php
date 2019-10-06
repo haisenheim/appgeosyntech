@@ -61,8 +61,8 @@ Route::prefix('admin')
 	    Route::get('dossier/validate-diag-externe/{token}','ProjetController@validateDiagExterne');
 	    Route::get('dossier/validate-plan-strategique/{token}','ProjetController@validateDiagStrategique');
 	    Route::get('dossier/validate-plan-financier/{token}','ProjetController@validateMontageFinancier');
-	    Route::get('dossier/disable/{token}','ProjetController@disable')->name('disable.actif');
-	    Route::get('dossier/enable/{token}','ProjetController@enable')->name('enable.actif');
+	    Route::get('dossier/disable/{token}','ActifController@disable')->name('disable.actif');
+	    Route::get('dossier/enable/{token}','ActifController@enable')->name('enable.actif');
         //Route::resource('variantesfinancements','VfinancementController');
 	    Route::post('villes/save','VilleController@save');
     });
