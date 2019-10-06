@@ -30,7 +30,7 @@
                                                 <h5 class="widget-user-desc text-right">Par {{$dossier->owner->name}}</h5>
                                               </div>
                                               <div class="widget-user-image">
-                                                <img class="img-circle" src="{{$dossier->owner?$dossier->owner->imageUri?asset("img/".$dossier->owner->imageUri):asset("img/avatar.png"):asset("img/avatar.png")}}" alt="User Avatar">
+                                                <img class="img-circle" src="{{isset($dossier->owner)?$dossier->owner->imageUri?asset("img/".$dossier->owner->imageUri):asset("img/avatar.png"):asset("img/avatar.png")}}" alt="User Avatar">
                                               </div>
                                               <div class="card-footer">
                                                 <div class="row">
