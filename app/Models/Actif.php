@@ -24,4 +24,8 @@ class Actif extends Model
 	public function consultant(){
 		return $this->belongsTo('App\User','expert_id');
 	}
+
+	public function cessions(){
+		return $this->hasMany('App\Models\Cessions');
+	}
 }
