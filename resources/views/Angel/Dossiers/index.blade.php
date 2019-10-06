@@ -2,50 +2,76 @@
 @section('content')
 
 
- <div class="card card-widget widget-user">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header bg-default">
-                <h1 style="font-size: 2.5rem; padding-top: 20px;" class="widget-user-username">Opportunités d'investissements</h1>
-
-              </div>
-              <div class="widget-user-image">
-
-                <img class="img-circle elevation-2" src="{{asset('img/logo-obac.png')}}" alt="User Avatar">
-              </div>
-
-              <div class="card-footer">
-
-                  <div class="card-body">
+ <div class="card ">
 
 
-
+              <div class="card-body">
+                    <h1 style="" class="page-header">Opportunités</h1>
                     <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true">Home</a>
+                        <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true">Projets d'investissement</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Profile</a>
+                        <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Acquisitions d'Actifs</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#custom-content-below-messages" role="tab" aria-controls="custom-content-below-messages" aria-selected="false">Messages</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-content-below-settings-tab" data-toggle="pill" href="#custom-content-below-settings" role="tab" aria-controls="custom-content-below-settings" aria-selected="false">Settings</a>
-                      </li>
+
                     </ul>
                     <div class="tab-content" id="custom-content-below-tabContent">
                       <div class="tab-pane fade show active" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                        <div class="row">
+                            @foreach($projets as $dossier)
+                                 <div class="col-md-4 col-sm-12">
+                                            <!-- Widget: user widget style 1 -->
+                                            <div class="card card-widget widget-user">
+                                              <!-- Add the bg color to the header using any of the bg-* classes -->
+                                              <div class="widget-user-header text-white"
+                                                   style="background: url('{{$dossier->imageUri?asset("img/".$dossier->imageUri):asset("img/logo-obac.png")}}') center center;">
+                                                <h3 class="widget-user-username text-right">{{$dossier->name}}</h3>
+                                                <h5 class="widget-user-desc text-right">Par {{$dossier->owner->name}}</h5>
+                                              </div>
+                                              <div class="widget-user-image">
+                                                <img class="img-circle" src="{{$dossier->owner->imageUri?asset("img/".$dossier->imageUri):asset("img/avatar.png")}}" alt="User Avatar">
+                                              </div>
+                                              <div class="card-footer">
+                                                <div class="row">
+                                                  <div class="col-sm-4 border-right">
+                                                    <div class="description-block">
+                                                      <h5 class="description-header">3,200</h5>
+                                                      <span class="description-text">SALES</span>
+                                                    </div>
+                                                    <!-- /.description-block -->
+                                                  </div>
+                                                  <!-- /.col -->
+                                                  <div class="col-sm-4 border-right">
+                                                    <div class="description-block">
+                                                      <h5 class="description-header">13,000</h5>
+                                                      <span class="description-text">FOLLOWERS</span>
+                                                    </div>
+                                                    <!-- /.description-block -->
+                                                  </div>
+                                                  <!-- /.col -->
+                                                  <div class="col-sm-4">
+                                                    <div class="description-block">
+                                                      <h5 class="description-header">35</h5>
+                                                      <span class="description-text">PRODUCTS</span>
+                                                    </div>
+                                                    <!-- /.description-block -->
+                                                  </div>
+                                                  <!-- /.col -->
+                                                </div>
+                                                <!-- /.row -->
+                                              </div>
+                                            </div>
+                                            <!-- /.widget-user -->
+                                          </div>
+                            @endforeach
+                        </div>
+
                       </div>
                       <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
-                         Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+
                       </div>
-                      <div class="tab-pane fade" id="custom-content-below-messages" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
-                         Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
-                      </div>
-                      <div class="tab-pane fade" id="custom-content-below-settings" role="tabpanel" aria-labelledby="custom-content-below-settings-tab">
-                         Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
-                      </div>
+
                     </div>
 
 
@@ -93,7 +119,7 @@
                             </tbody>
                         </table>
                   </div>
-              </div>
+
  </div>
 
 
