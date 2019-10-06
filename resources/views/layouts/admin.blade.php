@@ -198,6 +198,15 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="/admin/actifs" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                CESSIONS
+              </p>
+            </a>
+          </li>
+
             <li class="nav-item">
             <a href="/admin/experts" class="nav-link">
               <i class="nav-icon fas fa-user-friends"></i>

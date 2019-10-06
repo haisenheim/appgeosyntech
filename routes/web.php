@@ -43,6 +43,7 @@ Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->name('admin.')
     ->group(function(){
+	    Route::resource('actifs','VilleController');
         Route::resource('villes','VilleController');
 	    Route::resource('dossiers','ProjetController');
         Route::resource('users','UserController');
@@ -85,6 +86,7 @@ Route::prefix('consultant')
     ->name('consultant.')
     ->group(function(){
         Route::resource('dossiers','DossierController');
+	    Route::resource('actifs','ActifController');
         Route::get('profil','ProfilController');
         Route::get('dashboard','DashboardController');
 	    Route::get('dossier/getchoices','DossierController@getChoicesJson');

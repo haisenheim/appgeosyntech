@@ -32,7 +32,7 @@ class DossierController extends Controller
     {
         //
         $dossiers = Projet::all()->where('expert_id',Auth::user()->id);
-        return view('/consultant/dossiers/index')->with(compact('dossiers'));
+        return view('/consultant/Dossiers/index')->with(compact('dossiers'));
     }
 
 	public function getChoicesJson(Request $request){
@@ -304,8 +304,6 @@ class DossierController extends Controller
 		$projet->save();
 		return redirect()->back();
 	}
-
-
 	/**
 	 * Enregistrement de la synthese du diagnostic strategique
 	 */
