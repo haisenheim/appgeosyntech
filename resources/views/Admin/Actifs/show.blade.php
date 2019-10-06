@@ -7,7 +7,7 @@
  ?>
 <div class="card">
         <div class="card-header">
-          <h3 class="card-title">{{$projet->name}} - {{$projet->tactif->name}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
+          <h3 style="font-weight: 900" class="card-title">{{$projet->name}} - {{$projet->tactif->name}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Reduire">
@@ -26,7 +26,7 @@
 
 
 
-                  <div class="card card-danger collapsed-card">
+                  <div class="card card-primary ">
                     <div class="card-header">
                         <h5 class="card-title">CARACTERISTIQUES</h5>
 
@@ -44,7 +44,7 @@
                     </div>
                   </div>
 
-                  <div class="card card-danger collapsed-card">
+                  <div class="card card-info ">
                     <div class="card-header">
                         <h5 class="card-title">DESCRIPTION</h5>
 

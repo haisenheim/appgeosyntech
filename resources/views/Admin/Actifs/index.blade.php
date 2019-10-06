@@ -41,7 +41,7 @@
                         <tr>
                             <td>#</td>
                             <td>
-                            <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <span style="font-weight: bolder"> {{$projet->marque->name}}</span> <br/>
+                            <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <span style="font-weight: bolder"> {{$projet->tactif->name}}</span> <br/>
                             <?= $projet->active?'<span class="badge badge-success">ACTIF</span>':'<span class="badge badge-danger">Inactif</span>' ?> - <?= $projet->vendu?'<span class="badge badge-info">Cedé</span>':'<span class="badge badge-warning">En vente</span>' ?>
 
                             </td>
