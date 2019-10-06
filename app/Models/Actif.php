@@ -26,6 +26,6 @@ class Actif extends Model
 	}
 
 	public function cessions(){
-		return $this->hasMany('App\Models\Cessions');
+		return $this->hasMany('App\Models\Cession');
 	}
 }
