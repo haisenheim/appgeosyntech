@@ -168,7 +168,10 @@ class ActifController extends Controller
 	public function save(Request $request){
 
 		$token = $request->token;
-		$actif = Actif::where(['token'=>$token]);
+		$act = Actif::where(['token'=>$token]);
+		$actif = new Actif();
+		$actif->token= $token;
+		$actif->id = $act->id;
 		$actif->name = $request['name'];
 		$actif->ville_id = $request['ville_id'];
 		$actif->tactif_id = $request['tactif_id'];
@@ -176,6 +179,7 @@ class ActifController extends Controller
 		$actif->caracteristiques = $request['caracteristiques'];
 		$actif->prix = $request['prix'];
 		$actif->owner_id = Auth::user()->id;
+
 		//$actif->token = $token;
 		if($request->imageUri){
 			$file = $request->imageUri;
@@ -186,8 +190,8 @@ class ActifController extends Controller
 					mkdir(public_path('img') . '/actifs');
 				}
 
-				if (file_exists(public_path('img') . '/' . $actif->imageUri )) {
-					unlink(public_path('img') . '/' . $actif->imageUri);
+				if (file_exists(public_path('img') . '/' . $act->imageUri )) {
+					unlink(public_path('img') . '/' . $act->imageUri);
 				}
 				$name = $token . '.' . $ext;
 				$file->move(public_path('img/actifs'), $name);
@@ -196,7 +200,7 @@ class ActifController extends Controller
 
 		}
 
-		Actif::updateOrCreate($actif);
+		$actif->save();
 		$request->session()->flash('success','L\'article a été correctement enregistré !!!');
 		return redirect('/owner/actifs/'.$actif->token);
 	}
