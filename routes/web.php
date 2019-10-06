@@ -43,7 +43,7 @@ Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->name('admin.')
     ->group(function(){
-	    Route::resource('actifs','VilleController');
+	    Route::resource('actifs','ActifController');
         Route::resource('villes','VilleController');
 	    Route::resource('dossiers','ProjetController');
         Route::resource('users','UserController');
