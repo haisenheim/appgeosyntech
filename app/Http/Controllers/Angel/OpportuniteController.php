@@ -37,7 +37,8 @@ class OpportuniteController extends Controller
 	   // dd($prj_tags);
 
 	    //$dossiers = Projet::all()->where('etape',4)->where('validated_step',4);
-	    $projets = Projet::all()->where(['id','>',50]);
+	    $projets = Projet::all();
+
         return view('/Angel/Dossiers/index')->with(compact('projets'));
     }
 
