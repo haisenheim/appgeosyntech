@@ -168,10 +168,8 @@ class ActifController extends Controller
 	public function save(Request $request){
 
 		$token = $request->token;
-		$act = Actif::where(['token'=>$token]);
-		$actif = new Actif();
-		$actif->token= $token;
-		$actif->id = $act->id;
+		$actif = Actif::where(['token'=>$token]);
+
 		$actif->name = $request['name'];
 		$actif->ville_id = $request['ville_id'];
 		$actif->tactif_id = $request['tactif_id'];
@@ -190,8 +188,8 @@ class ActifController extends Controller
 					mkdir(public_path('img') . '/actifs');
 				}
 
-				if (file_exists(public_path('img') . '/' . $act->imageUri )) {
-					unlink(public_path('img') . '/' . $act->imageUri);
+				if (file_exists(public_path('img') . '/' . $actif->imageUri )) {
+					unlink(public_path('img') . '/' . $actif->imageUri);
 				}
 				$name = $token . '.' . $ext;
 				$file->move(public_path('img/actifs'), $name);
