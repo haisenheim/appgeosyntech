@@ -19,7 +19,7 @@
                     <div class="tab-content" id="custom-content-below-tabContent">
                       <div class="tab-pane fade show active" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
                         <div class="row">
-                        <?php dd($projets) ?>
+
                             @foreach($projets as $dossier)
                                  <div class="col-md-4 col-sm-12">
                                             <!-- Widget: user widget style 1 -->
