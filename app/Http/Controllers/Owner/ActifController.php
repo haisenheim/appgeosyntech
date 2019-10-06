@@ -168,7 +168,7 @@ class ActifController extends Controller
 	public function save(Request $request){
 
 		$token = $request->token;
-		$actif = Actif::where(['token'=>$token]);
+		$actif = Actif::find($token);
 
 		$actif->name = $request['name'];
 		$actif->ville_id = $request['ville_id'];
