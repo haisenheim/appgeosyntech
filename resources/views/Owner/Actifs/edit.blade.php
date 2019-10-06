@@ -8,7 +8,7 @@
             <div class="page-header">
                 <h3 class="text-center">Modification de {{$actif->name}}</h3>
             </div>
-                <form enctype="multipart/form-data" class="form" action="owner/actifs/save"  method="post">
+                <form enctype="multipart/form-data" class="form" action="{{route('owner.update.actif')}}"  method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="token" value="{{$actif->token}}"/>
 

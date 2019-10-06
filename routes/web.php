@@ -120,7 +120,7 @@ Route::prefix('owner')
 	    Route::get('dossier/getchoices','DossierController@getChoicesJson');
 	    Route::post('dossier/upload-image','DossierController@uploadImage');
 	    Route::post('dossier/add-tag','DossierController@addTags');
-	    Route::post('actifs/save','ActifController@save');
+	    Route::post('actifs/save','ActifController@save')->name('update.actif');
 	    Route::get('dossier/edit-field','DossierController@editFieldJson');
     });
 
