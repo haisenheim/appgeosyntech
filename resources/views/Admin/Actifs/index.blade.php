@@ -42,7 +42,7 @@
                             <td>#</td>
                             <td>
                             <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
-                            <?= $projet->active?'<span class="badge badge-success">ACTIF</span>':'<span class="badge badge-danger">Bloqué</span>' ?> -
+                            <?= $projet->active?'<span class="badge badge-success">ACTIF</span>':'<span class="badge badge-danger">Inactif</span>' ?> - <?= $projet->active?'<span class="badge badge-info">Cedé</span>':'<span class="badge badge-warning">En vente</span>' ?>
 
                             </td>
 
@@ -64,13 +64,13 @@
 
                           @if($projet->active)
 
-                          <a class="btn btn-danger btn-xs" href="#">
+                          <a class="btn btn-danger btn-xs" href="{{route('admin.disable.actif',$projet->token)}}">
                               <i class="fas fa-lock">
                               </i>
                               Désactiver
                           </a>
                           @else
-                          <a class="btn btn-success btn-xs" href="#">
+                          <a class="btn btn-success btn-xs" href="{{route('admin.enable.actif',$projet->token)}}">
                               <i class="fas fa-unlock">
                               </i>
                               Activer

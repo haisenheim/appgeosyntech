@@ -55,11 +55,14 @@ Route::prefix('admin')
         Route::resource('angels','AngelController');
         Route::resource('dossiers','ProjetController');
 	    Route::get('dashboard','DashboardController');
+	    Route::get('actif/expert','ActifController@addExpert');
 	    Route::get('dossier/expert','ProjetController@addExpert');
 	    Route::get('dossier/getchoices','ProjetController@getChoicesJson');
 	    Route::get('dossier/validate-diag-externe/{token}','ProjetController@validateDiagExterne');
 	    Route::get('dossier/validate-plan-strategique/{token}','ProjetController@validateDiagStrategique');
 	    Route::get('dossier/validate-plan-financier/{token}','ProjetController@validateMontageFinancier');
+	    Route::get('dossier/disable/{token}','ProjetController@disable')->name('disable.actif');
+	    Route::get('dossier/enable/{token}','ProjetController@enable')->name('enable.actif');
         //Route::resource('variantesfinancements','VfinancementController');
 	    Route::post('villes/save','VilleController@save');
     });
