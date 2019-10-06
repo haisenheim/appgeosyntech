@@ -11,6 +11,7 @@
                 <form enctype="multipart/form-data" class="form" action="{{route('owner.update.actif')}}"  method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="token" value="{{$actif->token}}"/>
+                    <input type="hidden" name="id" value="{{$actif->id}}"/>
 
                     <fieldset>
                         <legend>INFORMATIONS SUR L'ARTICLE</legend>
