@@ -196,7 +196,7 @@ class ActifController extends Controller
 
 		}
 
-		$actif->save();
+		Actif::updateOrCreate($actif);
 		$request->session()->flash('success','L\'article a été correctement enregistré !!!');
 		return redirect('/owner/actifs/'.$actif->token);
 	}
