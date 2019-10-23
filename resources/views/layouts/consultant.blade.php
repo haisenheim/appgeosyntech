@@ -26,10 +26,11 @@
                     <a href="/consultant/dashboard"><i class="fa fa-home"></i></a>
                 </li>
 
-
-
                 <li>
                     <a href="/consultant/dossiers/"><i class="fa fa-th-large" ></i>&nbsp; DOSSIERS</a>
+                </li>
+                <li>
+                    <a href="/consultant/actifs/"><i class="fa fa-book" ></i>&nbsp; CESSIONS</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -65,6 +66,9 @@
 <div class="container-fluid" id="front-wrapper" style="margin-bottom: 1px">
     <div class="container">
         @include('includes.flash-message')
+    </div>
+    <div class="page-header" style="background-color: #096a2f; min-height: 200px;" >
+        @yield('page_header')
     </div>
     <div class="">
         @yield('content')

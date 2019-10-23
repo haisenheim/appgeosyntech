@@ -32,7 +32,7 @@ class ActifController extends Controller
     public function index()
     {
         //
-        $dossiers = Actif::all()->where('expert_id',Auth::user()->id);
+        $dossiers = Actif::orderBy('created_at','desc')->where('expert_id',Auth::user()->id)->paginate(12);
         return view('/consultant/Actifs/index')->with(compact('dossiers'));
     }
 
