@@ -67,9 +67,12 @@
                 </div>
     </div>
 
-      <div class="modal fade" id="TModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-
-         <form class="form" action="/consultant/actif/save"  method="post">
+      <div class="modal fade modal-lg" id="TModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+            <div class="modal-header">
+                <h5>EDITION DU PITCH</h5>
+            </div>
+            <div class="modal-content">
+                <form class="form" action="/consultant/actif/save"  method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="token" value="{{$projet->token}}"/>
                     <input type="hidden" name="id" value="{{$projet->id}}"/>
@@ -88,11 +91,12 @@
                              </div>
 
                              <div class="btn-div card-footer text-center">
-                                 <button class="btn btn-success  btn-sm " type="submit"> Enregister <i class="fa fa-save"></i></button>
+                                 <button class="btn btn-success  btn-sm " type="submit"> Enregistrer <i class="fa fa-save"></i></button>
                             </div>
 
                      </fieldset>
-          </form>
+                </form>
+            </div>
       </div>
 
 @endsection
