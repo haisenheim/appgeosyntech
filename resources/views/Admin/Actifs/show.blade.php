@@ -181,28 +181,14 @@
 
 @section('nav_actions')
     <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-cogs"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+          <i class="far fa-pencils"></i>
+          <span class="badge badge-primary navbar-badge">Actions</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 nouveaux messages
-            <span class="float-right text-muted text-sm">3 mins</span>
+            <i class="fas fa-coins mr-2"></i> Valider le premier paiement
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">Afficher Toutes Les Notifications</a>
+
         </div>
 @endsection
 
