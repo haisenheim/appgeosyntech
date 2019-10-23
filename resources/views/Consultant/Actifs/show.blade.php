@@ -4,14 +4,13 @@
     <div class="">
         <h3 class="page-header">GESTION DES CESSIONS D'ACTIFS</h3>
         <div class="pull-right">
-            <span style="color: #FFFFFF" class=" btn dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span style="color: #FFFFFF; margin-right: 30px" class="dropdown-toggle"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                    <i class="fa fa-cogs"></i>&nbsp;Actions
                </span>
                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                        <li>
                            <a href="/consultant/actifs/{{$projet->token}}/edit"><i class="fa fa-pencil"></i>&nbsp;Editer le Teaser</a>
                        </li>
-
                    </ul>
         </div>
     </div>
@@ -79,14 +78,8 @@
 
     </div>
 
-
-
-
-
-
-
 @endsection
 
 @section('action')
-     <a class="btn btn-xs btn-success" href="/owner/actifs/{{$projet->token}}/edit"><i class="fa fa-pencil"></i> Modifier</a>
+     <a class="btn btn-xs btn-success" href="/consultant/actifs/{{$projet->token}}/edit"><i class="fa fa-pencil"></i> Editer le teaser</a>
 @endsection
