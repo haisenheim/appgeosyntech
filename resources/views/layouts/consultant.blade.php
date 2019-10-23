@@ -95,10 +95,11 @@
         color: #FFFFFF;
         font-weight: 800;
         background-color: inherit;
+        margin-top: 0;
     }
 
     .pgh{
-
+        margin: 0 -15px;
     }
 </style>
 
