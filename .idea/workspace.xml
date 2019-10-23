@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -101,15 +100,10 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35918367" vertical-offset="0" max-vertical-offset="4496">
-              <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+            <state vertical-scroll-proportion="0.41351888" vertical-offset="0" max-vertical-offset="1552">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#199#221#0#HTML" expanded="true" />
-                <marker date="1571864923166" expanded="false" signature="6458:6497" placeholder="..." />
-                <marker date="1571864923166" expanded="false" signature="10758:10768" placeholder="..." />
-                <marker date="1571864923166" expanded="false" signature="10826:10836" placeholder="..." />
-                <marker date="1571864923166" expanded="false" signature="10895:10905" placeholder="..." />
-                <marker date="1571864923166" expanded="false" signature="10979:10989" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1008,15 +1002,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35918367" vertical-offset="0" max-vertical-offset="4496">
-          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+        <state vertical-scroll-proportion="0.41351888" vertical-offset="0" max-vertical-offset="1552">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#199#221#0#HTML" expanded="true" />
-            <marker date="1571864923166" expanded="false" signature="6458:6497" placeholder="..." />
-            <marker date="1571864923166" expanded="false" signature="10758:10768" placeholder="..." />
-            <marker date="1571864923166" expanded="false" signature="10826:10836" placeholder="..." />
-            <marker date="1571864923166" expanded="false" signature="10895:10905" placeholder="..." />
-            <marker date="1571864923166" expanded="false" signature="10979:10989" placeholder="..." />
           </folding>
         </state>
       </provider>
