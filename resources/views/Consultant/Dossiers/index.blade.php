@@ -30,6 +30,11 @@
                     @endforeach
 
                 </div>
+                <nav style="margin-right:20px;">
+                    <ul class="pagination justify-content-end">
+                        {{ $dossiers->links('vendor.pagination.bootstrap-4') }}
+                    </ul>
+                </nav>
             </div>
 
 @endsection
