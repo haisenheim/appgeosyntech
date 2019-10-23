@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Angel/Dossiers/index_.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Dossiers/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Dossiers/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -80,11 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31809145" vertical-offset="0" max-vertical-offset="503">
+            <state vertical-scroll-proportion="-6.4" vertical-offset="0" max-vertical-offset="304">
               <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.54075545" vertical-offset="0" max-vertical-offset="6032">
+              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -125,16 +133,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="6064" max-vertical-offset="7376">
               <caret line="379" column="35" selection-start-line="379" selection-start-column="35" selection-end-line="379" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/head.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="336">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -192,7 +190,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/ActifController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/ActifController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
         <option value="$PROJECT_DIR$/app/Models/Cession.php" />
         <option value="$PROJECT_DIR$/app/Models/Actif.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
@@ -204,6 +201,7 @@
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Front/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DashboardController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
       </list>
     </option>
   </component>
@@ -747,13 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.88" vertical-offset="1211" max-vertical-offset="2160">
-          <caret line="317" column="5" selection-start-line="317" selection-start-column="5" selection-end-line="317" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Cession.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.76" vertical-offset="0" max-vertical-offset="464">
@@ -966,8 +957,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31809145" vertical-offset="0" max-vertical-offset="503">
+        <state vertical-scroll-proportion="-6.4" vertical-offset="0" max-vertical-offset="304">
           <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54075545" vertical-offset="0" max-vertical-offset="6032">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
           <folding />
         </state>
       </provider>

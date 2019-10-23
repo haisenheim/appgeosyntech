@@ -31,7 +31,7 @@ class DossierController extends Controller
     public function index()
     {
         //
-        $dossiers = Projet::all()->where('expert_id',Auth::user()->id);
+        $dossiers = Projet::all()->where('expert_id',Auth::user()->id)->paginate(2);
         return view('/Consultant/Dossiers/index')->with(compact('dossiers'));
     }
 
