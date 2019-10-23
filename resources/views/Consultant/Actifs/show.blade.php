@@ -84,7 +84,7 @@
                                  <div class="col-md-12 col-sm-12">
                                      <div class="form-group">
                                          <label for="description" class="control-label">TEASER</label>
-                                         <textarea name="teaser" id="description" cols="30" rows="3"><?= $projet->teaser ?></textarea>
+                                         <textarea name="teaser" class="form-control" id="description" cols="30" rows="3"><?= $projet->teaser ?></textarea>
                                      </div>
                                  </div>
 
@@ -98,6 +98,21 @@
                 </form>
             </div>
       </div>
+
+      <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('textarea').summernote({
+            height: 200,
+            tabsize: 2,
+            followingToolbar: true,
+            lang:'fr-FR'
+          });
+        });
+      </script>
 
 @endsection
 
