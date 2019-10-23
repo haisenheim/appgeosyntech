@@ -9,6 +9,6 @@ class DashboardController extends Controller
 {
     public function __invoke()
     {
-        return view('/consultant/dashboard');
+        return view('Consultant/dashboard');
     }
 }
