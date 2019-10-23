@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/consultant.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/consultant.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -35,16 +36,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DashboardController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4" vertical-offset="0" max-vertical-offset="304">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consultant.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="consultant.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/consultant.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9346939" vertical-offset="1158" max-vertical-offset="1808">
-              <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+            <state vertical-scroll-proportion="-7.12" vertical-offset="510" max-vertical-offset="1808">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="53" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -100,9 +91,26 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="768">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
+            <state vertical-scroll-proportion="-15.0" vertical-offset="73" max-vertical-offset="768">
+              <caret line="28" column="108" selection-start-line="28" selection-start-column="108" selection-end-line="28" selection-end-column="108" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35918367" vertical-offset="0" max-vertical-offset="4496">
+              <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+              <folding>
+                <element signature="e#199#221#0#HTML" expanded="true" />
+                <marker date="1571864923166" expanded="false" signature="6458:6497" placeholder="..." />
+                <marker date="1571864923166" expanded="false" signature="10758:10768" placeholder="..." />
+                <marker date="1571864923166" expanded="false" signature="10826:10836" placeholder="..." />
+                <marker date="1571864923166" expanded="false" signature="10895:10905" placeholder="..." />
+                <marker date="1571864923166" expanded="false" signature="10979:10989" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/front/js/leaflet.js" />
         <option value="$PROJECT_DIR$/public/front/css/leaflet.css" />
         <option value="$PROJECT_DIR$/resources/views/includes/head-front.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer-front.blade.php" />
@@ -197,10 +204,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Actifs/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Actifs/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/ActifController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/consultant.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php" />
       </list>
     </option>
   </component>
@@ -623,13 +631,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14611872" vertical-offset="0" max-vertical-offset="438">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
@@ -971,14 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="768">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Actifs/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.4" vertical-offset="0" max-vertical-offset="1232">
@@ -995,12 +988,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Actifs/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="73" max-vertical-offset="768">
+          <caret line="28" column="108" selection-start-line="28" selection-start-column="108" selection-end-line="28" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/consultant.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9346939" vertical-offset="1158" max-vertical-offset="1808">
-          <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+        <state vertical-scroll-proportion="-7.12" vertical-offset="510" max-vertical-offset="1808">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="53" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Actifs/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35918367" vertical-offset="0" max-vertical-offset="4496">
+          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+          <folding>
+            <element signature="e#199#221#0#HTML" expanded="true" />
+            <marker date="1571864923166" expanded="false" signature="6458:6497" placeholder="..." />
+            <marker date="1571864923166" expanded="false" signature="10758:10768" placeholder="..." />
+            <marker date="1571864923166" expanded="false" signature="10826:10836" placeholder="..." />
+            <marker date="1571864923166" expanded="false" signature="10895:10905" placeholder="..." />
+            <marker date="1571864923166" expanded="false" signature="10979:10989" placeholder="..." />
           </folding>
         </state>
       </provider>

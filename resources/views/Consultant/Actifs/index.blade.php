@@ -26,7 +26,7 @@
                             </div>
                             <div>
                                 <span class=""><i class="fa fa-map-marker"></i> {{ $projet->ville->name  }}</span>
-                                <span class="pull-right"><a class="btn btn-success btn-xs" href="/owner/actifs/{{ $projet->token  }}"> Afficher </a></span>
+                                <span class="pull-right"><a class="btn btn-success btn-xs" href="/consultant/actifs/{{ $projet->token  }}"> Afficher </a></span>
                             </div>
                         </div>
                     </div>

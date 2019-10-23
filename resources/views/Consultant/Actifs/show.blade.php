@@ -1,4 +1,22 @@
-@extends('......layouts.owner')
+@extends('......layouts.consultant')
+
+@section('page_header')
+    <div class="">
+        <h3 class="page-header">GESTION DES CESSIONS D'ACTIFS</h3>
+        <div class="pull-right">
+            <span style="color: #FFFFFF" class=" btn dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                   <i class="fa fa-cogs"></i>&nbsp;Actions
+               </span>
+                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                       <li>
+                           <a href="/consultant/dossiers/{{$projet->token}}"><i class="fa fa-pencil"></i>&nbsp;Editer le Teaser</a>
+                       </li>
+
+                   </ul>
+        </div>
+    </div>
+@endsection
+
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
                 <div class="row">
