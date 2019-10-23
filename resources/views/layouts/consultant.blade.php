@@ -67,7 +67,7 @@
     <div class="container">
         @include('includes.flash-message')
     </div>
-    <div class="" style="background-color: #AAAAAA; min-height: 200px; padding: 0 -15px">
+    <div class="pgh" style="background-color: #4caf50;; min-height: 200px; padding: 0 -15px">
         @yield('page_header')
     </div>
     <div class="">
@@ -90,6 +90,15 @@
     .navbar-inverse .navbar-nav > li >a > i{
 
         font-size: 20px;
+    }
+    .pgh h1,.pgh h2,.pgh h3,.pgh h4,.pgh h5,.pgh h6{
+        color: #FFFFFF;
+        font-weight: 800;
+        background-color: inherit;
+    }
+
+    .pgh{
+
     }
 </style>
 
