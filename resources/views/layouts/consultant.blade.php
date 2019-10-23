@@ -67,7 +67,7 @@
     <div class="container">
         @include('includes.flash-message')
     </div>
-    <div class="page-header" style="background-color: #096a2f; min-height: 200px;" >
+    <div class="" style="background-color: #AAAAAA; min-height: 200px; padding: 0 -15px">
         @yield('page_header')
     </div>
     <div class="">
