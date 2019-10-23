@@ -28,15 +28,13 @@
                     </div>
                      </div>
                     @endforeach
-                    <div class="col-md-3">
+
+                </div>
+                    <div class="">
                         <ul class="pagination justify-content-end">
                         {{ $dossiers->links() }}
                     </ul>
                     </div>
-                </div>
-                <nav style="margin-right:20px;">
-
-                </nav>
             </div>
 
 @endsection
