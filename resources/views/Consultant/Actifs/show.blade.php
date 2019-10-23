@@ -3,16 +3,6 @@
 @section('page_header')
     <div class="">
         <h3 class="page-header">GESTION DES CESSIONS D'ACTIFS</h3>
-        <div class="pull-right">
-            <span style="color: #FFFFFF; margin-right: 30px" class="dropdown-toggle"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                   <i class="fa fa-cogs"></i>&nbsp;Actions
-               </span>
-                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                       <li>
-                           <a href="/consultant/actifs/{{$projet->token}}/edit"><i class="fa fa-pencil"></i>&nbsp;Editer le Teaser</a>
-                       </li>
-                   </ul>
-        </div>
     </div>
 @endsection
 
@@ -75,11 +65,38 @@
                         </div>
                     </div>
                 </div>
-
     </div>
+
+      <div class="modal fade" id="TModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+         <form class="form" action="{{route('consultant.update.actif')}}"  method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="token" value="{{$actif->token}}"/>
+                    <input type="hidden" name="id" value="{{$actif->id}}"/>
+
+                    <fieldset>
+                        <legend>EDITION DU PITCH</legend>
+                            <div class="row">
+
+                                 <div class="col-md-12 col-sm-12">
+                                     <div class="form-group">
+                                         <label for="description" class="control-label">TEASER</label>
+                                         <textarea name="teaser" id="description" cols="30" rows="3"><?= $actif->teaser ?></textarea>
+                                     </div>
+                                 </div>
+
+                             </div>
+
+                             <div class="btn-div card-footer text-center">
+                                 <button class="btn btn-success  btn-sm " type="submit"> Enregister <i class="fa fa-save"></i></button>
+                            </div>
+
+                     </fieldset>
+          </form>
+      </div>
 
 @endsection
 
 @section('action')
-     <a class="btn btn-xs btn-success" href="/consultant/actifs/{{$projet->token}}/edit"><i class="fa fa-pencil"></i> Editer le teaser</a>
+     <a class="btn btn-xs btn-success" href="#" data-target="#TModal" data-toggle="modal"><i class="fa fa-pencil"></i> Editer le teaser</a>
 @endsection
