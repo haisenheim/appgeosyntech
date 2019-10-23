@@ -32,7 +32,7 @@ class DossierController extends Controller
     {
         //
         $dossiers = Projet::all()->where('expert_id',Auth::user()->id);
-        return view('/consultant/Dossiers/index')->with(compact('dossiers'));
+        return view('/Consultant/Dossiers/index')->with(compact('dossiers'));
     }
 
 	public function getChoicesJson(Request $request){
