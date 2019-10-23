@@ -71,8 +71,8 @@
 
          <form class="form" action="/consultant/actif/save"  method="post">
                     {{csrf_field()}}
-                    <input type="hidden" name="token" value="{{$actif->token}}"/>
-                    <input type="hidden" name="id" value="{{$actif->id}}"/>
+                    <input type="hidden" name="token" value="{{$projet->token}}"/>
+                    <input type="hidden" name="id" value="{{$projet->id}}"/>
 
                     <fieldset>
                         <legend>EDITION DU PITCH</legend>
@@ -81,7 +81,7 @@
                                  <div class="col-md-12 col-sm-12">
                                      <div class="form-group">
                                          <label for="description" class="control-label">TEASER</label>
-                                         <textarea name="teaser" id="description" cols="30" rows="3"><?= $actif->teaser ?></textarea>
+                                         <textarea name="teaser" id="description" cols="30" rows="3"><?= $projet->teaser ?></textarea>
                                      </div>
                                  </div>
 
