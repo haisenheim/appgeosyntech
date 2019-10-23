@@ -92,6 +92,12 @@
           <a href="#" class="dropdown-item dropdown-footer">Afficher tous les Messages</a>
         </div>
       </li>
+
+      <!-- Actions Dropdown Menu -->
+      <li class="nav-item dropdown">
+        @yield('nav_actions')
+      </li>
+
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -130,7 +136,7 @@
           <small style="font-size: 0.7rem" class="dropdown-item dropdown-header"><?= Auth::user()->name ?> - <?= Auth::user()->email ?></small>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <i class="fas fa-pencil-alt mr-2"></i> Mon Profile
+            <i class="fas fa-pencil-alt mr-2"></i> Mon Profil
 
           </a>
           <div class="dropdown-divider"></div>
