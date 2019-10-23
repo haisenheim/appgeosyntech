@@ -69,7 +69,7 @@
 
       <div class="modal fade" id="TModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
 
-         <form class="form" action="{{route('consultant.update.actif')}}"  method="post">
+         <form class="form" action="/consultant/actif/save"  method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="token" value="{{$actif->token}}"/>
                     <input type="hidden" name="id" value="{{$actif->id}}"/>

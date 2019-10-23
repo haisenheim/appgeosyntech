@@ -103,6 +103,8 @@ Route::prefix('consultant')
 	    Route::post('dossier/save-diag-externe','DossierController@saveDiagExterne');
 	    Route::get('dossier/update-plan','DossierController@updatePlanJson');
 
+	    Route::post('actif/save','ActifController@saveTeaser');
+
 	    Route::get('dossier/create-diag-strategique/{token}','DossierController@createDiagStrategique');
 	    Route::post('dossier/save-diag-strategique','DossierController@saveDiagStrategique');
 
