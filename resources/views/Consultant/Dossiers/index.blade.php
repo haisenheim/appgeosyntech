@@ -30,7 +30,7 @@
                     @endforeach
                     <div class="col-md-3">
                         <ul class="pagination justify-content-end">
-                        {{ $dossiers->links('vendor.pagination.bootstrap-4') }}
+                        {{ $dossiers->links() }}
                     </ul>
                     </div>
                 </div>
