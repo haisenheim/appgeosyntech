@@ -816,6 +816,7 @@
 
     <script>
         $(document).ready(function(){
+            $('#side2').height($('#side1').height());
             getPlan($('#plan_id').val());
 
             $.ajax({
@@ -1127,8 +1128,7 @@
                         followingToolbar: true,
                         lang:'fr-FR'
                       });
-                      var sh= $('#side1').height();
-                      $('#side2').height(sh);
+
                     });
 
 
