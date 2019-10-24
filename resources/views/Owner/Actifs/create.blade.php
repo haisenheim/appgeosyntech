@@ -1,13 +1,13 @@
 @extends('......layouts.owner')
 
+@section('content-header')
+    <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">NOUVELLE CESSION D'ACTIF</h3>
+@endsection
+
 @section('content')
     <div class="md-container">
-        <div class="widget">
-
-            <div class="widget-content">
-            <div class="page-header">
-                <h3 class="text-center">NOUVELLE CESSION D'ACTIF</h3>
-            </div>
+        <div class="card">
+            <div class="card-body">
                 <form enctype="multipart/form-data" class="form" action="{{route('owner.actifs.store')}}" method="post">
                     {{csrf_field()}}
 
