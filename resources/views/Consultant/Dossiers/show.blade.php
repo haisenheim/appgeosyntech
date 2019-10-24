@@ -125,18 +125,18 @@
                             <div class="card-body">
                                <fieldset>
                                     <legend>DIAGNOSTIC INTERNE</legend>
-                                    <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                         <li role="presentation" class="active">
-                                             <a href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
+                                    <ul class="nav nav-tabs" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                         <li role="presentation" class="nav-item active">
+                                             <a class="nav-link" href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
                                          </li>
 
-                                         <li role="presentation" class="">
-                                             <a href="#risques" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> CARTOGRAPHIE DES RISQUES </a>
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#risques" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> CARTOGRAPHIE DES RISQUES </a>
                                          </li>
                                      </ul>
 
                                      <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade active in" role="tabpanel" id="etats" aria-labelledby="tab1">
+                                        <div class="tab-pane fade active show" role="tabpanel" id="etats" aria-labelledby="tab1">
                                              <div>
 
 
