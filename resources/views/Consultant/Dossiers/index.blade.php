@@ -8,7 +8,7 @@
                 <div class="row">
                     @foreach($dossiers as $projet)
 
-            <div class="col-md-3">
+                         <div class="col-md-3">
             <!-- Widget: user widget style 1 -->
             <a style="color:#555" href="/consultant/dossiers/{{ $projet->token  }}">
              <div class="card card-widget widget-user">
@@ -49,9 +49,7 @@
             </a>
             <!-- /.widget-user -->
           </div>
-
                     @endforeach
-
                 </div>
                     <div class="">
                         <ul class="pagination justify-content-end">

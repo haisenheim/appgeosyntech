@@ -1,17 +1,26 @@
 @extends('......layouts.consultant')
+
+@section('content-header')
+ <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">{{$projet->name}}</h3>
+@endsection
+
+
 @section('content')
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
                     <div class="col-md-4 col-sm-12">
-                        <div class="well">
+                        <div class="card">
 
-                            <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
-                            <div style="max-height: 300px; max-width: 300px">
+                          <div class="card-body">
+
+
+
+                            <div style="max-height: 300px; max-width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center; ">
                                 @if($projet->imageUri)
-                                    <img class="img-thumbnail" src="{{asset('img/'.$projet->imageUri)}}" alt=""/>
+
                                     <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
                                 @else
-                                     <img class="img-thumbnail" src="{{asset('img/logo-obac.png')}}" alt=""/>
+
                                      <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
                                 @endif
                             </div>
@@ -113,10 +122,10 @@
                                 </div>
                             @endif
 
-
+                        </div>
                         </div>
 
-
+                        </div>
                     </div>
                     <div class="col-md-8 col-sm-12">
                         <div class="widget">
