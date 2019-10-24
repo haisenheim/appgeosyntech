@@ -1,34 +1,28 @@
 @extends('......layouts.owner')
+
+@section('content-header')
+ <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">{{$projet->name}}</h3>
+@endsection
+
+
 @section('content')
-    <div style="padding-top: 30px" class="container-fluid">
+    <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="well">
+                    <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
+                        <div class="card">
+                            <div class="card-body">
 
-                            <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
+                            <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i>
+                            <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
 
-                            <div style="max-height: 300px; max-width: 300px">
-                                @if($projet->imageUri)
-                                    <img class="img-thumbnail" src="{{asset('img/'.$projet->imageUri)}}" alt=""/>
-                                    <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
-                                @else
-                                     <img class="img-thumbnail" src="{{asset('img/logo-obac.png')}}" alt=""/>
-                                     <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
-                                @endif
                             </div>
-
+                            </a>
                             <p>CODE : {{ $projet->code }}</p>
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
                             <p>AUTEUR : {{ $projet->auteur->name }}</p>
+                            <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
 
-
-                            <p>MOTS CLEFS : <a data-toggle="modal" data-target="#addTagModal" href="" title="ajout de mots clefs"><i class="fa fa-plus"></i></a></p>
-                            <ul class="list-inline">
-                                @foreach($projet->tags as $tag)
-                                    <li class="list-inline-item">{{$tag->name}}</li>
-                                @endforeach
-                            </ul>
                             @if($projet->etape>=4)
                                 <ul class="list-group">
                                     <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
@@ -47,18 +41,44 @@
                                         @endif
                                     </ul>
                                 </fieldset>
-
+                                
                             @endif
-
-                            <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
-                            <p>MONTANT : {{ $projet->montant }}</p>
                             <input type="hidden" id="id" value="<?= $projet->id ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
                             @if($projet->expert_id)
                                 <p>CONSULTANT : <span class="value">{{ $projet->consultant->name }}</span></p>
-
+                             @else
+                                <form class="form-inline"  action="/admin/dossier/expert">
+                                {{csrf_field()}}
+                                <input type="hidden" name="id" value="{{ $projet->id }}"/>
+                                    <div class="form-group">
+                                        <select class="form-text" name="expert_id" id="id">
+                                            @foreach($experts as $expert)
+                                                <option value="{{ $expert->id }}">{{ $expert->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-danger"><i class="fa fa-link"></i> LIER</button>
+                                    </div>
+                                </form>
                             @endif
 
+
+                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+
+
+                            @if($projet->etape>=2)
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
+                            @endif
+
+                            @if($projet->etape>=3)
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
+                            @endif
+
+                             @if($projet->etape>=4)
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> EDITER LE TEASER</button>
+                            @endif
 
 
                             @if($projet->modepaiement_id>0)
@@ -68,36 +88,59 @@
                                     <li class="list-group-item" >PRIX HT : <span style="font-weight: 700">{{ $projet->modepaiement->prix }}</span></li>
                                     <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->modepaiement->prixttc }}</span></li>
                                 </ul>
+                            @else
+                                <div>
+                                    <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
 
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><span id="mode_name" style="font-weight: 700"></span></li>
+                                        <li class="list-group-item" >PRIX HT : <span id="mode_prix" style="font-weight: 700"></span></li>
+                                        <li class="list-group-item">PRIX TTC : <span id="mode_prixttc" style="font-weight: 700"></span></li>
+                                        <li class="list-group-item">
+                                        <p id="mode_description"></p>
+                                        </li>
+                                    </ul>
+                                    <hr/>
+                                    <form action="/consultant/dossier/add-mode" method="get" class="form-inline">
+                                        <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
+                                        <select style="background-color: #FFFFFF" class="form-control" name="mode_id" id="mode_id">
+                                            <option value="0">Choix d'une offre de service</option>
+                                            @foreach($modes as $mode)
+                                                <option value="{{ $mode->id }}">{{ $mode->name }}</option>
+                                            @endforeach
+                                        </select>
+                                        <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-check"></i> ENREGISTRER</button>
+
+                                    </form>
+                                </div>
                             @endif
+
+                        </div>
                         </div>
 
 
                     </div>
-                    <div class="col-md-8 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-content">
+                    <div style="overflow-y: scroll; max-height: 860px" id="side2" class="col-md-8 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
                                <fieldset>
-                                    <legend>DIAGNOSTIC INTERNE</legend>
-                                    <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                         <li role="presentation" class="active">
-                                             <a href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
+                                    <h6>Diagnostic interne</h6>
+                                    <ul class="nav nav-tabs" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                         <li role="presentation" class="nav-item active">
+                                             <a class="nav-link" href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
                                          </li>
 
-                                         <li role="presentation" class="">
-                                             <a href="#risques" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> CARTOGRAPHIE DES RISQUES </a>
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#risques" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> CARTOGRAPHIE DES RISQUES </a>
                                          </li>
-                                         @if($projet->modepaiement_id>0)
-                                             <li role="presentation" class="">
-                                                 <a href="#diagint" role="tab" id="tab3" data-toggle="tab" aria-controls="n3" aria-expanded="false"><span class=""></span> SYNTHESE DU DIAGNOSTIC INTERNE</a>
-                                             </li>
-                                         @endif;
                                      </ul>
 
                                      <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade active in" role="tabpanel" id="etats" aria-labelledby="tab1">
+                                        <div class="tab-pane fade active show" role="tabpanel" id="etats" aria-labelledby="tab1">
                                              <div>
-                                                 <div>
+
+
+                                                     <div>
                                                         <h4 class="page-header">SANTE FINANCIERE</h4>
                                                         <table class="table table-condensed table-hover">
                                                             <thead>
@@ -373,9 +416,8 @@
                                         </div>
 
                                         <div class="tab-pane fade" role="tabpanel" id="risques" aria-labelledby="">
-                                            @if($projet->modepaiement_id>0)
                                              <table id="risques-tab" class="table table-condensed table-hover table-bordered">
-                                              <thead>
+                                                                            <thead>
                                                 <tr>
                                                     <th></th>
                                                     <th>Defaillances possibles</th>
@@ -388,59 +430,45 @@
                                                     <th>Criticite nette</th>
                                                 </tr>
                                                 </thead>
-
-                                                    <tbody>
-                                                    </tbody>
-
-
+                                                <tbody>
+                                                </tbody>
                                                 </table>
-                                              @else
-                                                <p>Pour consulter la cartographie des risques lies a votre projet vous devez vous rapprocher du Cabinet OBAC pour vous informer des modalites !!!</p>
-                                              @endif;
-
-                                        </div>
-                                        @if($projet->modepaiement_id>0)
-                                            <div class="tab-pane fade" role="tabpanel" id="diagint" aria-labelledby="tab3">
-                                            <br>
-                                                <p><?= htmlspecialchars_decode($projet->synthese_diagnostic_interne) ?></p>
+                                            <div style="width: 20%; margin:10px auto">
+                                                <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
                                             </div>
-                                        @endif
+                                        </div>
                                      </div>
                                </fieldset>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div style="margin-top: 30px" class="row">
                     <div class="col-sm-12 col-md-12">
-                        <div class="widget">
-                            <div class="widget-content">
+                        <div class="card">
+                            <div class="card-body">
                      @if($projet->etape>=2)
 
                                <fieldset>
-                                   <legend>DIAGNOSTIC EXTERNE</legend>
-                                   <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                         <li role="presentation" class="active">
-                                             <a href="#segments" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ANALYSE DE LA DEMANDE </a>
+                                   <h5>Diagnostic Externe</h5>
+                                   <ul class="nav nav-tabs " style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link active" href="#segments" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ANALYSE DE LA DEMANDE </a>
                                          </li>
 
-                                         <li role="presentation" class="">
-                                             <a href="#concurrents" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'OFFRE </a>
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#concurrents" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'OFFRE </a>
                                          </li>
 
-                                         <li role="presentation" class="">
-                                             <a href="#environnement" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'ENVIRONNMENT </a>
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#environnement" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'ENVIRONNMENT </a>
                                          </li>
-
-
                                     </ul>
 
                                     <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade active in" role="tabpanel" id="segments" aria-labelledby="tab1">
+                                        <div class="tab-pane fade active show" role="tabpanel" id="segments" aria-labelledby="tab1">
                                              <div>
-                                                     <div>
-
-
+                                                     <div class="table-responsive">
                                                             <?php if($projet->segments): ?>
 
                                                             <table class="table table-bordered">
@@ -482,7 +510,8 @@
 
                                         <div class="tab-pane fade" role="tabpanel" id="concurrents" aria-labelledby="">
                                         <?php if($projet->concurrents): ?>
-                                            <table class="table table-bordered">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered">
 
                                             <tbody>
                                             <?php $i=0; $quoi=""; $qui=""; $ou=""; $comment=""; $combien=""; $quand="";
@@ -522,6 +551,7 @@
                                            <tr> <th>EBE</th> <?= $ebe ?> </tr>
                                             </tbody>
                                         </table>
+                                            </div>
                                         <?php endif; ?>
 
                                         </div>
@@ -603,38 +633,38 @@
 
                     @if($projet->etape>=3)
                      <div class="col-md-12 col-sm-12">
-                           <div class="widget">
-                            <div class="widget-content">
+                           <div class="card">
+                            <div class="card-body">
                                    <fieldset>
-                                      <legend>DIAGNOSTIC STRATEGIQUE</legend>
-                                       <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                            <li role="presentation" class="active">
-                                                <a href="#swot" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> SWOT </a>
+                                      <h5>DIAGNOSTIC STRATEGIQUE</h5>
+                                       <ul class="nav nav-tabs " style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link active" href="#swot" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> SWOT </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                <a href="#objectifs" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> OBJECTIFS </a>
+                                            <li  role="presentation" class="nav-item">
+                                                <a class="nav-link" href="#objectifs" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> OBJECTIFS </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                <a href="#organisation" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ORGANISATION DU TRAVAIL </a>
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link" href="#organisation" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ORGANISATION DU TRAVAIL </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                 <a href="#actions" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ACTIONS DE MAITRISE </a>
+                                            <li role="presentation" class="nav-item">
+                                                 <a class="nav-link" href="#actions" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ACTIONS DE MAITRISE </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                <a href="#etapes" role="tab" id="tab5" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> PLAN D'ACTION STRATEGIQUE </a>
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link" href="#etapes" role="tab" id="tab5" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> PLAN D'ACTION STRATEGIQUE </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                <a href="#faisabilite" role="tab" id="tab6" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ETUDE DE FAISABILITE</a>
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link" href="#faisabilite" role="tab" id="tab6" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ETUDE DE FAISABILITE</a>
                                             </li>
                                        </ul>
 
                                        <div class="tab-content" id="myTabContent">
-                                         <div class="tab-pane fade active in" role="tabpanel" id="swot" aria-labelledby="tab1">
+                                         <div class="tab-pane fade active show" role="tabpanel" id="swot" aria-labelledby="tab1">
                                               <div>
 
                                                 <div class="row">
@@ -777,853 +807,19 @@
                         </div>
                     </div>
                     @endif
-
-
-                    @if($projet->etape>=4)
-         <div class="col-md-12 col-sm-12">
-               <div class="widget">
-                <div class="widget-content">
-                       <fieldset>
-                          <legend>PLAN FINANCIER</legend>
-                           <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#prevresultats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> COMPTE D'EXPLOITATION </a>
-                                </li>
-
-                                <li role="presentation" class="">
-                                    <a href="#prevbilans" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> BILAN </a>
-                                </li>
-
-                                <li role="presentation" class="">
-                                    <a href="#prevtresoreries" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> FLUX DE TRESORERIE  </a>
-                                </li>
-
-                                <li role="presentation" class="">
-                                     <a href="#montage" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> MONTAGE FINANCIER </a>
-                                </li>
-
-
-                           </ul>
-
-                           <div class="tab-content" id="myTabContent">
-                             <div class="tab-pane fade active in" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
-                                  <div>
-
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12">
-                                            <fieldset>
-                                                <legend>COMPTE D'EXPLOITATION PREVISIONNEL</legend>
-                                                <?php $nbsim = count($projet->prevresultats) ?>
-                                                <table class="table table-bordered table-hover table-condensed">
-                                                    <thead>
-                                                        <tr>
-                                                                <th></th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->annee ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>VARIATION</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>CHIFFRE D'AFFAIRE</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->ca ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>PRODUCTION IMMOBILISEE</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->pi ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>PRODUCTION STOCKEE</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->ps ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>SUBVENTION D'AEXPLOITATION</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->sp ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>AUTRES PRODUITS D'EXPLOITATION</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->ape ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>CHARGE VARIABLE</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->cv ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>MARGE BRUTE</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->mb ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th>CHARGE FIXE</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->cf ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th>VALEUR AJOUTEE</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->va ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>SALAIRES</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->ca ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th>EXCEDENT BRUT D'EXPLOITATION</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->ebe ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>DOTATATION AUX AMORTISSEMENTS ET AUX PROVISIONS</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->dap ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th>RESULTAT D'EXPLOITATION</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->re ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>PRODUIT FINANCIER</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->pf ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>CHARGES FINANCIERES</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->cfi ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th>RESULTAT FINANCIER</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->rf ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>PRODUIT EXCEPTIONNEL</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->pe ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>CHARGES EXCEPTIONNELLES</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->ce ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th>RESULTAT EXCEPTIONNEL</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->re ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th>RESULTAT COURANT AVANT IMPOT</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->rcai ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>IMPOTS</td>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <td><?= $prevr->impots ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th>RESULTAT NET</th>
-                                                            @foreach($projet->prevresultats as $prevr)
-                                                                <th><?= $prevr->rn ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </fieldset>
-                                        </div>
-
-                                    </div>
-
-                                  </div>
-
-                             </div>
-
-                             <div class="tab-pane fade" role="tabpanel" id="prevbilans" aria-labelledby="">
-                                <p></p>
-                                <br/>
-                                <hr/>
-
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12">
-                                        <fieldset>
-                                            <legend>BILAN PREVISIONNEL</legend>
-                                            <table class="table table-bordered table-hover table-condensed">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="3"></th>
-
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <th><?= $prevr->annee ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>VARIATION</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                        <th style="text-orientation: upright; writing-mode: vertical-rl;" rowspan="14">RESOURCES STABLES</th>
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td colspan="2">CAPITAL</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->capital ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td colspan="2">APPORTEURS DE CAPITAL NON APPELE</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->apporteurs_acpital_non_appele ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td colspan="2">PRIMES D'APPORT D'EMISSION</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->primes_apport ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td colspan="2">ECARTS DE REEVALUTATION</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->ecarts_reevaluation ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Réserves indisponibles</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->eserves_indisponibles ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Réserves libres</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->reserves_libres ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Report à nouveau</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->report_a_nouveau ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Résultat net de l'exercice</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->resultat_net_exercice ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Subventions d'investissement</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->subventions_investissement ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Provisions réglementés</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->provisions_reglementees ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">EMPRUNTS</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->emprunts ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Dettes de location acquisition</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->dettes_location_acquisition ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Provisions financières pour risques et charges</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->provisions_financieres_risques_ ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-
-                                                        <tr><th style="writing-mode: vertical-rl" rowspan="16">ACTIF IMMOBILISE</th></tr>
-                                                        <tr><th style="writing-mode: vertical-rl" rowspan="5">Immos incorporelles</th></tr>
-                                                        <tr>
-
-                                                            <td>Frais de développement et de prospection</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->frais_developpement ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td>Brevets, licences, logiciels, et droits assimilaires</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->brevets ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td>Fonds commercial et droit au bail</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->fonds_commercial ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Autres immobilisations incorporelles</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->autres_immobilisations_incorporelles ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-
-
-                                                        <tr><td style="writing-mode: vertical-rl" rowspan="7">Immos corporelles</td></tr>
-
-                                                        <tr>
-                                                            <td>Terrains</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->terrains ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Bâtiments</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->batiments ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Aménagements, agencements et installations</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->amenagements ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Matériel, mobilier et actifs biologiques</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->materiel_mobilier ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Matériel de transport</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->materiel_transport ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Avances et acomptes versés sur immobilisations</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->avances_acomptes ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-
-                                                        <tr><td style="writing-mode: vertical-rl" rowspan="3">Immos fin.</td></tr>
-
-                                                        <tr>
-                                                            <td>Titres de participation</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td class="td-modif" data-model="Prevbilan" data-name="titres_participation" data-id="<?= $prevr->id ?>" ><?= $prevr->titres_participation ?><span style="display: none; cursor: pointer;" class="fa fa-pencil fa-modif"></span></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Autres immobilisations financieres</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->autres_immobilisations_financieres ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th style="text-align: center" colspan="3">FONDS DE ROULEMENT</th>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <th><?= $prevr->fr ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-                                                        <tr><td style="writing-mode: vertical-rl" rowspan="7">ACTIF CIRCULANT</td></tr>
-
-                                                        <tr>
-                                                            <td colspan="2">Actif circulant HAO</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->actif_circulant_hao ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Stocks et encours</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->stocks_encours ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td colspan="2">CRÉANCES ET EMPLOIS ASSIMILÉS</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->creances_emplois ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Fournisseurs avances versées</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->avances_fournisseurs ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Clients</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->clients ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Autres créances</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->autres_creances ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-
-                                                        <tr><td style="writing-mode: vertical-rl" rowspan="6">PASSIF CIRCULANT</td></tr>
-
-                                                        <tr>
-                                                            <td colspan="2">Dettes circulants HAO</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->dettes_circulantes_hao ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Clients avances reçues</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->clients_avances_recues ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td colspan="2">Fournisseurs d'exploitation</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->fournisseurs_exploitation ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Dettes fiscales et sociales</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->dettes_fiscales ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Autres dettes</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td><?= $prevr->autres_dettes ?></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th style="text-align: center" colspan="3">BESOIN EN FONDS DE ROULEMENT</th>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <th><?= $prevr->bfr ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr><td style="writing-mode: vertical-rl" rowspan="4">Tresorerie Active</td></tr>
-
-                                                        <tr>
-                                                            <td colspan="2">Titres de placement</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td class="td-modif" data-name="titres_placement" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->titres_placement ?><span class="fa fa-pencil fa-modif"></span></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Valeurs à encaisser</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td class="td-modif" data-name="valeur_encaisser" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->valeur_encaisser ?><span class="fa fa-pencil fa-modif"></span></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Banques, chèques postaux, caisse et assimilés</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td class="td-modif" data-name="banques_cheques_" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->banques_cheques_ ?><span class="fa fa-pencil fa-modif"></span></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr><td style="writing-mode: vertical-rl" rowspan="3">Tresorerie Passive</td></tr>
-                                                        <tr>
-                                                            <td colspan="2">Banques, crédits d'escomptes et de trésorerie</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td class="td-modif" data-name="banques_credit_escompte" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->banques_credit_escompte ?><span class="fa fa-pencil fa-modif"></span></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Banques, crédits de trésorerie</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td class="td-modif" data-name="banques_credit_tresorerie" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->banques_credit_tresorerie ?><span class="fa fa-pencil fa-modif"></span></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <th style="text-align: center" colspan="3">TRESORERIE NETTE</th>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <th><?= $prevr->tn ?></th>
-                                                                @if(!$loop->last)
-                                                                <th>-</th>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3" style="text-align: center">Ecart de conversion - actif</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td class="td-modif" data-name="ecart_conversion_actif" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->ecart_conversion_actif ?><span class="fa fa-pencil fa-modif"></span></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3" style="text-align: center">Ecart de conversion - passif</td>
-                                                            @foreach($projet->prevbilans as $prevr)
-                                                                <td class="td-modif" data-name="ecart_conversion_passif" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->ecart_conversion_passif ?><span class="fa fa-pencil fa-modif"></span></td>
-                                                                @if(!$loop->last)
-                                                                <td>-</td>
-                                                                @endif
-                                                            @endforeach
-                                                        </tr>
-
-                                                    </tbody>
-                                            </table>
-                                        </fieldset>
-                                    </div>
-
-                                </div>
-
-                             </div>
-
-                             <div class="tab-pane fade" role="tabpanel" id="prevtresoreries" aria-labelledby="">
-                                <p></p>
-
-                                <h6 class="page-header">FLUX DE TRESORERIE PREVISIONNELS</h6>
-
-                             </div>
-
-                             <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
-                                <h6 class="page-header">MONTAGE FINANCIER</h6>
-                             </div>
-
-                          </div>
-                       </fieldset>
-                </div>
-            </div>
-
-
-        </div>
-        @endif
-
                   </div>
-    </div>
-
-      <div class="modal fade" id="uploadImgModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        	<form enctype="multipart/form-data" method="post" action="/owner/dossier/upload-image">
-        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-        		{{csrf_field()}}
-        		<div class="modal-dialog modal-lg" role="document">
-        			<div class="modal-content">
-        				<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> Chargement de l'image du projet</span></h5>
-        				</div>
-        				<div class="modal-body">
-        					<div class="form-group">
-        						<input name="imageUri" type="file" class="" style="width: 100%"/>
-        					</div>
-        				</div>
-        				<div class="modal-footer">
-        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
-        				</div>
-
-        			</div>
-        		</div>
-        	</form>
-
-
-        	<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-                <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('#synthese1').summernote({
-                        height: 300,
-                        tabsize: 2,
-                        followingToolbar: true,
-                        lang:'fr-FR'
-                      });
-                    });
-                  </script>
-        </div>
-
-        <div class="modal fade" id="addTagModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-                	<form enctype="multipart/form-data" method="post" action="/owner/dossier/add-tag">
-                		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-                		{{csrf_field()}}
-                		<div class="modal-dialog modal-lg" role="document">
-                			<div class="modal-content">
-                				<div class="modal-header">
-                					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> Chargement de l'image du projet</span></h5>
-                				</div>
-                				<div class="modal-body">
-                					<div class="form-group">
-                						 <select class="form-control" name="tag_id" id="tag_id">
-                                            @foreach($tags as $tag)
-                                                <option value="{{$tag->id}}">{{$tag->name}}</option>
-                                            @endforeach
-                                          </select>
-                					</div>
-                				</div>
-                				<div class="modal-footer">
-                					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
-                				</div>
-
-                			</div>
-                		</div>
-                	</form>
-
-
-
-                </div>
+              </div>
 
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+
     <script>
         $(document).ready(function(){
-            $('.fa-modif').css({
-            cursor:'pointer',
-            display:'none'
-            });
+           // $('#side2').height($('#side1').height());
+           //$('#side2').height(890);
             getPlan($('#plan_id').val());
-            //var orm = 'http://localhost/ormsys/api/';
+
             $.ajax({
-                url: "/owner/dossier/getchoices",
+                url: "/consultant/dossier/getchoices",
                 type:'Get',
                 dataType:'json',
                 data:{id:$('#id').val()},
@@ -1684,8 +880,7 @@
 
                                         //console.log(risks[i][1][k]);
                                     }
-                                    //console.log(risks[i][1]);
-
+                                   // console.log(risks[i][1]);
                                 }
 
                                 $('#risques-tab').find('tbody').html(html);
@@ -1695,88 +890,283 @@
                             }
                         });
                     }
+
                 }
             })
         });
 
         function getPlan(id){
 
-                         $.ajax({
-                           url:orm+'get-plan',
-                           type:'Get',
-                           dataType:'json',
-                           data:{id:id},
-                               success:function(data){
-                                   //console.log(data);
-                                   if(data!=null){
-                                        $.ajax({
-                                          url:orm+'get-plan',
-                                          type:'Get',
-                                          dataType:'json',
-                                          data:{id:id},
-                                        success:function(){
-                                        }
-                                        });
-                                   }
-                                   var html = '';
-                                   var pls = data.plignes;
-                                   for(var i = 0; i<data.plignes.length; i++){
-
-                                        var tr ='<tr data-id="'+ pls[i].id +'"><td style="width: 13%">'+ pls[i].produits_risque.risque.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.produit.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.name +'</td><td contenteditable="true" style="width: 37%">'+ pls[i].amelioration +'</td></tr>';
-                                        html = html + tr;
-                                   }
-                                   $('#example').find('tbody').html(html);
-                               },
-                           Error:function(){
-
-                           }
-                         });
-
-                         $('.td-modif').hover(function(){
-                            $(this).find('.fa-modif').css({
-                            display:'block',
-                            margin:'-15px 0 0 20px',
-                            'z-index':99999,
-                            'text-align':'right'
-                            }).click(function(e){
-                                $(this).parent('td').prop('contentEditable',true)
-                            })
-                         }).mouseleave(function(){
-                            $(this).find('.fa-modif').css({display:'none'});
-                         })
-
-                         $('.td-modif').keypress(function(e){
-                            //console.log(e);
-                            if($(this).prop('contentEditable')){
-                                //console.log(e.keyCode);
-                                if(e.keyCode==13){
-                                    var name = $(this).data('name');
-                                    var model = $(this).data('model');
-                                    var value = $(this).text();
-                                    var id = $(this).data('id');
-                                    $.ajax({
-                                        url:'/owner/dossier/edit-field',
-                                        type:'get',
-                                        dataType:'json',
-                                        data:{name:name,model:model,value:value,id:id},
-                                        success:function(data){
-                                            window.location.reload();
-                                        }
-                                    })
+                 $.ajax({
+                   url:orm+'get-plan',
+                   type:'Get',
+                   dataType:'json',
+                   data:{id:id},
+                       success:function(data){
+                           //console.log(data);
+                           if(data!=null){
+                                $.ajax({
+                                  url:orm+'get-plan',
+                                  type:'Get',
+                                  dataType:'json',
+                                  data:{id:id},
+                                success:function(){
                                 }
-                                //console.log($(this).data('name'));
-                            }
-                         });
-                    }
+                                });
+                           }
+                           var html = '';
+                           var pls = data.plignes;
+                           for(var i = 0; i<data.plignes.length; i++){
+
+                                var tr ='<tr data-id="'+ pls[i].id +'"><td style="width: 13%">'+ pls[i].produits_risque.risque.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.produit.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.name +'</td><td contenteditable="true" style="width: 37%">'+ pls[i].amelioration +'</td></tr>';
+                                html = html + tr;
+                           }
+                           $('#example').find('tbody').html(html);
+                       },
+                   Error:function(){
+
+                   }
+                 });
+            }
+
     </script>
+
+    <!-- Edition de la synthese du diagnostic interne -->
+    <div class="modal fade" id="synDiagIntModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    	<form method="post" action="/consultant/dossier/synthese1">
+    		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
+    		{{csrf_field()}}
+    		<div class="modal-dialog modal-lg" role="document">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC INTERNE</span></h5>
+    				</div>
+    				<div class="modal-body">
+    					<div class="form-group">
+    						<textarea class="form-control"  name="synthese1" id="synthese1" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_interne }}</textarea>
+    					</div>
+    				</div>
+    				<div class="modal-footer">
+    					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+    				</div>
+
+    			</div>
+    		</div>
+    	</form>
+
+
+    	<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+            <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
+            <script type="text/javascript">
+                $(document).ready(function() {
+                  $('#synthes').summernote({
+                    height: 300,
+                    tabsize: 2,
+                    followingToolbar: true,
+                    lang:'fr-FR'
+                  });
+                });
+              </script>
+
+
+    </div>
+
+
+    <!-- Edition de la synthese du diagnostic externe-->
+        <div class="modal fade" id="synDiagExtModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        	<form method="post" action="/consultant/dossier/synthese2">
+        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
+        		{{csrf_field()}}
+        		<div class="modal-dialog modal-lg" role="document">
+        			<div class="modal-content">
+        				<div class="modal-header">
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC EXTERNE</span></h5>
+        				</div>
+        				<div class="modal-body">
+        					<div class="form-group">
+        						<textarea class="form-control"  name="synthese2" id="synthese2" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_externe }}</textarea>
+        					</div>
+        				</div>
+        				<div class="modal-footer">
+        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+        				</div>
+
+        			</div>
+        		</div>
+        	</form>
+
+
+
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                      $('#synthese2').summernote({
+                        height: 300,
+                        tabsize: 2,
+                        followingToolbar: true,
+                        lang:'fr-FR'
+                      });
+                    });
+                  </script>
+
+
+        </div>
+
+        <!-- Edition de la synthese du diagnostic Strategique -->
+        <div class="modal fade" id="synDiagStratModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        	<form method="post" action="/consultant/dossier/synthese3">
+        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
+        		{{csrf_field()}}
+        		<div class="modal-dialog modal-lg" role="document">
+        			<div class="modal-content">
+        				<div class="modal-header">
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC STRATEGIQUE</span></h5>
+        				</div>
+        				<div class="modal-body">
+        					<div class="form-group">
+        						<textarea class="form-control"  name="synthese3" id="synthese3" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_strategique }}</textarea>
+        					</div>
+        				</div>
+        				<div class="modal-footer">
+        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+        				</div>
+
+        			</div>
+        		</div>
+        	</form>
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                      $('#synthese3').summernote({
+                        height: 300,
+                        tabsize: 2,
+                        followingToolbar: true,
+                        lang:'fr-FR'
+                      });
+                    });
+                  </script>
+
+
+        </div>
+
+
+
+
+        <!-- Edition du teaser-->
+        <div class="modal fade" id="teaserModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        	<form method="post" action="/consultant/dossier/teaser">
+        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
+        		{{csrf_field()}}
+        		<div class="modal-dialog modal-lg" role="document">
+        			<div class="modal-content">
+        				<div class="modal-header">
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> ELABORATION DU TEASER</span></h5>
+        				</div>
+        				<div class="modal-body">
+        					 <div class="row">
+
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="contexte">CONTEXTE</label>
+                                        <textarea name="contexte" rows="3" id="contexte"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="problematique">PROBLEMATIQUE</label>
+                                        <input name="problematique" type="text" class="form-control" id="problematique"/>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                     <label for="marche">MARCHE</label>
+                                    <input name="marche" type="text" class="form-control" id="marche"/>
+                                </div>
+
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="strategie">STRATEGIE</label>
+                                        <input name="strategie" type="text" class="form-control" id="strategie"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="chiffres">CHIFFRES CLES</label>
+                                        <input name="chiffres" type="text" class="form-control" id="chiffres" placeholder="Saisir ici quelques chiffres clefs" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="">FOCUS SUR LES REALISATIONS DE L'ENTREPRISE</label>
+                                        <textarea name="focus_realisations" class="form-control telt" id="focus_realisations" placeholder=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+        				</div>
+        				<div class="modal-footer">
+        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+        				</div>
+
+        			</div>
+        		</div>
+        	</form>
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                      $('textarea').summernote({
+                        height: 300,
+                        tabsize: 2,
+                        followingToolbar: true,
+                        lang:'fr-FR'
+                      });
+
+                    });
+
+
+                  </script>
+
+
+        </div>
+
+<style>
+         div.note-editor.note-frame{
+                    padding: 0;
+                }
+              .note-frame .btn-default {
+                    color: #222;
+                    background-color: #FFF;
+                    border-color: none;
+                }
+    </style>
 
 @endsection
 
 @section('action')
-
-@if($projet->modepaiement_id>1)
+@if($projet->etape==1)
     @if($projet->validated_step==1)
-        <a class="btn btn-xs btn-success" href="/owner/dossiers/add-step"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
+        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-diag-externe/{{$projet->token}}"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
+    @endif
+@endif
+
+@if($projet->etape==2)
+    @if($projet->validated_step==2)
+        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-pencil"></i> Editer le diagnostic strategique</a>
+    @endif
+@endif
+
+
+
+@if($projet->etape==3)
+    @if($projet->validated_step==3)
+        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-pencil"></i> Elaborer le plan financier</a>
     @endif
 @endif
 
