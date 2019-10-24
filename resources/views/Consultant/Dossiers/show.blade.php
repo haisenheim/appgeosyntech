@@ -120,7 +120,7 @@
 
 
                     </div>
-                    <div id="side2" class="col-md-8 col-sm-12">
+                    <div style="overflow-y: scroll;" id="side2" class="col-md-8 col-sm-12">
                         <div class="card">
                             <div class="card-body">
                                <fieldset>
