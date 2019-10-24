@@ -124,7 +124,7 @@
                         <div class="card">
                             <div class="card-body">
                                <fieldset>
-                                    <legend>DIAGNOSTIC INTERNE</legend>
+                                    <h6>Diagnostic interne</h6>
                                     <ul class="nav nav-tabs" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
                                          <li role="presentation" class="nav-item active">
                                              <a class="nav-link" href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
@@ -450,29 +450,27 @@
                      @if($projet->etape>=2)
 
                                <fieldset>
-                                   <legend>DIAGNOSTIC EXTERNE</legend>
-                                   <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                         <li role="presentation" class="active">
-                                             <a href="#segments" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ANALYSE DE LA DEMANDE </a>
+                                   <h5>Diagnostic Externe</h5>
+                                   <ul class="nav nav-tabs " style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link active" href="#segments" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ANALYSE DE LA DEMANDE </a>
                                          </li>
 
-                                         <li role="presentation" class="">
-                                             <a href="#concurrents" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'OFFRE </a>
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#concurrents" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'OFFRE </a>
                                          </li>
 
-                                         <li role="presentation" class="">
-                                             <a href="#environnement" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'ENVIRONNMENT </a>
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#environnement" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'ENVIRONNMENT </a>
                                          </li>
 
 
                                     </ul>
 
                                     <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade active in" role="tabpanel" id="segments" aria-labelledby="tab1">
+                                        <div class="tab-pane fade active show" role="tabpanel" id="segments" aria-labelledby="tab1">
                                              <div>
                                                      <div>
-
-
                                                             <?php if($projet->segments): ?>
 
                                                             <table class="table table-bordered">
