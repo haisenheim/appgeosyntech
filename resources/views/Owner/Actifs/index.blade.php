@@ -71,7 +71,7 @@
            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 
              <a href="/owner/actifs/create" class="dropdown-item">
-               <i class="fas fa-plus-circle mr-2"></i> Nouveau dossier
+               <i class="fas fa-plus-circle mr-2"></i> Nouvelle cession
 
              </a>
              <div class="dropdown-divider"></div>
