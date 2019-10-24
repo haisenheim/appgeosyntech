@@ -445,8 +445,8 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12">
-                        <div class="widget">
-                            <div class="widget-content">
+                        <div class="card">
+                            <div class="card-body">
                      @if($projet->etape>=2)
 
                                <fieldset>
