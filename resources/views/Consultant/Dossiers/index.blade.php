@@ -34,12 +34,12 @@
             <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header text-white"
-                   style="background: url('{{ $projet->imageUri?'img/'.$projet->imageUri:'img/logo.png' }}') center center;">
+                   style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center;">
                 <h3 class="widget-user-username text-right"><?= $projet->name ?></h3>
                 <h5 class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
               </div>
               <div class="widget-user-image">
-                <img class="img-circle" src="{{$projet->user?$projet->user->imageUri?'img/'.$projet->user->imageUri:'img/avatar.png':'img/avatar.png'}}" alt="User Avatar">
+                <img class="img-circle" src="{{$projet->user?$projet->user->imageUri? asset('img/'.$projet->user->imageUri):asset('img/avatar.png'):asset('img/avatar.png')}}" alt="User Avatar">
               </div>
               <div class="card-footer">
                 <div class="row">
