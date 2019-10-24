@@ -8,7 +8,7 @@
 @section('content')
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4 col-sm-12">
+                    <div id="side1" class="col-md-4 col-sm-12">
                         <div class="card">
                             <div class="card-body">
 
@@ -120,7 +120,7 @@
 
 
                     </div>
-                    <div class="col-md-8 col-sm-12">
+                    <div id="side2" class="col-md-8 col-sm-12">
                         <div class="card">
                             <div class="card-body">
                                <fieldset>
@@ -1127,7 +1127,11 @@
                         followingToolbar: true,
                         lang:'fr-FR'
                       });
+                      var sh= $('#side1').height();
+                      $('#side2').height(sh);
                     });
+
+
                   </script>
 
 
