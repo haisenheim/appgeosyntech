@@ -1,6 +1,6 @@
 @extends('......layouts.consultant')
 
-@section('page_header')
+@section('content-header')
     <h3 class="page-header">GESTION DES CESSIONS D'ACTIFS</h3>
 @endsection
 
@@ -61,7 +61,7 @@
                                   <div class="col-sm-6">
                                     <div class="description-block">
                                       <h5 class="description-header"><i class="fa fa-coins"></i></h5>
-                                      <span class="description-text">{{$projet->montant}} FCFA</span>
+                                      <span class="description-text">{{$projet->prix}} FCFA</span>
                                     </div>
                                     <!-- /.description-block -->
                                   </div>
