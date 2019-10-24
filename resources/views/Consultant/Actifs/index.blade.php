@@ -40,7 +40,7 @@
                               <div class="widget-user-header text-white"
                                    style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center;">
                                    <div style="background: #EEEEEE; opacity: 0.5">
-                                   <h3 style="font-weight: 900;" class="widget-user-username text-right"><?= $projet->name ?></h3>
+                                   <h3 style="font-weight:900; z-index: 999" class="widget-user-username text-right"><?= $projet->name ?></h3>
                                     <h5 style="font-weight: 700;" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
                                    </div>
 
