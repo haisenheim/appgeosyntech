@@ -62,12 +62,12 @@
 
 @section('nav_actions')
     <a class="nav-link" data-toggle="dropdown" href="#">
-             <i class="far fa-cogs"></i>
+             <i class="fas fa-cogs"></i>
              <span class="badge  navbar-badge">Actions</span>
            </a>
            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 
-             <a href="#" class="dropdown-item">
+             <a href="/owner/dossiers/create" class="dropdown-item">
                <i class="fas fa-plus-circle mr-2"></i> Nouveau dossier
 
              </a>
