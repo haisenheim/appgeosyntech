@@ -1,6 +1,6 @@
 @extends('......layouts.consultant')
 @section('content-header')
- <h3 class="page-header">GESTION DES PROJETS INDUSTRIELS</h3>
+ <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">GESTION DES PROJETS INDUSTRIELS</h3>
 @endsection
 
 @section('content')
@@ -24,7 +24,7 @@
               <div class="card-body">
 
               </div>
-              <div class="card-footer">
+              <div style="padding: .75rem 1.25rem;" class="card-footer">
                 <div class="row">
                     <div class="col-md-6 border-right">
                         <div class="description-block">
