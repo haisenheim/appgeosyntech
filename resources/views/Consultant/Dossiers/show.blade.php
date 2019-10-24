@@ -8,7 +8,7 @@
 @section('content')
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
-                    <div id="side1" class="col-md-4 col-sm-12">
+                    <div id="side1" class="col-md-4 col-sm-12" style="min-height:840px ">
                         <div class="card">
                             <div class="card-body">
 
@@ -120,7 +120,7 @@
 
 
                     </div>
-                    <div style="overflow-y: scroll;" id="side2" class="col-md-8 col-sm-12">
+                    <div style="overflow-y: scroll; min-height: 840px" id="side2" class="col-md-8 col-sm-12">
                         <div class="card">
                             <div class="card-body">
                                <fieldset>
@@ -816,7 +816,7 @@
 
     <script>
         $(document).ready(function(){
-            $('#side2').height($('#side1').height());
+           // $('#side2').height($('#side1').height());
            //$('#side2').height(890);
             getPlan($('#plan_id').val());
 
