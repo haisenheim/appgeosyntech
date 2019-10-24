@@ -16,10 +16,10 @@
               <div class="widget-user-header text-white"
                    style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center;">
                     <h3 style="font-weight: 900" class="widget-user-username text-right"><?= $projet->name ?></h3>
-                    <h5 style="font-weight: 700" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
+                    <h5 style="font-weight: 700" class="widget-user-desc text-right">{{ $projet->expert?$projet->expert->name:'Aucun Consultant lié' }}</h5>
               </div>
               <div class="widget-user-image">
-                <img class="img-circle" src="{{$projet->user?$projet->user->imageUri? asset('img/'.$projet->user->imageUri):asset('img/avatar.png'):asset('img/avatar.png')}}" alt="User Avatar">
+                <img class="img-circle" src="{{$projet->expert?$projet->expert->imageUri? asset('img/'.$projet->expert->imageUri):asset('img/avatar.png'):asset('img/avatar.png')}}" alt="User Avatar">
               </div>
               <div class="card-body">
 
