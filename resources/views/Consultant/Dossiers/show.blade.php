@@ -121,8 +121,8 @@
 
                     </div>
                     <div class="col-md-8 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-content">
+                        <div class="card">
+                            <div class="card-body">
                                <fieldset>
                                     <legend>DIAGNOSTIC INTERNE</legend>
                                     <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
