@@ -443,7 +443,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div style="margin-top: 30px" class="row">
                     <div class="col-sm-12 col-md-12">
                         <div class="card">
                             <div class="card-body">
@@ -633,38 +633,38 @@
 
                     @if($projet->etape>=3)
                      <div class="col-md-12 col-sm-12">
-                           <div class="widget">
-                            <div class="widget-content">
+                           <div class="card">
+                            <div class="card-body">
                                    <fieldset>
-                                      <legend>DIAGNOSTIC STRATEGIQUE</legend>
-                                       <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                            <li role="presentation" class="active">
-                                                <a href="#swot" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> SWOT </a>
+                                      <h5>DIAGNOSTIC STRATEGIQUE</h5>
+                                       <ul class="nav nav-tabs " style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link active" href="#swot" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> SWOT </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                <a href="#objectifs" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> OBJECTIFS </a>
+                                            <li  role="presentation" class="nav-item">
+                                                <a class="nav-link" href="#objectifs" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> OBJECTIFS </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                <a href="#organisation" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ORGANISATION DU TRAVAIL </a>
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link" href="#organisation" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ORGANISATION DU TRAVAIL </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                 <a href="#actions" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ACTIONS DE MAITRISE </a>
+                                            <li role="presentation" class="nav-item">
+                                                 <a class="nav-link" href="#actions" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ACTIONS DE MAITRISE </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                <a href="#etapes" role="tab" id="tab5" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> PLAN D'ACTION STRATEGIQUE </a>
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link" href="#etapes" role="tab" id="tab5" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> PLAN D'ACTION STRATEGIQUE </a>
                                             </li>
 
-                                            <li role="presentation" class="">
-                                                <a href="#faisabilite" role="tab" id="tab6" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ETUDE DE FAISABILITE</a>
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link" href="#faisabilite" role="tab" id="tab6" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ETUDE DE FAISABILITE</a>
                                             </li>
                                        </ul>
 
                                        <div class="tab-content" id="myTabContent">
-                                         <div class="tab-pane fade active in" role="tabpanel" id="swot" aria-labelledby="tab1">
+                                         <div class="tab-pane fade active show" role="tabpanel" id="swot" aria-labelledby="tab1">
                                               <div>
 
                                                 <div class="row">
