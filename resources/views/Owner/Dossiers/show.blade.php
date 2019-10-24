@@ -101,17 +101,7 @@
                                         </li>
                                     </ul>
                                     <hr/>
-                                    <form action="/consultant/dossier/add-mode" method="get" class="form-inline">
-                                        <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
-                                        <select style="background-color: #FFFFFF" class="form-control" name="mode_id" id="mode_id">
-                                            <option value="0">Choix d'une offre de service</option>
-                                            @foreach($modes as $mode)
-                                                <option value="{{ $mode->id }}">{{ $mode->name }}</option>
-                                            @endforeach
-                                        </select>
-                                        <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-check"></i> ENREGISTRER</button>
 
-                                    </form>
                                 </div>
                             @endif
 
@@ -1149,24 +1139,9 @@
 
 @endsection
 
-@section('action')
-@if($projet->etape==1)
+@if($projet->modepaiement_id>1)
     @if($projet->validated_step==1)
-        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-diag-externe/{{$projet->token}}"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
-    @endif
-@endif
-
-@if($projet->etape==2)
-    @if($projet->validated_step==2)
-        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-pencil"></i> Editer le diagnostic strategique</a>
-    @endif
-@endif
-
-
-
-@if($projet->etape==3)
-    @if($projet->validated_step==3)
-        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-pencil"></i> Elaborer le plan financier</a>
+        <a class="btn btn-xs btn-success" href="/owner/dossiers/add-step"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
     @endif
 @endif
 
