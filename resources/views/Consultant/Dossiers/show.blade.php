@@ -816,7 +816,8 @@
 
     <script>
         $(document).ready(function(){
-            $('#side2').height($('#side1').height());
+           // $('#side2').height($('#side1').height());
+           $('#side2').height(890);
             getPlan($('#plan_id').val());
 
             $.ajax({
