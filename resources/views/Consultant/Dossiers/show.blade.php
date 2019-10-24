@@ -10,10 +10,10 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12">
                         <div class="card">
-
+                            <div class="card-body">
 
                             <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i>
-                            <div style="max-height: 300px; max-width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center; ">
+                            <div style="max-height: 300px; max-width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
 
                             </div>
                             </a>
@@ -115,7 +115,7 @@
                                 </div>
                             @endif
 
-
+                        </div>
                         </div>
 
 
