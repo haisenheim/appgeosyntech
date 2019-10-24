@@ -39,7 +39,7 @@
                               <!-- Add the bg color to the header using any of the bg-* classes -->
                               <div class="widget-user-header text-white"
                                    style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center;">
-                                   <div style="background: #EEEEEE; opacity: 0.5">
+                                   <div style="background: #EEEEEE;">
                                    <h3 style="font-weight:900; color: #4caf50;" class="widget-user-username text-right"><?= $projet->name ?></h3>
                                     <h5 style="font-weight: 700;color: #4caf50;" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
                                    </div>
