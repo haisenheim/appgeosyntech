@@ -12,16 +12,11 @@
                         <div class="card">
 
 
-
+                            <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i>
                             <div style="max-height: 300px; max-width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center; ">
-                                @if($projet->imageUri)
 
-                                    <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
-                                @else
-
-                                     <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
-                                @endif
                             </div>
+                            </a>
                             <p>CODE : {{ $projet->code }}</p>
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
