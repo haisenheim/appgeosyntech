@@ -41,26 +41,34 @@
 
                     </div>
                     <div class="col-md-8 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-content">
-                               <fieldset>
-                                    <legend>DESCRIPTION</legend>
+                        <div class="card">
+                            <div class="card-header">
+
+                                    <h5>DESCRIPTION</h5>
+                            </div>
+                            <div class="card-body">
                                     <p>
                                         <?= $projet->description ?>
                                     </p>
-                               </fieldset>
-                               <hr/>
-                               <fieldset>
-                                    <legend>CARACTERISTIQUES</legend>
+
+                               </div>
+                        </div>
+
+
+                        <div class="card">
+                               <div class="card-header">
+                                    <h5>CARACTERISTIQUES</h5>
+                               </div>
+                               <div class="card-body">
                                     <p>
                                         <?= $projet->caracteristiques ?>
                                     </p>
-                               </fieldset>
+                               </div>
                             </div>
+                    </div>
                         </div>
                     </div>
-                </div>
-    </div>
+
 
       <div class="modal fade modal-lg" id="TModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
             <div class="modal-header">
