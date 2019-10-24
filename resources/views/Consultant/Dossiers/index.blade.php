@@ -1,5 +1,7 @@
 @extends('......layouts.consultant')
-
+@section('content-header')
+ <h3 class="page-header">GESTION DES PROJETS INDUSTRIELS</h3>
+@endsection
 
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
@@ -20,10 +22,6 @@
                 <img class="img-circle" src="{{$projet->user?$projet->user->imageUri? asset('img/'.$projet->user->imageUri):asset('img/avatar.png'):asset('img/avatar.png')}}" alt="User Avatar">
               </div>
               <div class="card-body">
-                <div class="description-block">
-                      <h5 class="description-header"><i class="fa fa-th-large"></i> TYPE DE PROJET</h5>
-                      <span class="description-text">{{  $projet->type->name }}</span>
-                    </div>
 
               </div>
               <div class="card-footer">
