@@ -63,7 +63,7 @@
 @section('nav_actions')
     <a class="nav-link" data-toggle="dropdown" href="#">
              <i class="fas fa-cogs"></i>
-             <span class="badge  navbar-badge">Actions</span>
+             <span class="badge  navbar-badge"></span>
            </a>
            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 
