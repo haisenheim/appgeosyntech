@@ -60,42 +60,24 @@
 
 @endsection
 
-@section('actions')
-   <div class="nav-item has-treeview">
-        <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cogs"></i>
-              <p>
-                Actions
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview" style="display: block;">
-              <li class="nav-item">
-                <a href="../UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/icons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Icons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/buttons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buttons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/sliders.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sliders</p>
-                </a>
-              </li>
+@section('nav_actions')
+    <a class="nav-link" data-toggle="dropdown" href="#">
+             <i class="far fa-cogs"></i>
+             <span class="badge  navbar-badge">Actions</span>
+           </a>
+           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 
-            </ul>
-   </div>
+             <a href="#" class="dropdown-item">
+               <i class="fas fa-plus-circle mr-2"></i> Nouveau dossier
+
+             </a>
+             <div class="dropdown-divider"></div>
+             <a href="#" class="dropdown-item">
+               <i class="fas fa-envelope mr-2"></i> Contacter OBAC
+
+             </a>
+
+
+           </div>
 
 @endsection
