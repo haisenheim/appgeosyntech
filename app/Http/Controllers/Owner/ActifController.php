@@ -135,7 +135,9 @@ class ActifController extends Controller
 		$tags = Tags::all();
 	    $projet = Actif::where(['token'=>$token])->first();
 	    //dd($dossier->bilans);
-	    return view('Owner/Actifs/show')->with(compact('projet','tags'));
+	    $tactifs = Tactif::all();
+	    $villes = Ville::all();
+	    return view('Owner/Actifs/show')->with(compact('projet','tags','tactifs','villes'));
     }
 
     /**
