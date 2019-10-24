@@ -463,14 +463,12 @@
                                          <li role="presentation" class="nav-item">
                                              <a class="nav-link" href="#environnement" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> ANALYSE DE L'ENVIRONNMENT </a>
                                          </li>
-
-
                                     </ul>
 
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade active show" role="tabpanel" id="segments" aria-labelledby="tab1">
                                              <div>
-                                                     <div>
+                                                     <div class="table-responsive">
                                                             <?php if($projet->segments): ?>
 
                                                             <table class="table table-bordered">
@@ -512,7 +510,8 @@
 
                                         <div class="tab-pane fade" role="tabpanel" id="concurrents" aria-labelledby="">
                                         <?php if($projet->concurrents): ?>
-                                            <table class="table table-bordered">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered">
 
                                             <tbody>
                                             <?php $i=0; $quoi=""; $qui=""; $ou=""; $comment=""; $combien=""; $quand="";
@@ -552,6 +551,7 @@
                                            <tr> <th>EBE</th> <?= $ebe ?> </tr>
                                             </tbody>
                                         </table>
+                                            </div>
                                         <?php endif; ?>
 
                                         </div>
