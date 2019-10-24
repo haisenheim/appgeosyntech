@@ -72,33 +72,78 @@
 
       <div class="modal fade modal-lg" id="TModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
             <div class="modal-header">
-                <h5>EDITION DU PITCH</h5>
+                <h5>{{ $projet->name }}</h5>
             </div>
             <div class="modal-content">
-                <form class="form" action="/consultant/actif/save"  method="post">
-                    {{csrf_field()}}
-                    <input type="hidden" name="token" value="{{$projet->token}}"/>
-                    <input type="hidden" name="id" value="{{$projet->id}}"/>
+                 <form enctype="multipart/form-data" class="form" action="{{route('owner.update.actif')}}"  method="post">
+                                    {{csrf_field()}}
+                                    <input type="hidden" name="token" value="{{$projet->token}}"/>
+                                    <input type="hidden" name="id" value="{{$projet->id}}"/>
 
-                    <fieldset>
-                        <legend>EDITION DU PITCH</legend>
-                            <div class="row">
+                                    <fieldset>
+                                        <legend>INFORMATIONS SUR L'ARTICLE</legend>
+                                            <div class="row">
+                                                 <div class="col-md-8">
+                                                     <div class="form-group">
+                                                         <label class="control-label">NOM</label>
+                                                         <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" value="{{$projet->name}}">
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-4">
+                                                     <div class="form-group">
+                                                         <label for="prix" class="control-label">PRIX INITIAL</label>
+                                                         <input id="prix" name="prix"  type="number"  class="form-control" value="{{$projet->prix}}">
+                                                     </div>
+                                                 </div>
 
-                                 <div class="col-md-12 col-sm-12">
-                                     <div class="form-group">
-                                         <label for="description" class="control-label">TEASER</label>
-                                         <textarea name="teaser" class="form-control" id="description" cols="30" rows="3"><?= $projet->teaser ?></textarea>
-                                     </div>
-                                 </div>
+                                                 <div class="col-md-6 col-sm-12">
+                                                     <div class="form-group">
+                                                         <label class="control-label">TYPE D'IMMOBILISATION</label>
+                                                         <select class="form-control" name="tactif_id" id="variante_id">
+                                                         <option value="{{$projet->tactif_id}}">{{$projet->tactif->name}}</option>
+                                                            @foreach($tactifs as $p)
+                                                               <option value='{!! $p->id !!}'>{{$p->name}}</option>
+                                                            @endforeach
+                                                         </select>
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-6">
+                                                     <div class="form-group">
+                                                         <label for="imageUri" class="control-label">PHOTO DE L'ARTICLE</label>
+                                                         <input id="imageUri" name="imageUri" type="file"  class="form-control" placeholder="">
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-12 col-sm-12">
+                                                     <div class="form-group">
+                                                         <label for="description" class="control-label">DESCRIPTION</label>
+                                                         <textarea name="description" id="description" cols="30" rows="3"><?= $projet->description ?></textarea>
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-12 col-sm-12">
+                                                     <div class="form-group">
+                                                         <label for="caracteristiques" class="control-label">CARACTERISTIQUES</label>
+                                                         <textarea name="caracteristiques" id="caracteristiques" cols="30" rows="3"><?= $projet->caracteristiques ?></textarea>
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-6 col-sm-12">
+                                                     <div class="form-group">
+                                                         <label for="ville_id" class="control-label">VILLE</label>
+                                                         <select class="form-control" name="ville_id" id="ville_id">
+                                                         <option value="{{$projet->ville_id}}">{{$projet->ville->name}}</option>
+                                                            @foreach($villes as $p)
+                                                               <option value='{!! $p->id !!}'>{{$p->name}}</option>
+                                                            @endforeach
+                                                         </select>
+                                                     </div>
+                                                 </div>
+                                             </div>
 
-                             </div>
+                                             <div class="btn-div card-footer text-center">
+                                                 <button class="btn btn-success  btn-sm " type="submit"> Enregister <i class="fa fa-save"></i></button>
+                                            </div>
 
-                             <div class="btn-div card-footer text-center">
-                                 <button class="btn btn-success  btn-sm " type="submit"> Enregistrer <i class="fa fa-save"></i></button>
-                            </div>
-
-                     </fieldset>
-                </form>
+                                     </fieldset>
+                                </form>
             </div>
       </div>
 
@@ -119,6 +164,3 @@
 
 @endsection
 
-@section('action')
-     <a class="btn btn-xs btn-success" href="#" data-target="#TModal" data-toggle="modal"><i class="fa fa-pencil"></i> Editer le teaser</a>
-@endsection

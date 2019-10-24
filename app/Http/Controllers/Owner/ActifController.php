@@ -30,8 +30,10 @@ class ActifController extends Controller
     public function index()
     {
         //
+	    $tactifs = Tactif::all();
+	    $villes = Ville::all();
         $dossiers = Actif::orderBy('created_at','desc')->where('owner_id',Auth::user()->id)->paginate(12);
-        return view('/Owner/Actifs/index')->with(compact('dossiers'));
+        return view('/Owner/Actifs/index')->with(compact('dossiers','tactifs','villes'));
     }
 
 

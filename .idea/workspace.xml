@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -101,15 +100,15 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9346939" vertical-offset="17878" max-vertical-offset="18448">
-              <caret line="1146" column="6" selection-start-line="1146" selection-start-column="6" selection-end-line="1146" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.9276018" vertical-offset="854" max-vertical-offset="18224">
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
-                <element signature="e#6737#6761#0#HTML" expanded="true" />
-                <marker date="1571930861913" expanded="false" signature="60835:60874" placeholder="..." />
-                <marker date="1571930861913" expanded="false" signature="64967:64977" placeholder="..." />
-                <marker date="1571930861913" expanded="false" signature="65035:65045" placeholder="..." />
-                <marker date="1571930861913" expanded="false" signature="65104:65114" placeholder="..." />
-                <marker date="1571930861913" expanded="false" signature="65188:65198" placeholder="..." />
+                <element signature="e#5715#5739#0#HTML" expanded="true" />
+                <marker date="1571930970062" expanded="false" signature="59813:59852" placeholder="..." />
+                <marker date="1571930970062" expanded="false" signature="63945:63955" placeholder="..." />
+                <marker date="1571930970062" expanded="false" signature="64013:64023" placeholder="..." />
+                <marker date="1571930970062" expanded="false" signature="64082:64092" placeholder="..." />
+                <marker date="1571930970062" expanded="false" signature="64166:64176" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -594,10 +593,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2013889" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2013889" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1048,15 +1047,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9346939" vertical-offset="17878" max-vertical-offset="18448">
-          <caret line="1146" column="6" selection-start-line="1146" selection-start-column="6" selection-end-line="1146" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.9276018" vertical-offset="854" max-vertical-offset="18224">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
-            <element signature="e#6737#6761#0#HTML" expanded="true" />
-            <marker date="1571930861913" expanded="false" signature="60835:60874" placeholder="..." />
-            <marker date="1571930861913" expanded="false" signature="64967:64977" placeholder="..." />
-            <marker date="1571930861913" expanded="false" signature="65035:65045" placeholder="..." />
-            <marker date="1571930861913" expanded="false" signature="65104:65114" placeholder="..." />
-            <marker date="1571930861913" expanded="false" signature="65188:65198" placeholder="..." />
+            <element signature="e#5715#5739#0#HTML" expanded="true" />
+            <marker date="1571930970062" expanded="false" signature="59813:59852" placeholder="..." />
+            <marker date="1571930970062" expanded="false" signature="63945:63955" placeholder="..." />
+            <marker date="1571930970062" expanded="false" signature="64013:64023" placeholder="..." />
+            <marker date="1571930970062" expanded="false" signature="64082:64092" placeholder="..." />
+            <marker date="1571930970062" expanded="false" signature="64166:64176" placeholder="..." />
           </folding>
         </state>
       </provider>
