@@ -8,7 +8,7 @@
 @section('content')
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
-                    <div id="side1" class="col-md-4 col-sm-12" style="max-height:840px ">
+                    <div id="side1" class="col-md-4 col-sm-12" style="max-height:840px; overflow-y: scroll ">
                         <div class="card">
                             <div class="card-body">
 
