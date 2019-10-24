@@ -39,7 +39,7 @@
                 <h5 class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
               </div>
               <div class="widget-user-image">
-                <img class="img-circle" src="{{$projet->user->imageUri?'img/'.$projet->user->imageUri:'img/avatar.png'}}" alt="User Avatar">
+                <img class="img-circle" src="{{$projet->user?$projet->user->imageUri?'img/'.$projet->user->imageUri:'img/avatar.png':'img/avatar.png'}}" alt="User Avatar">
               </div>
               <div class="card-footer">
                 <div class="row">
