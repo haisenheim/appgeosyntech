@@ -13,7 +13,7 @@
 
 
 
-                            <div style="max-height: 300px; max-width: 100%; background-image: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+                            <div style="max-height: 300px; max-width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
                                 @if($projet->imageUri)
 
                                     <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
@@ -124,7 +124,7 @@
                         </div>
 
 
-                        </div>
+                    </div>
                     <div class="col-md-8 col-sm-12">
                         <div class="widget">
                             <div class="widget-content">
