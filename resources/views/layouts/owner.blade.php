@@ -139,7 +139,15 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div style="background-color: #4caf50;; min-height: 200px; padding: 0 -15px" class="content-header">
-       @yield('content-header')
+        <div class="row">
+            <div class="col-md-10">
+                @yield('content-header')
+            </div>
+            <div class="col-md-2">
+                @yield('actions')
+            </div>
+        </div>
+
     </div>
     <!-- /.content-header -->
 
