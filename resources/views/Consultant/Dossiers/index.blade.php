@@ -31,38 +31,38 @@
 
             <div class="col-md-3">
             <!-- Widget: user widget style 1 -->
-            <div class="card card-widget widget-user">
+            <a href="/consultant/dossiers/{{ $projet->token  }}">
+             <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header text-white"
                    style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center;">
-                <h3 class="widget-user-username text-right"><?= $projet->name ?></h3>
-                <h5 class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
+                    <h3 style="font-weight: 900" class="widget-user-username text-right"><?= $projet->name ?></h3>
+                    <h5 style="font-weight: 700" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
               </div>
               <div class="widget-user-image">
                 <img class="img-circle" src="{{$projet->user?$projet->user->imageUri? asset('img/'.$projet->user->imageUri):asset('img/avatar.png'):asset('img/avatar.png')}}" alt="User Avatar">
               </div>
-              <div class="card-footer">
-                <div class="row">
-                  <div class="col-sm-4 border-right">
-                    <div class="description-block">
-                      <h5 class="description-header"><i class="fa fa-map-marker"></i></h5>
-                      <span class="description-text">{{ $projet->ville->name  }}</span>
-                    </div>
-                    <!-- /.description-block -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-sm-4 border-right">
-                    <div class="description-block">
-                      <h5 class="description-header"><i class="fa fa-th-large"></i></h5>
+              <div class="card-body">
+                <div class="description-block">
+                      <h5 class="description-header"><i class="fa fa-th-large"></i> TYPE DE PROJET</h5>
                       <span class="description-text">{{  $projet->type->name }}</span>
                     </div>
-                    <!-- /.description-block -->
-                  </div>
+                <br/>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-6 border-right">
+                        <div class="description-block">
+                          <h5 class="description-header"><i class="fa fa-map-marker"></i></h5>
+                          <span class="description-text">{{ $projet->ville->name  }}</span>
+                        </div>
+                    </div>
+
                   <!-- /.col -->
-                  <div class="col-sm-4">
+                  <div class="col-sm-6">
                     <div class="description-block">
-                      <h5 class="description-header">35</h5>
-                      <span class="description-text">PRODUCTS</span>
+                      <h5 class="description-header"><i class="fa fa-coins"></i></h5>
+                      <span class="description-text">{{$projet->montant}} FCFA</span>
                     </div>
                     <!-- /.description-block -->
                   </div>
@@ -71,6 +71,7 @@
                 <!-- /.row -->
               </div>
             </div>
+            </a>
             <!-- /.widget-user -->
           </div>
 
