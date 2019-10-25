@@ -33,8 +33,6 @@
                                 <ul class="list-group">
                                     @foreach($projet->cessions as $cession)
                                         <li class="list-group-item">
-
-
                                                 <div class="card card-default cardutline direct-chat direct-chat-primary collapsed-card">
                                                               <div class="card-header">
                                                                 <h3 class="card-title">{{$cession->angel->name}}</h3>
@@ -60,7 +58,6 @@
                                                                       <span class="direct-chat-name float-left">Alexander Pierce</span>
                                                                       <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                                                     </div>
-
                                                                     <div class="direct-chat-text">
                                                                       Is this template really for free? That's unbelievable!
                                                                     </div>
@@ -85,34 +82,13 @@
                                                                 </div>
                                                                 <!--/.direct-chat-messages-->
 
-                                                                <!-- Contacts are loaded here -->
-                                                                <div class="direct-chat-contacts">
-                                                                  <ul class="contacts-list">
-                                                                    <li>
-                                                                      <a href="#">
-                                                                        <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg">
 
-                                                                        <div class="contacts-list-info">
-                                                                          <span class="contacts-list-name">
-                                                                            Count Dracula
-                                                                            <small class="contacts-list-date float-right">2/28/2015</small>
-                                                                          </span>
-                                                                          <span class="contacts-list-msg">How have you been? I was...</span>
-                                                                        </div>
-                                                                        <!-- /.contacts-list-info -->
-                                                                      </a>
-                                                                    </li>
-                                                                    <!-- End Contact Item -->
-                                                                  </ul>
-                                                                  <!-- /.contatcts-list -->
-                                                                </div>
-                                                                <!-- /.direct-chat-pane -->
                                                               </div>
                                                               <!-- /.card-body -->
                                                               <div class="card-footer">
-                                                                <form action="#" method="post">
+                                                                <form action="#" class="form-send" method="post">
                                                                   <div class="input-group">
-                                                                    <input type="text" name="message" placeholder="Saisir un commentaire ..." class="form-control">
+                                                                    <input data-id="{{ $cession->id }}" type="text" name="message" placeholder="Saisir un commentaire ..." class="form-control">
                                                                     <span class="input-group-append">
                                                                       <button class="btn btn-success btn-send">Envoyer</button>
                                                                     </span>
@@ -121,6 +97,21 @@
                                                               </div>
                                                               <!-- /.card-footer-->
                                                             </div>
+
+                                                            <script>
+                                                                $('.form-send').submit(function(e){
+                                                                    e.preventDefault();
+                                                                    var msg = $(this).find('input').val();
+                                                                    var id = $(this).find('input').data('id');
+                                                                    $.ajax({
+                                                                        url:'/owner/comment/save',
+                                                                        type:'get',
+                                                                        dataType:'json',
+                                                                        data:{body:msg,cession_id:id},
+                                                                        success:function()
+                                                                    });
+                                                                });
+                                                            </script>
 
                                         </li>
                                     @endforeach
