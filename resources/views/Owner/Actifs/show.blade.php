@@ -29,7 +29,7 @@
                             @endif
 
                             @if($projet->cessions)
-                                <h5>LISTE DES CANDIDATS</h5>
+                                <h6>LISTE DES CANDIDATS</h6>
                                 <ul class="list-group">
                                     @foreach($projet->cessions as $cession)
                                         <li class="list-group-item">
