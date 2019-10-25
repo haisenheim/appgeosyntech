@@ -180,7 +180,7 @@
              <span class="badge  navbar-badge"></span>
            </a>
            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-             @if($actif->paye)
+             @if($projet->paye)
              <a href="#" data-toggle="modal" data-target="#addAngels" class="dropdown-item">
                <i class="fas fa-plus-circle mr-2"></i> Associer des investisseurs
              </a>
