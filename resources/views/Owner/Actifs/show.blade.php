@@ -86,7 +86,8 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                <h5>{{ $projet->name }}</h5>
+                <h4 class="modal-title">{{ $projet->name }}</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
             </div>
             <div class="modal-body">
                  <form enctype="multipart/form-data" class="form" action="{{route('owner.update.actif')}}"  method="post">
