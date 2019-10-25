@@ -64,13 +64,25 @@
                                         <?= $projet->caracteristiques ?>
                                     </p>
                                </div>
+                        </div>
+                        @if($projet->teaser)
+                            <div class="card">
+                               <div class="card-header">
+                                    <h5>TEASER</h5>
+                               </div>
+                               <div class="card-body">
+                                    <p>
+                                        <?= $projet->teaser ?>
+                                    </p>
+                               </div>
                             </div>
+                        @endif
                     </div>
                         </div>
                     </div>
 
 
-      <div class="modal fade modal-lg" id="TModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+      <div class="modal fade modal-lg" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
             <div class="modal-header">
                 <h5>{{ $projet->name }}</h5>
             </div>
@@ -150,7 +162,6 @@
       <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-
     <script type="text/javascript">
         $(document).ready(function() {
           $('textarea').summernote({
@@ -161,6 +172,30 @@
           });
         });
       </script>
+@endsection
+
+@section('nav_actions')
+    <a class="nav-link" data-toggle="dropdown" href="#">
+             <i class="fas fa-cogs"></i>
+             <span class="badge  navbar-badge"></span>
+           </a>
+           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+             @if($actif->paye)
+             <a href="#" data-toggle="modal" data-target="#addAngels" class="dropdown-item">
+               <i class="fas fa-plus-circle mr-2"></i> Associer des investisseurs
+             </a>
+             @endif
+             <div class="dropdown-divider"></div>
+             <a href="#" data-target="#EditModal" data-toggle="modal" class="dropdown-item">
+               <i class="fas fa-pencil mr-2"></i> Modifier
+             </a>
+             <div class="dropdown-divider"></div>
+             <a href="#" class="dropdown-item">
+               <i class="fas fa-envelope mr-2"></i> Contacter OBAC
+             </a>
+
+
+           </div>
 
 @endsection
 

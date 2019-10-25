@@ -63,7 +63,7 @@
 
 
 
-        <div class="modal fade" id="addTagModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+            <div class="modal fade" id="addTagModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
                 	<form enctype="multipart/form-data" method="post" action="/owner/actif/add-tag">
                 		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
                 		{{csrf_field()}}
