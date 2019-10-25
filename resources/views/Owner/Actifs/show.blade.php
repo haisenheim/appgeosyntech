@@ -83,10 +83,12 @@
 
 
       <div class="modal fade modal-lg" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-            <div class="modal-header">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
                 <h5>{{ $projet->name }}</h5>
             </div>
-            <div class="modal-content">
+            <div class="modal-body">
                  <form enctype="multipart/form-data" class="form" action="{{route('owner.update.actif')}}"  method="post">
                                     {{csrf_field()}}
                                     <input type="hidden" name="token" value="{{$projet->token}}"/>
@@ -156,6 +158,8 @@
 
                                      </fieldset>
                                 </form>
+            </div>
+                </div>
             </div>
       </div>
 
