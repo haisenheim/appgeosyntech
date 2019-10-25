@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="owner.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="owner.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/owner.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26838967" vertical-offset="2185" max-vertical-offset="2720">
-              <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
+            <state vertical-scroll-proportion="-4.76" vertical-offset="2185" max-vertical-offset="2720">
+              <caret line="164" column="102" selection-start-line="164" selection-start-column="102" selection-end-line="164" selection-end-column="102" />
               <folding>
                 <element signature="tag#a#0;tag#li#1;tag#ul#1;tag#nav#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#0;tag#li#1;tag#ul#1;tag#nav#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
@@ -90,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.64" vertical-offset="153" max-vertical-offset="3616">
-              <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.7387755" vertical-offset="230" max-vertical-offset="3616">
+              <caret line="37" column="135" selection-start-line="37" selection-start-column="135" selection-end-line="37" selection-end-column="135" />
               <folding>
                 <element signature="tag#div#2" expanded="false" />
                 <element signature="tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
@@ -223,8 +223,8 @@
         <option value="$PROJECT_DIR$/resources/views/Owner/Actifs/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Actifs/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Actifs/show__.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/owner.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php" />
       </list>
     </option>
   </component>
@@ -1049,25 +1049,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.64" vertical-offset="153" max-vertical-offset="3616">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-          <folding>
-            <element signature="tag#div#2" expanded="false" />
-            <element signature="tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/owner.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26838967" vertical-offset="2185" max-vertical-offset="2720">
-          <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
+        <state vertical-scroll-proportion="-4.76" vertical-offset="2185" max-vertical-offset="2720">
+          <caret line="164" column="102" selection-start-line="164" selection-start-column="102" selection-end-line="164" selection-end-column="102" />
           <folding>
             <element signature="tag#a#0;tag#li#1;tag#ul#1;tag#nav#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#0;tag#li#1;tag#ul#1;tag#nav#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7387755" vertical-offset="230" max-vertical-offset="3616">
+          <caret line="37" column="135" selection-start-line="37" selection-start-column="135" selection-end-line="37" selection-end-column="135" />
+          <folding>
+            <element signature="tag#div#2" expanded="false" />
+            <element signature="tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#2" expanded="false" />
           </folding>
         </state>
       </provider>

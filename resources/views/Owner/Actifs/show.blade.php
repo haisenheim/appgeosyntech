@@ -35,7 +35,7 @@
                                         <li class="list-group-item">
                                             <a href="#" class="link-black" data-target="#ShowComment" data-toggle="modal">
 
-                                                <div class="card card-prirary cardutline direct-chat direct-chat-primary">
+                                                <div class="card card-default cardutline direct-chat direct-chat-primary collapsed-card">
                                                               <div class="card-header">
                                                                 <h3 class="card-title">{{$cession->angel->name}}</h3>
 
