@@ -33,14 +33,14 @@
                                 <ul class="list-group">
                                     @foreach($projet->cessions as $cession)
                                         <li class="list-group-item">
-                                            <a href="#" class="link-black" data-target="#ShowComment" data-toggle="modal">
+
 
                                                 <div class="card card-default cardutline direct-chat direct-chat-primary collapsed-card">
                                                               <div class="card-header">
                                                                 <h3 class="card-title">{{$cession->angel->name}}</h3>
 
                                                                 <div class="card-tools">
-                                                                  <span data-toggle="tooltip" title="3 New Messages" class="badge bg-primary">3</span>
+                                                                  <span data-toggle="tooltip" class="badge bg-primary">{{ count($cession->comments) }}</span>
                                                                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                                                                   </button>
                                                                   <button type="button" class="btn btn-tool" data-toggle="tooltip" title="Contacts"
@@ -60,9 +60,7 @@
                                                                       <span class="direct-chat-name float-left">Alexander Pierce</span>
                                                                       <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                                                     </div>
-                                                                    <!-- /.direct-chat-infos -->
-                                                                    <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="Message User Image">
-                                                                    <!-- /.direct-chat-img -->
+
                                                                     <div class="direct-chat-text">
                                                                       Is this template really for free? That's unbelievable!
                                                                     </div>
@@ -77,8 +75,7 @@
                                                                       <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                                                     </div>
                                                                     <!-- /.direct-chat-infos -->
-                                                                    <img class="direct-chat-img" src="../dist/img/user3-128x128.jpg" alt="Message User Image">
-                                                                    <!-- /.direct-chat-img -->
+
                                                                     <div class="direct-chat-text">
                                                                       You better believe it!
                                                                     </div>
@@ -115,16 +112,16 @@
                                                               <div class="card-footer">
                                                                 <form action="#" method="post">
                                                                   <div class="input-group">
-                                                                    <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+                                                                    <input type="text" name="message" placeholder="Saisir un commentaire ..." class="form-control">
                                                                     <span class="input-group-append">
-                                                                      <button type="submit" class="btn btn-primary">Send</button>
+                                                                      <button class="btn btn-success btn-send">Envoyer</button>
                                                                     </span>
                                                                   </div>
                                                                 </form>
                                                               </div>
                                                               <!-- /.card-footer-->
                                                             </div>
-                                            </a>
+
                                         </li>
                                     @endforeach
                                 </ul>
