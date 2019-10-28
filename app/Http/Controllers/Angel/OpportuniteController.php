@@ -30,13 +30,13 @@ class OpportuniteController extends Controller
 	    //$tps = DB::table('tags_projets')->whereIn('tag_id',[2,3])->value('projet_id');
 	    //dd($tps);
 
-	    $projets = TagsProjet::all()->whereIn('tag_id',$tag_ids);
+	    $projets = TagsProjet::whereIn('tag_id',$tag_ids)->paginate(8);
 	    //dd($prj_tags);
 
 
 	   // dd($prj_tags);
 
-	    $projets = Projet::all()->where('etape',4)->where('validated_step',4);
+	    $projets = Projet::where('etape',4)->where('validated_step',4)->paginate(8);
 
         return view('/Angel/Dossiers/index')->with(compact('projets'));
     }
