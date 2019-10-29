@@ -25,7 +25,7 @@ class ClientController extends Controller
         $users = User::all()->where('role_id',3);
         // dd($villes);
         // echo "Bonjour tout le monde!!";
-        return view('admin/clients/index')->with(compact('users'));
+        return view('Admin/Clients/index')->with(compact('users'));
 
     }
 
