@@ -27,7 +27,7 @@ class AngelController extends Controller
         $users = \App\User::all()->where('role_id',4);
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('admin/angels/index')->with(compact('users'));
+        return view('Admin/Angels/index')->with(compact('users'));
 
     }
 

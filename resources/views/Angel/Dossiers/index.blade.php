@@ -10,7 +10,7 @@
 
                          <div class="col-md-3">
             <!-- Widget: user widget style 1 -->
-            <a style="color:#555" href="/consultant/dossiers/{{ $projet->token  }}">
+            <a style="color:#555" href="/angel/dossiers/{{ $projet->token  }}">
              <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header text-white"
