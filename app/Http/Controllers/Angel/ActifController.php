@@ -57,7 +57,7 @@ class ActifController extends Controller
 		$actif = Actif::where('token',$token)->first();
 		$cessions = Cession::all()->where('angel_id',Auth::user()->id)->where('actif_id',$actif->id);
 		foreach($cessions as $cession){
-			Actif::destroy($cession->id);
+			Cession::destroy($cession->id);
 		}
 
 		return back();
