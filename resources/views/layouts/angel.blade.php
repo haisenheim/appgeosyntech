@@ -37,7 +37,7 @@
 
           <!-- Actions Dropdown Menu -->
           <li class="nav-item dropdown">
-            @yield('actions')
+            @yield('nav_actions')
           </li>
           <!-- Profil Dropdown Menu -->
           <li class="nav-item dropdown">

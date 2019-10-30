@@ -46,6 +46,7 @@ class ActifController extends Controller
 			$cession = new Cession();
 			$cession->angel_id = Auth::user()->id;
 			$cession->actif_id = $actif->id;
+			$cession->token = sha1(Auth::user()->id . date('dihYms'));
 			$cession->save();
 		}
 
