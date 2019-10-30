@@ -1,4 +1,4 @@
-@extends('......layouts.consultant')
+@extends('......layouts.owner')
 
 @section('content-header')
     <div class="">
@@ -69,38 +69,6 @@
                         </div>
                     </div>
 
-
-      <div class="modal fade modal-lg" id="TModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-            <div class="modal-header">
-                <h5>EDITION DU PITCH</h5>
-            </div>
-            <div class="modal-content">
-                <form class="form" action="/consultant/actif/save"  method="post">
-                    {{csrf_field()}}
-                    <input type="hidden" name="token" value="{{$projet->token}}"/>
-                    <input type="hidden" name="id" value="{{$projet->id}}"/>
-
-                    <fieldset>
-                        <legend>EDITION DU PITCH</legend>
-                            <div class="row">
-
-                                 <div class="col-md-12 col-sm-12">
-                                     <div class="form-group">
-                                         <label for="description" class="control-label">TEASER</label>
-                                         <textarea name="teaser" class="form-control" id="description" cols="30" rows="3"><?= $projet->teaser ?></textarea>
-                                     </div>
-                                 </div>
-
-                             </div>
-
-                             <div class="btn-div card-footer text-center">
-                                 <button class="btn btn-success  btn-sm " type="submit"> Enregistrer <i class="fa fa-save"></i></button>
-                            </div>
-
-                     </fieldset>
-                </form>
-            </div>
-      </div>
 
       <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
