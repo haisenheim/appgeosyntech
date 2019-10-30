@@ -1,4 +1,4 @@
-@extends('......layouts.angel)
+@extends('layouts.angel')
 
 @section('content-header')
     <div class="">
