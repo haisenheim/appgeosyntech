@@ -87,10 +87,20 @@
 
 @endsection
 
+
+
 @section('nav_actions')
-    @if($projet->subscribed)
-     <a class="btn btn-xs btn-success" href="/angel/actif/unsubscribe" ><i class="fa fa-check-circle"></i> Se desinscrire</a>
-     @else
-     <a class="btn btn-xs btn-success" href="/angel/actif/souscribe" ><i class="fa fa-remove"></i> S'inscrire</a>
-     @endif
+            <a class="nav-link" data-toggle="dropdown" href="#">
+             <i class="fas fa-cogs"></i>
+             <span class="badge  navbar-badge"></span>
+           </a>
+           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+             @if($projet->subscribed)
+             <a class="btn btn-xs btn-success" href="/angel/actif/unsubscribe/{{$projet->token}}" ><i class="fa fa-check-circle"></i> Se desinscrire</a>
+             @else
+             <a class="btn btn-xs btn-success" href="/angel/actif/subscribe/{{$projet->token}}" ><i class="fa fa-check-circle"></i> S'inscrire</a>
+             @endif
+
+           </div>
+
 @endsection

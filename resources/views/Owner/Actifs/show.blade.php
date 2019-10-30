@@ -327,7 +327,7 @@
 @endsection
 
 @section('nav_actions')
-    <a class="nav-link" data-toggle="dropdown" href="#">
+            <a class="nav-link" data-toggle="dropdown" href="#">
              <i class="fas fa-cogs"></i>
              <span class="badge  navbar-badge"></span>
            </a>
