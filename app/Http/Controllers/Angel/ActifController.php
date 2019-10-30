@@ -96,7 +96,7 @@ class ActifController extends Controller
 		$projet = Actif::where('token',$token)->first();
 
 
-		return view('/Consultant/Actifs/show')->with(compact('projet'));
+		return view('/Angel/Actifs/show')->with(compact('projet'));
 	}
 
     /**
