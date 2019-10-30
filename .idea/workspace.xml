@@ -89,13 +89,9 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1168">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#62#177#0#HTML" expanded="true" />
-                <element signature="e#263#288#0#HTML" expanded="true" />
-                <element signature="e#1104#1144#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.06361829" vertical-offset="0" max-vertical-offset="503">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1075,13 +1071,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1168">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#62#177#0#HTML" expanded="true" />
-            <element signature="e#263#288#0#HTML" expanded="true" />
-            <element signature="e#1104#1144#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.06361829" vertical-offset="0" max-vertical-offset="503">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
