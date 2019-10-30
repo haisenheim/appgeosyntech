@@ -35,6 +35,7 @@ class Actif extends Model
 		$exist = false;
 		$id = Auth::user()->id;
 		foreach($cessions as $cession){
+			dd($cession);
 			if($cession->angel_id==$id){
 				$exist=true;
 			}
