@@ -1,6 +1,6 @@
-@extends('......layouts.consultant')
+@extends('......layouts.owner')
 @section('content-header')
- <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">GESTION DES PROJETS INDUSTRIELS</h3>
+ <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">OPPORTUNITES D'INVESTISSEMENT</h3>
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
 
                          <div class="col-md-3">
             <!-- Widget: user widget style 1 -->
-            <a style="color:#555" href="/consultant/dossiers/{{ $projet->token  }}">
+            <a style="color:#555" href="/owner/dossiers/{{ $projet->token  }}">
              <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header text-white"
