@@ -32,10 +32,11 @@ class Actif extends Model
 
 	protected function getSubscribedAttribute(){
 		$cessions = $this->cessions();
+		dd($cessions);
 		$exist = false;
 		$id = Auth::user()->id;
 		foreach($cessions as $cession){
-			dd($cession);
+			//dd($cession);
 			if($cession->angel_id==$id){
 				$exist=true;
 			}
