@@ -31,7 +31,8 @@ class Actif extends Model
 	}
 
 	protected function getSubscribedAttribute(){
-		$cessions = $this->cessions();
+		$cessions = Cession::all()->where('actif_id',$this->id);
+		//$cessions = $this->cessions();
 		dd($cessions);
 		$exist = false;
 		$id = Auth::user()->id;
