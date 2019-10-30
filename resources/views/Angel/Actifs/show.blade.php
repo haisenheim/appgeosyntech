@@ -1,4 +1,4 @@
-@extends('......layouts.owner')
+@extends('......layouts.angel)
 
 @section('content-header')
     <div class="">
@@ -88,5 +88,9 @@
 @endsection
 
 @section('action')
-     <a class="btn btn-xs btn-success" href="#" data-target="#TModal" data-toggle="modal"><i class="fa fa-pencil"></i> Editer le teaser</a>
+    @if($projet->subscribed)
+     <a class="btn btn-xs btn-success" href="/angel/actif/unsubscribe" ><i class="fa fa-check-circle"></i> Se desinscrire</a>
+     @else
+     <a class="btn btn-xs btn-success" href="/angel/actif/souscribe" ><i class="fa fa-remove"></i> S'inscrire</a>
+     @endif
 @endsection

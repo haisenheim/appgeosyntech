@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Actif extends Model
 {
@@ -27,5 +28,18 @@ class Actif extends Model
 
 	public function cessions(){
 		return $this->hasMany('App\Models\Cession');
+	}
+
+	protected function getSubscribedAttribute(){
+		$cessions = $this->cessions();
+		$exist = false;
+		$id = Auth::user()->id;
+		foreach($cessions as $cession){
+			if($cession->angel_i==$id){
+				$exist=true;
+			}
+		}
+
+		return $exist;
 	}
 }

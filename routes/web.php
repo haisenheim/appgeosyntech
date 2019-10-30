@@ -73,6 +73,7 @@ Route::prefix('angel')
     ->middleware(['auth','angel'])
     ->name('angel.')
     ->group(function(){
+	    Route::resource('actifs','ActifController');
         Route::resource('opportunites','OpportuniteController');
         Route::resource('investissements','InvestissementController');
         Route::resource('alertes','AlerteController');
@@ -80,6 +81,8 @@ Route::prefix('angel')
 	    Route::get('/','FrontController');
 	    Route::get('dashboard','DashboardController');
 	    Route::resource('tags','TagController');
+	    Route::get('/actif/subscribe/{token}','ActifController@subscribe');
+	    Route::get('/actif/unsubscribe/{token}','ActifController@unsubscribe');
     });
 
 //Liste des routes du consultant

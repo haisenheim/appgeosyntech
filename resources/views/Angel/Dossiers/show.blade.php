@@ -1042,7 +1042,7 @@
         $(document).ready(function(){
            // var orm = 'http://localhost/ormsys/api/';
             $.ajax({
-                url: "/admin/dossier/getchoices",
+                url: "/angel/dossier/getchoices",
                 type:'Get',
                 dataType:'json',
                 data:{id:$('#id').val()},
