@@ -89,9 +89,18 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06361829" vertical-offset="0" max-vertical-offset="503">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.13061224" vertical-offset="0" max-vertical-offset="1168">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+              <folding>
+                <element signature="e#63#178#0#HTML" expanded="true" />
+                <element signature="e#264#289#0#HTML" expanded="true" />
+                <element signature="e#533#551#0#HTML" expanded="true" />
+                <element signature="e#875#994#0#HTML" expanded="true" />
+                <element signature="e#1036#1064#0#HTML" expanded="true" />
+                <element signature="e#1105#1145#0#HTML" expanded="true" />
+                <element signature="e#1252#1292#0#HTML" expanded="true" />
+                <element signature="e#1785#1817#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1071,9 +1080,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06361829" vertical-offset="0" max-vertical-offset="503">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.13061224" vertical-offset="0" max-vertical-offset="1168">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding>
+            <element signature="e#63#178#0#HTML" expanded="true" />
+            <element signature="e#264#289#0#HTML" expanded="true" />
+            <element signature="e#533#551#0#HTML" expanded="true" />
+            <element signature="e#875#994#0#HTML" expanded="true" />
+            <element signature="e#1036#1064#0#HTML" expanded="true" />
+            <element signature="e#1105#1145#0#HTML" expanded="true" />
+            <element signature="e#1252#1292#0#HTML" expanded="true" />
+            <element signature="e#1785#1817#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

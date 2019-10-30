@@ -87,7 +87,7 @@
 
 @endsection
 
-@section('action')
+@section('nav_actions')
     @if($projet->subscribed)
      <a class="btn btn-xs btn-success" href="/angel/actif/unsubscribe" ><i class="fa fa-check-circle"></i> Se desinscrire</a>
      @else
