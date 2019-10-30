@@ -199,9 +199,18 @@
 
           <li class="nav-item">
             <a href="/angel/opportunites" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-allergies"></i>
               <p>
-               OPPORTUNITES
+               OPPORTUNITES DANS L'INDUSTRIE
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/angel/actifs" class="nav-link">
+              <i class="nav-icon fas fa-coins"></i>
+              <p>
+               OPPORTUNITES D'ACQUISITION D'ACTIFS
               </p>
             </a>
           </li>
