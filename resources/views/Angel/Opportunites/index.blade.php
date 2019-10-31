@@ -6,9 +6,22 @@
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
 
-                <div class="bg-default" style="padding: 20px">
-                    <h4>PROJETS DE LEVEE DE CAPITAUX</h4>
-                <div class="row">
+
+         <div class="row">
+          <div class="col-12">
+            <!-- Custom Tabs -->
+            <div class="card">
+              <div class="card-header d-flex p-0">
+                <h3 class="card-title p-3">OPPORTUNITES D'INVESTISSEMENT</h3>
+                <ul class="nav nav-pills ml-auto p-2">
+                  <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">PROJETS DE LEVEE DE FONDS</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab">CESSIONS D'ACTIFS</a></li>
+                </ul>
+              </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="tab_1">
+                        <div class="row">
                     @foreach($projets as $projet)
 
                          <div class="col-md-3">
@@ -54,12 +67,10 @@
                         {{ $projets->links() }}
                     </ul>
                   </div>
-                </div>
-
-
-          <hr/>
-            <h4>CESSIONS D'ACTIFS</h4>
-                <div class="row">
+                  </div>
+                  <!-- /.tab-pane -->
+                  <div class="tab-pane" id="tab_2">
+                        <div class="row">
                     @foreach($actifs as $projet)
 
                          <div class="col-md-3">
@@ -105,11 +116,24 @@
           </div>
                     @endforeach
                 </div>
-                    <div class="">
+                 <div class="">
                         <ul class="pagination justify-content-end">
                         {{ $actifs->links() }}
                     </ul>
                   </div>
+                  </div>
+                  <!-- /.tab-pane -->
+
+                </div>
+                <!-- /.tab-content -->
+              </div><!-- /.card-body -->
+            </div>
+            <!-- ./card -->
+          </div>
+          <!-- /.col -->
+        </div>
+
+
     </div>
 
     <div  class="modal fade" id="IpM">
