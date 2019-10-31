@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Actif;
 use App\Models\Projet;
 use App\Models\TagsProjet;
 use Illuminate\Http\Request;
@@ -33,12 +34,11 @@ class OpportuniteController extends Controller
 	    $projets = TagsProjet::whereIn('tag_id',$tag_ids)->paginate(8);
 	    //dd($prj_tags);
 
-
 	   // dd($prj_tags);
+	    $projets = Projet::orderBy('created_at','desc')->where('etape',4)->where('validated_step',4)->paginate(4);
+	    $actifs = Actif::orderBy('created_at','desc')->paginate(4);
 
-	    $projets = Projet::where('etape',4)->where('validated_step',4)->paginate(3);
-
-        return view('/Angel/Dossiers/index')->with(compact('projets'));
+        return view('/Angel/Opportunites/index')->with(compact('projets','actifs'));
     }
 
     /**

@@ -120,19 +120,11 @@
             <a href="/angel/opportunites" class="nav-link">
               <i class="nav-icon fas fa-allergies"></i>
               <p>
-               OPPORTUNITES DANS L'INDUSTRIE
+               OPPORTUNITES
               </p>
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/angel/actifs" class="nav-link">
-              <i class="nav-icon fas fa-coins"></i>
-              <p>
-               OPPORTUNITES D'ACQUISITION D'ACTIFS
-              </p>
-            </a>
-          </li>
 
 
 
