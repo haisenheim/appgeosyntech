@@ -32,6 +32,8 @@
   <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.css')}}">
+  <link rel="stylesheet" href="{{asset('css/timeline.css')}}"/>
+  <script type="text/javascript" src="{{asset('js/multi-form.js')}}"></script>
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
