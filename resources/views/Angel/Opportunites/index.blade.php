@@ -6,7 +6,7 @@
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
 
-                <div class="bg-info" style="padding: 20px">
+                <div class="bg-default" style="padding: 20px">
                     <h4>PROJETS DE LEVEE DE CAPITAUX</h4>
                 <div class="row">
                     @foreach($projets as $projet)
@@ -31,12 +31,11 @@
                               <div class="card-body">
 
                               </div>
-                              <div style="padding: .75rem 1.25rem;" class="card-footer bg-default">
+                              <div style="padding: .75rem 1rem" class="card-footer bg-primary">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="description-block">
-                                          <h5 class="description-header"><i class="fa fa-map-marker"></i></h5>
-                                          <span class="description-text">{{ $projet->ville->name  }}</span>
+                                          <span class="description-text"><i class="fa fa-map-marker"></i> {{ $projet->ville->name  }}</span>
                                         </div>
                                     </div>
                                   <!-- /.col -->
