@@ -41,7 +41,12 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <?php dd($organismes) ?>
                     @foreach($organismes as $ville)
+
+
+
+
                           <tr>
                               <td>{!! $ville->name !!} </td>
                               <td>{!!$ville->type->name !!}</td>
