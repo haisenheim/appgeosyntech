@@ -5,7 +5,9 @@
 
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
-                <h4>PROJETS DE LEVEES DE CAPITAUX</h4>
+
+                <div class="bg-info">
+                    <h4>PROJETS DE LEVEE DE CAPITAUX</h4>
                 <div class="row">
                     @foreach($projets as $projet)
 
@@ -50,11 +52,13 @@
                         </div>
                     @endforeach
                 </div>
-                    <div class="">
+                <div class="">
                         <ul class="pagination justify-content-end">
                         {{ $projets->links() }}
                     </ul>
                   </div>
+                </div>
+
 
           <hr/>
             <h4>CESSIONS D'ACTIFS</h4>
