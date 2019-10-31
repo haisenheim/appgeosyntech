@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Devises/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Devises/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Opportunites/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Opportunites/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -83,8 +82,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Opportunites/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.90204084" vertical-offset="1734" max-vertical-offset="2336">
-              <caret line="136" column="57" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.8367347" vertical-offset="1766" max-vertical-offset="2336">
+              <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
               <folding>
                 <element signature="e#1719#1751#0#HTML" expanded="true" />
                 <element signature="e#3787#3805#0#HTML" expanded="true" />
@@ -1064,8 +1063,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Opportunites/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90204084" vertical-offset="1734" max-vertical-offset="2336">
-          <caret line="136" column="57" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.8367347" vertical-offset="1766" max-vertical-offset="2336">
+          <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
           <folding>
             <element signature="e#1719#1751#0#HTML" expanded="true" />
             <element signature="e#3787#3805#0#HTML" expanded="true" />

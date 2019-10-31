@@ -134,7 +134,7 @@
     <script>
         $('#btn-p').click(function(e){
             e.preventDefault();
-            $('.project_name').text($(this).data('name'));
+            $('.project-title').text($(this).data('name'));
         });
     </script>
 
