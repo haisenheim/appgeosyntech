@@ -110,9 +110,10 @@ class OrganismeController extends Controller
 				'male' => $request->gender,
 				'address' => $request->user_address,
 				'phone' => $request->user_phone,
-				'token' => sha1(Auth::user()->id. date('Ymdhis')),
+				'remember_token' => sha1(Auth::user()->id. date('Ymdhis')),
 				'organisme_id' => $organisme->id,
 				'pay_id'=>$organisme->pay_id,
+				'creator_id'=>Auth::user()->id
 
 
 			);
