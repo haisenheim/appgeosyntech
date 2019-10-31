@@ -146,7 +146,46 @@
                 </button>
               </div>
               <div class="modal-body">
+                    <form enctype="multipart/form-data" class="form" action="/angel/investissements/" method="post">
+                    {{csrf_field()}}
 
+                    <div class="">
+                            <div class="stepwizard">
+                                <div class="stepwizard-row setup-panel">
+                                    <div class="stepwizard-step">
+                                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                        <p>AVERTISSEMENT</p>
+                                    </div>
+                                    <div class="stepwizard-step">
+                                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                        <p>RESUME EXECUTIF</p>
+                                    </div>
+                                    <div class="stepwizard-step">
+                                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                        <p>RENCONTRE</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="">
+
+                                    <div class="setup-content" id="step-1">
+
+                                    </div>
+
+                                     <div class="setup-content" id="step-2">
+
+                                     </div>
+                                     <div class="setup-content" id="step-3">
+
+                                     </div>
+
+                            </div>
+                        </div>
+                </form>
               </div>
 
             </div>
