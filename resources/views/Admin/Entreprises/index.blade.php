@@ -149,7 +149,7 @@
                               </select>
                             </div>
                             <div class="form-group">
-                              <label for="longitude">ADDRESSE</label>
+                              <label for="longitude">ADRESSE</label>
                               <input type="text" class="form-control" id="longitude" name="user_address" >
                             </div>
                             <div class="form-group">

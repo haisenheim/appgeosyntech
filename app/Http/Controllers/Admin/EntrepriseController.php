@@ -93,7 +93,7 @@ class EntrepriseController extends Controller
 
 		}
 
-		$entreprise = Organisme::create($data);
+		$entreprise = Entreprise::create($data);
 		if($entreprise){
 			Validator::make($data, [
 				'email' => [
