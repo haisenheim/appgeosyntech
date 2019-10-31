@@ -129,9 +129,14 @@
                               <label for="longitude">LOGO</label>
                               <input type="file" class="form-control" id="longitude" name="imageUri" >
                             </div>
+                            <div class="form-group">
+                              <label for="description">DESCRIPTION</label>
+                              <textarea name="description" id="description" class="form-control" cols="30" rows="10"></textarea>
+                            </div>
 
                             <hr/>
-                            <h6>Compte de l'Administrateur</h6>
+                            <h6 class="page-header">Compte de l'Administrateur</h6>
+                            <hr/>
                             <div class="form-group">
                               <label for="longitude">NOM</label>
                               <input type="text" class="form-control" id="longitude" name="last_name" >

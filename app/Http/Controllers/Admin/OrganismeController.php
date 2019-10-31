@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Devise;
+use Illuminate\Support\Facades\Hash;
+
 use App\Models\Organisme;
 use App\Models\Pay;
 use App\Models\Torganisme;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class OrganismeController extends Controller
 {
@@ -41,6 +44,10 @@ class OrganismeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
+
 	public function store(Request $request)
 	{
 		//
@@ -87,6 +94,12 @@ class OrganismeController extends Controller
 
 		$organisme = Organisme::create($data);
 		if($organisme){
+			Validator::make($data, [
+				'email' => [
+					'required',
+					Rule::unique('users')
+				],
+			]);
 			$user_data = array(
 				'last_name' => $request->last_name,
 				'first_name' => $request->first_name,
