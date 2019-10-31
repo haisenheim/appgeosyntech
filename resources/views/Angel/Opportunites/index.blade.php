@@ -196,14 +196,40 @@
                                            Investir dans un actif est une prise de risque. <br> Nous recommandons aux investisseurs d’appliquer des règles de vigilance avant tout investissement : l'investissement dans des actifs comporte des risques de perte totale ou partielle du montant investi, risque d'illiquidité et risque opérationnel du projet pouvant entraîner une rentabilité moindre que prévue.
                                             N’investissez pas dans ce que vous ne comprenez pas parfaitement.
                                          </div>
+                                         <div class="btn-div card-footer text-center">
+                                                <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
+                                                <button class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
+                                            </div>
                                     </div>
 
                                      <div class="setup-content" id="step-2">
-                                        <div id="teaser-content"></div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                 <h3>RESUME</h3>
+                                            </div>
+                                            <div class="card-body">
+                                               <div id="teaser-content"></div>
+                                            </div>
+                                            <div class="btn-div card-footer text-center">
+                                                <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
+                                                <button class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
+                                            </div>
+                                        </div>
+
                                      </div>
                                      <div class="setup-content" id="step-3">
-                                        <h3>PROGRAMMER UNE RENCONTRE AVEC LE PORTEUR DE PROJET</h3>
-                                        <input type="date" name="dt_rdv"/>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                 <h3>PROGRAMMER UNE RENCONTRE AVEC LE PORTEUR DE PROJET</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <input type="date" name="dt_rdv" class="form-control"/>
+                                            </div>
+                                            <div class="btn-div card-footer text-center">
+                                                <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
+                                               <button id="btn-save" class="btn btn-success btn-sm"><i class="fa fa-save"></i> ENREGISTRER</button>
+                                            </div>
+                                        </div>
                                      </div>
 
                             </div>
