@@ -56,6 +56,7 @@
                                 </div>
 
                                 <div style="display: none" id="teaser-{{$projet->token}}">
+                                    <?php if($projet->teaser): ?>
                                     <div>
                                         <h5>Le Contexte</h5>
                                         <p><?= $projet->teaser->contexte ?></p>
@@ -64,6 +65,11 @@
                                         <h5>LE MARCHE</h5>
                                         <p><?= $projet->teaser->marche ?></p>
                                     </div>
+                                    <?php else: ?>
+                                        <div>
+                                            <p>Resume indisponible</p>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                                 <!-- /.row -->
                                 <button data-token="{{$projet->token}}" data-name="<?= $projet->name ?>" data-toggle="modal" data-target="#IpM" class="btn btn-block btn-outline-success btn-xs btn-p"><i class="fas fa-heart"></i> CE PROJET M'INTERESSE</button>
