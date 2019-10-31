@@ -111,9 +111,9 @@
                   </div>
     </div>
 
-    <div  class="modal fade modal-lg" id="IpM">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
+    <div  class="modal fade" id="IpM">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-success">
               <div class="modal-header">
                 <h4  class="modal-title project-title"></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
