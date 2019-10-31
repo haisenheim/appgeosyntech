@@ -13,10 +13,15 @@
 
                          <div class="col-md-3">
                             <!-- Widget: user widget style 1 -->
-                             <div class="card card-widget widget-user">
+                             <div class="card card-widget widget-user position-relative">
                               <!-- Add the bg color to the header using any of the bg-* classes -->
                               <div class="widget-user-header text-white"
-                                   style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center;">
+                                   style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover">
+                                    <div class="ribbon-wrapper ribbon-xl">
+                                        <div class="ribbon bg-primary">
+                                            {{$projet->montant}} FCFA
+                                        </div>
+                                    </div>
                                     <h3 style="font-weight: 900" class="widget-user-username text-right"><?= $projet->name ?></h3>
                                     <h5 style="font-weight: 700" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
                               </div>
@@ -26,23 +31,16 @@
                               <div class="card-body">
 
                               </div>
-                              <div style="padding: .75rem 1.25rem;" class="card-footer bg-info">
+                              <div style="padding: .75rem 1.25rem;" class="card-footer bg-default">
                                 <div class="row">
-                                    <div class="col-md-6 border-right">
+                                    <div class="col-md-12">
                                         <div class="description-block">
                                           <h5 class="description-header"><i class="fa fa-map-marker"></i></h5>
                                           <span class="description-text">{{ $projet->ville->name  }}</span>
                                         </div>
                                     </div>
                                   <!-- /.col -->
-                                  <div class="col-sm-6">
-                                    <div class="description-block">
-                                      <h5 class="description-header"><i class="fa fa-coins"></i></h5>
-                                      <span class="description-text">{{$projet->montant}} FCFA</span>
-                                    </div>
-                                    <!-- /.description-block -->
-                                  </div>
-                                  <!-- /.col -->
+
                                 </div>
                                 <!-- /.row -->
                                 <button data-name="<?= $projet->name ?>" data-toggle="modal" data-target="#IpM" class="btn btn-block btn-outline-success btn-xs btn-p"><i class="fas fa-heart"></i> CE PROJET M'INTERESSE</button>
