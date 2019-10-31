@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Opportunites/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Opportunites/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -81,15 +82,18 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Opportunites/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35918367" vertical-offset="192" max-vertical-offset="2336">
-              <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.5102041" vertical-offset="230" max-vertical-offset="2400">
+              <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
               <folding>
-                <element signature="e#1719#1751#0#HTML" expanded="true" />
-                <element signature="e#3787#3805#0#HTML" expanded="true" />
-                <element signature="e#4066#4185#0#HTML" expanded="true" />
-                <element signature="e#4211#4235#0#HTML" expanded="true" />
-                <element signature="e#4326#4350#0#HTML" expanded="true" />
-                <element signature="e#4780#4812#0#HTML" expanded="true" />
+                <element signature="e#908#1027#0#HTML" expanded="true" />
+                <element signature="e#1069#1093#0#HTML" expanded="true" />
+                <element signature="e#1200#1224#0#HTML" expanded="true" />
+                <element signature="e#1766#1798#0#HTML" expanded="true" />
+                <element signature="e#3862#3880#0#HTML" expanded="true" />
+                <element signature="e#4141#4260#0#HTML" expanded="true" />
+                <element signature="e#4286#4310#0#HTML" expanded="true" />
+                <element signature="e#4401#4425#0#HTML" expanded="true" />
+                <element signature="e#4855#4887#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1062,15 +1066,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Opportunites/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35918367" vertical-offset="192" max-vertical-offset="2336">
-          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.5102041" vertical-offset="230" max-vertical-offset="2400">
+          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
           <folding>
-            <element signature="e#1719#1751#0#HTML" expanded="true" />
-            <element signature="e#3787#3805#0#HTML" expanded="true" />
-            <element signature="e#4066#4185#0#HTML" expanded="true" />
-            <element signature="e#4211#4235#0#HTML" expanded="true" />
-            <element signature="e#4326#4350#0#HTML" expanded="true" />
-            <element signature="e#4780#4812#0#HTML" expanded="true" />
+            <element signature="e#908#1027#0#HTML" expanded="true" />
+            <element signature="e#1069#1093#0#HTML" expanded="true" />
+            <element signature="e#1200#1224#0#HTML" expanded="true" />
+            <element signature="e#1766#1798#0#HTML" expanded="true" />
+            <element signature="e#3862#3880#0#HTML" expanded="true" />
+            <element signature="e#4141#4260#0#HTML" expanded="true" />
+            <element signature="e#4286#4310#0#HTML" expanded="true" />
+            <element signature="e#4401#4425#0#HTML" expanded="true" />
+            <element signature="e#4855#4887#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

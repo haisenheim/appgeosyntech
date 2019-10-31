@@ -6,7 +6,7 @@
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
 
-                <div class="bg-info">
+                <div class="bg-info p-15">
                     <h4>PROJETS DE LEVEE DE CAPITAUX</h4>
                 <div class="row">
                     @foreach($projets as $projet)
@@ -26,7 +26,7 @@
                               <div class="card-body">
 
                               </div>
-                              <div style="padding: .75rem 1.25rem;" class="card-footer">
+                              <div style="padding: .75rem 1.25rem;" class="card-footer bg-info">
                                 <div class="row">
                                     <div class="col-md-6 border-right">
                                         <div class="description-block">
