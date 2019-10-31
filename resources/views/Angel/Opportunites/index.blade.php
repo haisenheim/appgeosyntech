@@ -22,7 +22,7 @@
                                             {{$projet->montant}} FCFA
                                         </div>
                                     </div>
-                                    <h3 style="font-weight: 900" class="widget-user-username text-right"><?= $projet->name ?></h3>
+                                    <h3 style="font-weight: 900" class="widget-user-username text-left"><?= $projet->name ?></h3>
                                     <h5 style="font-weight: 700" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
                               </div>
                               <div class="widget-user-image">
@@ -31,12 +31,12 @@
                               <div class="card-body">
 
                               </div>
-                              <div style="padding: .75rem 1rem" class="card-footer bg-primary">
+                              <div style="padding: .75rem 1rem" class="card-footer ">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="description-block">
+
                                           <span class="description-text"><i class="fa fa-map-marker"></i> {{ $projet->ville->name  }}</span>
-                                        </div>
+
                                     </div>
                                   <!-- /.col -->
 
