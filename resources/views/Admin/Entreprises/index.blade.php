@@ -51,7 +51,7 @@
                               <td>{!! $ville->address !!} </td>
                               <td>{!! $ville->phone !!} </td>
                               <td>{!! $ville->email !!} </td>
-                              <td><?= date_format($ville->created,'d/m/Y H:i') ?></td>
+                              <td><?= date_format($ville->created_at,'d/m/Y H:i') ?></td>
                               <td>
 
                               </td>
@@ -110,7 +110,7 @@
                             </div>
 
                             <div class="form-group">
-                              <label for="longitude">ADDRESSE</label>
+                              <label for="longitude">ADRESSE</label>
                               <input type="text" class="form-control" id="longitude" name="address" >
                             </div>
                             <div class="form-group">
