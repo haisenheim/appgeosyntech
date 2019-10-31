@@ -132,7 +132,7 @@
 
 
     <script>
-        $('#btn-p').click(function(e){
+        $('.btn-p').click(function(e){
             e.preventDefault();
             $('.project-title').text($(this).data('name'));
         });
