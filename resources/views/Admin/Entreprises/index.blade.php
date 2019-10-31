@@ -85,30 +85,21 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">Nouvel organisme financier</h4>
+                        <h4 class="modal-title">Nouvelle entreprise</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.organismes.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('admin.entreprises.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">
                               <label for="name">NOM</label>
-                              <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom de l'organisme">
+                              <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom de l'entreprise">
                             </div>
 
 
-
-                            <div class="form-group">
-                              <label for="type_id">TYPE</label>
-                              <select name="type_id" class="form-control" id="type_id">
-                                @foreach($types as $type)
-                                    <option value="{{ $type->id }}">{{$type->name}}</option>
-                                @endforeach
-                              </select>
-                            </div>
                             <div class="form-group">
                               <label for="type_id">PAYS</label>
                               <select name="pay_id" class="form-control" id="type_id">
