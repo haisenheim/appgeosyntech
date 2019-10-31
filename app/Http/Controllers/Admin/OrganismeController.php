@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Devise;
 use App\Models\Organisme;
 use App\Models\Pay;
+use App\Models\Torganisme;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,8 +19,10 @@ class OrganismeController extends Controller
      */
     public function index()
     {
-	    $organismes = Organisme::orderBy('created_at','desc')->paginate(10);
-	    return view('Admin/Organismes/index')->with(compact('organismes'))->with('success');
+	    $organismes = Organisme::orderBy('created_at','desc');
+	    $types = Torganisme::all();
+	    $pays = Pay::all();
+	    return view('Admin/Organismes/index')->with(compact('organismes','types','pays'))->with('success');
     }
 
     /**
@@ -43,14 +46,25 @@ class OrganismeController extends Controller
 		//
 		//dd($request->imageUri);
 		$ville = new Organisme();
-		$ville->name = $request['name'];
+		$data = [
+			'name'=>$request['name'],
+			'address'=>$request['address'],
+			'phone'=>$request['phone'],
+			'type_id'=>$request['type'],
+			'pay_id'=>$request['pay_id'],
+			'description'=>$request['description'],
+			'email'=>$request['email'],
+			'token'=>sha1(Auth::user()->id. date('Ymdhis'))
+		];
+
+		/*$ville->name = $request['name'];
 
 		$ville->address = $request['address'];
 		$ville->phone = $request['phone'];
 		$ville->type_id = $request['type_id'];
 		$ville->email = $request['email'];
 		$ville->description = $request['description'];
-		$ville->token = sha1(Auth::user()->id. date('Ymdhis'));
+		$ville->token = sha1(Auth::user()->id. date('Ymdhis'));*/
 
 		if($request->imageUri){
 			$file = $request->imageUri;
@@ -66,16 +80,51 @@ class OrganismeController extends Controller
 				}
 				$name = $token . '.' . $ext;
 				$file->move(public_path('img/organismes'), $name);
-				$ville->imageUri = 'organismes/' . $name;
+				$data['imageUri'] = 'organismes/' . $name;
 			}
 
 		}
 
-		$ville->save();
+		$organisme = Organisme::create($data);
+		if($organisme){
+			$user_data = array(
+				'last_name' => $request->last_name,
+				'first_name' => $request->first_name,
+				'role_id' => 4,
+				'email' => $request->user_email,
+				'password' => Hash::make($request->password),
+				'gender' => $request->gender,
+				'address' => $request->user_address,
+				'phone' => $request->user_phone,
+				'token' => sha1(Auth::user()->id. date('Ymdhis')),
+				'organisme_id' => $organisme->id,
+				'pay_id'=>$organisme->pay_id,
+
+
+			);
+
+			if($request->user_imageUri){
+				$file = $request->user_imageUri;
+				$ext = $file->getClientOriginalExtension();
+				$arr_ext = array('jpg','png','jpeg','gif');
+				if(in_array($ext,$arr_ext)) {
+					if (!file_exists(public_path('img') . '/users')) {
+						mkdir(public_path('img') . '/users');
+					}
+					$token = sha1(date('ydmhis'));
+					if (file_exists(public_path('img') . '/users/' . $token . '.' . $ext)) {
+						unlink(public_path('img') . '/users/' . $token . '.' . $ext);
+					}
+					$name = $token . '.' . $ext;
+					$file->move(public_path('img/users'), $name);
+					$user_data['imageUri'] = 'users/' . $name;
+				}
+			}
+
+			User::create($user_data);
+		}
 		$request->session()->flash('success','L\'organisme financier a été correctement enregistré !!!');
 		return back();
-
-
 	}
 
     /**
