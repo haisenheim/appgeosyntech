@@ -100,12 +100,8 @@
                               <label for="longitude">Abbreviation</label>
                               <input type="text" class="form-control" id="longitude" name="abb" placeholder="Saisir l'abbreviation">
                             </div>
-
-
-
                           </div>
                           <!-- /.card-body -->
-
                           <div class="card-footer">
                             <button type="submit" class="btn btn-success"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
