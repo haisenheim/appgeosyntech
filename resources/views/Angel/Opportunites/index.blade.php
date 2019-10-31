@@ -6,7 +6,7 @@
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
 
-                <div class="bg-info p-15">
+                <div class="bg-info" style="padding: 20px">
                     <h4>PROJETS DE LEVEE DE CAPITAUX</h4>
                 <div class="row">
                     @foreach($projets as $projet)
@@ -45,7 +45,7 @@
                                   <!-- /.col -->
                                 </div>
                                 <!-- /.row -->
-                                <button data-name="<?= $projet->name ?>" data-toggle="modal" data-target="#IpM" class="btn-block btn-success btn-sm btn-p">CE PROJET M'INTERESSE</button>
+                                <button data-name="<?= $projet->name ?>" data-toggle="modal" data-target="#IpM" class="btn btn-block btn-outline-success btn-xs btn-p"><i class="fas fa-heart"></i> CE PROJET M'INTERESSE</button>
                               </div>
                             </div>
                             <!-- /.widget-user -->
