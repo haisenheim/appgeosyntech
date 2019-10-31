@@ -23,7 +23,7 @@ class OrganismeController extends Controller
      */
     public function index()
     {
-	    $organismes = Organisme::orderBy('created_at','desc')->all();
+	    $organismes = Organisme::all();
 	    $types = Torganisme::all();
 	    $pays = Pay::all();
 	    return view('Admin/Organismes/index')->with(compact('organismes','types','pays'))->with('success');
