@@ -198,6 +198,27 @@
                   </a>
                 </li>
                 <li class="nav-item">
+                <a href="/admin/devises" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>DEVISES</p>
+                </a>
+                </li>
+
+                <li class="nav-item">
+                <a href="/admin/entreprises" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ENTREPRISES</p>
+                </a>
+                </li>
+
+                <li class="nav-item">
+                <a href="/admin/organismes" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ORGANISMES FINANCIERS</p>
+                </a>
+              </li>
+
+                <li class="nav-item">
                   <a href="/admin/tags" class="nav-link">
                     <i class="far fa-circle text-info nav-icon"></i>
                     <p>Mots Clefs</p>

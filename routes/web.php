@@ -43,6 +43,9 @@ Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->name('admin.')
     ->group(function(){
+	    Route::resource('organismes','OrganismeController');
+	    Route::resource('entreprises','EntrepriseController');
+	    Route::resource('devises','DeviseController');
 	    Route::resource('actifs','ActifController');
         Route::resource('villes','VilleController');
 	    Route::resource('dossiers','ProjetController');
