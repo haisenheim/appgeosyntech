@@ -54,8 +54,19 @@
                                   <!-- /.col -->
 
                                 </div>
+
+                                <div style="display: none" id="teaser-{{$projet->token}}">
+                                    <div>
+                                        <h5>Le Contexte</h5>
+                                        <p><?= $projet->teaser->contexte ?></p>
+                                        <h5>La Problematique</h5>
+                                        <p><?= $projet->teaser->problematique ?></p>
+                                        <h5>LE MARCHE</h5>
+                                        <p><?= $projet->teaser->marche ?></p>
+                                    </div>
+                                </div>
                                 <!-- /.row -->
-                                <button data-name="<?= $projet->name ?>" data-toggle="modal" data-target="#IpM" class="btn btn-block btn-outline-success btn-xs btn-p"><i class="fas fa-heart"></i> CE PROJET M'INTERESSE</button>
+                                <button data-token="{{$projet->token}}" data-name="<?= $projet->name ?>" data-toggle="modal" data-target="#IpM" class="btn btn-block btn-outline-success btn-xs btn-p"><i class="fas fa-heart"></i> CE PROJET M'INTERESSE</button>
                               </div>
                             </div>
                             <!-- /.widget-user -->
@@ -173,14 +184,20 @@
                             <div class="">
 
                                     <div class="setup-content" id="step-1">
+                                        <div class="alert alert-warning">
 
+                                           <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
+                                           Investir dans un actif est une prise de risque. <br> Nous recommandons aux investisseurs d’appliquer des règles de vigilance avant tout investissement : l'investissement dans des actifs comporte des risques de perte totale ou partielle du montant investi, risque d'illiquidité et risque opérationnel du projet pouvant entraîner une rentabilité moindre que prévue.
+                                            N’investissez pas dans ce que vous ne comprenez pas parfaitement.
+                                         </div>
                                     </div>
 
                                      <div class="setup-content" id="step-2">
-
+                                        <div id="teaser-content"></div>
                                      </div>
                                      <div class="setup-content" id="step-3">
-
+                                        <h3>PROGRAMMER UNE RENCONTRE AVEC LE PORTEUR DE PROJET</h3>
+                                        <input type="date" name="dt_rdv"/>
                                      </div>
 
                             </div>
@@ -199,6 +216,9 @@
         $('.btn-p').click(function(e){
             e.preventDefault();
             $('.project-title').text($(this).data('name'));
+            var token = $(this).data('token');
+            var teaser = $('#teaser-'+token).html();
+            $('#teaser-content').html(teaser);
         });
     </script>
 
