@@ -43,6 +43,14 @@ class User extends Authenticatable
 		return $this->belongsTo('App\Models\Pay','pay_id');
 	}
 
+	public function entreprise(){
+		return $this->belongsTo('App\Models\Entreprise');
+	}
+
+	public function organisme(){
+		return $this->belongsTo('App\Models\Organisme');
+	}
+
 	public function tags(){
 		return $this->belongsToMany('App\Models\Tags', 'angels_tags', 'user_id','tag_id');
 	}
