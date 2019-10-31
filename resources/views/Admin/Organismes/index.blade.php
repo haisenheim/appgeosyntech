@@ -41,7 +41,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <?php dd($organismes) ?>
+
                     @foreach($organismes as $ville)
 
 
