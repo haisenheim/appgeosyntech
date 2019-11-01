@@ -210,9 +210,7 @@
 
                                      <div class="setup-content" id="step-2">
                                         <div class="card">
-                                            <div class="card-header">
-                                                 <h3>RESUME</h3>
-                                            </div>
+
                                             <div class="card-body">
                                                <div id="teaser-content"></div>
                                             </div>

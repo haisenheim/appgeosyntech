@@ -61,7 +61,7 @@
                 </div>
                 <div class="">
                         <ul class="pagination justify-content-end">
-                        {{ $projets->links() }}
+                        {{ $investissements->links() }}
                     </ul>
                   </div>
                   </div>
