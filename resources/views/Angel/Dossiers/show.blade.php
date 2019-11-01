@@ -882,64 +882,7 @@
                          </div>
                     </div>
                   @endif
-                    <div class="post">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                        <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
-                        </span>
-                        <span class="description">Shared publicly - 7:45 PM today</span>
-                      </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
 
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
-                      </p>
-                    </div>
-
-                    <div class="post clearfix">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
-                        <span class="username">
-                          <a href="#">Sarah Ross</a>
-                        </span>
-                        <span class="description">Sent you a message - 3 days ago</span>
-                      </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
-                      </p>
-                    </div>
-
-                    <div class="post">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                        <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
-                        </span>
-                        <span class="description">Shared publicly - 5 days ago</span>
-                      </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v1</a>
-                      </p>
-                    </div>
                 </div>
               </div>
             </div>
@@ -962,72 +905,7 @@
                   <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->owner->email}}</b>
                   <b class="d-block"><i class="far fa-fw fa-telegram"></i> {{$projet->owner->phone}}</b>
                 </p>
-                <p class="text-sm">Consultant
-                   @if($projet->consultant)
-                   </p>
-                   <p class="text-sm">
-                   <b class="d-block">{{$projet->consultant->name}}</b>
-                       <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
-                   </p>
-                   @else
-                                <form class="form-inline"  action="/admin/dossier/expert">
-                                {{csrf_field()}}
-                                <input type="hidden" name="id" value="{{ $projet->id }}"/>
-                                    <div class="form-group">
-                                        <select class="form-text" name="expert_id" id="id">
-                                            @foreach($experts as $expert)
-                                                <option value="{{ $expert->id }}">{{ $expert->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-danger"><i class="fa fa-link"></i> LIER</button>
-                                    </div>
-                                </form>
 
-                     @endif
-              </div>
-
-              <h5 class="mt-4 text-muted">Moyens de financements</h5>
-              <ul class="list-unstyled">
-                @if($projet->moyens)
-                    @foreach($projet->financements as $moyen)
-                        <li class="btn-link text-secondary"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class="value"><?= $moyen->montant ?></span></li>
-                    @endforeach
-                @endif
-              </ul>
-
-
-              <div class="text-center mt-5 mb-3">
-                @if($projet->etape==2)
-                    @if($projet->validated_step!=2)
-
-                        <a class="btn btn-sm btn-warning" href="/admin/dossier/validate-diag-externe/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le deuxième paiement</a>
-
-                    @endif
-                @endif
-                @if($projet->etape==3)
-                    @if($projet->validated_step!=3)
-
-                        <a class="btn btn-sm btn-primary" href="/admin/dossier/validate-plan-strategique/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le troisième paiement</a>
-
-                    @endif
-                @endif
-                @if($projet->etape==4)
-                    @if($projet->validated_step!=4)
-                        <a class="btn btn-sm btn-info" href="/admin/dossier/validate-plan-financier/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le quatrième paiement</a>
-                    @endif
-                @endif
-
-                @if($projet->etape==5)
-                    @if($projet->validated_step!=5)
-
-                        <a class="btn btn-sm btn-success" href="/admin/dossier/validate-plan-financier/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le cinquième paiement</a>
-
-                    @endif
-                @endif
-                <a href="#" class="btn btn-sm btn-primary">Add files</a>
-                <a href="#" class="btn btn-sm btn-warning">Report contact</a>
               </div>
             </div>
           </div>
