@@ -6,11 +6,11 @@
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class=" navbar navbar-expand navbar-dark navbar-success">
+  <nav class=" navbar navbar-expand navbar-dark navbar-success fixed-top">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-       <a href="#" class="brand-link navbar-success">
+       <a href="#" class="brand-link navbar-success" style="color: #FFFFFF">
              <img src="{{asset('img/logo-obac.png')}}" class="brand-image img-circle elevation-3"
                   style="opacity: .8">
              <span class="brand-text font-weight-light">OBAC ALERT</span>
