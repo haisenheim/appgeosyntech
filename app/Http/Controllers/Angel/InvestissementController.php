@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Investissement;
+use App\Models\Projet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class InvestissementController extends Controller
 {
@@ -16,6 +18,8 @@ class InvestissementController extends Controller
     public function index()
     {
         //
+	    $investissements = Investissement::all()->where('angel_id',Auth::user()->id);
+	    return view('Angel/Investissements/index')->with(compact('investissements'))->with('Liste des investissements');
     }
 
     /**
@@ -37,6 +41,18 @@ class InvestissementController extends Controller
     public function store(Request $request)
     {
         //
+	    $projet = Projet::where('token',$request->token)->first();
+	    if($projet){
+		    $inv = Investissement::create([
+			    'rencontre'=>$request->dt_rdv,
+			    'projet_id'=>$projet->id,
+			    'angel_id'=>Auth::user()->id,
+			    'token'=>sha1(Auth::user()->id . date('Yhmdis'))
+		    ]);
+		    $request->session()->flash('success','Votre investissement a été correctement initialisé !!!');
+	    }
+
+	    return back();
     }
 
     /**

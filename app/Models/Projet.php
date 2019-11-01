@@ -42,6 +42,12 @@ class Projet extends Model
         return $this->belongsToMany('App\Models\Tinvestissement','projets_tinvestissements');
     }
 
+
+	public function investissements(){
+		return $this->hasMany('App\Models\Investissement');
+	}
+
+
     public function consultant(){
         return $this->belongsTo('App\User','expert_id');
     }
