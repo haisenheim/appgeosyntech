@@ -120,7 +120,7 @@
                         <div style="min-height: 300px; background: url('{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
                             <div class="carousel-content">
                                 <div class="actif-description">
-                                    <?php $desc= $slides['actif']->description ?>
+                                    <?php $desc= $slides['actif']['description'] ?>
                                     <p><?= \Illuminate\Support\Str::limit($desc,20) ?></p>
 
                                     <a class="btn btn-primary btn-sm" href="/angel/actif/{{$slides['actif']->token}}">Consulter</a>
