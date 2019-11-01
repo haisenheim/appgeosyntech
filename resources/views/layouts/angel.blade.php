@@ -10,7 +10,11 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+       <a href="#" class="brand-link navbar-success">
+             <img src="{{asset('img/logo-obac.png')}}" class="brand-image img-circle elevation-3"
+                  style="opacity: .8">
+             <span class="brand-text font-weight-light">OBAC ALERT</span>
+           </a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="/angel/" class="nav-link">Accueil</a>
@@ -90,6 +94,8 @@
         </ul>
   </nav>
   <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
 
 
   <!-- Content Wrapper. Contains page content -->
