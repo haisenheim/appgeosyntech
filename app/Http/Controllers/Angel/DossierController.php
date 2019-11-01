@@ -66,6 +66,7 @@ class DossierController extends Controller
 		$projet = Investissement::where('token', $request->token)->first();
 		$comment->investissement_id = $projet->id;
 		$comment->role_id = 4;
+		$comment->body = $request->message;
 		$comment->author_id = Auth::user()->id;
 		$comment->save();
 		return back();
