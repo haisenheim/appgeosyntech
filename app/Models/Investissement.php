@@ -18,4 +18,8 @@ class Investissement extends Model
 	public function angel(){
 		return $this->belongsTo('App\Models\User','angel_id');
 	}
+
+	public function comments(){
+		return $this->hasMany('App\Models\Comment','investissement_id');
+	}
 }
