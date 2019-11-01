@@ -101,7 +101,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div style="" class="">
     <div style="height: 300px;" class="content-header">
-            <?php $slides = \Illuminate\Support\Facades\Session::get('slides');  ?>
+            <?php $slides = \Illuminate\Support\Facades\Session::get('slides'); dd($slides); ?>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -119,8 +119,9 @@
                     <div  class="carousel-item">
                         <div style="min-height: 300px; background: url('{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
                             <div class="carousel-content">
+
                                 <div class="actif-description">
-                                    <?php $desc= $slides['actif']['description'] ?>
+                                    <?php $desc= $slides['actif']->description ?>
                                     <p><?= \Illuminate\Support\Str::limit($desc,20) ?></p>
 
                                     <a class="btn btn-primary btn-sm" href="/angel/actif/{{$slides['actif']->token}}">Consulter</a>
