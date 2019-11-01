@@ -16,21 +16,17 @@
         </div>
         <div class="card-body">
           <div class="row">
-            <div class="col-sm-12 col-md-2">
+            <div class="col-sm-12 col-md-3">
                 <div class="">
             <!-- DIRECT CHAT SUCCESS -->
             <div class="card card-sucress cardutline direct-chat direct-chat-success">
               <div class="card-header">
-                <h3 class="card-title">Direct Chat</h3>
+                <h3 class="card-title">Echanger avec le promoteur</h3>
 
                 <div class="card-tools">
-                  <span data-toggle="tooltip" title="3 New Messages" class="badge bg-success">3</span>
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
-                    <i class="fas fa-comments"></i></button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
-                  </button>
+
+
+
                 </div>
               </div>
               <!-- /.card-header -->
@@ -40,12 +36,11 @@
                   <!-- Message. Default to the left -->
                   <div class="direct-chat-msg">
                     <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-name float-left">Alexander Pierce</span>
+
                       <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="Message User Image">
-                    <!-- /.direct-chat-img -->
+
                     <div class="direct-chat-text">
                       Is this template really for free? That's unbelievable!
                     </div>
@@ -110,7 +105,7 @@
             <!--/.direct-chat -->
           </div>
             </div>
-            <div class="col-12 col-md-7 col-lg-7 order-2 order-md-1">
+            <div class="col-12 col-md-6 col-lg-6 order-2 order-md-1">
 
 
               <div class="row">
