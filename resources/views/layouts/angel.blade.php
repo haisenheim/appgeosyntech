@@ -6,7 +6,7 @@
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-dark navbar-success">
+  <nav class=" navbar navbar-expand navbar-dark navbar-success">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -99,7 +99,7 @@
 
 
   <!-- Content Wrapper. Contains page content -->
-  <div style="" class="content-wrapper">
+  <div style="" class="">
     <div style="background-color: #4caf50;; min-height: 200px; padding: 0 -15px" class="content-header">
             <div class="row">
                 <div class="col-md-10">
