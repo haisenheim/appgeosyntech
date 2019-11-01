@@ -23,7 +23,7 @@
       <li class="nav-item d-none d-sm-inline-block">
             <a href="/angel/investissements" class="nav-link">
 
-               MES INVESTISSEMENTS
+               INVESTISSEMENTS
             </a>
           </li>
 
@@ -100,17 +100,34 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div style="" class="">
-    <div style="background-color: #4caf50;; min-height: 200px; padding: 0 -15px" class="content-header">
-            <div class="row">
-                <div class="col-md-10">
-                    @yield('content-header')
-                </div>
-                <div class="col-md-2">
-                    @yield('actions')
-                </div>
-            </div>
+    <div style="height: 300px;" class="content-header">
+            <?php $slides = \Illuminate\Support\Facades\Session::get('slides'); ?>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 
-        </div>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo.png')}}" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="h{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo.png')}}" alt="Second slide">
+                    </div>
+
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+
+     </div>
 
     <!-- Main content -->
     <section class="content">

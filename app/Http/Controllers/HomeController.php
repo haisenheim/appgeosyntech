@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -41,6 +43,10 @@ class HomeController extends Controller
             }
 
             if(Auth::user()->role_id==4){
+	            $projet = DB::table('projets')->get(['name','montant','imageUri'])->last();
+	            $actif = DB::table('actifs')->get(['name','prix','imageUri'])->last();
+	            $slider = ['projet'=>$projet,'actif'=>$actif];
+	            Session::put('slides',$slider);
                 return redirect('angel/');
             }else{
                 return view('home');
