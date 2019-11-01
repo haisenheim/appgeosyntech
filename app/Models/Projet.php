@@ -138,4 +138,14 @@ class Projet extends Model
 		return $colors[$this->attributes['active']];
 	}
 
+	protected function getTotalAttribute(){
+		$investissements = Investissement::all()->where('projet_id',$this->id);
+		$total = 0;
+		foreach($investissements as $investissement){
+			$total = $total+$investissement->montant;
+		}
+
+		return $total;
+	}
+
 }

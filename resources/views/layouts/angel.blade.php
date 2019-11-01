@@ -15,6 +15,22 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="/angel/" class="nav-link">Accueil</a>
       </li>
+
+      <li class="nav-item d-none d-sm-inline-block">
+            <a href="/angel/investissements" class="nav-link">
+
+               MES INVESTISSEMENTS
+            </a>
+          </li>
+
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="/angel/opportunites" class="nav-link">
+               OPPORTUNITES
+            </a>
+          </li>
+
+
+
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
@@ -49,7 +65,11 @@
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item">
                 <i class="fas fa-pencil-alt mr-2"></i> Mon Profil
-
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="/angel/tags" class="dropdown-item">
+                  <i class="far fa-circle text-info mr-2"></i>
+                  Mots Clefs
               </a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item">
@@ -60,6 +80,8 @@
               <a href="/logout" class="dropdown-item">
                 <i class="fas fa-switch-off mr-2"></i> Se Déconnecter
               </a>
+
+
 
             </div>
           </li>
