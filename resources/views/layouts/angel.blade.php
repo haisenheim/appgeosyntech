@@ -109,14 +109,14 @@
 
                   </ol>
                   <div class="carousel-inner">
-                    <div style="min-height: 300px" class="carousel-item active">
-                        <div style="background: url('{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
+                    <div class="carousel-item active">
+                        <div style="min-height: 300px; background: url('{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
 
                         </div>
                     </div>
-                    <div style="min-height: 300px" class="carousel-item">
+                    <div  class="carousel-item">
 
-                        <div style="background: url('{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
+                        <div style="min-height: 300px; background: url('{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
 
                         </div>
                     </div>
