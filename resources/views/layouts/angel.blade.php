@@ -109,11 +109,12 @@
 
                   </ol>
                   <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" src="{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo.png')}}" alt="First slide">
+                    <div class="carousel-item active" style="background: url('{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
+
                     </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="h{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo.png')}}" alt="Second slide">
+                    <div class="carousel-item" style="background: url('{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
+
+
                     </div>
 
                   </div>
