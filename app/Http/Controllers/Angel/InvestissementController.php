@@ -18,7 +18,7 @@ class InvestissementController extends Controller
     public function index()
     {
         //
-	    $investissements = Investissement::all()->where('angel_id',Auth::user()->id);
+	    $investissements = Investissement::orderBy('created_at','desc')->where('angel_id',Auth::user()->id)->paginate(8);
 	    return view('Angel/Investissements/index')->with(compact('investissements'))->with('Liste des investissements');
     }
 
