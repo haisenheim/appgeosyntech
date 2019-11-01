@@ -17,7 +17,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-sm-12 col-md-2">
-                <div class="col-md-3">
+                <div class="">
             <!-- DIRECT CHAT SUCCESS -->
             <div class="card card-sucress cardutline direct-chat direct-chat-success">
               <div class="card-header">
