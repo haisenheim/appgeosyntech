@@ -121,10 +121,12 @@
                         <div style="min-height: 300px; background: url('{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
                             <div class="carousel-content">
 
-                                <div class="actif-description">
+                                <div style="width: 300px; padding: 10px auto; " class="actif-description bg-info card">
+                                    <div class="card-body">
+                                        <h3>{{ $slides['actif']->name }}</h3>
+                                        <a class="btn btn-primary btn-sm" href="/angel/actif/{{$slides['actif']->token}}">Consulter</a>
+                                    </div>
 
-                                    <h5>{{ $slides['actif']->name }}</h5>
-                                    <a class="btn btn-primary btn-sm" href="/angel/actif/{{$slides['actif']->token}}">Consulter</a>
                                 </div>
                             </div>
 
