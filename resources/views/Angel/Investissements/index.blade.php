@@ -49,7 +49,7 @@
                                     <div class="col-md-12">
                                           <span class="description-text"><i class="fa fa-map-marker"></i> {{ $projet->ville->name  }}</span>
                                     </div>
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-12 col-md-5">
                                         <div class="btn-app">
 
                                       <span class="badge bg-info">{{ $projet->total }}</span>
@@ -58,7 +58,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-12 col-md-7">
                                         <div class="progress">
                                               <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" aria-valuenow="{{ $projet->pourcentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $projet->pourcentage }}%">
                                                 <span class="sr-only">{{ $projet->pourcentage }}% recouvert</span>
@@ -96,16 +96,5 @@
         </div>
     </div>
 
-
-
-    <script>
-        $('.btn-p').click(function(e){
-            e.preventDefault();
-            $('.project-title').text($(this).data('name'));
-            var token = $(this).data('token');
-            var teaser = $('#teaser-'+token).html();
-            $('#teaser-content').html(teaser);
-        });
-    </script>
 
 @endsection
