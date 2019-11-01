@@ -76,6 +76,7 @@ Route::prefix('angel')
     ->middleware(['auth','angel'])
     ->name('angel.')
     ->group(function(){
+	    Route::post('/comment/add','DossierController@addComment');
 	    Route::resource('dossiers','DossierController');
 	    Route::resource('actifs','ActifController');
         Route::resource('opportunites','OpportuniteController');

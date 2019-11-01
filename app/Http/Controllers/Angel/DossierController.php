@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Actif;
+use App\Models\Comment;
 use App\Models\Investissement;
 use App\Models\Projet;
 use App\Models\TagsProjet;
@@ -58,6 +59,17 @@ class DossierController extends Controller
 	    $investissement = Investissement::all()->where('token',$p)->first();
 	    return view('/Angel/Dossiers/show')->with(compact('investissement'));
     }
+
+
+	public function addComment(Request $request){
+		$comment = new Comment();
+		$projet = Investissement::where('token', $request->token)->first();
+		$comment->investissement_id = $projet->id;
+		$comment->role_id = 4;
+		$comment->author_id = Auth::user()->id;
+		$comment->save();
+		return back();
+	}
 
     /**
      * Show the form for editing the specified resource.

@@ -40,7 +40,7 @@
                   <div class="direct-chat-msg">
 
                     <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                      <span class="direct-chat-timestamp float-right">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
                     </div>
                     <div class="direct-chat-text">
                         {{ $comment->body }}
@@ -51,7 +51,7 @@
 
                     <div class="direct-chat-msg right">
                         <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                          <span class="direct-chat-timestamp float-left">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
                         </div>
                         <!-- /.direct-chat-infos -->
                         <div class="direct-chat-text">
@@ -68,13 +68,13 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                <form action="#" method="post">
-                    <input type="hidden" id="token" value="{{ $investissement->token }}"/>
+                <form action="/angel/comment/save" method="post">
+                    <input type="hidden" id="token" name="token" value="{{ $investissement->token }}"/>
                     {{csrf_field()}}
                   <div class="input-group">
                     <input id="input-msg" type="text" name="message" placeholder="Saisir votre commentaire ..." class="form-control">
                     <span class="input-group-append">
-                      <button id="btn-save" class="btn btn-success"><i class="fa fa-send"></i> Envoyer</button>
+                      <button id="btn-save" type="submit" class="btn btn-success"><i class="fa fa-send"></i> Envoyer</button>
                     </span>
                   </div>
                 </form>
@@ -957,11 +957,6 @@
 
      <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script>
-
-
-        $('#btn-save').click(function(e){
-            e.preventDefault();
-        });
 
         $(document).ready(function(){
            // var orm = 'http://localhost/ormsys/api/';
