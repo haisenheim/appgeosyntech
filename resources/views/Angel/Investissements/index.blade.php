@@ -68,7 +68,7 @@
                                   <!-- /.col -->
                                 </div>
                                 <?php if($investissement->validated): ?>
-                                <a href="/angel/dossiers/{{ $projet->token }}" class="btn btn-block btn-outline-success btn-xs btn-p">DATA ROOM</a>
+                                <a href="/angel/dossiers/{{ $investissement->token }}" class="btn btn-block btn-outline-success btn-xs btn-p">DATA ROOM</a>
                                 <!-- /.row -->
                                 <?php endif ?>
                               </div>

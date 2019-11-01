@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Actif;
+use App\Models\Investissement;
 use App\Models\Projet;
 use App\Models\TagsProjet;
 use Illuminate\Http\Request;
@@ -54,8 +55,8 @@ class DossierController extends Controller
         //
 
 	   // dd($p);
-	    $projet = Projet::all()->where('token',$p)->first();
-	    return view('/Angel/Dossiers/show')->with(compact('projet'));
+	    $investissement = Investissement::all()->where('token',$p)->first();
+	    return view('/Angel/Dossiers/show')->with(compact('investissement'));
     }
 
     /**
