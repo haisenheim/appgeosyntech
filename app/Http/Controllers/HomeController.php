@@ -44,7 +44,7 @@ class HomeController extends Controller
 
             if(Auth::user()->role_id==4){
 	            $projet = DB::table('projets')->get(['name','montant','imageUri'])->last();
-	            $actif = DB::table('actifs')->get(['name','prix','imageUri'])->last();
+	            $actif = DB::table('actifs')->get(['name','prix','imageUri','description'])->last();
 	            $slider = ['projet'=>$projet,'actif'=>$actif];
 	            Session::put('slides',$slider);
                 return redirect('angel/');
