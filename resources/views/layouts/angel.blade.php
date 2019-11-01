@@ -122,10 +122,9 @@
                             <div class="carousel-content">
 
                                 <div class="actif-description">
-                                    <?php $desc= $slides['actif']->description ?>
-                                    <p><?= \Illuminate\Support\Str::limit($desc,20) ?></p>
 
-                                    <a class='btn btn-primary btn-sm' href='/angel/actif/{{$slides['actif']->token}}'>Consulter</a>
+                                    <h5>{{ $slides['actif']->name }}</h5>
+                                    <a class="btn btn-primary btn-sm" href="/angel/actif/{{$slides['actif']->token}}">Consulter</a>
                                 </div>
                             </div>
 
