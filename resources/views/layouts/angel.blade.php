@@ -112,6 +112,7 @@
                     <div class="carousel-item active">
                         <div style="min-height: 300px; background: url('{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
                             <div class="carousel-content">
+                                <div class="carousel-title">{{ $slides['projet']->name }}</div>
 
                             </div>
                         </div>
