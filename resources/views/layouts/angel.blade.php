@@ -111,12 +111,20 @@
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div style="min-height: 300px; background: url('{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
+                            <div class="carousel-content">
 
+                            </div>
                         </div>
                     </div>
                     <div  class="carousel-item">
-
                         <div style="min-height: 300px; background: url('{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
+                            <div class="carousel-content">
+                                <div class="actif-description">
+                                    <p>{{ \Illuminate\Support\Str::limit($slides['actif']->description,20)}}</p>
+
+                                    <a class="btn btn-primary btn-sm" href="/angel/actif/{{$slides['actif']->token}}">Consulter</a>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
