@@ -49,6 +49,16 @@
                                     <div class="col-md-12">
                                           <span class="description-text"><i class="fa fa-map-marker"></i> {{ $projet->ville->name  }}</span>
                                     </div>
+                                    <div class="col-md-6">
+                                        <span>{{ $projet->total }} FCFA</span>/ <span>{{ $projet->montant }} FCFA</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="progress">
+                                              <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" aria-valuenow="{{ $projet->pourcentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $projet->pourcentage }}%">
+                                                <span class="sr-only">{{ $projet->pourcentage }}% recouvert</span>
+                                              </div>
+                                        </div>
+                                    </div>
                                   <!-- /.col -->
                                 </div>
                                 <?php if($investissement->validated): ?>

@@ -144,8 +144,13 @@ class Projet extends Model
 		foreach($investissements as $investissement){
 			$total = $total+$investissement->montant;
 		}
-
 		return $total;
+	}
+
+	protected function getPourcentageAttribute(){
+		$total = $this->getTotalAttribute();
+		$d = $this->montant? round(($total/$this->montant)*100,2):0;
+		return $d;
 	}
 
 }
