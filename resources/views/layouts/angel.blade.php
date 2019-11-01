@@ -123,9 +123,9 @@
 
                                 <div class="actif-description">
                                     <?php $desc= $slides['actif']->description ?>
-                                    <p><?= \Illuminate\Support\Str::limit($desc,20) ?></p>
+                                    <p>{{\Illuminate\Support\Str::limit($desc,20) }}</p>
 
-                                    <a class="btn btn-primary btn-sm" href="/angel/actif/{{$slides['actif']->token}}">Consulter</a>
+                                    <a class='btn btn-primary btn-sm' href="/angel/actif/{{$slides['actif']->token}}">Consulter</a>
                                 </div>
                             </div>
 
