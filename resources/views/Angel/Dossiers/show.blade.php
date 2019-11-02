@@ -26,7 +26,7 @@
                           </li>
                     </ul>
                 </nav>
-                <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <aside class="sidebar-dark-primary elevation-4">
                     <div class="sidebar">
                        <div class="">
                             <div class="">
@@ -97,8 +97,9 @@
             </div>
                     </div>
                 </aside>
-
-              <div class="row">
+                <div class="content-wrapper">
+                    <div>
+                        <div class="row">
                 <div class="col-12">
 
                   <div class="card card-default collapsed-card">
@@ -1678,7 +1679,10 @@
                 </div>
               </div>
                <a class="btn btn-outline btn-block btn-sm btn-success" id="btn-letter" data-target="#LetterModal" data-toggle="modal" href="#"> <i class="fa fa-edit"></i> Editer la lettre d'intention </a>
-            </div>
+
+                    </div>
+                </div>
+                </div>
             <div class="col-12 col-md-3 col-lg-3 order-1 order-md-2">
               <div style="max-height: 240px; max-width: 300px">
                   @if($projet->imageUri)
