@@ -60,6 +60,14 @@ class Projet extends Model
         return $this->hasMany('App\Models\Bilan');
     }
 
+	public function reportbilans(){
+		return $this->hasMany('App\Models\Reportbilan');
+	}
+
+	public function reportresultats(){
+		return $this->hasMany('App\Models\Reportresultat');
+	}
+
     public function resultats(){
         return $this->hasMany('App\Models\Resultat');
     }
