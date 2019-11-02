@@ -838,16 +838,21 @@
                   @endif
                   @if($projet->etape>=4)
                     <div class="card card-default collapsed-card">
+                        <div class="card-header">
+                            <h3 class="card-title">PLAN FINANCIER</h3>
+
+                              <div class="card-tools">
+
+                                  <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                  </button>
+                              </div>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="card">
                                 <div class="card-header d-flex p-0">
-                                    <h3 class="card-title p-3">PLAN FINANCIER</h3>
-                                    <div class="card-tools">
-
-                                          <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                          </button>
-                                          <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
-                                          </button>
-
-                                      </div>
                                     <ul class="nav nav-pills ml-auto p-2 pull-right"  role="tablist">
                                         <li role="presentation" class="nav-item">
                                             <a class="nav-link active" href="#prevresultats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-selected="true"><span class=""></span> COMPTE d'EXPLOITATION </a>
@@ -867,8 +872,8 @@
                                    </ul>
                                 </div>
                                 <div class="card-body">
-                                    <div  class="tab-content" id="myTabContent">
-                                 <div class="tab-pane fade active" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
+                                    <div  class="tab-content">
+                                        <div class="tab-pane active" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
                                       <div>
                                         <div class="row">
                                             <div class="col-md-12 col-sm-12">
@@ -1598,6 +1603,9 @@
 
                               </div>
                                 </div>
+                            </div>
+
+                         </div>
                     </div>
                   @endif
 
