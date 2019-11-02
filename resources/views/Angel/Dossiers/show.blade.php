@@ -838,27 +838,19 @@
                   @endif
                   @if($projet->etape>=4)
                     <div class="card card-default collapsed-card">
-                        <div class="card-header">
-                            <h5 class="card-title">Plan financier</h5>
-
-                              <div class="card-tools">
-
-                                  <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                  </button>
-                                  <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
-                                  </button>
-
-                                <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Fermer">
-                                  <i class="fas fa-times"></i></button>
-                              </div>
-                        </div>
-                        <div class="card-body">
-
-                            <div class="card">
                                 <div class="card-header d-flex p-0">
+                                    <h3 class="card-title p-3">PLAN FINANCIER</h3>
+                                    <div class="card-tools">
+
+                                          <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                          </button>
+                                          <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                          </button>
+
+                                      </div>
                                     <ul class="nav nav-pills ml-auto p-2 pull-right"  role="tablist">
-                                        <li role="presentation" class="active nav-item">
-                                            <a class="nav-link" href="#prevresultats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-selected="true"><span class=""></span> COMPTE d'EXPLOITATION </a>
+                                        <li role="presentation" class="nav-item">
+                                            <a class="nav-link active" href="#prevresultats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-selected="true"><span class=""></span> COMPTE d'EXPLOITATION </a>
                                         </li>
 
                                         <li role="presentation" class="nav-item">
@@ -1606,9 +1598,6 @@
 
                               </div>
                                 </div>
-                            </div>
-
-                         </div>
                     </div>
                   @endif
 
