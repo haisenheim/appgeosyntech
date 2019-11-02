@@ -94,7 +94,7 @@ class DossierController extends Controller
 			$data['pct_pret']=$request->pct_pret;
 			$data['duree_pret']=$request->duree_pret;
 			$data['lieu'] = $request->lieu;
-			Lettre::updateOrCreate($lettre);
+			Lettre::updateOrCreate($data);
 		}else{
 			$lettre =new Lettre();
 			$lettre->investissement_id = $projet->id;
