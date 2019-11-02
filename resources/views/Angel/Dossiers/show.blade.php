@@ -26,7 +26,7 @@
                           </li>
                     </ul>
                 </nav>
-                <aside class="sidebar-dark-primary elevation-4">
+                <aside class="main-sidebar sidebar-dark-primary elevation-4">
                     <div class="sidebar">
                        <div class="">
                             <div class="">
@@ -94,7 +94,7 @@
                         </div>
                         <!--/.direct-chat -->
                       </div>
-            </div>
+                        </div>
                     </div>
                 </aside>
                 <div class="content-wrapper">
@@ -1678,7 +1678,7 @@
 
                 </div>
               </div>
-               <a class="btn btn-outline btn-block btn-sm btn-success" id="btn-letter" data-target="#LetterModal" data-toggle="modal" href="#"> <i class="fa fa-edit"></i> Editer la lettre d'intention </a>
+                        <a class="btn btn-outline btn-block btn-sm btn-success" id="btn-letter" data-target="#LetterModal" data-toggle="modal" href="#"> <i class="fa fa-edit"></i> Editer la lettre d'intention </a>
 
                     </div>
                 </div>
