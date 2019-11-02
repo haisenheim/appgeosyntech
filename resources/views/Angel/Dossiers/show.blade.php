@@ -964,6 +964,7 @@
               <div style="padding: 20px 20px 40px 20px; font-family: 'Gill Sans MT', Calibri, sans-serif" class="modal-body">
                  <form enctype="multipart/form-data" class="form" action="/angel/letter/" method="post">
                     {{csrf_field()}}
+                    <input type="hidden" name="token" value="{{ $investissement->token }}"/>
                     <div style="font-weight: bold; width:300px" class="form-group">
                         <label for="devise_id">CHOIX DE LA DEVISE</label>
                         <select class="form-control" name="devise_id" id="devise_id">
@@ -979,13 +980,13 @@
                     <p>Le montant total de l’investissement étant estimé à
                     <span style="font-weight: bold"> {{ $investissement->projet->montant }} &nbsp; {{ $investissement->projet->devise->name }} </span>, je, soussigné,<span style="font-weight: bold"> {{ $investissement->angel->name }} </span>, agissant pour
                      <span style="width: 300px;">
-                        <select style="font-weight: bold" class="form-control" name="compte_id" id="">
-                            <option value="0">MON PROPRE COMPTE</option>
+                        <select style="font-weight: bold" class="form-control" name="personnel" id="">
+                            <option value="1">MON PROPRE COMPTE</option>
                             @if($investissement->angel->organisme_id)
-                                <option value="1">{{ $investissement->angel->organisme->name }}</option>
+                                <option value="0">{{ $investissement->angel->organisme->name }}</option>
                             @endif
                             @if($investissement->angel->entreprise_id)
-                                <option value="1">{{ $investissement->angel->entreprise->name }}</option>
+                                <option value="0">{{ $investissement->angel->entreprise->name }}</option>
                             @endif
                         </select>
                      </span>
@@ -1009,8 +1010,8 @@
                         Le prêt sera effectué
                         sur une durée de <span style="font-weight: bold; width:100px"> <input class="form-control" name="duree_pret" type="number"/> </span> année(s) à un taux annuel de <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_pret" type="number"/> </span> %, avec
                         <span style="font-weight: bold; width:300px">
-                            <select class="form-control" name="remboursement_id" >
-                                    <option value="Remboursement In fine ">Remboursement In fine </option>
+                            <select class="form-control" name="type_remboursement" >
+                                    <option value="Remboursement In fine">Remboursement In fine </option>
                                     <option value="Amortissement constant du capital">Amortissement constant du capital</option>
                                     <option value="Annuités constantes">Annuités constantes</option>
                             </select>
@@ -1033,6 +1034,8 @@
                         <span style="font-weight: bold">{{ $investissement->angel->name }}</span>
 
                     </div>
+
+                    <button type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
                 </form>
               </div>
 
@@ -1048,6 +1051,7 @@
             display:inline;
             width:auto;
             font-weight: bold;
+            margin:5px;
         }
     </style>
 

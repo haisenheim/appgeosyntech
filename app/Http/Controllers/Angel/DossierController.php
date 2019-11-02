@@ -8,6 +8,7 @@ use App\Models\Comment;
 use App\Models\Devise;
 use App\Models\Flettre;
 use App\Models\Investissement;
+use App\Models\Lettre;
 use App\Models\Projet;
 use App\Models\TagsProjet;
 use Illuminate\Http\Request;
@@ -74,6 +75,42 @@ class DossierController extends Controller
 		$comment->author_id = Auth::user()->id;
 		$comment->save();
 		return back();
+	}
+
+	public function saveLetter(Request $request){
+		$projet = Investissement::where('token', $request->token)->first();
+		if($projet->lettre){
+			$lettre = $projet->lettre;
+			$lettre->type_remboursement= $request->type_remboursement;
+			$lettre->forme_id = $request->forme_id;
+			$lettre->montant = $request->montant;
+			$lettre->pct_participation=$request->pct_participation;
+			$lettre->pct_engagement=$request->pct_engagement;
+			$lettre->duree_engagement=$request->duree_engagement;
+			$lettre->mt_engagement=$request->mt_engagement;
+			$lettre->devise_id=$request->devise_id;
+			$lettre->personnel=$request->personnel;
+			$lettre->pct_pret=$request->pct_pret;
+			$lettre->duree_pret=$request->duree_pret;
+			$lettre->lieu = $request->lieu;
+			Lettre::updateOrCreate($lettre);
+		}else{
+			$lettre =new Lettre();
+			$lettre->investissement_id = $projet->id;
+			$lettre->type_remboursement= $request->type_remboursement;
+			$lettre->forme_id = $request->forme_id;
+			$lettre->montant = $request->montant;
+			$lettre->pct_participation=$request->pct_participation;
+			$lettre->pct_engagement=$request->pct_engagement;
+			$lettre->duree_engagement=$request->duree_engagement;
+			$lettre->mt_engagement=$request->mt_engagement;
+			$lettre->devise_id=$request->devise_id;
+			$lettre->personnel=$request->personnel;
+			$lettre->pct_pret=$request->pct_pret;
+			$lettre->duree_pret=$request->duree_pret;
+			$lettre->lieu = $request->lieu;
+			$lettre->save();
+		}
 	}
 
     /**
