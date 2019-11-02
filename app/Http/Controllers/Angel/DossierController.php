@@ -82,7 +82,7 @@ class DossierController extends Controller
 		if($projet->lettre){
 			$lettre = $projet->lettre;
 			$data = [];
-			$data['id']=$lettre->id;
+			//$data['id']=$lettre->id;
 			$data['type_remboursement']= $request->type_remboursement;
 			$data['forme_id'] = $request->forme_id;
 			$data['montant'] = $request->montant;
@@ -95,7 +95,7 @@ class DossierController extends Controller
 			$data['pct_pret']=$request->pct_pret;
 			$data['duree_pret']=$request->duree_pret;
 			$data['lieu'] = $request->lieu;
-			Lettre::updateOrCreate($data);
+			Lettre::updateOrCreate(['investissement_id'=>$lettre->investissement_id],$data);
 		}else{
 			$lettre =new Lettre();
 			$lettre->investissement_id = $projet->id;
