@@ -81,18 +81,19 @@ class DossierController extends Controller
 		$projet = Investissement::where('token', $request->token)->first();
 		if($projet->lettre){
 			$lettre = $projet->lettre;
-			$lettre->type_remboursement= $request->type_remboursement;
-			$lettre->forme_id = $request->forme_id;
-			$lettre->montant = $request->montant;
-			$lettre->pct_participation=$request->pct_participation;
-			$lettre->pct_engagement=$request->pct_engagement;
-			$lettre->duree_engagement=$request->duree_engagement;
-			$lettre->mt_engagement=$request->mt_engagement;
-			$lettre->devise_id=$request->devise_id;
-			$lettre->personnel=$request->personnel;
-			$lettre->pct_pret=$request->pct_pret;
-			$lettre->duree_pret=$request->duree_pret;
-			$lettre->lieu = $request->lieu;
+			$data = [];
+			$data['type_remboursement']= $request->type_remboursement;
+			$data['forme_id'] = $request->forme_id;
+			$data['montant'] = $request->montant;
+			$data['pct_participation']=$request->pct_participation;
+			$data['pct_engagement']=$request->pct_engagement;
+			$data['duree_engagement']=$request->duree_engagement;
+			$data['mt_engagement']=$request->mt_engagement;
+			$data['devise_id']=$request->devise_id;
+			$data['personnel']=$request->personnel;
+			$data['pct_pret']=$request->pct_pret;
+			$data['duree_pret']=$request->duree_pret;
+			$data['lieu'] = $request->lieu;
 			Lettre::updateOrCreate($lettre);
 		}else{
 			$lettre =new Lettre();
@@ -111,6 +112,8 @@ class DossierController extends Controller
 			$lettre->lieu = $request->lieu;
 			$lettre->save();
 		}
+
+		return back();
 	}
 
     /**
