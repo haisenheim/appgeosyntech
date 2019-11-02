@@ -17,75 +17,86 @@
         </div>
         <div class="card-body">
           <div class="row">
-            <div class="col-sm-12 col-md-3">
-                <div class="">
-            <!-- DIRECT CHAT SUCCESS -->
-            <div class="card card-sucress cardutline direct-chat direct-chat-success">
-              <div class="card-header">
-                <h3 class="card-title">Echanger avec le promoteur</h3>
 
-                <div class="card-tools">
+            <div class="col-12 col-md-9 col-lg-9 order-2 order-md-1">
+                <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                    <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                          </li>
+                    </ul>
+                </nav>
+                <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                    <div class="sidebar">
+                       <div class="">
+                            <div class="">
+                        <!-- DIRECT CHAT SUCCESS -->
+                        <div class="card card-sucress cardutline direct-chat direct-chat-success">
+                          <div class="card-header">
+                            <h3 style="font-family: cursive" class="card-title">Echanger avec le promoteur</h3>
+
+                            <div class="card-tools">
 
 
 
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <!-- Conversations are loaded here -->
-                <div class="direct-chat-messages">
-                @foreach($investissement->comments as $comment)
-                  <!-- Message. Default to the left -->
-                  @if($comment->role_id==4)
-                  <div class="direct-chat-msg">
+                            </div>
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <!-- Conversations are loaded here -->
+                            <div class="direct-chat-messages">
+                            @foreach($investissement->comments as $comment)
+                              <!-- Message. Default to the left -->
+                              @if($comment->role_id==4)
+                              <div class="direct-chat-msg">
 
-                    <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-timestamp float-right">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
-                    </div>
-                    <div class="direct-chat-text">
-                        {{ $comment->body }}
-                    </div>
-                    <!-- /.direct-chat-text -->
-                  </div>
-                  @else
+                                <div class="direct-chat-infos clearfix">
+                                  <span class="direct-chat-timestamp float-right">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
+                                </div>
+                                <div class="direct-chat-text">
+                                    {{ $comment->body }}
+                                </div>
+                                <!-- /.direct-chat-text -->
+                              </div>
+                              @else
 
-                    <div class="direct-chat-msg right">
-                        <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-timestamp float-left">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
+                                <div class="direct-chat-msg right">
+                                    <div class="direct-chat-infos clearfix">
+                                      <span class="direct-chat-timestamp float-left">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
+                                    </div>
+                                    <!-- /.direct-chat-infos -->
+                                    <div class="direct-chat-text">
+                                     {{ $comment->body }}
+                                    </div>
+                                <!-- /.direct-chat-text -->
+                              </div>
+                              @endif
+                            @endforeach
+                            </div>
+                            <!--/.direct-chat-messages-->
+
+                            <!-- /.direct-chat-pane -->
+                          </div>
+                          <!-- /.card-body -->
+                          <div class="card-footer">
+                            <form action="/angel/comment/save" method="post">
+                                <input type="hidden" id="token" name="token" value="{{ $investissement->token }}"/>
+                                {{csrf_field()}}
+                              <div class="input-group">
+                                <input id="input-msg" type="text" name="message" placeholder="Saisir votre commentaire ..." class="form-control">
+                                <span class="input-group-append">
+                                  <button id="btn-save" type="submit" class="btn btn-success"><i class="fa fa-send"></i> Envoyer</button>
+                                </span>
+                              </div>
+                            </form>
+                          </div>
+                          <!-- /.card-footer-->
                         </div>
-                        <!-- /.direct-chat-infos -->
-                        <div class="direct-chat-text">
-                         {{ $comment->body }}
-                        </div>
-                    <!-- /.direct-chat-text -->
-                  </div>
-                  @endif
-                @endforeach
-                </div>
-                <!--/.direct-chat-messages-->
-
-                <!-- /.direct-chat-pane -->
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer">
-                <form action="/angel/comment/save" method="post">
-                    <input type="hidden" id="token" name="token" value="{{ $investissement->token }}"/>
-                    {{csrf_field()}}
-                  <div class="input-group">
-                    <input id="input-msg" type="text" name="message" placeholder="Saisir votre commentaire ..." class="form-control">
-                    <span class="input-group-append">
-                      <button id="btn-save" type="submit" class="btn btn-success"><i class="fa fa-send"></i> Envoyer</button>
-                    </span>
-                  </div>
-                </form>
-              </div>
-              <!-- /.card-footer-->
+                        <!--/.direct-chat -->
+                      </div>
             </div>
-            <!--/.direct-chat -->
-          </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-6 order-2 order-md-1">
-
+                    </div>
+                </aside>
 
               <div class="row">
                 <div class="col-12">
@@ -99,8 +110,7 @@
                               <i class="fas fa-plus"></i></button>
                                <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
                                </button>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Fermer">
-                              <i class="fas fa-times"></i></button>
+
                           </div>
                     </div>
                     <div class="card-body">
