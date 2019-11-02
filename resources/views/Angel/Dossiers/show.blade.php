@@ -26,7 +26,7 @@
                           </li>
                     </ul>
                 </nav>
-                <aside style="position: absolute; height:auto; max-height: 500px; top:0; background-color: inherit; bottom: auto" class="main-sidebar sidebar-dark-primary elevation-4">
+                <aside style="position: absolute; height:auto; max-height: 500px; top:0; background-color: inherit; bottom: auto; min-height: auto" class="main-sidebar sidebar-dark-primary elevation-4">
                     <div style="padding: 0" class="sidebar">
                        <div class="">
                             <div class="">
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </aside>
-                <div style="min-height: auto; background-color: none;" class="content-wrapper">
+                <div style="min-height: auto; background: none;" class="content-wrapper">
                     <div>
                         <div class="row">
                 <div class="col-12">
