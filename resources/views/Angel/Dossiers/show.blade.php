@@ -26,7 +26,7 @@
                           </li>
                     </ul>
                 </nav>
-                <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <aside style="position: absolute; height:auto; max-height: 500px; top:0; background-color: inherit;" class="main-sidebar sidebar-dark-primary elevation-4">
                     <div class="sidebar">
                        <div class="">
                             <div class="">
