@@ -1026,7 +1026,7 @@
                     <br/>
 
                     <div style="float: right; margin-right: 50px">
-                        Fait à <span style="font-weight: bold; width:300px"> <input class="form-control" name="lieu" type="number"/> </span>, le {{ date('d/m/Y') }}.
+                        Fait à <span style="font-weight: bold; width:300px"> <input class="form-control" name="lieu" type="text" required="true"/> </span>, le {{ date('d/m/Y') }}.
                         <br/> <br/>
                         Pour l’investisseur
                         <br/>
