@@ -874,7 +874,7 @@
 
                            </ul>
 
-                             <div style="overflow-y: scroll" class="tab-content" id="myTabContent">
+                             <div  class="tab-content" id="myTabContent">
                                  <div class="tab-pane fade active in" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
                                       <div>
 
@@ -1791,6 +1791,11 @@
             width:auto;
             font-weight: bold;
             margin:5px;
+        }
+
+        .card.maximized-card {
+
+            overflow-y: scroll;
         }
     </style>
 
