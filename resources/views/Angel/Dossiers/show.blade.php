@@ -854,36 +854,39 @@
                         </div>
                         <div class="card-body">
 
-                           <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                <li role="presentation" class="active nav-item">
-                                    <a class="nav-link" href="#prevresultats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-selected="true"><span class=""></span> COMPTE d'EXPLOITATION </a>
-                                </li>
+                            <div class="card">
+                                <div class="card-header d-flex p-0">
+                                    <ul class="nav nav-pills ml-auto p-2 pull-right"  role="tablist">
+                                        <li role="presentation" class="active nav-item">
+                                            <a class="nav-link" href="#prevresultats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-selected="true"><span class=""></span> COMPTE d'EXPLOITATION </a>
+                                        </li>
 
-                                <li role="presentation" class="nav-item">
-                                    <a class="nav-link" href="#prevbilans" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> BILAN </a>
-                                </li>
+                                        <li role="presentation" class="nav-item">
+                                            <a class="nav-link" href="#prevbilans" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> BILAN </a>
+                                        </li>
 
-                                <li role="presentation" class="nav-item">
-                                    <a class="nav-link" href="#prevtresoreries" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> FLUX DE TRESORERIE  </a>
-                                </li>
+                                        <li role="presentation" class="nav-item">
+                                            <a class="nav-link" href="#prevtresoreries" role="tab" id="tab3" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> FLUX DE TRESORERIE  </a>
+                                        </li>
 
-                                <li role="presentation" class="nav-item">
-                                     <a class="nav-link" href="#montage" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> MONTAGE FINANCIER </a>
-                                </li>
-
-
-                           </ul>
-
-                             <div  class="tab-content" id="myTabContent">
-                                 <div class="tab-pane fade active in" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
+                                        <li role="presentation" class="nav-item">
+                                             <a class="nav-link" href="#montage" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> MONTAGE FINANCIER </a>
+                                        </li>
+                                   </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div  class="tab-content" id="myTabContent">
+                                 <div class="tab-pane fade active" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
                                       <div>
-
                                         <div class="row">
                                             <div class="col-md-12 col-sm-12">
-                                                <fieldset>
-                                                    <legend>COMPTE D'EXPLOITATION PREVISIONNEL</legend>
-                                                    <?php $nbsim = count($projet->prevresultats) ?>
-                                                    <table class="table table-bordered table-hover table-condensed">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4>COMPTE DE RESULTAT</h4>
+                                                     </div>
+                                                     <div class="card-body">
+                                                        <?php $nbsim = count($projet->prevresultats) ?>
+                                                        <table class="table table-bordered table-hover table-condensed">
                                                         <thead>
                                                             <tr>
                                                                     <th></th>
@@ -1095,8 +1098,10 @@
                                                                 @endforeach
                                                             </tr>
                                                         </tbody>
-                                                    </table>
-                                                </fieldset>
+                                                        </table>
+                                                     </div>
+                                                </div>
+
                                             </div>
 
                                         </div>
@@ -1600,6 +1605,9 @@
                                  </div>
 
                               </div>
+                                </div>
+                            </div>
+
                          </div>
                     </div>
                   @endif
