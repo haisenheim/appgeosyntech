@@ -82,6 +82,7 @@ class DossierController extends Controller
 		if($projet->lettre){
 			$lettre = $projet->lettre;
 			$data = [];
+			$data['id']=$lettre->id;
 			$data['type_remboursement']= $request->type_remboursement;
 			$data['forme_id'] = $request->forme_id;
 			$data['montant'] = $request->montant;
