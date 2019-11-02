@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class mois extends Model
+class Mois extends Model
 {
     //
+	protected $guarded = [];
+	protected $table = 'mois';
 }

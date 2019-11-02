@@ -921,6 +921,35 @@
                     </div>
                   @endif
 
+
+                  <div class="card card-default collapsed-card">
+                        <div class="card-header">
+                            <h5 class="card-title">REPORTS MENSUEL DE GESTION</h5>
+
+                              <div class="card-tools">
+
+                                  <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                  </button>
+
+
+                              </div>
+                        </div>
+                        <div class="card-body">
+                            @if($investissement->report)
+
+                            @else
+                                <div class="alert alert-danger">
+                                  <h5><i class="icon fas fa-ban"></i> Alert!</h5>
+                                    <p>VOUS N'ETES PAS AUTORISE A ACCEDER A CES INFORMATIONS. VEUILLEZ CONTACTER LE CABINET OBAC.</p>
+
+                                </div>
+                            @endif
+
+                         </div>
+                    </div>
+
                 </div>
               </div>
                <a class="btn btn-outline btn-block btn-sm btn-success" id="btn-letter" data-target="#LetterModal" data-toggle="modal" href="#"> <i class="fa fa-edit"></i> Editer la lettre d'intention </a>
@@ -1004,7 +1033,7 @@
                      à hauteur de <span style="font-weight: bold; width:300px"> <input class="form-control" name="montant" type="number"/> </span>. </p>
                     <p class="blocx" style="display: block" id="block-1">
                         La prise de participation représentera donc un pourcentage de
-                         <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_participation" type="number"/> </span> % au capital de la société  XXXXXXXXXXXX (Nom de la société sollicitant l’investissement)
+                         <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_participation" type="number"/> </span> % au capital du projet <span style="font-weight: bold"> {{ $investissement->projet->name }}  </span>
                     </p>
                     <p class="blocx" style="display: none" id="block-2">
                         Le prêt sera effectué
