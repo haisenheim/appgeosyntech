@@ -16,7 +16,7 @@ class Investissement extends Model
 	}
 
 	public function angel(){
-		return $this->belongsTo('App\Models\User','angel_id');
+		return $this->belongsTo('App\User','angel_id');
 	}
 
 	public function comments(){
