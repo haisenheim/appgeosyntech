@@ -22,4 +22,8 @@ class Investissement extends Model
 	public function comments(){
 		return $this->hasMany('App\Models\Comment','investissement_id');
 	}
+
+	public function lettre(){
+		return $this->hasOne('App\Models\Lettre','investissement_id');
+	}
 }

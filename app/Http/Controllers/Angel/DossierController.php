@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Angel;
 use App\Http\Controllers\Controller;
 use App\Models\Actif;
 use App\Models\Comment;
+use App\Models\Devise;
+use App\Models\Flettre;
 use App\Models\Investissement;
 use App\Models\Projet;
 use App\Models\TagsProjet;
@@ -56,8 +58,10 @@ class DossierController extends Controller
         //
 
 	   // dd($p);
+	    $devises = Devise::all();
+	    $formes = Flettre::all();
 	    $investissement = Investissement::all()->where('token',$p)->first();
-	    return view('/Angel/Dossiers/show')->with(compact('investissement'));
+	    return view('/Angel/Dossiers/show')->with(compact('investissement','devises','formes'));
     }
 
 

@@ -923,7 +923,7 @@
 
                 </div>
               </div>
-               <a class="btn btn-outline btn-block btn-sm btn-success" href="/angel/letter/edit/{{ $investissement->token }}"> <i class="fa fa-edit"></i> Editer la lettre d'intention </a>
+               <a class="btn btn-outline btn-block btn-sm btn-success" id="btn-letter" data-target="#LetterModal" data-toggle="modal" href="#"> <i class="fa fa-edit"></i> Editer la lettre d'intention </a>
             </div>
             <div class="col-12 col-md-3 col-lg-3 order-1 order-md-2">
               <div style="max-height: 240px; max-width: 300px">
@@ -952,10 +952,106 @@
         <!-- /.card-body -->
       </div>
 
+      <div  class="modal fade" id="LetterModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header bg-success">
+                <h4  class="modal-title project-title">Lettre d'intention</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                 <form enctype="multipart/form-data" class="form" action="/angel/letter/" method="post">
+                    {{csrf_field()}}
+                    <div style="font-weight: bold; width:300px" class="form-group">
+                        <label for="devise_id">CHOIX DE LA DEVISE</label>
+                        <select class="form-control" name="devise_id" id="devise_id">
+                            @foreach($devises as $devise)
+                                <option value="{{ $devise->id }}">{{ $devise->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <p>La présente lettre d’intention décrit les principales conditions et modalités selon lesquelles l’investissement envisagé dans la société <span style="font-weight: bold"> {{ $investissement->projet->owner->name }} </span>  pourrait être réalisé. </p>
+                    <p>Elle ne constitue en aucun cas un engagement ferme et irrévocable des parties de procéder à cet investissement. </p>
+                    <p>Cette lettre d’intention a été préparée sur la base et en l’état des informations reçues de la Société à ce jour,
+                     particulièrement du business plan qui ont été préparés par les Fondateurs.</p>
+                    <p>Le montant total de l’investissement étant estimé à
+                    <span style="font-weight: bold"> {{ $investissement->projet->montant }} &nbsp; {{ $investissement->projet->devise->name }} </span>, je, soussigné,<span style="font-weight: bold"> {{ $investissement->angel->name }} </span>, agissant pour
+                     <span style="width: 300px;">
+                        <select style="font-weight: bold" class="form-control" name="compte_id" id="">
+                            <option value="0">MON PROPRE COMPTE</option>
+                            @if($investissement->angel->organisme_id)
+                                <option value="1">{{ $investissement->angel->organisme->name }}</option>
+                            @endif
+                            @if($investissement->angel->entreprise_id)
+                                <option value="1">{{ $investissement->angel->entreprise->name }}</option>
+                            @endif
+                        </select>
+                     </span>
+                     ,
+                     manifeste le souhait de participer à cette opération sous forme de
+                     <span style="font-weight: bold; width:300px">
+
+                        <select class="form-control" name="devise_id" id="devise_id">
+                            @foreach($formes as $forme)
+                                <option value="{{ $forme->id }}">{{ $forme->name }}</option>
+                            @endforeach
+                        </select>
+                     </span>
+                     (prise de participation ou/et Prêts et/ou Engagements par signature)
+                     à hauteur de <span style="font-weight: bold; width:300px"> <input class="form-control" name="montant" type="number"/> </span>. </p>
+                    <p class="blocx" style="display: block" id="block-1">
+                        La prise de participation représentera donc un pourcentage de
+                         <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_participation" type="number"/> </span> % au capital de la société  XXXXXXXXXXXX (Nom de la société sollicitant l’investissement)
+                    </p>
+                    <p class="blocx" style="display: none" id="block-2">
+                        Le prêt sera effectué
+                        sur une durée de <span style="font-weight: bold; width:100px"> <input class="form-control" name="duree_pret" type="number"/> </span> année(s) à un taux annuel de <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_pret" type="number"/> </span> %, avec
+                        <span style="font-weight: bold; width:300px">
+                            <select class="form-control" name="remboursement_id" >
+                                    <option value="Remboursement In fine ">Remboursement In fine </option>
+                                    <option value="Amortissement constant du capital">Amortissement constant du capital</option>
+                                    <option value="Annuités constantes">Annuités constantes</option>
+                            </select>
+                        </span>
+                    </p>
+
+                    <p class="blocx" style="display: none" id="block-3">
+                        L’engagement par signature sera effectué sur une durée de <span style="font-weight: bold; width:100px"> <input class="form-control" name="duree_engagement" type="number"/> </span> année(s), a une commission de caution de <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_engagement" type="number"/> </span>% ou <span style="font-weight: bold; width: 300px"> <input class="form-control" placeholder="Saisir un montant" name="mt_engagement" type="number"/> </span>.
+                    </p>
+
+                    <br/>
+                    <br/>
+
+                    <div style="float: right; margin-right: 50px">
+                        Fait à <span style="font-weight: bold; width:300px"> <input class="form-control" name="lieu" type="number"/> </span>, le {{ date('d/m/Y') }}.
+
+                        Pour l’investisseur
+                        <br/>
+                        <br/>
+                        <span style="font-weight: bold">{{ $investissement->angel->name }}</span>
+
+                    </div>
+                </form>
+              </div>
+
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+    </div>
 
 
      <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script>
+
+
+        $('#forme_id').change(function(e){
+            $('.blocx').hide();
+            var id = $('#forme_id').val();
+            $('#block-'+id).show();
+        });
 
         $(document).ready(function(){
            // var orm = 'http://localhost/ormsys/api/';

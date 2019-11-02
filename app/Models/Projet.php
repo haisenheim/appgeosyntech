@@ -112,6 +112,10 @@ class Projet extends Model
 		return $this->belongsTo('App\Models\Modepaiement');
 	}
 
+	public function devise(){
+		return $this->belongsTo('App\Models\Devise');
+	}
+
 	public function moyens(){
 		return $this->belongsToMany('App\Models\Moyen','moyens_projets');
 	}
