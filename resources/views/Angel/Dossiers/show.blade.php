@@ -953,15 +953,15 @@
       </div>
 
       <div  class="modal fade" id="LetterModal">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header bg-success">
-                <h4  class="modal-title project-title">Lettre d'intention</h4>
+                <h4  class="modal-title text-center">LETTRE D’INTENTION</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div style="padding: 20px 20px 40px 20px; font-family: 'Gill Sans MT', Calibri, sans-serif" class="modal-body">
                  <form enctype="multipart/form-data" class="form" action="/angel/letter/" method="post">
                     {{csrf_field()}}
                     <div style="font-weight: bold; width:300px" class="form-group">
@@ -993,7 +993,7 @@
                      manifeste le souhait de participer à cette opération sous forme de
                      <span style="font-weight: bold; width:300px">
 
-                        <select class="form-control" name="devise_id" id="devise_id">
+                        <select class="form-control" name="forme_id" id="forme_id">
                             @foreach($formes as $forme)
                                 <option value="{{ $forme->id }}">{{ $forme->name }}</option>
                             @endforeach
@@ -1026,7 +1026,7 @@
 
                     <div style="float: right; margin-right: 50px">
                         Fait à <span style="font-weight: bold; width:300px"> <input class="form-control" name="lieu" type="number"/> </span>, le {{ date('d/m/Y') }}.
-
+                        <br/> <br/>
                         Pour l’investisseur
                         <br/>
                         <br/>
@@ -1041,6 +1041,15 @@
           </div>
           <!-- /.modal-dialog -->
     </div>
+
+
+    <style>
+        .modal .form-control{
+            display:inline;
+            width:auto;
+            font-weight: bold;
+        }
+    </style>
 
 
      <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
