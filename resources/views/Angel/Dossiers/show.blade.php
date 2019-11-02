@@ -19,13 +19,7 @@
           <div class="row">
 
             <div class="col-12 col-md-9 col-lg-9 order-2 order-md-1">
-                <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-                    <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-                          </li>
-                    </ul>
-                </nav>
+
                 <aside style="position: absolute; height:auto; max-height: 500px; top:0; background-color: inherit; bottom: auto; min-height: auto" class="main-sidebar sidebar-dark-primary elevation-4">
                     <div style="padding: 0" class="sidebar">
                        <div class="">
