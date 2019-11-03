@@ -1631,9 +1631,10 @@
                         </div>
                         <div class="card-body">
                             @if($investissement->report)
+                                <ul class="list-inline">
                                 @foreach($projet->reportresultats as $prevr )
 
-                                    <ul class="list-inline">
+
                                         <li class="list-inline-item">
                                             <span><a class="btn btn-xs btn-outline btn-info" href="#" data-toggle="modal" data-target="#rrm-{{$prevr->id}}">{{ $bilan->name }}</a></span>
                                             <div class="modal fade" id="rrm-{{$prevr->id}}">
@@ -1756,7 +1757,6 @@
 
                                                                         <td><?= $prevr->ce ?></td>
 
-                                                                    @endforeach
                                                                 </tr>
                                                                 <tr>
                                                                     <th>RESULTAT EXCEPTIONNEL</th>
@@ -1791,8 +1791,9 @@
                                               </div>
                                             </div>
                                         </li>
-                                    </ul>
-                                @endforeach
+
+                                     @endforeach
+                                </ul>
                             @else
                                 <div class="alert alert-danger">
                                   <h5><i class="icon fas fa-ban"></i> Alert!</h5>
