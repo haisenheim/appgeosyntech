@@ -1636,7 +1636,7 @@
 
 
                                         <li class="list-inline-item">
-                                            <span><a class="btn btn-xs btn-outline btn-info" href="#" data-toggle="modal" data-target="#rrm-{{$prevr->id}}">{{ $bilan->name }}</a></span>
+                                            <span><a class="btn btn-xs btn-outline btn-info" href="#" data-toggle="modal" data-target="#rrm-{{$prevr->id}}">{{ $prevr->name }}</a></span>
                                             <div class="modal fade" id="rrm-{{$prevr->id}}">
                                                 <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
