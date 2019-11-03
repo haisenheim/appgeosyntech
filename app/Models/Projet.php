@@ -9,6 +9,8 @@ class Projet extends Model
     //
     protected $guarded = [];
 
+	protected $table = 'testresultats';
+
     public function type(){
         return $this->belongsTo('App\Models\Tprojet', 'type_id');
     }
