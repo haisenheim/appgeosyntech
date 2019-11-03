@@ -1631,24 +1631,158 @@
                         </div>
                         <div class="card-body">
                             @if($investissement->report)
-                                @foreach($projet->reportbilans as $bilan )
+                                @foreach($projet->reportresultats as $prevr )
 
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <span><a class="btn btn-xs btn-outline btn-info" href="#" data-toggle="modal" data-target="#rbm-{{$bilan->id}}">{{ $bilan->name }}</a></span>
-                                            <div class="modal fade" id="rbm-{{$bilan->id}}">
+                                            <span><a class="btn btn-xs btn-outline btn-info" href="#" data-toggle="modal" data-target="#rrm-{{$prevr->id}}">{{ $bilan->name }}</a></span>
+                                            <div class="modal fade" id="rrm-{{$prevr->id}}">
                                                 <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
                                                   <div class="modal-header bg-success">
-                                                    <h4  class="modal-title text-center">Bilan - {{$bilan->name}}</h4>
+                                                    <h4  class="modal-title text-center">Compte de resultat - {{$prevr->name}}</h4>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                       <span aria-hidden="true">&times;</span>
                                                     </button>
                                                   </div>
                                                   <div class="modal-body">
-                                                        <table class="table table-condensed table-hover table-striped">
+                                                        <table class="table table-bordered table-hover table-condensed">
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>CHIFFRE D'AFFAIRE</th>
+
+                                                                        <th><?= $prevr->ca ?></th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>PRODUCTION IMMOBILISEE</td>
+
+                                                                        <td><?= $prevr->pi ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>PRODUCTION STOCKEE</td>
+
+                                                                        <td><?= $prevr->ps ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>SUBVENTION D'AEXPLOITATION</td>
+
+                                                                        <td><?= $prevr->sp ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>AUTRES PRODUITS D'EXPLOITATION</td>
+
+                                                                        <td><?= $prevr->ape ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>CHARGE VARIABLE</td>
+
+                                                                        <td><?= $prevr->cv ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>MARGE BRUTE</td>
+
+                                                                        <td><?= $prevr->mb ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>CHARGE FIXE</th>
+
+                                                                        <th><?= $prevr->cf ?></th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>VALEUR AJOUTEE</th>
+
+                                                                        <th><?= $prevr->va ?></th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>SALAIRES</td>
+
+                                                                        <td><?= $prevr->ca ?></td>
+
+                                                                <tr>
+                                                                    <th>EXCEDENT BRUT D'EXPLOITATION</th>
+
+                                                                        <th><?= $prevr->ebe ?></th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>DOTATATION AUX AMORTISSEMENTS ET AUX PROVISIONS</td>
+
+                                                                        <td><?= $prevr->dap ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>RESULTAT D'EXPLOITATION</th>
+
+                                                                        <th><?= $prevr->re ?></th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>PRODUIT FINANCIER</td>
+
+                                                                        <td><?= $prevr->pf ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>CHARGES FINANCIERES</td>
+
+                                                                        <td><?= $prevr->cfi ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>RESULTAT FINANCIER</th>
+
+                                                                        <th><?= $prevr->rf ?></th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>PRODUIT EXCEPTIONNEL</td>
+
+                                                                        <td><?= $prevr->pe ?></td>
 
 
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>CHARGES EXCEPTIONNELLES</td>
+
+                                                                        <td><?= $prevr->ce ?></td>
+
+                                                                    @endforeach
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>RESULTAT EXCEPTIONNEL</th>
+
+                                                                        <th><?= $prevr->re ?></th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>RESULTAT COURANT AVANT IMPOT</th>
+
+                                                                        <th><?= $prevr->rcai ?></th>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>IMPOTS</td>
+
+                                                                        <td><?= $prevr->impots ?></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>RESULTAT NET</th>
+
+                                                                        <th><?= $prevr->rn ?></th>
+
+                                                                </tr>
+                                                            </tbody>
                                                         </table>
                                                   </div>
 
