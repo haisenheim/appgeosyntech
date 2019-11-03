@@ -9,6 +9,7 @@ class Reportbilan extends Model
     //
 	protected $guarded =[];
 	//public $timestamps=false;
+	protected $table = 'testresultats';
 	public function projet(){
 		return $this->belongsTo('App\Models\Projet');
 	}

@@ -25,7 +25,7 @@
                        <div class="">
                             <div class="">
                         <!-- DIRECT CHAT SUCCESS -->
-                        <div class="card card-sucress cardutline direct-chat direct-chat-success">
+                        <div class="card card-success cardutline direct-chat direct-chat-success">
                           <div class="card-header">
                             <h3 style="font-family: cursive" class="card-title">Echanger avec le promoteur</h3>
 
@@ -42,7 +42,18 @@
                             @foreach($investissement->comments as $comment)
                               <!-- Message. Default to the left -->
                               @if($comment->role_id==4)
-                              <div class="direct-chat-msg">
+                                  <div class="direct-chat-msg right">
+                                        <div class="direct-chat-infos clearfix">
+                                          <span class="direct-chat-timestamp float-left">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
+                                        </div>
+                                        <!-- /.direct-chat-infos -->
+                                        <div class="direct-chat-text">
+                                         {{ $comment->body }}
+                                        </div>
+                                    <!-- /.direct-chat-text -->
+                                  </div>
+                              @else
+                                <div class="direct-chat-msg">
 
                                 <div class="direct-chat-infos clearfix">
                                   <span class="direct-chat-timestamp float-right">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
@@ -52,18 +63,7 @@
                                 </div>
                                 <!-- /.direct-chat-text -->
                               </div>
-                              @else
 
-                                <div class="direct-chat-msg right">
-                                    <div class="direct-chat-infos clearfix">
-                                      <span class="direct-chat-timestamp float-left">{{ date_format($comment->created_at, 'd/m/y h:i') }}</span>
-                                    </div>
-                                    <!-- /.direct-chat-infos -->
-                                    <div class="direct-chat-text">
-                                     {{ $comment->body }}
-                                    </div>
-                                <!-- /.direct-chat-text -->
-                              </div>
                               @endif
                             @endforeach
                             </div>
