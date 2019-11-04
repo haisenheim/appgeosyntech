@@ -6,6 +6,7 @@
 
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
@@ -953,100 +954,84 @@
 
     <!-- Edition de la synthese du diagnostic externe-->
         <div class="modal fade" id="synDiagExtModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        	<form method="post" action="/consultant/dossier/synthese2">
-        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-        		{{csrf_field()}}
+
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
-        				<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC EXTERNE</span></h5>
+        				<div class="modal-header bg-info">
+
+        					<h5 class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC EXTERNE</span></h5>
         				</div>
         				<div class="modal-body">
-        					<div class="form-group">
-        						<textarea class="form-control"  name="synthese2" id="synthese2" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_externe }}</textarea>
-        					</div>
-        				</div>
-        				<div class="modal-footer">
-        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+        				    <div class="card">
+        				        <div class="card-body">
+        				            <p><?= $projet->synthese2 ?></p>
+        				        </div>
+        				    </div>
+
         				</div>
 
         			</div>
         		</div>
-        	</form>
-
-
-
-
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('#synthese2').summernote({
-                        height: 300,
-                        tabsize: 2,
-                        followingToolbar: true,
-                        lang:'fr-FR'
-                      });
-                    });
-                  </script>
-
 
         </div>
 
         <!-- Edition de la synthese du diagnostic Strategique -->
         <div class="modal fade" id="synDiagStratModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        	<form method="post" action="/consultant/dossier/synthese3">
-        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-        		{{csrf_field()}}
+
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
-        				<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        				<div class="modal-header bg-primary">
+
         					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC STRATEGIQUE</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
         				</div>
         				<div class="modal-body">
-        					<div class="form-group">
-        						<textarea class="form-control"  name="synthese3" id="synthese3" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_strategique }}</textarea>
-        					</div>
+        				    <div class="card">
+        				        <div class="card-body">
+        				            <p><?= $projet->synthese3 ?></p>
+        				        </div>
+        				    </div>
         				</div>
-        				<div class="modal-footer">
-        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
-        				</div>
-
         			</div>
         		</div>
-        	</form>
-
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('#synthese3').summernote({
-                        height: 300,
-                        tabsize: 2,
-                        followingToolbar: true,
-                        lang:'fr-FR'
-                      });
-                    });
-                  </script>
-
 
         </div>
 
-
-
-
         <!-- Edition du teaser-->
         <div class="modal fade" id="teaserModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        	<form method="post" action="/consultant/dossier/teaser">
-        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-        		{{csrf_field()}}
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
-        				<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> ELABORATION DU TEASER</span></h5>
+        				<div class="modal-header bg-success">
+        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>TEASER</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
         				</div>
         				<div class="modal-body">
+        				    <div class="card">
+        				        <div class="card-header">
+        				            <small class=""><?= $projet->teaser?date_format($projet->teaser->created_at,'d/m/Y'):'-' ?> - <span class="text-primary"><?= $projet->teaser?$projet->teaser->user->name:'-' ?></span></small>
+        				        </div>
+        				        <div class="card-body">
+                                    <dl>
+                                      <dt>CONTEXTE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->contexte:'-' ?></dd>
+                                      <dt>PROBLEMATIQUE</dt>
+                                     <dd><?= $projet->teaser?$projet->teaser->problematique:'-' ?></dd>
+                                      <dt>MARCHE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->marche:'-' ?></dd>
+                                      <dt>STRATEGIE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->strategie:'-' ?></dd>
+                                      <dt>CHIFFRES CLEFS</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->chiffres:'-' ?></dd>
+                                      <dt>FOCUS REALISATION</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->focus_realisations:'-' ?></dd>
+                                    </dl>
+        				        </div>
+        				    </div>
         					 <div class="row">
-
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                         <label for="contexte">CONTEXTE</label>
@@ -1087,13 +1072,9 @@
                                 </div>
                             </div>
         				</div>
-        				<div class="modal-footer">
-        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
-        				</div>
-
         			</div>
         		</div>
-        	</form>
+
 
                 <script type="text/javascript">
                     $(document).ready(function() {
