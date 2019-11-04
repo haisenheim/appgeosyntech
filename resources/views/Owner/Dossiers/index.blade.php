@@ -71,13 +71,12 @@
     <nav class="floating-menu">
         <ul class="main-menu">
             <li>
-                <a href="/owner/" class="ripple">
+                <a title="Accueil" href="/owner/" class="ripple">
                     <i class="fas fa-home fa-lg"></i>
                 </a>
             </li>
-
             <li>
-                <a href="/owner/dossiers/create" class="ripple">
+                <a title="Nouveau Dossier" href="/owner/dossiers/create" class="ripple">
                     <i class="fa fa-plus-circle fa-lg"></i>
                 </a>
             </li>

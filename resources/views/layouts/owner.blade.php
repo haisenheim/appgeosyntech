@@ -85,7 +85,9 @@
   <!-- Content Wrapper. Contains page content -->
   <div style="" class="">
     <div style="height: 300px;" class="content-header bg-gradient-gray">
-
+        <div>
+             @yield('nav_actions')
+        </div>
      </div>
 
     <!-- Main content -->
@@ -99,9 +101,6 @@
              @yield('content')
         </div>
 
-        <div>
-             @yield('nav_actions')
-        </div>
 
     </section>
     <!-- /.content -->
