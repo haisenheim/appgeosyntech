@@ -232,9 +232,9 @@
 
                                     <div class="setup-content" id="step-5">
                                         <div class="card">
-                                            <div class="card-header">
-                                                <h4 class="card-title">DIAGNOSTIC FINANCIER</h4>
-                                                    <ul class="nav nav-pills ml-auto p-2" id="objTabs" role="tablist">
+                                            <div class="card-header  d-flex p-0">
+                                                <h4 class="card-title p-3">DIAGNOSTIC FINANCIER</h4>
+                                                    <ul style="margin-left: auto" class="nav nav-pills ml-auto p-2" id="objTabs" role="tablist">
                                                          <li role="presentation" class="nav-item">
                                                              <a class="nav-link active" href="#n1" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> <?= date('Y') - 1 ?></a>
                                                          </li>

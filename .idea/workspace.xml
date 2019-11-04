@@ -111,8 +111,8 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.544898" vertical-offset="485" max-vertical-offset="14064">
-              <caret line="254" column="72" selection-start-line="254" selection-start-column="72" selection-end-line="254" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.3265306" vertical-offset="304" max-vertical-offset="14064">
+              <caret line="236" column="80" selection-start-line="236" selection-start-column="80" selection-end-line="236" selection-end-column="80" />
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#0;tag#form#0;tag#div#0;tag#div#1;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
@@ -120,8 +120,9 @@
                 <element signature="tag#div#1;tag#form#0;tag#div#0;tag#div#1;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#2;tag#form#0;tag#div#0;tag#div#1;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#3;tag#form#0;tag#div#0;tag#div#1;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <marker date="1572863688669" expanded="false" signature="66608:66624" placeholder="..." />
-                <marker date="1572863688669" expanded="false" signature="67428:67444" placeholder="..." />
+                <element signature="e#16843#16868#0#HTML" expanded="true" />
+                <marker date="1572863987600" expanded="false" signature="66650:66666" placeholder="..." />
+                <marker date="1572863987600" expanded="false" signature="67470:67486" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1162,8 +1163,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.544898" vertical-offset="485" max-vertical-offset="14064">
-          <caret line="254" column="72" selection-start-line="254" selection-start-column="72" selection-end-line="254" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.3265306" vertical-offset="304" max-vertical-offset="14064">
+          <caret line="236" column="80" selection-start-line="236" selection-start-column="80" selection-end-line="236" selection-end-column="80" />
           <folding>
             <element signature="tag#div#0;tag#div#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#0;tag#form#0;tag#div#0;tag#div#1;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
@@ -1171,8 +1172,9 @@
             <element signature="tag#div#1;tag#form#0;tag#div#0;tag#div#1;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#2;tag#form#0;tag#div#0;tag#div#1;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#3;tag#form#0;tag#div#0;tag#div#1;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <marker date="1572863688669" expanded="false" signature="66608:66624" placeholder="..." />
-            <marker date="1572863688669" expanded="false" signature="67428:67444" placeholder="..." />
+            <element signature="e#16843#16868#0#HTML" expanded="true" />
+            <marker date="1572863987600" expanded="false" signature="66650:66666" placeholder="..." />
+            <marker date="1572863987600" expanded="false" signature="67470:67486" placeholder="..." />
           </folding>
         </state>
       </provider>
