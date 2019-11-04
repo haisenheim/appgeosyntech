@@ -1,9 +1,9 @@
 @extends('......layouts.owner')
 
 @section('content')
-    <div class="">
+    <div class="container-fluid">
         <div class="card">
-            <div class="widget-header">
+            <div class="card-header p-20">
                 <h3 class=""> NOUVEAU DOSSIER</h3>
             </div>
             <div class="card-body">

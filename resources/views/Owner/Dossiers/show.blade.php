@@ -1126,9 +1126,57 @@
 @endsection
 
 @section('action')
-@if($projet->modepaiement_id>1)
-    @if($projet->validated_step==1)
-        <a class="btn btn-xs btn-success" href="/owner/dossiers/add-step"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
-    @endif
-@endif
+
+@endsection
+
+@section('nav_actions')
+<main>
+    <nav class="floating-menu">
+        <ul class="main-menu">
+
+            @if($projet->modepaiement_id>1)
+                @if($projet->validated_step==1)
+                   <li>
+                        <a title="Editer le diagnostic externe" class="ripple" href="/owner/dossiers/add-step"><i class="fa fa-pencil"></i></a>
+                   </li>
+                @endif
+            @endif
+            @if($projet->investissements)
+
+                   <li>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                   </li>
+
+            @endif
+            <li>
+                <a title=Modifier" href="#" class="ripple">
+                    <i class="fa fa-edit fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a title="Nouveau Dossier" href="/owner/dossiers/create" class="ripple">
+                    <i class="fa fa-plus-circle fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="menu-bg"></div>
+    </nav>
+</main>
+
+<div class="modal fade" id="angelsModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h4  class="modal-title text-center">LISTES DES INVESTISSEURS POTENTIELS</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div style="overflow: scroll;" class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection
