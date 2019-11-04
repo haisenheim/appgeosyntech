@@ -231,33 +231,28 @@
                                     </div>
 
                                     <div class="setup-content" id="step-5">
-                                        <div class="">
-                                            <fieldset class="df" id="df">
-                                                <legend>DIAGNOSTIC FINANCIER</legend>
-                                                <div class="">
-                                                    <div class="row">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">DIAGNOSTIC FINANCIER</h4>
+                                                    <ul class="nav nav-pills ml-auto p-2" id="objTabs" role="tablist">
+                                                         <li role="presentation" class="nav-item">
+                                                             <a class="nav-link active" href="#n1" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> <?= date('Y') - 1 ?></a>
+                                                         </li>
 
+                                                         <li role="presentation" class="nav-item">
+                                                             <a class="nav-link" href="#n2" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> <?= date('Y') - 2 ?></a>
+                                                         </li>
+                                                         <li role="presentation" class="nav-item">
+                                                             <a class="nav-link " href="#n3" role="tab" id="tab3" data-toggle="tab" aria-controls="n3" aria-expanded="false"><span class=""></span> <?= date('Y') - 3 ?></a>
+                                                         </li>
 
-                                                        <div class="col-md-7 col-md-offset-4 col-sm-12">
-                                                            <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                                                <li role="presentation" class="active">
-                                                                    <a href="#n1" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> <?= date('Y') - 1 ?></a>
-                                                                </li>
+                                                    </ul>
+                                            </div>
 
-                                                                <li role="presentation" class="">
-                                                                    <a href="#n2" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> <?= date('Y') - 2 ?></a>
-                                                                </li>
-                                                                <li role="presentation" class="">
-                                                                    <a href="#n3" role="tab" id="tab3" data-toggle="tab" aria-controls="n3" aria-expanded="false"><span class=""></span> <?= date('Y') - 3 ?></a>
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
+                                             <div class="df card-body" id="df">
                                                     <div class="tab-content" id="myTabContent">
 
-                                                    <div class="tab-pane fade active in" role="tabpanel" id="n1" aria-labelledby="tab1">
+                                                    <div class="tab-pane active " role="tabpanel" id="n1" aria-labelledby="tab1">
 
                                                         <fieldset id="compte1" class="cr">
                                                             <legend>COMPTE DE RESULTAT</legend>
@@ -746,13 +741,12 @@
 
                                                     </div>
 
-                                                    </div>
                                                     <div class="btn-div card-footer text-center">
                                                         <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
                                                        <button id="btn-save" class="btn btn-success btn-sm"><i class="fa fa-save"></i> ENREGISTRER</button>
                                                     </div>
                                                 </div>
-                                            </fieldset>
+
                                         </div>
                                     </div>
                                 </form>
