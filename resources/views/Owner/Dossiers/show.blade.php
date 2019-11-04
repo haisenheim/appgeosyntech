@@ -1186,8 +1186,8 @@
                             @foreach($projet->investissements as $invest)
                                 <tr>
                                     <td>{{ $invest->angel->name }}</td>
-                                    <td>{{ date_format($invest->created_at, 'd/m/Y H:i') }}</td>
-                                    <td>{{ date_format($invest->rencontre, 'd/m/Y') }}</td>
+                                    <td><?php $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
+                                    <td><?= $invest->rencontre?date_format($invest->rencontre, 'd/m/Y'):'-' ?></td>
                                     <td><a class="btn btn-xs" title="Afficher" href="#"><i class="fa fa-eye"></i></a></td>
                                 </tr>
                             @endforeach
