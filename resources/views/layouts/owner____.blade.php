@@ -77,7 +77,7 @@
   <aside class="main-sidebar elevation-4 sidebar-light-success">
     <!-- Brand Logo -->
     <a href="#" class="brand-link navbar-success">
-      <img src="{{asset('img/logo-obac.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{asset('img/logo-obac.png')}}" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">OBAC ALERT</span>
     </a>

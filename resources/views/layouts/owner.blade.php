@@ -91,7 +91,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div style="" class="">
-    <div style="height: 300px;" class="content-header bg-gradient-white">
+    <div style="height: 300px;" class="content-header bg-gradient-gray">
 
      </div>
 
