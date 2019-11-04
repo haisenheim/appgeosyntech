@@ -71,7 +71,7 @@
 
 
 <main>
-    <p>Scroll down and watch the menu remain fixed in the same position, as though it was floating.</p>
+
     <nav class="floating-menu">
         <ul class="main-menu">
             <li>
