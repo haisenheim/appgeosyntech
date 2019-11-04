@@ -1162,7 +1162,7 @@
 </main>
 
 <div class="modal fade" id="angelsModal">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-info">
         <div class="modal-content">
             <div class="modal-header bg-success">
                 <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
@@ -1170,31 +1170,35 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-            <div style="overflow: scroll;" class="modal-body">
-                @if(count($projet->investissements)>=1)
-                    <table id="table-invest" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Depuis le</th>
-                          <th>RDV</th>
-                          <th></th>
+            <div class="modal-body">
+            <div class="card card-danger">
+                <div class="card-body">
+                     @if(count($projet->investissements)>=1)
+                        <table id="table-invest" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Depuis le</th>
+                              <th>RDV</th>
+                              <th></th>
 
-                        </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($projet->investissements as $invest)
-                                <tr>
-                                    <td>{{ $invest->angel->name }}</td>
-                                    <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
-                                    <td><?= $invest->rencontre ?></td>
-                                    <td><a class="btn btn-xs" title="Afficher" href="#"><i class="fa fa-eye"></i></a></td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($projet->investissements as $invest)
+                                    <tr>
+                                        <td>{{ $invest->angel->name }}</td>
+                                        <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
+                                        <td><?= $invest->rencontre ?></td>
+                                        <td><a class="btn btn-xs" title="Afficher" href="#"><i class="fa fa-eye"></i></a></td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
 
                 @endif
+                </div>
+            </div>
             </div>
         </div>
     </div>
