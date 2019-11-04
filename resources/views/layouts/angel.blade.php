@@ -55,6 +55,30 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
 
+
+        <!-- Notifications Dropdown Menu -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                  <i class="far fa-bell"></i>
+                  <span class="badge badge-warning navbar-badge">12</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                  <span class="dropdown-item dropdown-header">12 Notifications</span>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">
+                    <i class="fas fa-envelope mr-2"></i> 4 nouveaux projets
+                    <span class="float-right text-muted text-sm">3 mins</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">
+                    <i class="fas fa-users mr-2"></i>8 cessions d'actifs
+                    <span class="float-right text-muted text-sm">12 hours</span>
+                  </a>
+
+
+                </div>
+              </li>
+
           <!-- Actions Dropdown Menu -->
           <li class="nav-item dropdown">
             @yield('nav_actions')
