@@ -62,22 +62,16 @@
 
 @section('nav_actions')
     <a class="nav-link" data-toggle="dropdown" href="#">
-             <i class="fas fa-cogs"></i>
-             <span class="badge  navbar-badge"></span>
+             Actions <i class="fas fa-angle-down"></i>
+             <span class="badge  navbar-badge"> </span>
            </a>
            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-
              <a href="/owner/dossiers/create" class="dropdown-item">
                <i class="fas fa-plus-circle mr-2"></i> Nouveau dossier
-
              </a>
              <div class="dropdown-divider"></div>
              <a href="#" class="dropdown-item">
                <i class="fas fa-envelope mr-2"></i> Contacter OBAC
-
              </a>
-
-
            </div>
-
 @endsection
