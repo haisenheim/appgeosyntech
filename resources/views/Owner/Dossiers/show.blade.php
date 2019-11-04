@@ -64,7 +64,7 @@
                             @endif
 
                              @if($projet->etape>=4)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> EDITER LE TEASER</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i>TEASER</button>
                             @endif
 
 
@@ -910,45 +910,26 @@
 
     <!-- Edition de la synthese du diagnostic interne -->
     <div class="modal fade" id="synDiagIntModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-    	<form method="post" action="/consultant/dossier/synthese1">
-    		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-    		{{csrf_field()}}
+
     		<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
-    				<div class="modal-header">
-    					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC INTERNE</span></h5>
-    				</div>
-    				<div class="modal-body">
-    					<div class="form-group">
-    						<textarea class="form-control"  name="synthese1" id="synthese1" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_interne }}</textarea>
-    					</div>
-    				</div>
-    				<div class="modal-footer">
-    					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
-    				</div>
+        				<div class="modal-header bg-info">
+        					<h5 class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC INTERNE</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+        				</div>
+        				<div class="modal-body">
+        				    <div class="card">
+        				        <div class="card-body">
+        				            <p><?= $projet->synthese_diagnostic_interne ?></p>
+        				        </div>
+        				    </div>
 
-    			</div>
+        				</div>
+
+        			</div>
     		</div>
-    	</form>
-
-
-    	<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-            <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-
-            <script type="text/javascript">
-                $(document).ready(function() {
-                  $('#synthes').summernote({
-                    height: 300,
-                    tabsize: 2,
-                    followingToolbar: true,
-                    lang:'fr-FR'
-                  });
-                });
-              </script>
-
-
     </div>
 
 
@@ -958,13 +939,15 @@
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
         				<div class="modal-header bg-info">
-
         					<h5 class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC EXTERNE</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
         				</div>
         				<div class="modal-body">
         				    <div class="card">
         				        <div class="card-body">
-        				            <p><?= $projet->synthese2 ?></p>
+        				            <p><?= $projet->synthese_diagnostic_externe ?></p>
         				        </div>
         				    </div>
 
@@ -990,7 +973,7 @@
         				<div class="modal-body">
         				    <div class="card">
         				        <div class="card-body">
-        				            <p><?= $projet->synthese3 ?></p>
+        				            <p><?= $projet->synthese_diagnostic_strategique ?></p>
         				        </div>
         				    </div>
         				</div>
@@ -1031,46 +1014,7 @@
                                     </dl>
         				        </div>
         				    </div>
-        					 <div class="row">
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="contexte">CONTEXTE</label>
-                                        <textarea name="contexte" rows="3" id="contexte"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="problematique">PROBLEMATIQUE</label>
-                                        <input name="problematique" type="text" class="form-control" id="problematique"/>
-                                    </div>
 
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                <div class="form-group">
-                                     <label for="marche">MARCHE</label>
-                                    <input name="marche" type="text" class="form-control" id="marche"/>
-                                </div>
-
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="strategie">STRATEGIE</label>
-                                        <input name="strategie" type="text" class="form-control" id="strategie"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="chiffres">CHIFFRES CLES</label>
-                                        <input name="chiffres" type="text" class="form-control" id="chiffres" placeholder="Saisir ici quelques chiffres clefs" />
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="">FOCUS SUR LES REALISATIONS DE L'ENTREPRISE</label>
-                                        <textarea name="focus_realisations" class="form-control telt" id="focus_realisations" placeholder=""></textarea>
-                                    </div>
-                                </div>
-                            </div>
         				</div>
         			</div>
         		</div>

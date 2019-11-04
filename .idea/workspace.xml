@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Teaser.php" afterPath="$PROJECT_DIR$/app/Models/Teaser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -78,31 +78,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.52" vertical-offset="15750" max-vertical-offset="18896">
-              <caret line="1014" column="204" selection-start-line="1014" selection-start-column="204" selection-end-line="1014" selection-end-column="204" />
+            <state vertical-scroll-proportion="0.03265306" vertical-offset="13968" max-vertical-offset="17504">
+              <caret line="874" column="18" selection-start-line="874" selection-start-column="18" selection-end-line="874" selection-end-column="18" />
               <folding>
-                <element signature="tag#div#3" expanded="false" />
-                <element signature="e#67621#67685#0#HTML" expanded="true" />
-                <element signature="e#68601#68665#0#HTML" expanded="true" />
-                <element signature="e#75646#75665#0#HTML" expanded="true" />
-                <marker date="1572878864375" expanded="false" signature="59916:59955" placeholder="..." />
-                <marker date="1572878864375" expanded="false" signature="64048:64058" placeholder="..." />
-                <marker date="1572878864375" expanded="false" signature="64116:64126" placeholder="..." />
-                <marker date="1572878864375" expanded="false" signature="64185:64195" placeholder="..." />
-                <marker date="1572878864375" expanded="false" signature="64269:64279" placeholder="..." />
+                <element signature="e#66835#66899#0#HTML" expanded="true" />
+                <element signature="tag#div#4" expanded="false" />
+                <element signature="e#67837#67901#0#HTML" expanded="true" />
+                <element signature="e#72302#72321#0#HTML" expanded="true" />
+                <marker date="1572879334579" expanded="false" signature="59905:59944" placeholder="..." />
+                <marker date="1572879334579" expanded="false" signature="64037:64047" placeholder="..." />
+                <marker date="1572879334579" expanded="false" signature="64105:64115" placeholder="..." />
+                <marker date="1572879334579" expanded="false" signature="64174:64184" placeholder="..." />
+                <marker date="1572879334579" expanded="false" signature="64258:64268" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Teaser.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Teaser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Teaser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47713718" vertical-offset="0" max-vertical-offset="503">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state vertical-scroll-proportion="-8.96" vertical-offset="0" max-vertical-offset="384">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -239,8 +239,8 @@
         <option value="$PROJECT_DIR$/public/css/floating-menu.css" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/owner.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Teaser.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       </list>
     </option>
   </component>
@@ -1143,29 +1143,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Teaser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.52" vertical-offset="15750" max-vertical-offset="18896">
-          <caret line="1014" column="204" selection-start-line="1014" selection-start-column="204" selection-end-line="1014" selection-end-column="204" />
-          <folding>
-            <element signature="tag#div#3" expanded="false" />
-            <element signature="e#67621#67685#0#HTML" expanded="true" />
-            <element signature="e#68601#68665#0#HTML" expanded="true" />
-            <element signature="e#75646#75665#0#HTML" expanded="true" />
-            <marker date="1572878864375" expanded="false" signature="59916:59955" placeholder="..." />
-            <marker date="1572878864375" expanded="false" signature="64048:64058" placeholder="..." />
-            <marker date="1572878864375" expanded="false" signature="64116:64126" placeholder="..." />
-            <marker date="1572878864375" expanded="false" signature="64185:64195" placeholder="..." />
-            <marker date="1572878864375" expanded="false" signature="64269:64279" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-8.96" vertical-offset="0" max-vertical-offset="384">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Teaser.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47713718" vertical-offset="0" max-vertical-offset="503">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
+        <state vertical-scroll-proportion="0.03265306" vertical-offset="13968" max-vertical-offset="17504">
+          <caret line="874" column="18" selection-start-line="874" selection-start-column="18" selection-end-line="874" selection-end-column="18" />
+          <folding>
+            <element signature="e#66835#66899#0#HTML" expanded="true" />
+            <element signature="tag#div#4" expanded="false" />
+            <element signature="e#67837#67901#0#HTML" expanded="true" />
+            <element signature="e#72302#72321#0#HTML" expanded="true" />
+            <marker date="1572879334579" expanded="false" signature="59905:59944" placeholder="..." />
+            <marker date="1572879334579" expanded="false" signature="64037:64047" placeholder="..." />
+            <marker date="1572879334579" expanded="false" signature="64105:64115" placeholder="..." />
+            <marker date="1572879334579" expanded="false" signature="64174:64184" placeholder="..." />
+            <marker date="1572879334579" expanded="false" signature="64258:64268" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
