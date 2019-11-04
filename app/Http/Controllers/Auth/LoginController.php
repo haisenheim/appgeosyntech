@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -38,6 +40,17 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
 
     }
+
+	protected function authenticated(Request $request, $user)
+	{
+		//
+		if(Auth::user()->role_id==4) {
+			$projet = DB::table('projets')->get(['name', 'montant', 'imageUri'])->last();
+			$actif = DB::table('actifs')->get(['name', 'prix', 'imageUri', 'description', 'token'])->last();
+			$slider = ['projet' => $projet, 'actif' => $actif];
+			Session::put('slides', $slider);
+		}
+	}
 
     public function logout(){
         Auth::logout();
