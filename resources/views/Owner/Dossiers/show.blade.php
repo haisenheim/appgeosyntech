@@ -1174,7 +1174,7 @@
             <div class="card card-danger">
                 <div class="card-body">
                      @if(count($projet->investissements)>=1)
-                        <table id="table-invest" class="table table-bordered table-hover">
+                        <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
                             <thead>
                             <tr>
                               <th>#</th>
@@ -1203,7 +1203,7 @@
         </div>
     </div>
 </div>
-
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script>
   $(function () {
     $("#table-invest").DataTable();
