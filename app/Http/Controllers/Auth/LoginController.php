@@ -41,16 +41,7 @@ class LoginController extends Controller
 
     }
 
-	protected function authenticated(Request $request, $user)
-	{
-		//
-		if(Auth::user()->role_id==4) {
-			$projet = DB::table('projets')->get(['name', 'montant', 'imageUri'])->last();
-			$actif = DB::table('actifs')->get(['name', 'prix', 'imageUri', 'description', 'token'])->last();
-			$slider = ['projet' => $projet, 'actif' => $actif];
-			Session::put('slides', $slider);
-		}
-	}
+
 
     public function logout(){
         Auth::logout();
