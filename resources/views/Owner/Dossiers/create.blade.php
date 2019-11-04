@@ -1,12 +1,12 @@
 @extends('......layouts.owner')
 
 @section('content')
-    <div class="md-container">
-        <div class="widget">
+    <div class="">
+        <div class="card">
             <div class="widget-header">
-                <h5 class=""><i class="fa fa-user"></i> NOUVEAU DOSSIER</h5>
+                <h3 class=""> NOUVEAU DOSSIER</h3>
             </div>
-            <div class="widget-content">
+            <div class="card-body">
                 <form enctype="multipart/form-data" class="form" action="{{route('owner.dossiers.store')}}" method="post">
                     {{csrf_field()}}
 
