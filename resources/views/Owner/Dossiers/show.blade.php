@@ -1141,12 +1141,10 @@
                    </li>
                 @endif
             @endif
-            @if($projet->investissements)
-
+            @if(count($projet->investissements)>=1)
                    <li>
                         <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
                    </li>
-
             @endif
             <li>
                 <a title=Modifier" href="#" class="ripple">
@@ -1167,16 +1165,46 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-success">
-                <h4  class="modal-title text-center">LISTES DES INVESTISSEURS POTENTIELS</h4>
+                <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
             <div style="overflow: scroll;" class="modal-body">
+                @if(count($projet->investissements)>=1)
+                    <table id="table-invest" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Depuis le</th>
+                          <th>RDV</th>
+                          <th></th>
 
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($projet->investissements as $invest)
+                                <tr>
+                                    <td>{{ $invest->angel->name }}</td>
+                                    <td>{{ date_format($invest->created_at, 'd/m/Y H:i') }}</td>
+                                    <td>{{ date_format($invest->rencontre, 'd/m/Y') }}</td>
+                                    <td><a class="btn btn-xs" title="Afficher" href="#"><i class="fa fa-eye"></i></a></td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
+                @endif
             </div>
         </div>
     </div>
 </div>
+
+<script>
+  $(function () {
+    $("#table-invest").DataTable();
+
+  });
+</script>
 
 @endsection
