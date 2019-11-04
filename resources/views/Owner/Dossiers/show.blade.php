@@ -1162,7 +1162,7 @@
 </main>
 
 <div class="modal fade" id="angelsModal">
-    <div class="modal-dialog modal-info">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-success">
                 <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
