@@ -67,6 +67,45 @@
 @endsection
 
 @section('nav_actions')
+
+
+
+<main>
+    <p>Scroll down and watch the menu remain fixed in the same position, as though it was floating.</p>
+    <nav class="floating-menu">
+        <ul class="main-menu">
+            <li>
+                <a href="#" class="ripple">
+                    <i class="fas fa-home fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="ripple">
+                    <i class="far fa-user fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="ripple">
+                    <i class="far fa-address-card fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="ripple">
+                    <i class="fas fa-cogs fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="ripple">
+                    <i class="fab fa-blogger-b fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="menu-bg"></div>
+    </nav>
+</main>
+
+
+
     <a class="nav-link" data-toggle="dropdown" href="#">
              Actions <i class="fas fa-angle-down"></i>
              <span class="badge  navbar-badge"> </span>

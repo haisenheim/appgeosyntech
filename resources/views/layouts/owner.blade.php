@@ -53,11 +53,6 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-
-          <!-- Actions Dropdown Menu -->
-          <li class="nav-item dropdown">
-            @yield('nav_actions')
-          </li>
           <!-- Profil Dropdown Menu -->
           <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
@@ -80,8 +75,6 @@
               </a>
             </div>
           </li>
-
-
         </ul>
   </nav>
   <!-- /.navbar -->
@@ -104,10 +97,11 @@
         <div style="background: url({{asset('img/logo-obac.png')}}); background-size: cover">
             <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
              @yield('content')
-
         </div>
 
-
+        <div>
+             @yield('nav_actions')
+        </div>
 
     </section>
     <!-- /.content -->
