@@ -1105,6 +1105,7 @@
                               <th>#</th>
                               <th>Depuis le</th>
                               <th>RDV</th>
+                              <th>STATUT</th>
                               <th></th>
 
                             </tr>
@@ -1115,7 +1116,28 @@
                                         <td>{{ $invest->angel->name }}</td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
                                         <td><?= $invest->rencontre ?></td>
-                                        <td><a class="btn btn-xs" title="Afficher" href="#"><i class="fa fa-eye"></i></a></td>
+                                        <td></td>
+                                        <td>
+
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default btn-flat">Actions</button>
+                                                <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
+                                                  <span class="caret"></span>
+
+                                                </button>
+                                                <div class="dropdown-menu" role="menu">
+                                                 <?php if($invest->lettre): ?>
+                                                    <a class="dropdown-item" href="#">Lettre d'intention</a>
+                                                  <?php endif; ?>
+                                                  <?php if($invest->validate): ?>
+                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
+                                                  <?php else: ?>
+                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
+                                                  <?php endif; ?>
+
+                                                </div>
+                                              </div>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

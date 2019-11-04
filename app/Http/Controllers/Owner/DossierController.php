@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Owner;
 use App\Http\Controllers\Controller;
 use App\Models\Bilan;
 use App\Models\ChoicesProjet;
+use App\Models\Investissement;
 use App\Models\ProduitsProjet;
 use App\Models\Projet;
 use App\Models\Resultat;
@@ -43,6 +44,16 @@ class DossierController extends Controller
 			$choix[] = $choice->choice_id;
 		}
 		return response()->json($choix);
+	}
+
+	public function openDataroom($token){
+		$invest = Investissement::updateOrCreate(['token'=>$token],['validated'=>1]);
+		return back();
+	}
+
+	public function closeDataroom($token){
+		$invest = Investissement::updateOrCreate(['token'=>$token],['validated'=>0]);
+		return back();
 	}
 
     /**

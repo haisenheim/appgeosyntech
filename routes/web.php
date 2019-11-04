@@ -138,6 +138,8 @@ Route::prefix('owner')
 	    Route::post('dossier/add-tag','DossierController@addTags');
 	    Route::post('actifs/save','ActifController@save')->name('update.actif');
 	    Route::get('dossier/edit-field','DossierController@editFieldJson');
+	    Route::get('investissement/open/{{token}}','DossierController@openDataroom');
+	    Route::get('investissement/close/{{token}}','DossierController@closeDataroom');
     });
 
 
