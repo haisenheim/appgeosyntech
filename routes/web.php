@@ -68,6 +68,8 @@ Route::prefix('admin')
 	    Route::get('actif/enable/{token}','ActifController@enable')->name('enable.actif');
         //Route::resource('variantesfinancements','VfinancementController');
 	    Route::post('villes/save','VilleController@save');
+	    Route::get('params/','Parametres@index');
+	    Route::post('params/','Parametres@save');
     });
 
 //Liste des routes de l'investisseur

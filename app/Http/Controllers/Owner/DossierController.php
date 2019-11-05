@@ -56,6 +56,30 @@ class DossierController extends Controller
 		return back();
 	}
 
+	public function createLetter($token){
+		$invest = Investissement::where('token',$token)->first();
+		$letter = $invest->letter;
+		if($letter){
+			// Creating the new document...
+			$phpWord = new \PhpOffice\PhpWord\PhpWord();
+
+			/* Note: any element you append to a document must reside inside of a Section. */
+
+// Adding an empty Section to the document...
+			$section = $phpWord->addSection();
+// Adding Text element to the Section having font styled by default...
+			$section->addText(
+				'"Learn from yesterday, live for today, hope for tomorrow. '
+				. 'The important thing is not to stop questioning." '
+				. '(Albert Einstein)'
+			);
+
+		}else{
+			return back();
+		}
+
+	}
+
     /**
      * Show the form for creating a new resource.
      *

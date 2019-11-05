@@ -242,6 +242,13 @@
                   <p>Pays</p>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a href="/admin/params" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Parametres systeme</p>
+                </a>
+              </li>
               
             </ul>
           </li>
