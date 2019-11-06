@@ -48,6 +48,9 @@ class ParametresController extends Controller
 			$ext = $pacte->getClientOriginalExtension();
 			$arr_ext = array('doc','docx','odt');
 			if(in_array($ext,$arr_ext)) {
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
 				if (!file_exists(public_path('files/docs'))) {
 					mkdir(public_path('files/docs'));
 				}
