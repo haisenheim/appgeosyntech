@@ -149,6 +149,34 @@ class DossierController extends Controller
 			if(!file_exists(public_path('img').'/projets')){
 				mkdir(public_path('img').'/projets');
 			}
+			//dd($projet);
+			if(file_exists(public_path('img').'/projets/'.$projet->token.'.'.$ext)){
+				unlink(public_path('img').'/projets/'.$projet->token.'.'.$ext);
+			}
+			$name = $projet->token.'.'.$ext;
+			$file->move(public_path('img/projets'), $name);
+			//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
+			$projet->imageUri = 'projets/'.$name;
+			$projet->save();
+		}
+		return redirect()->back();
+	}
+
+	/*
+	 *  Chargement de l'ordre de virement
+	 */
+
+	public function uploadOv(Request $request){
+
+		//dd(public_path('img'));
+		$projet = Projet::where('token',$request->projet_token)->first();
+		$file = $request->imageUri;
+		$ext = $file->getClientOriginalExtension();
+		$arr_ext = array('jpg','png','jpeg','gif');
+		if(in_array($ext,$arr_ext)){
+			if(!file_exists(public_path('img').'/projets')){
+				mkdir(public_path('img').'/projets');
+			}
 
 			//dd($projet);
 

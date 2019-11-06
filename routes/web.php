@@ -71,6 +71,11 @@ Route::prefix('admin')
 	    Route::post('villes/save','VilleController@save');
 	    Route::get('params/','ParametresController@index');
 	    Route::post('params/','ParametresController@store');
+	    Route::get('dossier/docs/open/{token}','ProjetController@openDoc');
+	    Route::get('dossier/docs/close/{token}','ProjetController@closeDoc');
+	    Route::get('dossier/enable/{token}','ProjetController@enable');
+	    Route::get('dossier/disable/{token}','ProjetController@disable');
+	    Route::get('dossier/validate-ordre-virement/{token}','ProjetController@validateOrdre');
     });
 
 //Liste des routes de l'investisseur

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Investissement;
 use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
@@ -47,9 +48,10 @@ class ProjetController extends Controller
 	 * Validation du premier paiement
 	 */
 
-	public function validateDiagInterne($token){
+	public function validateDiagInterne(Request $request, $token){
 
 		Projet::updateOrCreate(['token'=>$token],['validated_step'=>1]);
+		$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 
 		return redirect()->back();
 	}
@@ -58,10 +60,9 @@ class ProjetController extends Controller
 	 * Validation du deuxieme paiement
 	 */
 
-	public function validateDiagExterne($token){
-		$projet = Projet::where('token',$token)->first();
-		$projet->validated_step = 2;
-		$projet->save();
+	public function validateDiagExterne(Request $request, $token){
+		Projet::updateOrCreate(['token'=>$token],['validated_step'=>2]);
+		$request->session()->flash('success','Deuxieme paiement enregistré avec succès!!!');
 		return redirect()->back();
 	}
 
@@ -69,10 +70,9 @@ class ProjetController extends Controller
 	 * Validation du troisieme paiement
 	 */
 
-	public function validateDiagStrategique($token){
-		$projet = Projet::where('token',$token)->first();
-		$projet->validated_step = 3;
-		$projet->save();
+	public function validateDiagStrategique(Request $request, $token){
+		Projet::updateOrCreate(['token'=>$token],['validated_step'=>3]);
+		$request->session()->flash('success','Troisieme paiement enregistré avec succès!!!');
 		return redirect()->back();
 	}
 
@@ -81,10 +81,51 @@ class ProjetController extends Controller
 	 * Validation du quatrieme paiement
 	 */
 
-	public function validateMontageFinancier($token){
-		$projet = Projet::where('token',$token)->first();
-		$projet->validated_step = 4;
-		$projet->save();
+	public function validateMontageFinancier(Request $request, $token){
+		Projet::updateOrCreate(['token'=>$token],['validated_step'=>4]);
+		$request->session()->flash('success','Quatrieme paiement enregistré avec succès!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 * Bloquer le dossier
+	 */
+	public function disable(Request $request, $token){
+		Projet::updateOrCreate(['token'=>$token],['active'=>0]);
+		$request->session()->flash('warning','Dossier bloqué avec succès!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 * Debloquer le dossier
+	 */
+	public function enable(Request $request, $token){
+		Projet::updateOrCreate(['token'=>$token],['active'=>1]);
+		$request->session()->flash('success','Dossier débloqué avec succès!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 *
+	 */
+	public function closeDoc(Request $request, $token){
+		Investissement::updateOrCreate(['token'=>$token],['doc_juridique'=>0]);
+		$request->session()->flash('success',' Fermeture de la documentation juridique!!!');
+		return redirect()->back();
+	}
+
+	public function openDoc(Request $request, $token){
+		Investissement::updateOrCreate(['token'=>$token],['doc_juridique'=>1]);
+		$request->session()->flash('success',' Ouverture de la documentation juridique!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 * Valider l'ordre de virement
+	 */
+	public function validateOrdre(Request $request, $token){
+		Projet::updateOrCreate(['token'=>$token],['ordrevirement_validated'=>1]);
+		$request->session()->flash('success',' Fermeture de la documentation juridique!!!');
 		return redirect()->back();
 	}
 

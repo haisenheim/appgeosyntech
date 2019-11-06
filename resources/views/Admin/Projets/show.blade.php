@@ -1148,7 +1148,7 @@
 
              @if($projet->etape==4 && $projet->validated_step>=4 )
                    <li>
-                        <a  title="Valider l'ordre de paiement" class="ripple" href="/admin/dossier/validate-ordre-paiement/{{ $projet->token }}"><i class="fa fa-check"></i></a>
+                        <a  title="Valider l'ordre de virement" class="ripple" href="/admin/dossier/validate-ordre-virement/{{ $projet->token }}"><i class="fa fa-check"></i></a>
                    </li>
             @endif
 
