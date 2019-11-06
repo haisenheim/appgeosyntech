@@ -154,7 +154,7 @@ class ProjetController extends Controller
 
 			$section->addText(
 				'La présente lettre d’intention décrit les principales conditions et '
-				.'modalités selon lesquelles l’investissement envisagé dans le projet'. $invest->projet->name .'pourrait être réalisé. '
+				.'modalités selon lesquelles l’investissement envisagé dans le projet  '. $invest->projet->name .'  pourrait être réalisé. '
 			);
 
 			$section->addText(
@@ -179,9 +179,7 @@ class ProjetController extends Controller
 			}
 
 			$section->addText(
-				'Le montant total de l’investissement étant estimé à '. $invest->projet->montant .' ' . $invest->projet->devise->name.','
-				.'je, soussigné, '. $invest->angel?$invest->angel->name:' Inconnu' .', agissant pour'. $invest->lettre->personnel?' Mon propre compte':' le compte de '.$choix.', manifeste le souhait de participer à cette opération
-				sous forme de '. $invest->lettre->type->name .'  à hauteur de '.$invest->lettre->montant .' ' . $invest->lettre->devise->name
+				'Le montant total de l’investissement étant estimé à '. $invest->projet->montant .' ' . $invest->projet->devise->name.', je, soussigné, '. $invest->angel?$invest->angel->name:' Inconnu' .', agissant pour'. $invest->lettre->personnel?' Mon propre compte':' le compte de '.$choix.', manifeste le souhait de participer à cette opération sous forme de '. $invest->lettre->type->name .'  à hauteur de '.$invest->lettre->montant .' ' . $invest->lettre->devise->name
 			);
 
 
@@ -194,7 +192,8 @@ class ProjetController extends Controller
 
 			}
 
-			return response()->download(public_path('files/docs').'/Lettre_intention.docx');
+			response()->download(public_path('files/docs').'/Lettre_intention.docx');
+			return back();
 
 
 		}else{
