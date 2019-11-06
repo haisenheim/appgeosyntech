@@ -76,6 +76,7 @@ Route::prefix('admin')
 	    Route::get('dossier/enable/{token}','ProjetController@enable');
 	    Route::get('dossier/disable/{token}','ProjetController@disable');
 	    Route::get('dossier/validate-ordre-virement/{token}','ProjetController@validateOrdre');
+	    Route::get('dossier/disvalidate-ordre-virement/{token}','ProjetController@unvalidateOrdre');
     });
 
 //Liste des routes de l'investisseur

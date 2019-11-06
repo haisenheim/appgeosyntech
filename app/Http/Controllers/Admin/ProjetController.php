@@ -125,7 +125,16 @@ class ProjetController extends Controller
 	 */
 	public function validateOrdre(Request $request, $token){
 		Projet::updateOrCreate(['token'=>$token],['ordrevirement_validated'=>1]);
-		$request->session()->flash('success',' Fermeture de la documentation juridique!!!');
+		$request->session()->flash('success',' Ordre de virement validé!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 * Valider l'ordre de virement
+	 */
+	public function unvalidateOrdre(Request $request, $token){
+		Projet::updateOrCreate(['token'=>$token],['ordrevirement_validated'=>0]);
+		$request->session()->flash('warning',' Ordre de virement rejeté!!!');
 		return redirect()->back();
 	}
 
