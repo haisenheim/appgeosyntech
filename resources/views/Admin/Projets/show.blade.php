@@ -1147,7 +1147,7 @@
             @endif
 
              @if($projet->etape==4 && $projet->validated_step>=4 )
-                @if($projet->ordrevirement_valiated)
+                @if($projet->ordrevirement_validated)
                    <li>
                         <a  title="Rejeter l'ordre de virement" class="ripple" href="/admin/dossier/disvalidate-ordre-virement/{{ $projet->token }}"><i class="fa fa-check"></i></a>
                    </li>
