@@ -1202,10 +1202,13 @@
                                     <tr>
                                         <td>
                                         <a href="#" data-toggle="modal" data-target="#angelMoal">
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item"><img src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" /></li>
-                                                <li class="list-inline-item">{{ $invest->angel->name }}</li>
-                                            </ul>
+
+                                                <img style="border-radius: 50%;float: left;height: 40px;width: 40px;"
+                                                    src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" />
+                                               <span style="border-radius: .3rem;background:#d2d6de;border: 1px solid #d2d6de; color:#444;margin: 5px 0 0 50px;
+                                                            padding: 5px 10px;
+                                                            position: relative;">{{ $invest->angel->name }}  </span>
+
                                         </a>
                                         </td>
                                         <td>
