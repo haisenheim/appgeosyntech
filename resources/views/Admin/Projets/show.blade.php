@@ -907,7 +907,8 @@
                   @endif
               </div>
               <h3 class="text-primary"> {{$projet->name}}</h3>
-              <p class="text-muted"><?= $projet->description_modele_economique ?></p>
+                <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
+
               <br>
               <div class="text-muted">
                 <p class="text-sm">Porteur de projet:
@@ -927,7 +928,7 @@
                                 {{csrf_field()}}
                                 <input type="hidden" name="id" value="{{ $projet->id }}"/>
                                     <div class="form-group">
-                                        <select class="form-text" name="expert_id" id="id">
+                                        <select class="form-control" name="expert_id" id="id">
                                             @foreach($experts as $expert)
                                                 <option value="{{ $expert->id }}">{{ $expert->name }}</option>
                                             @endforeach
@@ -951,48 +952,28 @@
               </ul>
 
 
-              <div class="text-center mt-5 mb-3">
-                @if($projet->etape==1)
-                    @if($projet->validated_step!=1)
-                        <a class="btn btn-sm btn-warning" href="/admin/dossier/validate-diag-interne/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le premier paiement</a>
-                    @endif
-                @endif
 
-                @if($projet->etape==2)
-                    @if($projet->validated_step!=2)
-
-                        <a class="btn btn-sm btn-warning" href="/admin/dossier/validate-diag-externe/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le deuxième paiement</a>
-
-                    @endif
-                @endif
-                @if($projet->etape==3)
-                    @if($projet->validated_step!=3)
-
-                        <a class="btn btn-sm btn-primary" href="/admin/dossier/validate-plan-strategique/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le troisième paiement</a>
-
-                    @endif
-                @endif
-                @if($projet->etape==4)
-                    @if($projet->validated_step!=4)
-                        <a class="btn btn-sm btn-info" href="/admin/dossier/validate-plan-financier/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le quatrième paiement</a>
-                    @endif
-                @endif
-
-                @if($projet->etape==5)
-                    @if($projet->validated_step!=5)
-
-                        <a class="btn btn-sm btn-success" href="/admin/dossier/validate-plan-financier/{{$projet->token}}"><i class="fa fa-coins"></i> Valider le cinquième paiement</a>
-
-                    @endif
-                @endif
-                <a href="#" class="btn btn-sm btn-primary">Add files</a>
-                <a href="#" class="btn btn-sm btn-warning">Report contact</a>
-              </div>
             </div>
           </div>
         </div>
         <!-- /.card-body -->
       </div>
+
+<div class="modal fade" id="meModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h6  class="modal-title text-center">Description du modèle économique</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+                <p><?= $projet->description_modele_economique ?></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -1149,7 +1130,7 @@
              @if($projet->etape==4 && $projet->validated_step>=4 )
                 @if($projet->ordrevirement_validated)
                    <li>
-                        <a  title="Rejeter l'ordre de virement" class="ripple" href="/admin/dossier/disvalidate-ordre-virement/{{ $projet->token }}"><i class="fa fa-check"></i></a>
+                        <a  title="Rejeter l'ordre de virement" class="ripple" href="/admin/dossier/disvalidate-ordre-virement/{{ $projet->token }}"><i class="fa fa-trash"></i></a>
                    </li>
                  @else
                    <li>
