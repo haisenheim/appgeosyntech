@@ -1245,7 +1245,7 @@
                                                   <?php if(!$invest->doc_juridique): ?>
                                                     <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
                                                   <?php else: ?>
-                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/close/{{ $invest->token }}">Ouvrir la documentation</a>
+                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/close/{{ $invest->token }}">Fermer la documentation</a>
                                                   <?php endif; ?>
                                                   <?php if($invest->validated): ?>
                                                     <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
@@ -1276,7 +1276,7 @@
 
        position: relative;
        font-weight: bold;
-       display:block;
+       display:inline-block;
        font-size: smaller;
     }
 </style>
