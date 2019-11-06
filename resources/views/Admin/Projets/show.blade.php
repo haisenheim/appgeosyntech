@@ -1187,12 +1187,13 @@
                         <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
                             <thead>
                             <tr>
+                                <th></th>
                               <th>#</th>
                               <th>Entreprise</th>
                               <th>Organisme Fin.</th>
                               <th>Depuis le</th>
                               <th>RDV</th>
-                              <th>STATUT</th>
+
                               <th></th>
 
                             </tr>
@@ -1200,20 +1201,18 @@
                             <tbody>
                                 @foreach($projet->investissements as $invest)
                                     <tr>
+                                         <td></td>
                                         <td>
-                                        <a href="#" data-toggle="modal" data-target="#angelMoal">
-
+                                            <a href="#" data-toggle="modal" data-target="#angelMoal">
                                                 <img style="border-radius: 50%;float: left;height: 40px;width: 40px;"
                                                     src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" />
                                                <p style="border-radius: .3rem; color:#444;margin: 5px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->name }}  </p>
-
                                         </a>
                                         </td>
                                         <td>
                                             <?php if($invest->angel->entreprise): ?>
-
                                                     <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->entreprise->imageUri?asset('img/'.$invest->angel->entreprise->imageUri):asset('img/logo-obac.png') }}" />
-                                                    <p style="border-radius: .3rem; color:#444;margin: 5px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->entreprise->name }}</p>
+                                                    <p style="display: block; border-radius: .3rem; color:#444;margin: 40px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->entreprise->name }}</p>
 
                                              <?php else: ?>
                                                 -
@@ -1231,7 +1230,7 @@
                                         </td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
                                         <td><?= $invest->rencontre ?></td>
-                                        <td></td>
+
                                         <td>
 
                                             <div class="btn-group">
@@ -1276,8 +1275,8 @@
 <script>
   $(function () {
     $("#table-invest").DataTable({
-        "lengthChange":true,
-        "autoWidth":true
+        "lengthChange":true
+
     });
 
   });
