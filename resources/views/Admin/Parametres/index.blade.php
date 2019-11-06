@@ -7,7 +7,7 @@
                 <h5 class="card-title">PARAMETRES DE LA PLATEFORME</h5>
             </div>
             <div class="card-body">
-                <form enctype="multipart/form-data" class="form" action="admin/params" method="post">
+                <form enctype="multipart/form-data" class="form" action="/admin/params" method="post">
                     {{csrf_field()}}
 
                     <div class="form-group">
