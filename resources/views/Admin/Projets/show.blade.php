@@ -1115,3 +1115,139 @@
 
 @endsection
 
+@section('nav_actions')
+<main>
+    <nav class="floating-menu">
+        <ul class="main-menu">
+
+            @if($projet->investissements->count()>=1)
+                   <li>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                   </li>
+            @endif
+            @if($projet->etape==1 && $projet->validated_step=0 )
+                   <li>
+                        <a  title="Valider le premier paiement" class="ripple" href="/admin/dossier/validate-diag-interne/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
+                   </li>
+            @endif
+            @if($projet->etape==2 && $projet->validated_step<2 )
+                   <li>
+                        <a  title="Valider le deuxieme paiement" class="ripple" href="/admin/dossier/validate-diag-externe/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
+                   </li>
+            @endif
+            @if($projet->etape==3 && $projet->validated_step<3 )
+                   <li>
+                        <a  title="Valider le troisieme paiement" class="ripple" href="/admin/dossier/validate-plan-strategique/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
+                   </li>
+            @endif
+            @if($projet->etape==4 && $projet->validated_step<4 )
+                   <li>
+                        <a  title="Valider le quatrieme paiement" class="ripple" href="/admin/dossier/validate-plan-financier/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
+                   </li>
+            @endif
+
+             @if($projet->etape==4 && $projet->validated_step>=4 )
+                   <li>
+                        <a  title="Valider l'ordre de paiement" class="ripple" href="/admin/dossier/validate-ordre-paiement/{{ $projet->token }}"><i class="fa fa-check"></i></a>
+                   </li>
+            @endif
+
+            @if($projet->active )
+                   <li>
+                        <a  title="Bloquer le dossier" class="ripple" href="/admin/dossier/disable/{{ $projet->token }}"><i class="fa fa-lock"></i></a>
+                   </li>
+             @else
+                    <li>
+                        <a  title="debloquer le dossier" class="ripple" href="/admin/dossier/enable/{{ $projet->token }}"><i class="fa fa-unlock"></i></a>
+                   </li>
+            @endif
+
+
+
+
+
+        </ul>
+        <div class="menu-bg"></div>
+    </nav>
+</main>
+
+<div class="modal fade" id="angelsModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+            <div class="card card-danger">
+                <div class="card-body">
+                     @if(count($projet->investissements)>=1)
+                        <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Depuis le</th>
+                              <th>RDV</th>
+                              <th>STATUT</th>
+                              <th></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($projet->investissements as $invest)
+                                    <tr>
+                                        <td>{{ $invest->angel->name }}</td>
+                                        <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
+                                        <td><?= $invest->rencontre ?></td>
+                                        <td></td>
+                                        <td>
+
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default btn-flat">Actions</button>
+                                                <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
+                                                  <span class="caret"></span>
+
+                                                </button>
+                                                <div class="dropdown-menu" role="menu">
+                                                 <?php if($invest->lettre): ?>
+                                                    <a class="dropdown-item" href="#">Lettre d'intention</a>
+                                                  <?php endif; ?>
+                                                  <?php if(!$invest->doc_juridique): ?>
+                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
+                                                  <?php else: ?>
+                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/close/{{ $invest->token }}">Ouvrir la documentation</a>
+                                                  <?php endif; ?>
+                                                  <?php if($invest->validated): ?>
+                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
+                                                  <?php else: ?>
+                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
+                                                  <?php endif; ?>
+
+                                                </div>
+                                              </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+
+                @endif
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+<script>
+  $(function () {
+    $("#table-invest").DataTable();
+
+  });
+</script>
+
+@endsection

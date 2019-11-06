@@ -265,7 +265,7 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
        @yield('content-header')
-
+       @yield('nav_actions')
     </div>
     <!-- /.content-header -->
 

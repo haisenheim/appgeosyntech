@@ -61,6 +61,7 @@ Route::prefix('admin')
 	    Route::get('actif/expert','ActifController@addExpert');
 	    Route::get('dossier/expert','ProjetController@addExpert');
 	    Route::get('dossier/getchoices','ProjetController@getChoicesJson');
+	    Route::get('dossier/validate-diag-interne/{token}','ProjetController@validateDiagInterne');
 	    Route::get('dossier/validate-diag-externe/{token}','ProjetController@validateDiagExterne');
 	    Route::get('dossier/validate-plan-strategique/{token}','ProjetController@validateDiagStrategique');
 	    Route::get('dossier/validate-plan-financier/{token}','ProjetController@validateMontageFinancier');
