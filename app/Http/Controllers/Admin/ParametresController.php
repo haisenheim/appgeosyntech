@@ -70,6 +70,9 @@ class ParametresController extends Controller
 			$ext = $pacte->getClientOriginalExtension();
 			$arr_ext = array('doc','docx','odt');
 			if(in_array($ext,$arr_ext)) {
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
 				if (!file_exists(public_path('files/docs'))) {
 					mkdir(public_path('files/docs'));
 				}
@@ -89,6 +92,9 @@ class ParametresController extends Controller
 			$ext = $pacte->getClientOriginalExtension();
 			$arr_ext = array('doc','docx','odt');
 			if(in_array($ext,$arr_ext)) {
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
 				if (!file_exists(public_path('files/docs'))) {
 					mkdir(public_path('files/docs'));
 				}
@@ -96,14 +102,58 @@ class ParametresController extends Controller
 				if (file_exists(public_path('files/docs/contrat_cession_actifs') . '.' . $ext)) {
 					unlink(public_path('files/docs/contrat_cession_actifs') .  '.' . $ext);
 				}
-				$name =  'contrat_cession_actif.' . $ext;
+				$name =  'contrat_cession_actifs.' . $ext;
 				$pacte->move(public_path('files/docs'), $name);
 				Parametre::updateOrCreate(['id'=>1],['contrat_cession_actifs'=>$name]);
 			}
 
 		}
 
+		if($request->creance){
+			$pacte = $request->creance;
+			$ext = $pacte->getClientOriginalExtension();
+			$arr_ext = array('doc','docx','odt');
+			if(in_array($ext,$arr_ext)) {
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
+				if (!file_exists(public_path('files/docs'))) {
+					mkdir(public_path('files/docs'));
+				}
 
+				if (file_exists(public_path('files/docs/contrat_cession_creances') . '.' . $ext)) {
+					unlink(public_path('files/docs/contrat_cession_creances') .  '.' . $ext);
+				}
+				$name =  'contrat_cession_creances.' . $ext;
+				$pacte->move(public_path('files/docs'), $name);
+				Parametre::updateOrCreate(['id'=>1],['contrat_cession_creances'=>$name]);
+			}
+
+		}
+
+		if($request->concession){
+			$pacte = $request->concession;
+			$ext = $pacte->getClientOriginalExtension();
+			$arr_ext = array('doc','docx','odt');
+			if(in_array($ext,$arr_ext)) {
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
+				if (!file_exists(public_path('files/docs'))) {
+					mkdir(public_path('files/docs'));
+				}
+
+				if (file_exists(public_path('files/docs/contrat_concession') . '.' . $ext)) {
+					unlink(public_path('files/docs/contrat_concession') .  '.' . $ext);
+				}
+				$name =  'contrat_concession.' . $ext;
+				$pacte->move(public_path('files/docs'), $name);
+				Parametre::updateOrCreate(['id'=>1],['contrat_concession'=>$name]);
+			}
+
+		}
+
+		return back();
 	}
 
     /**
