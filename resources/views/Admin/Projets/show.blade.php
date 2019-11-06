@@ -1187,21 +1187,21 @@
                         <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th></th>
+                                <th style="width: 5%;"></th>
                               <th>#</th>
                               <th>Entreprise</th>
                               <th>Organisme Fin.</th>
                               <th>Depuis le</th>
                               <th>RDV</th>
 
-                              <th></th>
+                              <th style="width: 15%;"></th>
 
                             </tr>
                             </thead>
                             <tbody>
                                 @foreach($projet->investissements as $invest)
                                     <tr>
-                                         <td></td>
+                                         <td style="width: 5%;"></td>
                                         <td>
                                             <a href="#" data-toggle="modal" data-target="#angelMoal">
                                                 <img style="border-radius: 50%;float: left;height: 40px;width: 40px;"
@@ -1231,7 +1231,7 @@
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
                                         <td><?= $invest->rencontre ?></td>
 
-                                        <td>
+                                        <td style="width: 15%;">
 
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-default btn-flat">Actions</button>
