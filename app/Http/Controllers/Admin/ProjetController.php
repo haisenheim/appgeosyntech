@@ -192,8 +192,8 @@ class ProjetController extends Controller
 
 			}
 
-			response()->download(public_path('files/docs').'/Lettre_intention.docx');
-			return back();
+			return response()->download(public_path('files/docs').'/Lettre_intention.docx');
+
 
 
 		}else{
