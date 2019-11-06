@@ -165,9 +165,22 @@ class ProjetController extends Controller
 				'Cette lettre d’intention a été préparée sur la base et en l’état des informations reçues de la Société à ce jour, et particulièrement du business plan qui ont été préparés par les Fondateurs.'
 			);
 
+			$choix = '';
+			if($invest->lettre->personnel){
+				$choix = 'Mon compte personnel';
+			}else{
+				if($invest->angel->entreprise){
+					$choix= $invest->angel->entreprise->name;
+				}else{
+					if($invest->angel->organisme){
+						$choix = $invest->angel->organisme->name;
+					}
+				}
+			}
+
 			$section->addText(
 				'Le montant total de l’investissement étant estimé à '. $invest->projet->montant .' ' . $invest->projet->devise->name.','
-				.'je, soussigné, '. $invest->angel?$invest->angel->name:' Inconnu' .', agissant pour'. $invest->lettre->personnel?' Mon propre compte':' le compte de '.$invest->angel->entreprise?$invest->angel->entreprise->name:$invest->angel->organisme->name .', manifeste le souhait de participer à cette opération
+				.'je, soussigné, '. $invest->angel?$invest->angel->name:' Inconnu' .', agissant pour'. $invest->lettre->personnel?' Mon propre compte':' le compte de '.$choix.', manifeste le souhait de participer à cette opération
 				sous forme de '. $invest->lettre->type->name .'  à hauteur de '.$invest->lettre->montant .' ' . $invest->lettre->devise->name
 			);
 
