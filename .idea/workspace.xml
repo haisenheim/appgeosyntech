@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ParametresController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ParametresController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Parametres/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Parametres/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -36,22 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.32" vertical-offset="18009" max-vertical-offset="18688">
-              <caret line="1137" column="54" selection-start-line="1137" selection-start-column="54" selection-end-line="1137" selection-end-column="54" />
-              <folding>
-                <marker date="1572889913228" expanded="false" signature="59905:59944" placeholder="..." />
-                <marker date="1572889913228" expanded="false" signature="64037:64047" placeholder="..." />
-                <marker date="1572889913228" expanded="false" signature="64105:64115" placeholder="..." />
-                <marker date="1572889913228" expanded="false" signature="64174:64184" placeholder="..." />
-                <marker date="1572889913228" expanded="false" signature="64258:64268" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,15 +55,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParametresController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ParametresController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ParametresController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3576159" vertical-offset="1310" max-vertical-offset="2336">
+            <state vertical-scroll-proportion="-6.48" vertical-offset="1310" max-vertical-offset="2336">
               <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
               <folding>
                 <element signature="e#1682#2346#0#PHP" expanded="false" />
                 <element signature="e#2350#3056#0#PHP" expanded="false" />
                 <element signature="e#3782#4482#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33163264" vertical-offset="8366" max-vertical-offset="17968">
+              <caret line="531" column="60" selection-start-line="531" selection-start-column="55" selection-end-line="531" selection-end-column="60" />
+              <folding>
+                <marker date="1573031205553" expanded="false" signature="62965:63004" placeholder="..." />
+                <marker date="1573031205553" expanded="false" signature="67262:67272" placeholder="..." />
+                <marker date="1573031205553" expanded="false" signature="67330:67340" placeholder="..." />
+                <marker date="1573031205553" expanded="false" signature="67399:67409" placeholder="..." />
+                <marker date="1573031205553" expanded="false" signature="67483:67493" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -187,7 +186,6 @@
         <option value="$PROJECT_DIR$/app/Models/Investissement.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Angel/DossierController.php" />
         <option value="$PROJECT_DIR$/app/Models/Mois.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Projet.php" />
         <option value="$PROJECT_DIR$/app/Models/Reportresultat.php" />
         <option value="$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php" />
@@ -212,6 +210,7 @@
         <option value="$PROJECT_DIR$/app/Models/Parametre.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Parametres/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ParametresController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
       </list>
     </option>
   </component>
@@ -304,6 +303,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -732,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="14304" max-vertical-offset="17968">
-          <caret line="894" column="0" selection-start-line="894" selection-start-column="0" selection-end-line="894" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show__.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="24512" max-vertical-offset="28624">
@@ -896,11 +914,11 @@
         <state vertical-scroll-proportion="-7.32" vertical-offset="18009" max-vertical-offset="18688">
           <caret line="1137" column="54" selection-start-line="1137" selection-start-column="54" selection-end-line="1137" selection-end-column="54" />
           <folding>
-            <marker date="1572889913228" expanded="false" signature="59905:59944" placeholder="..." />
-            <marker date="1572889913228" expanded="false" signature="64037:64047" placeholder="..." />
-            <marker date="1572889913228" expanded="false" signature="64105:64115" placeholder="..." />
-            <marker date="1572889913228" expanded="false" signature="64174:64184" placeholder="..." />
-            <marker date="1572889913228" expanded="false" signature="64258:64268" placeholder="..." />
+            <marker date="1572889913228" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1572889913228" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1572889913228" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1572889913228" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1572889913228" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -981,12 +999,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ParametresController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3576159" vertical-offset="1310" max-vertical-offset="2336">
+        <state vertical-scroll-proportion="-6.48" vertical-offset="1310" max-vertical-offset="2336">
           <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
           <folding>
             <element signature="e#1682#2346#0#PHP" expanded="false" />
             <element signature="e#2350#3056#0#PHP" expanded="false" />
             <element signature="e#3782#4482#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33163264" vertical-offset="8366" max-vertical-offset="17968">
+          <caret line="531" column="60" selection-start-line="531" selection-start-column="55" selection-end-line="531" selection-end-column="60" />
+          <folding>
+            <marker date="1573031205553" expanded="false" signature="62965:63004" placeholder="..." />
+            <marker date="1573031205553" expanded="false" signature="67262:67272" placeholder="..." />
+            <marker date="1573031205553" expanded="false" signature="67330:67340" placeholder="..." />
+            <marker date="1573031205553" expanded="false" signature="67399:67409" placeholder="..." />
+            <marker date="1573031205553" expanded="false" signature="67483:67493" placeholder="..." />
           </folding>
         </state>
       </provider>

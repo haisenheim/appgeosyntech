@@ -90,7 +90,7 @@
 
                                          <div>
                                             <h4  class="text-xs text-right text-bold page-header">SANTE FINANCIERE</h4>
-                                            <?php if(count($projet->bilans) >0): ?>
+                                            <?php if($projet->bilans->count()>0): ?>
 
                                             <table class="table table-condensed table-hover table-striped">
                                                 <thead>
@@ -174,7 +174,7 @@
 
 
                                             <h5 class="text-xs text-right text-bold page-header">PERFORMANCE FINANCIERE</h5>
-                                            <?php if(count($projet->resultats) >0): ?>
+                                            <?php if($projet->resultats->count() >0): ?>
                                             <table class="table table-striped table-hover table-condensed">
                                                 <thead>
                                                 <tr>
@@ -443,7 +443,7 @@
                                                      <div class="table-responsive">
 
 
-                                                            <?php if(count($projet->segments)): ?>
+                                                            <?php if($projet->segments->count()>0): ?>
 
                                                             <table class="table table-bordered ">
 
@@ -483,7 +483,7 @@
                                         </div>
 
                                         <div class="tab-pane fade" role="tabpanel" id="concurrents" aria-labelledby="">
-                                        <?php if(count($projet->concurrents)): ?>
+                                        <?php if($projet->concurrents->count()>0): ?>
                                             <table class="table table-bordered">
 
                                             <tbody>
@@ -529,7 +529,7 @@
                                         </div>
 
                                         <div class="tab-pane fade" role="tabpanel" id="environnement" aria-labelledby="">
-                                              <?php if(count($projet->environnement)): ?>
+                                              <?php if($projet->environnement->count()>0): ?>
                                                     <table class="table table-bordered table-condensed">
                                                         <thead>
                                                         <tr >
