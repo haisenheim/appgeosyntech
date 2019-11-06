@@ -1205,14 +1205,14 @@
                                         <td>
                                             <a href="#" data-toggle="modal" data-target="#angelMoal">
                                                 <img style="border-radius: 50%;float: left;height: 40px;width: 40px;"
-                                                    src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" />
-                                               <p style="border-radius: .3rem; color:#444;margin: 5px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->name }}  </p>
+                                                    src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" /> <br/>
+                                               <p>{{ $invest->angel->name }}  </p>
                                         </a>
                                         </td>
                                         <td>
                                             <?php if($invest->angel->entreprise): ?>
-                                                    <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->entreprise->imageUri?asset('img/'.$invest->angel->entreprise->imageUri):asset('img/logo-obac.png') }}" />
-                                                    <p style="display: block; border-radius: .3rem; color:#444;margin: 40px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->entreprise->name }}</p>
+                                                    <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->entreprise->imageUri?asset('img/'.$invest->angel->entreprise->imageUri):asset('img/logo-obac.png') }}" /> <br/>
+                                                    <p>{{ $invest->angel->entreprise->name }}</p>
 
                                              <?php else: ?>
                                                 -
@@ -1220,9 +1220,8 @@
                                         </td>
                                          <td>
                                             <?php if($invest->angel->organisme): ?>
-
-                                                    <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->organisme->imageUri?asset('img/'.$invest->angel->organisme->imageUri):asset('img/logo-obac.png') }}" />
-                                                    <p style="border-radius: .3rem; color:#444;margin: 5px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->organisme->name }}</p>
+                                                    <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->organisme->imageUri?asset('img/'.$invest->angel->organisme->imageUri):asset('img/logo-obac.png') }}" /> <br/>
+                                                    <p>{{ $invest->angel->organisme->name }}</p>
 
                                              <?php else: ?>
                                                 -
@@ -1269,6 +1268,18 @@
         </div>
     </div>
 </div>
+
+<style>
+    td>p {
+       border-radius: .3rem;
+       color:#444;
+
+       position: relative;
+       font-weight: bold;
+       display:block;
+       font-size: smaller;
+    }
+</style>
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
 <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
