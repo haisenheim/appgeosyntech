@@ -1270,7 +1270,7 @@
 </div>
 
 <style>
-    td>p {
+    td p {
        border-radius: .3rem;
        color:#444;
 
