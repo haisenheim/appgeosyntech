@@ -35,10 +35,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
 
-      <!-- Actions Dropdown Menu -->
-      <li class="nav-item dropdown">
-        @yield('nav_actions')
-      </li>
+
 
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
