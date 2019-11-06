@@ -1205,28 +1205,26 @@
 
                                                 <img style="border-radius: 50%;float: left;height: 40px;width: 40px;"
                                                     src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" />
-                                               <span style="border-radius: .3rem;background:#d2d6de;border: 1px solid #d2d6de; color:#444;margin: 5px 0 0 50px;
-                                                            padding: 5px 10px;
-                                                            position: relative;">{{ $invest->angel->name }}  </span>
+                                               <p style="border-radius: .3rem; color:#444;margin: 5px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->name }}  </p>
 
                                         </a>
                                         </td>
                                         <td>
                                             <?php if($invest->angel->entreprise): ?>
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item"><img src="{{ $invest->angel->entreprise->imageUri?asset('img/'.$invest->angel->entreprise->imageUri):asset('img/logo-obac.png') }}" /></li>
-                                                    <li class="list-inline-item">{{ $invest->angel->entreprise->name }}</li>
-                                                </ul>
+
+                                                    <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->entreprise->imageUri?asset('img/'.$invest->angel->entreprise->imageUri):asset('img/logo-obac.png') }}" />
+                                                    <p style="border-radius: .3rem; color:#444;margin: 5px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->entreprise->name }}</p>
+
                                              <?php else: ?>
                                                 -
                                              <?php endif; ?>
                                         </td>
                                          <td>
                                             <?php if($invest->angel->organisme): ?>
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item"><img src="{{ $invest->angel->organisme->imageUri?asset('img/'.$invest->angel->organisme->imageUri):asset('img/logo-obac.png') }}" /></li>
-                                                    <li class="list-inline-item">{{ $invest->angel->organisme->name }}</li>
-                                                </ul>
+
+                                                    <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->organisme->imageUri?asset('img/'.$invest->angel->organisme->imageUri):asset('img/logo-obac.png') }}" />
+                                                    <p style="border-radius: .3rem; color:#444;margin: 5px 0 0 5px;padding: 5px 10px;position: relative; font-weight: bold">{{ $invest->angel->organisme->name }}</p>
+
                                              <?php else: ?>
                                                 -
                                              <?php endif; ?>
