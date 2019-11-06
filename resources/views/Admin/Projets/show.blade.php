@@ -1172,7 +1172,7 @@
 </main>
 
 <div class="modal fade" id="angelsModal">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header bg-success">
                 <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
@@ -1188,6 +1188,8 @@
                             <thead>
                             <tr>
                               <th>#</th>
+                              <th>Entreprise</th>
+                              <th>Organisme Fin.</th>
                               <th>Depuis le</th>
                               <th>RDV</th>
                               <th>STATUT</th>
@@ -1198,7 +1200,34 @@
                             <tbody>
                                 @foreach($projet->investissements as $invest)
                                     <tr>
-                                        <td>{{ $invest->angel->name }}</td>
+                                        <td>
+                                        <a href="#" data-toggle="modal" data-target="#angelMoal">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><img src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" /></li>
+                                                <li class="list-inline-item">{{ $invest->angel->name }}</li>
+                                            </ul>
+                                        </a>
+                                        </td>
+                                        <td>
+                                            <?php if($invest->angel->entreprise): ?>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><img src="{{ $invest->angel->entreprise->imageUri?asset('img/'.$invest->angel->entreprise->imageUri):asset('img/logo-obac.png') }}" /></li>
+                                                    <li class="list-inline-item">{{ $invest->angel->entreprise->name }}</li>
+                                                </ul>
+                                             <?php else: ?>
+                                                -
+                                             <?php endif; ?>
+                                        </td>
+                                         <td>
+                                            <?php if($invest->angel->organisme): ?>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><img src="{{ $invest->angel->organisme->imageUri?asset('img/'.$invest->angel->organisme->imageUri):asset('img/logo-obac.png') }}" /></li>
+                                                    <li class="list-inline-item">{{ $invest->angel->organisme->name }}</li>
+                                                </ul>
+                                             <?php else: ?>
+                                                -
+                                             <?php endif; ?>
+                                        </td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
                                         <td><?= $invest->rencontre ?></td>
                                         <td></td>
@@ -1245,7 +1274,10 @@
 <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 <script>
   $(function () {
-    $("#table-invest").DataTable();
+    $("#table-invest").DataTable({
+        "lengthChange":true,
+        "autoWidth":true
+    });
 
   });
 </script>
