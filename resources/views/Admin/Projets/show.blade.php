@@ -1228,8 +1228,8 @@
                                                 -
                                              <?php endif; ?>
                                         </td>
-                                        <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
-                                        <td><?= $invest->rencontre ?></td>
+                                        <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y'):'-' ?></td>
+                                        <td><?= \Illuminate\Support\Carbon::createFromTimeString($invest->rencontre); ?></td>
 
                                         <td style="width: 15%;">
 
