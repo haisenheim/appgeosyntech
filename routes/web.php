@@ -69,7 +69,7 @@ Route::prefix('admin')
         //Route::resource('variantesfinancements','VfinancementController');
 	    Route::post('villes/save','VilleController@save');
 	    Route::get('params/','ParametresController@index');
-	    Route::post('params/','ParametresContoller@save');
+	    Route::post('params/','ParametresController@save');
     });
 
 //Liste des routes de l'investisseur
