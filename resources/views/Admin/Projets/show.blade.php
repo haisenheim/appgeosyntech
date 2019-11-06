@@ -960,7 +960,7 @@
       </div>
 
 <div class="modal fade" id="meModal">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-success">
                 <h6  class="modal-title text-center">Description du modèle économique</h6>
@@ -1181,7 +1181,7 @@
                               <th>Depuis le</th>
                               <th>RDV</th>
 
-                              <th style="width: 15%;"></th>
+                              <th style="width: 10%;"></th>
 
                             </tr>
                             </thead>
@@ -1217,7 +1217,7 @@
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y'):'-' ?></td>
                                         <td><?= \Illuminate\Support\Carbon::createFromTimeString($invest->rencontre)->format('d/m/Y'); ?></td>
 
-                                        <td style="width: 15%;">
+                                        <td style="width: 10%;">
 
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-default btn-flat">Actions</button>
@@ -1227,7 +1227,7 @@
                                                 </button>
                                                 <div class="dropdown-menu" role="menu">
                                                  <?php if($invest->lettre): ?>
-                                                    <a class="dropdown-item" href="#">Lettre d'intention</a>
+                                                    <a class="dropdown-item" href="/admin/letter/create/{{ $invest->token }}">Lettre d'intention</a>
                                                   <?php endif; ?>
                                                   <?php if(!$invest->doc_juridique): ?>
                                                     <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>

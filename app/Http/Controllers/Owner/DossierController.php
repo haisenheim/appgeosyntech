@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Prevbilan;
 use App\Models\Prevresultat;
 use App\Models\Prevtresorerie;
+use PHPUnit\Framework\Exception;
 
 class DossierController extends Controller
 {
@@ -58,7 +59,7 @@ class DossierController extends Controller
 
 	public function createLetter($token){
 		$invest = Investissement::where('token',$token)->first();
-		$letter = $invest->letter;
+		$letter = $invest->lettre;
 		if($letter){
 			// Creating the new document...
 			$phpWord = new \PhpOffice\PhpWord\PhpWord();
@@ -68,11 +69,38 @@ class DossierController extends Controller
 // Adding an empty Section to the document...
 			$section = $phpWord->addSection();
 // Adding Text element to the Section having font styled by default...
+
 			$section->addText(
-				'"Learn from yesterday, live for today, hope for tomorrow. '
-				. 'The important thing is not to stop questioning." '
-				. '(Albert Einstein)'
+				'La présente lettre d’intention décrit les principales conditions et '
+				.'modalités selon lesquelles l’investissement envisagé dans le projet'. $invest->projet->name .'pourrait être réalisé. '
 			);
+
+			$section->addText(
+				'Elle ne constitue en aucun cas un engagement ferme et irrévocable des parties de procéder à cet investissement. '
+			);
+
+			$section->addText(
+				'Cette lettre d’intention a été préparée sur la base et en l’état des informations reçues de la Société à ce jour, et particulièrement du business plan qui ont été préparés par les Fondateurs.'
+			);
+
+			$section->addText(
+				'Le montant total de l’investissement étant estimé à '. $invest->projet->montant .' ' . $invest->projet->devise->name.','
+				.'je, soussigné, '. $invest->angel->name .', agissant pour'. $invest->lettre->personnel?' Mon propre compte':' le compte de '.$invest->angel->entreprise?$invest->angel->entreprise->name:$invest->angel->organisme->name .', manifeste le souhait de participer à cette opération
+				sous forme de '. $invest->lettre->type->name .'  à hauteur de '.$invest->lettre->montant .' ' . $invest->lettre->devise->name
+			);
+
+
+
+			// Saving the document as OOXML file...
+			$objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
+			try{
+				$objWriter->save(public_path('files/docs').'/Lettre_intention.docx');
+			}catch (Exception $e){
+
+			}
+
+			return response()->download(public_path('files/docs').'/Lettre_intention.docx');
+
 
 		}else{
 			return back();
@@ -170,24 +198,23 @@ class DossierController extends Controller
 
 		//dd(public_path('img'));
 		$projet = Projet::where('token',$request->projet_token)->first();
-		$file = $request->imageUri;
+		$file = $request->ordre;
 		$ext = $file->getClientOriginalExtension();
-		$arr_ext = array('jpg','png','jpeg','gif');
+		$arr_ext = array('jpg','png','jpeg','gif','pdf');
 		if(in_array($ext,$arr_ext)){
-			if(!file_exists(public_path('img').'/projets')){
-				mkdir(public_path('img').'/projets');
+			if(!file_exists(public_path('files'))){
+				mkdir(public_path('files'));
+			}
+			if (!file_exists(public_path('files/ordres_virement'))) {
+				mkdir(public_path('files/ordres_virement'));
 			}
 
-			//dd($projet);
-
-			if(file_exists(public_path('img').'/projets/'.$projet->token.'.'.$ext)){
-				unlink(public_path('img').'/projets/'.$projet->token.'.'.$ext);
+			if (file_exists(public_path('files/ordres_virement/') . $projet->token.'.' . $ext)) {
+				unlink(public_path('files/ordres_virement/') . $projet->token .  '.' . $ext);
 			}
-			$name = $projet->token.'.'.$ext;
-			$file->move(public_path('img/projets'), $name);
-			//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
-			$projet->imageUri = 'projets/'.$name;
-			$projet->save();
+			$name =  $projet->token . $ext;
+			$file->move(public_path('files/ordres_virement'), $name);
+			Projet::updateOrCreate(['token'=>$projet->token],['ordrevirementUri'=>$name]);
 		}
 
 		return redirect()->back();

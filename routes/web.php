@@ -77,6 +77,7 @@ Route::prefix('admin')
 	    Route::get('dossier/disable/{token}','ProjetController@disable');
 	    Route::get('dossier/validate-ordre-virement/{token}','ProjetController@validateOrdre');
 	    Route::get('dossier/disvalidate-ordre-virement/{token}','ProjetController@unvalidateOrdre');
+	    Route::get('/letter/create/{token}','ProjetController@createLetter');
     });
 
 //Liste des routes de l'investisseur
@@ -149,6 +150,7 @@ Route::prefix('owner')
 	    Route::get('dossier/edit-field','DossierController@editFieldJson');
 	    Route::get('/investissements/open/{token}','DossierController@openDataroom');
 	    Route::get('/investissements/close/{token}','DossierController@closeDataroom');
+	    Route::get('/letter/create/{token}','DossierController@createLetter');
     });
 
 

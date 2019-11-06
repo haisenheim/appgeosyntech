@@ -36,6 +36,9 @@ class Projet extends Model
         return $this->hasOne('App\Models\Teaser');
     }
 
+	public function devise(){
+		return $this->belongsTo('App\Models\Devise');
+	}
     public function secteur(){
         return $this->belongsTo('App\Models\Secteur');
     }
@@ -122,9 +125,7 @@ class Projet extends Model
 		return $this->belongsTo('App\Models\Modepaiement');
 	}
 
-	public function devise(){
-		return $this->belongsTo('App\Models\Devise');
-	}
+
 
 	public function moyens(){
 		return $this->belongsToMany('App\Models\Moyen','moyens_projets');
