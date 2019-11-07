@@ -1089,6 +1089,12 @@
                 </a>
             </li>
 
+            <li>
+                <a data-toggle="modal" data-target="#reportEditModal" title="Editer le rapport mensuel de gestion" href="#" class="ripple">
+                    <i class="fa fa-pencil-alt fa-lg"></i>
+                </a>
+            </li>
+
 
         </ul>
         <div class="menu-bg"></div>
@@ -1191,6 +1197,174 @@
                         <button type="submit" class="btn btn-outline-success btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
                     </form>
 
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="reportEditModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h6  class="modal-title text-center">EDITION DU RAPPORT MENSUEL DE GESTION</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+            <div class="card card-danger">
+                <div class="card-body">
+                    <form method="post" action="/owner/dossier/edit-report">
+                        {{csrf_field()}}
+                        <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
+                        <div class="form-group">
+                            <label for="moi_id">MOIS</label>
+                            <select name="moi_id" id="moi_id" class="form-control">
+                                @foreach($mois as $m)
+                                    <option value="{{ $m->id }}">{{ $m->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">MOT DE BIENVENU</h4>
+                            </div>
+                            <div class="card-body">
+                                <textarea class="form-control" name="body" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">COMPTE DE RESULTAT</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="section">
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="ca">CHIFFRE D'AFFAIRE</label>
+                                                <input type="number" id="ca" data-input="ca" name="ca" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="cv">CHARGES VARIABLES </label>
+                                                <input type="number" id="cv" data-input="cv" name="cv" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="cf">CHARGES FIXES</label>
+                                                <input type="number" id="cf" data-input="cf" name="cf" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label for="taxes">IMPOTS ET TAXES</label>
+                                                <input type="number" id="taxes" data-input="taxes" name="taxes" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="pi">PRODUCTION IMMOBILISEE</label>
+                                                <input type="number" id="pi" data-input="pi" name="pi" class="form-control"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="ps">PRODUCTION STOCKEE</label>
+                                                <input type="number" id="ps" data-input="ps" name="ps" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="sp">SUBVENTION D'EXPLOITATION</label>
+                                                <input type="number" id="sp" data-input="sp" name="sp" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="ape">AUTRES PRODUITS D'EXPLOITATION</label>
+                                                <input type="number" id="ape" data-input="ape" name="ape" class="form-control"/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="pf">PRODUIT FINANCIER</label>
+                                                <input type="number" id="pf" data-input="pf" name="pf" class="form-control"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="cfi">CHARGES FINANCIERES</label>
+                                                <input type="number" id="cfi" data-input="cfi" name="cfi" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="pe">PRODUIT EXCEPTIONNEL</label>
+                                                <input type="number" id="pe" data-input="pe" name="pe" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="ce">CHARGES EXCEPTIONNELLES</label>
+                                                <input type="number" id="ce" data-input="ce" name="ce" class="form-control"/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="dap">DAP</label>
+                                                <input type="number" id="dap" data-input="dap" name="dap" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="salaires">SALAIRES</label>
+                                                <input type="number" id="salaires" data-input="salaires" name="salaires" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="participations">PARTICIPATION DES TRAVAILLEURS</label>
+                                                <input type="number" id="participations" data-input="participations" name="participations" class="form-control"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label for="impots">IMPOTS</label>
+                                                <input type="number" id="impots" data-input="impots" name="impots" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">BILAN</h4>
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-save"></i> ENREGISTRER</button>
+                    </form>
                 </div>
             </div>
             </div>
