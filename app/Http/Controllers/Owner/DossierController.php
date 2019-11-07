@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Bilan;
 use App\Models\ChoicesProjet;
 use App\Models\Investissement;
-use App\Models\Mois;
+use App\Models\Moi;
 use App\Models\ProduitsProjet;
 use App\Models\Projet;
 use App\Models\Resultat;
@@ -391,7 +391,7 @@ class DossierController extends Controller
         //
 		$tags = Tags::all();
 	    $projet = Projet::where(['token'=>$token])->first();
-	    $mois = Mois::all();
+	    $mois = Moi::all();
 	    //dd($dossier->bilans);
 	    return view('Owner/Dossiers/show')->with(compact('projet','tags','mois'));
     }

@@ -15,7 +15,7 @@ class Reportbilan extends Model
 	}
 
 	public function mois(){
-		return $this->belongsTo('App\Models\Mois');
+		return $this->belongsTo('App\Models\Moi');
 	}
 
 	protected function getNameAttribute(){
