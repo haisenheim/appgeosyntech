@@ -194,30 +194,77 @@ class DossierController extends Controller
 	 *  Chargement de l'ordre de virement
 	 */
 
-	public function uploadOv(Request $request){
+	public function editDocs(Request $request){
 
 		//dd(public_path('img'));
 		$projet = Projet::where('token',$request->projet_token)->first();
-		$file = $request->ordre;
-		$ext = $file->getClientOriginalExtension();
-		$arr_ext = array('jpg','png','jpeg','gif','pdf');
-		if(in_array($ext,$arr_ext)){
-			if(!file_exists(public_path('files'))){
-				mkdir(public_path('files'));
-			}
-			if (!file_exists(public_path('files/ordres_virement'))) {
-				mkdir(public_path('files/ordres_virement'));
+
+		$ordre = $request->ordre;
+		if($ordre){
+			$ext = $ordre->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif','pdf');
+			if(in_array($ext,$arr_ext)){
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
+				if (!file_exists(public_path('files/ordres_virement'))) {
+					mkdir(public_path('files/ordres_virement'));
+				}
+
+				if (file_exists(public_path('files/ordres_virement/') . $projet->token.'.' . $ext)) {
+					unlink(public_path('files/ordres_virement/') . $projet->token .  '.' . $ext);
+				}
+				$name =  $projet->token . $ext;
+				$ordre->move(public_path('files/ordres_virement'), $name);
+				Projet::updateOrCreate(['token'=>$projet->token],['ordrevirementUri'=>$name]);
 			}
 
-			if (file_exists(public_path('files/ordres_virement/') . $projet->token.'.' . $ext)) {
-				unlink(public_path('files/ordres_virement/') . $projet->token .  '.' . $ext);
-			}
-			$name =  $projet->token . $ext;
-			$file->move(public_path('files/ordres_virement'), $name);
-			Projet::updateOrCreate(['token'=>$projet->token],['ordrevirementUri'=>$name]);
 		}
 
-		return redirect()->back();
+		$pacte = $request->pacte;
+		if($pacte){
+			$ext = $pacte->getClientOriginalExtension();
+			$arr_ext = array('odt','ocx','doc','pdf');
+			if(in_array($ext,$arr_ext)){
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
+				if (!file_exists(public_path('files/pactes_actionnaires'))) {
+					mkdir(public_path('files/pactes_actionnaires'));
+				}
+
+				if (file_exists(public_path('files/pactes_actionnaires/') . $projet->token.'.' . $ext)) {
+					unlink(public_path('files/pactes_actionnaires/') . $projet->token .  '.' . $ext);
+				}
+				$name =  $projet->token . $ext;
+				$pacte->move(public_path('files/pactes_actionnaires'), $name);
+				Projet::updateOrCreate(['token'=>$projet->token],['pacte_associesUri'=>$name]);
+			}
+
+		}
+
+		$pret = $request->pret;
+		if($pret){
+			$ext = $ordre->getClientOriginalExtension();
+			$arr_ext = array('doc','docx','pdf');
+			if(in_array($ext,$arr_ext)){
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
+				if (!file_exists(public_path('files/contrats_pret'))) {
+					mkdir(public_path('files/contrats_pret'));
+				}
+
+				if (file_exists(public_path('files/contrats_pret/') . $projet->token.'.' . $ext)) {
+					unlink(public_path('files/contrats_pret/') . $projet->token .  '.' . $ext);
+				}
+				$name =  $projet->token . $ext;
+				$pret->move(public_path('files/contrats_pret'), $name);
+				Projet::updateOrCreate(['token'=>$projet->token],['contrat_pretUri'=>$name]);
+			}
+
+		}
+		return back();
 
 	}
 
