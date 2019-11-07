@@ -214,7 +214,7 @@ class DossierController extends Controller
 				if (file_exists(public_path('files/ordres_virement/') . $projet->token.'.' . $ext)) {
 					unlink(public_path('files/ordres_virement/') . $projet->token .  '.' . $ext);
 				}
-				$name =  $projet->token . $ext;
+				$name =  $projet->token .'.'. $ext;
 				$ordre->move(public_path('files/ordres_virement'), $name);
 				Projet::updateOrCreate(['token'=>$projet->token],['ordrevirementUri'=>$name]);
 			}
@@ -224,7 +224,7 @@ class DossierController extends Controller
 		$pacte = $request->pacte;
 		if($pacte){
 			$ext = $pacte->getClientOriginalExtension();
-			$arr_ext = array('odt','ocx','doc','pdf');
+			$arr_ext = array('odt','docx','doc','pdf');
 			if(in_array($ext,$arr_ext)){
 				if(!file_exists(public_path('files'))){
 					mkdir(public_path('files'));
@@ -236,7 +236,7 @@ class DossierController extends Controller
 				if (file_exists(public_path('files/pactes_actionnaires/') . $projet->token.'.' . $ext)) {
 					unlink(public_path('files/pactes_actionnaires/') . $projet->token .  '.' . $ext);
 				}
-				$name =  $projet->token . $ext;
+				$name =  $projet->token .'.'. $ext;
 				$pacte->move(public_path('files/pactes_actionnaires'), $name);
 				Projet::updateOrCreate(['token'=>$projet->token],['pacte_associesUri'=>$name]);
 			}
@@ -246,7 +246,7 @@ class DossierController extends Controller
 		$pret = $request->pret;
 		if($pret){
 			$ext = $ordre->getClientOriginalExtension();
-			$arr_ext = array('doc','docx','pdf');
+			$arr_ext = array('doc','docx','pdf','odt');
 			if(in_array($ext,$arr_ext)){
 				if(!file_exists(public_path('files'))){
 					mkdir(public_path('files'));
@@ -258,7 +258,7 @@ class DossierController extends Controller
 				if (file_exists(public_path('files/contrats_pret/') . $projet->token.'.' . $ext)) {
 					unlink(public_path('files/contrats_pret/') . $projet->token .  '.' . $ext);
 				}
-				$name =  $projet->token . $ext;
+				$name =  $projet->token .'.'. $ext;
 				$pret->move(public_path('files/contrats_pret'), $name);
 				Projet::updateOrCreate(['token'=>$projet->token],['contrat_pretUri'=>$name]);
 			}
