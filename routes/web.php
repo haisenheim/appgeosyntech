@@ -151,6 +151,11 @@ Route::prefix('owner')
 	    Route::get('/investissements/open/{token}','DossierController@openDataroom');
 	    Route::get('/investissements/close/{token}','DossierController@closeDataroom');
 	    Route::get('/letter/create/{token}','DossierController@createLetter');
+	    Route::get('/letter/pacte-associes','ModeleController@pacte');
+	    Route::get('/letter/contrat-pret','ModeleController@pret');
+	    Route::get('/letter/contrat-cession-actif','ModeleController@actif');
+	    Route::get('/letter/contrat-cession-creance','ModeleController@creance');
+	    Route::get('/letter/contrat-concession','ModeleController@concession');
     });
 
 
