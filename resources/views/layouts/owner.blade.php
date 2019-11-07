@@ -36,25 +36,25 @@
             <a class="nav-link" data-toggle="dropdown" href="#"> MODELES DE DOCUMENT </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
               <a href="/owner/letter/pacte-associes" class="dropdown-item">
-                <i class="fas fa-pencil-alt mr-2"></i> PACTE D'ASSOCIES
+                 PACTE D'ASSOCIES
               </a>
 
               <div class="dropdown-divider"></div>
               <a href="/owner/letter/contrat-pret" class="dropdown-item">
-                <i class="fas fa-envelope mr-2"></i> CONTRAT DE PRET
+                CONTRAT DE PRET
               </a>
               <div class="dropdown-divider"></div>
               <a href="/owner/letter/contrat-cession-actif" class="dropdown-item">
-                <i class="fas fa-switch-off mr-2"></i> CONTRACT DE CESSION D'ACTIF
+                CONTRACT DE CESSION D'ACTIF
               </a>
 
               <div class="dropdown-divider"></div>
               <a href="/owner/letter/contrat-cession-creance" class="dropdown-item">
-                <i class="fas fa-envelope mr-2"></i> CONTRAT DE CESSION DE CREANCE
+                CONTRAT DE CESSION DE CREANCE
               </a>
               <div class="dropdown-divider"></div>
               <a href="/owner/letter/contrat-concession" class="dropdown-item">
-                <i class="fas fa-switch-off mr-2"></i> CONTRACT DE CONCESSION
+                CONTRACT DE CONCESSION
               </a>
             </div>
           </li>

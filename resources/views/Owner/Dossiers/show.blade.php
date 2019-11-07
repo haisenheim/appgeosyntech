@@ -1077,6 +1077,18 @@
                 </a>
             </li>
             <li>
+                <a title="Ordre de virement" href="/owner/dossier/ordre-virement" class="ripple">
+                    <i class="fa fa-book fa-lg"></i>
+                </a>
+            </li>
+
+            @if(count($projet->investissements)>=1)
+                   <li>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                   </li>
+            @endif
+
+            <li>
                 <a title="Nouveau Dossier" href="/owner/dossiers/create" class="ripple">
                     <i class="fa fa-plus-circle fa-lg"></i>
                 </a>
