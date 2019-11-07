@@ -1205,7 +1205,7 @@
 </div>
 
 <div class="modal fade" id="reportEditModal">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header bg-success">
                 <h6  class="modal-title text-center">EDITION DU RAPPORT MENSUEL DE GESTION</h6>
@@ -1371,6 +1371,17 @@
         </div>
     </div>
 </div>
+<style>
+   .modal .card-title{
+        color: #000000;
+        font-weight: bold;
+   }
+
+   .modal label{
+        font-size: x-small;
+        line-height: 0.5;
+   }
+</style>
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
 <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
