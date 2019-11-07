@@ -1056,7 +1056,7 @@
 
 @section('nav_actions')
 <main>
-    <nav class="floating-menu">
+    <nav style="top:30%" class="floating-menu">
         <ul class="main-menu">
 
             @if($projet->modepaiement_id>1)
