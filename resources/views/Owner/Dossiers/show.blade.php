@@ -1388,7 +1388,7 @@
                                            </div>
                                        </div>
                                    </div>
-                                       <hr/>
+
                                        <div class="row">
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
@@ -1428,7 +1428,6 @@
                                            </div>
                                        </div>
 
-                                       <hr/>
                                       <div class="row">
 
                                               <div class="col-md-6 col-sm-12">
@@ -1445,7 +1444,6 @@
                                            </div>
                                       </div>
 
-                                       <hr/>
                                        <div class="row">
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
@@ -1484,7 +1482,7 @@
                                                </div>
                                            </div>
                                        </div>
-                                       <hr/>
+
                                        <div class="row">
                                            <div class="col-md-3 col-sm-12">
                                                <div class="form-group">
@@ -1514,7 +1512,7 @@
                                        </div>
 
 
-                                /fieldset>
+                                </fieldset>
                                 <fieldset>
                                     <legend>PASSIF</legend>
                                     <div class="row">
