@@ -1046,6 +1046,11 @@
                     background-color: #FFF;
                     border-color: none;
                 }
+
+                label{
+                color: #000000;
+                margin-top: 15px;
+                }
     </style>
 
 @endsection
