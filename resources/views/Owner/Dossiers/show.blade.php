@@ -1360,7 +1360,310 @@
                                 <h4 class="card-title">BILAN</h4>
                             </div>
                             <div class="card-body">
+                                <fieldset>
+                                   <legend>ACTIF</legend>
+                                   <div class="row">
+                                       <div class="col-md-3 col-sm-12">
+                                           <div class="form-group">
+                                               <label for="frais_developpement" title="Frais de développement et de prospection">Frais de dév. et de prospection</label>
+                                               <input type="number" class="form-control" id="frais_developpement" title="Frais de développement et de prospection"/>
+                                           </div>
+                                       </div>
+                                       <div class="col-md-3 col-sm-12">
+                                           <div class="form-group">
+                                               <label for="brevets" title="Brevets, licences, logiciels, et droits assimilaires">Brevets, licences, logiciels,...</label>
+                                               <input type="number" class="form-control" id="brevets" title="Brevets, licences, logiciels, et droits assimilaires"/>
+                                           </div>
+                                       </div>
+                                       <div class="col-md-3 col-sm-12">
+                                           <div class="form-group">
+                                               <label for="fonds_commercial" title="Fonds commercial et droit au bail">Fonds commercial et droit au bail</label>
+                                               <input type="number" class="form-control" id="fonds_commercial" title="Fonds commercial et droit au bail"/>
+                                           </div>
+                                       </div>
+                                       <div class="col-md-3 col-sm-12">
+                                           <div class="form-group">
+                                               <label for="autres_immobilisations_incorporelles" title="Autres immobilisations incorporelles">AUTRES IMMO. INCORP.</label>
+                                               <input type="number" class="form-control" id="autres_immobilisations_incorporelles" title="Autres immobilisations incorporelles"/>
+                                           </div>
+                                       </div>
+                                   </div>
+                                       <hr/>
+                                       <div class="row">
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="terrains">TERRAIN</label>
+                                                   <input type="number" class="form-control" id="terrains"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="batiments">BATIMENTS</label>
+                                                   <input type="number" class="form-control" id="batiments"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="amenagements" title="Aménagements, agencements et installations">AMENAGEMENTS, AGENCEM. ET INSTAL.</label>
+                                                   <input type="number" class="form-control" id="amenagements" title="Aménagements, agencements et installations"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="materiel_mobilier">MATERIEL, MOBILIER</label>
+                                                   <input type="number" class="form-control" id="materiel_mobilier"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="materiel_transport">Materiel de transport</label>
+                                                   <input type="number" class="form-control" id="materiel_transport"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="avances_acomptes">AVANCES ET ACOMPTES VERSES,...</label>
+                                                   <input type="number" class="form-control" id="avances_acomptes"/>
+                                               </div>
+                                           </div>
+                                       </div>
 
+                                       <hr/>
+                                      <div class="row">
+
+                                              <div class="col-md-6 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="titres_participation">Titres de participation</label>
+                                                   <input type="number" class="form-control" id="titres_participation"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-6 col-sm-12">
+                                               <div class="form-group">
+                                                   <label title="Autres immobilisations financières" for="autres_immobilisations_financieres">Autres immo. financières</label>
+                                                   <input title="Autres immobilisations financières" type="number" class="form-control" id="autres_immobilisations_financieres"/>
+                                               </div>
+                                           </div>
+                                      </div>
+
+                                       <hr/>
+                                       <div class="row">
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="actif_circulant_hao">ACTIF CIRCULANT HAO</label>
+                                                   <input type="number" class="form-control" id="actif_circulant_hao"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="stocks_encours">STOCK ET ENCOURS</label>
+                                                   <input type="number" class="form-control" id="stocks_encours"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="creances_emplois">CRÉANCES ET EMPLOIS ASSIMILÉS</label>
+                                                   <input type="number" class="form-control" id="creances_emplois"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="avances_fournisseurs">FOURNISSEURS AVANCES VERSEES</label>
+                                                   <input type="number" class="form-control" id="avances_fournisseurs"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="clients">CLIENTS</label>
+                                                   <input type="number" class="form-control" id="clients"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="autres_creances">AUTRES CREANCES</label>
+                                                   <input type="number" class="form-control" id="autres_creances"/>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <hr/>
+                                       <div class="row">
+                                           <div class="col-md-3 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="titres_placement">TITRES DE PLACEMENT</label>
+                                                   <input type="number" class="form-control" id="titres_placement"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-3 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="valeur_encaisser">VALEURS  A ENCAISSER</label>
+                                                   <input type="number" class="form-control" id="valeur_encaisser"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-3 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="banques_cheques_">BANQUES, CHEQUES POSTAUX,...</label>
+                                                   <input type="number" class="form-control" id="banques_cheques_"/>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-3 col-sm-12">
+                                               <div class="form-group">
+                                                   <label for="ecart_conversion_actif">ECART DE CONVERSION</label>
+                                                   <input type="number" class="form-control" id="ecart_conversion_actif"/>
+                                               </div>
+                                           </div>
+
+                                       </div>
+
+
+                                /fieldset>
+                                <fieldset>
+                                    <legend>PASSIF</legend>
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="capital">CAPITAL</label>
+                                                <input type="number" class="form-control" id="capital"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="apporteurs_acpital_non_appele">CAPITAL NON APPELE</label>
+                                                <input type="number" class="form-control" id="apporteurs_acpital_non_appele"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="primes_apport">PRIMES D'APPORT D'EMISSION</label>
+                                                <input type="number" class="form-control" id="primes_apport"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="ecarts_reevaluation">ECART DE REEVALUAT.</label>
+                                                <input type="number" class="form-control" id="ecarts_reevaluation"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="reserves_indisponibles">RESERVES DISPONIBLES</label>
+                                                    <input type="number" class="form-control" id="reserves_indisponibles"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="reserves_libres">RESERVES LIBRES</label>
+                                                    <input type="number" class="form-control" id="reserves_libres"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="report_a_nouveau">REPORT A NOUVEAU</label>
+                                                    <input type="number" class="form-control" id="report_a_nouveau"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="resultat_net_exercice">RESULTAT NET DE L'EXERCICE</label>
+                                                    <input type="number" class="form-control" id="resultat_net_exercice"/>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="subventions_investissement">Subventions d'investissement</label>
+                                                    <input type="number" class="form-control" id="subventions_investissement"/>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="provisions_reglementees">Provisions réglementés</label>
+                                                    <input type="number" class="form-control" id="provisions_reglementees"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr/>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="emprunts">EMPRUNTS</label>
+                                                    <input type="number" class="form-control" id="emprunts"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="dettes_location_acquisition">Dettes de location acquisition</label>
+                                                    <input type="number" class="form-control" id="dettes_location_acquisition"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="provisions_financieres_risques_">Provisions financières pour risques et charges</label>
+                                                    <input type="number" class="form-control" id="provisions_financieres_risques_"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="dettes_circulantes_hao">Dettes circulantes HAO</label>
+                                                    <input type="number" class="form-control" id="dettes_circulantes_hao"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="clients_avances_recues">Clients avances reçues</label>
+                                                    <input type="number" class="form-control" id="clients_avances_recues"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="fournisseurs_exploitation" title="Fournisseurs d'exploitation">Fournisseurs d'exploitation</label>
+                                                    <input type="number" class="form-control" id="fournisseurs_exploitation"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="dettes_fiscales">Dettes fiscales et sociales</label>
+                                                    <input type="number" class="form-control" id="dettes_fiscales"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="autres_dettes">Autres dettes</label>
+                                                    <input type="number" class="form-control" id="autres_dettes"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="banques_credit_escompte" title="Banques, crédits d'escomptes et de trésorerie">Banques, crédits d'escomptes et de trésorerie</label>
+                                                    <input type="number" class="form-control" id="banques_credit_escompte"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="banques_credit_tresorerie" title="Banques, crédits de trésorerie">BBanques, crédits de trésorerie</label>
+                                                    <input type="number" class="form-control" id="banques_credit_tresorerie"/>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="ecart_conversion_passif">ECART DE CONVERSION</label>
+                                                    <input type="number" class="form-control" id="ecart_conversion_passif"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                </fieldset>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-save"></i> ENREGISTRER</button>
