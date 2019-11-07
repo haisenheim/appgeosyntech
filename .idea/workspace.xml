@@ -70,15 +70,15 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07272727" vertical-offset="16896" max-vertical-offset="18880">
-              <caret line="1058" column="23" selection-start-line="1058" selection-start-column="23" selection-end-line="1058" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.8181818" vertical-offset="17096" max-vertical-offset="18976">
+              <caret line="1091" column="79" selection-start-line="1091" selection-start-column="79" selection-end-line="1091" selection-end-column="79" />
               <folding>
                 <element signature="e#70522#70537#0#HTML" expanded="true" />
-                <marker date="1573125849326" expanded="true" signature="59905:59944" placeholder="..." />
-                <marker date="1573125849326" expanded="true" signature="64037:64047" placeholder="..." />
-                <marker date="1573125849326" expanded="true" signature="64105:64115" placeholder="..." />
-                <marker date="1573125849326" expanded="true" signature="64174:64184" placeholder="..." />
-                <marker date="1573125849326" expanded="true" signature="64258:64268" placeholder="..." />
+                <marker date="1573126044488" expanded="true" signature="59905:59944" placeholder="..." />
+                <marker date="1573126044488" expanded="true" signature="64037:64047" placeholder="..." />
+                <marker date="1573126044488" expanded="true" signature="64105:64115" placeholder="..." />
+                <marker date="1573126044488" expanded="true" signature="64174:64184" placeholder="..." />
+                <marker date="1573126044488" expanded="true" signature="64258:64268" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -443,7 +443,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../htdocs/competence" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../htdocs/palucare" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
@@ -530,7 +530,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27083334" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1024,15 +1024,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07272727" vertical-offset="16896" max-vertical-offset="18880">
-          <caret line="1058" column="23" selection-start-line="1058" selection-start-column="23" selection-end-line="1058" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.8181818" vertical-offset="17096" max-vertical-offset="18976">
+          <caret line="1091" column="79" selection-start-line="1091" selection-start-column="79" selection-end-line="1091" selection-end-column="79" />
           <folding>
             <element signature="e#70522#70537#0#HTML" expanded="true" />
-            <marker date="1573125849326" expanded="true" signature="59905:59944" placeholder="..." />
-            <marker date="1573125849326" expanded="true" signature="64037:64047" placeholder="..." />
-            <marker date="1573125849326" expanded="true" signature="64105:64115" placeholder="..." />
-            <marker date="1573125849326" expanded="true" signature="64174:64184" placeholder="..." />
-            <marker date="1573125849326" expanded="true" signature="64258:64268" placeholder="..." />
+            <marker date="1573126044488" expanded="true" signature="59905:59944" placeholder="..." />
+            <marker date="1573126044488" expanded="true" signature="64037:64047" placeholder="..." />
+            <marker date="1573126044488" expanded="true" signature="64105:64115" placeholder="..." />
+            <marker date="1573126044488" expanded="true" signature="64174:64184" placeholder="..." />
+            <marker date="1573126044488" expanded="true" signature="64258:64268" placeholder="..." />
           </folding>
         </state>
       </provider>
