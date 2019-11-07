@@ -1049,7 +1049,7 @@
 
                 label{
                 color: #000000;
-                margin-top: 15px;
+                margin-top: 10px;
                 }
     </style>
 
@@ -1174,6 +1174,7 @@
                 <div class="card-body">
                     <form action="/owner/dossier/docs/" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
+                        <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
                         <div class="form-group">
                             <label for="ordre">ORDRE DE VIREMENT</label>
                             <input type="file" class="form-control" id="ordre" name="ordre"/>
