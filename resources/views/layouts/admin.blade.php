@@ -188,7 +188,7 @@
             </a>
           </li>
 
-          <li style="overflow-y: scroll;" class="nav-item has-treeview">
+          <li  class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
@@ -196,7 +196,7 @@
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <ul style="overflow-y: scroll;" class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="/admin/tinvestissements" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
