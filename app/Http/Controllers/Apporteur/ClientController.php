@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Apporteur;
 use App\Http\Controllers\Controller;
 use App\Models\Client;
 use App\Models\Pay;
+use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -28,6 +29,16 @@ class ClientController extends Controller
         return view('Apporteur/Clients/index')->with(compact('users'));
 
     }
+
+	public function getFinances(){
+		$users = User::all()->where('role_id',3)->where('creator_id',Auth::user()->id);
+		$projets = [];
+		foreach($users as $client){
+			$projets[] = Projet::where('owner_id',$client->id);
+		}
+
+		return view('Apporteur/Clients/finances')->with(compact('projets'));
+	}
 
     /**
      * Show the form for creating a new resource.
