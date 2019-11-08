@@ -12,6 +12,25 @@
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
                         <div class="card">
                             <div class="card-body">
+
+                                <div class="info-box bg-{{$projet->progresscolor}}">
+                                  <span class="info-box-icon"><i class="far fa-coins"></i></span>
+
+                                  <div class="info-box-content">
+                                    <span class="info-box-text">Collecte</span>
+                                    <span class="info-box-number">41,410</span>
+
+                                    <div class="progress">
+                                      <div class="progress-bar" style="width: {{$projet->pourcentage}}%"></div>
+                                    </div>
+                                    <span class="progress-description">
+                                      {{$projet->pourcentage}}%
+                                    </span>
+                                  </div>
+                                  <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+
                             <div class="progress progress-sm">
                               <div class="progress-bar progress-bar-striped bg-{{$projet->progresscolor}}" role="progressbar" aria-volumenow="{{$projet->progress }}" aria-volumemin="0" aria-volumemax="100" style="width: {{$projet->progress .'%'}} ">
                               </div>
