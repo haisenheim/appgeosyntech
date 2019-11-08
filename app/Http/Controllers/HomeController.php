@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
 
         $usr = Auth::user();
-        dd($usr);
+        //dd($usr);
         if(!empty($usr)){
             if(Auth::user()->role_id==1){
                 return  redirect('admin/dashboard');
