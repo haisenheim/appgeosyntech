@@ -179,10 +179,12 @@ class DossierController extends Controller
 		$inputs = $request->only($rs);
 		$inputs['annee']=date('Y');
 		$inputs['projet_id']=$projet->id;
+		$inputs['token']=sha1(Auth::user()->id. date('Yhmids'));
 		$reportrslt = Reportresultat::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$inputs);
 		$inputs = $request->except($resultat);
 		$inputs['annee']=date('Y');
 		$inputs['projet_id']=$projet->id;
+		$inputs['token']=sha1(Auth::user()->id. date('Yhmids'));
 		$reportbilan = Reportbilan::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$inputs);
 		return back();
 	}
