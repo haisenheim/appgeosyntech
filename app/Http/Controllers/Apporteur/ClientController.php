@@ -52,7 +52,7 @@ class ClientController extends Controller
     {
         //
         //  dd($request['imageUri']);
-        $user = new Client();
+        $user = new User();
         $user->first_name = $request['first_name'];
         $user->last_name = $request['last_name'];
         $user->phone = $request['phone'];
