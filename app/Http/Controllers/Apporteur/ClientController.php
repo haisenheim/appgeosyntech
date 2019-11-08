@@ -59,6 +59,10 @@ class ClientController extends Controller
         $user->address = $request['address'];
         $user->email = $request['email'];
         $user->pay_id = Auth::user()->pay_id;
+	    if($request->password != $request->cpassword){
+
+		    return back();
+	    }
         $user->password=Hash::make($request['password']);
         $user->role_id =3;
         $user->moi_id=date('m');
