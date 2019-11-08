@@ -53,7 +53,7 @@
                                 <td>{!! $user->pays?$user->pays->name :'-' !!} </td>
                                 <td>
                                 <ul class="list-inline">
-                                  <li class="list-inline-item"><a class="btn btn-primary btn-xs" href="{{route('admin.apporteurs.show',[$user->id])}}"><i class="fa fa-search"></i></a></li>
+                                  <li class="list-inline-item"><a class="btn btn-primary btn-xs" href="#"><i class="fa fa-search"></i></a></li>
                                 </ul>
                                 </td>
                             </tr>
@@ -103,7 +103,7 @@
                             </div>
                             <div class="form-group">
                               <label for="pay_id">PAYS</label>
-                              <select name="pay_id" id="pay_id">
+                              <select class="form-control" name="pay_id" id="pay_id">
                                 @foreach($pays as $pay)
                                     <option value="{{ $pay->id }}">{{ $pay->name }}</option>
                                 @endforeach

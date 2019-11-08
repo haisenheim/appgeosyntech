@@ -102,6 +102,37 @@ Route::prefix('angel')
 	    Route::get('/actif/unsubscribe/{token}','ActifController@unsubscribe');
     });
 
+//Liste des routes de l'apporteur d'affaires
+Route::prefix('apporteur')
+	->namespace('Apporteur')
+	->middleware(['auth','apporteur'])
+	->name('apporteur.')
+	->group(function(){
+		Route::get('finances/','ClientController@getFinances');
+		Route::resource('clients','ClientController');
+
+	});
+
+//Liste des routes de l'administrateur d'entreprise
+Route::prefix('adminentr')
+	->namespace('Adminentr')
+	->middleware(['auth','adminentr'])
+	->name('adminentr.')
+	->group(function(){
+		Route::resource('angels','AngelController');
+		Route::resource('dossiers','DossierController');
+	});
+
+//Liste des routes de l'administrateur d'organisme financier
+Route::prefix('adminorg')
+	->namespace('Adminorg')
+	->middleware(['auth','adminorg'])
+	->name('adminorg.')
+	->group(function(){
+		Route::resource('angels','AngelController');
+		Route::resource('dossiers','DossierController');
+	});
+
 //Liste des routes du consultant
 Route::prefix('consultant')
     ->namespace('Consultant')

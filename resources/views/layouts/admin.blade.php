@@ -172,7 +172,7 @@
 
           <li class="nav-item">
             <a href="/admin/apporteurs" class="nav-link">
-              <i class="nav-icon fas fa-coins"></i>
+              <i class="nav-icon fa fa-users"></i>
               <p>
                 APPORTEURS D'AFFAIRES
               </p>

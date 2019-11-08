@@ -59,4 +59,8 @@ class User extends Authenticatable
         return $this->last_name . "  ".$this->first_name;
     }
 
+	public function creator(){
+		return $this->belongsTo('App\User','creator_id');
+	}
+
 }

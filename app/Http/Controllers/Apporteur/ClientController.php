@@ -1,21 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Apporteur;
 
 use App\Http\Controllers\Controller;
+use App\Models\Client;
 use App\Models\Pay;
-use App\Models\Role;
-use App\Models\Ville;
-use Illuminate\Foundation\Auth\User;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Session;
 
-
-class CommercialController extends Controller
+class ClientController extends Controller
 {
+    //
+
     /**
      * Display a listing of the resource.
      *
@@ -24,11 +22,10 @@ class CommercialController extends Controller
     public function index()
     {
         //
-        $users = \App\User::all()->where('role_id',7);
-       // dd($villes);
-       // echo "Bonjour tout le monde!!";
-	    $pays = Pay::all();
-        return view('Admin/Commercials/index')->with(compact('users','pays'));
+        $users = User::all()->where('role_id',3);
+        // dd($villes);
+        // echo "Bonjour tout le monde!!";
+        return view('Apporteur/Clients/index')->with(compact('users'));
 
     }
 
@@ -42,7 +39,7 @@ class CommercialController extends Controller
         //
         //$roles = Role::all();
         $pays = Pay::all();
-        return view('admin/Commercials/create')->with(compact('pays'));
+        return view('admin/clients/create')->with(compact('pays'));
     }
 
     /**
@@ -54,22 +51,22 @@ class CommercialController extends Controller
     public function store(Request $request)
     {
         //
-      //  dd($request['imageUri']);
-        $user = new User();
+        //  dd($request['imageUri']);
+        $user = new Client();
         $user->first_name = $request['first_name'];
         $user->last_name = $request['last_name'];
         $user->phone = $request['phone'];
         $user->address = $request['address'];
         $user->email = $request['email'];
-        $user->pay_id = $request['pay_id'];
+        $user->pay_id = Auth::user()->pay_id;
         $user->password=Hash::make($request['password']);
-        $user->role_id =7;
+        $user->role_id =3;
         $user->moi_id=date('m');
         $user->annee=date('Y');
 	    $user->creator_id = Auth::user()->id;
         $user->male = $request['male']=='on'?1:0;
-       // $user->senior = $request['senior']=='on'?1:0;
         $user->active = 1;
+
 	    if($request->imageUri){
 		    $file = $request->imageUri;
 		    $ext = $file->getClientOriginalExtension();
@@ -90,8 +87,8 @@ class CommercialController extends Controller
 	    }
 
         $user->save();
-            session('message','L\'apporteur d\'affaires a été correctement enregistré !!!');
-            return redirect('/admin/apporteurs');
+        session('message','Le client a été correctement enregistré !!!');
+        return redirect('/apporteur/clients');
 
 
     }
@@ -99,23 +96,21 @@ class CommercialController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\Ville  $ville
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Client $client)
     {
         //
-        $user = User::find($user)->first();
-        return view('admin/apporteurs/show')->with(compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Ville  $ville
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ville $ville)
+    public function edit(Client $client)
     {
         //
     }
@@ -127,7 +122,7 @@ class CommercialController extends Controller
      * @param  \App\Models\Ville  $ville
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ville $ville)
+    public function update(Request $request, Client $client)
     {
         //
     }
@@ -135,10 +130,10 @@ class CommercialController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Ville  $ville
+     * @param  \App\Models\Ville  $client
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ville $ville)
+    public function destroy(Client $client)
     {
         //
     }

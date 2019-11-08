@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
 
         $usr = Auth::user();
-        //dd($usr);
+        dd($usr);
         if(!empty($usr)){
             if(Auth::user()->role_id==1){
                 return  redirect('admin/dashboard');
@@ -44,7 +44,17 @@ class HomeController extends Controller
 
             if(Auth::user()->role_id==4){
                 return redirect('angel/');
-            }else{
+            }
+	        if(Auth::user()->role_id==5){
+		        return redirect('adminentr/dossiers');
+	        }
+	        if(Auth::user()->role_id==6){
+		        return redirect('adminorg/dossiers');
+	        }
+	        if(Auth::user()->role_id==7){
+		        return redirect('apporteur/clients');
+	        }
+            else{
                 return view('home');
             }
         }
