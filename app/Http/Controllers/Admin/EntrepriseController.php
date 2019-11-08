@@ -104,7 +104,7 @@ class EntrepriseController extends Controller
 			$user_data = array(
 				'last_name' => $request->last_name,
 				'first_name' => $request->first_name,
-				'role_id' => 4,
+				'role_id' => 5,
 				'email' => $request->user_email,
 				'password' => Hash::make($request->password),
 				'male' => $request->gender,

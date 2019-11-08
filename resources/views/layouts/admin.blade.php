@@ -171,6 +171,15 @@
           </li>
 
           <li class="nav-item">
+            <a href="/admin/apporteurs" class="nav-link">
+              <i class="nav-icon fas fa-coins"></i>
+              <p>
+                APPORTEURS D'AFFAIRES
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="/admin/porteurs" class="nav-link">
               <i class="nav-icon fas fa-male"></i>
               <p>
@@ -179,7 +188,7 @@
             </a>
           </li>
 
-          <li class="nav-item has-treeview">
+          <li style="overflow-y: scroll;" class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
@@ -213,7 +222,7 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>ORGANISMES FINANCIERS</p>
                 </a>
-              </li>
+               </li>
 
                 <li class="nav-item">
                   <a href="/admin/tags" class="nav-link">
