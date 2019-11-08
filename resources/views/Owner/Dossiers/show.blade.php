@@ -833,7 +833,8 @@
                     </div>
                     @endif
                     @if($projet->etape>=4)
-                    <div class="card card-default collapsed-card">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="card card-default collapsed-card">
                         <div class="card-header">
                             <h3 class="card-title">PLAN FINANCIER</h3>
 
@@ -1601,6 +1602,8 @@
 
                          </div>
                     </div>
+                    </div>
+
                   @endif
                   </div>
 
