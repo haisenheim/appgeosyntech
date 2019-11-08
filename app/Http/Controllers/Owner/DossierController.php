@@ -9,6 +9,8 @@ use App\Models\Investissement;
 use App\Models\Moi;
 use App\Models\ProduitsProjet;
 use App\Models\Projet;
+use App\Models\Reportbilan;
+use App\Models\Reportresultat;
 use App\Models\Resultat;
 use App\Models\Tags;
 use App\Models\TagsProjet;
@@ -163,6 +165,16 @@ class DossierController extends Controller
 			$tag->projet_id = $projet->id;
 			$tag->save();
 		}
+		return back();
+	}
+
+
+	public function editReport(Request $request){
+		//dd(public_path('img'));
+
+		$projet = Projet::where('token',$request->projet_token)->first();
+		$reportbilan = Reportbilan::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$request->input());
+		$reportrslt = Reportresultat::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$request->input());
 		return back();
 	}
 

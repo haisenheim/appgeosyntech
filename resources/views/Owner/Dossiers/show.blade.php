@@ -1366,25 +1366,25 @@
                                        <div class="col-md-3 col-sm-12">
                                            <div class="form-group">
                                                <label for="frais_developpement" title="Frais de développement et de prospection">Frais de dév. et de prospection</label>
-                                               <input type="number" class="form-control" id="frais_developpement" title="Frais de développement et de prospection"/>
+                                               <input type="number" class="form-control" name="frais_developpement" title="Frais de développement et de prospection"/>
                                            </div>
                                        </div>
                                        <div class="col-md-3 col-sm-12">
                                            <div class="form-group">
                                                <label for="brevets" title="Brevets, licences, logiciels, et droits assimilaires">Brevets, licences, logiciels,...</label>
-                                               <input type="number" class="form-control" id="brevets" title="Brevets, licences, logiciels, et droits assimilaires"/>
+                                               <input type="number" class="form-control" name="brevets" title="Brevets, licences, logiciels, et droits assimilaires"/>
                                            </div>
                                        </div>
                                        <div class="col-md-3 col-sm-12">
                                            <div class="form-group">
                                                <label for="fonds_commercial" title="Fonds commercial et droit au bail">Fonds commercial et droit au bail</label>
-                                               <input type="number" class="form-control" id="fonds_commercial" title="Fonds commercial et droit au bail"/>
+                                               <input type="number" class="form-control" name="fonds_commercial" title="Fonds commercial et droit au bail"/>
                                            </div>
                                        </div>
                                        <div class="col-md-3 col-sm-12">
                                            <div class="form-group">
                                                <label for="autres_immobilisations_incorporelles" title="Autres immobilisations incorporelles">AUTRES IMMO. INCORP.</label>
-                                               <input type="number" class="form-control" id="autres_immobilisations_incorporelles" title="Autres immobilisations incorporelles"/>
+                                               <input type="number" class="form-control" name="autres_immobilisations_incorporelles" title="Autres immobilisations incorporelles"/>
                                            </div>
                                        </div>
                                    </div>
@@ -1393,37 +1393,37 @@
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="terrains">TERRAIN</label>
-                                                   <input type="number" class="form-control" id="terrains"/>
+                                                   <input type="number" class="form-control" name="terrains"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="batiments">BATIMENTS</label>
-                                                   <input type="number" class="form-control" id="batiments"/>
+                                                   <input type="number" class="form-control" name="batiments"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="amenagements" title="Aménagements, agencements et installations">AMENAGEMENTS, AGENCEM. ET INSTAL.</label>
-                                                   <input type="number" class="form-control" id="amenagements" title="Aménagements, agencements et installations"/>
+                                                   <input type="number" class="form-control" name="amenagements" title="Aménagements, agencements et installations"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="materiel_mobilier">MATERIEL, MOBILIER</label>
-                                                   <input type="number" class="form-control" id="materiel_mobilier"/>
+                                                   <input type="number" class="form-control" name="materiel_mobilier"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="materiel_transport">Materiel de transport</label>
-                                                   <input type="number" class="form-control" id="materiel_transport"/>
+                                                   <input type="number" class="form-control" name="materiel_transport"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="avances_acomptes">AVANCES ET ACOMPTES VERSES,...</label>
-                                                   <input type="number" class="form-control" id="avances_acomptes"/>
+                                                   <input type="number" class="form-control" name="avances_acomptes"/>
                                                </div>
                                            </div>
                                        </div>
@@ -1433,13 +1433,13 @@
                                               <div class="col-md-6 col-sm-12">
                                                <div class="form-group">
                                                    <label for="titres_participation">Titres de participation</label>
-                                                   <input type="number" class="form-control" id="titres_participation"/>
+                                                   <input type="number" class="form-control" name="titres_participation"/>
                                                </div>
                                            </div>
                                            <div class="col-md-6 col-sm-12">
                                                <div class="form-group">
                                                    <label title="Autres immobilisations financières" for="autres_immobilisations_financieres">Autres immo. financières</label>
-                                                   <input title="Autres immobilisations financières" type="number" class="form-control" id="autres_immobilisations_financieres"/>
+                                                   <input title="Autres immobilisations financières" type="number" class="form-control" name="autres_immobilisations_financieres"/>
                                                </div>
                                            </div>
                                       </div>
@@ -1448,37 +1448,37 @@
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="actif_circulant_hao">ACTIF CIRCULANT HAO</label>
-                                                   <input type="number" class="form-control" id="actif_circulant_hao"/>
+                                                   <input type="number" class="form-control" name="actif_circulant_hao"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="stocks_encours">STOCK ET ENCOURS</label>
-                                                   <input type="number" class="form-control" id="stocks_encours"/>
+                                                   <input type="number" class="form-control" name="stocks_encours"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="creances_emplois">CRÉANCES ET EMPLOIS ASSIMILÉS</label>
-                                                   <input type="number" class="form-control" id="creances_emplois"/>
+                                                   <input type="number" class="form-control" name="creances_emplois"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="avances_fournisseurs">FOURNISSEURS AVANCES VERSEES</label>
-                                                   <input type="number" class="form-control" id="avances_fournisseurs"/>
+                                                   <input type="number" class="form-control" name="avances_fournisseurs"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="clients">CLIENTS</label>
-                                                   <input type="number" class="form-control" id="clients"/>
+                                                   <input type="number" class="form-control" name="clients"/>
                                                </div>
                                            </div>
                                            <div class="col-md-4 col-sm-12">
                                                <div class="form-group">
                                                    <label for="autres_creances">AUTRES CREANCES</label>
-                                                   <input type="number" class="form-control" id="autres_creances"/>
+                                                   <input type="number" class="form-control" name="autres_creances"/>
                                                </div>
                                            </div>
                                        </div>
@@ -1487,25 +1487,25 @@
                                            <div class="col-md-3 col-sm-12">
                                                <div class="form-group">
                                                    <label for="titres_placement">TITRES DE PLACEMENT</label>
-                                                   <input type="number" class="form-control" id="titres_placement"/>
+                                                   <input type="number" class="form-control" name="titres_placement"/>
                                                </div>
                                            </div>
                                            <div class="col-md-3 col-sm-12">
                                                <div class="form-group">
                                                    <label for="valeur_encaisser">VALEURS  A ENCAISSER</label>
-                                                   <input type="number" class="form-control" id="valeur_encaisser"/>
+                                                   <input type="number" class="form-control" name="valeur_encaisser"/>
                                                </div>
                                            </div>
                                            <div class="col-md-3 col-sm-12">
                                                <div class="form-group">
                                                    <label for="banques_cheques_">BANQUES, CHEQUES POSTAUX,...</label>
-                                                   <input type="number" class="form-control" id="banques_cheques_"/>
+                                                   <input type="number" class="form-control" name="banques_cheques_"/>
                                                </div>
                                            </div>
                                            <div class="col-md-3 col-sm-12">
                                                <div class="form-group">
                                                    <label for="ecart_conversion_actif">ECART DE CONVERSION</label>
-                                                   <input type="number" class="form-control" id="ecart_conversion_actif"/>
+                                                   <input type="number" class="form-control" name="ecart_conversion_actif"/>
                                                </div>
                                            </div>
 
@@ -1519,25 +1519,25 @@
                                         <div class="col-md-3 col-sm-12">
                                             <div class="form-group">
                                                 <label for="capital">CAPITAL</label>
-                                                <input type="number" class="form-control" id="capital"/>
+                                                <input type="number" class="form-control" name="capital"/>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-12">
                                             <div class="form-group">
                                                 <label for="apporteurs_acpital_non_appele">CAPITAL NON APPELE</label>
-                                                <input type="number" class="form-control" id="apporteurs_acpital_non_appele"/>
+                                                <input type="number" class="form-control" name="apporteurs_acpital_non_appele"/>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-12">
                                             <div class="form-group">
                                                 <label for="primes_apport">PRIMES D'APPORT D'EMISSION</label>
-                                                <input type="number" class="form-control" id="primes_apport"/>
+                                                <input type="number" class="form-control" name="primes_apport"/>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-12">
                                             <div class="form-group">
                                                 <label for="ecarts_reevaluation">ECART DE REEVALUAT.</label>
-                                                <input type="number" class="form-control" id="ecarts_reevaluation"/>
+                                                <input type="number" class="form-control" name="ecarts_reevaluation"/>
                                             </div>
                                         </div>
                                     </div>
@@ -1546,39 +1546,39 @@
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="reserves_indisponibles">RESERVES DISPONIBLES</label>
-                                                    <input type="number" class="form-control" id="reserves_indisponibles"/>
+                                                    <input type="number" class="form-control" name="reserves_indisponibles"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="reserves_libres">RESERVES LIBRES</label>
-                                                    <input type="number" class="form-control" id="reserves_libres"/>
+                                                    <input type="number" class="form-control" name="reserves_libres"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="report_a_nouveau">REPORT A NOUVEAU</label>
-                                                    <input type="number" class="form-control" id="report_a_nouveau"/>
+                                                    <input type="number" class="form-control" name="report_a_nouveau"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="resultat_net_exercice">RESULTAT NET DE L'EXERCICE</label>
-                                                    <input type="number" class="form-control" id="resultat_net_exercice"/>
+                                                    <input type="number" class="form-control" name="resultat_net_exercice"/>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="subventions_investissement">Subventions d'investissement</label>
-                                                    <input type="number" class="form-control" id="subventions_investissement"/>
+                                                    <input type="number" class="form-control" name="subventions_investissement"/>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="provisions_reglementees">Provisions réglementés</label>
-                                                    <input type="number" class="form-control" id="provisions_reglementees"/>
+                                                    <input type="number" class="form-control" name="provisions_reglementees"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -1588,19 +1588,19 @@
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="emprunts">EMPRUNTS</label>
-                                                    <input type="number" class="form-control" id="emprunts"/>
+                                                    <input type="number" class="form-control" name="emprunts"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="dettes_location_acquisition">Dettes de location acquisition</label>
-                                                    <input type="number" class="form-control" id="dettes_location_acquisition"/>
+                                                    <input type="number" class="form-control" name="dettes_location_acquisition"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="provisions_financieres_risques_">Provisions financières pour risques et charges</label>
-                                                    <input type="number" class="form-control" id="provisions_financieres_risques_"/>
+                                                    <input type="number" class="form-control" name="provisions_financieres_risques_"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -1608,19 +1608,19 @@
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="dettes_circulantes_hao">Dettes circulantes HAO</label>
-                                                    <input type="number" class="form-control" id="dettes_circulantes_hao"/>
+                                                    <input type="number" class="form-control" name="dettes_circulantes_hao"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="clients_avances_recues">Clients avances reçues</label>
-                                                    <input type="number" class="form-control" id="clients_avances_recues"/>
+                                                    <input type="number" class="form-control" name="clients_avances_recues"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="fournisseurs_exploitation" title="Fournisseurs d'exploitation">Fournisseurs d'exploitation</label>
-                                                    <input type="number" class="form-control" id="fournisseurs_exploitation"/>
+                                                    <input type="number" class="form-control" name="fournisseurs_exploitation"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -1629,32 +1629,32 @@
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="dettes_fiscales">Dettes fiscales et sociales</label>
-                                                    <input type="number" class="form-control" id="dettes_fiscales"/>
+                                                    <input type="number" class="form-control" name="dettes_fiscales"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="autres_dettes">Autres dettes</label>
-                                                    <input type="number" class="form-control" id="autres_dettes"/>
+                                                    <input type="number" class="form-control" name="autres_dettes"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-3 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="banques_credit_escompte" title="Banques, crédits d'escomptes et de trésorerie">Banques, crédits d'escomptes et de trésorerie</label>
-                                                    <input type="number" class="form-control" id="banques_credit_escompte"/>
+                                                    <input type="number" class="form-control" name="banques_credit_escompte"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-3 col-sm-12">
                                                 <div class="form-group">
-                                                    <label for="banques_credit_tresorerie" title="Banques, crédits de trésorerie">BBanques, crédits de trésorerie</label>
-                                                    <input type="number" class="form-control" id="banques_credit_tresorerie"/>
+                                                    <label for="banques_credit_tresorerie" title="Banques, crédits de trésorerie">Banques, crédits de trésorerie</label>
+                                                    <input type="number" class="form-control" name="banques_credit_tresorerie"/>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-3 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="ecart_conversion_passif">ECART DE CONVERSION</label>
-                                                    <input type="number" class="form-control" id="ecart_conversion_passif"/>
+                                                    <input type="number" class="form-control" name="ecart_conversion_passif"/>
                                                 </div>
                                             </div>
 
