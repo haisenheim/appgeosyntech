@@ -161,7 +161,6 @@ class Projet extends Model
 			if($letter){
 				$total = $total+$letter->montant;
 			}
-
 		}
 		return $total;
 	}

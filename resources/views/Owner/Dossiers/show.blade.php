@@ -12,6 +12,7 @@
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
                         <div class="card">
                             <div class="card-body">
+
                                 @if($projet->validated_step >3)
                                 <div class="info-box bg-{{$projet->investcolor}}">
                                   <span class="info-box-icon"><i class="fa fa-coins"></i></span>
@@ -31,6 +32,30 @@
                                 </div>
                                 <!-- /.info-box -->
                                 @endif
+
+                                <ul class="list-inline">
+                                    @if($projet->ordrevirementUri)
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-danger">Ordre de vir. absent</span>
+                                        </li>
+                                    @else
+                                        @if(!$projet->ordrevirement_validated)
+                                            <li class="list-inline-item">
+                                                <span class="badge badge-danger">Ordre de vir. non validé</span>
+                                            </li>
+                                        @endif
+                                    @endif
+                                    @if(!$projet->pacte_associeUri)
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-danger">Pacte des associés absent</span>
+                                        </li>
+                                    @endif
+                                    @if(!$projet->contrat_pretUri)
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-danger">Contrat de prêt absent</span>
+                                        </li>
+                                    @endif
+                                </ul>
 
                             <div class="progress progress-sm">
                               <div class="progress-bar progress-bar-striped bg-{{$projet->progresscolor}}" role="progressbar" aria-volumenow="{{$projet->progress }}" aria-volumemin="0" aria-volumemax="100" style="width: {{$projet->progress .'%'}} ">
