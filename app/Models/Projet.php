@@ -157,7 +157,8 @@ class Projet extends Model
 		$investissements = Investissement::all()->where('projet_id',$this->id);
 		$total = 0;
 		foreach($investissements as $investissement){
-			$total = $total+$investissement->montant;
+			$letter = $investissement->lettre;
+			$total = $total+$letter?$letter->montant:0;
 		}
 		return $total;
 	}
@@ -166,6 +167,26 @@ class Projet extends Model
 		$total = $this->getTotalAttribute();
 		$d = $this->montant? round(($total/$this->montant)*100,2):0;
 		return $d;
+	}
+
+	protected function getInvestcolorAttribute(){
+		$colors = ['danger','warning','primary','success'];
+		$total = $this->getTotalAttribute();
+		$tr=0;
+		if($total <= 25){
+			$tr =0;
+		}
+		if($total > 25 && $total<=50){
+			$tr =1;
+		}
+		if($total > 50 && $total <=75){
+			$tr =2;
+		}
+		if($total > 75){
+			$tr =0;
+		}
+
+		return $colors[$tr];
 	}
 
 }
