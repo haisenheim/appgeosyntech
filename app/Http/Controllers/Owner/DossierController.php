@@ -173,8 +173,17 @@ class DossierController extends Controller
 		//dd(public_path('img'));
 
 		$projet = Projet::where('token',$request->projet_token)->first();
-		$reportbilan = Reportbilan::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$request->input());
-		$reportrslt = Reportresultat::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$request->input());
+		$resultat = ['ca','cf','cv','ape','pi','ps','sp','taxes','dap','impots','pf','cfi','ce','pe','salaires','participations'];
+		$rs = $resultat;
+		$rs[] = 'moi_id';
+		$inputs = $request->only($rs);
+		$inputs['annee']=date('Y');
+		$inputs['projet_id']=$projet->id;
+		$reportrslt = Reportresultat::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$inputs);
+		$inputs = $request->except($resultat);
+		$inputs['annee']=date('Y');
+		$inputs['projet_id']=$projet->id;
+		$reportbilan = Reportbilan::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$inputs);
 		return back();
 	}
 
