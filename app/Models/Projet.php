@@ -158,7 +158,10 @@ class Projet extends Model
 		$total = 0;
 		foreach($investissements as $investissement){
 			$letter = $investissement->lettre;
-			$total = $total+$letter?$letter->montant:0;
+			if($letter){
+				$total = $total+$letter->montant;
+			}
+
 		}
 		return $total;
 	}
