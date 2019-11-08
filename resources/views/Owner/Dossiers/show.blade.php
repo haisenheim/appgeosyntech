@@ -34,7 +34,7 @@
                                 @endif
 
                                 <ul class="list-inline">
-                                    @if($projet->ordrevirementUri)
+                                    @if(!$projet->ordrevirementUri)
                                         <li class="list-inline-item">
                                             <span class="badge badge-danger">Ordre de vir. absent</span>
                                         </li>
@@ -45,7 +45,7 @@
                                             </li>
                                         @endif
                                     @endif
-                                    @if(!$projet->pacte_associeUri)
+                                    @if(!$projet->pacte_associesUri)
                                         <li class="list-inline-item">
                                             <span class="badge badge-danger">Pacte des associés absent</span>
                                         </li>
