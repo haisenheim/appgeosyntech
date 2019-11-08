@@ -18,7 +18,7 @@
 
                                   <div class="info-box-content">
                                     <span class="info-box-text">Collecte</span>
-                                    <span class="info-box-number"> {{ $projet->total . ' '. $projet->devise->abb; }} </span>
+                                    <span class="info-box-number"> {{ $projet->total . ' '. $projet->devise->abb }} </span>
 
                                     <div class="progress">
                                       <div class="progress-bar" style="width: {{$projet->pourcentage}}%"></div>
