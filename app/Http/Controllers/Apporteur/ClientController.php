@@ -37,6 +37,7 @@ class ClientController extends Controller
 			$projets[] = Projet::where('owner_id',$client->id);
 		}
 
+		dd($projets);
 		return view('Apporteur/Clients/finances')->with(compact('projets'));
 	}
 
