@@ -67,12 +67,7 @@
                                                 </thead>
                                                 <tbody>
                                                     @foreach($prjs as $prj)
-                                                        <tr>
-                                                            <td>{{ $prj->owner->name }}</td>
-                                                            <td>{{ $prj->name }}</td>
-                                                            <td>{{ date_format($prj->created_at, 'd/m/Y') }}</td>
-                                                            <th>-</th>
-                                                        </tr>
+                                                        {{ $prj->dump() }}
                                                     @endforeach
                                                 </tbody>
                                             </table>
