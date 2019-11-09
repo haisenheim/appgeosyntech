@@ -38,7 +38,7 @@ class ClientController extends Controller
 		}
 
 		$projets = $projets->groupBy('annee',function($item){
-			return $item->moi_id;
+			return collect($item)->groupBy('moi_id')->toArray();
 		});
 
 		$projets->toArray();
