@@ -41,11 +41,12 @@ class ClientController extends Controller
 
 		$projets->toArray();
 
-		foreach($projets as $p){
-			$p->dump();
+		$dossiers=[];
+		foreach($projets as $k=>$v){
+			$dossiers[$k] = $v->groupBy('moi_id')->toArray();
 		};
 
-		dd($projets);
+		dd($dossiers);
 		return view('Apporteur/Clients/finances')->with(compact('projets'));
 	}
 
