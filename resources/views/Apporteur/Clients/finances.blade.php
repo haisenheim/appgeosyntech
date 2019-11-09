@@ -67,10 +67,11 @@
                                                 </thead>
                                                 <tbody>
                                                     @foreach($prjs as $prj)
+                                                     <?php $projet = \App\Models\Projet::find($prj['id']);  ?>
                                                         <tr>
-                                                            <td>{{ $prj['representant'] }}</td>
-                                                            <td>{{ $prj['name'] }}</td>
-                                                            <td>{{ date_format(\Carbon\Carbon::createFromTimeString($prj['created_at']), 'd/m/Y') }}</td>
+                                                            <td>{{ $projet->owner->name }}</td>
+                                                            <td>{{ $projet->name }}</td>
+                                                            <td>{{ date_format($projet->created_at, 'd/m/Y') }}</td>
                                                             <th>-</th>
                                                         </tr>
                                                     @endforeach
