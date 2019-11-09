@@ -46,7 +46,7 @@ class ClientController extends Controller
 			$dossiers[$k] = $v->groupBy('moi_id')->toArray();
 		};
 
-		dd($dossiers);
+		//dd($dossiers);
 		return view('Apporteur/Clients/finances')->with(compact('projets'));
 	}
 
