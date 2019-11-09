@@ -47,7 +47,7 @@ class ClientController extends Controller
 		};
 
 		//dd($dossiers);
-		return view('Apporteur/Clients/finances')->with(compact('projets'));
+		return view('Apporteur/Clients/finances')->with(compact('dossiers'));
 	}
 
     /**

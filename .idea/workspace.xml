@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Apporteur/ClientController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apporteur/ClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Apporteur/Clients/finances.blade.php" afterPath="$PROJECT_DIR$/resources/views/Apporteur/Clients/finances.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -49,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apporteur/ClientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.84" vertical-offset="235" max-vertical-offset="2624">
-              <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.85871965" vertical-offset="283" max-vertical-offset="2624">
+              <caret line="49" column="72" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -69,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="finances.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="finances.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Clients/finances.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92727274" vertical-offset="808" max-vertical-offset="2048">
-              <caret line="76" column="56" selection-start-line="76" selection-start-column="56" selection-end-line="76" selection-end-column="56" />
+            <state vertical-scroll-proportion="-3.52" vertical-offset="808" max-vertical-offset="2048">
+              <caret line="56" column="75" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -209,8 +208,8 @@
         <option value="$PROJECT_DIR$/resources/views/Apporteur/Clients/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
         <option value="$PROJECT_DIR$/app/Models/Projet.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Apporteur/ClientController.php" />
         <option value="$PROJECT_DIR$/resources/views/Apporteur/Clients/finances.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Apporteur/ClientController.php" />
       </list>
     </option>
   </component>
@@ -1046,18 +1045,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apporteur/ClientController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Clients/finances.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.84" vertical-offset="235" max-vertical-offset="2624">
-          <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+        <state vertical-scroll-proportion="-3.52" vertical-offset="808" max-vertical-offset="2048">
+          <caret line="56" column="75" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Clients/finances.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apporteur/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92727274" vertical-offset="808" max-vertical-offset="2048">
-          <caret line="76" column="56" selection-start-line="76" selection-start-column="56" selection-end-line="76" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.85871965" vertical-offset="283" max-vertical-offset="2624">
+          <caret line="49" column="72" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
           <folding />
         </state>
       </provider>
