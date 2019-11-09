@@ -9,7 +9,9 @@ class Projet extends Model
     //
     protected $guarded = [];
 
-
+	public function mois(){
+		return $this->belongsTo('App\Models\Moi', 'moi_id');
+	}
 
     public function type(){
         return $this->belongsTo('App\Models\Tprojet', 'type_id');
