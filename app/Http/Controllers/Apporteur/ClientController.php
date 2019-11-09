@@ -34,7 +34,7 @@ class ClientController extends Controller
 		$users = User::all()->where('role_id',3)->where('creator_id',Auth::user()->id);
 		$projets = [];
 		foreach($users as $client){
-			$projets[] = Projet::where('owner_id',$client->id);
+			$projets[] = Projet::all()->where('owner_id',$client->id);
 		}
 
 		dd($projets);
