@@ -67,7 +67,7 @@
                                                 </thead>
                                                 <tbody>
                                                     @foreach($prjs as $prj)
-                                                        {{ $prj->dump() }}
+                                                        {{ collect($prj)->dump() }}
                                                     @endforeach
                                                 </tbody>
                                             </table>
