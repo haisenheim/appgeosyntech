@@ -33,7 +33,7 @@
                     <?php $colors=['primary','danger','info','success']; $i=0; $ms = [1=>'JANVIER',2=>'FEVRIER',3=>'MARS',4=>'AVRIL',5=>'MAI',6=>'JUIN',7=>'JUILLET',8=>'AOUT',9=>'SEPTEMBRE',10=>'OCTOBRE',11=>'NOVEMBRE',12=>'DECEMBRE'] ?>
                     <div class="row">
                         @foreach($dossiers as $k=>$v)
-                            <?php $i = $i>3?$i+1:0; ?>
+                            <?php $i = $i<3?$i+1:0; ?>
                             <div class="col-md-4 col-sm-12">
                                 <div class="card card-{{ $colors[$i] }} collapsed-card">
                                     <div class="card-header">
