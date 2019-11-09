@@ -37,7 +37,7 @@ class ClientController extends Controller
 			$projets= $projets->merge(Projet::all()->where('owner_id',$client->id));
 		}
 
-		$projets = $projets->groupBy('annee')->groupBy('moi_id');
+		$projets = $projets->groupBy('annee','moi_id');
 
 		$projets->toArray();
 
