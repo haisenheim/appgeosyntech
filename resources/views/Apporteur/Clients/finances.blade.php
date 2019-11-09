@@ -72,7 +72,7 @@
                                                             <td>{{ $projet->owner->name }}</td>
                                                             <td>{{ $projet->name }}</td>
                                                             <td>{{ date_format($projet->created_at, 'd/m/Y') }}</td>
-                                                            <th>-</th>
+                                                            <th> {{ $projet->modepaiement_id?$projet->modepaiement->prixttc:'-' }}</th>
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
