@@ -67,7 +67,12 @@
                                                 </thead>
                                                 <tbody>
                                                     @foreach($prjs as $prj)
-                                                        {{ collect($prj)->dump() }}
+                                                        <tr>
+                                                            <td>{{ $prj['representant'] }}</td>
+                                                            <td>{{ $prj['name'] }}</td>
+                                                            <td>{{ date_format($prj['created_at'], 'd/m/Y') }}</td>
+                                                            <th>-</th>
+                                                        </tr>
                                                     @endforeach
                                                 </tbody>
                                             </table>

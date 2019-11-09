@@ -71,8 +71,8 @@
       <file leaf-file-name="finances.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Clients/finances.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6727273" vertical-offset="808" max-vertical-offset="1968">
-              <caret line="69" column="71" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.036363635" vertical-offset="688" max-vertical-offset="2048">
+              <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -1055,8 +1055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Clients/finances.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6727273" vertical-offset="808" max-vertical-offset="1968">
-          <caret line="69" column="71" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.036363635" vertical-offset="688" max-vertical-offset="2048">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
           <folding />
         </state>
       </provider>
