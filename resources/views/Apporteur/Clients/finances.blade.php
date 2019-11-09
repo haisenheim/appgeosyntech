@@ -70,7 +70,7 @@
                                                         <tr>
                                                             <td>{{ $prj['representant'] }}</td>
                                                             <td>{{ $prj['name'] }}</td>
-                                                            <td>{{ date_format($prj['created_at'], 'd/m/Y') }}</td>
+                                                            <td>{{ date_format(\Carbon\Carbon::createFromTimeString($prj['created_at']), 'd/m/Y') }}</td>
                                                             <th>-</th>
                                                         </tr>
                                                     @endforeach
