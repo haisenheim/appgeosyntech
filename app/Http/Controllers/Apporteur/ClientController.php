@@ -32,9 +32,9 @@ class ClientController extends Controller
 
 	public function getFinances(){
 		$users = User::all()->where('role_id',3)->where('creator_id',Auth::user()->id);
-		$projets = [];
+		$projets = collect([]);
 		foreach($users as $client){
-			$projets[] = Projet::all()->where('owner_id',$client->id);
+			$projets= $projets->merge(Projet::all()->where('owner_id',$client->id));
 		}
 
 		dd($projets);
