@@ -370,14 +370,16 @@ class DossierController extends Controller
 			}
 
 
-
-			for($i = 0; $i<count($produits);$i++){
-				$dp = new ProduitsProjet();
-				//$dp->produi_id =
-				$dp->produit_id = $produits[$i];
-				$dp->projet_id = $dossier->id;
-				$dp->save();
+			if($produits){
+				for($i = 0; $i<count($produits);$i++){
+					$dp = new ProduitsProjet();
+					//$dp->produi_id =
+					$dp->produit_id = $produits[$i];
+					$dp->projet_id = $dossier->id;
+					$dp->save();
+				}
 			}
+
 
 			if($answers){
 				foreach($answers as $answer){
