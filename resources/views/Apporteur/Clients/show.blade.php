@@ -91,12 +91,16 @@
                                          Complet à {{$projet->progress}}%
                                       </small>
                                     </td>
-                                    <th>
-                                        {{ $projet->modepaiement?$projet->modepaiement->prixttc :'NON DEFINI' }}
-                                    </th>
-                                    <th>
+                                    <td>
+                                    <small>{{ $projet->modepaiement? $projet->modepaiement->prixttc  :'NON DEFINI' }}</small>
+
+                                    </td>
+                                    <td>
+                                    <small>
                                         {{ $projet->modepaiement? 20 *$projet->modepaiement->prixttc /100 :'NON DEFINI' }}
-                                    </th>
+                                    </small>
+
+                                    </td>
 
 
 
