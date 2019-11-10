@@ -32,6 +32,8 @@ class Projet extends Model
 
 	public function getVariationsAttribute(){
 		$prevrs = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
+		$prevbls = Prevbilan::all()->where('projet_id',$this->id)->sortBy('annee');
+		$bc = $prevbls->count();
 		$nb = $prevrs->count();
 		$data=[];
 		for($i=0;$i<$nb-1;$i++){
@@ -45,7 +47,12 @@ class Projet extends Model
 			$data['rcai'][$i]=$prevrs[$i]->rcai?round((($prevrs[$i+1]->rcai -$prevrs[$i]->rcai)/$prevrs[$i]->rcai)*100,2):0;
 			$data['rn'][$i]=$prevrs[$i]->rn?round((($prevrs[$i+1]->rn -$prevrs[$i]->rn)/$prevrs[$i]->rn)*100,2):0;
 		}
+		for($i=0;$i<$bc-1;$i++){
+			$data['fr'][$i]=$prevbls[$i]->fr?round((($prevbls[$i+1]->fr-$prevbls[$i]->fr)/$prevbls[$i]->fr)*100,2):0;
+			$data['bfr'][$i]=$prevbls[$i]->bfr?round((($prevbls[$i+1]->bfr-$prevbls[$i]->bfr)/$prevbls[$i]->bfr)*100,2):0;
+			$data['tn'][$i]=$prevbls[$i]->tn?round((($prevbls[$i+1]->tn-$prevbls[$i]->tn)/$prevbls[$i]->tn)*100,2):0;
 
+		}
 		return $data;
 	}
 

@@ -1145,6 +1145,7 @@
                                                                 <tr>
 
                                                                     <td colspan="2">CAPITAL</td>
+                                                                    <?php $i=0; ?>
                                                                     @foreach($projet->prevbilans as $prevr)
                                                                         <td><?= $prevr->capital ?></td>
                                                                         @if(!$loop->last)
@@ -1390,10 +1391,11 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <th style="text-align: center" colspan="3">FONDS DE ROULEMENT</th>
+                                                                    <?php $i=0; ?>
                                                                     @foreach($projet->prevbilans as $prevr)
                                                                         <th><?= $prevr->fr ?></th>
                                                                         @if(!$loop->last)
-                                                                        <th>-</th>
+                                                                        <th>{{ $projet->variations['fr'][$i++] }}%</th>
                                                                         @endif
                                                                     @endforeach
                                                                 </tr>
@@ -1507,10 +1509,11 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <th style="text-align: center" colspan="3">BESOIN EN FONDS DE ROULEMENT</th>
+                                                                    <?php $i=0; ?>
                                                                     @foreach($projet->prevbilans as $prevr)
                                                                         <th><?= $prevr->bfr ?></th>
                                                                         @if(!$loop->last)
-                                                                        <th>-</th>
+                                                                        <th>{{ $projet->variations['bfr'][$i++] }}%</th>
                                                                         @endif
                                                                     @endforeach
                                                                 </tr>
@@ -1564,10 +1567,11 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <th style="text-align: center" colspan="3">TRESORERIE NETTE</th>
+                                                                    <?php $i=0; ?>
                                                                     @foreach($projet->prevbilans as $prevr)
                                                                         <th><?= $prevr->tn ?></th>
                                                                         @if(!$loop->last)
-                                                                        <th>-</th>
+                                                                        <th>{{ $projet->variations['tn'][$i++] }}</th>
                                                                         @endif
                                                                     @endforeach
                                                                 </tr>
