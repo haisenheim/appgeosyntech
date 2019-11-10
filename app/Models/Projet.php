@@ -42,6 +42,8 @@ class Projet extends Model
 			$data['re'][$i]=$prevrs[$i]->re?round((($prevrs[$i+1]->re - $prevrs[$i]->re)/$prevrs[$i]->re)*100,2):0;
 			$data['rf'][$i]=$prevrs[$i]->rf?round((($prevrs[$i+1]->rf - $prevrs[$i]->rf)/$prevrs[$i]->rf)*100,2):0;
 			$data['rex'][$i]=$prevrs[$i]->rex?round((($prevrs[$i+1]->rex -$prevrs[$i]->rex)/$prevrs[$i]->rex)*100,2):0;
+			$data['rcai'][$i]=$prevrs[$i]->rcai?round((($prevrs[$i+1]->rcai -$prevrs[$i]->rcai)/$prevrs[$i]->rcai)*100,2):0;
+			$data['rex'][$i]=$prevrs[$i]->rn?round((($prevrs[$i+1]->rn -$prevrs[$i]->rn)/$prevrs[$i]->rn)*100,2):0;
 		}
 
 		return $data;
