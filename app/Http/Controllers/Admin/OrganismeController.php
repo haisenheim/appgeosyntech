@@ -113,7 +113,8 @@ class OrganismeController extends Controller
 				'remember_token' => sha1(Auth::user()->id. date('Ymdhis')),
 				'organisme_id' => $organisme->id,
 				'pay_id'=>$organisme->pay_id,
-				'creator_id'=>Auth::user()->id
+				'creator_id'=>Auth::user()->id,
+				'token'=> sha1(Auth::user()->id . date('YmHisd'))
 
 
 			);

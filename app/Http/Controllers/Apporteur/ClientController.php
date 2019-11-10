@@ -91,6 +91,7 @@ class ClientController extends Controller
 	    $user->creator_id = Auth::user()->id;
         $user->male = $request['male']=='on'?1:0;
         $user->active = 1;
+	    $user->token= sha1(Auth::user()->id . date('YmHisd'));
 
 	    if($request->imageUri){
 		    $file = $request->imageUri;
@@ -124,8 +125,10 @@ class ClientController extends Controller
      * @param  \App\Models\Ville  $ville
      * @return \Illuminate\Http\Response
      */
-    public function show(Client $client)
+    public function show( $token)
     {
+	    $client = User::where('token',$token)->where('role_id',3)->first();
+	    return view('Apporteur/Clients/show')->with(compact('client'));
         //
     }
 

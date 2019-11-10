@@ -113,7 +113,8 @@ class EntrepriseController extends Controller
 				'remember_token' => sha1(Auth::user()->id. date('Ymdhis')),
 				'entreprise_id' => $entreprise->id,
 				'pay_id'=>$entreprise->pay_id,
-				'creator_id'=>Auth::user()->id
+				'creator_id'=>Auth::user()->id,
+				'token'=> sha1(Auth::user()->id . date('YmHisd'))
 
 
 			);

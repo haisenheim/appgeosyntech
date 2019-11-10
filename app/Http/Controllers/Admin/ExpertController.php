@@ -66,6 +66,7 @@ class ExpertController extends Controller
         $user->male = $request['male']=='on'?1:0;
         $user->senior = $request['senior']=='on'?1:0;
         $user->active = 1;
+	    $user->token= sha1(Auth::user()->id . date('YmHisd'));
 
         $user->save();
             session('message','L\'expert a été correctement enregistré !!!');

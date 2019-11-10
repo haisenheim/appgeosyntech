@@ -33,6 +33,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Projet','owner_id');
     }
 
+	public function actifs(){
+		return $this->hasMany('App\Models\Actif','owner_id');
+	}
+
     // Association avec les roles
 
     public function role(){
