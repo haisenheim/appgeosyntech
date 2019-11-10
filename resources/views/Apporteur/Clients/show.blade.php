@@ -1,4 +1,4 @@
-@extends('......layouts.coomercial')
+@extends('......layouts.commercial')
 
 @section('content')
 
