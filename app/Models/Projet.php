@@ -35,7 +35,7 @@ class Projet extends Model
 		$nb = $prevrs->count();
 		$data=[];
 		for($i=0;$i<$nb-1;$i++){
-			$data['ca'][$i]=($prevrs[$i+1]/$prevrs[$i])*100;
+			$data['ca'][$i]=($prevrs[$i+1]->ca/$prevrs[$i]->ca)*100;
 		}
 
 		return $data;
