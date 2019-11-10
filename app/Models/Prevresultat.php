@@ -13,4 +13,11 @@ class Prevresultat extends Model
 	public function projet(){
 		return $this->belongsTo('App\Models\Projet');
 	}
+
+	protected function getMbAttribute(){
+		return ($this->ca - $this->cv);
+	}
+	protected function getVaAttribute(){
+		return $this->getMbAttribute() + $this->pi + $this->ps + $this->sp + $this->ape - $this->taxes - $this->cf;
+	}
 }
