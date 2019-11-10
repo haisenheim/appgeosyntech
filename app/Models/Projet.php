@@ -30,6 +30,17 @@ class Projet extends Model
         return $this->belongsTo('App\User','owner_id');
     }
 
+	public function getVariationsAttribute(){
+		$prevrs = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
+		$nb = $prevrs->count();
+		$data=[];
+		for($i=0;$i<$nb-1;$i++){
+			$data['ca'][$i]=($prevrs[$i+1]/$prevrs[$i])*100;
+		}
+
+		return $data;
+	}
+
     public function ville(){
         return $this->belongsTo('App\Models\Ville');
     }

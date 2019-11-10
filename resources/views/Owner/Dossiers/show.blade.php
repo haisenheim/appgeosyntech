@@ -895,10 +895,13 @@
                                                         <tbody>
                                                             <tr>
                                                                 <th>CHIFFRE D'AFFAIRE</th>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
+
                                                                     <th><?= $prevr->ca ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>-</th>
+                                                                    <th>{{ $projet->variations['ca'][$i] }}</th>
+                                                                    <?php $i++ ?>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -977,7 +980,7 @@
                                                             <tr>
                                                                 <td>SALAIRES</td>
                                                                 @foreach($projet->prevresultats as $prevr)
-                                                                    <td><?= $prevr->ca ?></td>
+                                                                    <td><?= $prevr->salaires ?></td>
                                                                     @if(!$loop->last)
                                                                     <td>-</td>
                                                                     @endif
