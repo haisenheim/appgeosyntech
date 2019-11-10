@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.apporteur')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                     </div>
                     <!-- /.widget-user-image -->
                     <h3 class="widget-user-username">{{ $client->name }}</h3>
-                    <h5 class="widget-user-desc"> {{ $client->phone }} <small>{{ $client->email }}</small></h5>
+                    <h6 class="widget-user-desc"> {{ $client->phone }} - <small>{{ $client->email }}</small></h6>
                   </div>
                   <div class="card-footer p-0">
                     <ul class="nav flex-column">
@@ -35,7 +35,7 @@
                       </li>
                       <li class="nav-item">
                         <a href="#" class="nav-link">
-                          Dossiers de demande financements incomplets <span class="float-right badge bg-success"> {{ $client->projets->where('validated_step','!=',4)->count() }}</span>
+                          Dossiers de demande financements incomplets <span class="float-right badge bg-danger"> {{ $client->projets->where('validated_step','!=',4)->count() }}</span>
                         </a>
                       </li>
                       <li class="nav-item">
