@@ -953,18 +953,18 @@
                                                             <tr>
                                                                 <td>MARGE BRUTE</td>
                                                                 @foreach($projet->prevresultats as $prevr)
-                                                                    <td><?= $prevr->mb ?></td>
+                                                                    <th><?= $prevr->mb ?></th>
                                                                     @if(!$loop->last)
-                                                                    <td>-</td>
+                                                                    <th>{{ $projet->variations['mb'][$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
                                                             <tr>
                                                                 <th>CHARGE FIXE</th>
                                                                 @foreach($projet->prevresultats as $prevr)
-                                                                    <th><?= $prevr->cf ?></th>
+                                                                    <td><?= $prevr->cf ?></td>
                                                                     @if(!$loop->last)
-                                                                    <th>-</th>
+                                                                    <td>-</td>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -973,7 +973,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->va ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>-</th>
+                                                                    <th>{{ $projet->variations['va'][$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -991,7 +991,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->ebe ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>-</th>
+                                                                    <th>{{ $projet->variations['ebe'][$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1009,7 +1009,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->re ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>-</th>
+                                                                    <th>{{ $projet->variations['re'][$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1036,7 +1036,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->rf ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>-</th>
+                                                                    <th>{{ $projet->variations['rf'][$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1063,7 +1063,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->re ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>-</th>
+                                                                    <th>{{ $projet->variations['rex'][$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
