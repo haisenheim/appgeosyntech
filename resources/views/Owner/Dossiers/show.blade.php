@@ -952,10 +952,12 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>MARGE BRUTE</td>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->mb ?></th>
                                                                     @if(!$loop->last)
                                                                     <th>{{ $projet->variations['mb'][$i] }}</th>
+                                                                    <?php $i++ ?>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -970,10 +972,12 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>VALEUR AJOUTEE</th>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->va ?></th>
                                                                     @if(!$loop->last)
                                                                     <th>{{ $projet->variations['va'][$i] }}</th>
+                                                                    <?php $i++ ?>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -988,15 +992,17 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>EXCEDENT BRUT D'EXPLOITATION</th>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->ebe ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['ebe'][$i] }}</th>
+                                                                    <th>{{ $projet->variations['ebe'][++$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
                                                             <tr>
                                                                 <td>DOTATATION AUX AMORTISSEMENTS ET AUX PROVISIONS</td>
+
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <td><?= $prevr->dap ?></td>
                                                                     @if(!$loop->last)
@@ -1006,10 +1012,11 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>RESULTAT D'EXPLOITATION</th>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->re ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['re'][$i] }}</th>
+                                                                    <th>{{ $projet->variations['re'][++$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1033,10 +1040,11 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>RESULTAT FINANCIER</th>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->rf ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['rf'][$i] }}</th>
+                                                                    <th>{{ $projet->variations['rf'][++$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1060,15 +1068,17 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>RESULTAT EXCEPTIONNEL</th>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->re ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['rex'][$i] }}</th>
+                                                                    <th>{{ $projet->variations['rex'][++$i] }}</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
                                                             <tr>
                                                                 <th>RESULTAT COURANT AVANT IMPOT</th>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->rcai ?></th>
                                                                     @if(!$loop->last)
@@ -1087,6 +1097,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>RESULTAT NET</th>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->rn ?></th>
                                                                     @if(!$loop->last)
