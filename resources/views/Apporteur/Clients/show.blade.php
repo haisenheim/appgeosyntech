@@ -14,7 +14,7 @@
                     </div>
                     <!-- /.widget-user-image -->
                     <h3 class="widget-user-username">{{ $client->name }}</h3>
-                    <h5 class="widget-user-desc">Lead Developer</h5>
+                    <h5 class="widget-user-desc"> {{ $client->phone }} <small>{{ $client->email }}</small></h5>
                   </div>
                   <div class="card-footer p-0">
                     <ul class="nav flex-column">
@@ -30,26 +30,21 @@
                       </li>
                       <li class="nav-item">
                         <a href="#" class="nav-link">
-                          Dossiers de financements clôturés <span class="float-right badge bg-success">12</span>
+                          Dossiers de demande financements complets <span class="float-right badge bg-success"> {{ $client->projets->where('validated_step',4)->count() }}</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#" class="nav-link">
-                          Cessions d'actif clôturées <span class="float-right badge bg-danger">842</span>
+                          Dossiers de demande financements incomplets <span class="float-right badge bg-success"> {{ $client->projets->where('validated_step','!=',4)->count() }}</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          Cessions d'actifs <span class="float-right badge bg-info"> {{ $client->actifs->count() }}</span>
                         </a>
                       </li>
                     </ul>
                   </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="card-header">
-                        <h2>{{ $client->name }}</h2>
-                    </div>
-                    <div class="card-body">
-
-                    </div>
                 </div>
             </div>
             <div class="col-md-8 col-sm-12">
