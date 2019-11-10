@@ -53,7 +53,7 @@
                               <td>{!! $ville->pays?$ville->pays->name:'-' !!}</td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('admin.porteurs.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('admin.porteurs.show',[$ville->token])}}"><i class="fa fa-search"></i></a></li>
                               </ul>
                               </td>
                           </tr>
