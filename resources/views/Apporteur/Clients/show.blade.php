@@ -64,6 +64,8 @@
                                   <th>
                                       Progression
                                   </th>
+                                  <th>FORMULE</th>
+                                  <th>COM.</th>
 
                               </tr>
                           </thead>
@@ -79,7 +81,7 @@
 
                                         </td>
 
-                                        <td>{{$projet->montant}} {{ $projet->devise->name }}</td>
+                                        <td>{{$projet->montant}} {{ $projet->devise->abb }}</td>
                                         <td class="project_progress">
                                       <div class="progress progress-sm">
                                           <div class="progress-bar progress-bar-striped bg-{{$projet->progresscolor}}" role="progressbar" aria-volumenow="{{$projet->progress }}" aria-volumemin="0" aria-volumemax="100" style="width: {{$projet->progress .'%'}} ">
@@ -88,7 +90,13 @@
                                       <small>
                                          Complet à {{$projet->progress}}%
                                       </small>
-                                  </td>
+                                    </td>
+                                    <th>
+                                        {{ $projet->modepaiement?$projet->modepaiement->prixttc :'NON DEFINI' }}
+                                    </th>
+                                    <th>
+                                        {{ $projet->modepaiement? 20 *$projet->modepaiement->prixttc /100 :'NON DEFINI' }}
+                                    </th>
 
 
 
