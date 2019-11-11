@@ -46,7 +46,7 @@ class HomeController extends Controller
                 return redirect('angel/');
             }
 	        if(Auth::user()->role_id==5){
-		        return redirect('adminentr/dossiers');
+		        return redirect('adminentr/angels');
 	        }
 	        if(Auth::user()->role_id==6){
 		        return redirect('adminorg/dossiers');

@@ -24,14 +24,14 @@ class AngelController extends Controller
      */
     public function index()
     {
-	    $angels = User::all()->where('role_id',4)->where('organisme_id',Auth::user()->organisme_id);
+	    $angels = User::all()->where('role_id',4)->where('entreprise_id',Auth::user()->entreprise_id);
 	   // $investissements = Investissement::orderBy('created_at','desc')->where('angel_id',Auth::user()->id)->paginate(8);
 	    return view('Adminentr/Angels/index')->with(compact('angels'));
     }
 
 	public function investissements(){
 		//$angels = User::all()->where('role_id',4)->where('organisme_id',Auth::user()->organisme_id);
-		$investissements = Investissement::all()->where('organisme_id',Auth::user()->organisme_id);
+		$investissements = Investissement::all()->where('entreprise_id',Auth::user()->entreprise_id);
 
 		//dd($investissements);
 		return view('Adminentr/Investissements/index')->with(compact('investissements'));
