@@ -132,6 +132,7 @@ Route::prefix('adminorg')
 		Route::resource('angels','AngelController');
 		//Route::resource('dossiers','DossierController');
 		Route::get('dossiers/','AngelController@investissements');
+		Route::get('dossiers/{token}','AngelController@getInvestissement');
 	});
 
 //Liste des routes du consultant

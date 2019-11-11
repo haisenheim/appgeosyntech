@@ -1,7 +1,7 @@
-@extends('......layouts.commercial')
+@extends('......layouts.adminorg')
 
 @section('content')
-
+ <?php $client = $angel ?>
     <div style="padding: 20px;" class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-sm-12">
@@ -20,23 +20,14 @@
                     <ul class="nav flex-column">
                       <li class="nav-item">
                         <a href="#" class="nav-link">
-                          Dossiers de financements <span class="float-right badge bg-primary"> {{ $client->projets->count() }}</span>
+                          Dossiers de financements <span class="float-right badge bg-primary"> {{ $client->investissements->count() }}</span>
                         </a>
                       </li>
 
+
                       <li class="nav-item">
                         <a href="#" class="nav-link">
-                          Dossiers de demande financements complets <span class="float-right badge bg-success"> {{ $client->projets->where('validated_step',4)->count() }}</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          Dossiers de demande financements incomplets <span class="float-right badge bg-danger"> {{ $client->projets->where('validated_step','!=',4)->count() }}</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          Cessions d'actifs <span class="float-right badge bg-info"> {{ $client->actifs->count() }}</span>
+                          Cessions d'actifs <span class="float-right badge bg-info"> {{ $client->cessions->count() }}</span>
                         </a>
                       </li>
                     </ul>
@@ -72,7 +63,8 @@
                           <tbody>
 
 
-                               @foreach($client->projets as $projet)
+                               @foreach($client->investissements as $investissement)
+                                    <?php $projet = $investissement->projet ?>
                                     <tr>
                                         <td>#</td>
                                         <td>
