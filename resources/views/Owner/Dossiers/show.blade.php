@@ -2192,7 +2192,11 @@
 
 
         </ul>
-        <div class="menu-bg"></div>
+        <div
+         style="
+          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));background-image:linear-gradient(to bottom,#1C5E91 0,#167699 100%);background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;-webkit-transition:.1s;-o-transition:.1s;transition:.1s
+        "
+        class="menu-bg"></div>
     </nav>
 </main>
 
