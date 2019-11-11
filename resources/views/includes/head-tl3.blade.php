@@ -37,7 +37,9 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <script>
-    $('.dropdown-toggle').dropdown();
+    $('.dropdown').click(function(){
+        $('.dropdown-menu').toggleClass('show')
+    });
   </script>
 </head>
 
