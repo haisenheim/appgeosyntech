@@ -18,7 +18,7 @@
       </li>
 
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/adminorg/" class="nav-link">Accueil</a>
+        <a href="/adminorg/" class="nav-link">ACCUEIL</a>
       </li>
 
       <li class="nav-item d-none d-sm-inline-block">
