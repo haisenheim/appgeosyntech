@@ -1623,7 +1623,7 @@
                                                                     </thead>
                                                                     <tbody>
                                                                         <tr>
-                                                                        <th style="text-orientation: upright; writing-mode: vertical-rl;" rowspan="8">Flux de trésorerie provenant des activités opérationnelles</th>
+                                                                        <th style="writing-mode: vertical-rl;" rowspan="8">Trésorerie provenant des act. opér.</th>
                                                                         </tr>
                                                                         <tr>
 
@@ -1696,7 +1696,7 @@
 
 
 
-                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="7">Flux de trésorerie provenant des activités d'investissement</th></tr>
+                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="7">Trésorerie issue des activités d'invest.</th></tr>
 
                                                                         <tr>
 
@@ -1751,14 +1751,14 @@
                                                                         <tr>
                                                                             <td>TOTAL</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
-                                                                                <td><-</td>
+                                                                                <td>-</td>
                                                                                 @if(!$loop->last)
                                                                                 <td>-</td>
                                                                                 @endif
                                                                             @endforeach
                                                                         </tr>
 
-                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="6">Flux de trésorerie provenant  des capitaux propres </th></tr>
+                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="6">Trésorerie provenant  des cap. propres </th></tr>
 
                                                                         <tr>
                                                                             <td>Augmentation de capital par apports de capitaux nouveaux</td>
