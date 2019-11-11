@@ -36,5 +36,8 @@
   <script type="text/javascript" src="{{asset('js/multi-form.js')}}"></script>
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script>
+    $('.dropdown-toggle').dropdown();
+  </script>
 </head>
 
