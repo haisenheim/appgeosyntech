@@ -1812,7 +1812,7 @@
 
 
 
-                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="5">Flux de trésorerie provenant du financement par des capitaux étrangers </th></tr>
+                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="5">Trésorerie issue des cap. étrangers </th></tr>
 
                                                                         <tr>
                                                                             <td>Emprunts</td>
