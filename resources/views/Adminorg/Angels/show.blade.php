@@ -62,7 +62,7 @@
                           </thead>
                           <tbody>
 
-
+                                <?php dd($client->investissements); ?>
                                @foreach($client->investissements as $investissement)
                                     <?php $projet = $investissement->projet ?>
                                     <tr>
