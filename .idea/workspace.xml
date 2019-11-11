@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Adminorg/AngelController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Adminorg/AngelController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Adminorg/Angels/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Adminorg/Angels/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -115,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AngelController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AngelController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Adminorg/AngelController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78854626" vertical-offset="1370" max-vertical-offset="2448">
-              <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
+            <state vertical-scroll-proportion="-13.04" vertical-offset="1370" max-vertical-offset="2416">
+              <caret line="117" column="60" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -137,11 +136,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Angels/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65753424" vertical-offset="0" max-vertical-offset="2240">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.83715016" vertical-offset="1095" max-vertical-offset="2176">
+              <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+              <folding>
+                <element signature="e#2169#2186#0#HTML" expanded="true" />
+                <element signature="e#2449#2467#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Investissements/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.96" vertical-offset="567" max-vertical-offset="1664">
+              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="58" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -176,22 +188,6 @@
                 <marker date="1573500901196" expanded="false" signature="158278:158288" placeholder="..." />
                 <marker date="1573500901196" expanded="false" signature="158347:158357" placeholder="..." />
                 <marker date="1573500901196" expanded="false" signature="158431:158441" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.08" vertical-offset="36418" max-vertical-offset="38960">
-              <caret line="2295" column="8" selection-start-line="2295" selection-start-column="8" selection-end-line="2298" selection-end-column="9" />
-              <folding>
-                <marker date="1572817440999" expanded="false" signature="162919:162958" placeholder="..." />
-                <marker date="1572817440999" expanded="false" signature="167216:167226" placeholder="..." />
-                <marker date="1572817440999" expanded="false" signature="167284:167294" placeholder="..." />
-                <marker date="1572817440999" expanded="false" signature="167353:167363" placeholder="..." />
-                <marker date="1572817440999" expanded="false" signature="167437:167447" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -259,8 +255,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/adminorg.blade.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/angel.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Adminorg/Angels/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Adminorg/AngelController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Adminorg/Angels/show.blade.php" />
       </list>
     </option>
   </component>
@@ -438,6 +434,10 @@
               <option name="myItemId" value="Adminorg" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Investissements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -530,58 +530,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Auth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Adminorg" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1022,16 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Investissements/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.6" vertical-offset="407" max-vertical-offset="1664">
-          <caret line="42" column="290" selection-start-line="42" selection-start-column="290" selection-end-line="42" selection-end-column="290" />
-          <folding>
-            <element signature="e#763#780#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.4" vertical-offset="1600" max-vertical-offset="2224">
@@ -1090,11 +1028,11 @@
         <state vertical-scroll-proportion="-12.08" vertical-offset="36418" max-vertical-offset="38960">
           <caret line="2295" column="8" selection-start-line="2295" selection-start-column="8" selection-end-line="2298" selection-end-column="9" />
           <folding>
-            <marker date="1572817440999" expanded="false" signature="162919:162958" placeholder="..." />
-            <marker date="1572817440999" expanded="false" signature="167216:167226" placeholder="..." />
-            <marker date="1572817440999" expanded="false" signature="167284:167294" placeholder="..." />
-            <marker date="1572817440999" expanded="false" signature="167353:167363" placeholder="..." />
-            <marker date="1572817440999" expanded="false" signature="167437:167447" placeholder="..." />
+            <marker date="1572817440999" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1572817440999" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1572817440999" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1572817440999" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1572817440999" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1210,19 +1148,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Angels/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Adminorg/AngelController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65753424" vertical-offset="0" max-vertical-offset="2240">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="-13.04" vertical-offset="1370" max-vertical-offset="2416">
+          <caret line="117" column="60" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Adminorg/AngelController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Investissements/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78854626" vertical-offset="1370" max-vertical-offset="2448">
-          <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
+        <state vertical-scroll-proportion="-9.96" vertical-offset="567" max-vertical-offset="1664">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="58" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Angels/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83715016" vertical-offset="1095" max-vertical-offset="2176">
+          <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+          <folding>
+            <element signature="e#2169#2186#0#HTML" expanded="true" />
+            <element signature="e#2449#2467#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

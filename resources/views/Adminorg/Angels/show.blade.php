@@ -56,8 +56,7 @@
                                   <th>
                                       Progression
                                   </th>
-                                  <th>FORMULE</th>
-                                  <th>COM.</th>
+                                  <th></th>
 
                               </tr>
                           </thead>
@@ -83,16 +82,13 @@
                                          Complet à {{$projet->progress}}%
                                       </small>
                                     </td>
-                                    <td>
-                                    <small>{{ $projet->modepaiement? $projet->modepaiement->prixttc  :'NON DEFINI' }}</small>
-
-                                    </td>
-                                    <td>
-                                    <small>
-                                        {{ $projet->modepaiement? 20 *$projet->modepaiement->prixttc /100 :'NON DEFINI' }}
-                                    </small>
-
-                                    </td>
+                                    <td class="project-actions text-right">
+                                  <a class="btn btn-primary btn-xs" href="/adminorg/dossiers/{{ $investissement->token  }}">
+                                      <i class="fas fa-folder">
+                                      </i>
+                                      Afficher
+                                  </a>
+                              </td>
 
                                     </tr>
                                @endforeach
