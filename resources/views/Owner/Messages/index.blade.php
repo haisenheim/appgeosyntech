@@ -196,7 +196,20 @@
                 <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                 </div>
            </div>
-            <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+
+         </form>
+       </div>
+
+     </div>
+     <!-- /.modal-content -->
+   </div>
+       <!-- /.modal-dialog -->
+</div>
+
+
+
+
+<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
@@ -210,22 +223,11 @@
           });
         });
       </script>
-         </form>
-       </div>
 
-     </div>
-     <!-- /.modal-content -->
-   </div>
-       <!-- /.modal-dialog -->
-</div>
-
+<!-- AdminLTE for demo purposes -->
 <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 <!-- jQuery -->
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-
-
-
-<!-- AdminLTE for demo purposes -->
 <script src="{{asset('dist/js/demo.js')}}"></script>
 <!-- DataTables -->
 <script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
