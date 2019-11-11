@@ -35,11 +35,11 @@ class AngelController extends Controller
 		foreach($angels as $angel){
 			$investissements = $investissements->merge($angel->investissements);
 		}
-		debug($investissements);
+		dd($investissements);
 		return view('Adminorg/Investissements/index')->with(compact('investissements'));
 	}
 
-	public function getInvestissements($token){
+	public function getInvestissement($token){
 		$investissement = Investissement::where('token',$token)->first();
 		return view('Adminorg/Investissements/show')->with(compact('investissement'));
 	}
