@@ -85,41 +85,11 @@
             <div class="card-header">
               <h3 class="card-title">Boîte de reception</h3>
 
-              <div class="card-tools">
-                <div class="input-group input-group-sm">
-                  <input type="text" class="form-control" placeholder="Search Mail">
-                  <div class="input-group-append">
-                    <div class="btn btn-primary">
-                      <i class="fas fa-search"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <!-- /.card-tools -->
             </div>
             <!-- /.card-header -->
             <div class="card-body p-0">
-              <div class="mailbox-controls">
-                <!-- Check all button -->
-                <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
-                </button>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
-                  <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
-                  <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
-                </div>
-                <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
-                <div class="float-right">
-                  1-50/200
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
-                  </div>
-                  <!-- /.btn-group -->
-                </div>
-                <!-- /.float-right -->
-              </div>
+
               <div class="table-responsive mailbox-messages">
                 <table id="table-mgs" class="table table-hover table-striped">
                   <thead>
@@ -208,7 +178,7 @@
 
 
 
-
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
@@ -227,7 +197,7 @@
 <!-- AdminLTE for demo purposes -->
 <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 <!-- jQuery -->
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+
 <script src="{{asset('dist/js/demo.js')}}"></script>
 <!-- DataTables -->
 <script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
