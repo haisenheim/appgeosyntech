@@ -179,20 +179,18 @@
 
 
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-          $('#compose-textarea').summernote({
-            height: 200,
-            tabsize: 2,
-            followingToolbar: true,
-            lang:'fr-FR'
-          });
-        });
-      </script>
+    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}"/>
+    <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+
+   <!-- Page Script -->
+   <script>
+     $(function () {
+       //Add text editor
+       $('#compose-textarea').summernote()
+     })
+   </script>
 
 <!-- AdminLTE for demo purposes -->
 <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
