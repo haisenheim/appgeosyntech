@@ -2786,6 +2786,10 @@
         font-size: x-small;
         line-height: 0.5;
    }
+   .card.maximized-card {
+
+               overflow-y: scroll;
+           }
 </style>
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>

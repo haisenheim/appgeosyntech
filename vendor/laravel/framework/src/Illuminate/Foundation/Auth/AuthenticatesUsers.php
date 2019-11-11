@@ -128,6 +128,8 @@ trait AuthenticatesUsers
 		    $slider = ['projet' => $projet, 'actif' => $actif];
 		    Session::put('slides', $slider);
 	    }
+
+
     }
 
     /**

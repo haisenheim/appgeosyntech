@@ -1845,30 +1845,8 @@
                   <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->owner->email}}</b>
                   <b class="d-block"><i class="far fa-fw fa-telegram"></i> {{$projet->owner->phone}}</b>
                 </p>
-                <p class="text-sm">Consultant
-                   @if($projet->consultant)
-                   </p>
-                   <p class="text-sm">
-                   <b class="d-block">{{$projet->consultant->name}}</b>
-                       <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
-                   </p>
-                   @else
-                                <form class="form-inline"  action="/admin/dossier/expert">
-                                {{csrf_field()}}
-                                <input type="hidden" name="id" value="{{ $projet->id }}"/>
-                                    <div class="form-group">
-                                        <select class="form-control" name="expert_id" id="id">
-                                            @foreach($experts as $expert)
-                                                <option value="{{ $expert->id }}">{{ $expert->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-danger"><i class="fa fa-link"></i> LIER</button>
-                                    </div>
-                                </form>
+                <p class="text-sm">Charge d'affaire : <b class="d-block">{{$investissement->angel->name}}</b>
 
-                     @endif
               </div>
 
               <h5 class="mt-4 text-muted">Moyens de financements</h5>
@@ -1888,6 +1866,12 @@
         <!-- /.card-body -->
       </div>
 
+<style>
+    .card.maximized-card {
+
+                overflow-y: scroll;
+            }
+</style>
 <div class="modal fade" id="meModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
