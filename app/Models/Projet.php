@@ -225,7 +225,7 @@ class Projet extends Model
 			if(Auth::user()->organisme_id){
 				$investissement = Investissement::all()->where('projet_id',$this->id)->where('organisme_id',Auth::user()->organisme_id)->first();
 				if($investissement){
-					debug($investissement);
+					//debug($investissement);
 					if($investissement->angel_id!=Auth::user()->id){
 						return false;
 					}
