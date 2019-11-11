@@ -220,7 +220,7 @@ class Projet extends Model
 		return $colors[$tr];
 	}
 
-	protected function getAutorizedAttribute(){
+	protected function getAuthorizedAttribute(){
 		if(Auth::user()->role_id==4){
 			if(Auth::user()->organisme_id){
 				$investissement = Investissement::all()->where('projet_id',$this->id)->where('organisme_id',Auth::user()->organisme_id)->first();
