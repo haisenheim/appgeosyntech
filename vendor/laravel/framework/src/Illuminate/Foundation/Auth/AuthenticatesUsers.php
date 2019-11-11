@@ -123,6 +123,12 @@ trait AuthenticatesUsers
     {
         //
 	    if(Auth::user()->role_id==4) {
+		    if(Auth::user()->organisme_id!=0){
+			    Session::put('entite',Auth::user()->organisme->name);
+		    }
+		    if(Auth::user()->entreprise_id!=0){
+			    Session::put('entite',Auth::user()->entreprise->name);
+		    }
 		    $projet = DB::table('projets')->get(['name', 'montant', 'imageUri'])->last();
 		    $actif = DB::table('actifs')->get(['name', 'prix', 'imageUri', 'description', 'token'])->last();
 		    $slider = ['projet' => $projet, 'actif' => $actif];
