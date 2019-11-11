@@ -13,6 +13,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AngelController extends Controller
 {
@@ -61,6 +62,44 @@ class AngelController extends Controller
     public function store(Request $request)
     {
         //
+	    //dd($request['imageUri']);
+	    $user = new User();
+	    $user->first_name = $request['first_name'];
+	    $user->last_name = $request['last_name'];
+	    $user->phone = $request['phone'];
+	    $user->address = $request['address'];
+	    $user->email = $request['email'];
+	    $user->pay_id = Auth::user()->pay_id;
+	    $user->password=Hash::make($request['password']);
+	    $user->role_id =4;
+	    $user->moi_id=date('m');
+	    $user->annee=date('Y');
+	    $user->male = $request['male']=='on'?1:0;
+	    // $user->senior = $request['senior']=='on'?1:0;
+	    $user->active = 1;
+	    $user->token= sha1(Auth::user()->id . date('YmHisd'). 'Angel');
+
+	    if($request->imageUri){
+		    $file = $request->imageUri;
+		    $ext = $file->getClientOriginalExtension();
+		    $arr_ext = array('jpg','png','jpeg','gif');
+		    if(in_array($ext,$arr_ext)) {
+			    if (!file_exists(public_path('img') . '/users')) {
+				    mkdir(public_path('img') . '/users');
+			    }
+			    $token = sha1(Auth::user()->id . date('ydmhis'));
+			    if (file_exists(public_path('img') . '/users/' . $token . '.' . $ext)) {
+				    unlink(public_path('img') . '/users/' . $token . '.' . $ext);
+			    }
+			    $name = $token . '.' . $ext;
+			    $file->move(public_path('img/users'), $name);
+			    $user->imageUri = 'users/' . $name;
+		    }
+	    }
+
+	    $user->save();
+	    session('message','Le compte a été correctement créé !!!');
+	    return redirect('/adminorg/angels');
     }
 
     /**
@@ -81,56 +120,6 @@ class AngelController extends Controller
     }
 
 
-	public function addComment(Request $request){
-		$comment = new Comment();
-		$projet = Investissement::where('token', $request->token)->first();
-		$comment->investissement_id = $projet->id;
-		$comment->role_id = 4;
-		$comment->body = $request->message;
-		$comment->author_id = Auth::user()->id;
-		$comment->save();
-		return back();
-	}
-
-	public function saveLetter(Request $request){
-		$projet = Investissement::where('token', $request->token)->first();
-		if($projet->lettre){
-			$lettre = $projet->lettre;
-			$data = [];
-			//$data['id']=$lettre->id;
-			$data['type_remboursement']= $request->type_remboursement;
-			$data['forme_id'] = $request->forme_id;
-			$data['montant'] = $request->montant;
-			$data['pct_participation']=$request->pct_participation;
-			$data['pct_engagement']=$request->pct_engagement;
-			$data['duree_engagement']=$request->duree_engagement;
-			$data['mt_engagement']=$request->mt_engagement;
-			$data['devise_id']=$request->devise_id;
-			$data['personnel']=$request->personnel;
-			$data['pct_pret']=$request->pct_pret;
-			$data['duree_pret']=$request->duree_pret;
-			$data['lieu'] = $request->lieu;
-			Lettre::updateOrCreate(['investissement_id'=>$lettre->investissement_id],$data);
-		}else{
-			$lettre =new Lettre();
-			$lettre->investissement_id = $projet->id;
-			$lettre->type_remboursement= $request->type_remboursement;
-			$lettre->forme_id = $request->forme_id;
-			$lettre->montant = $request->montant;
-			$lettre->pct_participation=$request->pct_participation;
-			$lettre->pct_engagement=$request->pct_engagement;
-			$lettre->duree_engagement=$request->duree_engagement;
-			$lettre->mt_engagement=$request->mt_engagement;
-			$lettre->devise_id=$request->devise_id;
-			$lettre->personnel=$request->personnel;
-			$lettre->pct_pret=$request->pct_pret;
-			$lettre->duree_pret=$request->duree_pret;
-			$lettre->lieu = $request->lieu;
-			$lettre->save();
-		}
-
-		return back();
-	}
 
     /**
      * Show the form for editing the specified resource.

@@ -133,7 +133,7 @@
                           </div>
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-outline-success"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>
