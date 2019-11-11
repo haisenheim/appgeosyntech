@@ -236,11 +236,7 @@
        })
      })
    </script>
-     <script>
-       $('.dropdown').click(function(){
-           $(this).find('.dropdown-menu').toggleClass('show')
-       });
-     </script>
+
 
 <!-- AdminLTE for demo purposes -->
 <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
