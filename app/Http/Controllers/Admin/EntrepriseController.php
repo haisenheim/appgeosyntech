@@ -139,7 +139,7 @@ class EntrepriseController extends Controller
 
 			User::create($user_data);
 		}
-		$request->session()->flash('success','L\'entreprise financier a été correctement enregistré !!!');
+		$request->session()->flash('success','L\'entreprise  a été correctement enregistré !!!');
 		return back();
 	}
 
