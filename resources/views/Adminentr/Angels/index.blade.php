@@ -1,7 +1,7 @@
 
 
 
-@extends('......layouts.adminorg')
+@extends('......layouts.adminentr')
 
 @section('content-header')
     <div class="container-fluid">

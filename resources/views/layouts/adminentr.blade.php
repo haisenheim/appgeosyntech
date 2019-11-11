@@ -13,7 +13,7 @@
        <a href="#" class="brand-link navbar-success" style="color: #FFFFFF">
              <img src="{{asset('img/logo-obac.png')}}" class="brand-image img-circle elevation-3"
                   style="opacity: .8">
-             <span class="brand-text font-weight-light">OBAC ALERT</span>
+             <span class="brand-text font-weight-light">OBAC ALERT  </span> - <strong> {{ \Illuminate\Support\Facades\Auth::user()->entreprise->name }} </strong>
            </a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
@@ -30,12 +30,6 @@
                BUSINESS ANGELS
             </a>
       </li>
-
-          <li class="nav-item d-none d-sm-inline-block">
-            <a href="/apporteur/finances" class="nav-link">
-               FINANCES
-            </a>
-          </li>
 
 
 
