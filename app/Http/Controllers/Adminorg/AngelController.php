@@ -35,6 +35,7 @@ class AngelController extends Controller
 		foreach($angels as $angel){
 			$investissements = $investissements->merge($angel->investissements);
 		}
+		debug($investissements);
 		return view('Adminorg/Investissements/index')->with(compact('investissements'));
 	}
 
