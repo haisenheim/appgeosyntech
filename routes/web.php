@@ -120,7 +120,9 @@ Route::prefix('adminentr')
 	->name('adminentr.')
 	->group(function(){
 		Route::resource('angels','AngelController');
-		Route::resource('dossiers','DossierController');
+		//Route::resource('dossiers','DossierController');
+		Route::get('dossiers/','AngelController@investissements');
+		Route::get('dossiers/{token}','AngelController@getInvestissement');
 	});
 
 //Liste des routes de l'administrateur d'organisme financier
