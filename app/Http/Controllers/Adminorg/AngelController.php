@@ -30,12 +30,10 @@ class AngelController extends Controller
     }
 
 	public function investissements(){
-		$angels = User::all()->where('role_id',4)->where('organisme_id',Auth::user()->organisme_id);
-		$investissements = collect([]);
-		foreach($angels as $angel){
-			$investissements = $investissements->merge($angel->investissements);
-		}
-		dd($investissements);
+		//$angels = User::all()->where('role_id',4)->where('organisme_id',Auth::user()->organisme_id);
+		$investissements = Investissement::all()->where('organisme_id',Auth::user()->organisme_id);
+
+		//dd($investissements);
 		return view('Adminorg/Investissements/index')->with(compact('investissements'));
 	}
 
