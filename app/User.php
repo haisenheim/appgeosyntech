@@ -41,6 +41,10 @@ class User extends Authenticatable
 		return $this->hasMany('App\Models\Investissement','angel_id');
 	}
 
+	public function cessions(){
+		return $this->hasMany('App\Models\Cession','angel_id');
+	}
+
     // Association avec les roles
 
     public function role(){
