@@ -53,7 +53,7 @@
 
                                 <td>
                                 <ul class="list-inline">
-                                  <li class="list-inline-item"><a class="btn btn-primary btn-xs" href="{{route('admin.angels.show',[$user->id])}}"><i class="fa fa-search"></i></a></li>
+                                  <li class="list-inline-item"><a class="btn btn-primary btn-xs" href="{{route('adminorg.angels.show',[$user->token])}}"><i class="fa fa-search"></i></a></li>
                                 </ul>
                                 </td>
                             </tr>
