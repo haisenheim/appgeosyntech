@@ -87,6 +87,7 @@ Route::prefix('angel')
     ->middleware(['auth','angel'])
     ->name('angel.')
     ->group(function(){
+	    Route::resource('mailbox','MessageController');
 	    Route::post('/letter/','DossierController@saveLetter');
 	    Route::post('/comment/save','DossierController@addComment');
 	    Route::resource('dossiers','DossierController');

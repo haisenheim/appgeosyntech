@@ -17,27 +17,29 @@
            </a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/angel/" class="nav-link">Accueil</a>
+        <a href="/angel/" class="nav-link">ACCUEIL</a>
       </li>
 
       <li class="nav-item d-none d-sm-inline-block">
             <a href="/angel/investissements" class="nav-link">
 
-               INVESTISSEMENTS
+              MES INVESTISSEMENTS
             </a>
           </li>
 
           <li class="nav-item d-none d-sm-inline-block">
             <a href="/angel/opportunites" class="nav-link">
-               OPPORTUNITES
+               OPPORTUNITES D'INVESTISSEMENT
+            </a>
+          </li>
+
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="/angel/mailbox" class="nav-link">
+               <i class="fa fa-send"></i> MESSAGERIE
             </a>
           </li>
 
 
-
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
 
     <!-- SEARCH FORM -->

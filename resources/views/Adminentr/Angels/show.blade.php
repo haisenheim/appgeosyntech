@@ -83,7 +83,7 @@
                                       </small>
                                     </td>
                                     <td class="project-actions text-right">
-                                  <a class="btn btn-primary btn-xs" href="/adminorg/dossiers/{{ $investissement->token  }}">
+                                  <a class="btn btn-primary btn-xs" href="/adminentr/dossiers/{{ $investissement->token  }}">
                                       <i class="fas fa-folder">
                                       </i>
                                       Afficher
