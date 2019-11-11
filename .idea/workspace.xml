@@ -122,15 +122,15 @@
         <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Investissements/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.07256236" vertical-offset="0" max-vertical-offset="880">
-              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+              <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
               <folding>
-                <element signature="e#131#153#0#HTML" expanded="true" />
+                <element signature="e#148#170#0#HTML" expanded="true" />
                 <element signature="tag#script#1" expanded="false" />
-                <marker date="1573498485288" expanded="false" signature="3039:3078" placeholder="..." />
-                <marker date="1573498485288" expanded="false" signature="7336:7346" placeholder="..." />
-                <marker date="1573498485288" expanded="false" signature="7404:7414" placeholder="..." />
-                <marker date="1573498485288" expanded="false" signature="7473:7483" placeholder="..." />
-                <marker date="1573498485288" expanded="false" signature="7557:7567" placeholder="..." />
+                <marker date="1573498531015" expanded="false" signature="3056:3095" placeholder="..." />
+                <marker date="1573498531015" expanded="false" signature="7353:7363" placeholder="..." />
+                <marker date="1573498531015" expanded="false" signature="7421:7431" placeholder="..." />
+                <marker date="1573498531015" expanded="false" signature="7490:7500" placeholder="..." />
+                <marker date="1573498531015" expanded="false" signature="7574:7584" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1039,15 +1039,15 @@
     <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Investissements/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07256236" vertical-offset="0" max-vertical-offset="880">
-          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
           <folding>
-            <element signature="e#131#153#0#HTML" expanded="true" />
+            <element signature="e#148#170#0#HTML" expanded="true" />
             <element signature="tag#script#1" expanded="false" />
-            <marker date="1573498485288" expanded="false" signature="3039:3078" placeholder="..." />
-            <marker date="1573498485288" expanded="false" signature="7336:7346" placeholder="..." />
-            <marker date="1573498485288" expanded="false" signature="7404:7414" placeholder="..." />
-            <marker date="1573498485288" expanded="false" signature="7473:7483" placeholder="..." />
-            <marker date="1573498485288" expanded="false" signature="7557:7567" placeholder="..." />
+            <marker date="1573498531015" expanded="false" signature="3056:3095" placeholder="..." />
+            <marker date="1573498531015" expanded="false" signature="7353:7363" placeholder="..." />
+            <marker date="1573498531015" expanded="false" signature="7421:7431" placeholder="..." />
+            <marker date="1573498531015" expanded="false" signature="7490:7500" placeholder="..." />
+            <marker date="1573498531015" expanded="false" signature="7574:7584" placeholder="..." />
           </folding>
         </state>
       </provider>
