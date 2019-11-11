@@ -218,8 +218,8 @@
 
 
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+
+  <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}"/>
     <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
 
