@@ -2,28 +2,112 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/popper.js" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap-grid.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap-grid.css.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap-grid.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap-grid.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap-reboot.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap-reboot.css.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap-reboot.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap-reboot.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\css\bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\js\bootstrap.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\js\bootstrap.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\js\bootstrap.bundle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\js\bootstrap.bundle.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\js\bootstrap.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\bootstrap-4.1.3\js\bootstrap.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\js\tooltip.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/applyStyle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/arrow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/clockwise.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/computeAutoPlacement.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/computeStyle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/debounce.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/methods/defaults.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/methods/destroy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/methods/disableEventListeners.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/methods/enableEventListeners.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/find.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/findCommonOffsetParent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/findIndex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/flip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getBordersSize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getBoundaries.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getBoundingClientRect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getClientRect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getFixedPositionOffsetParent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getOffsetParent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getOffsetRect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getOffsetRectRelativeToArbitraryNode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getOppositePlacement.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getOppositeVariation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getOuterSizes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getParentNode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getPopperOffsets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getReferenceNode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getReferenceOffsets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getRoot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getRoundedOffsets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getScroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getScrollParent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getStyleComputedProperty.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getSupportedPropertyName.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getViewportOffsetRectRelativeToArtbitraryNode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getWindow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/getWindowSizes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/hide.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/includeScroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/index.js.flow" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/inner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/isBrowser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/isFixed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/isFunction.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/isIE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/isModifierEnabled.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/isModifierRequired.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/isNumeric.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/isOffsetContainer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/keepTogether.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/offset.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/methods/placements.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/popper-utils.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/esm/popper-utils.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper-utils.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/popper-utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/esm/popper-utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper-utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/popper-utils.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/esm/popper-utils.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper-utils.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/popper-utils.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/esm/popper-utils.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper-utils.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper.js.flow" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/popper.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/esm/popper.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/popper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/esm/popper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/popper.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/esm/popper.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/popper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/esm/popper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/dist/umd/popper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/preventOverflow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/removeEventListeners.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/runModifiers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/setAttributes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/setStyles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/utils/setupEventListeners.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/modifiers/shift.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/tooltip.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/esm/tooltip.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/umd/tooltip.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/esm/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/umd/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/tooltip.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/esm/tooltip.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/umd/tooltip.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/esm/tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/tooltip.js/dist/umd/tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/popper.js/src/methods/update.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Messages/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Messages/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -57,16 +141,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AngelController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Adminentr/AngelController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.32" vertical-offset="1338" max-vertical-offset="2416">
-              <caret line="117" column="31" selection-start-line="117" selection-start-column="31" selection-end-line="117" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Adminentr/Angels/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,31 +164,11 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Messages/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5418502" vertical-offset="1306" max-vertical-offset="2240">
-              <caret line="226" column="61" selection-start-line="226" selection-start-column="61" selection-end-line="226" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.3831579" vertical-offset="1306" max-vertical-offset="2256">
+              <caret line="222" column="52" selection-start-line="222" selection-start-column="52" selection-end-line="222" selection-end-column="52" />
               <folding>
                 <element signature="tag#section#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="popper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/popper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
-              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Adminentr/Investissements/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.28" vertical-offset="0" max-vertical-offset="1664">
-              <caret line="52" column="76" selection-start-line="52" selection-start-column="76" selection-end-line="52" selection-end-column="76" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -468,7 +522,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tooltip.js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tooltip.js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -525,11 +627,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\alert\public\dist" />
       <recent name="C:\xampp\alert\public\js" />
       <recent name="C:\xampp\alert\resources\views\Angel" />
       <recent name="C:\xampp\alert\app\Http\Controllers\Angel" />
       <recent name="C:\xampp\alert\resources\views" />
-      <recent name="C:\xampp\alert\app\Http\Controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\alert\app\Models" />
@@ -1135,10 +1237,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/dist/popper.js/src/utils/find.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="479">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/tooltip.js/dist/tooltip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8192">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Messages/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5418502" vertical-offset="1306" max-vertical-offset="2240">
-          <caret line="226" column="61" selection-start-line="226" selection-start-column="61" selection-end-line="226" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.3831579" vertical-offset="1306" max-vertical-offset="2256">
+          <caret line="222" column="52" selection-start-line="222" selection-start-column="52" selection-end-line="222" selection-end-column="52" />
           <folding>
             <element signature="tag#section#0" expanded="false" />
           </folding>
