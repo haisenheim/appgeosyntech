@@ -20,7 +20,6 @@ class ProjetController extends Controller
     {
         //
 	    $projets = Projet::all();
-
 	    return view('/Admin/Projets/index')->with(compact('projets'));
     }
 

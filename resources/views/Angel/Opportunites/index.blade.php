@@ -78,7 +78,12 @@
                                     <?php endif; ?>
                                 </div>
                                 <!-- /.row -->
+                               @if($projet->authorized)
                                 <button data-token="{{$projet->token}}" data-name="<?= $projet->name ?>" data-toggle="modal" data-target="#IpM" class="btn btn-block btn-outline-success btn-xs btn-p"><i class="fas fa-heart"></i> CE PROJET M'INTERESSE</button>
+                              @else
+                                <span class="btn-block btn-danger btn">DOSSIER DEJA OUVERT</span>
+                              @endif
+
                               </div>
                             </div>
                             <!-- /.widget-user -->
