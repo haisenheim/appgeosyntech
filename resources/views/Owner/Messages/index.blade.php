@@ -154,13 +154,19 @@
 
                 <div class="form-group">
                 <label for="">DESTINATAIRE</label>
-                <select name="receptor_id" class="form-control" id="">
+                <select name="receptor_id" class="form-control" id="receptor_id">
                     <option value="0">CHOIX DU DESTINAIRE</option>
                     @foreach($angels as $angel)
                         <option value="{{ $angel->id }}">{{ $angel->name  }} - <small>{{ $angel->email }}</small></option>
                     @endforeach
                 </select>
 
+                </div>
+                <div class="form-group">
+                    <label for="">Project</label>
+                    <select name="investissement_id"  class="form-control" id="investissement_id">
+
+                    </select>
                 </div>
                 <div class="form-group">
                   <input class="form-control" placeholder="Objet:">
@@ -183,6 +189,32 @@
        <!-- /.modal-dialog -->
 </div>
 
+<script>
+	$("#receptor_id").on('change',function(){
+		// console.log($("#sector_id").val());
+		var url = '/owner/mails/get-investissements';
+		$.ajax({
+			url:url,
+			type:'get',
+			dataType:'Json',
+			data:{ id:$("#receptor_id").val()},
+
+			success: function(data){
+				$("#investissement_id").html("");
+				var option = '';
+				var dat =data;
+
+				for(var i=0; i<dat.length;i++ ){
+
+					option=option+'<option value='+ dat[i].id +'>'+ dat[i].projet.name +'</option>';
+
+					$("#investissement_id").html(option);
+				}
+
+			}
+		});
+	});
+</script>
 
 
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
@@ -196,7 +228,10 @@
    <script>
      $(function () {
        //Add text editor
-       $('#compose-textarea').summernote()
+       $('#compose-textarea').summernote({
+             height: 300,
+             lang:'fr-FR'
+       })
      })
    </script>
 

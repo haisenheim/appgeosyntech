@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Owner;
 
 use App\Http\Controllers\Controller;
+use App\Models\Investissement;
 use App\Models\Message;
 use App\Models\Pay;
 use App\Models\Projet;
@@ -43,6 +44,16 @@ class MessageController extends Controller
         return view('Owner/Messages/index')->with(compact('receptions','envois','angels'));
 
     }
+
+	public function getInvestissements(Request $request){
+		$id = $request->query('id');
+		$investissements = Investissement::all()->where('angel_id',$id);
+		foreach($investissements as $inv){
+			$inv->projet;
+		}
+
+		return response()->json(compact('investissements'));
+	}
 
     /**
      * Show the form for creating a new resource.

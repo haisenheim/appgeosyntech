@@ -189,6 +189,7 @@ Route::prefix('owner')
 	    Route::get('/letter/contrat-pret','ModeleController@pret');
 	    Route::get('/letter/contrat-cession-actif','ModeleController@actif');
 	    Route::get('/letter/contrat-cession-creance','ModeleController@creance');
+	    Route::get('/mails/get-investissements','MessageController@getInvestissements');
 	    Route::get('/letter/contrat-concession','ModeleController@concession');
 	    Route::post('/dossier/edit-report','DossierController@editReport');
     });
