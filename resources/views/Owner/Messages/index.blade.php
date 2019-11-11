@@ -201,7 +201,7 @@
 <div class="modal fade" id="composeModal">
    <div class="modal-dialog modal-lg">
      <div class="modal-content">
-       <div class="modal-header bg-danger">
+       <div class="modal-header bg-success">
          <h4 class="modal-title">NOUVEAU MESSAGE</h4>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
@@ -225,7 +225,7 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-outline-danger btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                 </div>
            </div>
 
@@ -243,7 +243,20 @@
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 
 
+<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('textarea').summernote({
+            height: 200,
+            tabsize: 2,
+            followingToolbar: true,
+            lang:'fr-FR'
+          });
+        });
+      </script>
 
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('dist/js/demo.js')}}"></script>
