@@ -163,7 +163,7 @@
 
                 </div>
                 <div class="form-group">
-                    <label for="">Project</label>
+                    <label for="">Projet</label>
                     <select name="investissement_id"  class="form-control" id="investissement_id">
 
                     </select>
@@ -203,12 +203,12 @@
 				$("#investissement_id").html("");
 				var option = '';
 				var dat =data;
+				console.log(dat);
 
 				for(var i=0; i<dat.length;i++ ){
-
 					option=option+'<option value='+ dat[i].id +'>'+ dat[i].projet.name +'</option>';
-
 					$("#investissement_id").html(option);
+					console.log(option);
 				}
 
 			}
@@ -256,7 +256,7 @@
 
       "ordering": true,
       "info": true,
-      "autoWidth": false,
+      "autoWidth": false
     });
   });
 </script>
