@@ -72,6 +72,7 @@ class AngelController extends Controller
 	    $user->pay_id = Auth::user()->pay_id;
 	    $user->password=Hash::make($request['password']);
 	    $user->role_id =4;
+	    $user->organisme_id = Auth::user()->organisme_id;
 	    $user->moi_id=date('m');
 	    $user->annee=date('Y');
 	    $user->male = $request['male']=='on'?1:0;
