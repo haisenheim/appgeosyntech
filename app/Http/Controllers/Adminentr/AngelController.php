@@ -115,7 +115,7 @@ class AngelController extends Controller
 
 	   // dd($p);
 	   $angel = User::where('token',$p)->first();
-	    return view('/Adminorg/Angels/show')->with(compact('angel'));
+	    return view('/Adminentr/Angels/show')->with(compact('angel'));
     }
 
 
