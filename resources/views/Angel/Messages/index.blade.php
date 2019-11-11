@@ -218,7 +218,7 @@
 
 
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-
+<script src="{{asset('js/tooltip.js')}}"></script>
   <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
 <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 <script src="{{asset('dist/js/demo.js')}}"></script>
