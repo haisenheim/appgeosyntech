@@ -3,7 +3,7 @@
 
 @section('content')
 
-@endsection
+
 
 <section class="content">
 
