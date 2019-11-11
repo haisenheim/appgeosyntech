@@ -59,7 +59,11 @@
             </div>
           </li>
 
-
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="/owner/mailbox" class="nav-link">
+               MESSAGERIE
+            </a>
+          </li>
 
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>

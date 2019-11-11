@@ -170,6 +170,7 @@ Route::prefix('owner')
     ->middleware(['auth','owner'])
     ->name('owner.')
     ->group(function(){
+	    Route::resource('mailbox','MessageController');
         Route::resource('dossiers','DossierController');
 	    Route::resource('actifs','ActifController');
         Route::get('about','AboutController');
