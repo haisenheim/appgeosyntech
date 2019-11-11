@@ -5,15 +5,15 @@
 
 
 
-<section class="content">
+<section style="padding: 20px;" class="content">
 
       <div class="row">
         <div class="col-md-3">
-          <a href="compose.html" class="btn btn-primary btn-block mb-3">Compose</a>
+          <a href="#" data-toggle="modal" data-target="#composeModal" class="btn btn-outline-danger btn-block mb-3">Composer</a>
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Folders</h3>
+              <h3 class="card-title">Repertoires</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -24,29 +24,20 @@
               <ul class="nav nav-pills flex-column">
                 <li class="nav-item active">
                   <a href="#" class="nav-link">
-                    <i class="fas fa-inbox"></i> Inbox
-                    <span class="badge bg-primary float-right">12</span>
+                    <i class="fas fa-inbox"></i> Boîte de reception
+                    <span class="badge bg-primary float-right">{{ $receptions->where('lu',0)->count() }}</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">
-                    <i class="far fa-envelope"></i> Sent
+                    <i class="far fa-envelope"></i> Envois
                   </a>
                 </li>
+
+
                 <li class="nav-item">
                   <a href="#" class="nav-link">
-                    <i class="far fa-file-alt"></i> Drafts
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fas fa-filter"></i> Junk
-                    <span class="badge bg-warning float-right">65</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-trash-alt"></i> Trash
+                    <i class="far fa-trash-alt"></i> Corbeille
                   </a>
                 </li>
               </ul>
@@ -56,7 +47,7 @@
           <!-- /.card -->
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Labels</h3>
+              <h3 class="card-title">Sujets</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -68,18 +59,18 @@
                 <li class="nav-item">
                   <a href="#" class="nav-link">
                     <i class="far fa-circle text-danger"></i>
-                    Important
+                    Recherche de financements
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">
-                    <i class="far fa-circle text-warning"></i> Promotions
+                    <i class="far fa-circle text-warning"></i> Cessions d'actifs
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">
                     <i class="far fa-circle text-primary"></i>
-                    Social
+                    Concessions
                   </a>
                 </li>
               </ul>
@@ -92,7 +83,7 @@
         <div class="col-md-9">
           <div class="card card-primary card-outline">
             <div class="card-header">
-              <h3 class="card-title">Inbox</h3>
+              <h3 class="card-title">Boîte de reception</h3>
 
               <div class="card-tools">
                 <div class="input-group input-group-sm">
@@ -130,7 +121,7 @@
                 <!-- /.float-right -->
               </div>
               <div class="table-responsive mailbox-messages">
-                <table class="table table-hover table-striped">
+                <table id="table-mgs" class="table table-hover table-striped">
                   <tbody>
                   <tr>
                     <td>
@@ -380,5 +371,32 @@
       <!-- /.row -->
 
 </section>
+
+<link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+<!-- jQuery -->
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+
+
+
+
+<!-- AdminLTE for demo purposes -->
+<script src="{{asset('dist/js/demo.js')}}"></script>
+<!-- DataTables -->
+<script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
+<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+
+<script>
+  $(function () {
+
+    $('#table-mgs').DataTable({
+      "paging": true,
+      "lengthChange": false,
+
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+    });
+  });
+</script>
 
 @endsection
