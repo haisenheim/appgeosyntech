@@ -228,7 +228,8 @@
 <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 <!-- jQuery -->
 
-<script src="{{asset('dist/js/demo.js')}}"></script>
+
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- DataTables -->
 <script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
 <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
@@ -248,7 +249,6 @@
 </script>
 
 
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 
  <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
      <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
