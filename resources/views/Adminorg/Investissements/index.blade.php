@@ -26,7 +26,7 @@
                       <th style="width: 20%">
                           Chargé d'affaires
                       </th>
-
+                      <th>Date</th>
 
                       <th style="width: 20%">
                       </th>
@@ -40,13 +40,13 @@
                         <tr>
                             <td>#</td>
                             <td>
-                            <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
+                            <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> -
 
-                            <?= $projet->public?'<span class="badge badge-info">PUBLIC</span>':'<span class="badge badge-warning">PRIVE</span>' ?> - <small class="text-{{$projet->typecolor}}">{{$projet->type?$projet->type->name:'-'}}</small> - <small>{{$projet->variante?$projet->variante->name:''}}</small>
+                            <?= $projet->public?'<span class="badge badge-info">PUBLIC</span>':'<span class="badge badge-warning">PRIVE</span>' ?>
                             </td>
 
                             <td>{{$investissement->angel?$investissement->angel->name:'-'}}</td>
-
+                            <td>{{ date_format($investissement->created_at,'d/m/Y') }}</td>
 
 
                       <td class="project-actions text-right">
