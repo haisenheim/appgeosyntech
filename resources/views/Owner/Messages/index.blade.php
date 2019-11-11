@@ -238,7 +238,7 @@
    </script>
      <script>
        $('.dropdown').click(function(){
-           $('.dropdown-menu').toggleClass('show')
+           $(this).find('.dropdown-menu').toggleClass('show')
        });
      </script>
 
