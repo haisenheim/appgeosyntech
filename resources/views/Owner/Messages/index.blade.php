@@ -229,8 +229,7 @@
      $(function () {
        //Add text editor
        $('#compose-textarea').summernote({
-             height: 300,
-             lang:'fr-FR'
+             height: 300
        })
      })
    </script>
