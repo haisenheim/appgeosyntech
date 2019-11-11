@@ -217,22 +217,7 @@
 </script>
 
 
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 
- <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-
-     <script type="text/javascript">
-         $(document).ready(function() {
-           $('textarea').summernote({
-             height: 300,
-             tabsize: 2,
-             followingToolbar: true,
-             lang:'fr-FR'
-           });
-         });
-       </script>
 
 
    <!-- Page Script -->
@@ -261,5 +246,23 @@
     });
   });
 </script>
+
+
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+
+ <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
+     <script type="text/javascript">
+         $(document).ready(function() {
+           $('textarea').summernote({
+             height: 300,
+             tabsize: 2,
+             followingToolbar: true,
+             lang:'fr-FR'
+           });
+         });
+       </script>
 
 @endsection
