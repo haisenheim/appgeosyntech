@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Adminorg/AngelController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Adminorg/AngelController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Adminorg/Investissements/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Adminorg/Investissements/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -123,15 +122,15 @@
         <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Investissements/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.07256236" vertical-offset="0" max-vertical-offset="880">
-              <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
               <folding>
-                <element signature="e#122#144#0#HTML" expanded="true" />
+                <element signature="e#131#153#0#HTML" expanded="true" />
                 <element signature="tag#script#1" expanded="false" />
-                <marker date="1573498355859" expanded="false" signature="3030:3069" placeholder="..." />
-                <marker date="1573498355859" expanded="false" signature="7327:7337" placeholder="..." />
-                <marker date="1573498355859" expanded="false" signature="7395:7405" placeholder="..." />
-                <marker date="1573498355859" expanded="false" signature="7464:7474" placeholder="..." />
-                <marker date="1573498355859" expanded="false" signature="7548:7558" placeholder="..." />
+                <marker date="1573498485288" expanded="false" signature="3039:3078" placeholder="..." />
+                <marker date="1573498485288" expanded="false" signature="7336:7346" placeholder="..." />
+                <marker date="1573498485288" expanded="false" signature="7404:7414" placeholder="..." />
+                <marker date="1573498485288" expanded="false" signature="7473:7483" placeholder="..." />
+                <marker date="1573498485288" expanded="false" signature="7557:7567" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1040,15 +1039,15 @@
     <entry file="file://$PROJECT_DIR$/resources/views/Adminorg/Investissements/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07256236" vertical-offset="0" max-vertical-offset="880">
-          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
           <folding>
-            <element signature="e#122#144#0#HTML" expanded="true" />
+            <element signature="e#131#153#0#HTML" expanded="true" />
             <element signature="tag#script#1" expanded="false" />
-            <marker date="1573498355859" expanded="false" signature="3030:3069" placeholder="..." />
-            <marker date="1573498355859" expanded="false" signature="7327:7337" placeholder="..." />
-            <marker date="1573498355859" expanded="false" signature="7395:7405" placeholder="..." />
-            <marker date="1573498355859" expanded="false" signature="7464:7474" placeholder="..." />
-            <marker date="1573498355859" expanded="false" signature="7548:7558" placeholder="..." />
+            <marker date="1573498485288" expanded="false" signature="3039:3078" placeholder="..." />
+            <marker date="1573498485288" expanded="false" signature="7336:7346" placeholder="..." />
+            <marker date="1573498485288" expanded="false" signature="7404:7414" placeholder="..." />
+            <marker date="1573498485288" expanded="false" signature="7473:7483" placeholder="..." />
+            <marker date="1573498485288" expanded="false" signature="7557:7567" placeholder="..." />
           </folding>
         </state>
       </provider>
