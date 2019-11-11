@@ -1,7 +1,7 @@
 @extends('......layouts.adminorg')
 
 @section('content')
-<?php dd($angel->investissements); ?>
+
  <?php $client = $angel ?>
     <div style="padding: 20px;" class="container-fluid">
         <div class="row">

@@ -114,10 +114,8 @@ class AngelController extends Controller
         //
 
 	   // dd($p);
-	    $devises = Devise::all();
-	    $formes = Flettre::all();
-	    $investissement = Investissement::all()->where('token',$p)->first();
-	    return view('/Angel/Dossiers/show')->with(compact('investissement','devises','formes'));
+	   $angel = User::where('token',$p)->first();
+	    return view('/Adminorg/Angels/show')->with(compact('angel'));
     }
 
 
