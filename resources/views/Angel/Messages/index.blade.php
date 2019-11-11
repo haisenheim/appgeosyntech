@@ -231,22 +231,7 @@
 
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- DataTables -->
-<script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 
-<script>
-  $(function () {
-
-    $('#table-mgs').DataTable({
-      "paging": true,
-      "lengthChange": false,
-
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
-  });
-</script>
 
 
 
