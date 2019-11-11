@@ -130,7 +130,8 @@ Route::prefix('adminorg')
 	->name('adminorg.')
 	->group(function(){
 		Route::resource('angels','AngelController');
-		Route::resource('dossiers','DossierController');
+		//Route::resource('dossiers','DossierController');
+		Route::get('dossiers/','AngelController@investissements');
 	});
 
 //Liste des routes du consultant
