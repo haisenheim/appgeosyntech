@@ -39,6 +39,7 @@ class AngelController extends Controller
 
 	public function getInvestissement($token){
 		$investissement = Investissement::where('token',$token)->first();
+
 		return view('Adminorg/Investissements/show')->with(compact('investissement'));
 	}
 
