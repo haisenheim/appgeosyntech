@@ -159,7 +159,7 @@
                   <input class="form-control" placeholder="Objet:">
                 </div>
                 <div class="form-group">
-                    <textarea id="compose-textarea" class="form-control" style="height: 300px"></textarea>
+                    <textarea id="compose-textarea"  cols="30" rows="3"></textarea>
                 </div>
 
 
