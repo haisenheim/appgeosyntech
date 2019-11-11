@@ -29,11 +29,18 @@ class MessageController extends Controller
         //
         $receptions = Message::all()->where('receptor_id',Auth::user()->id);
 	    $envois = Message::all()->where('sender_id',Auth::user()->id);
-	    //$investissemens = Pay::all();
-       // dd($villes);
-       // echo "Bonjour tout le monde!!";
-       // $request->session()->flash('message','Liste des villes!!!');
-        return view('Owner/Messages/index')->with(compact('receptions','envois'));
+	    $projets =  Projet::all()->where('owner_id',Auth::user()->id);
+	    $users = collect([]);
+	    foreach($projets as $projet){
+		    $invests = $projet->investissements;
+		    foreach($invests as $inv){
+			    $users = $users->add($inv->angel);
+		    }
+	    }
+
+	    $angels= $users->unique();
+
+        return view('Owner/Messages/index')->with(compact('receptions','envois','angels'));
 
     }
 

@@ -153,13 +153,20 @@
                 <div class="card-body">
 
                 <div class="form-group">
-                  <input class="form-control" placeholder="To:">
+                <label for="">DESTINATAIRE</label>
+                <select name="receptor_id" class="form-control" id="">
+                    <option value="0">CHOIX DU DESTINAIRE</option>
+                    @foreach($angels as $angel)
+                        <option value="{{ $angel->id }}">{{ $angel->name  }} - <small>{{ $angel->email }}</small></option>
+                    @endforeach
+                </select>
+
                 </div>
                 <div class="form-group">
                   <input class="form-control" placeholder="Objet:">
                 </div>
                 <div class="form-group">
-                    <textarea id="compose-textarea"  cols="30" rows="3"></textarea>
+                    <textarea id="compose-textarea"  cols="30" style="height: 300px"></textarea>
                 </div>
 
 
