@@ -219,24 +219,24 @@
 
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 
-  <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-  <script src="{{asset('dist/tooltip.js/dist/tooltip.min.js')}}"></script>
-<script src="{{asset('dist/js/adminlte.min.js')}}"></script>
-<script src="{{asset('dist/js/demo.js')}}"></script>
+ <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
-    <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}"/>
-    <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+     <script type="text/javascript">
+         $(document).ready(function() {
+           $('textarea').summernote({
+             height: 300,
+             tabsize: 2,
+             followingToolbar: true,
+             lang:'fr-FR'
+           });
+         });
+       </script>
 
 
    <!-- Page Script -->
-   <script>
-     $(function () {
-       //Add text editor
-       $('#compose-textarea').summernote({
-             height: 300
-       })
-     })
-   </script>
+
 
 
 <!-- AdminLTE for demo purposes -->
