@@ -58,9 +58,9 @@ class DossierController extends Controller
 		}
 
 		//dd($projets);
-		//$projets = $projets->unique();
+		$projets = $projets->unique();
 
-		return response()->json(compact($projets));
+		return response()->json(['investissements', $projets]);
 	}
 
     /**
