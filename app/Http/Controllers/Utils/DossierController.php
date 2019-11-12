@@ -54,11 +54,11 @@ class DossierController extends Controller
 			if($investissement->projet->owner_id==$id){
 				$projets->add($investissement);
 			}
-			debug($projets);
+			//debug($projets);
 		}
 
-		dd($projets);
-		$projets = $projets->unique();
+		//dd($projets);
+		//$projets = $projets->unique();
 
 		return response()->json(compact($projets));
 	}
