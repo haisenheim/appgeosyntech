@@ -202,11 +202,11 @@
 			success: function(data){
 				$("#investissement_id").html("");
 				var option = '';
-				var dat =data.projets;
-				console.log(dat);
+				//var dat =data;
+				//console.log(dat);
 
-				for(var i=0; i<dat.length;i++ ){
-					option=option+'<option value='+ dat[i].id +'>'+ dat[i].projet.name +'</option>';
+				for(var i=0; i<data.length;i++ ){
+					option=option+'<option value='+ data[i].id +'>'+ data[i].projet.name +'</option>';
 					$("#investissement_id").html(option);
 					console.log(option);
 				}
