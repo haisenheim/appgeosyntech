@@ -169,10 +169,10 @@
                     </select>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="Objet:">
+                  <input class="form-control" name="subject" required="true" placeholder="Objet:">
                 </div>
                 <div class="form-group">
-                    <textarea id="compose-textarea"  cols="30" style="height: 300px"></textarea>
+                    <textarea id="compose-textarea" name="body" cols="30" style="height: 300px"></textarea>
                 </div>
 
 
