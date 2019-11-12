@@ -192,7 +192,7 @@
 <script>
 	$("#receptor_id").on('change',function(){
 		// console.log($("#sector_id").val());
-		var url = '/owner/mails/get-investissements';
+		var url = '/util/investissement-owner';
 		$.ajax({
 			url:url,
 			type:'get',
@@ -202,7 +202,7 @@
 			success: function(data){
 				$("#investissement_id").html("");
 				var option = '';
-				var dat =data.investissements;
+				var dat =data.projets;
 				console.log(dat);
 
 				for(var i=0; i<dat.length;i++ ){

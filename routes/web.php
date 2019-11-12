@@ -200,6 +200,13 @@ Route::prefix('owner')
     });
 
 
+Route::prefix('util')
+	->namespace('Utils')
+	->name('util.')
+	->group(function(){
+		Route::get('investissement-owner','DossierController@getInvestissementsProjets');
+	});
+
 Route::get('/login','UserController@login')->name('login');
 Auth::routes();
 
