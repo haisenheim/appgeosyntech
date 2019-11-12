@@ -74,7 +74,7 @@ class MessageController extends Controller
 	        $message['moi_id'] = date('m');
 	        $message['sender_id'] = Auth::user()->id;
 	        $message['role_id'] = Auth::user()->role_id;
-	        Message::createOrUpdate([$message]);
+	        Message::create([$message]);
 
             $request->session()->flash('success','votre message a été envoyé !!!');
             return redirect('/angel/messages');
