@@ -48,6 +48,7 @@ class DossierController extends Controller
 		$id = $request->query('id');
 		$angel = Auth::user();
 		$investissements = Investissement::all()->where('angel_id',$angel->id);
+		dd($investissements);
 		$projets =  collect([]);
 		foreach($investissements as $investissement){
 			if($investissement->projet->owner_id==$id){
