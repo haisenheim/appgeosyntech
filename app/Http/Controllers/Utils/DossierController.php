@@ -60,7 +60,7 @@ class DossierController extends Controller
 		//dd($projets);
 		$projets = $projets->unique();
 
-		return response()->json(['investissements', $projets]);
+		return response()->json($projets);
 	}
 
     /**
