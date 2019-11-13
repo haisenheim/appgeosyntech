@@ -127,14 +127,16 @@ legend{
 }
 
 .content-title {
-
     margin-top: 7%;
     color: #FFFFFF;
     padding: 0 0 10px;
-    position: relative;
+    position: absolute;
     font-size: 2.2rem;
     font-weight: 800;
     font-family: cursive;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .content-title::after {
