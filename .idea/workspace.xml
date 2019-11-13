@@ -2,7 +2,114 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\esm\popper-utils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\esm\popper-utils.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\esm\popper-utils.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\esm\popper-utils.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\esm\popper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\esm\popper.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\esm\popper.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\esm\popper.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\popper-utils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\popper-utils.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\popper-utils.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\popper-utils.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\popper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\popper.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\popper.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\popper.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper-utils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper-utils.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper-utils.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper-utils.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper.js.flow" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\dist\umd\popper.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\index.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\index.js.flow" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\methods\defaults.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\methods\destroy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\methods\disableEventListeners.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\methods\enableEventListeners.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\methods\placements.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\methods\update.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\applyStyle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\arrow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\computeStyle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\flip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\hide.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\inner.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\keepTogether.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\offset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\preventOverflow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\modifiers\shift.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\clockwise.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\computeAutoPlacement.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\debounce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\find.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\findCommonOffsetParent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\findIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getBordersSize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getBoundaries.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getBoundingClientRect.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getClientRect.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getFixedPositionOffsetParent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getOffsetParent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getOffsetRect.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getOffsetRectRelativeToArbitraryNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getOppositePlacement.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getOppositeVariation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getOuterSizes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getParentNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getPopperOffsets.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getReferenceNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getReferenceOffsets.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getRoot.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getRoundedOffsets.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getScroll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getScrollParent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getStyleComputedProperty.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getSupportedPropertyName.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getWindow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\getWindowSizes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\includeScroll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\isBrowser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\isFixed.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\isFunction.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\isIE.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\isModifierEnabled.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\isModifierRequired.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\isNumeric.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\isOffsetContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\removeEventListeners.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\runModifiers.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\setAttributes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\setStyles.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\popper.js\src\utils\setupEventListeners.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\esm\tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\esm\tooltip.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\esm\tooltip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\esm\tooltip.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\tooltip.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\tooltip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\tooltip.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\umd\tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\umd\tooltip.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\umd\tooltip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\dist\umd\tooltip.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\index.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\alert\node_modules\tooltip.js\package.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -35,6 +142,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.28" vertical-offset="1206" max-vertical-offset="2208">
+              <caret line="103" column="68" selection-start-line="103" selection-start-column="68" selection-end-line="103" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.50793654" vertical-offset="480" max-vertical-offset="2992">
+              <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#section#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Messages/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -45,12 +174,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67346936" vertical-offset="1559" max-vertical-offset="4304">
-              <caret line="116" column="70" selection-start-line="116" selection-start-column="70" selection-end-line="116" selection-end-column="70" />
-              <folding />
+            <state vertical-scroll-proportion="-12.52" vertical-offset="1559" max-vertical-offset="4304">
+              <caret line="117" column="78" selection-start-line="117" selection-start-column="78" selection-end-line="117" selection-end-column="78" />
+              <folding>
+                <element signature="e#3914#3963#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,26 +239,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angel.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/angel.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.16" vertical-offset="0" max-vertical-offset="3056">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="176">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="head-tl3.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -151,7 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Apporteur.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Adminentr.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Adminorg.php" />
@@ -166,7 +276,6 @@
         <option value="$PROJECT_DIR$/resources/views/Apporteur/Clients/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Prevresultat.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/owner.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Adminorg/DossierController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/AboutController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/ActifController.php" />
@@ -202,6 +311,8 @@
         <option value="$PROJECT_DIR$/resources/views/Angel/Messages/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Angel/MessageController.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php" />
       </list>
     </option>
   </component>
@@ -430,6 +541,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Owner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -451,11 +588,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\alert\resources\views\Owner\Messages" />
       <recent name="C:\xampp\alert\app\Http\Controllers\Utils" />
       <recent name="C:\xampp\alert\public\dist" />
       <recent name="C:\xampp\alert\public\js" />
       <recent name="C:\xampp\alert\resources\views\Angel" />
-      <recent name="C:\xampp\alert\app\Http\Controllers\Angel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\alert\app\Models" />
@@ -527,10 +664,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26944444" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26944444" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -596,14 +733,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2496" max-vertical-offset="4992">
-          <caret line="156" column="15" selection-start-line="156" selection-start-column="15" selection-end-line="156" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/ModeleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="3776">
@@ -974,16 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/tooltip.js/dist/tooltip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8192">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-88.287674" vertical-offset="10835" max-vertical-offset="17376">
@@ -1088,9 +1207,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67346936" vertical-offset="1559" max-vertical-offset="4304">
-          <caret line="116" column="70" selection-start-line="116" selection-start-column="70" selection-end-line="116" selection-end-column="70" />
+        <state vertical-scroll-proportion="-12.52" vertical-offset="1559" max-vertical-offset="4304">
+          <caret line="117" column="78" selection-start-line="117" selection-start-column="78" selection-end-line="117" selection-end-column="78" />
+          <folding>
+            <element signature="e#3914#3963#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.28" vertical-offset="1206" max-vertical-offset="2208">
+          <caret line="103" column="68" selection-start-line="103" selection-start-column="68" selection-end-line="103" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50793654" vertical-offset="480" max-vertical-offset="2992">
+          <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#section#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

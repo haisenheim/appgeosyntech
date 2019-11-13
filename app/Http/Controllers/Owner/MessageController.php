@@ -101,6 +101,8 @@ class MessageController extends Controller
     public function show($token)
     {
         $message = Message::where('token',$token)->first();
+	    $msg = Message::updateOrCreate(['token'=>$token],['lu'=>1]);
+
         return view('Owner/Messages/show')->with(compact('message'));
     }
 
