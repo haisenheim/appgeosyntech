@@ -141,7 +141,6 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                                      </div>
 
                                                 <div class="btn-div card-footer text-center">
-                                                   <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
                                                    <button class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
                                                 </div>
 
