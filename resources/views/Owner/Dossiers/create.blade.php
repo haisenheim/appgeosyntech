@@ -7,7 +7,6 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-header p-20">
-                <h3 class=""> NOUVEAU DOSSIER</h3>
                  <div class="stepwizard">
                      <div class="stepwizard-row setup-panel">
                          <div class="stepwizard-step">

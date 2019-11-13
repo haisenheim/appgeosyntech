@@ -125,3 +125,23 @@ legend{
     background-color: #5969ff;
     border-color: #5969ff;
 }
+
+.content-title {
+
+    margin-top: 7%;
+    color: #FFFFFF;
+    padding: 0 0 10px;
+    position: relative;
+}
+
+.content-title::after {
+    background-color: #FFFFFF;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,0);
+    width: 50px;
+}
