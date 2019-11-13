@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
 
-
-   <link rel="stylesheet" href="{{asset('css/timeline.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/floating-menu.css')}}"/>
   <!-- jQuery -->
   <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
