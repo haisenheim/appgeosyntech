@@ -107,6 +107,11 @@ legend{
     width: auto;
 }
 
+.has-error input {
+    border-radius: 5px;
+    border: red 1px sol;
+
+}
 
 .btn-default:hover {
     color: #fff;
