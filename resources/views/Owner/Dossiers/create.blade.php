@@ -1,6 +1,8 @@
 @extends('......layouts.owner')
 
-@section('page-title','NOUVEAU CREATION D\'UN NOUVEAU DOSSIER')
+@section('page-title')
+CREATION D\'UN NOUVEAU DE LEVEE DE FONDS
+@endsection
 
 
 @section('content')
