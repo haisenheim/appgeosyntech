@@ -132,6 +132,9 @@ legend{
     color: #FFFFFF;
     padding: 0 0 10px;
     position: relative;
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: cursive;
 }
 
 .content-title::after {
@@ -139,9 +142,9 @@ legend{
     bottom: 0;
     content: '';
     display: block;
-    height: 1px;
+    height: 3px;
     left: 50%;
     position: absolute;
     transform: translate(-50%,0);
-    width: 50px;
+    width: 30%;
 }

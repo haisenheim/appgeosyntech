@@ -2,99 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\esm\popper-utils.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\esm\popper-utils.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\esm\popper-utils.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\esm\popper-utils.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\esm\popper.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\esm\popper.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\esm\popper.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\esm\popper.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\popper-utils.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\popper-utils.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\popper-utils.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\popper-utils.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\popper.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\popper.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\popper.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\popper.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper-utils.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper-utils.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper-utils.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper-utils.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper.js.flow" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\dist\umd\popper.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\index.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\index.js.flow" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\methods\defaults.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\methods\destroy.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\methods\disableEventListeners.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\methods\enableEventListeners.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\methods\placements.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\methods\update.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\applyStyle.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\arrow.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\computeStyle.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\flip.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\hide.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\inner.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\keepTogether.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\offset.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\preventOverflow.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\modifiers\shift.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\clockwise.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\computeAutoPlacement.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\debounce.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\find.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\findCommonOffsetParent.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\findIndex.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getBordersSize.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getBoundaries.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getBoundingClientRect.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getClientRect.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getFixedPositionOffsetParent.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getOffsetParent.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getOffsetRect.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getOffsetRectRelativeToArbitraryNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getOppositePlacement.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getOppositeVariation.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getOuterSizes.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getParentNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getPopperOffsets.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getReferenceNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getReferenceOffsets.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getRoot.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getRoundedOffsets.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getScroll.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getScrollParent.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getStyleComputedProperty.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getSupportedPropertyName.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getWindow.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\getWindowSizes.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\includeScroll.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\isBrowser.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\isFixed.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\isFunction.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\isIE.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\isModifierEnabled.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\isModifierRequired.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\isNumeric.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\isOffsetContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\removeEventListeners.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\runModifiers.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\setAttributes.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\setStyles.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\public\dist\popper.js\src\utils\setupEventListeners.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/owner.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/owner.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/timeline.css" afterPath="$PROJECT_DIR$/public/css/timeline.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -221,8 +128,8 @@
       <file leaf-file-name="timeline.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/timeline.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.416309" vertical-offset="1902" max-vertical-offset="2448">
-              <caret line="131" column="19" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.58798283" vertical-offset="1902" max-vertical-offset="2496">
+              <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -231,8 +138,8 @@
       <file leaf-file-name="owner.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/owner.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.64" vertical-offset="1478" max-vertical-offset="2336">
-              <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
+            <state vertical-scroll-proportion="-9.36" vertical-offset="1478" max-vertical-offset="2336">
+              <caret line="107" column="52" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -1292,8 +1199,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/owner.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.64" vertical-offset="1478" max-vertical-offset="2336">
-          <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
+        <state vertical-scroll-proportion="-9.36" vertical-offset="1478" max-vertical-offset="2336">
+          <caret line="107" column="52" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1302,8 +1209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/timeline.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.416309" vertical-offset="1902" max-vertical-offset="2448">
-          <caret line="131" column="19" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.58798283" vertical-offset="1902" max-vertical-offset="2496">
+          <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
           <folding />
         </state>
       </provider>
