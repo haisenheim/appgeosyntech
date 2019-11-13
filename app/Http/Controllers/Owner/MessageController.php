@@ -102,8 +102,20 @@ class MessageController extends Controller
     {
         $message = Message::where('token',$token)->first();
 	    $msg = Message::updateOrCreate(['token'=>$token],['lu'=>1]);
+	    $receptions = Message::all()->where('receptor_id',Auth::user()->id);
+	    $envois = Message::all()->where('sender_id',Auth::user()->id);
+	    $projets =  Projet::all()->where('owner_id',Auth::user()->id);
+	    $users = collect([]);
+	    foreach($projets as $projet){
+		    $invests = $projet->investissements;
+		    foreach($invests as $inv){
+			    $users = $users->add($inv->angel);
+		    }
+	    }
 
-        return view('Owner/Messages/show')->with(compact('message'));
+	    $angels= $users->unique();
+
+        return view('Owner/Messages/show')->with(compact('message','envois','receptions','angels'));
     }
 
     /**
