@@ -97,10 +97,13 @@
                         <th></th>
                         <th>Expediteur</th>
                         <th>Objet</th>
+
                         <th>Date</th>
                       </tr>
                   </thead>
                   <tbody>
+
+                  @foreach($receptions as $reception)
 
                   <tr>
                     <td>
@@ -110,13 +113,14 @@
                       </div>
                     </td>
 
-                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
+
+                    <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/owner/mailbox/{{ $reception->token }}">{{ $reception->expediteur->name }}</a></td>
+                    <td class="mailbox-subject"><b>{{ $reception->investissent->projet->name }}</b> - {{ $reception->subject }}
                     </td>
 
-                    <td class="mailbox-date">28 mins ago</td>
+                    <td class="mailbox-date">{{ date_format($reception->created_at, 'd/m/Y H:i') }}</td>
                   </tr>
-
+                  @endforeach
 
 
                   </tbody>
