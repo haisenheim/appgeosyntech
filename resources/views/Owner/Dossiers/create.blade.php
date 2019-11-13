@@ -1,44 +1,44 @@
-@extends('layouts.owner')
+@extends('......layouts.owner')
+
+@section('page-title')
+CREATION D'UN NOUVEAU DE LEVEE DE FONDS
+@endsection
+
 
 @section('content')
-    <div class="md-container">
-        <div class="widget">
-            <div class="widget-header">
-                <h5 class=""><i class="fa fa-user"></i> NOUVEAU DOSSIER</h5>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header p-20">
+                 <div class="stepwizard">
+                     <div class="stepwizard-row setup-panel">
+                         <div class="stepwizard-step">
+                             <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                             <p>Informations generales</p>
+                         </div>
+                         <div class="stepwizard-step">
+                             <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                             <p>CONVENTION DE CONFIDENTIALITE</p>
+                         </div>
+                         <div class="stepwizard-step">
+                             <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                             <p>MODELE ECONOMIQUE</p>
+                         </div>
+                         <div class="stepwizard-step">
+                             <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                             <p>ANALYSE DES RISQUES</p>
+                         </div>
+                         <div class="stepwizard-step">
+                              <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                              <p>DIAGNOSTIC FINANCIER</p>
+                         </div>
+
+                     </div>
+                 </div>
             </div>
-            <div class="widget-content">
+            <div class="card-body">
                 <form enctype="multipart/form-data" class="form" action="{{route('owner.dossiers.store')}}" method="post">
-                    {{csrf_field()}}
+                            {{csrf_field()}}
 
-                    <div class="">
-                            <div class="stepwizard">
-                                <div class="stepwizard-row setup-panel">
-                                    <div class="stepwizard-step">
-                                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-                                        <p>Informations generales</p>
-                                    </div>
-                                    <div class="stepwizard-step">
-                                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                                        <p>CONVENTION DE CONFIDENTIALITE</p>
-                                    </div>
-                                    <div class="stepwizard-step">
-                                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                                        <p>MODELE ECONOMIQUE</p>
-                                    </div>
-                                    <div class="stepwizard-step">
-                                        <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-                                        <p>ANALYSE DES RISQUES</p>
-                                    </div>
-                                    <div class="stepwizard-step">
-                                         <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
-                                         <p>DIAGNOSTIC FINANCIER</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="">
                                 <form role="form" action="" method="post">
 
                                     <div class="setup-content" id="step-1">
@@ -66,9 +66,20 @@
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-5 col-sm-12">
+                                                         <div class="col-md-6 col-sm-12">
                                                              <div class="form-group">
-                                                                 <label class="control-label">TYPE DE PROJET</label>
+                                                                 <label class="control-label">CLASSE  PROJET (Variante)</label>
+                                                                 <select class="form-control" name="variante_id" id="variante_id">
+                                                                    @foreach($variantes as $p)
+                                                                       <option value='{!! $p->id !!}'>{{$p->name}}</option>
+                                                                    @endforeach
+                                                                 </select>
+                                                             </div>
+                                                         </div>
+
+                                                         <div class="col-md-6 col-sm-12">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">TYPE DE FINANCEMENT</label>
                                                                  <select class="form-control" name="tprojet_id" id="tprojet_id">
                                                                     @foreach($tprojets as $p)
                                                                        <option value='{!! $p->id !!}'>{{$p->name}}</option>
@@ -77,7 +88,7 @@
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-4 col-sm-12">
+                                                         <div class="col-md-6 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">VILLE</label>
                                                                  <select class="form-control" name="ville_id" id="ville_id">
@@ -157,7 +168,7 @@
                                       <div class="">
                                           <fieldset>
                                                <legend>DESCRIPTION DU MODELE ECONOMIQUE</legend>
-                                               <textarea name="businessmodel" id="" cols="30" rows="10"></textarea>
+                                               <textarea name="businessmodel" id="businessmodel" cols="30" rows="10"></textarea>
 
 
 
@@ -220,268 +231,245 @@
                                     </div>
 
                                     <div class="setup-content" id="step-5">
+                                        <div class="card">
+                                            <div class="card-header  d-flex p-0">
+                                                <h4 class="card-title p-3">DIAGNOSTIC FINANCIER</h4>
+                                                    <ul style="margin-left: auto" class="nav nav-pills ml-auto p-2" id="objTabs" role="tablist">
+                                                         <li role="presentation" class="nav-item">
+                                                             <a class="nav-link active" href="#n1" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> <?= date('Y') - 1 ?></a>
+                                                         </li>
 
-                                        <div class="">
-                                            <fieldset>
-                                                <legend>DIAGNOSTIC FINANCIER</legend>
-                                                <div class="">
-                                                    <div class="row">
+                                                         <li role="presentation" class="nav-item">
+                                                             <a class="nav-link" href="#n2" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> <?= date('Y') - 2 ?></a>
+                                                         </li>
+                                                         <li role="presentation" class="nav-item">
+                                                             <a class="nav-link " href="#n3" role="tab" id="tab3" data-toggle="tab" aria-controls="n3" aria-expanded="false"><span class=""></span> <?= date('Y') - 3 ?></a>
+                                                         </li>
 
-                                                        <div class="col-md-2 col-sm-12">
-                                                            <div>
-                                                                <div class="form-group">
-                                                                    <label for="nbsim">PLAGE DES SAISIES</label>
-                                                                    <input  class="form-control" type="text" id="nbsim" value="5"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-7 col-md-offset-3 col-sm-12">
-                                                            <ul class="nav nav-tabs pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                                                <li role="presentation" class="active">
-                                                                    <a href="#n1" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> <?= date('Y') - 1 ?></a>
-                                                                </li>
+                                                    </ul>
+                                            </div>
 
-                                                                <li role="presentation" class="">
-                                                                    <a href="#n2" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> <?= date('Y') - 2 ?></a>
-                                                                </li>
-                                                                <li role="presentation" class="">
-                                                                    <a href="#n3" role="tab" id="tab3" data-toggle="tab" aria-controls="n3" aria-expanded="false"><span class=""></span> <?= date('Y') - 3 ?></a>
-                                                                </li>
-                                                                <li role="presentation" class="">
-                                                                    <a href="#n4" role="tab" id="tab4" data-toggle="tab" aria-controls="n4" aria-expanded="false"><span class=""></span> <?= date('Y') - 4 ?></a>
-                                                                </li>
-
-                                                                <li role="presentation" class="">
-                                                                    <a href="#n5" role="tab" id="tab5" data-toggle="tab" aria-controls="n5" aria-expanded="false"><span class=""></span> <?= date('Y') - 5 ?></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
+                                             <div class="df card-body" id="df">
                                                     <div class="tab-content" id="myTabContent">
 
-                                                    <div class="tab-pane fade active in" role="tabpanel" id="n1" aria-labelledby="tab1">
+                                                    <div class="tab-pane active " role="tabpanel" id="n1" aria-labelledby="tab1">
 
-                                                        <fieldset>
+                                                        <fieldset id="compte1" class="cr">
                                                             <legend>COMPTE DE RESULTAT</legend>
-                                                             <div class="section">
+                                                              <div class="section">
 
-                                                                <div class="row">
-                                                                    <div class="col-md-4">
-                                                                        <div class="form-group">
-                                                                            <label for="ca1">CHIFFRE D'AFFAIRE</label>
-                                                                            <input type="number" id="ca1" class="form-control"/>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="cv1">CHARGES VARIABLES </label>
-                                                                            <input type="number" id="cv1" class="form-control"/>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="cf1">CHARGES FIXES</label>
-                                                                            <input type="number" id="cf1" class="form-control"/>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <div class="form-group">
-                                                                            <label for="taxes1">IMPOTS ET TAXES</label>
-                                                                            <input type="number" id="taxes1" class="form-control"/>
-                                                                        </div>
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="ca">CHIFFRE D'AFFAIRE</label>
+                                                                        <input type="number" id="ca" data-input="ca" class="form-control"/>
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="pi1">PRODUCTION IMMOBILISEE</label>
-                                                                            <input type="number" id="pi1" class="form-control"/>
-                                                                        </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="cv">CHARGES VARIABLES </label>
+                                                                        <input type="number" id="cv" data-input="cv" class="form-control"/>
                                                                     </div>
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="ps1">PRODUCTION STOCKEE</label>
-                                                                            <input type="number" id="ps1" class="form-control"/>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="sp1">SUBVENTION D'EXPLOITATION</label>
-                                                                            <input type="number" id="sp1" class="form-control"/>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="ape1">AUTRES PRODUITS D'EXPLOITATION</label>
-                                                                            <input type="number" id="ape1" class="form-control"/>
-                                                                        </div>
-                                                                    </div>
-
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="pf1">PRODUIT FINANCIER</label>
-                                                                            <input type="number" id="pf1" class="form-control"/>
-                                                                        </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="cf">CHARGES FIXES</label>
+                                                                        <input type="number" id="cf" data-input="cf" class="form-control"/>
                                                                     </div>
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="cfi1">CHARGES FINANCIERES</label>
-                                                                            <input type="number" id="cfi1" class="form-control"/>
-                                                                        </div>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <div class="form-group">
+                                                                        <label for="taxes">IMPOTS ET TAXES</label>
+                                                                        <input type="number" id="taxes" data-input="taxes" class="form-control"/>
                                                                     </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="pe1">PRODUIT EXCEPTIONNEL</label>
-                                                                            <input type="number" id="pe1" class="form-control"/>
-                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="pi">PRODUCTION IMMOBILISEE</label>
+                                                                        <input type="number" id="pi" data-input="pi" class="form-control"/>
                                                                     </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="ce1">CHARGES EXCEPTIONNELLES</label>
-                                                                            <input type="number" id="ce1" class="form-control"/>
-                                                                        </div>
-                                                                    </div>
-
                                                                 </div>
 
-                                                                <div class="row">
-                                                                    <div class="col-md-4">
-                                                                        <div class="form-group">
-                                                                            <label for="dap1">DOTATIONS AUX AMORTISSEMENTS ET PROVISIONS</label>
-                                                                            <input type="number" id="dap1" class="form-control"/>
-                                                                        </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="ps">PRODUCTION STOCKEE</label>
+                                                                        <input type="number" id="ps" data-input="ps" class="form-control"/>
                                                                     </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="salaires1">SALAIRES</label>
-                                                                            <input type="number" id="salaires1" class="form-control"/>
-                                                                        </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="sp">SUBVENTION D'EXPLOITATION</label>
+                                                                        <input type="number" id="sp" data-input="sp" class="form-control"/>
                                                                     </div>
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label for="participations1">PARTICIPATION DES TRAVAILLEURS</label>
-                                                                            <input type="number" id="participations1" class="form-control"/>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="col-md-2">
-                                                                        <div class="form-group">
-                                                                            <label for="impots1">IMPOTS</label>
-                                                                            <input type="number" id="impots1" class="form-control"/>
-                                                                        </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="ape">AUTRES PRODUITS D'EXPLOITATION</label>
+                                                                        <input type="number" id="ape" data-input="ape" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
                                                             </div>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="pf">PRODUIT FINANCIER</label>
+                                                                        <input type="number" id="pf" data-input="pf" class="form-control"/>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="cfi">CHARGES FINANCIERES</label>
+                                                                        <input type="number" id="cfi" data-input="cfi" class="form-control"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="pe">PRODUIT EXCEPTIONNEL</label>
+                                                                        <input type="number" id="pe" data-input="pe" class="form-control"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="ce">CHARGES EXCEPTIONNELLES</label>
+                                                                        <input type="number" id="ce" data-input="ce" class="form-control"/>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="dap">DAP</label>
+                                                                        <input type="number" id="dap" data-input="dap" class="form-control"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="salaires">SALAIRES</label>
+                                                                        <input type="number" id="salaires" data-input="salaires" class="form-control"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="participations">PARTICIPATION DES TRAVAILLEURS</label>
+                                                                        <input type="number" id="participations" data-input="participations" class="form-control"/>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-2">
+                                                                    <div class="form-group">
+                                                                        <label for="impots">IMPOTS</label>
+                                                                        <input type="number" id="impots" data-input="impots" class="form-control"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         </fieldset>
 
                                                         <!--  SAISIE DU BILAN   -->
 
-                                                         <fieldset>
+                                                         <fieldset id="bilan1" class="bilan">
                                                             <legend>BILAN</legend>
                                                             <div class="row">
                                                                 <div class="col-md-3 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="ress_durable1">RESSOURCES DURABLES</label>
-                                                                        <input type="number" class="form-control" id="ress_durable1"/>
+                                                                        <label for="ress_durable">RESSOURCES DURABLES</label>
+                                                                        <input type="number" class="form-control" id="ress_durable" data-input="ress_durable"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="actifs_immo1">EMPLOIS DURABLES</label>
-                                                                        <input type="number" class="form-control" id="actifs_immo1"/>
+                                                                        <label for="actifs_immo">EMPLOIS DURABLES</label>
+                                                                        <input type="number" class="form-control" id="actifs_immo" data-input="actifs_immo"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="creances1">CREANCES</label>
-                                                                        <input type="number" class="form-control" id="creances1"/>
+                                                                        <label for="creances">CREANCES</label>
+                                                                        <input type="number" class="form-control" id="creances" data-input="creances"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="dettes1">DETTES</label>
-                                                                        <input type="number" class="form-control" id="dettes1"/>
+                                                                        <label for="dettes">DETTES</label>
+                                                                        <input type="number" class="form-control" id="dettes" data-input="dettes"/>
                                                                     </div>
                                                                 </div>
 
 
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="stocks1">STOCK</label>
-                                                                        <input type="number" class="form-control" id="stocks1"/>
+                                                                        <label for="stocks">STOCK</label>
+                                                                        <input type="number" class="form-control" id="stocks" data-input="stocks"/>
                                                                     </div>
                                                                 </div>
 
                                                             </div>
                                                         </fieldset>
-
-
-
                                                     </div>
 
                                                     <div class="tab-pane fade" role="tabpanel" id="n2" aria-labelledby="tab2">
 
-                                                        <fieldset>
+                                                        <fieldset id="compte2" class="cr">
                                                             <legend>COMPTE DE RESULTAT</legend>
-                                                            <div class="section">
+                                                             <div class="section">
 
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        <label for="ca2">CHIFFRE D'AFFAIRE</label>
-                                                                        <input type="number" id="ca2" class="form-control"/>
+                                                                        <label for="ca">CHIFFRE D'AFFAIRE</label>
+                                                                        <input type="number" id="ca" data-input="ca" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="cv2">CHARGES VARIABLES </label>
-                                                                        <input type="number" id="cv2" class="form-control"/>
+                                                                        <label for="cv">CHARGES VARIABLES </label>
+                                                                        <input type="number" id="cv" data-input="cv" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="cf2">CHARGES FIXES</label>
-                                                                        <input type="number" id="cf2" class="form-control"/>
+                                                                        <label for="cf">CHARGES FIXES</label>
+                                                                        <input type="number" id="cf" data-input="cf" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     <div class="form-group">
-                                                                        <label for="taxes2">IMPOTS ET TAXES</label>
-                                                                        <input type="number" id="taxes2" class="form-control"/>
+                                                                        <label for="taxes">IMPOTS ET TAXES</label>
+                                                                        <input type="number" id="taxes" data-input="taxes" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="pi2">PRODUCTION IMMOBILISEE</label>
-                                                                        <input type="number" id="pi2" class="form-control"/>
+                                                                        <label for="pi">PRODUCTION IMMOBILISEE</label>
+                                                                        <input type="number" id="pi" data-input="pi" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="ps2">PRODUCTION STOCKEE</label>
-                                                                        <input type="number" id="ps2" class="form-control"/>
+                                                                        <label for="ps">PRODUCTION STOCKEE</label>
+                                                                        <input type="number" id="ps" data-input="ps" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="sp2">SUBVENTION D'EXPLOITATION</label>
-                                                                        <input type="number" id="sp2" class="form-control"/>
+                                                                        <label for="sp">SUBVENTION D'EXPLOITATION</label>
+                                                                        <input type="number" id="sp" data-input="sp" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="ape2">AUTRES PRODUITS D'EXPLOITATION</label>
-                                                                        <input type="number" id="ape2" class="form-control"/>
+                                                                        <label for="ape">AUTRES PRODUITS D'EXPLOITATION</label>
+                                                                        <input type="number" id="ape" data-input="ape" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
@@ -489,27 +477,27 @@
                                                             <div class="row">
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="pf2">PRODUIT FINANCIER</label>
-                                                                        <input type="number" id="pf2" class="form-control"/>
+                                                                        <label for="pf">PRODUIT FINANCIER</label>
+                                                                        <input type="number" id="pf" data-input="pf" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="cfi2">CHARGES FINANCIERES</label>
-                                                                        <input type="number" id="cfi2" class="form-control"/>
+                                                                        <label for="cfi">CHARGES FINANCIERES</label>
+                                                                        <input type="number" id="cfi" data-input="cfi" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="pe2">PRODUIT EXCEPTIONNEL</label>
-                                                                        <input type="number" id="pe2" class="form-control"/>
+                                                                        <label for="pe">PRODUIT EXCEPTIONNEL</label>
+                                                                        <input type="number" id="pe" data-input="pe" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="ce2">CHARGES EXCEPTIONNELLES</label>
-                                                                        <input type="number" id="ce2" class="form-control"/>
+                                                                        <label for="ce">CHARGES EXCEPTIONNELLES</label>
+                                                                        <input type="number" id="ce" data-input="ce" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
@@ -518,27 +506,27 @@
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        <label for="dap2">DOTATIONS AUX AMORTISSEMENTS ET PROVISIONS</label>
-                                                                        <input type="number" id="dap2" class="form-control"/>
+                                                                        <label for="dap">DAP</label>
+                                                                        <input type="number" id="dap" data-input="dap" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="salaires2">SALAIRES</label>
-                                                                        <input type="number" id="salaires2" class="form-control"/>
+                                                                        <label for="salaires">SALAIRES</label>
+                                                                        <input type="number" id="salaires" data-input="salaires" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="participations2">PARTICIPATION DES TRAVAILLEURS</label>
-                                                                        <input type="number" id="participations2" class="form-control"/>
+                                                                        <label for="participations">PARTICIPATION DES TRAVAILLEURS</label>
+                                                                        <input type="number" id="participations" data-input="participations" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-2">
                                                                     <div class="form-group">
-                                                                        <label for="impots2">IMPOTS</label>
-                                                                        <input type="number" id="impots2" class="form-control"/>
+                                                                        <label for="impots">IMPOTS</label>
+                                                                        <input type="number" id="impots" data-input="impots" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -547,40 +535,40 @@
                                                         </fieldset>
                                                          <!--  SAISIE DU BILAN   -->
 
-                                                         <fieldset>
+                                                         <fieldset id="bilan2" class="bilan">
                                                             <legend>BILAN</legend>
                                                             <div class="row">
                                                                 <div class="col-md-3 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="ress_durable2">RESSOURCES DURABLES</label>
-                                                                        <input type="number" class="form-control" id="ress_durable2"/>
+                                                                        <label for="ress_durable">RESSOURCES DURABLES</label>
+                                                                        <input type="number" class="form-control" id="ress_durable" data-input="ress_durable"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="actifs_immo2">EMPLOIS DURABLES</label>
-                                                                        <input type="number" class="form-control" id="actifs_immo2"/>
+                                                                        <label for="actifs_immo">EMPLOIS DURABLES</label>
+                                                                        <input type="number" class="form-control" id="actifs_immo" data-input="actifs_immo"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="creances2">CREANCES</label>
-                                                                        <input type="number" class="form-control" id="creances2"/>
+                                                                        <label for="creances">CREANCES</label>
+                                                                        <input type="number" class="form-control" id="creances" data-input="creances"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="dettes2">DETTES</label>
-                                                                        <input type="number" class="form-control" id="dettes2"/>
+                                                                        <label for="dettes">DETTES</label>
+                                                                        <input type="number" class="form-control" id="dettes" data-input="dettes"/>
                                                                     </div>
                                                                 </div>
 
 
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="stocks2">STOCK</label>
-                                                                        <input type="number" class="form-control" id="stocks2"/>
+                                                                        <label for="stocks">STOCK</label>
+                                                                        <input type="number" class="form-control" id="stocks" data-input="stocks"/>
                                                                     </div>
                                                                 </div>
 
@@ -589,60 +577,60 @@
                                                     </div>
                                                     <div class="tab-pane fade" role="tabpanel" id="n3" aria-labelledby="tab3">
 
-                                                        <fieldset>
+                                                        <fieldset id="compte3" class="cr">
                                                             <legend>COMPTE DE RESULTAT</legend>
                                                             <div class="section">
 
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        <label for="ca3">CHIFFRE D'AFFAIRE</label>
-                                                                        <input type="number" id="ca3" class="form-control"/>
+                                                                        <label for="ca">CHIFFRE D'AFFAIRE</label>
+                                                                        <input type="number" id="ca" data-input="ca" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="cv3">CHARGES VARIABLES </label>
-                                                                        <input type="number" id="cv3" class="form-control"/>
+                                                                        <label for="cv">CHARGES VARIABLES </label>
+                                                                        <input type="number" id="cv" data-input="cv" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="cf3">CHARGES FIXES</label>
-                                                                        <input type="number" id="cf3" class="form-control"/>
+                                                                        <label for="cf">CHARGES FIXES</label>
+                                                                        <input type="number" id="cf" data-input="cf" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     <div class="form-group">
-                                                                        <label for="taxes3">IMPOTS ET TAXES</label>
-                                                                        <input type="number" id="taxes3" class="form-control"/>
+                                                                        <label for="taxes">IMPOTS ET TAXES</label>
+                                                                        <input type="number" id="taxes" data-input="taxes" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="pi3">PRODUCTION IMMOBILISEE</label>
-                                                                        <input type="number" id="pi3" class="form-control"/>
+                                                                        <label for="pi">PRODUCTION IMMOBILISEE</label>
+                                                                        <input type="number" id="pi" data-input="pi" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="ps3">PRODUCTION STOCKEE</label>
-                                                                        <input type="number" id="ps3" class="form-control"/>
+                                                                        <label for="ps">PRODUCTION STOCKEE</label>
+                                                                        <input type="number" id="ps" data-input="ps" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="sp3">SUBVENTION D'EXPLOITATION</label>
-                                                                        <input type="number" id="sp3" class="form-control"/>
+                                                                        <label for="sp">SUBVENTION D'EXPLOITATION</label>
+                                                                        <input type="number" id="sp" data-input="sp" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="ape3">AUTRES PRODUITS D'EXPLOITATION</label>
-                                                                        <input type="number" id="ape3" class="form-control"/>
+                                                                        <label for="ape">AUTRES PRODUITS D'EXPLOITATION</label>
+                                                                        <input type="number" id="ape" data-input="ape" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
@@ -650,27 +638,27 @@
                                                             <div class="row">
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="pf3">PRODUIT FINANCIER</label>
-                                                                        <input type="number" id="pf3" class="form-control"/>
+                                                                        <label for="pf">PRODUIT FINANCIER</label>
+                                                                        <input type="number" id="pf" data-input="pf" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="cfi3">CHARGES FINANCIERES</label>
-                                                                        <input type="number" id="cfi3" class="form-control"/>
+                                                                        <label for="cfi">CHARGES FINANCIERES</label>
+                                                                        <input type="number" id="cfi" data-input="cfi" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="pe3">PRODUIT EXCEPTIONNEL</label>
-                                                                        <input type="number" id="pe3" class="form-control"/>
+                                                                        <label for="pe">PRODUIT EXCEPTIONNEL</label>
+                                                                        <input type="number" id="pe" data-input="pe" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="ce3">CHARGES EXCEPTIONNELLES</label>
-                                                                        <input type="number" id="ce3" class="form-control"/>
+                                                                        <label for="ce">CHARGES EXCEPTIONNELLES</label>
+                                                                        <input type="number" id="ce" data-input="ce" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
@@ -679,27 +667,27 @@
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
-                                                                        <label for="dap3">DOTATIONS AUX AMORTISSEMENTS ET PROVISIONS</label>
-                                                                        <input type="number" id="dap3" class="form-control"/>
+                                                                        <label for="dap">DAP</label>
+                                                                        <input type="number" id="dap" data-input="dap" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="salaires3">SALAIRES</label>
-                                                                        <input type="number" id="salaires3" class="form-control"/>
+                                                                        <label for="salaires">SALAIRES</label>
+                                                                        <input type="number" id="salaires" data-input="salaires" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
-                                                                        <label for="participations3">PARTICIPATION DES TRAVAILLEURS</label>
-                                                                        <input type="number" id="participations3" class="form-control"/>
+                                                                        <label for="participations">PARTICIPATION DES TRAVAILLEURS</label>
+                                                                        <input type="number" id="participations" data-input="participations" class="form-control"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-2">
                                                                     <div class="form-group">
-                                                                        <label for="impots3">IMPOTS</label>
-                                                                        <input type="number" id="impots3" class="form-control"/>
+                                                                        <label for="impots">IMPOTS</label>
+                                                                        <input type="number" id="impots" data-input="impots" class="form-control"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -708,40 +696,40 @@
                                                         </fieldset>
                                                         <!--  SAISIE DU BILAN   -->
 
-                                                         <fieldset>
+                                                         <fieldset id="bilan3" class="bilan">
                                                             <legend>BILAN</legend>
                                                             <div class="row">
                                                                 <div class="col-md-3 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="ress_durable3">RESSOURCES DURABLES</label>
-                                                                        <input type="number" class="form-control" id="ress_durable3"/>
+                                                                        <label for="ress_durable">RESSOURCES DURABLES</label>
+                                                                        <input type="number" class="form-control" id="ress_durable" data-input="ress_durable"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="actifs_immo3">EMPLOIS DURABLES</label>
-                                                                        <input type="number" class="form-control" id="actifs_immo3"/>
+                                                                        <label for="actifs_immo">EMPLOIS DURABLES</label>
+                                                                        <input type="number" class="form-control" id="actifs_immo" data-input="actifs_immo"/>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="creances3">CREANCES</label>
-                                                                        <input type="number" class="form-control" id="creances3"/>
+                                                                        <label for="creances">CREANCES</label>
+                                                                        <input type="number" class="form-control" id="creances" data-input="creances"/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="dettes3">DETTES</label>
-                                                                        <input type="number" class="form-control" id="dettes3"/>
+                                                                        <label for="dettes">DETTES</label>
+                                                                        <input type="number" class="form-control" id="dettes" data-input="dettes"/>
                                                                     </div>
                                                                 </div>
 
 
                                                                 <div class="col-md-2 col-sm-12">
                                                                     <div class="form-group">
-                                                                        <label for="stocks3">STOCK</label>
-                                                                        <input type="number" class="form-control" id="stocks3"/>
+                                                                        <label for="stocks">STOCK</label>
+                                                                        <input type="number" class="form-control" id="stocks" data-input="stocks"/>
                                                                     </div>
                                                                 </div>
 
@@ -750,343 +738,19 @@
 
                                                     </div>
 
-                                                    <div class="tab-pane fade" role="tabpanel" id="n4" aria-labelledby="tab4">
-                                                        <fieldset>
-                                                            <legend>COMPTE DE RESULTAT</legend>
-                                                            <div class="section">
-
-                                                            <div class="row">
-                                                                <div class="col-md-4">
-                                                                    <div class="form-group">
-                                                                        <label for="ca4">CHIFFRE D'AFFAIRE</label>
-                                                                        <input type="number" id="ca4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="cv4">CHARGES VARIABLES </label>
-                                                                        <input type="number" id="cv4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="cf4">CHARGES FIXES</label>
-                                                                        <input type="number" id="cf4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label for="taxes4">IMPOTS ET TAXES</label>
-                                                                        <input type="number" id="taxes4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="pi4">PRODUCTION IMMOBILISEE</label>
-                                                                        <input type="number" id="pi4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="ps4">PRODUCTION STOCKEE</label>
-                                                                        <input type="number" id="ps4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="sp4">SUBVENTION D'EXPLOITATION</label>
-                                                                        <input type="number" id="sp4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="ape4">AUTRES PRODUITS D'EXPLOITATION</label>
-                                                                        <input type="number" id="ape4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="pf4">PRODUIT FINANCIER</label>
-                                                                        <input type="number" id="pf4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="cfi4">CHARGES FINANCIERES</label>
-                                                                        <input type="number" id="cfi4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="pe4">PRODUIT EXCEPTIONNEL</label>
-                                                                        <input type="number" id="pe4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="ce4">CHARGES EXCEPTIONNELLES</label>
-                                                                        <input type="number" id="ce4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-
-                                                            <div class="row">
-                                                                <div class="col-md-4">
-                                                                    <div class="form-group">
-                                                                        <label for="dap4">DOTATIONS AUX AMORTISSEMENTS ET PROVISIONS</label>
-                                                                        <input type="number" id="dap4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="salaires4">SALAIRES</label>
-                                                                        <input type="number" id="salaires4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="participations4">PARTICIPATION DES TRAVAILLEURS</label>
-                                                                        <input type="number" id="participations4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label for="impots4">IMPOTS</label>
-                                                                        <input type="number" id="impots4" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        </fieldset>
-                                                         <!--  SAISIE DU BILAN   -->
-
-                                                         <fieldset>
-                                                            <legend>BILAN</legend>
-                                                            <div class="row">
-                                                                <div class="col-md-3 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="ress_durable4">RESSOURCES DURABLES</label>
-                                                                        <input type="number" class="form-control" id="ress_durable4"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="actifs_immo4">EMPLOIS DURABLES</label>
-                                                                        <input type="number" class="form-control" id="actifs_immo4"/>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-2 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="creances4">CREANCES</label>
-                                                                        <input type="number" class="form-control" id="creances4"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="dettes4">DETTES</label>
-                                                                        <input type="number" class="form-control" id="dettes4"/>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-md-2 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="stocks4">STOCK</label>
-                                                                        <input type="number" class="form-control" id="stocks4"/>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </fieldset>
-                                                    </div>
-
-                                                    <div class="tab-pane fade" role="tabpanel" id="n5" aria-labelledby="tab5">
-
-
-                                                        <fieldset>
-                                                            <legend>COMPTE DE RESULTAT</legend>
-                                                            <div class="section">
-
-                                                            <div class="row">
-                                                                <div class="col-md-4">
-                                                                    <div class="form-group">
-                                                                        <label for="ca5">CHIFFRE D'AFFAIRE</label>
-                                                                        <input type="number" id="ca5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="cv5">CHARGES VARIABLES </label>
-                                                                        <input type="number" id="cv5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="cf5">CHARGES FIXES</label>
-                                                                        <input type="number" id="cf5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label for="taxes5">IMPOTS ET TAXES</label>
-                                                                        <input type="number" id="taxes5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="pi5">PRODUCTION IMMOBILISEE</label>
-                                                                        <input type="number" id="pi5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="ps5">PRODUCTION STOCKEE</label>
-                                                                        <input type="number" id="ps5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="sp5">SUBVENTION D'EXPLOITATION</label>
-                                                                        <input type="number" id="sp5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="ape5">AUTRES PRODUITS D'EXPLOITATION</label>
-                                                                        <input type="number" id="ape5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="pf5">PRODUIT FINANCIER</label>
-                                                                        <input type="number" id="pf5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="cfi5">CHARGES FINANCIERES</label>
-                                                                        <input type="number" id="cfi5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="pe5">PRODUIT EXCEPTIONNEL</label>
-                                                                        <input type="number" id="pe5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="ce5">CHARGES EXCEPTIONNELLES</label>
-                                                                        <input type="number" id="ce5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-
-                                                            <div class="row">
-                                                                <div class="col-md-4">
-                                                                    <div class="form-group">
-                                                                        <label for="dap5">DOTATIONS AUX AMORTISSEMENTS ET PROVISIONS</label>
-                                                                        <input type="number" id="dap5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="salaires5">SALAIRES</label>
-                                                                        <input type="number" id="salaires5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group">
-                                                                        <label for="participations5">PARTICIPATION DES TRAVAILLEURS</label>
-                                                                        <input type="number" id="participations5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <label for="impots5">IMPOTS</label>
-                                                                        <input type="number" id="impots5" class="form-control"/>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        </fieldset>
-                                                        <!--  SAISIE DU BILAN   -->
-
-                                                         <fieldset>
-                                                            <legend>BILAN</legend>
-                                                            <div class="row">
-                                                                <div class="col-md-3 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="ress_durable5">RESSOURCES DURABLES</label>
-                                                                        <input type="number" class="form-control" id="ress_durable5"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="actifs_immo5">EMPLOIS DURABLES</label>
-                                                                        <input type="number" class="form-control" id="actifs_immo5"/>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-2 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="creances5">CREANCES</label>
-                                                                        <input type="number" class="form-control" id="creances5"/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="dettes5">DETTES</label>
-                                                                        <input type="number" class="form-control" id="dettes5"/>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-md-2 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="stocks5">STOCK</label>
-                                                                        <input type="number" class="form-control" id="stocks5"/>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </fieldset>
 
                                                     </div>
-                                                    </div>
 
-                                                    </div>
                                                     <div class="btn-div card-footer text-center">
                                                         <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
-                                                       <button class="btn btn-success btn-sm"><i class="fa fa-save"></i> ENREGISTRER</button>
+                                                       <button id="btn-save" class="btn btn-success btn-sm"><i class="fa fa-save"></i> ENREGISTRER</button>
                                                     </div>
                                                 </div>
-                                            </fieldset>
+
                                         </div>
                                     </div>
                                 </form>
-                            </div>
-                        </div>
+
                 </form>
             </div>
         </div>
@@ -1177,10 +841,9 @@
         });
       </script>
 
+
+
     <script>
-
-
-         var orm = 'http://localhost/ormsys/api/';
 
                 $(document).ready(function() {
 
@@ -1252,7 +915,7 @@
                     dataType:'Json',
                     success: function(qt){
 
-                        var html='<div id="sect'+idp+'"'+' style="padding: 15px; border: solid 0.6px #cccccc; border-radius: 4px"> <h6 class="page-header" style="font-weight: 700">'+$("#produit_id option:selected").text()+'</h6><div class="">';
+                        var html='<div id="sect'+idp+'"'+'style="padding: 15px; border: solid 0.6px #cccccc; border-radius: 4px"> <h6 class="page-header" style="font-weight: 700">'+$("#produit_id option:selected").text()+'</h6><div class="">';
                         var qt =Object.entries(qt);
 
                         for(var i=0; i<qt.length;i++){
@@ -1268,7 +931,7 @@
                                 console.log(prs[j].question);
                                 //console()
                                 if(prs[j].question!=null){
-                                    html+='<div class="col-lg-4 col-md-4 col-sm-12"><h6>'+prs[j].question.name+'</h6><div class="choices">';
+                                    html+='<div class="col-lg-4 col-md-4 col-sm-12"><h6 style="font-weight: 900">'+prs[j].question.name+'</h6><div class="choices">';
                                     var choices = prs[j].question.choices;
                                     // console.log(choices);
                                     html+='<ul class="list-unstyled">';
@@ -1300,62 +963,74 @@
 
 
 
-        // Gestion de la plage de saisies des etats financiers
-        $('#nbsim').keyup(function(e){
-            var val = parseInt($(this).val());
-            if(val<3){
-               $(this).val(3);
-            }if(val>5){
-                $(this).val(5);
-            }
 
-            val = parseInt($(this).val());
-
-            if(val==3){
-                $('#tab4').parent().css({
-                    display:'none'
-                });
-                $('#tab5').parent().css({
-                    display:'none'
-                });
-            }
-
-            if(val==4){
-                $('#tab4').parent().css({
-                    display:'block'
-                });
-                $('#tab5').parent().css({
-                    display:'none'
-                });
-
-            }
-
-            if(val==5){
-                $('#tab4').parent().css({
-                    display:'block'
-                });
-                $('#tab5').parent().css({
-                    display:'block'
-                });
-            }
-        });
 
         $('#btn-save').click(function(e){
 
             e.preventDefault();
 
-                var inputs = document.getElementsByTagName('input');
+                var init = document.getElementById('step-1');
+
+                var inputs = init.getElementsByTagName('input');
                 var values = {};
 
                 for (var i=0; i < inputs.length; i++) {
                     var id = inputs[i].getAttribute('id');
                     values[id] = $('#' + id).val();
+
+                }
+                values['type_id'] = $('#tprojet_id').val();
+                values['ville_id'] = $('#ville_id').val();
+
+                var bm = $('#businessmodel').val();
+
+                var compte1 = document.getElementById('compte1');
+
+                var cr1inputs = compte1.getElementsByTagName('input');
+                var cr1 = {};
+                for (var i=0; i < cr1inputs.length; i++) {
+                    var id = cr1inputs[i].getAttribute('id');
+                    cr1[id] = $('#compte1 #' + id).val();
+                }
+
+                var compte2 = document.getElementById('compte2');
+                var cr2inputs = compte2.getElementsByTagName('input');
+                var cr2 = {};
+                for (var i=0; i < cr2inputs.length; i++) {
+                    var id = cr2inputs[i].getAttribute('id');
+                    cr2[id] = $('#compte2 #' + id).val();
+                }
+                var compte3 = document.getElementById('compte3');
+                var cr3inputs = compte3.getElementsByTagName('input');
+                var cr3 = {};
+                for (var i=0; i < cr3inputs.length; i++) {
+                    var id = cr3inputs[i].getAttribute('id');
+                    cr3[id] = $('#compte3 #' + id).val();
+                }
+                var bilan1 = document.getElementById('bilan1');
+                var bil1inputs = bilan1.getElementsByTagName('input');
+                var bil1 = {};
+                for (var i=0; i < bil1inputs.length; i++) {
+                    var id = bil1inputs[i].getAttribute('id');
+                    bil1[id] = $('#bilan1 #' + id).val();
+                }
+                var bilan2 = document.getElementById('bilan2');
+                var bil2inputs = bilan2.getElementsByTagName('input');
+                var bil2 = {};
+                for (var i=0; i < bil2inputs.length; i++) {
+                    var id = bil2inputs[i].getAttribute('id');
+                    bil2[id] = $('#bilan2 #' + id).val();
+                }
+                var bilan3 = document.getElementById('bilan3');
+                var bil3inputs = bilan3.getElementsByTagName('input');
+                var bil3 = {};
+                for (var i=0; i < bil1inputs.length; i++) {
+                    var id = bil3inputs[i].getAttribute('id');
+                    bil3[id] = $('#bilan3 #' + id).val();
                 }
 
                 var url = '/owner/dossier/initJson';
-                var redirectUrl = '<?= $this->Url->build(['controller'=>'Dossiers','action'=>'view']) ?>';
-
-
+                var redirectUrl = '/owner/dossiers';
 
                 var reponses = [];
                 var produits=[];
@@ -1374,10 +1049,11 @@
                     url:url,
                     type:'Post',
                     dataType:'JSON',
-                    data:{_csrf:$('#csrf').val(), answers:reponses, dossier:values,produits:produits
+                    data:{_csrf:$('input[name="_token"]').val(), answers:reponses, dossier:values,produits:produits,bm:bm,bil1:bil1,bil2:bil2,bil3:bil3,
+                    compte1:cr1, compte2:cr2,compte3:cr3
                     },
                     beforeSend:function(xhr){
-                        xhr.setRequestHeader('X-CSRF-Token',$('#csrf').val());
+                        xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
                         $("#loadMe").modal({
                             backdrop: "static", //remove ability to close modal with click
                             keyboard: false, //remove option to close with keyboard
