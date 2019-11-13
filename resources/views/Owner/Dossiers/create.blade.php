@@ -1,8 +1,7 @@
 @extends('......layouts.owner')
 
-@section('page-title')
-MESSAGERIE
-@endsection
+@section('page-title','NOUVEAU CREATION D\'UN NOUVEAU DOSSIER')
+
 
 @section('content')
     <div class="container-fluid">
