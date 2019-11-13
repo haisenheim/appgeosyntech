@@ -1,5 +1,8 @@
 @extends('......layouts.owner')
 
+@section('page-title')
+MESSAGERIE
+@endsection
 
 @section('content')
 

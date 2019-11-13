@@ -104,8 +104,9 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div style="" class="">
-    <div style="height: 300px;" class="content-header bg-gradient-gray">
+    <div style="height: 300px; " class="content-header bg-gradient-success">
         <div>
+           <h1 style="margin-top: 30%; padding-bottom: 10px; border-bottom: 2px solid #FFFFFF;" class="page-header text-center">@yield('page-title')</h1>
              @yield('nav_actions')
         </div>
      </div>

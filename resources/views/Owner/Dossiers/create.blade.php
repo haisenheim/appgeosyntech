@@ -1,5 +1,9 @@
 @extends('......layouts.owner')
 
+@section('page-title')
+MESSAGERIE
+@endsection
+
 @section('content')
     <div class="container-fluid">
         <div class="card">
