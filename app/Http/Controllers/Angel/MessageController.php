@@ -77,7 +77,7 @@ class MessageController extends Controller
 	        Message::create($message);
 
             $request->session()->flash('success','votre message a été envoyé !!!');
-            return redirect('/angel/messages');
+            return redirect('/angel/mailbox');
 
 
     }
