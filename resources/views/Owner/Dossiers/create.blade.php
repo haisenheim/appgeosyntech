@@ -1,44 +1,44 @@
 @extends('......layouts.owner')
 
-@section('page-title')
-CREATION D\'UN NOUVEAU DE LEVEE DE FONDS
-@endsection
-
-
 @section('content')
     <div class="container-fluid">
         <div class="card">
             <div class="card-header p-20">
-                 <div class="stepwizard">
-                     <div class="stepwizard-row setup-panel">
-                         <div class="stepwizard-step">
-                             <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-                             <p>Informations generales</p>
-                         </div>
-                         <div class="stepwizard-step">
-                             <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                             <p>CONVENTION DE CONFIDENTIALITE</p>
-                         </div>
-                         <div class="stepwizard-step">
-                             <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                             <p>MODELE ECONOMIQUE</p>
-                         </div>
-                         <div class="stepwizard-step">
-                             <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-                             <p>ANALYSE DES RISQUES</p>
-                         </div>
-                         <div class="stepwizard-step">
-                              <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
-                              <p>DIAGNOSTIC FINANCIER</p>
-                         </div>
-
-                     </div>
-                 </div>
+                <h3 class=""> NOUVEAU DOSSIER</h3>
             </div>
             <div class="card-body">
                 <form enctype="multipart/form-data" class="form" action="{{route('owner.dossiers.store')}}" method="post">
-                            {{csrf_field()}}
+                    {{csrf_field()}}
 
+                    <div class="">
+                            <div class="stepwizard">
+                                <div class="stepwizard-row setup-panel">
+                                    <div class="stepwizard-step">
+                                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                        <p>Informations generales</p>
+                                    </div>
+                                    <div class="stepwizard-step">
+                                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                        <p>CONVENTION DE CONFIDENTIALITE</p>
+                                    </div>
+                                    <div class="stepwizard-step">
+                                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                        <p>MODELE ECONOMIQUE</p>
+                                    </div>
+                                    <div class="stepwizard-step">
+                                        <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                                        <p>ANALYSE DES RISQUES</p>
+                                    </div>
+                                    <div class="stepwizard-step">
+                                         <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                                         <p>DIAGNOSTIC FINANCIER</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="">
                                 <form role="form" action="" method="post">
 
                                     <div class="setup-content" id="step-1">
@@ -750,7 +750,8 @@ CREATION D\'UN NOUVEAU DE LEVEE DE FONDS
                                         </div>
                                     </div>
                                 </form>
-
+                            </div>
+                        </div>
                 </form>
             </div>
         </div>
