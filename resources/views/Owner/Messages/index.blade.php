@@ -115,7 +115,7 @@
 
 
                     <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/owner/mailbox/{{ $reception->token }}">{{ $reception->expediteur->name }}</a></td>
-                    <td class="mailbox-subject"><b>{{ $reception->investissent->projet->name }}</b> - {{ $reception->subject }}
+                    <td class="mailbox-subject"><b>{{ $reception->investissement->projet->name }}</b> - {{ $reception->subject }}
                     </td>
 
                     <td class="mailbox-date">{{ date_format($reception->created_at, 'd/m/Y H:i') }}</td>
