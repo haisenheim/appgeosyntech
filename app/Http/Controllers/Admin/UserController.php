@@ -8,6 +8,7 @@ use App\Models\Role;
 use App\Models\Ville;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -68,6 +69,7 @@ class UserController extends Controller
         $user->annee=date('Y');
         $user->male = $request['male']=='on'?1:0;
         $user->active = 1;
+	    $user->token = sha1(Auth::user()->id . date('Yhmdhis'));
 
 
         $user->save();
