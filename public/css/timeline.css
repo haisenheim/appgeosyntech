@@ -109,7 +109,7 @@ legend{
 
 .has-error input {
     border-radius: 5px;
-    border: red 1px sol;
+    border: red 1px solid;
 
 }
 
