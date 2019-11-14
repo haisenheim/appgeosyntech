@@ -60,14 +60,15 @@ class UserController extends Controller
         $user->phone = $request['phone'];
         $user->address = $request['address'];
         $user->email = $request['email'];
-        $user->pay_id = $request['pay_id'];
-        $user->role_id = $request['role_id'];
+        $user->pay_id = 1;
+       // $user->role_id = $request['role_id'];
         $user->password= Hash::make(($request['password']));
         $user->role_id =1;
         $user->moi_id=date('m');
         $user->annee=date('Y');
         $user->male = $request['male']=='on'?1:0;
         $user->active = 1;
+
 
         $user->save();
           $request->session()->flash('message','La ville a été correctement enregistrée !!!');
