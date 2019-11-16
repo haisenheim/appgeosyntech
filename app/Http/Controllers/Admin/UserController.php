@@ -71,6 +71,24 @@ class UserController extends Controller
         $user->active = 1;
 	    $user->token = sha1(Auth::user()->id . date('Yhmdhis'));
 
+	    if($request->imageUri){
+		    $file = $request->imageUri;
+		    $ext = $file->getClientOriginalExtension();
+		    $arr_ext = array('jpg','png','jpeg','gif');
+		    if(in_array($ext,$arr_ext)) {
+			    if (!file_exists(public_path('img') . '/users')) {
+				    mkdir(public_path('img') . '/users');
+			    }
+			    $token = sha1(Auth::user()->id. date('ydmhis'));
+			    if (file_exists(public_path('img') . '/users/' . $token . '.' . $ext)) {
+				    unlink(public_path('img') . '/users/' . $token . '.' . $ext);
+			    }
+			    $name = $token . '.' . $ext;
+			    $file->move(public_path('img/users'), $name);
+			    $user->imageUri = 'users/' . $name;
+		    }
+	    }
+
 
         $user->save();
           $request->session()->flash('message','La ville a été correctement enregistrée !!!');
