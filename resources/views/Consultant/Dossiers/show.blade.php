@@ -1159,6 +1159,11 @@
                     background-color: #FFF;
                     border-color: none;
                 }
+
+                .card.maximized-card {
+
+                            overflow-y: scroll;
+                        }
     </style>
 
 @endsection
