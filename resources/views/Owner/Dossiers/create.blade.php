@@ -148,7 +148,7 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                        <fieldset>
                                             <legend>VALIDATION DE LA CONVENTION DE CONFIDENTIALITE</legend>
 
-                                              <div style="margin: 20px auto; width: 600px; margin-bottom: 50px">
+                                              <div style="margin: 20px auto; width: 1000px; margin-bottom: 100px">
                                                     <h4 class="text-center page-header"> ACCORD DE CONFIDENTIALITE </h4>
 
                                                 ENTRE <br/>
@@ -281,7 +281,7 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
 
 
 
-                                                <div>
+                                                <div style="margin-bottom: 100px">
                                                     <div style="float: left; width: 300px; padding: 20px">
                                                         Pour OBAC
                                                     </div>
