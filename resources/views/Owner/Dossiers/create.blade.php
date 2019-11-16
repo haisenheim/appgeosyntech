@@ -68,23 +68,19 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
 
                                                          <div class="col-md-6 col-sm-12">
                                                              <div class="form-group">
-                                                                 <label class="control-label">CLASSE  PROJET (Variante)</label>
+                                                                 <label class="control-label">DEVISE</label>
                                                                  <select class="form-control" name="variante_id" id="variante_id">
-                                                                    @foreach($variantes as $p)
+                                                                    @foreach($devises as $p)
                                                                        <option value='{!! $p->id !!}'>{{$p->name}}</option>
                                                                     @endforeach
                                                                  </select>
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-6 col-sm-12">
-                                                             <div class="form-group">
-                                                                 <label class="control-label">TYPE DE FINANCEMENT</label>
-                                                                 <select class="form-control" name="tprojet_id" id="tprojet_id">
-                                                                    @foreach($tprojets as $p)
-                                                                       <option value='{!! $p->id !!}'>{{$p->name}}</option>
-                                                                    @endforeach
-                                                                 </select>
+                                                         <div class="col-md-3">
+                                                             <div class="form-group" style="margin-top: 25px;">
+                                                                 <label class="control-label">OVERTURE DU CAPITAL</label>
+                                                                 <input id="capital" name="capital"   type="checkbox" required="required" class="form-control">
                                                              </div>
                                                          </div>
 
@@ -99,12 +95,7 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-3">
-                                                             <div class="form-group" style="margin-top: 25px;">
-                                                                 <label class="control-label">OVERTURE DU CAPITAL</label>
-                                                                 <input id="capital" name="capital"  type="checkbox" required="required" class="">
-                                                             </div>
-                                                         </div>
+                                                         <
 
 
                                                      </div>

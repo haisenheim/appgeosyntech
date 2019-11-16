@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Owner;
 use App\Http\Controllers\Controller;
 use App\Models\Bilan;
 use App\Models\ChoicesProjet;
+use App\Models\Devise;
 use App\Models\Investissement;
 use App\Models\Moi;
 use App\Models\ProduitsProjet;
@@ -118,15 +119,12 @@ class DossierController extends Controller
      */
     public function create()
     {
-        //
-        $tprojets = Tprojet::all();
-        //$tinvestissements = Tinvestissement::all();
-        //$variantes = Variante::all();
-	    $villes = Ville::all();
 
-	    $variantes = Variante::all();
+	    $villes = Ville::all()->where('pay_id',Auth::user()->pay_id);
 
-        return view('/Owner/Dossiers/create')->with(compact('tprojets','villes','variantes'));
+	    $devises = Devise::all();
+
+        return view('/Owner/Dossiers/create')->with(compact('villes','devises'));
     }
 
 	/**
