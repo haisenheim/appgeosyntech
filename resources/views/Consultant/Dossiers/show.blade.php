@@ -416,8 +416,19 @@
                                         </div>
 
                                         <div class="tab-pane fade" role="tabpanel" id="risques" aria-labelledby="">
-                                             <table id="risques-tab" class="table table-condensed table-hover table-bordered">
-                                                                            <thead>
+                                        <div class="card">
+                                            <div class="card-header">
+
+                                            <div class="card-tools">
+                                              <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+                                              </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+
+                                            </div>
+                                            <div class="card-body">
+                                               <table id="risques-tab" class="table table-condensed table-hover table-bordered">
+                                                <thead>
                                                 <tr>
                                                     <th></th>
                                                     <th>Defaillances possibles</th>
@@ -433,9 +444,12 @@
                                                 <tbody>
                                                 </tbody>
                                                 </table>
-                                            <div style="width: 20%; margin:10px auto">
-                                                <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
+                                                <div style="width: 20%; margin:10px auto">
+                                                    <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
+                                                </div>
                                             </div>
+                                        </div>
+
                                         </div>
                                      </div>
                                </fieldset>
