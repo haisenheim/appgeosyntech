@@ -68,6 +68,7 @@ class CommercialController extends Controller
         $user->annee=date('Y');
 	    $user->creator_id = Auth::user()->id;
         $user->male = $request['male']=='on'?1:0;
+	    $user->token = sha1(Auth::user()->id . date('Yhmdhis'));
        // $user->senior = $request['senior']=='on'?1:0;
         $user->active = 1;
 	    if($request->imageUri){
