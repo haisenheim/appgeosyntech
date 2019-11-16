@@ -66,7 +66,7 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-6 col-sm-12">
+                                                         <div class="col-md-4 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">DEVISE</label>
                                                                  <select class="form-control" name="variante_id" id="variante_id">
@@ -77,14 +77,17 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                                              </div>
                                                          </div>
 
+
                                                          <div class="col-md-3">
                                                              <div class="form-group" style="margin-top: 25px;">
-                                                                 <label class="control-label">OVERTURE DU CAPITAL</label>
-                                                                 <input id="capital" name="capital"   type="checkbox" required="required" class="form-control">
+                                                                <div class="custom-control custom-checkbox">
+                                                                  <input class="custom-control-input" type="checkbox" id="capital" name="capital"  >
+                                                                  <label for="capital" class="custom-control-label">OVERTURE DU CAPITAL ?</label>
+                                                                </div>
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-6 col-sm-12">
+                                                         <div class="col-md-5 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">VILLE</label>
                                                                  <select class="form-control" name="ville_id" id="ville_id">
@@ -95,7 +98,7 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                                              </div>
                                                          </div>
 
-                                                         <
+
 
 
                                                      </div>
