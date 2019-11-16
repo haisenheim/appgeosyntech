@@ -148,7 +148,149 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                        <fieldset>
                                             <legend>VALIDATION DE LA CONVENTION DE CONFIDENTIALITE</legend>
 
-                                            <p>Mettre la convention de confientialite ici !!!</p>
+                                              <h4 class="text-center page-header"> ACCORD DE CONFIDENTIALITE </h4>
+
+                                                ENTRE <br/>
+                                                La société OPPORTUNITES DE BUSINESS EN AFRIQUE CENTRALE en sigle OBAC, Société à responsabilité limitée au capital de FCFA un million (1 000 000 ), immatriculée sous le numéro CG/BZV/13-B-5368, ayant son siège social au 1578 avenue des trois martyrs Brazzaville, représentée par Mr Philippe BOUITI VIAUDO en sa qualité de Directeur Associé du cabinet OBAC
+                                                Ci-après dénommée  « OBAC »
+                                                D’une part <br/>
+                                                Et <br/>
+
+                                                LA SOCIETE , (forme juridique) au capital de FCFA (montant), immatriculée au Registre du Commerce et du Crédit Mobilier de (Brazzavile / Pointe Noire) sous le numéro (numéro), ayant son siège social à sis (adresse), (ville) (Pays), représentée par Monsieur (Prénom, Nom) en sa qualité de (titre),
+
+                                                Ci-après dénommée « XXX», <br/>
+                                                D’autre part <br/>
+
+                                                OBAC et XXX, ci-après désignées séparément « la Partie » ou collectivement « les Parties », <br/>
+
+                                                ETANT PREALABLEMENT EXPOSE QUE : <br/>
+                                                La société XXX, exerce dans le secteur dans…
+
+                                                OBAC est un cabinet de conseils stratégiques et financiers à vocation de Banque d’affaires qui accompagne d’une part avec les organismes financiers sur des problématiques liées à la réduction du risque de crédit, l’assainissement et la diversification du portefeuille de prêts et d’autres part avec les PME/PMI sur des problématiques liés à la gestion de projets, au développement organisationnel & stratégique et à la levée de fonds.
+
+                                                La société XXX sollicite le concours d’OBAC Sarl pour l’accompagner dans (décrire le projet).
+
+
+
+
+
+
+
+                                                DE CE QUI PRECEDE LES PARTIES SONT CONVENUES DE CE QUI SUIT :
+                                               <ul>
+                                                   <li>
+                                                        ARTICLE 1.	Définition
+
+                                                            Dans le cadre de cet Accord, le terme « Informations confidentielles » recouvre toutes les informations ou toutes données divulguées par l’une ou l’autre des Parties, par écrit ou oralement, aux termes et conditions du présent Accord, et incluant sans limitation tous documents écrits ou imprimés, tous modèles ou plus généralement tous moyens de divulgation de l’information pouvant être choisis par les Parties pendant la période de validité de cet Accord.
+
+                                                            Relèveront des dispositions du présent Accord toutes informations ou données, quelle qu’en soit la forme ou le support, transmises par l’une ou l’autre des Parties et désignées comme Informations Confidentielles par la partie qui les transmet avec l’apposition sur leur support d’un tampon ou d’une formule ou par la remise ou l’envoi d’une notification écrite à cet effet. Lorsqu’elles sont divulguées oralement, ont le caractère d’Informations Confidentielles celles dont ce caractère a été porté à la connaissance de la Partie qui les reçoit, au moment de leur divulgation, et confirmé par écrit dans les plus brefs délais (dans les quinze jours de divulgation au plus tard).
+
+                                                            Chacune des parties, pour autant qu’elle soit autorisée à le faire, transmettra à l’autre Partie les seules Informations Confidentielles jugées nécessaires, par la Partie auteur de la divulgation à la poursuite des objectifs prévus à cet Accord.
+
+                                                            La signature, l’existence et l’exécution du présent Accord seront gardées confidentielles par les Parties et ne seront pas divulguées par l’une ou l’autre d’entre elles sans l’accord écrit de l’autre partie.
+
+                                                   </li>
+                                                   <li>
+                                                        ARTICLE 2.	Non-contournement
+
+                                                        Chaque PARTIE s’engage à éviter toute manœuvre qui aurait pour but, soit directement, soit indirectement, de priver l’autre PARTIE de droits, honoraires, bénéfices qui pourraient lui être dus dans le cadre de l'exécution des présentes. Chaque PARTIE  s'engage, notamment, sous peine de sa mise en cause pour abus de confiance, à ne pas tenter de contourner l’autre partie  ni d'utiliser les renseignements confidentiels, comme définis aux articles précédents, pour chercher à tirer parti par quelque moyen que ce soit d’une information communiquée, comme par exemple s’approprier seul ou avec des tiers de  tout ou partie des stratégies, rapports, études et renseignements  techniques, idées énoncées  ou encore contacter directement, sans accord préalable, un contact de l’autre PARTIE.
+
+                                                        Chacune des PARTIES accepte et comprend que toute action ouverte ou cachée de contournement vis-à-vis de l’autre PARTIE, directement ou indirectement, individuellement ou par action comprenant des intervenants tiers, constitue une violation de propriété, de confiance et de légalité grave.
+
+                                                        En cas de contournement, la PARTIE contrevenante indemnisera l’autre PARTIE de toutes les commissions, honoraires ou argent obtenus en contrevenant à la CONVENTION.  Toutes les dépenses, les coûts et frais juridiques engagés pour recouvrer les recettes perdues seront à la charge du contrevenant. La PARTIE contournée pourra demander en outre une sanction pécuniaire d'égalité juridique maximale.
+
+                                                   </li>
+                                                   <li>
+                                                        ARTICLE 3.	Utilisation et protection des Informations Confidentielles
+
+                                                La Partie qui reçoit s’engage, à compter de la date de signature du présent Accord, à ce que les Informations Confidentielles émanant de la Partie qui les divulgue :
+
+                                                (i)	soient protégées et gardées strictement confidentielles et soient traitées avec le même degré de précaution et de protection qu’elle accorde à ses propres Informations Confidentielles ; <br/>
+                                                (ii)	ne soient divulguées de manière interne qu’aux seuls membres de son personnel ayant à en connaître et ne soient utilisées par ces derniers que dans le but défini par le présent Accord ; <br/>
+                                                (iii)	ne soient utilisées, totalement ou partiellement, dans un autre but que celui défini par le présent Accord, sans le consentement préalable et écrit de la Partie qui les a divulguées ;<br/>
+                                                (iv)	ne soient ni divulguées ni susceptibles d’être divulguées, soit directement soit indirectement, à tous tiers ou à toutes personnes autres que celles mentionnées à l’alinéa ci-dessus ;<br/>
+                                                (v)	ne soient ni copiées, ni reproduites, ni dupliquées totalement ou partiellement au-delà d’un nombre limité de copies réservées au strict usage interne prévu au paragraphe (ii) du présent article lorsque de telles copies, reproductions ou duplications n’ont pas été autorisées par la Partie de qui elles émanent et ce, de manière spécifique et par écrit. <br/>
+
+                                                Toutes les Informations Confidentielles et leurs reproductions, transmises par une Partie à l’autre resteront la propriété de la Partie qui les a divulguées et seront restituées à cette dernière immédiatement sur sa demande.
+
+                                                   </li>
+                                                   <li>
+                                                        ARTICLE 4.	Restriction à la confidentialité
+
+                                                            Sauf dans le cas prévu ci-dessus, la Partie qui reçoit n’aura aucune obligation et ne sera soumise à aucune restriction eu égard à toutes les Informations Confidentielles dont elle peut apporter la preuve : <br/>
+
+                                                            (i)	qu’elles sont entrées dans le domaine public préalablement à leur divulgation ou après celle-ci, mais dans ce cas, en l’absence de toute faute qui soit imputable ; ou <br/>
+                                                            (ii)	qu’elles sont déjà connues de celle-ci, ceci pouvant être démontré par l’existence de documents appropriés dans ses dossiers ; ou <br/>
+                                                            (iii)	qu’elles ont été reçues d’un tiers de manière licite sans restriction ni violation du présent Accord ; ou <br/>
+                                                            (iv)	qu’elles ont été publiées sans violer les dispositions du présent Accord ; ou <br/>
+                                                            (v)	qu’elles sont le résultat de développements internes entrepris de bonne foi par des membres de son personnel n’ayant pas eu accès à ces Informations Confidentielles ; ou <br/>
+                                                            (vi)	que l’utilisation ou la divulgation ont été autorisées par écrit par la Partie dont elles émanent. <br/>
+
+                                                   </li>
+                                                   <li>
+                                                         ARTICLE 5.	Interprétation <br/>
+
+                                                            Aucune disposition de cet Accord ne peut être interprétée comme obligeant l’une ou l’autre des Parties à divulguer les informations Confidentielles ou à se lier contractuellement dans l’avenir. <br/>
+
+                                                            Le droit de propriété sur toutes les Informations Confidentielles que les Parties se divulguent entre elles au titre du présent Accord appartient, sous réserve des droits des tiers, en tout état de cause à la partie dont émanent ces Informations Confidentielles. <br/>
+                                                   </li>
+
+                                                   <li>
+                                                        ARTICLE 6.	Durée <br/>
+
+                                                        Le présent Accord pourra être résilié par l’une ou l’autre des Parties, à tout moment de plein droit et sans formalités, avec un préavis de sept (7) jours suivant la notification faite à l’autre Partie. <br/>
+
+                                                        Sauf résiliation anticipée telle que prévue à l’alinéa précédent, le présent Accord restera en vigueur pendant une durée de cinq  (05) ans. <br/>
+
+                                                        Le terme ou la résiliation du présent Accord n’aura pas pour effet de dégager la Partie qui reçoit les Informations Confidentielles de son obligation de respecter les dispositions de l’article 2 du présent Accord concernant l’utilisation et la protection des Informations Confidentielles reçues avant la date d’arrivée du terme ou la date de résiliation, les obligations contenues dans ces dispositions restant en vigueur pendant la durée définie dans cet article. <br/>
+
+                                                   </li>
+                                                   <li>
+                                                         ARTICLE 7.	Attribution de Juridiction <br/>
+
+                                                            Le présent Accord est régi par les dispositions pertinentes du droit congolais. <br/>
+
+                                                            Tous les litiges nés de l’exécution ou de l’interprétation du présent Accord seront réglés à l’amiable et, à défaut de règlement amiable dans un délai de trois (03) mois, ils seront tranchés définitivement par voie d’arbitrage dont l’organisation est confiée à la Cour Commune de Justice et d’Arbitrage (CCJA) de l’Organisation pour l’Harmonisation en Afrique du Droit des Affaires (OHADA) à Abidjan en Côte d’Ivoire, conformément à son Règlement d’arbitrage. <br/>
+
+                                                   </li>
+                                                   <li>
+                                                        ARTICLE 8.	Election de domicile <br/>
+
+                                                        Les documents et données utilisées pour demander ou transférer des Informations
+                                                        Confidentielles visées à l’article 1 du présent Accord,
+                                                        et plus généralement les notifications et autres communications entre les Parties,
+                                                         en vertu ou au sujet du présent Accord devront être remises par porteur ou adressées
+                                                         par courrier, télex, télégramme, télécopie ou par courrier électronique confirmé par
+                                                         courrier ou télécopie, aux adresses respectives des Parties ci-dessous
+                                                         (ou toute autre adresse que l’une des Parties pourra ultérieurement notifier à l’autre Partie sous réserve de respecter un préavis de huit (8) jours au moins : <br/>
+
+                                                   </li>
+                                                   <li>
+                                                       ARTICLE 9.	Entrée en vigueur <br/>
+
+                                                            Le présent Accord entrera en vigueur à la date de sa signature par les Parties.
+                                                   </li>
+
+                                               </ul>
+
+
+
+
+                                                Fait en deux exemplaires originaux, à Pointe Noire le ………………………….
+
+
+
+                                                <div>
+                                                    <div style="float: left; width: 300px; padding: 20px">
+                                                        Pour OBAC
+                                                    </div>
+
+                                                    <div style="float: right; width: 300px; padding: 20px;">
+                                                        Pour XXX
+                                                    </div>
+                                                </div>
+
+
 
                                             <div class="btn-div card-footer text-center">
                                                <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
