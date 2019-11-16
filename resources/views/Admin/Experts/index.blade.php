@@ -108,18 +108,30 @@
                               <label for="phone">TELEPHONE</label>
                               <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
                             </div>
+
                             <div class="form-group">
-                              <label for="email">EMAIL</label>
-                              <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
+                              <label for="pay_id">PAYS</label>
+                              <select name="pay_id" class="form-control" id="pay_id">
+                                @foreach($pays as $p)
+                                    <option value="{{ $p->id }}">{{ $p->name }}</option>
+                                @endforeach
+                              </select>
+
                             </div>
-                            <div class="form-group">
-                              <label for="name">MOT DE PASSE</label>
-                              <input type="password" class="form-control" id="name" name="password" placeholder="">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">CONFIRMATION DU MOT DE PASSE</label>
-                              <input type="password" class="form-control" id="name" name="cpassword" placeholder="">
-                            </div>
+
+                            <fieldset>
+                                <legend>Infos. de connexion</legend>
+                                <div class="form-group">
+                                  <label for="email">EMAIL</label>
+                                  <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
+                                </div>
+                                <div class="form-group">
+                                  <label for="name">MOT DE PASSE</label>
+                                  <input type="password" class="form-control" id="name" name="password" placeholder="">
+                                </div>
+                            </fieldset>
+
+
                             <div class="form-group">
                             <label for="exampleInputFile">PHOTO</label>
                             <input type="file" class="form-control" id="exampleInputFile" name="imageUri">

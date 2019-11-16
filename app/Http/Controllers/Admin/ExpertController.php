@@ -25,9 +25,10 @@ class ExpertController extends Controller
     {
         //
         $users = User::all()->where('role_id','=',2);
+	    $pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('Admin/Experts/index')->with(compact('users'));
+        return view('Admin/Experts/index')->with(compact('users','pays'));
 
     }
 
