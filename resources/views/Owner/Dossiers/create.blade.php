@@ -148,7 +148,8 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                        <fieldset>
                                             <legend>VALIDATION DE LA CONVENTION DE CONFIDENTIALITE</legend>
 
-                                              <h4 class="text-center page-header"> ACCORD DE CONFIDENTIALITE </h4>
+                                              <div style="margin: 20px auto; width: 600px; margin-bottom: 50px">
+                                                    <h4 class="text-center page-header"> ACCORD DE CONFIDENTIALITE </h4>
 
                                                 ENTRE <br/>
                                                 La société OPPORTUNITES DE BUSINESS EN AFRIQUE CENTRALE en sigle OBAC, Société à responsabilité limitée au capital de FCFA un million (1 000 000 ), immatriculée sous le numéro CG/BZV/13-B-5368, ayant son siège social au 1578 avenue des trois martyrs Brazzaville, représentée par Mr Philippe BOUITI VIAUDO en sa qualité de Directeur Associé du cabinet OBAC
@@ -290,6 +291,7 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                                     </div>
                                                 </div>
 
+                                              </div>
 
 
                                             <div class="btn-div card-footer text-center">
