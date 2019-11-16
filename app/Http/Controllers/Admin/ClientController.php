@@ -25,7 +25,8 @@ class ClientController extends Controller
         $users = User::all()->where('role_id',3);
         // dd($villes);
         // echo "Bonjour tout le monde!!";
-        return view('Admin/Clients/index')->with(compact('users'));
+	    $pays = Pay::all();
+        return view('Admin/Clients/index')->with(compact('users','pays'));
 
     }
 
@@ -58,7 +59,7 @@ class ClientController extends Controller
         $user->phone = $request['phone'];
         $user->address = $request['address'];
         $user->email = $request['email'];
-        $user->pay_id = Auth::user()->pay_id;
+        $user->pay_id = $request['pay_id'];;
 	    $user->password= Hash::make(($request['password']));
 	    $user->role_id =3;
 	    $user->moi_id=date('m');
