@@ -97,7 +97,7 @@
               <div class="mailbox-controls with-border text-center">
                 <div class="btn-group">
 
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="replyModal" data-container="body" title="Repondre">
+                  <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#replyModal" data-container="body" title="Repondre">
                     <i class="fas fa-reply"></i></button>
                 </div>
               </div>
