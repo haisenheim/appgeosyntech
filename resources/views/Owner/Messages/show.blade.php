@@ -97,7 +97,7 @@
               <div class="mailbox-controls with-border text-center">
                 <div class="btn-group">
 
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#replyModal" data-container="body" title="Repondre">
+                  <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="replyModal" data-container="body" title="Repondre">
                     <i class="fas fa-reply"></i></button>
                 </div>
               </div>
@@ -221,7 +221,32 @@
        <!-- /.modal-dialog -->
 </div>
 
+<script>
+	$("#receptor_id").on('change',function(){
+		// console.log($("#sector_id").val());
+		var url = '/owner/mails/get-investissements';
+		$.ajax({
+			url:url,
+			type:'get',
+			dataType:'Json',
+			data:{ id:$("#receptor_id").val()},
 
+			success: function(data){
+				$("#investissement_id").html("");
+				var option = '';
+				var dat =data.investissements;
+				console.log(dat);
+
+				for(var i=0; i<dat.length;i++ ){
+					option=option+'<option value='+ dat[i].id +'>'+ dat[i].projet.name +'</option>';
+					$("#investissement_id").html(option);
+					console.log(option);
+				}
+
+			}
+		});
+	});
+</script>
 
 
 
@@ -234,7 +259,7 @@
    <script>
      $(function () {
        //Add text editor
-       $('#compose-textarea').summernote({
+       $('textarea').summernote({
              height: 300
        })
      })
