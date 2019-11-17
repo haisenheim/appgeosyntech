@@ -52,7 +52,7 @@ class MessageController extends Controller
 			$inv->projet;
 		}
 
-		return response()->json(compact('investissements'));
+		return response()->json($investissements);
 	}
 
     /**
