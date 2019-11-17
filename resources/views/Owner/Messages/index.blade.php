@@ -176,7 +176,7 @@ MESSAGERIE
                     </select>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="Objet:">
+                  <input required="true" class="form-control" placeholder="Objet:">
                 </div>
                 <div class="form-group">
                     <textarea id="compose-textarea"  cols="30" style="height: 300px"></textarea>
@@ -217,7 +217,7 @@ MESSAGERIE
 				for(var i=0; i<dat.length;i++ ){
 					option=option+'<option value='+ dat[i][1].id +'>'+ dat[i][1].projet.name +'</option>';
 					$("#investissement_id").html(option);
-					console.log(option);
+					//console.log(option);
 				}
 
 			}
