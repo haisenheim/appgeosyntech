@@ -176,6 +176,7 @@ Route::prefix('owner')
     ->name('owner.')
     ->group(function(){
 	    Route::resource('mailbox','MessageController');
+	    Route::post('mailbox/reply','MessageController@reply');
         Route::resource('dossiers','DossierController');
 	    Route::resource('actifs','ActifController');
         Route::get('about','AboutController');

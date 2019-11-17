@@ -1,5 +1,7 @@
 @extends('......layouts.owner')
-
+@section('page-title')
+{{ $message->expediteur->name }} - <b> {{ $message->investissement->projet->name }} <small> {{ $message->subject }}</small> </b>
+@endsection
 
 @section('content')
 
@@ -81,13 +83,8 @@
         </div>
         <!-- /.col -->
         <div class="col-md-9">
-          <div class="card card-primary card-outline">
-            <div class="card-header">
-              <h3 class="card-title">{{ $message->expediteur->name }} - <b> {{ $message->investissement->projet->name }} <small> {{ $message->subject }}</small> </b> </h3>
+          <div class="card card-success card-outline">
 
-              <!-- /.card-tools -->
-            </div>
-            <!-- /.card-header -->
             <div class="card-body p-0">
 
                 <div class="mailbox-read-info">
@@ -99,16 +96,10 @@
               <!-- /.mailbox-read-info -->
               <div class="mailbox-controls with-border text-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Delete">
-                    <i class="far fa-trash-alt"></i></button>
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
+
+                  <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="replyModal" data-container="body" title="Repondre">
                     <i class="fas fa-reply"></i></button>
-                  <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Forward">
-                    <i class="fas fa-share"></i></button>
                 </div>
-                <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Print">
-                  <i class="fas fa-print"></i></button>
               </div>
               <!-- /.mailbox-controls -->
               <div class="mailbox-read-message">
@@ -127,6 +118,55 @@
       <!-- /.row -->
 
 </section>
+
+<div class="modal fade" id="replyModal">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header bg-success">
+         <h4 class="modal-title">REPONSE A {{ $message->expediteur->name }}</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <form enctype="multipart/form-data" role="form" action="/owner/mailbox/reply" method="post">
+         {{csrf_field()}}
+
+           <div class="card">
+                <div class="card-body">
+                <input type="hidden" name="message_id" value="{{ $message->token }}" />
+                <input type="hidden" name="reply" value="1" />
+
+
+                <div class="form-group">
+                <label for="">DESTINATAIRE</label>
+                <input type="text" disabled class="form-control" value="{{ $message->expediteur->name }}"/>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Projet</label>
+                    <input type="text" disabled class="form-control" value="{{ $message->investissement->projet->name }}"/>
+                </div>
+                <div class="form-group">
+                  <input value="Re : {{ $message->subject }}"  class="form-control" placeholder="Objet:">
+                </div>
+                <div class="form-group">
+                    <textarea name="body" id="compose-textarea"  cols="30" style="height: 300px"></textarea>
+                </div>
+
+
+                <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                </div>
+           </div>
+
+         </form>
+       </div>
+
+     </div>
+     <!-- /.modal-content -->
+   </div>
+       <!-- /.modal-dialog -->
+</div>
 
 <div class="modal fade" id="composeModal">
    <div class="modal-dialog modal-lg">
@@ -161,10 +201,10 @@
                     </select>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="Objet:">
+                  <input name="subject" required="true" class="form-control" placeholder="Objet:">
                 </div>
                 <div class="form-group">
-                    <textarea id="compose-textarea"  cols="30" style="height: 300px"></textarea>
+                    <textarea name="body" id="compose-textarea"  cols="30" style="height: 300px"></textarea>
                 </div>
 
 

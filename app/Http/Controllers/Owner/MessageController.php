@@ -92,6 +92,33 @@ class MessageController extends Controller
 
     }
 
+
+	public function reply(Request $request)
+    {
+        //
+        //dd($request->imageUri);
+
+	        $msg = Message::where('token',$request->message_id)->first();
+
+	        //$message = $request->input();
+	        $message['token'] = sha1(Auth::user()->id . date('Ymdhsi'));
+	        $message['annee']= date('Y');
+	        $message['moi_id'] = date('m');
+	        $message['sender_id'] = Auth::user()->id;
+	        $message['role_id'] = Auth::user()->role_id;
+	        $message['body']=$request->body;
+	        $message['replied_id'] = $msg->id;
+	        $message['subject'] = $msg->subject;
+	        $message['receptor_id'] = $msg->sender_id;
+	        $message['reply']=1;
+	        Message::create($message);
+
+            $request->session()->flash('success','votre message a été envoyé !!!');
+            return redirect('/owner/mailbox');
+
+
+    }
+
     /**
      * Display the specified resource.
      *
