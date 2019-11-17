@@ -445,12 +445,11 @@
                                         <div class="tab-pane fade" role="tabpanel" id="risques" aria-labelledby="">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <div class="card-tools">
-                                                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                                              <i class="fas fa-minus"></i></button>
-                                                            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-                                                              <i class="fas fa-times"></i></button>
-                                                          </div>
+                                                 <div class="card-tools">
+                                                  <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+                                                  </button>
+                                                </div>
+                                                <!-- /.card-tools -->
                                                 </div>
                                                 <div class="card-body">
                                                     <div class="table-responsive">
