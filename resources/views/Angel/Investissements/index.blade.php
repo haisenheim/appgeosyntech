@@ -28,7 +28,7 @@
                       <th style="width: 20%">
                           Promoteur
                       </th>
-                      <th>Progression</th>
+
 
                       <th style="width: 20%">
                       </th>
@@ -47,13 +47,6 @@
                             </td>
 
                             <td>{{$projet->owner?$projet->owner->name:'-'}}</td>
-                            <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" aria-valuenow="{{ $projet->pourcentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $projet->pourcentage }}%">
-                                      <span class="sr-only">{{ $projet->pourcentage }}% recouvert</span>
-                                    </div>
-                                </div>
-                            </td>
 
 
                               <td class="project-actions text-right">
