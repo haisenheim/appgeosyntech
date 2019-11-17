@@ -24,7 +24,7 @@
         <li class="nav-item dropdown">
           <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">MES INVESTISSEMENTS</a>
           <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-            <li><a href="#" class="dropdown-item">LEVEES DE FONDS</a></li>
+            <li><a href="/angel/investissements" class="dropdown-item">LEVEES DE FONDS</a></li>
             <!-- Level two dropdown-->
             <li class="dropdown-submenu dropdown-hover">
               <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
@@ -43,6 +43,31 @@
 
           </ul>
         </li>
+
+        <li class="nav-item dropdown">
+          <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">OPPORTUNITES D'INVESTISSEMENT</a>
+          <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+            <li><a href="/angel/opportunites" class="dropdown-item">LEVEES DE FONDS</a></li>
+            <!-- Level two dropdown-->
+            <li class="dropdown-submenu dropdown-hover">
+              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
+              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                <li>
+                  <a tabindex="-1" href="#" class="dropdown-item">CESSIONS D'ACTIFS</a>
+                </li>
+                <li>
+                  <a tabindex="-1" href="#" class="dropdown-item">CESSIONS DE CREANCES</a>
+                </li>
+
+              </ul>
+            </li>
+            <!-- End Level two -->
+            <li><a href="#" class="dropdown-item">FINANCEMENTS STRUCTURES</a></li>
+
+          </ul>
+        </li>
+
+
         <li class="nav-item d-none d-sm-inline-block">
           <a href="/angel/mailbox" class="nav-link">MESSAGERIE</a>
         </li>
