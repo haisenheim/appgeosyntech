@@ -12,13 +12,7 @@
 
         <div class="card">
         <div class="card-header">
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-              <i class="fas fa-minus"></i></button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fas fa-times"></i></button>
-          </div>
+            <h3>INVESTISSEMENTS SUR LES LEVEES DE FONDS </h3>
         </div>
 
         <div class="card-body p-0">
@@ -48,7 +42,7 @@
                         <tr>
                             <td>#</td>
                             <td>
-                            <span class="text-bold text-lg-left">{{ $projet->name }} - <b>{{ $projet->montant }} {{ $projet->devise->name }}</b></span>- <small>{{ $investissement->created_at?date_format($investissement->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
+                            <span class="text-bold text-lg-left">{{ $projet->name }} - <b>{{ $projet->montant }} {{ $projet->devise->abb }}</b></span>- <small>{{ $investissement->created_at?date_format($investissement->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
 
                             </td>
 
@@ -64,8 +58,8 @@
 
                               <td class="project-actions text-right">
                                     @if($investissement->validated)
-                                          <a class="btn btn-primary btn-xs" href="/angel/dossiers/{{ $investissement->token  }}">
-                                              <i class="fas fa-folder">
+                                          <a class="btn btn-success btn-xs" href="/angel/dossiers/{{ $investissement->token  }}">
+                                              <i class="fas fa-door-open">
                                               </i>
                                               Data room
                                           </a>
