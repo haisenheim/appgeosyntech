@@ -2,10 +2,10 @@
 <html>
 @include('includes.head-tl3')
 
-<body class="hold-transition sidebar-mini layout-navbar-fixed">
+<body class="layout-navbar-fixed">
 <div class="wrapper">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-dark navbar-success">
+  <nav class="navbar navbar-expand navbar-dark navbar-success">
     <div class="container">
       <a href="#" class="navbar-brand">
         <img src="{{asset('img/logo-obac.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -119,7 +119,7 @@
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="">
 <div style="height: 300px;" class="content-header">
             <?php $slides = \Illuminate\Support\Facades\Session::get('slides'); //dd($slides); ?>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
