@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -73,33 +73,34 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.96" vertical-offset="2271" max-vertical-offset="3568">
-              <caret line="196" column="6" selection-start-line="145" selection-start-column="0" selection-end-line="196" selection-end-column="6" />
+            <state vertical-scroll-proportion="-1.44" vertical-offset="2396" max-vertical-offset="3136">
+              <caret line="230" column="3" selection-start-line="230" selection-start-column="3" selection-end-line="242" selection-end-column="12" />
               <folding>
                 <element signature="tag#div#0" expanded="false" />
+                <element signature="tag#script#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8916479" vertical-offset="1285" max-vertical-offset="2880">
-              <caret line="115" column="58" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
+            <state vertical-scroll-proportion="-8.76" vertical-offset="1285" max-vertical-offset="2880">
+              <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.08" vertical-offset="1026" max-vertical-offset="3632">
-              <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.48372093" vertical-offset="256" max-vertical-offset="2896">
+              <caret line="99" column="105" selection-start-line="99" selection-start-column="105" selection-end-line="99" selection-end-column="105" />
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#section#0" expanded="false" />
-                <element signature="e#7839#7860#0#HTML" expanded="true" />
+                <element signature="e#7840#7861#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,9 +221,9 @@
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php" />
       </list>
     </option>
   </component>
@@ -969,27 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.96" vertical-offset="2271" max-vertical-offset="3568">
-          <caret line="196" column="6" selection-start-line="145" selection-start-column="0" selection-end-line="196" selection-end-column="6" />
-          <folding>
-            <element signature="tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.08" vertical-offset="1026" max-vertical-offset="3632">
-          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#section#0" expanded="false" />
-            <element signature="e#7839#7860#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.04" vertical-offset="2587" max-vertical-offset="3376">
@@ -1000,9 +980,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/MessageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8916479" vertical-offset="1285" max-vertical-offset="2880">
-          <caret line="115" column="58" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
+        <state vertical-scroll-proportion="-8.76" vertical-offset="1285" max-vertical-offset="2880">
+          <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.44" vertical-offset="2396" max-vertical-offset="3136">
+          <caret line="230" column="3" selection-start-line="230" selection-start-column="3" selection-end-line="242" selection-end-column="12" />
+          <folding>
+            <element signature="tag#div#0" expanded="false" />
+            <element signature="tag#script#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Messages/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48372093" vertical-offset="256" max-vertical-offset="2896">
+          <caret line="99" column="105" selection-start-line="99" selection-start-column="105" selection-end-line="99" selection-end-column="105" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#section#0" expanded="false" />
+            <element signature="e#7840#7861#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
