@@ -21,9 +21,9 @@
             <div class="col-12 col-md-9 col-lg-9 order-2 order-md-1">
 
 
-                <div style="min-height: auto; background: none;" class="content-wrapper">
+                <div style="min-height: auto; background: none;" class="">
                     <div>
-                        <div class="row">
+                <div class="row">
                 <div class="col-12">
                     <div class="card card-danger collapsed-card">
                     <div class="card-header">
@@ -2115,7 +2115,7 @@
                   @endif
               </div>
               <h3 class="text-primary"> {{$projet->name}}</h3>
-              <p class="text-muted"><?= $projet->description_modele_economique ?></p>
+              <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
               <br>
               <div class="text-muted">
                 <p class="text-sm">Porteur de projet:
@@ -2223,6 +2223,22 @@
           </div>
           <!-- /.modal-dialog -->
     </div>
+    <div class="modal fade" id="meModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h6  class="modal-title text-center">Description du modèle économique</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                <div class="modal-body">
+                    <p><?= $projet->description_modele_economique ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <style>
