@@ -4,6 +4,79 @@
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
         <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Liste des dossiers de levee de fonds</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fas fa-times"></i></button>
+          </div>
+        </div>
+
+        <div class="card-body p-0">
+          <table class="table table-striped projects" id="table-projets">
+              <thead>
+                  <tr>
+                      <th style="width: 1%">
+                          #
+                      </th>
+                      <th style="width: 38%">
+                          Projet
+                      </th>
+                      <th style="width: 20%">
+                          Consultant
+                      </th>
+                      <th>
+                          Progression
+                      </th>
+
+                      <th style="width: 20%">
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+
+
+                   @foreach($dossiers as $projet)
+                        <tr>
+                            <td>#</td>
+                            <td>
+                            <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
+                            <?= $projet->active?'<span class="badge badge-success">ACTIF</span>':'<span class="badge badge-danger">Bloqué</span>' ?> -
+                            <?= $projet->public?'<span class="badge badge-info">PUBLIC</span>':'<span class="badge badge-warning">PRIVE</span>' ?> - <small class="text-{{$projet->typecolor}}">{{$projet->type?$projet->type->name:'-'}}</small> - <small>{{$projet->variante?$projet->variante->name:''}}</small>
+                            </td>
+
+                            <td>{{$projet->consultant?$projet->consultant->name:'-'}}</td>
+                            <td class="project_progress">
+                          <div class="progress progress-sm">
+                              <div class="progress-bar progress-bar-striped bg-{{$projet->progresscolor}}" role="progressbar" aria-volumenow="{{$projet->progress }}" aria-volumemin="0" aria-volumemax="100" style="width: {{$projet->progress .'%'}} ">
+                              </div>
+                          </div>
+                          <small>
+                             Complet à {{$projet->progress}}%
+                          </small>
+                      </td>
+
+
+                      <td class="project-actions text-right">
+                          <a class="btn btn-primary btn-xs" href="/owner/dossiers/{{ $projet->token  }}">
+                              <i class="fas fa-folder">
+                              </i>
+                              Afficher
+                          </a>
+
+
+                      </td>
+                        </tr>
+                   @endforeach
+              </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+        <div class="card">
             <div class="card-header">
                 <h3 style="" class="card-title">GESTION DES PROJETS INDUSTRIELS</h3>
             </div>
