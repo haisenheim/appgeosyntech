@@ -209,6 +209,7 @@ MESSAGERIE
 			success: function(data){
 				$("#investissement_id").html("");
 				var option = '';
+				console.log('data  :' + data);
 				var dat =Object.entries(data.investissements);
 				console.log(dat);
 
