@@ -3,7 +3,9 @@
 @section('content-header')
  <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">{{$projet->name}}</h3>
 @endsection
-
+@section('page-title')
+{{$projet->name}}
+@endsection
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
@@ -441,23 +443,38 @@
                                         </div>
 
                                         <div class="tab-pane fade" role="tabpanel" id="risques" aria-labelledby="">
-                                             <table id="risques-tab" class="table table-condensed table-hover table-bordered">
-                                                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th>Defaillances possibles</th>
-                                                    <th>Causes</th>
-                                                    <th>Consequences</th>
-                                                    <th>Frequence</th>
-                                                    <th>Gravite</th>
-                                                    <th>Criticite brut</th>
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="card-tools">
+                                                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                              <i class="fas fa-minus"></i></button>
+                                                            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                                                              <i class="fas fa-times"></i></button>
+                                                          </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                         <table id="risques-tab" class="table table-condensed table-hover table-bordered">
+                                                           <thead>
+                                                            <tr>
+                                                                <th></th>
+                                                                <th>Defaillances possibles</th>
+                                                                <th>Causes</th>
+                                                                <th>Consequences</th>
+                                                                <th>Frequence</th>
+                                                                <th>Gravite</th>
+                                                                <th>Criticite brut</th>
 
-                                                    <th>Criticite nette</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                                </table>
+                                                                <th>Criticite nette</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            </tbody>
+                                                         </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div style="width: 20%; margin:10px auto">
                                                 <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
                                             </div>

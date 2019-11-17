@@ -1,11 +1,12 @@
 @extends('......layouts.owner')
 
-
+@section('page-title')
+DOSSIERS DE LEVEE DE FONDS
+@endsection
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
         <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Liste des dossiers de levee de fonds</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -99,7 +100,7 @@
 
               "ordering": true,
               "info": true,
-              "autoWidth": false,
+              "autoWidth": false
             });
           });
         </script>
