@@ -176,10 +176,10 @@ MESSAGERIE
                     </select>
                 </div>
                 <div class="form-group">
-                  <input required="true" class="form-control" placeholder="Objet:">
+                  <input name="subject" required="true" class="form-control" placeholder="Objet:">
                 </div>
                 <div class="form-group">
-                    <textarea id="compose-textarea"  cols="30" style="height: 300px"></textarea>
+                    <textarea name="body" id="compose-textarea"  cols="30" style="height: 300px"></textarea>
                 </div>
 
 
