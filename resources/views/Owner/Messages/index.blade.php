@@ -211,11 +211,11 @@ MESSAGERIE
 				var option = '';
 				console.log('data  :' + data);
 				var dat =Object.entries(data);
-				console.log(dat);
+				//console.log(dat);
 
 
 				for(var i=0; i<dat.length;i++ ){
-					option=option+'<option value='+ dat[i].id +'>'+ dat[i].projet.name +'</option>';
+					option=option+'<option value='+ dat[i][1].id +'>'+ dat[i][1].projet.name +'</option>';
 					$("#investissement_id").html(option);
 					console.log(option);
 				}
