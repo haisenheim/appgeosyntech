@@ -111,6 +111,9 @@ class MessageController extends Controller
 	        $message['subject'] = $msg->subject;
 	        $message['receptor_id'] = $msg->sender_id;
 	        $message['reply']=1;
+	        $message['investissement_id']=$msg->investissement_id;
+	        $message['cession_id'] = $msg->cession_id;
+	        $message['concession_id']=$msg->concession_id;
 	        Message::create($message);
 
             $request->session()->flash('success','votre message a été envoyé !!!');
