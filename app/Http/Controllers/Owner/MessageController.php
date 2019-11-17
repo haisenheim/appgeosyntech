@@ -28,7 +28,7 @@ class MessageController extends Controller
     public function index(Request $request)
     {
         //
-        $receptions = Message::all()->where('receptor_id',Auth::user()->id);
+        $receptions = Message::all()->where('receptor_id',Auth::user()->id)->sortBy('created_at',null,true);
 	    $envois = Message::all()->where('sender_id',Auth::user()->id);
 	    $projets =  Projet::all()->where('owner_id',Auth::user()->id);
 	    $users = collect([]);
@@ -87,7 +87,7 @@ class MessageController extends Controller
 	        Message::create($message);
 
             $request->session()->flash('success','votre message a été envoyé !!!');
-            return redirect('/owner/messages');
+            return redirect('/owner/mailbox');
 
 
     }
