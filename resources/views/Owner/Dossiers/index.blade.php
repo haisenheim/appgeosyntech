@@ -45,7 +45,7 @@
                             <td>
                             <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
                             <?= $projet->active?'<span class="badge badge-success">ACTIF</span>':'<span class="badge badge-danger">Bloqué</span>' ?> -
-                            <?= $projet->public?'<span class="badge badge-info">PUBLIC</span>':'<span class="badge badge-warning">PRIVE</span>' ?> - <small class="text-{{$projet->typecolor}}">{{$projet->type?$projet->type->name:'-'}}</small> - <small>{{$projet->variante?$projet->variante->name:''}}</small>
+                            <?= $projet->public?'<span class="badge badge-info">PUBLIC</span>':'<span class="badge badge-warning">PRIVE</span>' ?>
                             </td>
 
                             <td>{{$projet->consultant?$projet->consultant->name:'-'}}</td>
@@ -76,65 +76,34 @@
         </div>
         <!-- /.card-body -->
       </div>
-        <div class="card">
-            <div class="card-header">
-                <h3 style="" class="card-title">GESTION DES PROJETS INDUSTRIELS</h3>
-            </div>
-            <div class="card-body">
-                 <div class="row">
-                     @foreach($dossiers as $projet)
-                          <div class="col-md-3">
-                            <!-- Widget: user widget style 1 -->
-                            <a style="color:#555" href="/owner/dossiers/{{ $projet->token  }}">
-                             <div class="card card-widget widget-user">
-                              <!-- Add the bg color to the header using any of the bg-* classes -->
-                              <div class="widget-user-header text-white"
-                                   style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center;">
-                                    <h3 style="font-weight: 900; color: #4caf50;" class="widget-user-username text-right"><?= $projet->name ?></h3>
-                                    <h6 style="font-weight: 500;" class="widget-user-desc text-right">{{ $projet->consultant?$projet->consultant->name:'Aucun Consultant lié' }}</h6>
-                              </div>
-                              <div class="widget-user-image">
-                                <img class="img-circle" src="{{$projet->consultant?$projet->consultant->imageUri? asset('img/'.$projet->consultant->imageUri):asset('img/avatar.png'):asset('img/avatar.png')}}" alt="User Avatar">
-                              </div>
-                              <div class="card-body">
 
-                              </div>
-                              <div style="padding: .75rem 1.25rem;" class="card-footer">
-                                <div class="row">
-                                    <div class="col-md-6 border-right">
-                                        <div class="description-block">
-                                          <h5 class="description-header"><i class="fa fa-map-marker"></i></h5>
-                                          <span class="description-text">{{ $projet->ville->name  }}</span>
-                                        </div>
-                                    </div>
+        <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+        <!-- jQuery -->
+        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 
-                                  <!-- /.col -->
-                                  <div class="col-sm-6">
-                                    <div class="description-block">
-                                      <h5 class="description-header"><i class="fa fa-coins"></i></h5>
-                                      <span class="description-text">{{$projet->montant}} FCFA</span>
-                                    </div>
-                                    <!-- /.description-block -->
-                                  </div>
-                                  <!-- /.col -->
-                                </div>
-                                <!-- /.row -->
-                              </div>
-                            </div>
-                            </a>
-                            <!-- /.widget-user -->
-                          </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="card-footer">
-                 <div class="">
-                    <ul class="pagination justify-content-end">
-                      {{ $dossiers->links() }}
-                    </ul>
-                 </div>
-            </div>
-        </div>
+
+
+
+        <!-- AdminLTE for demo purposes -->
+        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <!-- DataTables -->
+        <script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
+        <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+
+        <script>
+          $(function () {
+
+            $('#table-projets').DataTable({
+              "paging": true,
+              "lengthChange": false,
+
+              "ordering": true,
+              "info": true,
+              "autoWidth": false,
+            });
+          });
+        </script>
+
      </div>
 
 @endsection
