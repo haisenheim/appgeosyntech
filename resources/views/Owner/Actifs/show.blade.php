@@ -243,7 +243,7 @@
 
 
             <li>
-                <a title="Modifier" class="ripple" href="#" data-target="#EditModal" data-toggle="modal"><i class="fa fa-pencil-alt"></i></a>
+                <a title="Modifier" class="ripple" href="#" data-target="#EditModal" data-toggle="modal"><i class="fa fa-edit fa-lg"></i></a>
             </li>
 
             @if($projet->cessions->count() >=1)
@@ -253,14 +253,10 @@
                        </li>
                     @endif
                    <li>
-                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users fa-lg"></i></a>
                    </li>
             @endif
-            <li>
-                <a title=Modifier" href="#" class="ripple">
-                    <i class="fa fa-edit fa-lg"></i>
-                </a>
-            </li>
+
 
 
             <li>
@@ -283,17 +279,16 @@
     </nav>
 </main>
 
-<div class="modal fade" id="angelsModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <div class="modal-body">
-            <div class="card card-danger">
+
+<div class="modal fade modal-lg" id="angelsModa" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header bg-success">
+          <h4 class="modal-title">LISTE DE POTENTIELS INVESTISSEMENT</h4>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+      </div>
+      <div class="modal-body">
+          <div class="card card-danger">
                 <div class="card-body">
                      @if($projet->cessions->count()>=1)
                         <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
@@ -301,8 +296,6 @@
                             <tr>
                               <th>#</th>
                               <th>Depuis le</th>
-
-                              <th>STATUT</th>
                               <th></th>
 
                             </tr>
@@ -313,7 +306,7 @@
                                         <td>{{ $invest->angel->name }}</td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
 
-                                        <td></td>
+
                                         <td>
 
                                             <div class="btn-group">
@@ -343,10 +336,14 @@
                 @endif
                 </div>
             </div>
-            </div>
-        </div>
-    </div>
-</div>
+      </div>
+          </div>
+      </div>
+</div
+
+
+
+
 
 <div class="modal fade" id="upDocsModal">
     <div class="modal-dialog modal-lg">
@@ -393,6 +390,7 @@
    .modal label{
         font-size: x-small;
         line-height: 0.5;
+        color: #000000;
    }
    .card.maximized-card {
 
