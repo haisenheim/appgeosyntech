@@ -170,6 +170,39 @@
           });
         });
       </script>
+
+      <div class="modal" id="upDocsModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-success">
+                <h4 class="modal-title">CHARGEMENT DES DOCUMENTS</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="card card-danger">
+                      <div class="card-body">
+                          <form action="/owner/actif/docs/" method="post" enctype="multipart/form-data">
+                              {{csrf_field()}}
+                              <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
+                              <div class="form-group">
+                                  <label for="ordre">ORDRE DE VIREMENT</label>
+                                  <input type="file" class="form-control" id="ordre" name="ordre"/>
+                              </div>
+                              <div class="form-group">
+                                  <label for="actif">CONTRAT DE CESSION D'ACTIF</label>
+                                  <input type="file" class="form-control" id="actif" name="actif"/>
+                              </div>
+
+                              <button type="submit" class="btn btn-outline-success btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
+                          </form>
+                      </div>
+                  </div>
+            </div>
+                </div>
+            </div>
+      </div
+
+
 @endsection
 
 
@@ -272,37 +305,6 @@
                         </table>
 
                 @endif
-                </div>
-            </div>
-      </div>
-          </div>
-      </div>
-</div
-
-<div class="modal fade" id="upDocsModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-      <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-              <div class="modal-header bg-success">
-          <h4 class="modal-title">CHARGEMENT DES DOCUMENTS</h4>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-      </div>
-      <div class="modal-body">
-          <div class="card card-danger">
-                <div class="card-body">
-                    <form action="/owner/actif/docs/" method="post" enctype="multipart/form-data">
-                        {{csrf_field()}}
-                        <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
-                        <div class="form-group">
-                            <label for="ordre">ORDRE DE VIREMENT</label>
-                            <input type="file" class="form-control" id="ordre" name="ordre"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="actif">CONTRAT DE CESSION D'ACTIF</label>
-                            <input type="file" class="form-control" id="actif" name="actif"/>
-                        </div>
-
-                        <button type="submit" class="btn btn-outline-success btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
-                    </form>
                 </div>
             </div>
       </div>
