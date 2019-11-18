@@ -1,7 +1,7 @@
 @extends('......layouts.owner')
 
 @section('page-title')
-DOSSIERS DE LEVEE DE FONDS
+DOSSIERS DE FINANCEMENTS STRUCTURES
 @endsection
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
@@ -62,7 +62,7 @@ DOSSIERS DE LEVEE DE FONDS
 
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/owner/dossiers/{{ $projet->token  }}">
+                          <a class="btn btn-primary btn-xs" href="/owner/financements/{{ $projet->token  }}">
                               <i class="fas fa-folder">
                               </i>
                               Afficher
@@ -113,13 +113,9 @@ DOSSIERS DE LEVEE DE FONDS
 <main>
     <nav class="floating-menu">
         <ul class="main-menu">
+
             <li>
-                <a title="Accueil" href="/owner/" class="ripple">
-                    <i class="fas fa-home fa-lg"></i>
-                </a>
-            </li>
-            <li>
-                <a title="Nouveau Dossier" href="/owner/dossiers/create" class="ripple">
+                <a title="Nouveau Dossier" href="/owner/financements/create" class="ripple">
                     <i class="fa fa-plus-circle fa-lg"></i>
                 </a>
             </li>

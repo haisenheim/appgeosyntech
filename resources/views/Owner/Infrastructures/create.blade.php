@@ -1,7 +1,7 @@
 @extends('......layouts.owner')
 
 @section('page-title')
-CREATION D'UN NOUVEAU DE LEVEE DE FONDS
+NOUVEAU DOSSIER DE FINANCEMENT STRUCTURE
 @endsection
 
 
@@ -53,13 +53,19 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                                                  <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" placeholder="">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-3">
+                                                         <div class="col-md-5">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">SOCIETE</label>
+                                                                 <input id="societe" name="societe" maxlength="100" type="text" required="required" class="form-control" placeholder="Saisir le nom de votre société">
+                                                             </div>
+                                                         </div>
+                                                         <div class="col-md-2">
                                                              <div class="form-group">
                                                                  <label class="control-label">CODE/NUMERO</label>
                                                                  <input id="code" name="name" maxlength="100" type="text" required="required" class="form-control" placeholder="Saisir le code du dossier">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-4">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">COUT DU PROJET</label>
                                                                  <input id="montant" name="montant" maxlength="100" type="number" required="required" class="form-control" placeholder="Saisir le code du dossier">
@@ -74,16 +80,6 @@ CREATION D'UN NOUVEAU DE LEVEE DE FONDS
                                                                        <option value='{!! $p->id !!}'>{{$p->name}}</option>
                                                                     @endforeach
                                                                  </select>
-                                                             </div>
-                                                         </div>
-
-
-                                                         <div class="col-md-3">
-                                                             <div class="form-group" style="margin-top: 25px;">
-                                                                <div class="custom-control custom-checkbox">
-                                                                  <input class="custom-control-input" type="checkbox" id="capital" name="capital"  >
-                                                                  <label for="capital" class="custom-control-label">OVERTURE DU CAPITAL ?</label>
-                                                                </div>
                                                              </div>
                                                          </div>
 

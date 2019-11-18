@@ -19,14 +19,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">ACCUEIL</a>
       </li>
-
-      <li class="nav-item d-none d-sm-inline-block">
-            <a href="/owner/dossiers" class="nav-link">
-               PROJETS
-            </a>
-          </li>
-
-
            <li class="nav-item d-none d-sm-inline-block dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#"> MES DOSSIERS </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">

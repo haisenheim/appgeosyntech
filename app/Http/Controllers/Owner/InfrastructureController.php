@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Owner;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bilan;
+use App\Models\ChoicesInfrastructure;
 use App\Models\ChoicesProjet;
+use App\Models\Concession;
 use App\Models\Devise;
+use App\Models\Infrastructure;
+use App\Models\InfrastructuresProduit;
 use App\Models\Investissement;
 use App\Models\Moi;
 use App\Models\ProduitsProjet;
@@ -36,7 +40,7 @@ class InfrastructureController extends Controller
     public function index()
     {
         //
-        $dossiers = Projet::orderBy('created_at','desc')->where('owner_id',Auth::user()->id)->paginate(8);
+        $dossiers = Infrastructure::orderBy('created_at','desc')->where('owner_id',Auth::user()->id)->paginate(8);
         return view('/Owner/Infrastructures/index')->with(compact('dossiers'));
     }
 
@@ -52,12 +56,12 @@ class InfrastructureController extends Controller
 	}
 
 	public function openDataroom($token){
-		$invest = Investissement::updateOrCreate(['token'=>$token],['validated'=>1]);
+		$invest = Concession::updateOrCreate(['token'=>$token],['validated'=>1]);
 		return back();
 	}
 
 	public function closeDataroom($token){
-		$invest = Investissement::updateOrCreate(['token'=>$token],['validated'=>0]);
+		$invest = Concession::updateOrCreate(['token'=>$token],['validated'=>0]);
 		return back();
 	}
 
@@ -124,7 +128,7 @@ class InfrastructureController extends Controller
 
 	    $devises = Devise::all();
 
-        return view('/Owner/Dossiers/create')->with(compact('villes','devises'));
+        return view('/Owner/Infrastructures/create')->with(compact('villes','devises'));
     }
 
 	/**
@@ -170,7 +174,7 @@ class InfrastructureController extends Controller
 	public function editReport(Request $request){
 		//dd(public_path('img'));
 
-		$projet = Projet::where('token',$request->projet_token)->first();
+		$projet = Infrastructure::where('token',$request->infrastructure_token)->first();
 		$resultat = ['ca','cf','cv','ape','pi','ps','sp','taxes','dap','impots','pf','cfi','ce','pe','salaires','participations'];
 		$rs = $resultat;
 		$rs[] = 'moi_id';
@@ -179,14 +183,14 @@ class InfrastructureController extends Controller
 		$inputs['projet_id']=$projet->id;
 		$inputs['token']=sha1(Auth::user()->id. date('Yhmids'));
 		$inputs['user_id'] = Auth::user()->id;
-		$reportrslt = Reportresultat::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$inputs);
+		$reportrslt = Reportresultat::updateOrCreate(['infrastructure_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$inputs);
 		$resultat[]='projet_token';
 		$inputs = $request->except($resultat);
 		$inputs['annee']=date('Y');
 		$inputs['projet_id']=$projet->id;
 		$inputs['token']=sha1(Auth::user()->id. date('Yhmids'));
 		$inputs['user_id'] = Auth::user()->id;
-		$reportbilan = Reportbilan::updateOrCreate(['projet_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$inputs);
+		$reportbilan = Reportbilan::updateOrCreate(['infrastructure_id'=>$projet->id,'moi_id'=>$request->moi_id,'annee'=>date('Y')],$inputs);
 		return back();
 	}
 
@@ -311,13 +315,13 @@ class InfrastructureController extends Controller
 		$dossier['description_modele_economique'] = $request->all()['bm'];
 		$dossier['capital'] = isset($dossier['capital'])?1:0;
 		$dossier['token'] = sha1(date('ymdhs').$dossier['owner_id']);
-		$dossier = Projet::create($dossier);
+		$dossier = Infrastructure::create($dossier);
 		if($dossier){
 			if(!empty($request->all()['bil1']['stocks'])){
 				$bilan1 = $request->all()['bil1'];
 				$bilan1['annee'] = date('Y') -1;
 				$bilan1['moi_id'] = date('m');
-				$bilan1['projet_id'] = $dossier->id;
+				$bilan1['infractructure_id'] = $dossier->id;
 				$bilan1['user_id'] =Auth::user()->id;
 				$bilan1 = Bilan::create($bilan1);
 			}
@@ -326,7 +330,7 @@ class InfrastructureController extends Controller
 				$bilan2 = $request->all()['bil2'];
 				$bilan2['annee'] = date('Y') -2;
 				$bilan2['moi_id'] = date('m');
-				$bilan2['projet_id'] = $dossier->id;
+				$bilan2['infractructure_id'] = $dossier->id;
 				$bilan2['user_id'] =Auth::user()->id;
 				$bilan2 = Bilan::create($bilan2);
 			}
@@ -335,7 +339,7 @@ class InfrastructureController extends Controller
 				$bilan2 = $request->all()['bil3'];
 				$bilan2['annee'] = date('Y') -3;
 				$bilan2['moi_id'] = date('m');
-				$bilan2['projet_id'] = $dossier->id;
+				$bilan2['infractructure_id'] = $dossier->id;
 				$bilan2['user_id'] =Auth::user()->id;
 				$bilan3 = Bilan::create($bilan2);
 			}
@@ -344,7 +348,7 @@ class InfrastructureController extends Controller
 				$res1 = $request->all()['compte1'];
 				$res1['annee'] = date('Y') -1;
 				$res1['moi_id'] = date('m');
-				$res1['projet_id'] = $dossier->id;
+				$res1['infractructure_id'] = $dossier->id;
 				$res1['token'] =sha1(date('yhdmis').Auth::user()->id);
 				$result = Resultat::create($res1);
 			}
@@ -353,7 +357,7 @@ class InfrastructureController extends Controller
 				$res1 = $request->all()['compte2'];
 				$res1['annee'] = date('Y') -2;
 				$res1['moi_id'] = date('m');
-				$res1['projet_id'] = $dossier->id;
+				$res1['infractructure_id'] = $dossier->id;
 				$res1['token'] =sha1(date('yhdims').Auth::user()->id);
 				$result = Resultat::create($res1);
 			}
@@ -362,7 +366,7 @@ class InfrastructureController extends Controller
 				$res1 = $request->all()['compte3'];
 				$res1['annee'] = date('Y') -3;
 				$res1['moi_id'] = date('m');
-				$res1['projet_id'] = $dossier->id;
+				$res1['infractructure_id'] = $dossier->id;
 				$res1['token'] =sha1(date('myhsiyd').Auth::user()->id);
 				$result = Resultat::create($res1);
 			}
@@ -370,10 +374,10 @@ class InfrastructureController extends Controller
 
 			if($produits){
 				for($i = 0; $i<count($produits);$i++){
-					$dp = new ProduitsProjet();
+					$dp = new InfrastructuresProduit();
 					//$dp->produi_id =
 					$dp->produit_id = $produits[$i];
-					$dp->projet_id = $dossier->id;
+					$dp->infractructure_id = $dossier->id;
 					$dp->save();
 				}
 			}
@@ -381,9 +385,9 @@ class InfrastructureController extends Controller
 
 			if($answers){
 				foreach($answers as $answer){
-					$an= new ChoicesProjet();
+					$an= new ChoicesInfrastructure();
 					$an->choice_id=$answer['choice_id'];
-					$an->projet_id=$dossier->id;
+					$an->infrastructures_id=$dossier->id;
 					$an->save();
 				}
 			}
@@ -416,10 +420,10 @@ class InfrastructureController extends Controller
     {
         //
 		$tags = Tags::all();
-	    $projet = Projet::where(['token'=>$token])->first();
+	    $projet = Infrastructure::where(['token'=>$token])->first();
 	    $mois = Moi::all();
 	    //dd($dossier->bilans);
-	    return view('Owner/Dossiers/show')->with(compact('projet','tags','mois'));
+	    return view('Owner/Infrastructures/show')->with(compact('projet','tags','mois'));
     }
 
     /**
