@@ -91,7 +91,9 @@ class MessageController extends Controller
     public function show($token)
     {
         $message = Message::where('token',$token)->first();
-        return view('Angel/Messages/show')->with(compact('message'));
+	    $receptions = Message::all()->where('receptor_id',Auth::user()->id);
+	    $envois = Message::all()->where('sender_id',Auth::user()->id);
+        return view('Angel/Messages/show')->with(compact('message','receptions','envois'));
     }
 
     /**
