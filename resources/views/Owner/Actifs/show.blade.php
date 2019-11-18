@@ -278,9 +278,9 @@
                                     <tr>
                                         <td>
                                             @if($invest->validated)
-                                                <span class="badge badge-success"><i class="fa fa-checked"></i></span>
+                                                <span class="badge badge-success"><i class="fa fa-check"></i></span>
                                             @else
-                                                <span class="badge badge-danger"><i class="fa fa-remove"></i></span>
+                                                <span class="badge badge-danger"><i class="fas fa-remove"></i></span>
                                             @endif
                                         </td>
                                         <td>{{ $invest->angel->name }}</td>
