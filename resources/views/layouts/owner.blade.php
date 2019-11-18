@@ -17,7 +17,7 @@
            </a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/owner/" class="nav-link">Accueil</a>
+        <a href="#" class="nav-link">ACCUEIL</a>
       </li>
 
       <li class="nav-item d-none d-sm-inline-block">
@@ -26,10 +26,25 @@
             </a>
           </li>
 
-          <li class="nav-item d-none d-sm-inline-block">
-            <a href="/owner/actifs" class="nav-link">
-               CESSIONS D'ACTIFS
-            </a>
+
+           <li class="nav-item d-none d-sm-inline-block dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#"> MES DOSSIERS </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <a href="/owner/dossiers" class="dropdown-item">
+                 LEVEES DE FONDS
+              </a>
+
+              <div class="dropdown-divider"></div>
+              <a href="/owner/actifs" class="dropdown-item">
+                CESSIONS D'ACTIFS
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="/owner/financements" class="dropdown-item">
+                FINANCEMENTS STRUCTURES
+              </a>
+
+
+            </div>
           </li>
 
           <li class="nav-item d-none d-sm-inline-block dropdown">
@@ -66,7 +81,7 @@
           </li>
 
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">CONTACT</a>
       </li>
     </ul>
 
