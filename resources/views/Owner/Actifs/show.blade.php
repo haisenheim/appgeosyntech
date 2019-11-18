@@ -155,70 +155,7 @@
             </div>
       </div>
 
-      <div class="modal fade modal-lg" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                <h4 class="modal-title">{{ $projet->name }}</h4>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-            </div>
-            <div class="modal-body">
-                 <form enctype="multipart/form-data" class="form" action="{{route('owner.update.actif')}}"  method="post">
-                                    {{csrf_field()}}
-                                    <input type="hidden" name="token" value="{{$projet->token}}"/>
-                                    <input type="hidden" name="id" value="{{$projet->id}}"/>
 
-                                    <fieldset>
-                                        <legend>INFORMATIONS SUR L'ARTICLE</legend>
-                                            <div class="row">
-                                                 <div class="col-md-8">
-                                                     <div class="form-group">
-                                                         <label class="control-label">NOM</label>
-                                                         <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" value="{{$projet->name}}">
-                                                     </div>
-                                                 </div>
-                                                 <div class="col-md-4">
-                                                     <div class="form-group">
-                                                         <label for="prix" class="control-label">PRIX INITIAL</label>
-                                                         <input id="prix" name="prix"  type="number"  class="form-control" value="{{$projet->prix}}">
-                                                     </div>
-                                                 </div>
-
-                                                 <div class="col-md-6 col-sm-12">
-                                                     <div class="form-group">
-                                                         <label class="control-label">TYPE D'IMMOBILISATION</label>
-                                                         <select class="form-control" name="tactif_id" id="variante_id">
-                                                         <option value="{{$projet->tactif_id}}">{{$projet->tactif->name}}</option>
-                                                            @foreach($tactifs as $p)
-                                                               <option value='{!! $p->id !!}'>{{$p->name}}</option>
-                                                            @endforeach
-                                                         </select>
-                                                     </div>
-                                                 </div>
-
-                                                 <div class="col-md-6 col-sm-12">
-                                                     <div class="form-group">
-                                                         <label for="ville_id" class="control-label">VILLE</label>
-                                                         <select class="form-control" name="ville_id" id="ville_id">
-                                                         <option value="{{$projet->ville_id}}">{{$projet->ville->name}}</option>
-                                                            @foreach($villes as $p)
-                                                               <option value='{!! $p->id !!}'>{{$p->name}}</option>
-                                                            @endforeach
-                                                         </select>
-                                                     </div>
-                                                 </div>
-                                             </div>
-
-                                             <div class="btn-div card-footer text-center">
-                                                 <button class="btn btn-success  btn-sm " type="submit"> Enregister <i class="fa fa-save"></i></button>
-                                            </div>
-
-                                     </fieldset>
-                                </form>
-            </div>
-                </div>
-            </div>
-      </div>
 
       <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
@@ -280,8 +217,8 @@
 </main>
 
 
-<div class="modal fade modal-lg" id="angelsModa" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-      <div class="modal-dialog modal-lg">
+<div class="modal fade modal-lg" id="angelsModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+      <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header bg-success">
           <h4 class="modal-title">LISTE DE POTENTIELS INVESTISSEMENT</h4>
@@ -297,7 +234,7 @@
                               <th>#</th>
                               <th>Depuis le</th>
 
-                              <th>STATUT</th>
+
                               <th></th>
 
                             </tr>
@@ -344,43 +281,6 @@
 </div
 
 
-
-
-
-<div class="modal fade" id="upDocsModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h6  class="modal-title text-center">CHARGEMENT DES DOCUMENTS</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <div class="modal-body">
-            <div class="card card-danger">
-                <div class="card-body">
-                    <form action="/owner/actifs/docs/" method="post" enctype="multipart/form-data">
-                        {{csrf_field()}}
-                        <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
-                        <div class="form-group">
-                            <label for="ordre">ORDRE DE VIREMENT</label>
-                            <input type="file" class="form-control" id="ordre" name="ordre"/>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="actif">CONTRAT DE CESSION D'ACTIF</label>
-                            <input type="file" class="form-control" id="actif" name="actif"/>
-                        </div>
-
-                        <button type="submit" class="btn btn-outline-success btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
-                    </form>
-
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <style>

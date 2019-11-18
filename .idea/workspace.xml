@@ -103,14 +103,13 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9259259" vertical-offset="2432" max-vertical-offset="4400">
-              <caret line="320" column="52" selection-start-line="320" selection-start-column="52" selection-end-line="320" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.2962963" vertical-offset="2112" max-vertical-offset="3808">
+              <caret line="220" column="30" selection-start-line="220" selection-start-column="30" selection-end-line="220" selection-end-column="30" />
               <folding>
                 <element signature="tag#div#1" expanded="false" />
-                <element signature="tag#div#2" expanded="false" />
-                <element signature="e#14626#14641#0#HTML" expanded="true" />
-                <element signature="e#15748#16289#0#HTML" expanded="true" />
-                <element signature="e#16999#17018#0#HTML" expanded="true" />
+                <element signature="e#10011#10026#0#HTML" expanded="true" />
+                <element signature="e#11133#11674#0#HTML" expanded="true" />
+                <element signature="e#12376#12395#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -970,14 +969,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9259259" vertical-offset="2432" max-vertical-offset="4400">
-          <caret line="320" column="52" selection-start-line="320" selection-start-column="52" selection-end-line="320" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.2962963" vertical-offset="2112" max-vertical-offset="3808">
+          <caret line="220" column="30" selection-start-line="220" selection-start-column="30" selection-end-line="220" selection-end-column="30" />
           <folding>
             <element signature="tag#div#1" expanded="false" />
-            <element signature="tag#div#2" expanded="false" />
-            <element signature="e#14626#14641#0#HTML" expanded="true" />
-            <element signature="e#15748#16289#0#HTML" expanded="true" />
-            <element signature="e#16999#17018#0#HTML" expanded="true" />
+            <element signature="e#10011#10026#0#HTML" expanded="true" />
+            <element signature="e#11133#11674#0#HTML" expanded="true" />
+            <element signature="e#12376#12395#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
