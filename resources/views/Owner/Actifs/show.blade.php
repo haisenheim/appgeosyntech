@@ -17,7 +17,7 @@
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
 
-                            <p>PRIX INITIAL : {{ $projet->prix . $projet->devise->name }}</p>
+                            <p>PRIX INITIAL : {{ $projet->prix . $projet->devise->abb }}</p>
                             <input type="hidden" id="id" value="<?= $projet->id ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
                             @if($projet->expert_id)
@@ -235,28 +235,177 @@
       </script>
 @endsection
 
+
 @section('nav_actions')
-            <a class="nav-link" data-toggle="dropdown" href="#">
-             <i class="fas fa-cogs"></i>
-             <span class="badge  navbar-badge"></span>
-           </a>
-           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-             @if($projet->paye)
-             <a href="#" data-toggle="modal" data-target="#addAngels" class="dropdown-item">
-               <i class="fas fa-plus-circle mr-2"></i> Associer des investisseurs
-             </a>
-             @endif
-             <div class="dropdown-divider"></div>
-             <a href="#" data-target="#EditModal" data-toggle="modal" class="dropdown-item">
-               <i class="fa fa-pencil mr-2"></i> Modifier
-             </a>
-             <div class="dropdown-divider"></div>
-             <a href="#" class="dropdown-item">
-               <i class="fas fa-envelope mr-2"></i> Contacter OBAC
-             </a>
+<main>
+    <nav style="top:30%" class="floating-menu">
+        <ul class="main-menu">
 
 
-           </div>
+
+
+            @if($projet->investissements->count() >=1)
+                   @if($projet->validated_step==1)
+                       <li>
+                            <a title="Programmer une rencontre avec les investisseur" class="ripple" href="/owner/actifs/plan"><i class="fa fa-calendar"></i></a>
+                       </li>
+                    @endif
+                   <li>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                   </li>
+            @endif
+            <li>
+                <a title=Modifier" href="#" class="ripple">
+                    <i class="fa fa-edit fa-lg"></i>
+                </a>
+            </li>
+
+
+            <li>
+                <a data-toggle="modal" data-target="#upDocsModal" title="Charger les documents du projet" href="#" class="ripple">
+                    <i class="fa fa-book fa-lg"></i>
+                </a>
+            </li>
+
+        </ul>
+        <div
+         style="
+          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
+          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
+          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
+          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
+        "
+        class="menu-bg"></div>
+    </nav>
+</main>
+
+<div class="modal fade" id="angelsModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+            <div class="card card-danger">
+                <div class="card-body">
+                     @if($projet->cessions->count()>=1)
+                        <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Depuis le</th>
+
+                              <th>STATUT</th>
+                              <th></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($projet->cessions as $invest)
+                                    <tr>
+                                        <td>{{ $invest->angel->name }}</td>
+                                        <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
+
+                                        <td></td>
+                                        <td>
+
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default btn-flat">Actions</button>
+                                                <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
+                                                  <span class="caret"></span>
+
+                                                </button>
+                                                <div class="dropdown-menu" role="menu">
+                                                 <?php if($invest->lettre): ?>
+                                                    <a class="dropdown-item" href="#">Lettre d'intention</a>
+                                                  <?php endif; ?>
+                                                  <?php if($invest->validated): ?>
+                                                    <a class="dropdown-item" href="/owner/cessions/close/{{ $invest->token }}">Dissocier cet investisseur</a>
+                                                  <?php else: ?>
+                                                    <a class="dropdown-item" href="/owner/cessions/open/{{ $invest->token }}">Associer cet investisseur</a>
+                                                  <?php endif; ?>
+
+                                                </div>
+                                              </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+
+                @endif
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="upDocsModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h6  class="modal-title text-center">CHARGEMENT DES DOCUMENTS</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+            <div class="card card-danger">
+                <div class="card-body">
+                    <form action="/owner/actifs/docs/" method="post" enctype="multipart/form-data">
+                        {{csrf_field()}}
+                        <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
+                        <div class="form-group">
+                            <label for="ordre">ORDRE DE VIREMENT</label>
+                            <input type="file" class="form-control" id="ordre" name="ordre"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="actif">CONTRAT DE CESSION D'ACTIF</label>
+                            <input type="file" class="form-control" id="actif" name="actif"/>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-success btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
+                    </form>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+   .modal .card-title{
+        color: #000000;
+        font-weight: bold;
+   }
+
+   .modal label{
+        font-size: x-small;
+        line-height: 0.5;
+   }
+   .card.maximized-card {
+
+               overflow-y: scroll;
+           }
+</style>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+<script>
+  $(function () {
+    $("#table-invest").DataTable();
+
+  });
+</script>
 
 @endsection
 
