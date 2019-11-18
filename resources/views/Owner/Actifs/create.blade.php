@@ -1,7 +1,7 @@
 @extends('......layouts.owner')
 
-@section('content-header')
-    <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">NOUVELLE CESSION D'ACTIF</h3>
+@section('page-title')
+NOUVEAU CESSION D'ACTIF
 @endsection
 
 @section('content')
@@ -14,20 +14,21 @@
                     <fieldset>
                         <legend>INFORMATIONS SUR L'ARTICLE</legend>
                             <div class="row">
-                                 <div class="col-md-8">
+                                 <div class="col-md-9">
                                      <div class="form-group">
                                          <label class="control-label">NOM</label>
                                          <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" placeholder="">
                                      </div>
                                  </div>
-                                 <div class="col-md-4">
+                                 <div class="col-md-3">
                                      <div class="form-group">
-                                         <label for="prix" class="control-label">PRIX INITIAL</label>
+                                         <label for="prix" class="control-label">COUT DE L'ACTIF</label>
                                          <input id="prix" name="prix"  type="number"  class="form-control" placeholder="">
                                      </div>
                                  </div>
-
-                                 <div class="col-md-6 col-sm-12">
+                            </div>
+                            <div class="row">
+                                 <div class="col-md-5 col-sm-12">
                                      <div class="form-group">
                                          <label class="control-label">TYPE D'IMMOBILISATION</label>
                                          <select class="form-control" name="tactif_id" id="variante_id">
@@ -37,25 +38,13 @@
                                          </select>
                                      </div>
                                  </div>
-                                 <div class="col-md-6">
+                                 <div class="col-md-3">
                                      <div class="form-group">
                                          <label for="imageUri" class="control-label">PHOTO DE L'ARTICLE</label>
                                          <input id="imageUri" name="imageUri" type="file"  class="form-control" placeholder="">
                                      </div>
                                  </div>
-                                 <div class="col-md-12 col-sm-12">
-                                     <div class="form-group">
-                                         <label for="description" class="control-label">DESCRIPTION</label>
-                                         <textarea name="description" id="description" cols="30" rows="3"></textarea>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-12 col-sm-12">
-                                     <div class="form-group">
-                                         <label for="caracteristiques" class="control-label">CARACTERISTIQUES</label>
-                                         <textarea name="caracteristiques" id="caracteristiques" cols="30" rows="3"></textarea>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6 col-sm-12">
+                                  <div class="col-md-4 col-sm-12">
                                      <div class="form-group">
                                          <label for="ville_id" class="control-label">VILLE</label>
                                          <select class="form-control" name="ville_id" id="ville_id">
@@ -65,6 +54,21 @@
                                          </select>
                                      </div>
                                  </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-md-6 col-sm-12">
+                                     <div class="form-group">
+                                         <label for="description" class="control-label">DESCRIPTION</label>
+                                         <textarea name="description" id="description" cols="30" rows="3"></textarea>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6 col-sm-12">
+                                     <div class="form-group">
+                                         <label for="caracteristiques" class="control-label">CARACTERISTIQUES</label>
+                                         <textarea name="caracteristiques" id="caracteristiques" cols="30" rows="3"></textarea>
+                                     </div>
+                                 </div>
+
                              </div>
 
                              <div class="btn-div card-footer text-center">
