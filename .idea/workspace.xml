@@ -97,10 +97,16 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5185185" vertical-offset="80" max-vertical-offset="1456">
-              <caret line="19" column="99" selection-start-line="19" selection-start-column="99" selection-end-line="19" selection-end-column="99" />
+            <state vertical-scroll-proportion="0.22222222" vertical-offset="192" max-vertical-offset="1424">
+              <caret line="18" column="137" selection-start-line="18" selection-start-column="137" selection-end-line="18" selection-end-column="137" />
               <folding>
-                <element signature="e#648#671#0#HTML" expanded="true" />
+                <element signature="e#761#784#0#HTML" expanded="true" />
+                <element signature="e#1229#1247#0#HTML" expanded="true" />
+                <element signature="e#1571#1690#0#HTML" expanded="true" />
+                <element signature="e#1732#1760#0#HTML" expanded="true" />
+                <element signature="e#1801#1841#0#HTML" expanded="true" />
+                <element signature="e#1948#1988#0#HTML" expanded="true" />
+                <element signature="e#2481#2513#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1079,10 +1085,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185" vertical-offset="80" max-vertical-offset="1456">
-          <caret line="19" column="99" selection-start-line="19" selection-start-column="99" selection-end-line="19" selection-end-column="99" />
+        <state vertical-scroll-proportion="0.22222222" vertical-offset="192" max-vertical-offset="1424">
+          <caret line="18" column="137" selection-start-line="18" selection-start-column="137" selection-end-line="18" selection-end-column="137" />
           <folding>
-            <element signature="e#648#671#0#HTML" expanded="true" />
+            <element signature="e#761#784#0#HTML" expanded="true" />
+            <element signature="e#1229#1247#0#HTML" expanded="true" />
+            <element signature="e#1571#1690#0#HTML" expanded="true" />
+            <element signature="e#1732#1760#0#HTML" expanded="true" />
+            <element signature="e#1801#1841#0#HTML" expanded="true" />
+            <element signature="e#1948#1988#0#HTML" expanded="true" />
+            <element signature="e#2481#2513#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
