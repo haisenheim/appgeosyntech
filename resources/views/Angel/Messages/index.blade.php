@@ -126,8 +126,8 @@
                     </td>
 
 
-                    <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/owner/mailbox/{{ $reception->token }}">{{ $reception->expediteur->name }}</a></td>
-                    <td class="mailbox-subject"><b>{{ $prefx }}</b> - {{ $reception->subject }}
+                    <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/angel/mailbox/{{ $reception->token }}">{{ $reception->expediteur->name }}</a></td>
+                    <td class="mailbox-subject"><b> {{ $reception->reply?'Re:':'' . $prefx }}</b> - {{ $reception->subject }}
                     </td>
 
                     <td class="mailbox-date">{{ date_format($reception->created_at, 'd/m/Y H:i') }}</td>
