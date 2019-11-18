@@ -24,7 +24,7 @@
                         <img src="{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}" style="width: 100px; height: 100px; border-radius: 50px; position: absolute; top:15px; right: 10px"/>
                       </div>
 
-                      <a data-target="#viewModal" data-name="{{ $projet->name }}" data-toggle="modal" href="#" data-teaser="{{ $projet->teaser }}" class="small-box-footer btn-p">
+                      <a data-token="{{ $projet->token }}" data-target="#viewModal" data-name="{{ $projet->name }}" data-toggle="modal" href="#" data-teaser="{{ $projet->teaser }}" class="small-box-footer btn-p">
                         Je suis intéressé(e) <i class="fas fa-arrow-circle-right"></i>
                       </a>
                     </div>
@@ -49,6 +49,7 @@
               <div class="modal-body">
                     <form enctype="multipart/form-data" class="form" action="/angel/cessions/" method="post">
                     {{csrf_field()}}
+                    <input type="hidden" name="token" id="token"/>
 
                     <div class="">
                             <div class="stepwizard">
@@ -114,6 +115,7 @@
             $('.project-title').text($(this).data('name'));
             //var token = $(this).data('token');
             //var teaser = $('#teaser-'+token).html();
+            $('#token').val($(this).data('token'));
             $('#teaser-content').html($(this).data('teaser'));
         });
     </script>
