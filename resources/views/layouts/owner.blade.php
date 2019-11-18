@@ -112,7 +112,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div style="" class="">
 
-    <div style="height: 300px; " class="content-head bg-gradient-success">
+    <div style="height: 240px; " class="content-head bg-gradient-success">
         <div>
            <h1 class="content-title text-center">@yield('page-title')</h1>
              @yield('nav_actions')

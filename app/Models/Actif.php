@@ -19,6 +19,10 @@ class Actif extends Model
 		return $this->belongsTo('App\Models\Ville');
 	}
 
+	public function devise(){
+		return $this->belongsTo('App\Models\Devise');
+	}
+
 	public function owner(){
 		return $this->belongsTo('App\User','owner_id');
 	}

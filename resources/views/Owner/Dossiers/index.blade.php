@@ -114,11 +114,6 @@ DOSSIERS DE LEVEE DE FONDS
     <nav class="floating-menu">
         <ul class="main-menu">
             <li>
-                <a title="Accueil" href="/owner/" class="ripple">
-                    <i class="fas fa-home fa-lg"></i>
-                </a>
-            </li>
-            <li>
                 <a title="Nouveau Dossier" href="/owner/dossiers/create" class="ripple">
                     <i class="fa fa-plus-circle fa-lg"></i>
                 </a>
