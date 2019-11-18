@@ -47,7 +47,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                    <form enctype="multipart/form-data" class="form" action="/angel/investissements/" method="post">
+                    <form enctype="multipart/form-data" class="form" action="/angel/cessions/" method="post">
                     {{csrf_field()}}
 
                     <div class="">
