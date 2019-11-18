@@ -296,6 +296,8 @@
                             <tr>
                               <th>#</th>
                               <th>Depuis le</th>
+
+                              <th>STATUT</th>
                               <th></th>
 
                             </tr>
@@ -306,7 +308,7 @@
                                         <td>{{ $invest->angel->name }}</td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
 
-
+                                        <td></td>
                                         <td>
 
                                             <div class="btn-group">
@@ -361,12 +363,12 @@
                         {{csrf_field()}}
                         <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
                         <div class="form-group">
-                            <label  for="ordre">ORDRE DE VIREMENT</label>
+                            <label for="ordre">ORDRE DE VIREMENT</label>
                             <input type="file" class="form-control" id="ordre" name="ordre"/>
                         </div>
 
                         <div class="form-group">
-                            <label  for="actif">CONTRAT DE CESSION D'ACTIF</label>
+                            <label for="actif">CONTRAT DE CESSION D'ACTIF</label>
                             <input type="file" class="form-control" id="actif" name="actif"/>
                         </div>
 
@@ -390,7 +392,6 @@
    .modal label{
         font-size: x-small;
         line-height: 0.5;
-        color: #000000;
    }
    .card.maximized-card {
 
