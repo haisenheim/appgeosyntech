@@ -22,7 +22,7 @@
                           Actif
                       </th>
                       <th style="width: 20%">
-                          Promoteur
+                          Propriétaire
                       </th>
 
 
@@ -33,12 +33,12 @@
               <tbody>
 
 
-                   @foreach($cessions as $investissement)
-                        <?php $projet= $investissement->actif ?>
+                   @foreach($cessions as $cession)
+                        <?php $projet= $cession->actif ?>
                         <tr>
                             <td>#</td>
                             <td>
-                            <span class="text-bold text-lg-left">{{ $projet->name }} - <b>{{ $projet->prix }} {{ $projet->devise->abb }}</b></span>- <small>{{ $investissement->created_at?date_format($investissement->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
+                            <span class="text-bold text-lg-left">{{ $projet->name }} - <b>{{ $projet->prix }} {{ $projet->devise->abb }}</b></span>- <small>{{ $cession->created_at?date_format($cession->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
 
                             </td>
 
@@ -46,8 +46,8 @@
 
 
                               <td class="project-actions text-right">
-                                    @if($investissement->validated)
-                                          <a class="btn btn-success btn-xs" href="/angel/actifs/{{ $investissement->token  }}">
+                                    @if($cession->validated)
+                                          <a class="btn btn-success btn-xs" href="/angel/cessions/{{ $cession->token  }}">
                                               <i class="fas fa-search">
                                               </i>
                                              Afficher
