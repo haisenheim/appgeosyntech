@@ -361,12 +361,12 @@
                         {{csrf_field()}}
                         <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
                         <div class="form-group">
-                            <label style="font-size: x-small; line-height: 0.5;color: #000000;" for="ordre">ORDRE DE VIREMENT</label>
+                            <label  for="ordre">ORDRE DE VIREMENT</label>
                             <input type="file" class="form-control" id="ordre" name="ordre"/>
                         </div>
 
                         <div class="form-group">
-                            <label style="font-size: x-small; line-height: 0.5;color: #000000;" for="actif">CONTRAT DE CESSION D'ACTIF</label>
+                            <label  for="actif">CONTRAT DE CESSION D'ACTIF</label>
                             <input type="file" class="form-control" id="actif" name="actif"/>
                         </div>
 
