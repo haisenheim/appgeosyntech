@@ -8,6 +8,8 @@
     <div style="padding-top: 30px" class="container-fluid">
 
                 <div class="row">
+                    <?php $i=0; $colors=['danger','info','warning','primary','success'] ?>
+
                     @foreach($dossiers as $projet)
 
 
@@ -15,12 +17,13 @@
 
 
                     <!-- small card -->
-                    <div class="small-box bg-success">
+                    <div class="small-box bg-{{ $colors[$i] }}">
+                    <?php $i==5?$i=0:$i++ ?>
                       <div class="inner">
                         <h3>{{ $projet->prix }}<sup style="font-size: 20px">{{ $projet->devise->abb }}</sup></h3>
 
                         <p>{{ $projet->name }}</p>
-                        <img src="{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}" style="width: 100px; height: 100px; border-radius: 50px; float: right"/>
+                        <img src="{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}" style="width: 100px; height: 100px; border-radius: 50px; position: absolute; top:15px; right: 10px"/>
                       </div>
 
                       <a data-target="#viewModal" data-toggle="modal" href="#" class="small-box-footer">

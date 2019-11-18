@@ -97,16 +97,11 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22222222" vertical-offset="192" max-vertical-offset="1424">
-              <caret line="18" column="137" selection-start-line="18" selection-start-column="137" selection-end-line="18" selection-end-column="137" />
+            <state vertical-scroll-proportion="0.22222222" vertical-offset="48" max-vertical-offset="816">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding>
-                <element signature="e#761#784#0#HTML" expanded="true" />
-                <element signature="e#1229#1247#0#HTML" expanded="true" />
-                <element signature="e#1571#1690#0#HTML" expanded="true" />
-                <element signature="e#1732#1760#0#HTML" expanded="true" />
-                <element signature="e#1801#1841#0#HTML" expanded="true" />
-                <element signature="e#1948#1988#0#HTML" expanded="true" />
-                <element signature="e#2481#2513#0#HTML" expanded="true" />
+                <element signature="e#648#671#0#HTML" expanded="true" />
+                <element signature="e#875#974#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -624,10 +619,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27080396" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27080396" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1085,16 +1080,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22222222" vertical-offset="192" max-vertical-offset="1424">
-          <caret line="18" column="137" selection-start-line="18" selection-start-column="137" selection-end-line="18" selection-end-column="137" />
+        <state vertical-scroll-proportion="0.22222222" vertical-offset="48" max-vertical-offset="816">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding>
-            <element signature="e#761#784#0#HTML" expanded="true" />
-            <element signature="e#1229#1247#0#HTML" expanded="true" />
-            <element signature="e#1571#1690#0#HTML" expanded="true" />
-            <element signature="e#1732#1760#0#HTML" expanded="true" />
-            <element signature="e#1801#1841#0#HTML" expanded="true" />
-            <element signature="e#1948#1988#0#HTML" expanded="true" />
-            <element signature="e#2481#2513#0#HTML" expanded="true" />
+            <element signature="e#648#671#0#HTML" expanded="true" />
+            <element signature="e#875#974#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
