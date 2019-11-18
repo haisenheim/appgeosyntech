@@ -24,24 +24,16 @@
                         <img src="{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}" style="width: 100px; height: 100px; border-radius: 50px; position: absolute; top:15px; right: 10px"/>
                       </div>
 
-                      <a data-target="#viewModal" data-toggle="modal" href="#" class="small-box-footer btn-p">
+                      <a data-target="#viewModal" data-name="{{ $projet->name }}" data-toggle="modal" href="#" data-teaser="{{ $projet->teaser }}" class="small-box-footer btn-p">
                         Je suis intéressé(e) <i class="fas fa-arrow-circle-right"></i>
                       </a>
                     </div>
 
-                        <div style="display: none" id="teaser-{{$projet->token}}">
-                            <input type="hidden" name="token" value="<?= $projet->token ?>"/>
-                            <?php if($projet->teaser): ?>
-                            <div>
-                                <p>{{ $projet->teaser }}</p>
-                            <?php endif; ?>
-                        </div>
+
 
                     </div>
 
                     @endforeach
-
-
 
                 </div>
             </div>
@@ -69,10 +61,7 @@
                                         <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
                                         <p>RESUME EXECUTIF</p>
                                     </div>
-                                    <div class="stepwizard-step">
-                                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                                        <p>RENCONTRE</p>
-                                    </div>
+
 
 
                                 </div>
@@ -102,21 +91,6 @@
                                             </div>
                                             <div class="btn-div card-footer text-center">
                                                 <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
-                                                <button class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
-                                            </div>
-                                        </div>
-
-                                     </div>
-                                     <div class="setup-content" id="step-3">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                 <h4>PROGRAMMER UNE RENCONTRE AVEC LE PORTEUR DE PROJET</h4>
-                                            </div>
-                                            <div class="card-body">
-                                                <input type="date" name="dt_rdv" class="form-control"/>
-                                            </div>
-                                            <div class="btn-div card-footer text-center">
-                                                <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
                                                <button id="btn-save" class="btn btn-success btn-sm"><i class="fa fa-save"></i> ENREGISTRER</button>
                                             </div>
                                         </div>
@@ -138,9 +112,9 @@
         $('.btn-p').click(function(e){
             e.preventDefault();
             $('.project-title').text($(this).data('name'));
-            var token = $(this).data('token');
-            var teaser = $('#teaser-'+token).html();
-            $('#teaser-content').html(teaser);
+            //var token = $(this).data('token');
+            //var teaser = $('#teaser-'+token).html();
+            $('#teaser-content').html($(this).data('teaser'));
         });
     </script>
 @endsection
