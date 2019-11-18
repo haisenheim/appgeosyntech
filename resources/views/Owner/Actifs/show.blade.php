@@ -73,8 +73,8 @@
                     </div>
 
 
-      <div class="modal fade modal-lg" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-            <div class="modal-dialog">
+      <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                 <h4 class="modal-title">{{ $projet->name }}</h4>
@@ -217,8 +217,8 @@
 </main>
 
 
-<div class="modal fade modal-lg" id="angelsModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-      <div class="modal-dialog">
+<div class="modal fade" id="angelsModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+      <div class="modal-dialog modal-lg">
           <div class="modal-content">
               <div class="modal-header bg-success">
           <h4 class="modal-title">LISTE DE POTENTIELS INVESTISSEMENT</h4>
