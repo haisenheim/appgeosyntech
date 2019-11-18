@@ -251,7 +251,7 @@
 
 
 <div class="modal fade" id="angelsModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-xl">
           <div class="modal-content">
               <div class="modal-header bg-success">
           <h4 class="modal-title">LISTE DE POTENTIELS INVESTISSEURS</h4>
@@ -265,6 +265,7 @@
                             <thead>
                             <tr>
                               <th>#</th>
+                              <th>Investisseur</th>
                               <th>Depuis le</th>
 
                                <th></th>
@@ -275,9 +276,15 @@
                             <tbody>
                                 @foreach($projet->cessions as $invest)
                                     <tr>
+                                        <td>
+                                            @if($invest->validated)
+                                                <span class="badge badge-success"><i class="fa fa-checked"></i></span>
+                                            @else
+                                                <span class="badge badge-danger"><i class="fa fa-remove"></i></span>
+                                            @endif
+                                        </td>
                                         <td>{{ $invest->angel->name }}</td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
-
 
                                         <td>
                                             <div class="btn-group">
