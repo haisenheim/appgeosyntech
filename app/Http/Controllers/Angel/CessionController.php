@@ -20,7 +20,7 @@ class CessionController extends Controller
     {
         //
 	    $cessions = Cession::orderBy('created_at','desc')->where('angel_id',Auth::user()->id);
-	    return view('Angel/Cessions/index')->with(compact('investissements'));
+	    return view('Angel/Cessions/index')->with(compact('cessions'));
     }
 
     /**
