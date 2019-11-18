@@ -1,7 +1,7 @@
 @extends('......layouts.owner')
 
 @section('page-title')
-NOUVEAU CESSION D'ACTIF
+NOUVELLE CESSION D'ACTIF
 @endsection
 
 @section('content')
