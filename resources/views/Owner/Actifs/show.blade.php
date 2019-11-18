@@ -242,9 +242,11 @@
         <ul class="main-menu">
 
 
+            <li>
+                <a title="Modifier" class="ripple" href="#" data-target="#EditModal" data-toggle="modal"><i class="fa fa-pencil-alt"></i></a>
+            </li>
 
-
-            @if($projet->investissements->count() >=1)
+            @if($projet->cessions->count() >=1)
                    @if($projet->validated_step==1)
                        <li>
                             <a title="Programmer une rencontre avec les investisseur" class="ripple" href="/owner/actifs/plan"><i class="fa fa-calendar"></i></a>
