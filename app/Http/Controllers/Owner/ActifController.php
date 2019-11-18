@@ -185,7 +185,7 @@ class ActifController extends Controller
 				}
 				$name =  $projet->token .'.'. $ext;
 				$ordre->move(public_path('files/cessions/ordres_virement'), $name);
-				Projet::updateOrCreate(['token'=>$projet->token],['ordrevirementUri'=>$name]);
+				Actif::updateOrCreate(['token'=>$projet->token],['ordrevirementUri'=>$name]);
 			}
 
 		}
@@ -212,7 +212,7 @@ class ActifController extends Controller
 				}
 				$name =  $projet->token .'.'. $ext;
 				$pret->move(public_path('files/cessions/actif'), $name);
-				Projet::updateOrCreate(['token'=>$projet->token],['contrat_pretUri'=>$name]);
+				Actif::updateOrCreate(['token'=>$projet->token],['contrat_cession_actif'=>$name]);
 			}
 
 		}
