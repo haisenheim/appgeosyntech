@@ -234,8 +234,8 @@
                               <th>#</th>
                               <th>Depuis le</th>
 
+                               <th></th>
 
-                              <th></th>
 
                             </tr>
                             </thead>
@@ -245,9 +245,8 @@
                                         <td>{{ $invest->angel->name }}</td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
 
-                                        <td></td>
-                                        <td>
 
+                                        <td>
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-default btn-flat">Actions</button>
                                                 <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
