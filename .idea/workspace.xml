@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -103,12 +102,13 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25925925" vertical-offset="2176" max-vertical-offset="3792">
-              <caret line="223" column="67" selection-start-line="223" selection-start-column="67" selection-end-line="223" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.074074075" vertical-offset="2240" max-vertical-offset="3360">
+              <caret line="282" column="22" selection-start-line="282" selection-start-column="22" selection-end-line="282" selection-end-column="22" />
               <folding>
                 <element signature="tag#div#1" expanded="false" />
                 <element signature="e#10011#10026#0#HTML" expanded="true" />
                 <element signature="e#11133#11674#0#HTML" expanded="true" />
+                <element signature="tag#div#2" expanded="false" />
                 <element signature="e#12375#12394#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -118,10 +118,10 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.44" vertical-offset="34416" max-vertical-offset="34848">
-              <caret line="2819" column="11" selection-start-line="2171" selection-start-column="0" selection-end-line="2819" selection-end-column="11" />
+            <state vertical-scroll-proportion="-6.08" vertical-offset="36344" max-vertical-offset="44512">
+              <caret line="2288" column="0" selection-start-line="2288" selection-start-column="0" selection-end-line="2325" selection-end-column="0" />
               <folding>
-                <element signature="e#0#207089#0#Blade" expanded="false" />
+                <element signature="tag#div#6" expanded="false" />
                 <marker date="1573989711097" expanded="false" signature="155213:155252" placeholder="..." />
                 <marker date="1573989711097" expanded="false" signature="159345:159355" placeholder="..." />
                 <marker date="1573989711097" expanded="false" signature="159413:159423" placeholder="..." />
@@ -944,12 +944,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.72" vertical-offset="1237" max-vertical-offset="2096">
+          <caret line="80" column="104" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.44" vertical-offset="34416" max-vertical-offset="34848">
-          <caret line="2819" column="11" selection-start-line="2171" selection-start-column="0" selection-end-line="2819" selection-end-column="11" />
+        <state vertical-scroll-proportion="-6.08" vertical-offset="36344" max-vertical-offset="44512">
+          <caret line="2288" column="0" selection-start-line="2288" selection-start-column="0" selection-end-line="2325" selection-end-column="0" />
           <folding>
-            <element signature="e#0#207089#0#Blade" expanded="false" />
+            <element signature="tag#div#6" expanded="false" />
             <marker date="1573989711097" expanded="false" signature="155213:155252" placeholder="..." />
             <marker date="1573989711097" expanded="false" signature="159345:159355" placeholder="..." />
             <marker date="1573989711097" expanded="false" signature="159413:159423" placeholder="..." />
@@ -959,22 +967,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.72" vertical-offset="1237" max-vertical-offset="2096">
-          <caret line="80" column="104" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Actifs/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25925925" vertical-offset="2176" max-vertical-offset="3792">
-          <caret line="223" column="67" selection-start-line="223" selection-start-column="67" selection-end-line="223" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.074074075" vertical-offset="2240" max-vertical-offset="3360">
+          <caret line="282" column="22" selection-start-line="282" selection-start-column="22" selection-end-line="282" selection-end-column="22" />
           <folding>
             <element signature="tag#div#1" expanded="false" />
             <element signature="e#10011#10026#0#HTML" expanded="true" />
             <element signature="e#11133#11674#0#HTML" expanded="true" />
+            <element signature="tag#div#2" expanded="false" />
             <element signature="e#12375#12394#0#HTML" expanded="true" />
           </folding>
         </state>

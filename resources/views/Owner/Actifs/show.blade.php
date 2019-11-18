@@ -279,18 +279,15 @@
       </div>
 </div
 
-
-<div class="modal fade" id="upDocsModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h6  class="modal-title text-center">CHARGEMENT DES DOCUMENTS</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <div class="modal-body">
-            <div class="card card-danger">
+<div class="modal fade" id="upDocsModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header bg-success">
+          <h4 class="modal-title">CHARGEMENT DES DOCUMENTS</h4>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+      </div>
+      <div class="modal-body">
+          <div class="card card-danger">
                 <div class="card-body">
                     <form action="/owner/actif/docs/" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
@@ -306,13 +303,15 @@
 
                         <button type="submit" class="btn btn-outline-success btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
                     </form>
-
                 </div>
             </div>
-            </div>
-        </div>
-    </div>
-</div>
+      </div>
+          </div>
+      </div>
+</div
+
+
+
 
 
 <style>
