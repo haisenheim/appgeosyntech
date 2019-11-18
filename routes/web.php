@@ -188,12 +188,15 @@ Route::prefix('owner')
 	    Route::get('financement/getchoices','InfrastructureController@getChoicesJson');
 	    Route::post('dossier/upload-image','DossierController@uploadImage');
 	    Route::post('dossier/docs','DossierController@editDocs');
+	    Route::post('actif/docs','ActifController@editDocs');
 	    Route::post('dossier/add-tag','DossierController@addTags');
 	    Route::post('actifs/save','ActifController@save')->name('update.actif');
 	    Route::get('dossier/edit-field','DossierController@editFieldJson');
 	    Route::get('financement/edit-field','InfrastructureController@editFieldJson');
 	    Route::get('/investissements/open/{token}','DossierController@openDataroom');
 	    Route::get('/investissements/close/{token}','DossierController@closeDataroom');
+	    Route::get('/cessions/open/{token}','ActifController@open');
+	    Route::get('/cessions/close/{token}','ActifController@close');
 	    Route::get('/letter/create/{token}','DossierController@createLetter');
 	    Route::get('/letter/pacte-associes','ModeleController@pacte');
 	    Route::get('/letter/contrat-pret','ModeleController@pret');
