@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Angel/CessionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Angel/CessionController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -84,20 +84,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CessionController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CessionController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/CessionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.52" vertical-offset="563" max-vertical-offset="1696">
-              <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.5752809" vertical-offset="0" max-vertical-offset="1696">
+              <caret line="21" column="103" selection-start-line="21" selection-start-column="103" selection-end-line="21" selection-end-column="103" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7407407" vertical-offset="1552" max-vertical-offset="2064">
+            <state vertical-scroll-proportion="-12.8" vertical-offset="1552" max-vertical-offset="2064">
               <caret line="117" column="51" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
               <folding>
                 <element signature="e#58#83#0#HTML" expanded="true" />
@@ -215,8 +215,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/angel.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/Angel/Cessions/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Angel/CessionController.php" />
         <option value="$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Angel/CessionController.php" />
       </list>
     </option>
   </component>
@@ -1068,16 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.12" vertical-offset="1148" max-vertical-offset="3008">
-          <caret line="96" column="43" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
-          <folding>
-            <element signature="e#7514#9616#2#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Cessions/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.0" vertical-offset="368" max-vertical-offset="1616">
@@ -1097,23 +1087,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/CessionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.52" vertical-offset="563" max-vertical-offset="1696">
-          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7407407" vertical-offset="1552" max-vertical-offset="2064">
+        <state vertical-scroll-proportion="-12.8" vertical-offset="1552" max-vertical-offset="2064">
           <caret line="117" column="51" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
           <folding>
             <element signature="e#58#83#0#HTML" expanded="true" />
             <element signature="e#589#612#0#HTML" expanded="true" />
             <element signature="e#816#915#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.12" vertical-offset="1148" max-vertical-offset="3008">
+          <caret line="96" column="43" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
+          <folding>
+            <element signature="e#7514#9616#2#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/CessionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5752809" vertical-offset="0" max-vertical-offset="1696">
+          <caret line="21" column="103" selection-start-line="21" selection-start-column="103" selection-end-line="21" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>
