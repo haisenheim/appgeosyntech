@@ -30,7 +30,7 @@
               <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
               <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
                 <li>
-                  <a tabindex="-1" href="#" class="dropdown-item">CESSIONS D'ACTIFS</a>
+                  <a tabindex="-1" href="/angel/cessions" class="dropdown-item">CESSIONS D'ACTIFS</a>
                 </li>
                 <li>
                   <a tabindex="-1" href="#" class="dropdown-item">CESSIONS DE CREANCES</a>
@@ -53,7 +53,7 @@
               <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
               <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
                 <li>
-                  <a tabindex="-1" href="#" class="dropdown-item">CESSIONS D'ACTIFS</a>
+                  <a tabindex="-1" href="/angel/actifs" class="dropdown-item">CESSIONS D'ACTIFS</a>
                 </li>
                 <li>
                   <a tabindex="-1" href="#" class="dropdown-item">CESSIONS DE CREANCES</a>

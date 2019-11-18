@@ -94,6 +94,7 @@ Route::prefix('angel')
 	    Route::resource('actifs','ActifController');
         Route::resource('opportunites','OpportuniteController');
         Route::resource('investissements','InvestissementController');
+	    Route::resource('cessions','CessionController');
         Route::resource('alertes','AlerteController');
         Route::get('profil','ProfilController');
 	    Route::get('/','FrontController');
