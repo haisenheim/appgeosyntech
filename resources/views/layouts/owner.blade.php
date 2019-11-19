@@ -19,6 +19,59 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">ACCUEIL</a>
       </li>
+
+       <li class="nav-item dropdown">
+         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">MES DOSSIERS</a>
+         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+            <!-- Level two dropdown-->
+            <li class="dropdown-submenu dropdown-hover">
+              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">LEVEE DE FONDS</a>
+              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                <li>
+                  <a tabindex="-1" href="/owner/dossiers" class="dropdown-item">PME</a>
+                </li>
+                <li>
+                  <a tabindex="-1" href="/owner/earlies" class="dropdown-item">EARLY STAGE</a>
+                </li>
+
+              </ul>
+            </li>
+            <!-- End Level two -->
+           <!-- Level two dropdown-->
+           <li class="dropdown-submenu dropdown-hover">
+             <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
+             <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+               <li>
+                 <a tabindex="-1" href="/owner/actifs" class="dropdown-item">CESSIONS D'ACTIFS</a>
+               </li>
+               <li>
+                 <a tabindex="-1" href="/owner/creances" class="dropdown-item">CESSIONS DE CREANCES</a>
+               </li>
+
+             </ul>
+           </li>
+           <!-- End Level two -->
+
+
+            <!-- Level two dropdown-->
+           <li class="dropdown-submenu dropdown-hover">
+             <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">FINANCEMENTS STRUCTURES</a>
+             <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+               <li>
+                 <a tabindex="-1" href="/owner/ressources" class="dropdown-item">RESSOURCES NATURELLES</a>
+               </li>
+               <li>
+                 <a tabindex="-1" href="/owner/ppp" class="dropdown-item">PPP</a>
+               </li>
+
+             </ul>
+           </li>
+           <!-- End Level two -->
+
+
+         </ul>
+       </li>
+
            <li class="nav-item d-none d-sm-inline-block dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#"> MES DOSSIERS </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">

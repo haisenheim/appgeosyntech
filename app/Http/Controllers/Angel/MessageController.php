@@ -90,6 +90,7 @@ class MessageController extends Controller
      */
     public function show($token)
     {
+
         $message = Message::where('token',$token)->first();
 	    $receptions = Message::all()->where('receptor_id',Auth::user()->id);
 	    $envois = Message::all()->where('sender_id',Auth::user()->id);

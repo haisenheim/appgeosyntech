@@ -185,16 +185,6 @@
                 <div class="card-body">
 
                 <div class="form-group">
-                <label for="">DESTINATAIRE</label>
-                <select name="receptor_id" class="form-control" id="receptor_id">
-                    <option value="0">CHOIX DU DESTINAIRE</option>
-                    @foreach($angels as $angel)
-                        <option value="{{ $angel->id }}">{{ $angel->name  }} - <small>{{ $angel->email }}</small></option>
-                    @endforeach
-                </select>
-
-                </div>
-                <div class="form-group">
                     <label for="">Projet</label>
                     <select name="investissement_id"  class="form-control" id="investissement_id">
 
