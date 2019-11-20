@@ -1,7 +1,7 @@
 @extends('......layouts.owner')
 
 @section('page-title')
-DOSSIERS DE LEVEE DE FONDS
+DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
 @endsection
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
@@ -33,7 +33,7 @@ DOSSIERS DE LEVEE DE FONDS
                           Progression
                       </th>
 
-                      <th style="width: 20%">
+                      <th style="width: 10%">
                       </th>
                   </tr>
               </thead>

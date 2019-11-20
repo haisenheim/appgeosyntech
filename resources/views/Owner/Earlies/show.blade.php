@@ -1608,7 +1608,7 @@
             getPlan($('#plan_id').val());
 
             $.ajax({
-                url: "/consultant/dossier/getchoices",
+                url: "/owner/projet/getchoices",
                 type:'Get',
                 dataType:'json',
                 data:{id:$('#id').val()},
