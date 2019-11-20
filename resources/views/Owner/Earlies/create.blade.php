@@ -122,8 +122,7 @@ CREATION D'UN DOSSIER EARLY STAGE
                                                                  <input id="address" name="address" maxlength="100" type="text" required="required" class="form-control" placeholder="Saisir l'adresse de la personne ressource">
                                                              </div>
                                                          </div>
-                                                     </div>
-                                                     <div class="row">
+
                                                          <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">TELEPHONE</label>
