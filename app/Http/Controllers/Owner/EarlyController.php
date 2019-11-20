@@ -311,7 +311,7 @@ class EarlyController extends Controller
 	public function initJson(Request $request){
 		//$dossier = new Projet();
 
-		dd($request);
+		dd($request->input());
 		$answers = isset($request->all()['answers'])?$request->all()['answers']:null;
 		$produits = isset($request->all()['produits'])?$request->all()['produits']:null;
 
