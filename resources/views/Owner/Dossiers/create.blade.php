@@ -1211,17 +1211,17 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                     url:url,
                     type:'Post',
                     dataType:'JSON',
+                    denctype:'multipart/form-data',
+                    processData:false,
+                    contentType:false,
                     data:fd,
+
                    /* data:{_csrf:$('input[name="_token"]').val(), answers:reponses, dossier:values,produits:produits,bm:bm,bil1:bil1,bil2:bil2,bil3:bil3,
                     compte1:cr1, compte2:cr2,compte3:cr3
                     },*/
                     beforeSend:function(xhr){
                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
-                        $("#loadMe").modal({
-                            backdrop: "static", //remove ability to close modal with click
-                            keyboard: false, //remove option to close with keyboard
-                            show: true //Display loader!
-                        });
+
                     },
                     success: function(data){
                        loadingOverlay.cancel(spinHandle_firstProcess);
