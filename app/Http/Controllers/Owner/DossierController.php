@@ -297,24 +297,63 @@ class DossierController extends Controller
 	// Premiere sauvegarde du dossier
 
 	public function initJson(Request $request){
-		//$dossier = new Projet();
+
 
 		//dd($request->all());
-		$answers = isset($request->all()['answers'])?$request->all()['answers']:null;
-		$produits = isset($request->all()['produits'])?$request->all()['produits']:null;
+		$dossier = json_decode($request->all()['dossier'],true);
+		$answers = isset($request->all()['answers'])?json_decode($request->all()['answers'],true):null;
+		$produits = isset($request->all()['produits'])?json_decode($request->all()['produits'],true):null;
 
-		$dossier = $request->all()['dossier'];
+		//$dossier = $request->all()['dossier'];
+
+		$dossier['moi_id'] = date('m');
+		$dossier['annee'] = date('Y');
+		$dossier['author_id']= Auth::user()->id;
+		$dossier['owner_id']=Auth::user()->id;
+		$dossier['description_modele_economique'] = isset($request->all()['bm'])?$request->bm:'';
+		$token = sha1(date('ymdhs').$dossier['owner_id']);
+		$dossier['token'] = $token;
+
+		$file = $request->imageUri;
+		if($file){
+			$ext = $file->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif');
+			if(in_array($ext,$arr_ext)){
+				if(!file_exists(public_path('img').'/projets')){
+					mkdir(public_path('img').'/projets');
+				}
+				//dd($projet);
+				if(file_exists(public_path('img').'/projets/'.$token.'.'.$ext)){
+					unlink(public_path('img').'/projets/'.$token.'.'.$ext);
+				}
+				$name = $token.'.'.$ext;
+				$file->move(public_path('img/projets'), $name);
+				//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
+				$dossier['imageUri'] = 'projets/'.$name;
+			}
+		}
+
+		//$answers = isset($request->all()['answers'])?$request->all()['answers']:null;
+		//$produits = isset($request->all()['produits'])?$request->all()['produits']:null;
+
+		/*$dossier = $request->all()['dossier'];
 		$dossier['moi_id'] = date('m');
 		$dossier['annee'] = date('Y');
 		$dossier['author_id']= Auth::user()->id;
 		$dossier['owner_id']=Auth::user()->id;
 		$dossier['description_modele_economique'] = $request->all()['bm'];
 		$dossier['capital'] = isset($dossier['capital'])?1:0;
-		$dossier['token'] = sha1(date('ymdhs').$dossier['owner_id']);
+		$dossier['token'] = sha1(date('ymdhs').$dossier['owner_id']);*/
 		$dossier = Projet::create($dossier);
 		if($dossier){
-			if(!empty($request->all()['bil1']['stocks'])){
-				$bilan1 = $request->all()['bil1'];
+			$bilan1 = isset($request->all()['bil1'])?json_decode($request->all()['bil1'],true):null;
+			$bilan2 = isset($request->all()['bil2'])?json_decode($request->all()['bil2'],true):null;
+			$bilan3 = isset($request->all()['bil3'])?json_decode($request->all()['bil3'],true):null;
+			$res1 = isset($request->all()['compte1'])?json_decode($request->all()['compte1'],true):null;
+			$res2 = isset($request->all()['compte2'])?json_decode($request->all()['compte2'],true):null;
+			$res3 = isset($request->all()['compte3'])?json_decode($request->all()['compte3'],true):null;
+			if($bilan1){
+				//$bilan1 = $request->all()['bil1'];
 				$bilan1['annee'] = date('Y') -1;
 				$bilan1['moi_id'] = date('m');
 				$bilan1['projet_id'] = $dossier->id;
@@ -322,8 +361,8 @@ class DossierController extends Controller
 				$bilan1 = Bilan::create($bilan1);
 			}
 
-			if(!empty($request->all()['bil2']['stocks'])){
-				$bilan2 = $request->all()['bil2'];
+			if($bilan2){
+				//$bilan2 = $request->all()['bil2'];
 				$bilan2['annee'] = date('Y') -2;
 				$bilan2['moi_id'] = date('m');
 				$bilan2['projet_id'] = $dossier->id;
@@ -331,8 +370,8 @@ class DossierController extends Controller
 				$bilan2 = Bilan::create($bilan2);
 			}
 
-			if(!empty($request->all()['bil3']['stocks'])){
-				$bilan2 = $request->all()['bil3'];
+			if($bilan3){
+				//$bilan2 = $request->all()['bil3'];
 				$bilan2['annee'] = date('Y') -3;
 				$bilan2['moi_id'] = date('m');
 				$bilan2['projet_id'] = $dossier->id;
@@ -340,8 +379,8 @@ class DossierController extends Controller
 				$bilan3 = Bilan::create($bilan2);
 			}
 
-			if(!empty($request->all()['compte1']['ca'])){
-				$res1 = $request->all()['compte1'];
+			if($res1){
+				//$res1 = $request->all()['compte1'];
 				$res1['annee'] = date('Y') -1;
 				$res1['moi_id'] = date('m');
 				$res1['projet_id'] = $dossier->id;
@@ -349,8 +388,8 @@ class DossierController extends Controller
 				$result = Resultat::create($res1);
 			}
 
-			if(!empty($request->all()['compte2']['ca'])){
-				$res1 = $request->all()['compte2'];
+			if($res2){
+				//$res1 = $request->all()['compte2'];
 				$res1['annee'] = date('Y') -2;
 				$res1['moi_id'] = date('m');
 				$res1['projet_id'] = $dossier->id;
@@ -358,8 +397,8 @@ class DossierController extends Controller
 				$result = Resultat::create($res1);
 			}
 
-			if(!empty($request->all()['compte3']['ca'])){
-				$res1 = $request->all()['compte3'];
+			if($res3){
+				//$res1 = $request->all()['compte3'];
 				$res1['annee'] = date('Y') -3;
 				$res1['moi_id'] = date('m');
 				$res1['projet_id'] = $dossier->id;

@@ -47,26 +47,40 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                                             <fieldset>
                                                 <legend>DONNEES GENERALES</legend>
                                                     <div class="row">
-                                                         <div class="col-md-5">
+                                                        <div class="col-md-3">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">NOM DE LA SOCIETE</label>
+                                                                 <input id="societe" name="societe" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                                             </div>
+                                                         </div>
+                                                         <div class="col-md-4">
                                                              <div class="form-group">
                                                                  <label class="control-label">INTITULE DU PROJET</label>
                                                                  <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" placeholder="">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-3">
+                                                         <div class="col-md-2">
                                                              <div class="form-group">
                                                                  <label class="control-label">CODE/NUMERO</label>
                                                                  <input id="code" name="name" maxlength="100" type="text" required="required" class="form-control" placeholder="Saisir le code du dossier">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-4">
+                                                         <div class="col-md-3">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">PHOTO DU PROJET</label>
+                                                                 <input id="imageUri" name="imageUri"  required="required" type="file"  class="form-control">
+                                                             </div>
+                                                         </div>
+                                                       </div>
+                                                       <div class="row">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">COUT DU PROJET</label>
                                                                  <input id="montant" name="montant" maxlength="100" type="number" required="required" class="form-control" placeholder="Saisir le code du dossier">
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-4 col-sm-12">
+                                                         <div class="col-md-2 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">DEVISE</label>
                                                                  <select class="form-control" name="variante_id" id="variante_id">
@@ -76,18 +90,17 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                                                                  </select>
                                                              </div>
                                                          </div>
-
-
-                                                         <div class="col-md-3">
-                                                             <div class="form-group" style="margin-top: 25px;">
-                                                                <div class="custom-control custom-checkbox">
-                                                                  <input class="custom-control-input" type="checkbox" id="capital" name="capital"  >
-                                                                  <label for="capital" class="custom-control-label">OVERTURE DU CAPITAL ?</label>
-                                                                </div>
+                                                         <div class="col-md-3 col-sm-12">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">OUVERTURE DE CAPITAL ?</label>
+                                                                 <select class="form-control" name="capital" id="capital">
+                                                                    <option value="0">NON</option>
+                                                                    <option value="1">OUI</option>
+                                                                 </select>
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-5 col-sm-12">
+                                                         <div class="col-md-4 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">VILLE</label>
                                                                  <select class="form-control" name="ville_id" id="ville_id">
@@ -964,6 +977,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
             border-color: none;
         }
     </style>
+         <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
@@ -1183,13 +1197,28 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                     reponses.push(elt);
                 });
 
+                 var fd = new FormData();
+                 fd.append('imageUri',$('#imageUri')[0].files[0]);
+                 fd.append('dossier',JSON.stringify(values));
+                 fd.append('answers',JSON.stringify(reponses));
+                 fd.append('produits',JSON.stringify(produits));
+                 fd.append('bm',bm);
+                 fd.append('bil1',JSON.stringify(bil1));
+                 fd.append('bil2',JSON.stringify(bil2));
+                 fd.append('bil3',JSON.stringify(bil3));
+                 fd.append('compte1',JSON.stringify(cr1));
+                 fd.append('compte2',JSON.stringify(cr2));
+                 fd.append('compte3',JSON.stringify(cr3));
+                var spinHandle_firstProcess = loadingOverlay.activate();
+
                 $.ajax({
                     url:url,
                     type:'Post',
                     dataType:'JSON',
-                    data:{_csrf:$('input[name="_token"]').val(), answers:reponses, dossier:values,produits:produits,bm:bm,bil1:bil1,bil2:bil2,bil3:bil3,
+                    data:fd,
+                   /* data:{_csrf:$('input[name="_token"]').val(), answers:reponses, dossier:values,produits:produits,bm:bm,bil1:bil1,bil2:bil2,bil3:bil3,
                     compte1:cr1, compte2:cr2,compte3:cr3
-                    },
+                    },*/
                     beforeSend:function(xhr){
                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
                         $("#loadMe").modal({
@@ -1199,11 +1228,14 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                         });
                     },
                     success: function(data){
-                        $("#loadMe").modal("hide");
+                       loadingOverlay.cancel(spinHandle_firstProcess);
                         window.location.replace(redirectUrl+"/"+data);
+                        //console.log(data);
 
                     },
                     Error:function(){
+                        loadingOverlay.cancel(spinHandle_firstProcess);
+                        alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
                         $('#btn-save').show();
                     }
                 });
