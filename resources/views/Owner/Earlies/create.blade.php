@@ -621,9 +621,9 @@ CREATION D'UN DOSSIER EARLY STAGE
                 });
 
                 var data = new FormData();
-                data.append('answers',reponses.serializeArray());
-                data.append('dossier',values.serializeArray());
-                data.append('produits',produits.serializeArray());
+                data.append('answers',reponses.serialize());
+                data.append('dossier',values.serialize());
+                data.append('produits',produits.serialize());
                 data.append('bm',bm);
                 data.append('_csrf',$('input[name="_token"]').val());
                 data.append('imageUri',$('#imageUri')[0].files[0]);
