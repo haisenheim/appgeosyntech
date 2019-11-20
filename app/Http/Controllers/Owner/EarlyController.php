@@ -374,10 +374,10 @@ class EarlyController extends Controller
     {
         //
 		$tags = Tags::all();
-	    $projet = Projet::where(['token'=>$token])->first();
+	    $projet = Earlie::where(['token'=>$token])->first();
 	    $mois = Moi::all();
 	    //dd($dossier->bilans);
-	    return view('Owner/Dossiers/show')->with(compact('projet','tags','mois'));
+	    return view('Owner/Earlies/show')->with(compact('projet','tags','mois'));
     }
 
     /**
