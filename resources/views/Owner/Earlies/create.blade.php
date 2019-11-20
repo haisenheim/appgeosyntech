@@ -620,31 +620,25 @@ CREATION D'UN DOSSIER EARLY STAGE
                     reponses.push(elt);
                 });
 
-               // var data = new FormData();
-//               var data = {};
-//                data.answers=reponses;
-//                data.dossier=values;
-//                data.produits=produits;
-//                data.bm=bm;
-//                data._csrf=$('input[name="_token"]').val();
-//                data.imageUri=$('#imageUri')[0].files[0];
+
                     var fd = new FormData();
                     fd.append('imageUri',$('#imageUri')[0].files[0]);
                     fd.append('dossier',JSON.stringify(values));
                     fd.append('answers',JSON.stringify(reponses));
                     fd.append('produits',JSON.stringify(produits));
-                   //console.log($('#imageUri')[0].files[0]);
+                    fd.append('bm',bm);
+
                 $.ajax({
                     url:url,
                     type:'Post',
-                    //dataType:'JSON',
-                  //  data:{answers:reponses,dossier:values,produits:produits,bm:bm,imageUri:$('#imageUri')[0].files[0]},
+
                     data:fd,
                     enctype:'multipart/form-data',
                     processData:false,
                     contentType:false,
                     beforeSend:function(xhr){
                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                         $('#btn-save').hide();
                         $("#loadMe").modal({
                             backdrop: "static", //remove ability to close modal with click
                             keyboard: false, //remove option to close with keyboard
@@ -653,8 +647,8 @@ CREATION D'UN DOSSIER EARLY STAGE
                     },
                     success: function(data){
                         $("#loadMe").modal("hide");
-                        //window.location.replace(redirectUrl+"/"+data);
-                        console.log(data);
+                        window.location.replace(redirectUrl+"/"+data);
+                        //console.log(data);
 
                     },
                     Error:function(){
