@@ -111,34 +111,30 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                                                              </div>
                                                          </div>
 
-
-
-
                                                      </div>
                                                      <hr/>
 
                                                      <div class="row">
-                                                         <div class="col-md-6">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">REPRESENTANT</label>
                                                                  <input id="representant" name="montant" maxlength="250" type="text" required="required" class="form-control" placeholder="Personne de ressource du dossier">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-6">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">ADRESSE</label>
                                                                  <input id="address" name="address" maxlength="100" type="text" required="required" class="form-control" placeholder="Saisir l'adresse de la personne ressource">
                                                              </div>
                                                          </div>
-                                                     </div>
-                                                     <div class="row">
-                                                         <div class="col-md-4">
+
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">TELEPHONE</label>
                                                                  <input id="phone" name="phone" maxlength="50" type="text" required="required" class="form-control" placeholder="Saisir ici les contacts telephoniques">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-5">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">EMAIL</label>
                                                                  <input id="email" name="email" maxlength="100" type="email" required="required" class="form-control" placeholder="Saisir l'adresse email">
