@@ -69,10 +69,6 @@ class Earlie extends Model
         return $this->belongsTo('App\Models\Secteur');
     }
 
-    public function tinvestissements(){
-        return $this->belongsToMany('App\Models\Tinvestissement','projets_tinvestissements');
-    }
-
 
 	public function investissements(){
 		return $this->hasMany('App\Models\Investissement');
@@ -83,13 +79,9 @@ class Earlie extends Model
         return $this->belongsTo('App\User','expert_id');
     }
 
-    public function typecontrat(){
-        return $this->belongsToMany('App\Models\Tcontrat','projets_tcontrats');
-    }
 
-    public function bilans(){
-        return $this->hasMany('App\Models\Bilan');
-    }
+
+
 
 	public function reportbilans(){
 		return $this->hasMany('App\Models\Reportbilan');
@@ -99,9 +91,6 @@ class Earlie extends Model
 		return $this->hasMany('App\Models\Reportresultat');
 	}
 
-    public function resultats(){
-        return $this->hasMany('App\Models\Resultat');
-    }
 
     public function prevbilans(){
         return $this->hasMany('App\Models\Prevbilan');
@@ -128,15 +117,15 @@ class Earlie extends Model
     }
 
 	public function choices(){
-		return $this->hasMany('App\Models\ChoicesProjet');
+		return $this->hasMany('App\Models\ChoicesEarlie');
 	}
 
 	public function tags(){
-		return $this->belongsToMany('App\Models\Tags','tags_projets','projet_id','tag_id');
+		return $this->belongsToMany('App\Models\Tags','tags_earlies','earlie_id','tag_id');
 	}
 
 	public function produits(){
-		return $this->hasMany('App\Models\ProduitsProjet');
+		return $this->hasMany('App\Models\EarliesProduit');
 	}
 
 
@@ -152,9 +141,7 @@ class Earlie extends Model
 	public function moyens(){
 		return $this->belongsToMany('App\Models\Moyen','earlies_moyens');
 	}
-	public function financements(){
-		return $this->hasMany('App\Models\Moyens_projet');
-	}
+
 
 	public function prevtresoreries(){
 		return $this->hasMany('App\Models\Prevtresorerie');
