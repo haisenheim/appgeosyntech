@@ -633,7 +633,7 @@ CREATION D'UN DOSSIER EARLY STAGE
                     url:url,
                     type:'Post',
                     dataType:'JSON',
-                    data:{answers:reponses,dossier:values,produits:produits,bm:bm,imageUri:$('#imageUri')[0].files[0]},
+                    data:{answers:reponses,dossier:values,produits:produits,bm:bm},
                     //enctype:'multipart/form-data',
                     //processData:false,
                     //contentType:false,
