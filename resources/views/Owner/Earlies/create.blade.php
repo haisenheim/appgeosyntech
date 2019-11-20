@@ -651,7 +651,7 @@ CREATION D'UN DOSSIER EARLY STAGE
                     },
                     success: function(data){
                         $("#loadMe").modal("hide");
-                        window.location.replace(redirectUrl+"/"+data);
+                        //window.location.replace(redirectUrl+"/"+data);
 
                     },
                     Error:function(){
