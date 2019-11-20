@@ -132,15 +132,15 @@
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6177106" vertical-offset="6914" max-vertical-offset="7888">
-              <caret line="625" column="64" selection-start-line="625" selection-start-column="64" selection-end-line="625" selection-end-column="64" />
+              <caret line="625" column="57" selection-start-line="625" selection-start-column="57" selection-end-line="625" selection-end-column="57" />
               <folding>
                 <element signature="tag#div#1;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="e#10723#10785#0#HTML" expanded="true" />
                 <element signature="e#25518#25546#0#HTML" expanded="true" />
                 <element signature="e#25838#25888#0#HTML" expanded="true" />
                 <element signature="tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <marker date="1574217313896" expanded="false" signature="36173:36189" placeholder="..." />
-                <marker date="1574217313896" expanded="false" signature="36993:37009" placeholder="..." />
+                <marker date="1574217434565" expanded="false" signature="36173:36189" placeholder="..." />
+                <marker date="1574217434565" expanded="false" signature="36993:37009" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1099,15 +1099,15 @@
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6177106" vertical-offset="6914" max-vertical-offset="7888">
-          <caret line="625" column="64" selection-start-line="625" selection-start-column="64" selection-end-line="625" selection-end-column="64" />
+          <caret line="625" column="57" selection-start-line="625" selection-start-column="57" selection-end-line="625" selection-end-column="57" />
           <folding>
             <element signature="tag#div#1;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="e#10723#10785#0#HTML" expanded="true" />
             <element signature="e#25518#25546#0#HTML" expanded="true" />
             <element signature="e#25838#25888#0#HTML" expanded="true" />
             <element signature="tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <marker date="1574217313896" expanded="false" signature="36173:36189" placeholder="..." />
-            <marker date="1574217313896" expanded="false" signature="36993:37009" placeholder="..." />
+            <marker date="1574217434565" expanded="false" signature="36173:36189" placeholder="..." />
+            <marker date="1574217434565" expanded="false" signature="36993:37009" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -620,10 +620,11 @@ CREATION D'UN DOSSIER EARLY STAGE
                     reponses.push(elt);
                 });
 
-                var data = new FormData();
-                data.append('answers',reponses.serialize());
-                data.append('dossier',values.serialize());
-                data.append('produits',produits.serialize());
+               // var data = new FormData();
+               var data = {};
+                data.append('answers',reponses);
+                data.append('dossier',values);
+                data.append('produits',produits);
                 data.append('bm',bm);
                 data.append('_csrf',$('input[name="_token"]').val());
                 data.append('imageUri',$('#imageUri')[0].files[0]);
@@ -633,8 +634,8 @@ CREATION D'UN DOSSIER EARLY STAGE
                     dataType:'JSON',
                     data:data,
                     enctype:'multipart/form-data',
-                    processData:false,
-                    contentType:false,
+                    //processData:false,
+                    //contentType:false,
                     beforeSend:function(xhr){
                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
                         $("#loadMe").modal({
