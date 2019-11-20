@@ -445,6 +445,7 @@ CREATION D'UN DOSSIER EARLY STAGE
             border-color: none;
         }
     </style>
+     <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
@@ -627,6 +628,8 @@ CREATION D'UN DOSSIER EARLY STAGE
                     fd.append('answers',JSON.stringify(reponses));
                     fd.append('produits',JSON.stringify(produits));
                     fd.append('bm',bm);
+                    var spinHandle_firstProcess = loadingOverlay.activate();
+
 
                 $.ajax({
                     url:url,
@@ -639,19 +642,17 @@ CREATION D'UN DOSSIER EARLY STAGE
                     beforeSend:function(xhr){
                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
                          $('#btn-save').hide();
-                        $("#loadMe").modal({
-                            backdrop: "static", //remove ability to close modal with click
-                            keyboard: false, //remove option to close with keyboard
-                            show: true //Display loader!
-                        });
+
                     },
                     success: function(data){
-                        $("#loadMe").modal("hide");
+                       loadingOverlay.cancel(spinHandle_firstProcess);
                         window.location.replace(redirectUrl+"/"+data);
                         //console.log(data);
 
                     },
                     Error:function(){
+                        loadingOverlay.cancel(spinHandle_firstProcess);
+                        alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
                         $('#btn-save').show();
                     }
                 });

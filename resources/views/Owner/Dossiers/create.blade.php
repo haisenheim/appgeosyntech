@@ -1,7 +1,7 @@
 @extends('......layouts.owner')
 
 @section('page-title')
-CREATION D'UN NOUVEAU DE LEVEE DE FONDS
+NOUVEAU DOSSIER DE LEVEE DE FONDS
 @endsection
 
 
