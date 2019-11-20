@@ -621,18 +621,18 @@ CREATION D'UN DOSSIER EARLY STAGE
                 });
 
                // var data = new FormData();
-               var data = {};
-                data.answers=reponses;
-                data.dossier=values;
-                data.produits=produits;
-                data.bm=bm;
-                data._csrf=$('input[name="_token"]').val();
-                data.imageUri=$('#imageUri')[0].files[0];
+//               var data = {};
+//                data.answers=reponses;
+//                data.dossier=values;
+//                data.produits=produits;
+//                data.bm=bm;
+//                data._csrf=$('input[name="_token"]').val();
+//                data.imageUri=$('#imageUri')[0].files[0];
                 $.ajax({
                     url:url,
                     type:'Post',
                     dataType:'JSON',
-                    data:data,
+                    data:{answers:reponses,dossier:values,produits:produits,bm:bm,imageUri:$('#imageUri')[0].files[0]},
                     enctype:'multipart/form-data',
                     //processData:false,
                     //contentType:false,
