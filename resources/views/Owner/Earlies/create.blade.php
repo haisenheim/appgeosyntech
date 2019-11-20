@@ -628,15 +628,18 @@ CREATION D'UN DOSSIER EARLY STAGE
 //                data.bm=bm;
 //                data._csrf=$('input[name="_token"]').val();
 //                data.imageUri=$('#imageUri')[0].files[0];
-                   console.log($('#imageUri')[0].files[0]);
+                    var fd = new FormData();
+                    fd.append('imageUri',$('#imageUri')[0].files[0]);
+                   //console.log($('#imageUri')[0].files[0]);
                 $.ajax({
                     url:url,
                     type:'Post',
-                    dataType:'JSON',
-                    data:{answers:reponses,dossier:values,produits:produits,bm:bm},
+                    //dataType:'JSON',
+                  //  data:{answers:reponses,dossier:values,produits:produits,bm:bm,imageUri:$('#imageUri')[0].files[0]},
+                    data:{answers:reponses,dossier:values,produits:produits,bm:bm,fd:fd},
                     //enctype:'multipart/form-data',
-                    //processData:false,
-                    //contentType:false,
+                    processData:false,
+                    contentType:'application/json',
                     beforeSend:function(xhr){
                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
                         $("#loadMe").modal({
