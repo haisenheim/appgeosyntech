@@ -31,7 +31,7 @@
                   <a tabindex="-1" href="/owner/dossiers" class="dropdown-item">PME</a>
                 </li>
                 <li>
-                  <a tabindex="-1" href="/owner/earlies" class="dropdown-item">EARLY STAGE</a>
+                  <a tabindex="-1" href="/owner/debutants" class="dropdown-item">EARLY STAGE</a>
                 </li>
 
               </ul>
@@ -61,7 +61,7 @@
                  <a tabindex="-1" href="/owner/ressources" class="dropdown-item">RESSOURCES NATURELLES</a>
                </li>
                <li>
-                 <a tabindex="-1" href="/owner/ppp" class="dropdown-item">PPP</a>
+                 <a tabindex="-1" href="/owner/partenariats" class="dropdown-item">PPP</a>
                </li>
 
              </ul>

@@ -178,7 +178,9 @@ Route::prefix('owner')
     ->group(function(){
 	    Route::resource('mailbox','MessageController');
 	    Route::post('mailbox/reply','MessageController@reply');
-        Route::resource('dossiers','DossierController');
+	    Route::resource('projets','EarlyController');
+
+	    Route::resource('dossiers','DossierController');
 	    Route::resource('financements','InfrastructureController');
 	    Route::resource('actifs','ActifController');
         Route::get('about','AboutController');
