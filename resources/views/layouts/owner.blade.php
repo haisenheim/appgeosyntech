@@ -31,7 +31,7 @@
                   <a tabindex="-1" href="/owner/dossiers" class="dropdown-item">PME</a>
                 </li>
                 <li>
-                  <a tabindex="-1" href="/owner/debutants" class="dropdown-item">EARLY STAGE</a>
+                  <a tabindex="-1" href="/owner/projets" class="dropdown-item">EARLY STAGE</a>
                 </li>
 
               </ul>
