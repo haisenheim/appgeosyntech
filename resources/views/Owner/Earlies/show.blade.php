@@ -73,7 +73,12 @@
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
                             <p>AUTEUR : {{ $projet->auteur->name }}</p>
                             <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
+                            @if($projet->moyens)
+                                                                        @foreach($projet->moyens as $moyen)
 
+                                                                           <?php dd($moyen); ?>
+                                                                        @endforeach
+                                                                    @endif
                             @if($projet->etape>=4)
                                 <ul class="list-group">
                                     <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
@@ -87,7 +92,7 @@
                                         @if($projet->moyens)
                                             @foreach($projet->moyens as $moyen)
 
-                                               <?php debug($moyen); ?>
+                                               <?php dd($moyen); ?>
                                             @endforeach
                                         @endif
                                     </ul>
