@@ -622,12 +622,12 @@ CREATION D'UN DOSSIER EARLY STAGE
 
                // var data = new FormData();
                var data = {};
-                data.append('answers',reponses);
-                data.append('dossier',values);
-                data.append('produits',produits);
-                data.append('bm',bm);
-                data.append('_csrf',$('input[name="_token"]').val());
-                data.append('imageUri',$('#imageUri')[0].files[0]);
+                data.answers=reponses;
+                data.dossier=values;
+                data.produits=produits;
+                data.bm=bm;
+                data._csrf=$('input[name="_token"]').val();
+                data.imageUri=$('#imageUri')[0].files[0];
                 $.ajax({
                     url:url,
                     type:'Post',
