@@ -186,6 +186,7 @@ Route::prefix('owner')
         Route::get('about','AboutController');
         Route::get('profil','ProfilController');
 	    Route::post('/dossier/initJson','DossierController@initJson');
+	    Route::post('/projet/initJson','EarlyController@initJson');
 	    Route::get('dossier/getchoices','DossierController@getChoicesJson');
 	    Route::post('/financement/initJson','InfrastructureController@initJson');
 	    Route::get('financement/getchoices','InfrastructureController@getChoicesJson');
