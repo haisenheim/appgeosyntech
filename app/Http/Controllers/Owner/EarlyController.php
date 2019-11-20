@@ -322,7 +322,7 @@ class EarlyController extends Controller
 		$dossier['annee'] = date('Y');
 		$dossier['author_id']= Auth::user()->id;
 		$dossier['owner_id']=Auth::user()->id;
-		$dossier['description_modele_economique'] = $request->all()['bm'];
+		$dossier['description_modele_economique'] = isset($request->all()['bm'])?$request->bm:'pas de modele';
 		$token = sha1(date('ymdhs').$dossier['owner_id']);
 		$dossier['token'] = $token;
 
