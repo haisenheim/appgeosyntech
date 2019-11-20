@@ -59,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.65442765" vertical-offset="4305" max-vertical-offset="6352">
-              <caret line="313" column="50" selection-start-line="313" selection-start-column="50" selection-end-line="313" selection-end-column="50" />
+              <caret line="313" column="56" selection-start-line="313" selection-start-column="56" selection-end-line="313" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -1112,7 +1112,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65442765" vertical-offset="4305" max-vertical-offset="6352">
-          <caret line="313" column="50" selection-start-line="313" selection-start-column="50" selection-end-line="313" selection-end-column="50" />
+          <caret line="313" column="56" selection-start-line="313" selection-start-column="56" selection-end-line="313" selection-end-column="56" />
           <folding />
         </state>
       </provider>
