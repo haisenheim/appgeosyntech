@@ -631,6 +631,8 @@ CREATION D'UN DOSSIER EARLY STAGE
                     var fd = new FormData();
                     fd.append('imageUri',$('#imageUri')[0].files[0]);
                     fd.append('dossier',JSON.stringify(values));
+                    fd.append('answers',JSON.stringify(reponses));
+                    fd.append('produits',JSON.stringify(produits));
                    //console.log($('#imageUri')[0].files[0]);
                 $.ajax({
                     url:url,
@@ -652,6 +654,7 @@ CREATION D'UN DOSSIER EARLY STAGE
                     success: function(data){
                         $("#loadMe").modal("hide");
                         //window.location.replace(redirectUrl+"/"+data);
+                        console.log(data);
 
                     },
                     Error:function(){

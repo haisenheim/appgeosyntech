@@ -311,21 +311,43 @@ class EarlyController extends Controller
 	public function initJson(Request $request){
 		//$dossier = new Projet();
 
-		dd(json_decode($request->all()['dossier'])->name);
-		$answers = isset($request->all()['answers'])?$request->all()['answers']:null;
-		$produits = isset($request->all()['produits'])?$request->all()['produits']:null;
+		//dd(json_decode($request->all()['dossier'])->name);
+		$dossier = json_decode($request->all()['dossier'],true);
+		$answers = isset($request->all()['answers'])?json_decode($request->all()['answers'],true):null;
+		$produits = isset($request->all()['produits'])?json_decode($request->all()['produits'],true):null;
 
-		$dossier = $request->all()['dossier'];
+		//$dossier = $request->all()['dossier'];
+
 		$dossier['moi_id'] = date('m');
 		$dossier['annee'] = date('Y');
 		$dossier['author_id']= Auth::user()->id;
 		$dossier['owner_id']=Auth::user()->id;
 		$dossier['description_modele_economique'] = $request->all()['bm'];
+		$token = sha1(date('ymdhs').$dossier['owner_id']);
+		$dossier['token'] = $token;
 
-		$dossier['token'] = sha1(date('ymdhs').$dossier['owner_id']);
+		$file = $request->imageUri;
+		if($file){
+			$ext = $file->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif');
+			if(in_array($ext,$arr_ext)){
+				if(!file_exists(public_path('img').'/earlies')){
+					mkdir(public_path('img').'/earlies');
+				}
+				//dd($projet);
+				if(file_exists(public_path('img').'/earlies/'.$token.'.'.$ext)){
+					unlink(public_path('img').'/earlies/'.$token.'.'.$ext);
+				}
+				$name = $token.'.'.$ext;
+				$file->move(public_path('img/earlies'), $name);
+				//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
+				$dossier['imageUri'] = 'earlies/'.$name;
+			}
+		}
+
+
 		$dossier = Earlie::create($dossier);
 		if($dossier){
-
 			if($produits){
 				for($i = 0; $i<count($produits);$i++){
 					$dp = new EarliesProduit();
