@@ -85,9 +85,9 @@
                                     <legend>MOYENS DE FINANCEMENT</legend>
                                     <ul class="list-group">
                                         @if($projet->moyens)
-                                            @foreach($projet->financements as $moyen)
+                                            @foreach($projet->moyens as $moyen)
 
-                                                <li class="list-group-item"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class="value"><?= $moyen->montant ?></span></li>
+                                               <?php debug($moyen); ?>
                                             @endforeach
                                         @endif
                                     </ul>
