@@ -63,28 +63,36 @@ CREATION D'UN DOSSIER EARLY STAGE
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-4 col-sm-12">
+                                                         <div class="col-md-4">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">PHOTO DU PROJET</label>
+                                                                 <input id="imageUri" name="imageUri"  required="required" type="file"  class="form-control">
+                                                             </div>
+                                                         </div>
+
+                                                         <div class="col-md-2 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">DEVISE</label>
-                                                                 <select class="form-control" name="variante_id" id="variante_id">
+                                                                 <select class="form-control" name="devise_id" id="devise_id">
                                                                     @foreach($devises as $p)
                                                                        <option value='{!! $p->id !!}'>{{$p->name}}</option>
                                                                     @endforeach
                                                                  </select>
                                                              </div>
                                                          </div>
-
-
-                                                         <div class="col-md-3">
-                                                             <div class="form-group" style="margin-top: 25px;">
-                                                                <div class="custom-control custom-checkbox">
-                                                                  <input class="custom-control-input" type="checkbox" id="capital" name="capital"  >
-                                                                  <label for="capital" class="custom-control-label">OVERTURE DU CAPITAL ?</label>
-                                                                </div>
+                                                          <div class="col-md-3 col-sm-12">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">OUVERTURE DE CAPITAL ?</label>
+                                                                 <select class="form-control" name="capital" id="capital">
+                                                                    <option value="0">NON</option>
+                                                                    <option value="1">OUI</option>
+                                                                 </select>
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-5 col-sm-12">
+
+
+                                                         <div class="col-md-3 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">VILLE</label>
                                                                  <select class="form-control" name="ville_id" id="ville_id">
@@ -102,13 +110,13 @@ CREATION D'UN DOSSIER EARLY STAGE
                                                      <hr/>
 
                                                      <div class="row">
-                                                         <div class="col-md-6">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">REPRESENTANT</label>
                                                                  <input id="representant" name="montant" maxlength="250" type="text" required="required" class="form-control" placeholder="Personne de ressource du dossier">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-6">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">ADRESSE</label>
                                                                  <input id="address" name="address" maxlength="100" type="text" required="required" class="form-control" placeholder="Saisir l'adresse de la personne ressource">
@@ -116,13 +124,13 @@ CREATION D'UN DOSSIER EARLY STAGE
                                                          </div>
                                                      </div>
                                                      <div class="row">
-                                                         <div class="col-md-4">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">TELEPHONE</label>
                                                                  <input id="phone" name="phone" maxlength="50" type="text" required="required" class="form-control" placeholder="Saisir ici les contacts telephoniques">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-5">
+                                                         <div class="col-md-3">
                                                              <div class="form-group">
                                                                  <label class="control-label">EMAIL</label>
                                                                  <input id="email" name="email" maxlength="100" type="email" required="required" class="form-control" placeholder="Saisir l'adresse email">
@@ -596,53 +604,9 @@ CREATION D'UN DOSSIER EARLY STAGE
 
                 var bm = $('#businessmodel').val();
 
-                var compte1 = document.getElementById('compte1');
 
-                var cr1inputs = compte1.getElementsByTagName('input');
-                var cr1 = {};
-                for (var i=0; i < cr1inputs.length; i++) {
-                    var id = cr1inputs[i].getAttribute('id');
-                    cr1[id] = $('#compte1 #' + id).val();
-                }
-
-                var compte2 = document.getElementById('compte2');
-                var cr2inputs = compte2.getElementsByTagName('input');
-                var cr2 = {};
-                for (var i=0; i < cr2inputs.length; i++) {
-                    var id = cr2inputs[i].getAttribute('id');
-                    cr2[id] = $('#compte2 #' + id).val();
-                }
-                var compte3 = document.getElementById('compte3');
-                var cr3inputs = compte3.getElementsByTagName('input');
-                var cr3 = {};
-                for (var i=0; i < cr3inputs.length; i++) {
-                    var id = cr3inputs[i].getAttribute('id');
-                    cr3[id] = $('#compte3 #' + id).val();
-                }
-                var bilan1 = document.getElementById('bilan1');
-                var bil1inputs = bilan1.getElementsByTagName('input');
-                var bil1 = {};
-                for (var i=0; i < bil1inputs.length; i++) {
-                    var id = bil1inputs[i].getAttribute('id');
-                    bil1[id] = $('#bilan1 #' + id).val();
-                }
-                var bilan2 = document.getElementById('bilan2');
-                var bil2inputs = bilan2.getElementsByTagName('input');
-                var bil2 = {};
-                for (var i=0; i < bil2inputs.length; i++) {
-                    var id = bil2inputs[i].getAttribute('id');
-                    bil2[id] = $('#bilan2 #' + id).val();
-                }
-                var bilan3 = document.getElementById('bilan3');
-                var bil3inputs = bilan3.getElementsByTagName('input');
-                var bil3 = {};
-                for (var i=0; i < bil1inputs.length; i++) {
-                    var id = bil3inputs[i].getAttribute('id');
-                    bil3[id] = $('#bilan3 #' + id).val();
-                }
-
-                var url = '/owner/dossier/initJson';
-                var redirectUrl = '/owner/dossiers';
+                var url = '/owner/projet/initJson';
+                var redirectUrl = '/owner/projets';
 
                 var reponses = [];
                 var produits=[];
@@ -657,13 +621,21 @@ CREATION D'UN DOSSIER EARLY STAGE
                     reponses.push(elt);
                 });
 
+                var data = new FormData();
+                data.append('answers',reponses);
+                data.append('dossier',values);
+                data.append('produits',produits);
+                data.append('bm',bm);
+                data.append('_csrf',$('input[name="_token"]').val());
+                data.append('imageUri',$('#imageUri')[0].files[0]);
                 $.ajax({
                     url:url,
                     type:'Post',
                     dataType:'JSON',
-                    data:{_csrf:$('input[name="_token"]').val(), answers:reponses, dossier:values,produits:produits,bm:bm,bil1:bil1,bil2:bil2,bil3:bil3,
-                    compte1:cr1, compte2:cr2,compte3:cr3
-                    },
+                    data:data,
+                    enctype:'multipart/form-data',
+                    processData:false,
+                    contentType:false,
                     beforeSend:function(xhr){
                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
                         $("#loadMe").modal({
