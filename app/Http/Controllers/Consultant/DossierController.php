@@ -222,7 +222,7 @@ class DossierController extends Controller
 	//Sauvegarde du diagnostic strategique
 	public function saveDiagStrategique(Request $request){
 		$token = $request->token;
-		$projet = Projet::where($token)->first();
+		$projet = Projet::where('token',$token)->first();
 		//dd($request->token);
 
 		$swot = new Swot();
