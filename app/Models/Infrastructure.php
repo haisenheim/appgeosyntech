@@ -14,9 +14,6 @@ class Infrastructure extends Model
 		return $this->belongsTo('App\Models\Moi', 'moi_id');
 	}
 
-    public function type(){
-        return $this->belongsTo('App\Models\Tprojet', 'type_id');
-    }
 
 
 
@@ -120,11 +117,11 @@ class Infrastructure extends Model
     }
 
 	public function choices(){
-		return $this->hasMany('App\Models\ChoicesProjet');
+		return $this->hasMany('App\Models\ChoicesInfrastructure');
 	}
 
 	public function tags(){
-		return $this->belongsToMany('App\Models\Tags','tags_projets','projet_id','tag_id');
+		return $this->belongsToMany('App\Models\Tags','tags_projets','infrastructure_id','tag_id');
 	}
 
 	public function produits(){
@@ -169,7 +166,7 @@ class Infrastructure extends Model
 	}
 
 	protected function getTotalAttribute(){
-		$investissements = Investissement::all()->where('projet_id',$this->id);
+		$investissements = Concession::all()->where('infractructure_id',$this->id);
 		$total = 0;
 		foreach($investissements as $investissement){
 			$letter = $investissement->lettre;
@@ -209,7 +206,7 @@ class Infrastructure extends Model
 	protected function getAuthorizedAttribute(){
 		if(Auth::user()->role_id==4){
 			if(Auth::user()->organisme_id){
-				$investissement = Investissement::all()->where('projet_id',$this->id)->where('organisme_id',Auth::user()->organisme_id)->first();
+				$investissement = Concession::all()->where('infrastructure_id',$this->id)->where('organisme_id',Auth::user()->organisme_id)->first();
 				if($investissement){
 					//debug($investissement);
 					if($investissement->angel_id!=Auth::user()->id){
@@ -219,7 +216,7 @@ class Infrastructure extends Model
 			}
 
 			if(Auth::user()->entreprise_id){
-				$investissement = Investissement::all()->where('projet_id',$this->id)->where('entreprise_id',Auth::user()->entreprise_id)->first();
+				$investissement = Concession::all()->where('infrastructure_id',$this->id)->where('entreprise_id',Auth::user()->entreprise_id)->first();
 				if($investissement){
 					if($investissement->angel_id!=Auth::user()->id){
 						return false;

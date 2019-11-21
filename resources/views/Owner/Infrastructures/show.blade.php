@@ -2175,14 +2175,8 @@
     <nav style="top:30%" class="floating-menu">
         <ul class="main-menu">
 
-            @if($projet->modepaiement_id>1)
-                @if($projet->validated_step==1)
-                   <li>
-                        <a title="Editer le diagnostic externe" class="ripple" href="/owner/dossiers/add-step"><i class="fa fa-pencil"></i></a>
-                   </li>
-                @endif
-            @endif
-            @if($projet->investissements->count() >=1)
+
+            @if($projet->concessions->count() >=1)
                    <li>
                         <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
                    </li>
@@ -2233,7 +2227,7 @@
             <div class="modal-body">
             <div class="card card-danger">
                 <div class="card-body">
-                     @if($projet->investissements->count() >=1)
+                     @if($projet->concessions->count() >=1)
                         <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
                             <thead>
                             <tr>
@@ -2246,7 +2240,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($projet->investissements as $invest)
+                                @foreach($projet->concessions as $invest)
                                     <tr>
                                         <td>{{ $invest->angel->name }}</td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
