@@ -268,9 +268,9 @@ CREATION DU DIAGNOSTIC EXTERNE
                                                                 </div>
                                                               </div>
                                                                <hr/>
-                                                         <h6 class="">TABLE DES CONCURRNTS</h6>
+                                                         <h6 class="">TABLE DES CONCURRENTS</h6>
                                                          <div class="table-responsive">
-                                                             <table class="table table-bordered table-striped" id="table-segments">
+                                                             <table class="table table-bordered table-striped" id="table-concurrents">
                                                                  <thead>
                                                                      <tr>
                                                                          <th>QUI</th>
