@@ -388,8 +388,8 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                     </div>
                 </div>
     </div>
-
-<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
