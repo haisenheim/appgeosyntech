@@ -127,7 +127,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/admin/projets" class="nav-link">
+                <a href="/consultant/projets" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>EARLY STAGE</p>
                 </a>
@@ -151,7 +151,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/admin/creances" class="nav-link">
+                <a href="/consultant/creances" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>CESSIONS DE CREANCES</p>
                 </a>
