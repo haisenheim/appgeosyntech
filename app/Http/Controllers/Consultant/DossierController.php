@@ -59,7 +59,7 @@ class DossierController extends Controller
 	}
 
 	public function updatePlanJson(Request $request){
-		$projet = Projet::find($request->id);
+		$projet = Projet::where('token',$request->id)->first();
 		$projet->plan_id = $request->plan_id;
 
 		$projet->save();
