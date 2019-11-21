@@ -1,6 +1,6 @@
 @extends('......layouts.consultant')
 @section('page-title')
-CREATION DU DIAGNOSTIC EXTERNE - {{$projet->name}}
+CREATION DU DIAGNOSTIC EXTERNE
 @endsection
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">

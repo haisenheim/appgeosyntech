@@ -820,6 +820,30 @@
               </div>
 
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#synthese1').summernote({
+            height: 300,
+            tabsize: 2,
+            followingToolbar: true,
+            lang:'fr-FR'
+          });
+        });
+    </script>
+    <script type="text/javascript">
+       $(document).ready(function() {
+         $('#synthese2').summernote({
+           height: 300,
+           tabsize: 2,
+           followingToolbar: true,
+           lang:'fr-FR'
+         });
+       });
+     </script>
 
     <script>
         $(document).ready(function(){
@@ -953,7 +977,7 @@
     				</div>
     				<div class="modal-body">
     					<div class="form-group">
-    						<textarea class="form-control"  name="synthese1" id="synthese1" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_interne }}</textarea>
+    						<textarea class="form-control"  name="synthese1" id="synthese1" cols="30" rows="10" >{{ $projet->synthese_diagnostic_interne }}</textarea>
     					</div>
     				</div>
     				<div class="modal-footer">
@@ -963,24 +987,6 @@
     			</div>
     		</div>
     	</form>
-
-
-    	<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-            <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-
-            <script type="text/javascript">
-                $(document).ready(function() {
-                  $('#synthes').summernote({
-                    height: 300,
-                    tabsize: 2,
-                    followingToolbar: true,
-                    lang:'fr-FR'
-                  });
-                });
-              </script>
-
-
     </div>
 
 
@@ -997,7 +1003,7 @@
         				</div>
         				<div class="modal-body">
         					<div class="form-group">
-        						<textarea class="form-control"  name="synthese2" id="synthese2" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_externe }}</textarea>
+        						<textarea class="form-control"  name="synthese2" id="synthese2" cols="30" rows="10">{{ $projet->synthese_diagnostic_externe }}</textarea>
         					</div>
         				</div>
         				<div class="modal-footer">
@@ -1011,16 +1017,7 @@
 
 
 
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('#synthese2').summernote({
-                        height: 300,
-                        tabsize: 2,
-                        followingToolbar: true,
-                        lang:'fr-FR'
-                      });
-                    });
-                  </script>
+
 
 
         </div>
