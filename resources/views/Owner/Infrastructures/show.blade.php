@@ -895,7 +895,7 @@
                                                         <h4>COMPTE DE RESULTAT</h4>
                                                      </div>
                                                      <div class="card-body">
-                                                        <?php $nbsim = count($projet->prevresultats) ?>
+                                                        <?php $nbsim = $projet->prevresultats->count() ?>
                                                         <table class="table table-bordered table-hover table-condensed">
                                                         <thead>
                                                             <tr>
@@ -2182,7 +2182,7 @@
                    </li>
                 @endif
             @endif
-            @if(count($projet->investissements)>=1)
+            @if($projet->investissements->count() >=1)
                    <li>
                         <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
                    </li>
@@ -2233,7 +2233,7 @@
             <div class="modal-body">
             <div class="card card-danger">
                 <div class="card-body">
-                     @if(count($projet->investissements)>=1)
+                     @if($projet->investissements->count() >=1)
                         <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
                             <thead>
                             <tr>
