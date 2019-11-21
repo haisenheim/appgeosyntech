@@ -45,7 +45,7 @@
                             @endif
                             <input type="hidden" id="id" value="<?= $projet->id ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-                            <input type="hidden" id="plan_id" value="<?= $projet->plan_id ?>"/>
+                            <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
 
                             <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
@@ -1197,7 +1197,7 @@
         $(document).ready(function(){
            // $('#side2').height($('#side1').height());
            //$('#side2').height(890);
-            getPlan($('#plan_id').val());
+            getPlan($('#pl_id').val());
 
             $.ajax({
                 url: "/consultant/dossier/getchoices",
