@@ -1,7 +1,7 @@
 @extends('......layouts.owner')
 
 @section('page-title')
-DOSSIERS DE FINANCEMENTS STRUCTURES
+DOSSIERS DE PARTENARIATS PUBLIC - PRIVE
 @endsection
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
