@@ -23,6 +23,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                                                 <p>MONTANT : {{ $projet->montant }}</p>
                                                 <input type="hidden" id="id" value="<?= $projet->token ?>"/>
                                                 <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
+                                                <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
 
 
                                                 @if($projet->modepaiement_id>0)
@@ -45,17 +46,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                                                             </li>
                                                         </ul>
                                                         <hr/>
-                                                        <form action="/consultant/dossier/add-mode" method="get" class="form-inline">
-                                                            <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
-                                                            <select style="background-color: #FFFFFF" class="form-control" name="mode_id" id="mode_id">
-                                                                <option value="0">Choix d'une offre de service</option>
-                                                                @foreach($modes as $mode)
-                                                                    <option value="{{ $mode->id }}">{{ $mode->name }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                            <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-check"></i> ENREGISTRER</button>
 
-                                                        </form>
                                                     </div>
                                                 @endif
                                             </div>

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -34,13 +36,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create_diag_strategique.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create_diag_strategique.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-129.28" vertical-offset="0" max-vertical-offset="8880">
-              <caret line="258" column="127" selection-start-line="258" selection-start-column="60" selection-end-line="258" selection-end-column="127" />
+            <state vertical-scroll-proportion="0.2939759" vertical-offset="630" max-vertical-offset="9616">
+              <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
               <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="e#589#622#0#HTML" expanded="true" />
                 <element signature="e#1164#1188#0#HTML" expanded="true" />
                 <element signature="e#1849#1882#0#HTML" expanded="true" />
@@ -51,12 +52,11 @@
                 <element signature="e#2993#3017#0#HTML" expanded="true" />
                 <element signature="e#3151#3175#0#HTML" expanded="true" />
                 <element signature="e#3312#3336#0#HTML" expanded="true" />
-                <element signature="e#4072#4105#0#HTML" expanded="true" />
-                <element signature="e#33622#34870#0#HTML" expanded="false" />
-                <marker date="1574365637744" expanded="false" signature="34398:34408" placeholder="..." />
-                <marker date="1574365637744" expanded="false" signature="34466:34476" placeholder="..." />
-                <marker date="1574365637744" expanded="false" signature="34535:34545" placeholder="..." />
-                <marker date="1574365637744" expanded="false" signature="34619:34629" placeholder="..." />
+                <element signature="e#32531#33779#0#HTML" expanded="false" />
+                <marker date="1574368565219" expanded="false" signature="33307:33317" placeholder="..." />
+                <marker date="1574368565219" expanded="false" signature="33375:33385" placeholder="..." />
+                <marker date="1574368565219" expanded="false" signature="33444:33454" placeholder="..." />
+                <marker date="1574368565219" expanded="false" signature="33528:33538" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -109,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89915967" vertical-offset="3412" max-vertical-offset="6032">
-              <caret line="257" column="20" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
+            <state vertical-scroll-proportion="-0.64" vertical-offset="3056" max-vertical-offset="6128">
+              <caret line="209" column="0" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -232,9 +232,9 @@
         <option value="$PROJECT_DIR$/resources/views/Admin/Projets/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php" />
         <option value="$PROJECT_DIR$/public/js/api.js" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
       </list>
     </option>
   </component>
@@ -1048,32 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-129.28" vertical-offset="0" max-vertical-offset="8880">
-          <caret line="258" column="127" selection-start-line="258" selection-start-column="60" selection-end-line="258" selection-end-column="127" />
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#589#622#0#HTML" expanded="true" />
-            <element signature="e#1164#1188#0#HTML" expanded="true" />
-            <element signature="e#1849#1882#0#HTML" expanded="true" />
-            <element signature="e#2075#2099#0#HTML" expanded="true" />
-            <element signature="e#2247#2271#0#HTML" expanded="true" />
-            <element signature="e#2419#2443#0#HTML" expanded="true" />
-            <element signature="e#2743#2776#0#HTML" expanded="true" />
-            <element signature="e#2993#3017#0#HTML" expanded="true" />
-            <element signature="e#3151#3175#0#HTML" expanded="true" />
-            <element signature="e#3312#3336#0#HTML" expanded="true" />
-            <element signature="e#4072#4105#0#HTML" expanded="true" />
-            <element signature="e#33622#34870#0#HTML" expanded="false" />
-            <marker date="1574365637744" expanded="false" signature="34398:34408" placeholder="..." />
-            <marker date="1574365637744" expanded="false" signature="34466:34476" placeholder="..." />
-            <marker date="1574365637744" expanded="false" signature="34535:34545" placeholder="..." />
-            <marker date="1574365637744" expanded="false" signature="34619:34629" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.8904109" vertical-offset="582" max-vertical-offset="22096">
@@ -1101,9 +1075,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89915967" vertical-offset="3412" max-vertical-offset="6032">
-          <caret line="257" column="20" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
+        <state vertical-scroll-proportion="-0.64" vertical-offset="3056" max-vertical-offset="6128">
+          <caret line="209" column="0" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2939759" vertical-offset="630" max-vertical-offset="9616">
+          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
+          <folding>
+            <element signature="e#589#622#0#HTML" expanded="true" />
+            <element signature="e#1164#1188#0#HTML" expanded="true" />
+            <element signature="e#1849#1882#0#HTML" expanded="true" />
+            <element signature="e#2075#2099#0#HTML" expanded="true" />
+            <element signature="e#2247#2271#0#HTML" expanded="true" />
+            <element signature="e#2419#2443#0#HTML" expanded="true" />
+            <element signature="e#2743#2776#0#HTML" expanded="true" />
+            <element signature="e#2993#3017#0#HTML" expanded="true" />
+            <element signature="e#3151#3175#0#HTML" expanded="true" />
+            <element signature="e#3312#3336#0#HTML" expanded="true" />
+            <element signature="e#32531#33779#0#HTML" expanded="false" />
+            <marker date="1574368565219" expanded="false" signature="33307:33317" placeholder="..." />
+            <marker date="1574368565219" expanded="false" signature="33375:33385" placeholder="..." />
+            <marker date="1574368565219" expanded="false" signature="33444:33454" placeholder="..." />
+            <marker date="1574368565219" expanded="false" signature="33528:33538" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
