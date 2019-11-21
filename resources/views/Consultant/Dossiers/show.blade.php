@@ -45,24 +45,7 @@
                             @endif
                             <input type="hidden" id="id" value="<?= $projet->id ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-                            @if($projet->expert_id)
-                                <p>CONSULTANT : <span class="value">{{ $projet->consultant->name }}</span></p>
-                             @else
-                                <form class="form-inline"  action="/admin/dossier/expert">
-                                {{csrf_field()}}
-                                <input type="hidden" name="id" value="{{ $projet->id }}"/>
-                                    <div class="form-group">
-                                        <select class="form-text" name="expert_id" id="id">
-                                            @foreach($experts as $expert)
-                                                <option value="{{ $expert->id }}">{{ $expert->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-danger"><i class="fa fa-link"></i> LIER</button>
-                                    </div>
-                                </form>
-                            @endif
+                            <input type="hidden" id="plan_id" value="<?= $projet->plan_id ?>"/>
 
 
                             <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
