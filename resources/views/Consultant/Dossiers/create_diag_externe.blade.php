@@ -445,7 +445,7 @@ CREATION DU DIAGNOSTIC EXTERNE
         var tr = '<tr data-qui="'+ qui +'" data-quoi="'+ quoi +'" data-quand= "'+ quand +'" data-combien= "'+ combien
             +'" data-ou="'+ ou +'" data-pourquoi="'+ pourquoi +'" data-ca="'+ ca +'" data-cv="'+ cv +'" data-cf="'+ cf +'" data-sal="'+ sal
             +'"><td>'+qui+'</td><td>'+quoi+'</td><td>'+ou+'</td><td>'+quand+'</td>' +
-            '<td>'+combien+'</td><td>'+pourquoi+'</td><td>'+ca+'</td><td>'+cv+'</td><td>'+mb+'</td><td>'+cf+'</td><td>'+va+'</td><td>'+sal+'</td><td>'+ebe+'</td><td class="removec"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></td></tr>';
+            '<td>'+combien+'</td><td>'+pourquoi+'</td><td>'+ca+'</td><td>'+cv+'</td><td>'+cf+'</td><td>'+sal+'</td><td class="removec"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></td></tr>';
         console.log(tr);
         table.append(tr);
         $('.dec').val('');
