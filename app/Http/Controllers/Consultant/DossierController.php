@@ -48,7 +48,7 @@ class DossierController extends Controller
 
 
 	public function getProduitsJson(Request $request){
-		$projet = Projet::find($request->id);
+		$projet = Projet::where('token',$request->id)->first();
 		$choices = $projet->produits;
 
 		$produits = [];
