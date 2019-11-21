@@ -3,7 +3,12 @@
     <div style="padding-top: 30px" class="container-fluid">
                 <div class="row">
                     <div class="col-md-3 col-sm-12">
-                        <div class="well">
+                        <div class="card">
+                            <div class="card-header">
+
+                            </div>
+
+                        <div class="card-body">
 
                             <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
                             <p>CODE : {{ $projet->code }}</p>
@@ -15,11 +20,6 @@
                             <p>MONTANT : {{ $projet->montant }}</p>
                             <input type="hidden" id="id" value="<?= $projet->token ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-                            @if($projet->expert_id)
-                                <p>CONSULTANT : <span class="value">{{ $projet->consultant->name }}</span></p>
-
-                            @endif
-
 
 
                             @if($projet->modepaiement_id>0)
@@ -56,32 +56,37 @@
                                 </div>
                             @endif
                         </div>
-
+                        </div>
 
                     </div>
                     <div class="col-md-9 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-content">
+                        <div class="">
+                            <div class="">
                                 <fieldset>
                                 <legend>EDITION DU DIAGNOSTIC EXTERNE</legend>
                                     {{csrf_field()}}
-                                    <div class="stepwizard">
-                                                                        <div class="stepwizard-row setup-panel">
-                                                                                    <div class="stepwizard-step">
-                                                                                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-                                                                                        <p>ANALYSE DE LA DEMANDE</p>
-                                                                                    </div>
-                                                                                    <div class="stepwizard-step">
-                                                                                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                                                                                        <p>ANALYSE DE L'OFFRE</p>
-                                                                                    </div>
-                                                                                    <div class="stepwizard-step">
-                                                                                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                                                                                        <p>ANALYSE DE L'ENVIRONNEMENT</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                     </div>
-                                    <div class="">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="stepwizard">
+                                                <div class="stepwizard-row setup-panel">
+                                                    <div class="stepwizard-step">
+                                                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                                        <p>ANALYSE DE LA DEMANDE</p>
+                                                    </div>
+                                                    <div class="stepwizard-step">
+                                                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                                        <p>ANALYSE DE L'OFFRE</p>
+                                                    </div>
+                                                    <div class="stepwizard-step">
+                                                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                                        <p>ANALYSE DE L'ENVIRONNEMENT</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    <div class="card-body">
                                            <div class="setup-content" id="step-1">
                                             <div class="card">
                                               <div class="card-header">
@@ -403,6 +408,7 @@
 
 
                                      </div>
+                                 </div>
                                 </fieldset>
 
                             </div>
