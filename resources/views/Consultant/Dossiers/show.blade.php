@@ -122,12 +122,11 @@
                     </div>
                     <div style="overflow-y: scroll; max-height: 860px" id="side2" class="col-md-8 col-sm-12">
                         <div class="card">
-                            <div class="card-body">
-                               <fieldset>
-                                    <h6>Diagnostic interne</h6>
-                                    <ul class="nav nav-tabs" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                         <li role="presentation" class="nav-item active">
-                                             <a class="nav-link" href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
+                           <fieldset>
+                                    <legend>Diagnostic interne</legend>
+                                    <ul class="nav nav-pills ml-auto p-2" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link active" href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
                                          </li>
 
                                          <li role="presentation" class="nav-item">
@@ -136,20 +135,18 @@
                                      </ul>
 
                                      <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade active show" role="tabpanel" id="etats" aria-labelledby="tab1">
+                                        <div class="tab-pane active " role="tabpanel" id="etats" aria-labelledby="tab1">
                                              <div>
-
-
-                                                     <div>
-                                                        <h4 class="page-header">SANTE FINANCIERE</h4>
+                                                <fieldset>
+                                                        <legend>SANTE FINANCIERE</legend>
                                                         <table class="table table-condensed table-hover">
                                                             <thead>
                                                             <tr>
                                                                 <th></th>
                                                                 <th><?= isset($projet->bilans[0])?$projet->bilans[0]->annee:'' ?></th>
-                                                                <th><?= isset($projet->bilans[1])?$projet->bilans[0]->annee:'' ?></th>
+                                                                <th><?= isset($projet->bilans[1])?$projet->bilans[1]->annee:'' ?></th>
                                                                 <th>TAUX DE VARIATION</th>
-                                                                <th><?= isset($projet->bilans[2])?$projet->bilans[0]->annee:'' ?></th>
+                                                                <th><?= isset($projet->bilans[2])?$projet->bilans[2]->annee:'' ?></th>
                                                                 <th>TAUX DE VARIATION</th>
                                                             </tr>
                                                             </thead>
@@ -157,57 +154,57 @@
                                                             <tr>
                                                                 <td>RESSOURCES DURABLES</td>
                                                                 <td><?= isset($projet->bilans[0])?$projet->bilans[0]->ress_durable:'' ?></td>
-                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[0]->ress_durable:'' ?></td>
+                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[1]->ress_durable:'' ?></td>
                                                                 <td></td>
-                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[0]->ress_durable:'' ?></td>
+                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[2]->ress_durable:'' ?></td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>ACTIFS IMMOBILISES</td>
                                                                 <td><?= isset($projet->bilans[0])?$projet->bilans[0]->actifs_immo:'' ?></td>
-                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[0]->actifs_immo:'' ?></td>
+                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[1]->actifs_immo:'' ?></td>
                                                                 <td></td>
-                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[0]->actifs_immo:'' ?></td>
+                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[2]->actifs_immo:'' ?></td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>FONDS DE ROULEMENT NET GLOBAL</td>
                                                                 <th><?= $projet->frng_0 ?></th>
-                                                                <th><?= $projet->frng_0 ?></th>
+                                                                <th><?= $projet->frng_1 ?></th>
                                                                 <th></th>
-                                                                <th><?= $projet->frng_0 ?></th>
+                                                                <th><?= $projet->frng_2 ?></th>
                                                                 <th></th>
                                                             </tr>
                                                             <tr>
                                                                 <td>CREANCES</td>
                                                                 <td><?= isset($projet->bilans[0])?$projet->bilans[0]->creances:'' ?></td>
-                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[0]->creances:'' ?></td>
+                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[1]->creances:'' ?></td>
                                                                 <td></td>
-                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[0]->creances:'' ?></td>
+                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[2]->creances:'' ?></td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>STOCKS</td>
                                                                 <td><?= isset($projet->bilans[0])?$projet->bilans[0]->stocks:'' ?></td>
-                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[0]->stocks:'' ?></td>
+                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[1]->stocks:'' ?></td>
                                                                 <td></td>
-                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[0]->stocks:'' ?></td>
+                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[2]->stocks:'' ?></td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>DETTES</td>
                                                                 <td><?= isset($projet->bilans[0])?$projet->bilans[0]->dettes:'' ?></td>
-                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[0]->dettes:'' ?></td>
+                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[1]->dettes:'' ?></td>
                                                                 <td></td>
-                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[0]->dettes:'' ?></td>
+                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[2]->dettes:'' ?></td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>BESOIN EN FONDS DE ROULEMENT</td>
                                                                 <th><?= isset($projet->bilans[0])?$projet->bilans[0]->bfr:'' ?></th>
-                                                                <th><?= isset($projet->bilans[1])?$projet->bilans[0]->bfr:'' ?></th>
+                                                                <th><?= isset($projet->bilans[1])?$projet->bilans[1]->bfr:'' ?></th>
                                                                 <th><?= $projet->tvbfr_0 ?></th>
-                                                                <th><?= isset($projet->bilans[2])?$projet->bilans[0]->bfr:'' ?></th>
+                                                                <th><?= isset($projet->bilans[2])?$projet->bilans[2]->bfr:'' ?></th>
                                                                 <th><?= $projet->tvbfr_1 ?></th>
                                                             </tr>
                                                             <tr>
@@ -220,9 +217,9 @@
                                                             </tr>
                                                             </tbody>
                                                         </table>
-
-
-                                                        <h5>PERFORMANCE FINANCIERE</h5>
+                                                     </fieldset>
+                                                     <fieldset>
+                                                        <legend>PERFORMANCE FINANCIERE</legend>
                                                         <table class="table table-bordered table-condensed">
                                                             <thead>
                                                             <tr>
@@ -409,51 +406,49 @@
                                                             </tr>
                                                             </tbody>
                                                         </table>
-                                                     </div>
-
+                                                     </fieldset>
                                              </div>
 
                                         </div>
 
-                                        <div class="tab-pane fade" role="tabpanel" id="risques" aria-labelledby="">
-                                        <div class="card">
-                                            <div class="card-header">
+                                        <div class="tab-pane" role="tabpanel" id="risques" aria-labelledby="">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                 <div class="card-tools">
+                                                  <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+                                                  </button>
+                                                </div>
+                                                <!-- /.card-tools -->
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                         <table id="risques-tab" class="table table-condensed table-hover table-bordered">
+                                                           <thead>
+                                                            <tr>
+                                                                <th></th>
+                                                                <th>Defaillances possibles</th>
+                                                                <th>Causes</th>
+                                                                <th>Consequences</th>
+                                                                <th>Frequence</th>
+                                                                <th>Gravite</th>
+                                                                <th>Criticite brut</th>
 
-                                            <div class="card-tools">
-                                              <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
-                                              </button>
-                                            </div>
-                                            <!-- /.card-tools -->
-
-                                            </div>
-                                            <div class="card-body">
-                                               <table id="risques-tab" class="table table-condensed table-hover table-bordered">
-                                                <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th>Defaillances possibles</th>
-                                                    <th>Causes</th>
-                                                    <th>Consequences</th>
-                                                    <th>Frequence</th>
-                                                    <th>Gravite</th>
-                                                    <th>Criticite brut</th>
-
-                                                    <th>Criticite nette</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                                </table>
-                                                <div style="width: 20%; margin:10px auto">
-                                                    <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
+                                                                <th>Criticite nette</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            </tbody>
+                                                         </table>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
+                                            <div style="width: 20%; margin:10px auto">
+                                                <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
+                                            </div>
                                         </div>
                                      </div>
                                </fieldset>
-                            </div>
                         </div>
                     </div>
                 </div>
