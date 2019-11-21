@@ -184,7 +184,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="/consultant/clients" class="nav-link">
+            <a href="/consultant/porteurs" class="nav-link">
               <i class="nav-icon text-success fas fa-users"></i>
               <p>
                 CLIENTS
