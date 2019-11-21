@@ -452,21 +452,15 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
         var table = $('#example').find('tbody');
         var tr_org = $('#organisation').find('tbody').find('tr');
         var tr_etapes = $('#etapes').find('tbody').find('tr');
-
-
         var trss=table.find('tr');
-
         var plignes = [];
             trss.each(function(){
             var elt={};
                 elt.id=$(this).data('id');
                 elt.amelioration=$(this).find('td').last().text();
-
                 plignes.push(elt);
         });
-
         var ressources = [];
-
         tr_org.each(function(){
             var elt = {};
             elt.nom = $(this).data('nom');
@@ -476,16 +470,11 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
         });
 
         var swot = {};
-
         swot.synop=$('#synop').val();
         swot.synmen=$('#synmen').val();
         swot.synforces=$('#synforces').val();
         swot.synfaiblesses=$('#synfaiblesses').val();
-
-
-
         var etapes = [];
-
         tr_etapes.each(function(){
              var elt = {};
              elt.name = $(this).data('name');
@@ -493,9 +482,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
 
              etapes.push(elt);
          });
-
-
-
+        var spinHandle_firstProcess = loadingOverlay.activate();
         $.ajax({
             url:saveurl,
             type:'Post',
@@ -504,30 +491,26 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
            organisation:ressources,objectifs_courts:$('#objectifs_courts').val(),objectifs_moyens:$('#objectifs_moyens').val(),objectifs_longs:$('#objectifs_longs').val() },
             beforeSend:function(xhr){
                 xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
-
             },
             success: function(data){
-
                 $.ajax({
                             url:orm+'save-plignes',
                             type:'Post',
                             dataType:'JSON',
                             data:{plignes:plignes,plan_id:$('#plan_id').val()
                             },
-
                             success: function(dat){
-                            console.log(dat);
+                            //console.log(dat);
                                 if(dat!=null){
                                    window.location.replace(redirectUrl+data.token);
                                 }
                             }
                             });
 
-
-               /// console.log(data);
             },
             Error:function(){
-
+                 loadingOverlay.cancel(spinHandle_firstProcess);
+                 alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
             }
         });
 

@@ -19,7 +19,7 @@ class ProjetController extends Controller
     public function index()
     {
         //
-	    $projets = Projet::all();
+	    $projets = Projet::orderBy('created_at','desc')->paginate(20);
 	    return view('/Admin/Projets/index')->with(compact('projets'));
     }
 

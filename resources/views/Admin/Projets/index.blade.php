@@ -23,6 +23,7 @@
                       <th style="width: 38%">
                           Projet
                       </th>
+                      <th>Cout du projet</th>
                       <th style="width: 20%">
                           Consultant
                       </th>
@@ -44,6 +45,9 @@
                             <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
                             <?= $projet->active?'<span class="badge badge-success">ACTIF</span>':'<span class="badge badge-danger">Bloqué</span>' ?> -
                             <?= $projet->public?'<span class="badge badge-info">PUBLIC</span>':'<span class="badge badge-warning">PRIVE</span>' ?>
+                            </td>
+                            <td>
+                                {{$projet->montant}} <sup>{{ $projet->devise->abb }}</sup>
                             </td>
 
                             <td>{{$projet->consultant?$projet->consultant->name:'-'}}</td>
@@ -84,6 +88,11 @@
                    @endforeach
               </tbody>
           </table>
+          <div class="">
+              <ul class="pagination justify-content-end">
+              {{ $projets->links() }}
+          </ul>
+          </div>
         </div>
         <!-- /.card-body -->
       </div>
