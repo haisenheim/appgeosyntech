@@ -141,8 +141,9 @@
                                                              </div>
                                                          </div>
                                                          <hr/>
-                                                         <div>
-                                                             <h4 class="">TABLE DES SEGMENTS</h4>
+                                                         <h6 class="">TABLE DES SEGMENTS</h6>
+                                                         <div class="table-responsive">
+
                                                              <table class="table table-bordered table-striped" id="table-segments">
                                                                  <thead>
                                                                  <tr>
@@ -178,149 +179,126 @@
                                             </div>
                                             </div>
                                            <div class="setup-content" id="step-2">
-                                                                                         <div class="card">
-                                                                                            <div class="card-header">
-                                                                                                 <h6 class="text-center">ANALYSE DE L'OFFRE</h6>
-                                                                                            </div>
-                                                                                            <div class="card-body">
-                                                                                                 <div class="">
-                                                                                                    <div class="" id="concurrents" >
-                                                                                                                                   <div class="row" style="">
-                                                                                                                                       <div class="col-md-2 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label" title="Le nom du segment">QUI?</label>
-                                                                                                                                               <input id="quic" name="name" type="text" class="form-control dec"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label" title="Le nom du segment">QUOI?</label>
-                                                                                                                                               <input id="quoic" name="quoi" type="text" class="form-control dec" placeholder=""/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">OU?</label>
-                                                                                                                                               <input id="ouc" name="ou" type="text" class="form-control dec" placeholder=""/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
+                                                           <div class="card">
+                                                              <div class="card-header">
+                                                                   <h6 class="text-center">ANALYSE DE L'OFFRE</h6>
+                                                              </div>
+                                                              <div class="card-body">
+                                                                   <div class="">
+                                                                      <div class="" id="concurrents" >
+                                                                          <div class="row" style="">
+                                                                              <div class="col-md-2 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Le nom du segment">QUI?</label>
+                                                                                      <input id="quic" name="name" type="text" class="form-control dec"/>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="col-md-3 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Le nom du segment">QUOI?</label>
+                                                                                      <input id="quoic" name="quoi" type="text" class="form-control dec" placeholder=""/>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="col-md-3 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">OU?</label>
+                                                                                      <input id="ouc" name="ou" type="text" class="form-control dec" placeholder=""/>
+                                                                                  </div>
+                                                                              </div>
 
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">QUAND?</label>
-                                                                                                                                               <input id="quandc" name="ou" type="text" class="form-control dec" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
+                                                                              <div class="col-md-3 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">QUAND?</label>
+                                                                                      <input id="quandc" name="ou" type="text" class="form-control dec" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
+                                                                                  </div>
+                                                                              </div>
 
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">COMBIEN?</label>
-                                                                                                                                               <input id="combienc" name="ou" type="text" class="form-control dec" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
+                                                                              <div class="col-md-3 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">COMBIEN?</label>
+                                                                                      <input id="combienc" name="ou" type="text" class="form-control dec" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
+                                                                                  </div>
+                                                                              </div>
 
-                                                                                                                                       <div class="col-md-4 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">POURQUOI?</label>
-                                                                                                                                               <textarea id="pourquoic" name="ou" class="form-control dec" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
+                                                                              <div class="col-md-4 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">POURQUOI?</label>
+                                                                                      <textarea id="pourquoic" name="ou" class="form-control dec" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
+                                                                                  </div>
+                                                                              </div>
 
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label">CHIFFRE D'AFFAIRE</label>
-                                                                                                                                               <input id="ca" name="ou" type="number" class="form-control dec"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
+                                                                              <div class="col-md-3 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label">CHIFFRE D'AFFAIRE</label>
+                                                                                      <input id="ca" name="ou" type="number" class="form-control dec"/>
+                                                                                  </div>
+                                                                              </div>
 
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label">CHARGES VARIABLES</label>
-                                                                                                                                               <input id="cv" name="ou" type="number" class="form-control dec"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
-
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label">MARGE BRUTE</label>
-                                                                                                                                               <input id="mb" name="ou" type="number" class="form-control dec"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
-
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label">CHARGES FIXES</label>
-                                                                                                                                               <input id="cf" name="ou" type="number" class="form-control dec"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label">VALEUR AJOUTEE</label>
-                                                                                                                                               <input id="va" name="ou" type="number" class="form-control dec"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label">SALAIRES</label>
-                                                                                                                                               <input id="sal" name="ou" type="number" class="form-control dec"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
-
-                                                                                                                                       <div class="col-md-3 col-sm-12">
-                                                                                                                                           <div class="form-group">
-                                                                                                                                               <label for="" class="control-label">EX. BRUT D'EXP.</label>
-                                                                                                                                               <input id="ebe" name="ou" type="number" class="form-control dec"/>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
+                                                                              <div class="col-md-3 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label">CHARGES VARIABLES</label>
+                                                                                      <input id="cv" name="ou" type="number" class="form-control dec"/>
+                                                                                  </div>
+                                                                              </div>
 
 
+                                                                              <div class="col-md-3 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label">CHARGES FIXES</label>
+                                                                                      <input id="cf" name="ou" type="number" class="form-control dec"/>
+                                                                                  </div>
+                                                                              </div>
 
-                                                                                                                                       <div class="col-md-1 col-sm-12">
-                                                                                                                                           <button style="margin-top: 40px" class="btn btn-success btn-sm" id="btn-con-add"><i class="fa fa-plus-circle"></i></button>
-                                                                                                                                       </div>
-                                                                                                                                   </div>
+                                                                              <div class="col-md-3 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label">SALAIRES</label>
+                                                                                      <input id="sal" name="ou" type="number" class="form-control dec"/>
+                                                                                  </div>
+                                                                              </div>
 
-                                                                                                                                                                     <div style="border:1px solid #dddddd; padding: 10px 0; border-radius: 5px; margin-top: 10px">
 
-                                                                                                                                                                         <h4 class="page-header">TABLE DES CONCURRENTS</h4>
-                                                                                                                                                                         <table class="table table-bordered table-striped table-condensed" id="table-concurrents">
-                                                                                                                                                                             <thead>
-                                                                                                                                                                             <tr>
+                                                                              <div class="col-md-1 col-sm-12">
+                                                                                  <button style="margin-top: 40px" class="btn btn-success btn-sm" id="btn-con-add"><i class="fa fa-plus-circle"></i></button>
+                                                                              </div>
+                                                                          </div>
+                                                                    </div>
+                                                                </div>
+                                                              </div>
+                                                               <hr/>
+                                                         <h6 class="">TABLE DES CONCURRNTS</h6>
+                                                         <div class="table-responsive">
+                                                             <table class="table table-bordered table-striped" id="table-segments">
+                                                                 <thead>
+                                                                     <tr>
+                                                                         <th>QUI</th>
+                                                                         <th>QUOI</th>
+                                                                         <th>OU</th>
+                                                                         <th>QUAND</th>
+                                                                         <th>COMBIEN</th>
+                                                                         <th>POURQUOI</th>
+                                                                         <th>CA</th>
+                                                                         <th>CV</th>
 
-                                                                                                                                                                                 <th>QUI</th>
-                                                                                                                                                                                 <th>QUOI</th>
-                                                                                                                                                                                 <th>OU</th>
-                                                                                                                                                                                 <th>QUAND</th>
-                                                                                                                                                                                 <th>COMBIEN</th>
-                                                                                                                                                                                 <th>POURQUOI</th>
-                                                                                                                                                                                 <th>CA</th>
-                                                                                                                                                                                 <th>CV</th>
-                                                                                                                                                                                 <th>MB</th>
-                                                                                                                                                                                 <th>CF</th>
-                                                                                                                                                                                 <th>VA</th>
-                                                                                                                                                                                 <th>SAL</th>
-                                                                                                                                                                                 <th>EBE</th>
-                                                                                                                                                                                 <th></th>
-                                                                                                                                                                             </tr>
-                                                                                                                                                                             </thead>
-                                                                                                                                                                             <tbody>
+                                                                         <th>CF</th>
 
-                                                                                                                                                                             </tbody>
+                                                                         <th>SAL</th>
 
-                                                                                                                                                                         </table>
+                                                                         <th></th>
+                                                                     </tr>
+                                                                 </thead>
+                                                                 <tbody>
 
-                                                                                                                                                                     </div>
-                                                                                                                                                                 </div>
-                                                                                                  </div>
-                                                                                            </div>
+                                                                 </tbody>
 
-                                                                                             <div class="card-footer text-center">
-                                                                                                     <button class="btn btn-default prevBtn btn-sm btn-rounded" type="button"><i class="fa fa-arrow-left"></i> PRECEDENT</button>
-                                                                                                     <button class="btn btn-default nextBtn btn-sm btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
-                                                                                                 </div>
+                                                             </table>
+                                                         </div>
+                                                              <div class="card-footer text-center">
+                                                                   <button class="btn btn-default prevBtn btn-sm btn-rounded" type="button"><i class="fa fa-arrow-left"></i> PRECEDENT</button>
+                                                                   <button class="btn btn-default nextBtn btn-sm btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
+                                                              </div>
 
-                                                                                         </div>
-                                                                                     </div>
+                                                </div>
+                                            </div>
                                             <div class="setup-content" id="step-3">
                                                 <div class="card">
                                                     <div class="card-header">
@@ -452,17 +430,17 @@
         var ou = $('#ouc').val();
         var pourquoi=$('#pourquoic').val();
         var combien = $('#combienc').val();
-        var va = $('#va').val();
+
         var sal = $('#sal').val();
         var cv = $('#cv').val();
         var cf = $('#cf').val();
-        var mb = $('#mb').val();
+
         var ca = $('#ca').val();
-        var ebe = $('#ebe').val();
+
 
         var table= $('#table-concurrents').find('tbody');
         var tr = '<tr data-qui="'+ qui +'" data-quoi="'+ quoi +'" data-quand= "'+ quand +'" data-combien= "'+ combien
-            +'" data-ou="'+ ou +'" data-pourquoi="'+ pourquoi +'" data-ca="'+ ca +'" data-cv="'+ cv +'" data-mb="'+ mb +'" data-cf="'+ cf +'" data-va="'+ va +'" data-sal="'+ sal +'" data-ebe="'+ ebe
+            +'" data-ou="'+ ou +'" data-pourquoi="'+ pourquoi +'" data-ca="'+ ca +'" data-cv="'+ cv +'" data-cf="'+ cf +'" data-sal="'+ sal
             +'"><td>'+qui+'</td><td>'+quoi+'</td><td>'+ou+'</td><td>'+quand+'</td>' +
             '<td>'+combien+'</td><td>'+pourquoi+'</td><td>'+ca+'</td><td>'+cv+'</td><td>'+mb+'</td><td>'+cf+'</td><td>'+va+'</td><td>'+sal+'</td><td>'+ebe+'</td><td class="removec"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></td></tr>';
         console.log(tr);
@@ -509,10 +487,10 @@
             elt.ca=$(this).data('ca');
             elt.cv=$(this).data('cv');
             elt.cf=$(this).data('cf');
-            elt.mb=$(this).data('mb');
-            elt.va=$(this).data('va');
+            //elt.mb=$(this).data('mb');
+            //elt.va=$(this).data('va');
             elt.sal=$(this).data('sal');
-            elt.ebe=$(this).data('ebe');
+            //elt.ebe=$(this).data('ebe');
             concurrents.push(elt);
         });
 
