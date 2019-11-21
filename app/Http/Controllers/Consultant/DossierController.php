@@ -269,7 +269,7 @@ class DossierController extends Controller
 		}
 
 
-		return response()->json($token);
+		return response()->json($projet->token);
 	}
 
 
