@@ -150,6 +150,8 @@ Route::prefix('consultant')
         Route::get('profil','ProfilController');
         Route::get('dashboard','DashboardController');
 	    Route::get('dossier/getchoices','DossierController@getChoicesJson');
+	    Route::get('projet/getchoices','EarlyController@getChoicesJson');
+	    Route::get('partenariat/getchoices','InfrastructureController@getChoicesJson');
 	    Route::get('dossier/get-produits','DossierController@getProduitsJson');
 	    Route::get('dossier/getmodes','DossierController@getModesJson');
 	    Route::get('dossier/add-mode','DossierController@addMode');
@@ -159,6 +161,22 @@ Route::prefix('consultant')
 	    Route::get('dossier/create-diag-externe/{token}','DossierController@createDiagExterne');
 	    Route::post('dossier/save-diag-externe','DossierController@saveDiagExterne');
 	    Route::get('dossier/update-plan','DossierController@updatePlanJson');
+
+	    Route::resource('projets','EarlyController');
+	    Route::post('projet/synthese1','EarlyController@synthese1');
+	    Route::post('projet/synthese2','EarlyController@synthese2');
+	    Route::post('projet/synthese3','EarlyController@synthese3');
+	    Route::get('projet/create-diag-externe/{token}','EarlyController@createDiagExterne');
+	    Route::post('projet/save-diag-externe','EarlyController@saveDiagExterne');
+	    Route::get('projet/update-plan','EarlyController@updatePlanJson');
+
+	    Route::resource('partenariats','InfrastructureController');
+	    Route::post('partenariat/synthese1','InfrastructureController@synthese1');
+	    Route::post('partenariat/synthese2','InfrastructureController@synthese2');
+	    Route::post('partenariat/synthese3','InfrastructureController@synthese3');
+	    Route::get('partenariat/create-diag-externe/{token}','InfrastructureController@createDiagExterne');
+	    Route::post('partenariat/save-diag-externe','InfrastructureController@saveDiagExterne');
+	    Route::get('partenariat/update-plan','InfrastructureController@updatePlanJson');
 
 	    Route::post('actif/save','ActifController@saveTeaser');
 
