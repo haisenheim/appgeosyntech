@@ -43,7 +43,7 @@
                                 </fieldset>
                                 
                             @endif
-                            <input type="hidden" id="id" value="<?= $projet->id ?>"/>
+                            <input type="hidden" id="id" value="<?= $projet->token ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
                             <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
