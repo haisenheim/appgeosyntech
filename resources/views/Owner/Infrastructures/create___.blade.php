@@ -1,7 +1,7 @@
 @extends('......layouts.owner')
 
 @section('page-title')
-NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
+NOUVEAU DOSSIER DE FINANCEMENT STRUCTURE
 @endsection
 
 
@@ -47,16 +47,16 @@ NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
                                             <fieldset>
                                                 <legend>DONNEES GENERALES</legend>
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                             <div class="form-group">
-                                                                 <label class="control-label">NOM DE LA SOCIETE</label>
-                                                                 <input id="societe" name="societe" maxlength="250" type="text" required="required" class="form-control" placeholder="">
-                                                             </div>
-                                                         </div>
-                                                         <div class="col-md-4">
+                                                         <div class="col-md-5">
                                                              <div class="form-group">
                                                                  <label class="control-label">INTITULE DU PROJET</label>
                                                                  <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                                             </div>
+                                                         </div>
+                                                         <div class="col-md-5">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">SOCIETE</label>
+                                                                 <input id="societe" name="societe" maxlength="100" type="text" required="required" class="form-control" placeholder="Saisir le nom de votre société">
                                                              </div>
                                                          </div>
                                                          <div class="col-md-2">
@@ -67,20 +67,12 @@ NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
                                                          </div>
                                                          <div class="col-md-3">
                                                              <div class="form-group">
-                                                                 <label class="control-label">PHOTO DU PROJET</label>
-                                                                 <input id="imageUri" name="imageUri"  required="required" type="file"  class="form-control">
-                                                             </div>
-                                                         </div>
-                                                       </div>
-                                                       <div class="row">
-                                                         <div class="col-md-3">
-                                                             <div class="form-group">
                                                                  <label class="control-label">COUT DU PROJET</label>
                                                                  <input id="montant" name="montant" maxlength="100" type="number" required="required" class="form-control" placeholder="Saisir le code du dossier">
                                                              </div>
                                                          </div>
 
-                                                         <div class="col-md-2 col-sm-12">
+                                                         <div class="col-md-4 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">DEVISE</label>
                                                                  <select class="form-control" name="variante_id" id="variante_id">
@@ -90,17 +82,8 @@ NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
                                                                  </select>
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-3 col-sm-12">
-                                                             <div class="form-group">
-                                                                 <label class="control-label">OUVERTURE DE CAPITAL ?</label>
-                                                                 <select class="form-control" name="capital" id="capital">
-                                                                    <option value="0">NON</option>
-                                                                    <option value="1">OUI</option>
-                                                                 </select>
-                                                             </div>
-                                                         </div>
 
-                                                         <div class="col-md-4 col-sm-12">
+                                                         <div class="col-md-5 col-sm-12">
                                                              <div class="form-group">
                                                                  <label class="control-label">VILLE</label>
                                                                  <select class="form-control" name="ville_id" id="ville_id">
@@ -111,30 +94,34 @@ NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
                                                              </div>
                                                          </div>
 
+
+
+
                                                      </div>
                                                      <hr/>
 
                                                      <div class="row">
-                                                         <div class="col-md-3">
+                                                         <div class="col-md-6">
                                                              <div class="form-group">
                                                                  <label class="control-label">REPRESENTANT</label>
                                                                  <input id="representant" name="montant" maxlength="250" type="text" required="required" class="form-control" placeholder="Personne de ressource du dossier">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-3">
+                                                         <div class="col-md-6">
                                                              <div class="form-group">
                                                                  <label class="control-label">ADRESSE</label>
                                                                  <input id="address" name="address" maxlength="100" type="text" required="required" class="form-control" placeholder="Saisir l'adresse de la personne ressource">
                                                              </div>
                                                          </div>
-
-                                                         <div class="col-md-3">
+                                                     </div>
+                                                     <div class="row">
+                                                         <div class="col-md-4">
                                                              <div class="form-group">
                                                                  <label class="control-label">TELEPHONE</label>
                                                                  <input id="phone" name="phone" maxlength="50" type="text" required="required" class="form-control" placeholder="Saisir ici les contacts telephoniques">
                                                              </div>
                                                          </div>
-                                                         <div class="col-md-3">
+                                                         <div class="col-md-5">
                                                              <div class="form-group">
                                                                  <label class="control-label">EMAIL</label>
                                                                  <input id="email" name="email" maxlength="100" type="email" required="required" class="form-control" placeholder="Saisir l'adresse email">
@@ -904,7 +891,67 @@ NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
     </div>
 
     <style>
-     div.note-editor.note-frame{
+
+        .loader {
+                position: relative;
+                text-align: center;
+                margin: 15px auto 35px auto;
+                z-index: 9999;
+                display: block;
+                width: 80px;
+                height: 80px;
+                border: 10px solid rgba(0, 0, 0, .3);
+                border-radius: 50%;
+                border-top-color: #000;
+                animation: spin 1s ease-in-out infinite;
+
+                -webkit-animation-name: spin;
+                -webkit-animation-duration: 600ms;
+                -webkit-animation-timing-function: ease-in-out;
+                -webkit-animation-iteration-count: infinite;
+            }
+
+            @keyframes spin {
+               from{
+                   transform: rotate(0deg);
+               }
+                to {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            @-webkit-keyframes spin {
+                to {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+
+            /** MODAL STYLING **/
+
+            .modal-content {
+                border-radius: 0px;
+                box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.7);
+            }
+
+            .modal-backdrop.show {
+                opacity: 0.75;
+            }
+
+            .loader-txt {
+            p {
+                font-size: 13px;
+                color: #666;
+            small {
+                font-size: 11.5px;
+                color: #999;
+            }
+            }
+            }
+
+
+
+        div.note-editor.note-frame{
             padding: 0;
         }
       .note-frame .btn-default {
@@ -913,7 +960,6 @@ NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
             border-color: none;
         }
     </style>
-         <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
@@ -1117,8 +1163,8 @@ NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
                     bil3[id] = $('#bilan3 #' + id).val();
                 }
 
-                var url = '/owner/partenariat/initJson';
-                var redirectUrl = '/owner/partenariats';
+                var url = '/owner/dossier/initJson';
+                var redirectUrl = '/owner/dossiers';
 
                 var reponses = [];
                 var produits=[];
@@ -1133,42 +1179,27 @@ NOUVEAU DOSSIER DE PARTENARIAT PUBLIC-PRIVE
                     reponses.push(elt);
                 });
 
-                 var fd = new FormData();
-                 fd.append('imageUri',$('#imageUri')[0].files[0]);
-                 fd.append('dossier',JSON.stringify(values));
-                 fd.append('answers',JSON.stringify(reponses));
-                 fd.append('produits',JSON.stringify(produits));
-                 fd.append('bm',bm);
-                 fd.append('bil1',JSON.stringify(bil1));
-                 fd.append('bil2',JSON.stringify(bil2));
-                 fd.append('bil3',JSON.stringify(bil3));
-                 fd.append('compte1',JSON.stringify(cr1));
-                 fd.append('compte2',JSON.stringify(cr2));
-                 fd.append('compte3',JSON.stringify(cr3));
-                var spinHandle_firstProcess = loadingOverlay.activate();
-
                 $.ajax({
                     url:url,
                     type:'Post',
                     dataType:'JSON',
-                    denctype:'multipart/form-data',
-                    processData:false,
-                    contentType:false,
-                    data:fd,
-
+                    data:{_csrf:$('input[name="_token"]').val(), answers:reponses, dossier:values,produits:produits,bm:bm,bil1:bil1,bil2:bil2,bil3:bil3,
+                    compte1:cr1, compte2:cr2,compte3:cr3
+                    },
                     beforeSend:function(xhr){
                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
-
+                        $("#loadMe").modal({
+                            backdrop: "static", //remove ability to close modal with click
+                            keyboard: false, //remove option to close with keyboard
+                            show: true //Display loader!
+                        });
                     },
                     success: function(data){
-                       loadingOverlay.cancel(spinHandle_firstProcess);
+                        $("#loadMe").modal("hide");
                         window.location.replace(redirectUrl+"/"+data);
-                        //console.log(data);
 
                     },
                     Error:function(){
-                        loadingOverlay.cancel(spinHandle_firstProcess);
-                        alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
                         $('#btn-save').show();
                     }
                 });

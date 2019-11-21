@@ -189,7 +189,7 @@ Route::prefix('owner')
 	    Route::post('/projet/initJson','EarlyController@initJson');
 	    Route::get('dossier/getchoices','DossierController@getChoicesJson');
 	    Route::get('projet/getchoices','EarlyController@getChoicesJson');
-	    Route::post('/financement/initJson','InfrastructureController@initJson');
+	    Route::post('/partenariat/initJson','InfrastructureController@initJson');
 	    Route::get('financement/getchoices','InfrastructureController@getChoicesJson');
 	    Route::post('dossier/upload-image','DossierController@uploadImage');
 	    Route::post('dossier/docs','DossierController@editDocs');

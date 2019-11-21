@@ -62,7 +62,7 @@ DOSSIERS DE FINANCEMENTS STRUCTURES
 
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/owner/financements/{{ $projet->token  }}">
+                          <a class="btn btn-primary btn-xs" href="/owner/partenariats/{{ $projet->token  }}">
                               <i class="fas fa-folder">
                               </i>
                               Afficher
@@ -115,7 +115,7 @@ DOSSIERS DE FINANCEMENTS STRUCTURES
         <ul class="main-menu">
 
             <li>
-                <a title="Nouveau Dossier" href="/owner/financements/create" class="ripple">
+                <a title="Nouveau Dossier" href="/owner/partenariats/create" class="ripple">
                     <i class="fa fa-plus-circle fa-lg"></i>
                 </a>
             </li>

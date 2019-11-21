@@ -301,83 +301,106 @@ class InfrastructureController extends Controller
 	// Premiere sauvegarde du dossier
 
 	public function initJson(Request $request){
-		//$dossier = new Projet();
-
 		//dd($request->all());
-		$answers = isset($request->all()['answers'])?$request->all()['answers']:null;
-		$produits = isset($request->all()['produits'])?$request->all()['produits']:null;
+		$dossier = json_decode($request->all()['dossier'],true);
+		$answers = isset($request->all()['answers'])?json_decode($request->all()['answers'],true):null;
+		$produits = isset($request->all()['produits'])?json_decode($request->all()['produits'],true):null;
 
-		$dossier = $request->all()['dossier'];
 		$dossier['moi_id'] = date('m');
 		$dossier['annee'] = date('Y');
 		$dossier['author_id']= Auth::user()->id;
 		$dossier['owner_id']=Auth::user()->id;
-		$dossier['description_modele_economique'] = $request->all()['bm'];
-		$dossier['capital'] = isset($dossier['capital'])?1:0;
-		$dossier['token'] = sha1(date('ymdhs').$dossier['owner_id']);
+		$dossier['description_modele_economique'] = isset($request->all()['bm'])?$request->bm:'';
+		$token = sha1(date('ymdhs').$dossier['owner_id']);
+		$dossier['token'] = $token;
+
+		$file = $request->imageUri;
+		if($file){
+			$ext = $file->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif');
+			if(in_array($ext,$arr_ext)){
+				if(!file_exists(public_path('img').'/infrastructures')){
+					mkdir(public_path('img').'/infrastructures');
+				}
+				//dd($projet);
+				if(file_exists(public_path('img').'/infrastructures/'.$token.'.'.$ext)){
+					unlink(public_path('img').'/infrastructures/'.$token.'.'.$ext);
+				}
+				$name = $token.'.'.$ext;
+				$file->move(public_path('img/infrastructures'), $name);
+				//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
+				$dossier['imageUri'] = 'infrastructures/'.$name;
+			}
+		}
+
 		$dossier = Infrastructure::create($dossier);
 		if($dossier){
-			if(!empty($request->all()['bil1']['stocks'])){
-				$bilan1 = $request->all()['bil1'];
+			$bilan1 = isset($request->all()['bil1'])?json_decode($request->all()['bil1'],true):null;
+			$bilan2 = isset($request->all()['bil2'])?json_decode($request->all()['bil2'],true):null;
+			$bilan3 = isset($request->all()['bil3'])?json_decode($request->all()['bil3'],true):null;
+			$res1 = isset($request->all()['compte1'])?json_decode($request->all()['compte1'],true):null;
+			$res2 = isset($request->all()['compte2'])?json_decode($request->all()['compte2'],true):null;
+			$res3 = isset($request->all()['compte3'])?json_decode($request->all()['compte3'],true):null;
+			if($bilan1){
+				//$bilan1 = $request->all()['bil1'];
 				$bilan1['annee'] = date('Y') -1;
 				$bilan1['moi_id'] = date('m');
-				$bilan1['infractructure_id'] = $dossier->id;
+				$bilan1['infrastructure_id'] = $dossier->id;
 				$bilan1['user_id'] =Auth::user()->id;
 				$bilan1 = Bilan::create($bilan1);
 			}
 
-			if(!empty($request->all()['bil2']['stocks'])){
-				$bilan2 = $request->all()['bil2'];
+			if($bilan2){
+				//$bilan2 = $request->all()['bil2'];
 				$bilan2['annee'] = date('Y') -2;
 				$bilan2['moi_id'] = date('m');
-				$bilan2['infractructure_id'] = $dossier->id;
+				$bilan2['infrastructure_id'] = $dossier->id;
 				$bilan2['user_id'] =Auth::user()->id;
 				$bilan2 = Bilan::create($bilan2);
 			}
 
-			if(!empty($request->all()['bil3']['stocks'])){
-				$bilan2 = $request->all()['bil3'];
-				$bilan2['annee'] = date('Y') -3;
-				$bilan2['moi_id'] = date('m');
-				$bilan2['infractructure_id'] = $dossier->id;
-				$bilan2['user_id'] =Auth::user()->id;
-				$bilan3 = Bilan::create($bilan2);
+			if($bilan3){
+				//$bilan2 = $request->all()['bil3'];
+				$bilan3['annee'] = date('Y') -3;
+				$bilan3['moi_id'] = date('m');
+				$bilan3['infrastructure_id'] = $dossier->id;
+				$bilan3['user_id'] =Auth::user()->id;
+				$bilan3 = Bilan::create($bilan3);
 			}
 
-			if(!empty($request->all()['compte1']['ca'])){
-				$res1 = $request->all()['compte1'];
+			if($res1){
+				//$res1 = $request->all()['compte1'];
 				$res1['annee'] = date('Y') -1;
 				$res1['moi_id'] = date('m');
-				$res1['infractructure_id'] = $dossier->id;
+				$res1['infrastructure_id'] = $dossier->id;
 				$res1['token'] =sha1(date('yhdmis').Auth::user()->id);
 				$result = Resultat::create($res1);
 			}
 
-			if(!empty($request->all()['compte2']['ca'])){
-				$res1 = $request->all()['compte2'];
-				$res1['annee'] = date('Y') -2;
-				$res1['moi_id'] = date('m');
-				$res1['infractructure_id'] = $dossier->id;
-				$res1['token'] =sha1(date('yhdims').Auth::user()->id);
-				$result = Resultat::create($res1);
+			if($res2){
+				//$res1 = $request->all()['compte2'];
+				$res2['annee'] = date('Y') -2;
+				$res2['moi_id'] = date('m');
+				$res2['infrastructure_id'] = $dossier->id;
+				$res2['token'] =sha1(date('yhdims').Auth::user()->id);
+				$result = Resultat::create($res2);
 			}
 
-			if(!empty($request->all()['compte3']['ca'])){
-				$res1 = $request->all()['compte3'];
-				$res1['annee'] = date('Y') -3;
-				$res1['moi_id'] = date('m');
-				$res1['infractructure_id'] = $dossier->id;
-				$res1['token'] =sha1(date('myhsiyd').Auth::user()->id);
-				$result = Resultat::create($res1);
+			if($res3){
+				//$res1 = $request->all()['compte3'];
+				$res3['annee'] = date('Y') -3;
+				$res3['moi_id'] = date('m');
+				$res3['infrastructure_id'] = $dossier->id;
+				$res3['token'] =sha1(date('myhsiyd').Auth::user()->id);
+				$result = Resultat::create($res3);
 			}
-
 
 			if($produits){
 				for($i = 0; $i<count($produits);$i++){
 					$dp = new InfrastructuresProduit();
 					//$dp->produi_id =
 					$dp->produit_id = $produits[$i];
-					$dp->infractructure_id = $dossier->id;
+					$dp->infrastructure_id = $dossier->id;
 					$dp->save();
 				}
 			}
@@ -387,7 +410,7 @@ class InfrastructureController extends Controller
 				foreach($answers as $answer){
 					$an= new ChoicesInfrastructure();
 					$an->choice_id=$answer['choice_id'];
-					$an->infrastructures_id=$dossier->id;
+					$an->infrastructure_id=$dossier->id;
 					$an->save();
 				}
 			}
