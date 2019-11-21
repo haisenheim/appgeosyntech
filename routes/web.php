@@ -181,7 +181,7 @@ Route::prefix('owner')
 	    Route::resource('projets','EarlyController');
 
 	    Route::resource('dossiers','DossierController');
-	    Route::resource('financements','InfrastructureController');
+	    Route::resource('partenariats','InfrastructureController');
 	    Route::resource('actifs','ActifController');
         Route::get('about','AboutController');
         Route::get('profil','ProfilController');
