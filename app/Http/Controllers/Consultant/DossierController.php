@@ -244,24 +244,30 @@ class DossierController extends Controller
 
 		$ressouces = $request->organisation;
 		//dd($ressouces);
-		foreach($ressouces as $ress){
-			$ressouce = new Ressource();
-			$ressouce->name = $ress['nom'];
-			//$ressouce->name = "toto";
-			$ressouce->fonction = $ress['fonction'];
-			$ressouce->responsabilite = $ress['role'];
-			$ressouce->projet_id = $projet->id;
-			$ressouce->save();
+		if($ressouces){
+			foreach($ressouces as $ress){
+				$ressouce = new Ressource();
+				$ressouce->name = $ress['nom'];
+				//$ressouce->name = "toto";
+				$ressouce->fonction = $ress['fonction'];
+				$ressouce->responsabilite = $ress['role'];
+				$ressouce->projet_id = $projet->id;
+				$ressouce->save();
+			}
 		}
 
+
 		$etapes = $request->etapes;
-		foreach($etapes as $et){
-			$etape = new Etape();
-			$etape->projet_id = $projet->id;
-			$etape->name = $et['name'];
-			$etape->action = $et['action'];
-			$etape->save();
+		if($etapes){
+			foreach($etapes as $et){
+				$etape = new Etape();
+				$etape->projet_id = $projet->id;
+				$etape->name = $et['name'];
+				$etape->action = $et['action'];
+				$etape->save();
+			}
 		}
+
 
 		return response()->json($projet);
 	}
