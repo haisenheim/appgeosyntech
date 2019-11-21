@@ -151,10 +151,10 @@
                         <div class="card">
                             <div class="card-body">
                                <fieldset>
-                                    <h6>Diagnostic interne</h6>
-                                    <ul class="nav nav-tabs" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                         <li role="presentation" class="nav-item active">
-                                             <a class="nav-link" href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
+                                    <legend>Diagnostic interne</legend>
+                                    <ul class="nav nav-pills ml-auto p-2" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                         <li role="presentation" class="nav-item">
+                                             <a class="nav-link active" href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
                                          </li>
 
                                          <li role="presentation" class="nav-item">
@@ -163,7 +163,7 @@
                                      </ul>
 
                                      <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade active show" role="tabpanel" id="etats" aria-labelledby="tab1">
+                                        <div class="tab-pane active " role="tabpanel" id="etats" aria-labelledby="tab1">
                                              <div>
 
 
@@ -442,7 +442,7 @@
 
                                         </div>
 
-                                        <div class="tab-pane fade" role="tabpanel" id="risques" aria-labelledby="">
+                                        <div class="tab-pane" role="tabpanel" id="risques" aria-labelledby="">
                                             <div class="card">
                                                 <div class="card-header">
                                                  <div class="card-tools">
