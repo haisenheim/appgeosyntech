@@ -946,10 +946,13 @@
     		{{csrf_field()}}
     		<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
-    				<div class="modal-header">
-    					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC INTERNE</span></h5>
-    				</div>
+    			        <div class="modal-header">
+                            <h6  class="modal-title text-center">SYNTHESE DU DIAGNOSTIC INTERNE</h6>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+
     				<div class="modal-body">
     					<div class="form-group">
     						<textarea class="form-control"  name="synthese1" id="synthese1" cols="30" rows="10" >{{ $projet->synthese_diagnostic_interne }}</textarea>
@@ -972,10 +975,13 @@
         		{{csrf_field()}}
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
-        				<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC EXTERNE</span></h5>
-        				</div>
+        			    <div class="modal-header bg-info">
+                            <h6  class="modal-title text-center">SYNTHESE DU DIAGNOSTIC EXTERNE</h6>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+
         				<div class="modal-body">
         					<div class="form-group">
         						<textarea class="form-control"  name="synthese2" id="synthese2" cols="30" rows="10">{{ $projet->synthese_diagnostic_externe }}</textarea>
@@ -988,11 +994,6 @@
         			</div>
         		</div>
         	</form>
-
-
-
-
-
 
 
         </div>
@@ -1010,7 +1011,7 @@
         				</div>
         				<div class="modal-body">
         					<div class="form-group">
-        						<textarea class="form-control"  name="synthese3" id="synthese3" cols="30" rows="10" placeholder="Saisir le synthese ici...">{{ $projet->synthese_diagnostic_strategique }}</textarea>
+        						<textarea class="form-control"  name="synthese3" id="synthese3" cols="30" rows="10" >{{ $projet->synthese_diagnostic_strategique }}</textarea>
         					</div>
         				</div>
         				<div class="modal-footer">
@@ -1020,19 +1021,6 @@
         			</div>
         		</div>
         	</form>
-
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('#synthese3').summernote({
-                        height: 300,
-                        tabsize: 2,
-                        followingToolbar: true,
-                        lang:'fr-FR'
-                      });
-                    });
-                  </script>
-
-
         </div>
 
 
@@ -1045,10 +1033,12 @@
         		{{csrf_field()}}
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
-        				<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> ELABORATION DU TEASER</span></h5>
-        				</div>
+        				<div class="modal-header bg-success">
+                          <h6  class="modal-title text-center">ELABORATION DU TEASER</h6>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
         				<div class="modal-body">
         					 <div class="row">
 
@@ -1258,18 +1248,12 @@
            }
 </style>
 
-<script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+
 <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-<script>
-  $(function () {
-    $("#table-invest").DataTable();
 
-  });
-</script>
 
 <script type="text/javascript">
   $(document).ready(function() {
@@ -1407,26 +1391,3 @@
 
 
 
-@section('action')
-@if($projet->etape==1)
-    @if($projet->validated_step==1)
-        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-diag-externe/{{$projet->token}}"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
-    @endif
-@endif
-
-@if($projet->etape==2)
-    @if($projet->validated_step==2)
-        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-pencil"></i> Editer le diagnostic strategique</a>
-    @endif
-@endif
-
-
-
-@if($projet->etape==3)
-    @if($projet->validated_step==3)
-        <a class="btn btn-xs btn-success" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-pencil"></i> Elaborer le plan financier</a>
-    @endif
-@endif
-
-
-@endsection
