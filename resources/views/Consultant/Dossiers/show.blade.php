@@ -1174,26 +1174,32 @@
 
 @section('nav_actions')
 <main>
-    <nav style="top:30%" class="floating-menu">
+    <nav style="top:15%" class="floating-menu">
         <ul class="main-menu">
 
             @if($projet->modepaiement_id>1)
                 @if($projet->validated_step==1)
                    <li>
-                        <a title="Editer le diagnostic externe" class="ripple" href="/consultant/dossier/create-diag-externe/{{ $projet->token }}"><i class="fa fa-pencil text-warning"></i></a>
+                        <a title="Editer le diagnostic externe" class="ripple" href="/consultant/dossier/create-diag-externe/{{ $projet->token }}"><i class="fa fa-edit text-warning"></i></a>
                    </li>
                 @endif
             @endif
 
             @if($projet->etape==2)
                 @if($projet->validated_step==2)
-                    <a class="ripple" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-pencil text-primary"></i></a>
+                    <a title="Editer le diagnostic strategique"  class="ripple" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-edit text-primary"></i></a>
                 @endif
             @endif
 
             @if($projet->etape==3)
                 @if($projet->validated_step==3)
-                    <a class="ripple" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-pencil text-success"></i></a>
+                    <a title="Editer le plan financier"  class="ripple" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-edit text-success"></i></a>
+                @endif
+            @endif
+
+            @if($projet->etape==4)
+                @if($projet->validated_step==4)
+                    <a data-target="#angelsModal" data-toggle="modal" title="Editer le teaser" class="ripple" href="#"><i class="fa fa-edit text-success"></i></a>
                 @endif
             @endif
 
