@@ -109,18 +109,3 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
 
 @endsection
 
-@section('nav_actions')
-<main>
-    <nav class="floating-menu">
-        <ul class="main-menu">
-            <li>
-                <a title="Nouveau Dossier" href="/owner/projets/create" class="ripple">
-                    <i class="fa fa-plus-circle fa-lg"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="menu-bg"></div>
-    </nav>
-</main>
-
-@endsection

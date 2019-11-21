@@ -161,7 +161,7 @@ Route::prefix('consultant')
 	    Route::get('dossier/create-diag-externe/{token}','DossierController@createDiagExterne');
 	    Route::post('dossier/save-diag-externe','DossierController@saveDiagExterne');
 	    Route::get('dossier/update-plan','DossierController@updatePlanJson');
-
+	    Route::resource('porteurs','ClientController');
 	    Route::resource('projets','EarlyController');
 	    Route::post('projet/synthese1','EarlyController@synthese1');
 	    Route::post('projet/synthese2','EarlyController@synthese2');
