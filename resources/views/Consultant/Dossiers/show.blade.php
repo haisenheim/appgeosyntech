@@ -1350,13 +1350,18 @@
 
             @if($projet->etape==2)
                 @if($projet->validated_step==2)
-                    <a title="Editer le diagnostic strategique"  class="ripple" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-edit text-primary"></i></a>
+                <li>
+                     <a title="Editer le diagnostic strategique"  class="ripple" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-edit text-primary"></i></a>
+                </li>
                 @endif
             @endif
 
             @if($projet->etape==3)
                 @if($projet->validated_step==3)
-                    <a title="Editer le plan financier"  class="ripple" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-edit text-success"></i></a>
+                <li>
+                     <a title="Editer le plan financier"  class="ripple" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-edit text-success"></i></a>
+                </li>
+
                 @endif
             @endif
 
