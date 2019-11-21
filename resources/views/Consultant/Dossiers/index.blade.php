@@ -1,61 +1,89 @@
 @extends('......layouts.consultant')
-@section('content-header')
- <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">GESTION DES PROJETS INDUSTRIELS</h3>
-@endsection
 
+@section('page-title')
+DOSSIERS DE LEVEE DE FONDS
+@endsection
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
-                <div class="row">
-                    @foreach($dossiers as $projet)
+        <div class="card">
+        <div class="card-header">
 
-                         <div class="col-md-3">
-            <!-- Widget: user widget style 1 -->
-            <a style="color:#555" href="/consultant/dossiers/{{ $projet->token  }}">
-             <div class="card card-widget widget-user">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header text-white"
-                   style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}') center center;">
-                    <h3 style="font-weight: 900" class="widget-user-username text-right"><?= $projet->name ?></h3>
-                    <h5 style="font-weight: 700" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
-              </div>
-              <div class="widget-user-image">
-                <img class="img-circle" src="{{$projet->user?$projet->user->imageUri? asset('img/'.$projet->user->imageUri):asset('img/avatar.png'):asset('img/avatar.png')}}" alt="User Avatar">
-              </div>
-              <div class="card-body">
-
-              </div>
-              <div style="padding: .75rem 1.25rem;" class="card-footer">
-                <div class="row">
-                    <div class="col-md-6 border-right">
-                        <div class="description-block">
-                          <h5 class="description-header"><i class="fa fa-map-marker"></i></h5>
-                          <span class="description-text">{{ $projet->ville->name  }}</span>
-                        </div>
-                    </div>
-
-                  <!-- /.col -->
-                  <div class="col-sm-6">
-                    <div class="description-block">
-                      <h5 class="description-header"><i class="fa fa-coins"></i></h5>
-                      <span class="description-text">{{$projet->montant}} FCFA</span>
-                    </div>
-                    <!-- /.description-block -->
-                  </div>
-                  <!-- /.col -->
-                </div>
-                <!-- /.row -->
-              </div>
-            </div>
-            </a>
-            <!-- /.widget-user -->
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fas fa-times"></i></button>
           </div>
-                    @endforeach
-                </div>
-                    <div class="">
-                        <ul class="pagination justify-content-end">
-                        {{ $dossiers->links() }}
-                    </ul>
-                    </div>
-            </div>
+        </div>
+
+        <div class="card-body p-0">
+          <table class="table table-striped projects" id="table-projets">
+              <thead>
+                  <tr>
+                      <th style="width: 1%">
+                          #
+                      </th>
+                      <th style="width: 38%">
+                          Projet
+                      </th>
+                      <th style="width: 20%">
+                          Promoteur
+                      </th>
+                      <th>
+                          Progression
+                      </th>
+
+                      <th style="width: 20%">
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+
+
+                   @foreach($dossiers as $projet)
+                        <tr>
+                            <td>#</td>
+                            <td>
+                            <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
+                            <?= $projet->active?'<span class="badge badge-success">ACTIF</span>':'<span class="badge badge-danger">Bloqué</span>' ?> -
+                            <?= $projet->public?'<span class="badge badge-info">PUBLIC</span>':'<span class="badge badge-warning">PRIVE</span>' ?>
+                            </td>
+
+                            <td>{{$projet->owner?$projet->owner->name:'-'}}</td>
+                            <td class="project_progress">
+                          <div class="progress progress-sm">
+                              <div class="progress-bar progress-bar-striped bg-{{$projet->progresscolor}}" role="progressbar" aria-volumenow="{{$projet->progress }}" aria-volumemin="0" aria-volumemax="100" style="width: {{$projet->progress .'%'}} ">
+                              </div>
+                          </div>
+                          <small>
+                             Complet à {{$projet->progress}}%
+                          </small>
+                      </td>
+
+
+                      <td class="project-actions text-right">
+                          <a class="btn btn-primary btn-xs" href="/consultant/dossiers/{{ $projet->token  }}">
+                              <i class="fas fa-folder">
+                              </i>
+                              Afficher
+                          </a>
+
+
+                      </td>
+                        </tr>
+                   @endforeach
+              </tbody>
+          </table>
+        </div>
+        <div class="">
+            <ul class="pagination justify-content-end">
+                {{ $dossiers->links() }}
+            </ul>
+        </div>
+        <!-- /.card-body -->
+      </div>
+
+     </div>
 
 @endsection
+

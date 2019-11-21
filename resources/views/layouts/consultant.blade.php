@@ -119,7 +119,7 @@
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul style="overflow-y: scroll;" class="nav nav-treeview">
+            <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="/consultant/dossiers" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
@@ -203,9 +203,12 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <div style="background-color: #4caf50;; min-height: 200px; padding: 0 -15px" class="content-header">
-       @yield('content-header')
-    </div>
+    <div style="height: 240px; " class="content-head bg-gradient-success">
+        <div>
+           <h1 class="content-title text-center">@yield('page-title')</h1>
+             @yield('nav_actions')
+        </div>
+     </div>
     <!-- /.content-header -->
 
     <!-- Main content -->
