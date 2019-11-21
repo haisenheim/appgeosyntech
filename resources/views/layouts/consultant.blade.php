@@ -111,23 +111,88 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/consultant/dossiers" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+           <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file-invoice-dollar"></i>
               <p>
-                PROJETS
+                 LEVEES DE FONDS
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul style="overflow-y: scroll;" class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/consultant/dossiers" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>PME</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="/admin/projets" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>EARLY STAGE</p>
+                </a>
+                </li>
+            </ul>
+          </li>
+
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-gift"></i>
+              <p>
+                 CESSIONS
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/consultant/actifs" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>CESSIONS D'ACTIFS</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="/admin/creances" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>CESSIONS DE CREANCES</p>
+                </a>
+                </li>
+            </ul>
+          </li>
+
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-coins text-warning"></i>
+              <p>
+                 FIN. STRUCTURES
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/consultant/partenariats" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>PPP</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="/admin/ressources" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>RES. NATURELLES</p>
+                </a>
+                </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/consultant/clients" class="nav-link">
+              <i class="nav-icon text-success fas fa-users"></i>
+              <p>
+                CLIENTS
               </p>
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/consultant/actifs" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                CESSIONS
-              </p>
-            </a>
-          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
