@@ -68,7 +68,7 @@ class Infrastructure extends Model
     }
 
 	public function concessions(){
-		return $this->hasMany('App\Models\Concessions');
+		return $this->hasMany('App\Models\Concession');
 	}
 
     public function consultant(){
