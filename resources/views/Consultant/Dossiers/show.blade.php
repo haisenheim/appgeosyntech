@@ -1107,67 +1107,10 @@
                         }
     </style>
 
-@endsection
 
 
 
-
-
-@section('nav_actions')
-<main>
-    <nav style="top:15%" class="floating-menu">
-        <ul class="main-menu">
-
-            @if($projet->modepaiement_id>1)
-                @if($projet->validated_step==1)
-                   <li>
-                        <a title="Editer le diagnostic externe" class="ripple" href="/consultant/dossier/create-diag-externe/{{ $projet->token }}"><i class="fa fa-edit text-warning"></i></a>
-                   </li>
-                @endif
-            @endif
-
-            @if($projet->etape==2)
-                @if($projet->validated_step==2)
-                    <a title="Editer le diagnostic strategique"  class="ripple" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-edit text-primary"></i></a>
-                @endif
-            @endif
-
-            @if($projet->etape==3)
-                @if($projet->validated_step==3)
-                    <a title="Editer le plan financier"  class="ripple" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-edit text-success"></i></a>
-                @endif
-            @endif
-
-            @if($projet->etape==4)
-                @if($projet->validated_step==4)
-                    <a data-target="#angelsModal" data-toggle="modal" title="Editer le teaser" class="ripple" href="#"><i class="fa fa-edit text-success"></i></a>
-                @endif
-            @endif
-
-
-            @if(count($projet->investissements)>=1)
-                   <li>
-                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
-                   </li>
-            @endif
-
-
-
-        </ul>
-        <div
-         style="
-          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
-          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
-          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
-          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
-          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
-          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
-        "
-        class="menu-bg"></div>
-    </nav>
-</main>
-
-<div class="modal fade" id="angelsModal">
+    <div class="modal" id="angelsModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-success">
@@ -1385,6 +1328,64 @@
             }
 
     </script>
+
+@endsection
+
+
+
+
+
+@section('nav_actions')
+<main>
+    <nav style="top:15%" class="floating-menu">
+        <ul class="main-menu">
+
+            @if($projet->modepaiement_id>1)
+                @if($projet->validated_step==1)
+                   <li>
+                        <a title="Editer le diagnostic externe" class="ripple" href="/consultant/dossier/create-diag-externe/{{ $projet->token }}"><i class="fa fa-edit text-warning"></i></a>
+                   </li>
+                @endif
+            @endif
+
+            @if($projet->etape==2)
+                @if($projet->validated_step==2)
+                    <a title="Editer le diagnostic strategique"  class="ripple" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-edit text-primary"></i></a>
+                @endif
+            @endif
+
+            @if($projet->etape==3)
+                @if($projet->validated_step==3)
+                    <a title="Editer le plan financier"  class="ripple" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-edit text-success"></i></a>
+                @endif
+            @endif
+
+            @if($projet->etape==4)
+                @if($projet->validated_step==4)
+                    <a data-target="#angelsModal" data-toggle="modal" title="Editer le teaser" class="ripple" href="#"><i class="fa fa-edit text-success"></i></a>
+                @endif
+            @endif
+
+
+            @if(count($projet->investissements)>=1)
+                   <li>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                   </li>
+            @endif
+
+        </ul>
+        <div
+         style="
+          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
+          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
+          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
+          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
+        "
+        class="menu-bg"></div>
+    </nav>
+</main>
 @endsection
 
 
