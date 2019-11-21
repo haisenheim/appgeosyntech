@@ -372,11 +372,11 @@ class DossierController extends Controller
 
 			if($bilan3){
 				//$bilan2 = $request->all()['bil3'];
-				$bilan2['annee'] = date('Y') -3;
-				$bilan2['moi_id'] = date('m');
-				$bilan2['projet_id'] = $dossier->id;
-				$bilan2['user_id'] =Auth::user()->id;
-				$bilan3 = Bilan::create($bilan2);
+				$bilan3['annee'] = date('Y') -3;
+				$bilan3['moi_id'] = date('m');
+				$bilan3['projet_id'] = $dossier->id;
+				$bilan3['user_id'] =Auth::user()->id;
+				$bilan3 = Bilan::create($bilan3);
 			}
 
 			if($res1){
@@ -390,22 +390,21 @@ class DossierController extends Controller
 
 			if($res2){
 				//$res1 = $request->all()['compte2'];
-				$res1['annee'] = date('Y') -2;
-				$res1['moi_id'] = date('m');
-				$res1['projet_id'] = $dossier->id;
-				$res1['token'] =sha1(date('yhdims').Auth::user()->id);
-				$result = Resultat::create($res1);
+				$res2['annee'] = date('Y') -2;
+				$res2['moi_id'] = date('m');
+				$res2['projet_id'] = $dossier->id;
+				$res2['token'] =sha1(date('yhdims').Auth::user()->id);
+				$result = Resultat::create($res2);
 			}
 
 			if($res3){
 				//$res1 = $request->all()['compte3'];
-				$res1['annee'] = date('Y') -3;
-				$res1['moi_id'] = date('m');
-				$res1['projet_id'] = $dossier->id;
-				$res1['token'] =sha1(date('myhsiyd').Auth::user()->id);
-				$result = Resultat::create($res1);
+				$res3['annee'] = date('Y') -3;
+				$res3['moi_id'] = date('m');
+				$res3['projet_id'] = $dossier->id;
+				$res3['token'] =sha1(date('myhsiyd').Auth::user()->id);
+				$result = Resultat::create($res3);
 			}
-
 
 			if($produits){
 				for($i = 0; $i<count($produits);$i++){
