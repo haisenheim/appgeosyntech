@@ -1,7 +1,7 @@
 @extends('......layouts.consultant')
 
-@section('content-header')
- <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">{{$projet->name}}</h3>
+@section('page-title')
+{{$projet->name}}
 @endsection
 
 
@@ -1167,6 +1167,154 @@
     </style>
 
 @endsection
+
+
+
+
+
+@section('nav_actions')
+<main>
+    <nav style="top:30%" class="floating-menu">
+        <ul class="main-menu">
+
+            @if($projet->modepaiement_id>1)
+                @if($projet->validated_step==1)
+                   <li>
+                        <a title="Editer le diagnostic externe" class="ripple" href="/consultant/dossier/create-diag-externe/{{ $projet->token }}"><i class="fa fa-pencil text-warning"></i></a>
+                   </li>
+                @endif
+            @endif
+
+            @if($projet->etape==2)
+                @if($projet->validated_step==2)
+                    <a class="ripple" href="/consultant/dossier/create-diag-strategique/{{$projet->token}}"><i class="fa fa-pencil text-primary"></i></a>
+                @endif
+            @endif
+
+            @if($projet->etape==3)
+                @if($projet->validated_step==3)
+                    <a class="ripple" href="/consultant/dossier/create-plan-financier/{{$projet->token}}"><i class="fa fa-pencil text-success"></i></a>
+                @endif
+            @endif
+
+
+            @if(count($projet->investissements)>=1)
+                   <li>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                   </li>
+            @endif
+
+
+
+        </ul>
+        <div
+         style="
+          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
+          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
+          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
+          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
+        "
+        class="menu-bg"></div>
+    </nav>
+</main>
+
+<div class="modal fade" id="angelsModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+            <div class="card card-danger">
+                <div class="card-body">
+                     @if(count($projet->investissements)>=1)
+                        <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Depuis le</th>
+                              <th>RDV</th>
+                              <th>STATUT</th>
+                              <th></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($projet->investissements as $invest)
+                                    <tr>
+                                        <td>{{ $invest->angel->name }}</td>
+                                        <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
+                                        <td><?= $invest->rencontre ?></td>
+                                        <td></td>
+                                        <td>
+
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default btn-flat">Actions</button>
+                                                <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
+                                                  <span class="caret"></span>
+
+                                                </button>
+                                                <div class="dropdown-menu" role="menu">
+                                                 <?php if($invest->lettre): ?>
+                                                    <a class="dropdown-item" href="#">Lettre d'intention</a>
+                                                  <?php endif; ?>
+                                                  <?php if($invest->validated): ?>
+                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
+                                                  <?php else: ?>
+                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
+                                                  <?php endif; ?>
+
+                                                </div>
+                                              </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+
+                @endif
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+   .modal .card-title{
+        color: #000000;
+        font-weight: bold;
+   }
+
+   .modal label{
+        font-size: x-small;
+        line-height: 0.5;
+   }
+   .card.maximized-card {
+
+               overflow-y: scroll;
+           }
+</style>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+<script>
+  $(function () {
+    $("#table-invest").DataTable();
+
+  });
+</script>
+
+@endsection
+
+
+
+
 
 @section('action')
 @if($projet->etape==1)

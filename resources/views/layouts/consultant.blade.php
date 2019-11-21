@@ -203,9 +203,9 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <div style="height: 240px; " class="content-head bg-gradient-success">
+    <div style="height: 180px; " class="content-head bg-gradient-success">
         <div>
-           <h1 class="content-title text-center">@yield('page-title')</h1>
+           <h1 style="margin-top: 3%" class="content-title text-center">@yield('page-title')</h1>
              @yield('nav_actions')
         </div>
      </div>
