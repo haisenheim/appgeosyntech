@@ -6,7 +6,7 @@
 
 
 @section('content')
-
+    <?php dd($projet->variations) ?>
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
@@ -802,7 +802,7 @@
                     @endif
 
                     @if($projet->etape>=4)
-                        <div class="card card-default">
+                        <div class="col-md-12 card card-default">
                             <div class="card-header">
                             <h3 class="card-title">PLAN FINANCIER</h3>
 
@@ -838,8 +838,8 @@
                                     <div  class="tab-content">
                                         <div class="tab-pane active" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
                                       <div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12">
+                                        <div class="">
+                                            <div class="">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h4>COMPTE DE RESULTAT</h4>
