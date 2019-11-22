@@ -994,7 +994,11 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
     <script>
 
                 $(document).ready(function() {
+                    $('input[type="Number"]').val(0);
+                    $('input[type="Number"]').css({
+                    'text-align':'right'
 
+                    })
                     var sectors=[];
 
                     $.ajax({

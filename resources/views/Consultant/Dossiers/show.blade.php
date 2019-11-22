@@ -1819,7 +1819,7 @@
                                                                         <tr>
                                                                             <td colspan="2">TOTAL</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
-                                                                                <td><-</td>
+                                                                                <td>-</td>
                                                                                 @if(!$loop->last)
                                                                                 <td>-</td>
                                                                                 @endif

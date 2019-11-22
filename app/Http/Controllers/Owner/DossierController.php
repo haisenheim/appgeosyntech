@@ -299,7 +299,7 @@ class DossierController extends Controller
 	public function initJson(Request $request){
 
 
-		//dd($request->all());
+		dd($request->all());
 		$dossier = json_decode($request->all()['dossier'],true);
 		$answers = isset($request->all()['answers'])?json_decode($request->all()['answers'],true):null;
 		$produits = isset($request->all()['produits'])?json_decode($request->all()['produits'],true):null;
