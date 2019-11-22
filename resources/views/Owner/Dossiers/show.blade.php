@@ -1894,6 +1894,9 @@
                   </div>
 
               </div>
+         @if($projet->mode_paiement>0)
+          <input type="hidden" id="tokpay" value="<?= $projet->token ?>"/>
+         @endif
 
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
 
@@ -1902,10 +1905,10 @@
             getPlan($('#plan_id').val());
 
             $.ajax({
-                url: "/consultant/dossier/getchoices",
+                url: "/owner/dossier/getchoices",
                 type:'Get',
                 dataType:'json',
-                data:{id:$('#id').val()},
+                data:{id:$('#tokpay').val()},
                 success:function(data){
                     if(data!=null){
                         $.ajax({
@@ -1914,7 +1917,7 @@
                             dataType:'json',
                             data:{choix:data},
                             success:function(rep){
-                                $('#risks-loader').hide();
+
 
                                 var html = '';
                                 //console.log(Object.entries(rep));

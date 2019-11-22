@@ -41,7 +41,7 @@ class DossierController extends Controller
     }
 
 	public function getChoicesJson(Request $request){
-		$projet = Projet::find($request->id);
+		$projet = Projet::where('token',$request->id)->first();
 		$choices = $projet->choices;
 
 		$choix = [];
