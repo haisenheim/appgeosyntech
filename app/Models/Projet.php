@@ -32,17 +32,24 @@ class Projet extends Model
     }
 
 	public function getVariationsAttribute(){
-		$prevrs = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
-		$prevbls = Prevbilan::all()->where('projet_id',$this->id)->sortBy('annee');
-		$pbilans = [];
+		$prevrls = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
+		$prevbils = Prevbilan::all()->where('projet_id',$this->id)->sortBy('annee');
+		$prevbls = [];
+		$prevrs=[];
 		$i=0;
-		foreach($prevbls as $pb){
-			$pbilans[$i++] = $pb;
+		foreach($prevbils as $pb){
+			$prevbls[$i++] = $pb;
 		}
+
+		$i=0;
+		foreach($prevrls as $pb){
+			$prevrs[$i++] = $pb;
+		}
+
 		//debug($prevrs);
-		dd($pbilans);
-		$bc = $prevbls->count();
-		$nb = $prevrs->count();
+		//dd($pbilans);
+		$bc = count($prevbls);
+		$nb = count($prevrs);
 		$data=[];
 		for($i=0;$i<$nb-1;$i++){
 			$data['ca'][$i]=$prevrs[$i]->ca?round((($prevrs[$i+1]->ca-$prevrs[$i]->ca)/$prevrs[$i]->ca)*100,2):0;
