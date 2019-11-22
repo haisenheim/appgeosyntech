@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <?php dd($projet->variations); ?>
+
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
@@ -866,7 +866,7 @@
 
                                                                     <th><?= $prevr->ca ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['ca'][$i] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['ca'][$i] }}--}}%</th>
                                                                     <?php $i++ ?>
                                                                     @endif
                                                                 @endforeach
@@ -922,7 +922,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->mb ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['mb'][$i] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['mb'][$i] }}--}}%</th>
                                                                     <?php $i++ ?>
                                                                     @endif
                                                                 @endforeach
@@ -942,7 +942,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->va ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['va'][$i] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['va'][$i] }}--}}%</th>
                                                                     <?php $i++ ?>
                                                                     @endif
                                                                 @endforeach
@@ -962,7 +962,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->ebe ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['ebe'][$i++] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['ebe'][$i++] }}--}}%</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -982,7 +982,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->re ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['re'][$i++] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['re'][$i++] }}--}}%</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1010,7 +1010,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->rf ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['rf'][$i++] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['rf'][$i++] }}--}}%</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1048,7 +1048,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->rcai ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['rcai'][$i++] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['rcai'][$i++] }}--}}%</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1067,7 +1067,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->rn ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['rn'][$i++] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['rn'][$i++] }}--}}%</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
@@ -1361,7 +1361,7 @@
                                                                             @foreach($projet->prevbilans as $prevr)
                                                                                 <th><?= $prevr->fr ?></th>
                                                                                 @if(!$loop->last)
-                                                                                <th>{{ $projet->variations['fr'][$i++] }}%</th>
+                                                                                <th>{{--{{ $projet->variations['fr'][$i++] }}--}}%</th>
                                                                                 @endif
                                                                             @endforeach
                                                                         </tr>
@@ -1479,7 +1479,7 @@
                                                                             @foreach($projet->prevbilans as $prevr)
                                                                                 <th><?= $prevr->bfr ?></th>
                                                                                 @if(!$loop->last)
-                                                                                <th>{{ $projet->variations['bfr'][$i++] }}%</th>
+                                                                                <th>{{--{{ $projet->variations['bfr'][$i++] }}--}}%</th>
                                                                                 @endif
                                                                             @endforeach
                                                                         </tr>
@@ -1537,7 +1537,7 @@
                                                                             @foreach($projet->prevbilans as $prevr)
                                                                                 <th><?= $prevr->tn ?></th>
                                                                                 @if(!$loop->last)
-                                                                                <th>{{ $projet->variations['tn'][$i++] }}</th>
+                                                                                <th>{{--{{ $projet->variations['tn'][$i++] }}--}}</th>
                                                                                 @endif
                                                                             @endforeach
                                                                         </tr>
