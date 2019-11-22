@@ -1894,7 +1894,7 @@
                   </div>
 
               </div>
-         @if($projet->mode_paiement>0)
+         @if($projet->modepaiement_id>0)
           <input type="hidden" id="tokpay" value="<?= $projet->token ?>"/>
          @endif
 
