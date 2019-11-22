@@ -844,7 +844,7 @@
                                                     <div class="card-header">
                                                         <h4>COMPTE DE RESULTAT</h4>
                                                      </div>
-                                                     <div class="card-body">
+                                                     <div class="card-body table-responsive">
                                                         <?php $nbsim = count($projet->prevresultats) ?>
                                                         <table class="table table-bordered table-hover table-condensed">
                                                         <thead>
@@ -1089,9 +1089,9 @@
                                             <br/>
                                             <hr/>
                                             <h3>BILAN</h3>
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-12">
-                                                         <table class="table table-bordered table-hover table-condensed">
+                                            <div class="">
+                                                <div class="table-responsive">
+                                                       <table class="table table-bordered table-hover table-condensed">
                                                                     <thead>
                                                                         <tr>
                                                                             <th colspan="3"></th>
@@ -1573,7 +1573,7 @@
                                         <div class="card-header">
                                             <h4>FLUX DE TRESORERIE PREVISIONNELS</h4>
                                          </div>
-                                        <div class="card-body">
+                                        <div class="card-body table-responsive">
                                             <table class="table table-bordered table-hover table-condensed">
                                                                     <thead>
                                                                         <tr>

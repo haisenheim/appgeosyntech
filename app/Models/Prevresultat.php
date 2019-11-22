@@ -24,17 +24,25 @@ class Prevresultat extends Model
 		return $this->getVaAttribute()  - $this->salaires;
 	}
 
-	protected function getReAttribute(){
+	/*protected function getReAttribute(){
 		return $this->getEbeAttribute() +$this->rap +$this->tc - $this->dap;
+	}*/
+	protected function getReAttribute(){
+		return $this->getEbeAttribute() - $this->dap;
 	}
 
-	protected function getRfAttribute(){
+	/*protected function getRfAttribute(){
 		return $this->pf +$this->rapf +$this->tcf - $this->dapf - $this->cfi;
+	}*/
+	protected function getRfAttribute(){
+		return $this->pf  - $this->cfi;
 	}
-	protected function getRexAttribute(){
+	/*protected function getRexAttribute(){
 		return $this->pe +$this->pci +$this->rape + $this->tce - $this->vce -$this->dape - $this->ce;
+	}*/
+	protected function getRexAttribute(){
+		return $this->pe  - $this->ce;
 	}
-
 	protected function getRcaiAttribute(){
 		return $this->getReAttribute() + $this->getRfAttribute() + $this->getRexAttribute();
 	}
