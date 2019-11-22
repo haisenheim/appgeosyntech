@@ -173,6 +173,8 @@ class DossierController extends Controller
 		$tresos = $request->tresoreries;
 		foreach($tresos as $tr){
 			$tr['projet_id']=$projet->id;
+			$tr['prelevements_capital']=$tr['prevelements_capital'];
+			unset($tr['prevelements_capital']);
 
 			Prevtresorerie::create($tr);
 		}
