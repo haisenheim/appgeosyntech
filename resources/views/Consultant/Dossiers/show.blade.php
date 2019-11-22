@@ -1876,7 +1876,7 @@
                                                 </div>
                                             </div>
 
-                                            @if($projet->financents->count() >=1)
+                                            @if($projet->financements->count() >=1)
                                                 <table class="table">
                                                     <tbody>
                                                         @foreach($projet->financements as $fin)
