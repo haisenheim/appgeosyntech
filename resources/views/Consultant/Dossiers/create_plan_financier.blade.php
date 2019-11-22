@@ -2069,7 +2069,7 @@ ELABORATION DU PLAN FINANCIER
 
 
 
-        html1 = html1 + '<div class="tab-pane' + cl1 +'" role="tabpanel" id="n'+ k +'" aria-labelledby="tab'+ k +'" data-id="'+ an +'">'
+        html1 = html1 + '<div class="tab-pane ' + cl1 +'" role="tabpanel" id="n'+ k +'" aria-labelledby="tab'+ k +'" data-id="'+ an +'">'
 
         +'<fieldset id="compte'+ k +'" class="cr">'
                 +'<legend>COMPTE DE RESULTAT</legend>'
@@ -2192,7 +2192,7 @@ ELABORATION DU PLAN FINANCIER
 
             html_bilan_body = html_bilan_body
 
-            + '<div class="tab-pane' + cl1 +'" role="tabpanel" id="n2'+ k +'" aria-labelledby="tab2'+ k +'" data-id="'+ an +'">'
+            + '<div class="tab-pane ' + cl1 +'" role="tabpanel" id="n2'+ k +'" aria-labelledby="tab2'+ k +'" data-id="'+ an +'">'
 
                                                                 +'<fieldset>'
                                                                  +'<legend>ACTIF</legend>'
@@ -2500,7 +2500,7 @@ ELABORATION DU PLAN FINANCIER
                                                             +'</div>';
 
        html_flux_body = html_flux_body
-                       +'<div class="tab-pane'+ cl1 +'" role="tabpanel" id="n3'+ k +'" aria-labelledby="tab3'+ k +'" data-id="'+ an +'">'
+                       +'<div class="tab-pane '+ cl1 +'" role="tabpanel" id="n3'+ k +'" aria-labelledby="tab3'+ k +'" data-id="'+ an +'">'
                                                                  +'<fieldset>'
                                                                  +'<legend>FLUX DE TRESORERIE</legend>'
                                                                      +'<div class="row">'
