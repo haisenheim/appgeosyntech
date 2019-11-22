@@ -158,7 +158,7 @@ class DossierController extends Controller
 
 	public function savePlanFinancier(Request $request){
 		//dd($request);
-		$projet = Projet::find($request->token);
+		$projet = Projet::where('token',$request->token)->first();
 		$projet->montant_investissement = $request->montage['montant'];
 		$projet->bfr= $request->montage['bfr'];
 		$projet->etape =4;

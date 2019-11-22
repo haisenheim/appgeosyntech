@@ -1926,7 +1926,7 @@ ELABORATION DU PLAN FINANCIER
                     </div>
                 </div>
     </div>
-
+<script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
@@ -2010,7 +2010,7 @@ ELABORATION DU PLAN FINANCIER
 
     var saveurl = '/consultant/dossier/save-plan-financier';
     var redirectUrl = '/consultant/dossiers/';
-
+    var spinHandle_firstProcess = loadingOverlay.activate();
     $.ajax({
         url:saveurl,
         dataType:'json',
@@ -2023,6 +2023,10 @@ ELABORATION DU PLAN FINANCIER
         success:function(data){
             //console.log(data);
             window.location.replace(redirectUrl+data.token);
+        },
+        Error:function(){
+             loadingOverlay.cancel(spinHandle_firstProcess);
+             alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
         }
     });
 
