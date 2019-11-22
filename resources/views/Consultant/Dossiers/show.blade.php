@@ -137,31 +137,31 @@
                                                             <tbody>
                                                             <tr>
                                                                 <td>RESSOURCES DURABLES</td>
-                                                                <td><?= isset($projet->bilans[0])?$projet->bilans[0]->ress_durable:'' ?></td>
-                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[1]->ress_durable:'' ?></td>
+                                                                <td><?= isset($projet->bilans[0])?number_format($projet->bilans[0]->ress_durable,0,',','.'):0 ?></td>
+                                                                <td><?= isset($projet->bilans[1])?number_format($projet->bilans[1]->ress_durable,0,',','.'):0 ?></td>
                                                                 <td></td>
-                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[2]->ress_durable:'' ?></td>
+                                                                <td><?= isset($projet->bilans[2])?number_format($projet->bilans[2]->ress_durable,0,',','.'):0 ?></td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>ACTIFS IMMOBILISES</td>
-                                                                <td><?= isset($projet->bilans[0])?$projet->bilans[0]->actifs_immo:'' ?></td>
-                                                                <td><?= isset($projet->bilans[1])?$projet->bilans[1]->actifs_immo:'' ?></td>
+                                                                <td><?= isset($projet->bilans[0])?number_format($projet->bilans[0]->actifs_immo,0,',','.'):0 ?></td>
+                                                                <td><?= isset($projet->bilans[1])?number_format($projet->bilans[1]->actifs_immo,0,',','.'):0  ?></td>
                                                                 <td></td>
-                                                                <td><?= isset($projet->bilans[2])?$projet->bilans[2]->actifs_immo:'' ?></td>
+                                                                <td><?= isset($projet->bilans[2])?number_format($projet->bilans[2]->actifs_immo,0,',','.'):0  ?></td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>FONDS DE ROULEMENT NET GLOBAL</td>
-                                                                <th><?= $projet->frng_0 ?></th>
-                                                                <th><?= $projet->frng_1 ?></th>
+                                                                <th><?= number_format($projet->frng_0,0,',','.') ?></th>
+                                                                <th><?= number_format($projet->frng_1,0,',','.') ?></th>
                                                                 <th></th>
-                                                                <th><?= $projet->frng_2 ?></th>
+                                                                <th><?= number_format($projet->frng_2,0,',','.') ?></th>
                                                                 <th></th>
                                                             </tr>
                                                             <tr>
                                                                 <td>CREANCES</td>
-                                                                <td><?= isset($projet->bilans[0])?$projet->bilans[0]->creances:'' ?></td>
+                                                                <td><?= isset($projet->bilans[0])?number_format($projet->bilans[0]->creances,0,',','.'):'' ?></td>
                                                                 <td><?= isset($projet->bilans[1])?$projet->bilans[1]->creances:'' ?></td>
                                                                 <td></td>
                                                                 <td><?= isset($projet->bilans[2])?$projet->bilans[2]->creances:'' ?></td>

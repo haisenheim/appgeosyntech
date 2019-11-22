@@ -1935,6 +1935,12 @@ ELABORATION DU PLAN FINANCIER
 <script type="text/javascript">
 
   $(document).ready(function() {
+
+     $('input[type="Number"]').val(0);
+    $('input[type="Number"]').css({
+                        'text-align':'right'
+                        });
+
     $('textarea').summernote({
       height: 200,
       tabsize: 2,
