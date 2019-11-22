@@ -1595,11 +1595,11 @@
                                                                     </thead>
                                                                     <tbody>
                                                                         <tr>
-                                                                        <th style="writing-mode: vertical-rl;" rowspan="8">Trésorerie provenant des act. opér.</th>
+                                                                        <th colspan="1" style="writing-mode: vertical-rl;" rowspan="8">Trésorerie provenant des act. opér.</th>
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="">CAPACITE D'AUTOFINANCEMENT</td>
+                                                                            <td colspan="2">CAPACITE D'AUTOFINANCEMENT</td>
                                                                             <?php $i=0; ?>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->capacite_autofinancement  ?></td>
@@ -1610,7 +1610,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="">ACTIF CIRCULANT HAO</td>
+                                                                            <td colspan="2">ACTIF CIRCULANT HAO</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->actif_circulant_hao ?></td>
                                                                                 @if(!$loop->last)
@@ -1620,7 +1620,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="">VARIATION DES STOCKS</td>
+                                                                            <td colspan="2">VARIATION DES STOCKS</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_stocks ?></td>
                                                                                 @if(!$loop->last)
@@ -1630,7 +1630,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="">VARIATION DES CREANCES ET EMPLOIS ASSIMILES</td>
+                                                                            <td colspan="2">VARIATION DES CREANCES ET EMPLOIS ASSIMILES</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_creances ?></td>
                                                                                 @if(!$loop->last)
@@ -1639,7 +1639,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <td colspan="">VARIATION DU PASSIF CIRCULANT</td>
+                                                                            <td colspan="2">VARIATION DU PASSIF CIRCULANT</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_passif_circulant ?></td>
                                                                                 @if(!$loop->last)
@@ -1648,7 +1648,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <td colspan="">VARIATION DU BF LIE AUX ACT. OP.</td>
+                                                                            <td colspan="2">VARIATION DU BF LIE AUX ACT. OP.</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td>-</td>
                                                                                 @if(!$loop->last)
@@ -1657,7 +1657,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <th colspan="">TOTAL</th>
+                                                                            <th colspan="2">TOTAL</th>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <th></th>
                                                                                 @if(!$loop->last)
@@ -1845,29 +1845,29 @@
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
-                                                <div class="col-md-3 col-sm-12">
+                                                <div class="col-md-4 col-sm-12">
 
                                                     <div class="info-box">
-                                                      <span class="info-box-icon bg-info"><i class="far fa-coins"></i></span>
+                                                      <span class="info-box-icon bg-info"><i class="fa fa-coins"></i></span>
                                                       <div class="info-box-content">
                                                         <span class="info-box-text">MONTANT DES INVESTISSEMENTS</span>
                                                         <span class="info-box-number">{{ $projet->montant_investissement }} <sup>{{ $projet->devise->abb }}</sup></span>
                                                       </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3 col-sm-12">
+                                                <div class="col-md-4 col-sm-12">
 
                                                     <div class="info-box">
-                                                      <span class="info-box-icon bg-warning"><i class="far fa-coins"></i></span>
+                                                      <span class="info-box-icon bg-warning"><i class="fa fa-coins"></i></span>
                                                       <div class="info-box-content">
                                                         <span class="info-box-text">BESOIN EN FONDS DE ROULEMENT</span>
                                                         <span class="info-box-number">{{ $projet->bfr }} <sup>{{ $projet->devise->abb }}</sup></span>
                                                       </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3 col-sm-12">
+                                                <div class="col-md-4 col-sm-12">
                                                     <div class="info-box">
-                                                      <span class="info-box-icon bg-warning"><i class="far fa-coins"></i></span>
+                                                      <span class="info-box-icon bg-success"><i class="fa fa-coins"></i></span>
                                                       <div class="info-box-content">
                                                         <span class="info-box-text">COUT GLOBAL DU PROJET</span>
                                                         <span class="info-box-number">{{ $projet->coutglobal }} <sup>{{ $projet->devise->abb }}</sup></span>
