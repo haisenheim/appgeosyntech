@@ -83,6 +83,15 @@ class DossierController extends Controller
 			//dd($request->env);
 
 			if($dossier){
+				$ocs = $dossier->concurrents;
+				$segs = $dossier->segments;
+				if($ocs){
+					Concurrent::where('projet_id',$dossier->id)->delete();
+				}
+
+				if($segs){
+					Segment::where('projet_id',$dossier->id)->delete();
+				}
 				for($i=0; $i<count($concurrents); $i++){
 					$concurrent = new Concurrent();
 					$concurrent->projet_id=$dossier->id;
@@ -117,6 +126,10 @@ class DossierController extends Controller
 
 
 				$env = $request->env;
+				$ev = $dossier->environnement;
+				if($ev){
+					Environnement::where('projet_id',$dossier->id)->delete();
+				}
 				$environnement = new Environnement();
 				$env['projet_id'] = $dossier->id;
 				$env['user_id'] = Auth::user()->id;
