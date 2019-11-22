@@ -1038,7 +1038,7 @@
                                                                 @foreach($projet->prevresultats as $prevr)
                                                                     <th><?= $prevr->re ?></th>
                                                                     @if(!$loop->last)
-                                                                    <th>{{ $projet->variations['rex'][$i++] }}%</th>
+                                                                    <th>{{--{{ $projet->variations['rex'][$i++] }}--}}%</th>
                                                                     @endif
                                                                 @endforeach
                                                             </tr>
