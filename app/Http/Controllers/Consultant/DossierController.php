@@ -215,7 +215,7 @@ class DossierController extends Controller
 
 
 	public function saveTeaser(Request $request){
-		$projet = Projet::find($request->projet_token);
+		$projet = Projet::where('token',$request->projet_token)->first();
 		$data = $request->all();
 
 		$teaser = new Teaser();
