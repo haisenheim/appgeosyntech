@@ -1,9 +1,13 @@
 @extends('......layouts.consultant')
+@section('page-title')
+ELABORATION DU PLAN FINANCIER
+@endsection
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
                 <div class="row">
                     <div class="col-md-3 col-sm-12">
-                        <div class="well">
+                        <div class="card">
+                        <div class="card-body">
 
                             <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
                             <p>CODE : {{ $projet->code }}</p>
@@ -11,15 +15,12 @@
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
                             <p>AUTEUR : {{ $projet->auteur->name }}</p>
                             <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
+                            <p>TYPE DE FINANCEMENT : {{ $projet->type?$projet->type->name:'-' }}</p>
                             <p>MONTANT : {{ $projet->montant }}</p>
                             <input type="hidden" id="id" value="<?= $projet->token ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-                            @if($projet->expert_id)
-                                <p>CONSULTANT : <span class="value">{{ $projet->consultant->name }}</span></p>
-
-                            @endif
-
                             <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
+
 
                             @if($projet->modepaiement_id>0)
                                 <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
@@ -41,56 +42,46 @@
                                         </li>
                                     </ul>
                                     <hr/>
-                                    <form action="/consultant/dossier/add-mode" method="get" class="form-inline">
-                                        <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
-                                        <select style="background-color: #FFFFFF" class="form-control" name="mode_id" id="mode_id">
-                                            <option value="0">Choix d'une offre de service</option>
-                                            @foreach($modes as $mode)
-                                                <option value="{{ $mode->id }}">{{ $mode->name }}</option>
-                                            @endforeach
-                                        </select>
-                                        <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-check"></i> ENREGISTRER</button>
 
-                                    </form>
                                 </div>
                             @endif
                         </div>
-
+                        </div>
 
                     </div>
                     <div class="col-md-9 col-sm-12">
-                        <div class="widget">
-                            <div class="widget-content">
+                        <div class="card">
+                            <div class="card-header">
+                                 <div class="stepwizard">
+                                         <div class="stepwizard-row setup-panel">
+                                             <div class="stepwizard-step">
+                                                 <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                                 <p>COMPTE DE RESULTAT</p>
+                                             </div>
+
+                                             <div class="stepwizard-step">
+                                                 <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                                 <p>BILAN</p>
+                                             </div>
+
+                                             <div class="stepwizard-step">
+                                                 <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                                 <p>FLUX DE TRESORERIE</p>
+                                             </div>
+
+                                             <div class="stepwizard-step">
+                                                 <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                                                 <p>MONTAGE FINANCIER</p>
+                                             </div>
+                                         </div>
+                                     </div>
+                            </div>
+                            <div class="card-body">
                                 <fieldset>
-                                <legend>ELABORATION DU PLAN FINANCIER</legend>
+
 
                                     {{csrf_field()}}
-                                    <div class="stepwizard">
-                                         <div class="stepwizard-row setup-panel">
-                                                     <div class="stepwizard-step">
-                                                         <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-                                                         <p>COMPTE DE RESULTAT</p>
-                                                     </div>
 
-                                                     <div class="stepwizard-step">
-                                                         <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                                                         <p>BILAN</p>
-                                                     </div>
-
-                                                     <div class="stepwizard-step">
-                                                         <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                                                         <p>FLUX DE TRESORERIE</p>
-                                                     </div>
-
-                                                     <div class="stepwizard-step">
-                                                         <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-                                                         <p>MONTAGE FINANCIER</p>
-                                                     </div>
-
-
-
-                                                 </div>
-                                     </div>
                                     <div class="">
                                            <div class="setup-content" id="step-1">
                                             <div class="card">
