@@ -861,7 +861,7 @@
                                                         <tbody>
                                                             <tr>
                                                                 <th>CHIFFRE D'AFFAIRE</th>
-                                                                <?php dd($projet->variations); $i=0; ?>
+                                                                <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
 
                                                                     <th><?= $prevr->ca ?></th>
