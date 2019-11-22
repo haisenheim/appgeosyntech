@@ -522,27 +522,34 @@ CREATION DU DIAGNOSTIC EXTERNE
         analyse_env.intensite_concu_op=$("#ic").find('td').first().text();
         analyse_env.intensite_concu_men=$("#ic").find('td').last().text();
         var spinHandle_firstProcess = loadingOverlay.activate();
-        $.ajax({
-            url:saveurl,
-            type:'Post',
-            dataType:'JSON',
-            data:{_csrf:$('input[name="_token"]').val(), concurrents:concurrents,segments:segments,token:$('#id').val(),
-            env:analyse_env},
-            beforeSend:function(xhr){
-                xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
 
-            },
-            success: function(data){
-                if(data.id!=null){
-                    window.location.replace(redirectUrl+data.token);
-                }
-               /// console.log(data);
-            },
-            Error:function(){
-                loadingOverlay.cancel(spinHandle_firstProcess);
-                alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
-            }
-        });
+        if((concurrents.length<1) || (segments.length<1)){
+            alert('Les informations saisies sont incorrectes. Verifiez que les concurrents et les segments clients ont été saisis !!!!');
+        }else{
+            $.ajax({
+                        url:saveurl,
+                        type:'Post',
+                        dataType:'JSON',
+                        data:{_csrf:$('input[name="_token"]').val(), concurrents:concurrents,segments:segments,token:$('#id').val(),
+                        env:analyse_env},
+                        beforeSend:function(xhr){
+                            xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+
+                        },
+                        success: function(data){
+                            if(data.id!=null){
+                                window.location.replace(redirectUrl+data.token);
+                            }
+                           /// console.log(data);
+                        },
+                        Error:function(){
+                            loadingOverlay.cancel(spinHandle_firstProcess);
+                            alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
+                        }
+                    });
+        }
+
+
 
 
     });

@@ -5,6 +5,7 @@
 <?php //dd($projet->resultats)
 
  ?>
+ <input type="hidden" value="<?= $projet->token ?>" id="token"/>
 <div class="card">
         <div class="card-header">
           <h3 class="card-title">{{$projet->name}} - {{$projet->code}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
@@ -1670,7 +1671,7 @@
                 url: "/admin/dossier/getchoices",
                 type:'Get',
                 dataType:'json',
-                data:{id:$('#id').val()},
+                data:{id:$('#token').val()},
                 success:function(data){
                     if(data!=null){
                         $.ajax({

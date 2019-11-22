@@ -226,7 +226,7 @@ class ProjetController extends Controller
 
 
 	public function getChoicesJson(Request $request){
-		$projet = Projet::find($request->id);
+		$projet = Projet::where('token',$request->token)->first();
 		$choices = $projet->choices;
 
 		$choix = [];
