@@ -33,9 +33,14 @@ class Projet extends Model
 
 	public function getVariationsAttribute(){
 		$prevrs = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
-		$prevbls = Prevbilan::all()->where('projet_id',$this->id)->sortBy('annee')->toArray();
-		debug($prevrs);
-		dd($prevbls);
+		$prevbls = Prevbilan::all()->where('projet_id',$this->id)->sortBy('annee');
+		$pbilans = [];
+		$i=0;
+		foreach($prevbls as $pb){
+			$pbilans[$i++] = $pb;
+		}
+		//debug($prevrs);
+		dd($pbilans);
 		$bc = $prevbls->count();
 		$nb = $prevrs->count();
 		$data=[];
