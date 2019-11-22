@@ -844,9 +844,12 @@
                                                     <div class="card-header">
                                                         <h4>COMPTE DE RESULTAT</h4>
                                                      </div>
-                                                     <div class="card-body table-responsive">
+                                                     <div class="card-body">
                                                         <?php $nbsim = count($projet->prevresultats) ?>
-                                                        <table class="table table-bordered table-hover table-condensed">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="table-responsive">
+                                                            <table class="table table-bordered table-hover table-condensed">
                                                         <thead>
                                                             <tr>
                                                                     <th></th>
@@ -1036,7 +1039,7 @@
                                                                 <th>RESULTAT EXCEPTIONNEL</th>
                                                                 <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
-                                                                    <th><?= $prevr->re ?></th>
+                                                                    <th><?= $prevr->rex ?></th>
                                                                     @if(!$loop->last)
                                                                     <th>{{--{{ $projet->variations['rex'][$i++] }}--}}%</th>
                                                                     @endif
@@ -1073,6 +1076,9 @@
                                                             </tr>
                                                         </tbody>
                                                         </table>
+                                                        </div>
+                                                            </div>
+                                                         </div>
                                                      </div>
                                                 </div>
 
