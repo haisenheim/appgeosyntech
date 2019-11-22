@@ -258,4 +258,8 @@ class Projet extends Model
 		}
 		return true;
 	}
+
+	protected function getCoutglobalAttribute(){
+		return ($this->bfr + $this->montant_investissement);
+	}
 }

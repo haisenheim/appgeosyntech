@@ -1838,7 +1838,60 @@
                                  </div>
 
                                  <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
-                                    <h6 class="page-header">MONTAGE FINANCIER</h6>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">MONTAGE FINANCIER</h4>
+
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3 col-sm-12">
+
+                                                    <div class="info-box">
+                                                      <span class="info-box-icon bg-info"><i class="far fa-coins"></i></span>
+                                                      <div class="info-box-content">
+                                                        <span class="info-box-text">MONTANT DES INVESTISSEMENTS</span>
+                                                        <span class="info-box-number">{{ $projet->montant_investissement }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-sm-12">
+
+                                                    <div class="info-box">
+                                                      <span class="info-box-icon bg-warning"><i class="far fa-coins"></i></span>
+                                                      <div class="info-box-content">
+                                                        <span class="info-box-text">BESOIN EN FONDS DE ROULEMENT</span>
+                                                        <span class="info-box-number">{{ $projet->bfr }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-sm-12">
+                                                    <div class="info-box">
+                                                      <span class="info-box-icon bg-warning"><i class="far fa-coins"></i></span>
+                                                      <div class="info-box-content">
+                                                        <span class="info-box-text">COUT GLOBAL DU PROJET</span>
+                                                        <span class="info-box-number">{{ $projet->coutglobal }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            @if($projet->financents->count() >=1)
+                                                <table class="table">
+                                                    <tbody>
+                                                        @foreach($projet->financements as $fin)
+                                                            <tr>
+                                                                <td>{{ $fin->moyen->name }}</td>
+                                                                <th>{{ $fin->montant }} <sup>{{ $projet->devise->abb }}</sup> </th>
+                                                            </tr>
+                                                        @endforeach
+                                                    </tbody>
+                                                </table>
+                                            @else
+
+                                            @endif
+                                        </div>
+                                    </div>
                                  </div>
 
                               </div>
