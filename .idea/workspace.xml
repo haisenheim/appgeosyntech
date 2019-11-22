@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_plan_financier.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_plan_financier.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -124,8 +121,8 @@
       <file leaf-file-name="create_plan_financier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24190065" vertical-offset="0" max-vertical-offset="44416">
-              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.92440605" vertical-offset="260" max-vertical-offset="44464">
+              <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="e#393#426#0#HTML" expanded="true" />
@@ -1115,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24190065" vertical-offset="0" max-vertical-offset="44416">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.92440605" vertical-offset="260" max-vertical-offset="44464">
+          <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
           <folding>
             <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
             <element signature="e#393#426#0#HTML" expanded="true" />

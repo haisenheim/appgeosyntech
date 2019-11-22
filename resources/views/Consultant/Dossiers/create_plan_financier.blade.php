@@ -52,6 +52,7 @@ ELABORATION DU PLAN FINANCIER
                     <div class="col-md-9 col-sm-12">
                         <div class="card">
                             <div class="card-header">
+
                                  <div class="stepwizard">
                                          <div class="stepwizard-row setup-panel">
                                              <div class="stepwizard-step">
@@ -75,13 +76,15 @@ ELABORATION DU PLAN FINANCIER
                                              </div>
                                          </div>
                                      </div>
+                                <div class="card-tools">
+                                  <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+                                  </button>
+                                </div>
+
                             </div>
                             <div class="card-body">
                                 <fieldset>
-
-
                                     {{csrf_field()}}
-
                                     <div class="">
                                            <div class="setup-content" id="step-1">
                                             <div class="card">
@@ -109,15 +112,15 @@ ELABORATION DU PLAN FINANCIER
                                               <div class="card-body">
                                                 <div class="row">
                                                    <div class="col-md-7 col-md-offset-4 col-sm-12">
-                                                       <ul class="nav nav-tabs nav-header pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                                           <li role="presentation" class="active">
-                                                               <a href="#n1" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> <?= date('Y') + 1 ?></a>
+                                                       <ul class="nav nav-pills nav-header pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                                           <li role="presentation" class="nav-item">
+                                                               <a class="nav-link active" href="#n1" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> <?= date('Y') + 1 ?></a>
                                                            </li>
-                                                           <li role="presentation" class="">
-                                                               <a href="#n2" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> <?= date('Y') + 2 ?></a>
+                                                           <li role="presentation" class=nav-item>
+                                                               <a class="nav-link" href="#n2" role="tab" id="tab2" data-toggle="tab" aria-controls="n2" aria-expanded="false"><span class=""></span> <?= date('Y') + 2 ?></a>
                                                            </li>
-                                                           <li role="presentation" class="">
-                                                               <a href="#n3" role="tab" id="tab3" data-toggle="tab" aria-controls="n3" aria-expanded="false"><span class=""></span> <?= date('Y') + 3 ?></a>
+                                                           <li role="presentation" class="nav-item">
+                                                               <a class="nav-link" href="#n3" role="tab" id="tab3" data-toggle="tab" aria-controls="n3" aria-expanded="false"><span class=""></span> <?= date('Y') + 3 ?></a>
                                                            </li>
                                                        </ul>
                                                    </div>
@@ -126,7 +129,7 @@ ELABORATION DU PLAN FINANCIER
 
                                                  <div class="tab-content" id="myTabContent">
 
-                                                    <div class="tab-pane fade active in" role="tabpanel" data-id="<?= date('Y') +1 ?>" id="n1" aria-labelledby="tab1">
+                                                    <div class="tab-pane active" role="tabpanel" data-id="<?= date('Y') +1 ?>" id="n1" aria-labelledby="tab1">
 
                                                         <fieldset id="compte1" class="cr">
                                                             <legend>COMPTE DE RESULTAT</legend>
@@ -248,7 +251,7 @@ ELABORATION DU PLAN FINANCIER
 
                                                     </div>
 
-                                                    <div class="tab-pane fade" role="tabpanel" id="n2" data-id="<?= date('Y') +2 ?>" aria-labelledby="tab2">
+                                                    <div class="tab-pane" role="tabpanel" id="n2" data-id="<?= date('Y') +2 ?>" aria-labelledby="tab2">
 
                                                         <fieldset id="compte2" class="cr">
                                                             <legend>COMPTE DE RESULTAT</legend>
@@ -369,7 +372,7 @@ ELABORATION DU PLAN FINANCIER
                                                         </fieldset>
 
                                                     </div>
-                                                    <div class="tab-pane fade" role="tabpanel" data-id="<?= date('Y') +3 ?>" id="n3" aria-labelledby="tab3">
+                                                    <div class="tab-pane" role="tabpanel" data-id="<?= date('Y') +3 ?>" id="n3" aria-labelledby="tab3">
 
                                                         <fieldset id="compte3" class="cr">
                                                             <legend>COMPTE DE RESULTAT</legend>
@@ -507,21 +510,21 @@ ELABORATION DU PLAN FINANCIER
                                                    <div class="card-body">
                                                         <div class="row">
                                                            <div class="col-md-7 col-md-offset-4 col-sm-12">
-                                                               <ul class="nav nav-tabs nav-header pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                                                   <li role="presentation" class="active">
-                                                                       <a href="#n21" role="tab" id="tab21" data-toggle="tab" aria-controls="n21" aria-expanded="false"><span class=""></span> <?= date('Y') + 1 ?></a>
+                                                               <ul class="nav nav-pills nav-header pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                                                   <li role="presentation" class="nav-item">
+                                                                       <a class="nav-link active" href="#n21" role="tab" id="tab21" data-toggle="tab" aria-controls="n21" aria-expanded="false"><span class=""></span> <?= date('Y') + 1 ?></a>
                                                                    </li>
-                                                                   <li role="presentation" class="">
-                                                                       <a href="#n22" role="tab" id="tab22" data-toggle="tab" aria-controls="n22" aria-expanded="false"><span class=""></span> <?= date('Y') + 2 ?></a>
+                                                                   <li role="presentation" class="nav-item">
+                                                                       <a class="nav-link" href="#n22" role="tab" id="tab22" data-toggle="tab" aria-controls="n22" aria-expanded="false"><span class=""></span> <?= date('Y') + 2 ?></a>
                                                                    </li>
-                                                                   <li role="presentation" class="">
-                                                                       <a href="#n23" role="tab" id="tab23" data-toggle="tab" aria-controls="n23" aria-expanded="false"><span class=""></span> <?= date('Y') + 3 ?></a>
+                                                                   <li role="presentation" class="nav-item">
+                                                                       <a class="nav-link" href="#n23" role="tab" id="tab23" data-toggle="tab" aria-controls="n23" aria-expanded="false"><span class=""></span> <?= date('Y') + 3 ?></a>
                                                                    </li>
                                                                </ul>
                                                            </div>
                                                         </div>
                                                         <div class="tab-content" id="myTabContent">
-                                                            <div class="tab-pane fade active in" role="tabpanel" id="n21" data-id="<?= date('Y') +1 ?>" aria-labelledby="tab21">
+                                                            <div class="tab-pane active" role="tabpanel" id="n21" data-id="<?= date('Y') +1 ?>" aria-labelledby="tab21">
                                                               <fieldset>
                                                                  <legend>ACTIF</legend>
                                                                  <div class="row">
@@ -828,7 +831,7 @@ ELABORATION DU PLAN FINANCIER
                                                                             </fieldset>
                                                             </div>
 
-                                                            <div class="tab-pane fade" role="tabpanel" id="n22" data-id="<?= date('Y') + 2 ?>" aria-labelledby="tab22">
+                                                            <div class="tab-pane" role="tabpanel" id="n22" data-id="<?= date('Y') + 2 ?>" aria-labelledby="tab22">
 
                                                                 <fieldset>
                                                                  <legend>ACTIF</legend>
@@ -1137,7 +1140,7 @@ ELABORATION DU PLAN FINANCIER
 
                                                             </div>
 
-                                                            <div class="tab-pane fade" role="tabpanel" id="n23" data-id="<?= date('Y') +3 ?>" aria-labelledby="tab23">
+                                                            <div class="tab-pane" role="tabpanel" id="n23" data-id="<?= date('Y') +3 ?>" aria-labelledby="tab23">
 
                                                                 <fieldset>
                                                                  <legend>ACTIF</legend>
@@ -1464,15 +1467,15 @@ ELABORATION DU PLAN FINANCIER
                                                    <div class="card-body">
                                                         <div class="row">
                                                            <div class="col-md-7 col-md-offset-4 col-sm-12">
-                                                               <ul class="nav nav-tabs nav-header pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
-                                                                   <li role="presentation" class="active">
-                                                                       <a href="#n31" role="tab" id="tab31" data-toggle="tab" aria-controls="n31" aria-expanded="false"><span class=""></span> <?= date('Y') + 1 ?></a>
+                                                               <ul class="nav nav-pills nav-header pull-right" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                                                                   <li role="presentation" class="nav-item">
+                                                                       <a class="nav-link active" href="#n31" role="tab" id="tab31" data-toggle="tab" aria-controls="n31" aria-expanded="false"><span class=""></span> <?= date('Y') + 1 ?></a>
                                                                    </li>
-                                                                   <li role="presentation" class="">
-                                                                       <a href="#n32" role="tab" id="tab2" data-toggle="tab" aria-controls="n32" aria-expanded="false"><span class=""></span> <?= date('Y') + 2 ?></a>
+                                                                   <li role="presentation" class="nav-item">
+                                                                       <a class="nav-link" href="#n32" role="tab" id="tab2" data-toggle="tab" aria-controls="n32" aria-expanded="false"><span class=""></span> <?= date('Y') + 2 ?></a>
                                                                    </li>
-                                                                   <li role="presentation" class="">
-                                                                       <a href="#n33" role="tab" id="tab33" data-toggle="tab" aria-controls="n33" aria-expanded="false"><span class=""></span> <?= date('Y') + 3 ?></a>
+                                                                   <li role="presentation" class="nav-item">
+                                                                       <a class="nav-link" href="#n33" role="tab" id="tab33" data-toggle="tab" aria-controls="n33" aria-expanded="false"><span class=""></span> <?= date('Y') + 3 ?></a>
                                                                    </li>
                                                                </ul>
                                                            </div>
@@ -1480,7 +1483,7 @@ ELABORATION DU PLAN FINANCIER
 
                                                          <div class="tab-content" id="myTabContent">
 
-                                                            <div class="tab-pane fade active in" role="tabpanel" id="n31" data-id="<?= date('Y') +1 ?>" aria-labelledby="tab31">
+                                                            <div class="tab-pane active" role="tabpanel" id="n31" data-id="<?= date('Y') +1 ?>" aria-labelledby="tab31">
                                                                  <fieldset>
                                                                  <legend>FLUX DE TRESORERIE</legend>
                                                                      <div class="row">
@@ -1595,7 +1598,7 @@ ELABORATION DU PLAN FINANCIER
                                                              </fieldset>
                                                             </div>
 
-                                                            <div class="tab-pane fade" role="tabpanel" id="n32" data-id="<?= date('Y') +2 ?>" aria-labelledby="tab32">
+                                                            <div class="tab-pane" role="tabpanel" id="n32" data-id="<?= date('Y') +2 ?>" aria-labelledby="tab32">
                                                                  <fieldset>
                                                                  <legend>FLUX DE TRESORERIE</legend>
                                                                      <div class="row">
@@ -1713,7 +1716,7 @@ ELABORATION DU PLAN FINANCIER
                                                              </fieldset>
                                                             </div>
 
-                                                            <div class="tab-pane fade" role="tabpanel" id="n33" data-id="<?= date('Y') +3 ?>" aria-labelledby="tab33">
+                                                            <div class="tab-pane" role="tabpanel" id="n33" data-id="<?= date('Y') +3 ?>" aria-labelledby="tab33">
                                                                  <fieldset>
                                                                  <legend>FLUX DE TRESORERIE</legend>
                                                                      <div class="row">
@@ -2044,29 +2047,29 @@ ELABORATION DU PLAN FINANCIER
         for(var i=0; i<nb;i++){
 
         k=parseInt(i)+1;
-        var cl ='';
+        var cl ='nav-link';
         var cl1 ='';
         if(i==0){
-            cl="active";
-            cl1="active in";
+            cl="active nav-link";
+            cl1="active";
         }
        // console.log(i);
 
-       html_bilan_header = html_bilan_header + ' <li role="presentation" class="'+ cl +'">'+
-                            '<a href="#n2'+ k +'" role="tab" id="tab2'+ k +'" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span>'+ an +' </a>'
+       html_bilan_header = html_bilan_header + ' <li role="presentation" class="nav-item">'+
+                            '<a class="'+ cl +'" href="#n2'+ k +'" role="tab" id="tab2'+ k +'" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span>'+ an +' </a>'
                             +'</li>';
 
-         html_flux_header = html_flux_header + ' <li role="presentation" class="'+ cl +'">'+
-                            '<a href="#n3'+ k +'" role="tab" id="tab3'+ k +'" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span>'+ an +' </a>'
+         html_flux_header = html_flux_header + ' <li role="presentation" class="nav-item">'+
+                            '<a class="'+ cl +'" href="#n3'+ k +'" role="tab" id="tab3'+ k +'" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span>'+ an +' </a>'
                             +'</li>';
 
-        html = html + ' <li role="presentation" class="'+ cl +'">'+
-                              '<a href="#n'+ k +'" role="tab" id="tab'+ k +'" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span>'+ an +' </a>'
+        html = html + ' <li role="presentation" class="nav-item">'+
+                              '<a class="'+ cl +'" href="#n'+ k +'" role="tab" id="tab'+ k +'" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span>'+ an +' </a>'
                        +'</li>';
 
 
 
-        html1 = html1 + '<div class="tab-pane fade ' + cl1 +'" role="tabpanel" id="n'+ k +'" aria-labelledby="tab'+ k +'" data-id="'+ an +'">'
+        html1 = html1 + '<div class="tab-pane' + cl1 +'" role="tabpanel" id="n'+ k +'" aria-labelledby="tab'+ k +'" data-id="'+ an +'">'
 
         +'<fieldset id="compte'+ k +'" class="cr">'
                 +'<legend>COMPTE DE RESULTAT</legend>'
@@ -2189,7 +2192,7 @@ ELABORATION DU PLAN FINANCIER
 
             html_bilan_body = html_bilan_body
 
-            + '<div class="tab-pane fade ' + cl1 +'" role="tabpanel" id="n2'+ k +'" aria-labelledby="tab2'+ k +'" data-id="'+ an +'">'
+            + '<div class="tab-pane' + cl1 +'" role="tabpanel" id="n2'+ k +'" aria-labelledby="tab2'+ k +'" data-id="'+ an +'">'
 
                                                                 +'<fieldset>'
                                                                  +'<legend>ACTIF</legend>'
@@ -2497,7 +2500,7 @@ ELABORATION DU PLAN FINANCIER
                                                             +'</div>';
 
        html_flux_body = html_flux_body
-                       +'<div class="tab-pane fade '+ cl1 +'" role="tabpanel" id="n3'+ k +'" aria-labelledby="tab3'+ k +'" data-id="'+ an +'">'
+                       +'<div class="tab-pane'+ cl1 +'" role="tabpanel" id="n3'+ k +'" aria-labelledby="tab3'+ k +'" data-id="'+ an +'">'
                                                                  +'<fieldset>'
                                                                  +'<legend>FLUX DE TRESORERIE</legend>'
                                                                      +'<div class="row">'
