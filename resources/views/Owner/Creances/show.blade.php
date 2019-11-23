@@ -46,7 +46,7 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
                 <div class="col-sm-4 invoice-col">
                   ENVERS
                   <address>
-                    <strong>{{ \Illuminate\Support\Facades\Auth::user()->first_name }}</strong><br>
+                    <strong>{{ \Illuminate\Support\Facades\Auth::user()->name }}</strong><br>
                     <?= Auth::user()->address ?><br>
 
                     Phone: <?= Auth::user()->phone ?><br>
@@ -122,74 +122,7 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
 </main>
 
 
-<div class="modal fade" id="angelsModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-      <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-              <div class="modal-header bg-success">
-          <h4 class="modal-title">LISTE DE POTENTIELS INVESTISSEURS</h4>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-      </div>
-      <div class="modal-body">
-          <div class="card card-danger">
-                <div class="card-body">
-                     @if($projet->cessions->count()>=1)
-                        <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
-                            <thead>
-                            <tr>
-                              <th>#</th>
-                              <th>Investisseur</th>
-                              <th>Depuis le</th>
 
-                               <th></th>
-
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($projet->cessions as $invest)
-                                    <tr>
-                                        <td>
-                                            @if($invest->validated)
-                                                <span class="badge badge-success"><i class="fa fa-check"></i></span>
-                                            @else
-                                                <span class="badge badge-danger"><i class="fas fa-trash"></i></span>
-                                            @endif
-                                        </td>
-                                        <td>{{ $invest->angel->name }}</td>
-                                        <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y H:i'):'-' ?></td>
-
-                                        <td>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-default btn-flat">Actions</button>
-                                                <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
-                                                  <span class="caret"></span>
-
-                                                </button>
-                                                <div class="dropdown-menu" role="menu">
-                                                 <?php if($invest->lettre): ?>
-                                                    <a class="dropdown-item" href="#">Lettre d'intention</a>
-                                                  <?php endif; ?>
-                                                  <?php if($invest->validated): ?>
-                                                    <a class="dropdown-item" href="/owner/cessions/close/{{ $invest->token }}">Dissocier cet investisseur</a>
-                                                  <?php else: ?>
-                                                    <a class="dropdown-item" href="/owner/cessions/open/{{ $invest->token }}">Associer cet investisseur</a>
-                                                  <?php endif; ?>
-
-                                                </div>
-                                              </div>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-
-                @endif
-                </div>
-            </div>
-      </div>
-          </div>
-      </div>
-</div
 
 
 
