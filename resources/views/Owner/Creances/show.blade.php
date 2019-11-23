@@ -46,7 +46,7 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
                 <div class="col-sm-4 invoice-col">
                   ENVERS
                   <address>
-                    <strong>{{ \Illuminate\Support\Facades\Auth::user()->name }}</strong><br>
+                    <strong>{{ \Illuminate\Support\Facades\Auth::user()->first_name }}</strong><br>
                     <?= Auth::user()->address ?><br>
 
                     Phone: <?= Auth::user()->phone ?><br>

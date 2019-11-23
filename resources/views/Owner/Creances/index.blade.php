@@ -69,7 +69,7 @@ CESSIONS DE CREANCES
     <nav class="floating-menu">
         <ul class="main-menu">
             <li>
-                <a title="Nouveau Dossier" href="/owner/actifs/create" class="ripple">
+                <a title="Nouveau Dossier" href="/owner/creances/create" class="ripple">
                     <i class="fa fa-plus-circle fa-lg"></i>
                 </a>
             </li>

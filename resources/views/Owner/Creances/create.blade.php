@@ -63,7 +63,7 @@ NOUVELLE CESSION DE CREANCE
                                  <div class="col-md-3">
                                      <div class="form-group">
                                          <label for="prix" class="control-label">DEVISE</label>
-                                         <select name="devise_id" id="">
+                                         <select class="form-control" name="devise_id" id="">
                                             <option value="">CHOIX D'UNE DEVISE</option>
                                             @foreach($devises as $devise)
                                                 <option value="{{ $devise->id }}">{{ $devise->name }}</option>

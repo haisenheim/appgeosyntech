@@ -95,7 +95,7 @@ class CreanceController extends Controller
 
         $actif->save();
 	    $request->session()->flash('success','La créance a été correctement enregistrée !!!');
-	    return redirect('/owner/actifs');
+	    return redirect('/owner/creances');
     }
 
     /**
@@ -107,12 +107,10 @@ class CreanceController extends Controller
     public function show($token)
     {
         //
-		$tags = Tags::all();
-	    $projet = Actif::where(['token'=>$token])->first();
-	    //dd($dossier->bilans);
-	    $tactifs = Tactif::all();
-	    $villes = Ville::all();
-	    return view('Owner/Actifs/show')->with(compact('projet','tags','tactifs','villes'));
+
+	    $projet = Creance::where(['token'=>$token])->first();
+
+	    return view('Owner/Creances/show')->with(compact('projet'));
     }
 
     /**
@@ -124,11 +122,11 @@ class CreanceController extends Controller
     public function edit($token)
     {
         //
-	    $actif = Actif::where(['token'=>$token])->first();
+	    $projet = Creance::where(['token'=>$token])->first();
 	   // dd($actif);
-	    $tactifs = Tactif::all();
-	    $villes = Ville::all();
-	    return view('Owner/Actifs/edit')->with(compact('actif','villes','tactifs'));
+	    $devises = Devise::all();
+
+	    return view('Owner/Creances/edit')->with(compact('projet','devises'));
     }
 
 
