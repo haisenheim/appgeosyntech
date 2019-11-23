@@ -10,6 +10,9 @@ class Creance extends Model
     //
 
 	protected $guarded = [];
+	protected $dates = [
+		'dt_paiement'
+	];
 
 
 
