@@ -148,7 +148,7 @@ class Earlie extends Model
 	}
 
 	public function financements(){
-		return $this->hasMany('App\Models\Moyens_projet');
+		return $this->hasMany('App\Models\EarliesMoyen');
 	}
 
 
