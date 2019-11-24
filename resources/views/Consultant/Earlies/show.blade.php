@@ -1813,7 +1813,7 @@
         	<form method="post" action="/consultant/projet/teaser">
         		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
         		{{csrf_field()}}
-        		<div class="modal-dialog modal-lg" role="document">
+        		<div class="modal-dialog modal-xl" role="document">
         			<div class="modal-content">
         				<div class="modal-header bg-success">
                           <h6  class="modal-title text-center">ELABORATION DU TEASER</h6>
@@ -1824,48 +1824,48 @@
         				<div class="modal-body">
         					 <div class="row">
 
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label for="contexte">CONTEXTE</label>
-                                        <textarea name="contexte" rows="3" id="contexte"></textarea>
+                                        <textarea name="contexte" rows="3" id="contexte"><?= $projet->teaser?$projet->teaser->contexte:'' ?></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label for="problematique">PROBLEMATIQUE</label>
-                                        <input name="problematique" type="text" class="form-control" id="problematique"/>
+                                        <textarea id="problematique" name="problematique" row="3"><?= $projet->teaser?$projet->teaser->problematique:'' ?></textarea>
                                     </div>
 
                                 </div>
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                      <label for="marche">MARCHE</label>
-                                    <input name="marche" type="text" class="form-control" id="marche"/>
+                                    <textarea name="marche"  id="marche"><?= $projet->teaser?$projet->teaser->marche:'' ?></textarea>
                                 </div>
 
                                 </div>
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label for="strategie">STRATEGIE</label>
-                                        <input name="strategie" type="text" class="form-control" id="strategie"/>
+                                        <textarea name="strategie"  id="strategie"><?= $projet->teaser?$projet->teaser->strategie:'' ?></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label for="chiffres">CHIFFRES CLES</label>
-                                        <input name="chiffres" type="text" class="form-control" id="chiffres" placeholder="Saisir ici quelques chiffres clefs" />
+                                        <textarea name="chiffres"  id="chiffres"><?= $projet->teaser?$projet->teaser->chiffres:'' ?></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label for="">FOCUS SUR LES REALISATIONS DE L'ENTREPRISE</label>
-                                        <textarea name="focus_realisations" class="form-control telt" id="focus_realisations" placeholder=""></textarea>
+                                        <textarea name="focus_realisations" class="form-control telt" id="focus_realisations" placeholder=""><?= $projet->teaser?$projet->teaser->focus_realisations:'' ?></textarea>
                                     </div>
                                 </div>
                             </div>
         				</div>
         				<div class="modal-footer">
-        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+        					<button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-save"></i> ENREGISTRER</button>
         				</div>
 
         			</div>

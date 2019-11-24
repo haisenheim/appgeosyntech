@@ -204,7 +204,7 @@ class EarlyController extends Controller
 
 
 	public function saveTeaser(Request $request){
-		$projet = Earlie::find($request->projet_token);
+		$projet = Earlie::where('token',$request->projet_token)->first();
 		$data = $request->all();
 
 		$teaser = new Teaser();
