@@ -46,10 +46,32 @@ Route::prefix('admin')
 	    Route::resource('organismes','OrganismeController');
 	    Route::resource('entreprises','EntrepriseController');
 	    Route::resource('devises','DeviseController');
+
+	    // Actifs
 	    Route::resource('actifs','ActifController');
+	    Route::get('actif/expert','ActifController@addExpert');
+	    Route::get('actif/close/{token}','ActifController@close');
+
         Route::resource('villes','VilleController');
 	    Route::resource('dossiers','ProjetController');
-        Route::resource('users','UserController');
+
+	    //  Pojets Early stage
+	    Route::resource('projet','EarlyController');
+	    Route::get('projet/expert','EarlyController@addExpert');
+	    Route::get('projet/getchoices','EarlyController@getChoicesJson');
+	    Route::get('projet/validate-diag-interne/{token}','EarlyController@validateDiagInterne');
+	    Route::get('projet/validate-diag-externe/{token}','EarlyController@validateDiagExterne');
+	    Route::get('projet/validate-plan-strategique/{token}','EarlyController@validateDiagStrategique');
+	    Route::get('projet/validate-plan-financier/{token}','EarlyController@validateMontageFinancier');
+
+	    // Creances
+	    Route::resource('creances','CreanceController');
+	    Route::get('creance/disable/{token}','CreanceController@disable')->name('disable.creance');
+	    Route::get('creances/enable/{token}','CreanceController@enable')->name('enable.creance');
+	    Route::get('creance/expert','CreanceController@addExpert');
+	    Route::get('creance/close/{token}','CreanceController@close');
+
+	    Route::resource('users','UserController');
 	    Route::resource('pays','PayController');
 	    Route::resource('tinvestissements','TinvestissementController');
 	    Route::resource('tags','TagController');
@@ -59,7 +81,7 @@ Route::prefix('admin')
 	    Route::resource('apporteurs','CommercialController');
         Route::resource('dossiers','ProjetController');
 	    Route::get('dashboard','DashboardController');
-	    Route::get('actif/expert','ActifController@addExpert');
+
 	    Route::get('dossier/expert','ProjetController@addExpert');
 	    Route::get('dossier/getchoices','ProjetController@getChoicesJson');
 	    Route::get('dossier/validate-diag-interne/{token}','ProjetController@validateDiagInterne');
