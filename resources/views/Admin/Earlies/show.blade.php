@@ -58,11 +58,7 @@
                           </div>
                     </div>
                     <div class="card-body">
-                     
-
                          <div>
-                            
-
                             <div class="table-responsive">
                                  <table id="risques-tab" class="table table-condensed table-hover table-bordered">
                                   <thead>
@@ -81,9 +77,7 @@
                                     <tbody>
                                     </tbody>
                                     </table>
-                                <div style="width: 20%; margin:10px auto">
-                                    <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
-                                </div>
+
                             </div>
 
                             <?php if($projet->synthese_diagnostic_interne): ?>
@@ -1322,16 +1316,6 @@
 
                      @endif
               </div>
-
-              <h5 class="mt-4 text-muted">Moyens de financements</h5>
-              <ul class="list-unstyled">
-                @if($projet->moyens)
-                    @foreach($projet->financements as $moyen)
-                        <li class="btn-link text-secondary"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class="value"><?= $moyen->montant ?></span></li>
-                    @endforeach
-                @endif
-              </ul>
-
 
 
             </div>
