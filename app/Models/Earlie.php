@@ -131,6 +131,9 @@ class Earlie extends Model
 	public function ressources(){
 		return $this->hasMany('App\Models\Ressource');
 	}
+	public function etapes(){
+		return $this->hasMany('App\Models\Etape');
+	}
 
 
 
