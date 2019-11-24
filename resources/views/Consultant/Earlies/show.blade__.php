@@ -1,18 +1,68 @@
 @extends('......layouts.consultant')
 
+@section('content-header')
+ <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">{{$projet->name}}</h3>
+@endsection
 @section('page-title')
 {{$projet->name}}
 @endsection
 
-
 @section('content')
-
+    <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
                         <div class="card">
                             <div class="card-body">
 
+                                @if($projet->validated_step >3)
+                                <div class="info-box bg-{{$projet->investcolor}}">
+                                  <span class="info-box-icon"><i class="fa fa-coins"></i></span>
+
+                                  <div class="info-box-content">
+                                    <span class="info-box-text">Collecte</span>
+                                    <span class="info-box-number"> {{ $projet->total . ' '. $projet->devise->abb }} </span>
+
+                                    <div class="progress">
+                                      <div class="progress-bar" style="width: {{$projet->pourcentage}}%"></div>
+                                    </div>
+                                    <span class="progress-description">
+                                      {{$projet->pourcentage}}% de fonds collectés
+                                    </span>
+                                  </div>
+                                  <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                                @endif
+
+                                <ul class="list-inline">
+                                    @if(!$projet->ordrevirementUri)
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-danger">Ordre de vir. absent</span>
+                                        </li>
+                                    @else
+                                        @if(!$projet->ordrevirement_validated)
+                                            <li class="list-inline-item">
+                                                <span class="badge badge-danger">Ordre de vir. non validé</span>
+                                            </li>
+                                        @endif
+                                    @endif
+                                    @if(!$projet->pacte_associesUri)
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-danger">Pacte des associés absent</span>
+                                        </li>
+                                    @endif
+                                    @if(!$projet->contrat_pretUri)
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-danger">Contrat de prêt absent</span>
+                                        </li>
+                                    @endif
+                                </ul>
+
+                            <div class="progress progress-sm">
+                              <div class="progress-bar progress-bar-striped bg-{{$projet->progresscolor}}" role="progressbar" aria-volumenow="{{$projet->progress }}" aria-volumemin="0" aria-volumemax="100" style="width: {{$projet->progress .'%'}} ">
+                              </div>
+                          </div>
                             <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i>
                             <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
 
@@ -35,18 +85,21 @@
                                     <legend>MOYENS DE FINANCEMENT</legend>
                                     <ul class="list-group">
                                         @if($projet->moyens)
-                                            @foreach($projet->financements as $moyen)
+                                            @foreach($projet->moyens as $moyen)
 
-                                                <li class="list-group-item"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class="value"><?= $moyen->montant ?></span></li>
+                                               <li class="list-group-item"><?= $moyen->name ?> : <span class="value"><?= $moyen->montant ?></span></li>
                                             @endforeach
                                         @endif
                                     </ul>
                                 </fieldset>
                                 
                             @endif
-                            <input type="hidden" id="id" value="<?= $projet->token ?>"/>
+                            <input type="hidden" id="id" value="<?= $projet->id ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-                            <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
+                            @if($projet->expert_id)
+                                <p>CONSULTANT : <span class="value">{{ $projet->consultant->name }}</span></p>
+
+                            @endif
 
 
                             <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
@@ -61,7 +114,7 @@
                             @endif
 
                              @if($projet->etape>=4)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> EDITER LE TEASER</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i>TEASER</button>
                             @endif
 
 
@@ -85,17 +138,7 @@
                                         </li>
                                     </ul>
                                     <hr/>
-                                    <form action="/consultant/projet/add-mode" method="get" class="form-inline">
-                                        <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
-                                        <select style="background-color: #FFFFFF" class="form-control" name="mode_id" id="mode_id">
-                                            <option value="0">Choix d'une offre de service</option>
-                                            @foreach($modes as $mode)
-                                                <option value="{{ $mode->id }}">{{ $mode->name }}</option>
-                                            @endforeach
-                                        </select>
-                                        <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-check"></i> ENREGISTRER</button>
 
-                                    </form>
                                 </div>
                             @endif
 
@@ -105,8 +148,17 @@
 
                     </div>
                     <div style="overflow-y: scroll; max-height: 860px" id="side2" class="col-md-8 col-sm-12">
-                       
-                                               
+                        <div class="card">
+                            <div class="card-body">
+
+                              <div class="card">
+                                                <div class="card-header">
+                                                 <div class="card-tools">
+                                                  <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+                                                  </button>
+                                                </div>
+                                                <!-- /.card-tools -->
+                                                </div>
                                                 <div class="card-body">
                                                     <div class="table-responsive">
                                                          <table id="risques-tab" class="table table-condensed table-hover table-bordered">
@@ -128,7 +180,9 @@
                                                          </table>
                                                     </div>
                                                 </div>
-                                            
+                                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div style="margin-top: 30px" class="row">
@@ -495,14 +549,16 @@
                         </div>
                     </div>
                     @endif
-
                     @if($projet->etape>=4)
-                        <div class="col-md-12 card card-default">
-                            <div class="card-header">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="card card-default collapsed-card">
+                        <div class="card-header">
                             <h3 class="card-title">PLAN FINANCIER</h3>
 
                               <div class="card-tools">
 
+                                  <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                  </button>
                                   <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
                                   </button>
                               </div>
@@ -533,18 +589,15 @@
                                     <div  class="tab-content">
                                         <div class="tab-pane active" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
                                       <div>
-                                        <div class="">
-                                            <div class="">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h4>COMPTE DE RESULTAT</h4>
                                                      </div>
                                                      <div class="card-body">
                                                         <?php $nbsim = count($projet->prevresultats) ?>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="table-responsive">
-                                                            <table class="table table-bordered table-hover table-condensed">
+                                                        <table class="table table-bordered table-hover table-condensed">
                                                         <thead>
                                                             <tr>
                                                                     <th></th>
@@ -734,7 +787,7 @@
                                                                 <th>RESULTAT EXCEPTIONNEL</th>
                                                                 <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
-                                                                    <th><?= $prevr->rex ?></th>
+                                                                    <th><?= $prevr->re ?></th>
                                                                     @if(!$loop->last)
                                                                     <th>{{ $projet->variations['rex'][$i++] }}%</th>
                                                                     @endif
@@ -771,9 +824,6 @@
                                                             </tr>
                                                         </tbody>
                                                         </table>
-                                                        </div>
-                                                            </div>
-                                                         </div>
                                                      </div>
                                                 </div>
 
@@ -790,9 +840,9 @@
                                             <br/>
                                             <hr/>
                                             <h3>BILAN</h3>
-                                            <div class="">
-                                                <div class="table-responsive">
-                                                       <table class="table table-bordered table-hover table-condensed">
+                                            <div class="row">
+                                                <div class="col-md-12 col-sm-12">
+                                                         <table class="table table-bordered table-hover table-condensed">
                                                                     <thead>
                                                                         <tr>
                                                                             <th colspan="3"></th>
@@ -1274,7 +1324,7 @@
                                         <div class="card-header">
                                             <h4>FLUX DE TRESORERIE PREVISIONNELS</h4>
                                          </div>
-                                        <div class="card-body table-responsive">
+                                        <div class="card-body">
                                             <table class="table table-bordered table-hover table-condensed">
                                                                     <thead>
                                                                         <tr>
@@ -1290,11 +1340,11 @@
                                                                     </thead>
                                                                     <tbody>
                                                                         <tr>
-                                                                        <th colspan="1" style="writing-mode: vertical-rl;" rowspan="8">Trésorerie provenant des act. opér.</th>
+                                                                        <th style="writing-mode: vertical-rl;" rowspan="8">Trésorerie provenant des act. opér.</th>
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="2">CAPACITE D'AUTOFINANCEMENT</td>
+                                                                            <td colspan="">CAPACITE D'AUTOFINANCEMENT</td>
                                                                             <?php $i=0; ?>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->capacite_autofinancement  ?></td>
@@ -1305,7 +1355,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="2">ACTIF CIRCULANT HAO</td>
+                                                                            <td colspan="">ACTIF CIRCULANT HAO</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->actif_circulant_hao ?></td>
                                                                                 @if(!$loop->last)
@@ -1315,7 +1365,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="2">VARIATION DES STOCKS</td>
+                                                                            <td colspan="">VARIATION DES STOCKS</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_stocks ?></td>
                                                                                 @if(!$loop->last)
@@ -1325,7 +1375,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="2">VARIATION DES CREANCES ET EMPLOIS ASSIMILES</td>
+                                                                            <td colspan="">VARIATION DES CREANCES ET EMPLOIS ASSIMILES</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_creances ?></td>
                                                                                 @if(!$loop->last)
@@ -1334,7 +1384,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <td colspan="2">VARIATION DU PASSIF CIRCULANT</td>
+                                                                            <td colspan="">VARIATION DU PASSIF CIRCULANT</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_passif_circulant ?></td>
                                                                                 @if(!$loop->last)
@@ -1343,7 +1393,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <td colspan="2">VARIATION DU BF LIE AUX ACT. OP.</td>
+                                                                            <td colspan="">VARIATION DU BF LIE AUX ACT. OP.</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td>-</td>
                                                                                 @if(!$loop->last)
@@ -1352,7 +1402,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <th colspan="2">TOTAL</th>
+                                                                            <th colspan="">TOTAL</th>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <th></th>
                                                                                 @if(!$loop->last)
@@ -1363,11 +1413,11 @@
 
 
 
-                                                                        <tr><th colspan="1" style="writing-mode: vertical-rl" rowspan="7">Trésorerie issue des activités d'invest.</th></tr>
+                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="7">Trésorerie issue des activités d'invest.</th></tr>
 
                                                                         <tr>
 
-                                                                            <td colspan="2">Décaissements liés aux acquisitions d'immobilisations incorporelles</td>
+                                                                            <td>Décaissements liés aux acquisitions d'immobilisations incorporelles</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->decaissements_acquisitions_incorporelles ?></td>
                                                                                 @if(!$loop->last)
@@ -1377,7 +1427,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="2">Décaissements liés aux acquisitions d'immobilisations corporelles</td>
+                                                                            <td>Décaissements liés aux acquisitions d'immobilisations corporelles</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->decaissements_acquisitions_corporelles ?></td>
                                                                                 @if(!$loop->last)
@@ -1387,7 +1437,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="2">Décaissements liés aux acquisitions d'immobilisations financières</td>
+                                                                            <td>Décaissements liés aux acquisitions d'immobilisations financières</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->decaissements_acquisitions_financieres ?></td>
                                                                                 @if(!$loop->last)
@@ -1396,7 +1446,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <td colspan="2">Cessions d'immobilisations incorporelles et corporelles</td>
+                                                                            <td>Cessions d'immobilisations incorporelles et corporelles</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->cessions_immo_incoporelles_corporelles  ?></td>
                                                                                 @if(!$loop->last)
@@ -1406,7 +1456,7 @@
                                                                         </tr>
 
                                                                          <tr>
-                                                                            <td colspan="2">Cessions d'immobilisations financières</td>
+                                                                            <td>Cessions d'immobilisations financières</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->cessions_immo_financieres ?></td>
                                                                                 @if(!$loop->last)
@@ -1416,7 +1466,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td colspan="2">TOTAL</td>
+                                                                            <td>TOTAL</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td>-</td>
                                                                                 @if(!$loop->last)
@@ -1425,10 +1475,10 @@
                                                                             @endforeach
                                                                         </tr>
 
-                                                                        <tr><th colspan="1" style="writing-mode: vertical-rl" rowspan="6">Trésorerie provenant  des cap. propres </th></tr>
+                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="6">Trésorerie provenant  des cap. propres </th></tr>
 
                                                                         <tr>
-                                                                            <td colspan="2">Augmentation de capital par apports de capitaux nouveaux</td>
+                                                                            <td>Augmentation de capital par apports de capitaux nouveaux</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->augmentation_capital_apports_nouveaux  ?></td>
                                                                                 @if(!$loop->last)
@@ -1438,7 +1488,7 @@
                                                                         </tr>
 
                                                                          <tr>
-                                                                            <td colspan="2">Subventions d'investissements reçues</td>
+                                                                            <td>Subventions d'investissements reçues</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->subventions_investissement_recues ?></td>
                                                                                 @if(!$loop->last)
@@ -1448,7 +1498,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td colspan="2">Prélèvements sur le capital</td>
+                                                                            <td>Prélèvements sur le capital</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->prelevements_capital ?></td>
                                                                                 @if(!$loop->last)
@@ -1458,7 +1508,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td colspan="2">Distribution de dividendes</td>
+                                                                            <td>Distribution de dividendes</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->distribution_dividendes ?></td>
                                                                                 @if(!$loop->last)
@@ -1468,9 +1518,9 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td colspan="2">TOTAL</td>
+                                                                            <td>TOTAL</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
-                                                                                <td></td>
+                                                                                <td><-</td>
                                                                                 @if(!$loop->last)
                                                                                 <td>-</td>
                                                                                 @endif
@@ -1479,10 +1529,10 @@
 
 
 
-                                                                        <tr><th colspan="1" style="padding:5px; writing-mode: vertical-rl" rowspan="5">Trésorerie issue des cap. étrangers </th></tr>
+                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="5">Trésorerie issue des cap. étrangers </th></tr>
 
                                                                         <tr>
-                                                                            <td colspan="2">Emprunts</td>
+                                                                            <td>Emprunts</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->emprunts  ?></td>
                                                                                 @if(!$loop->last)
@@ -1492,7 +1542,7 @@
                                                                         </tr>
 
                                                                          <tr>
-                                                                            <td colspan="2">Autres dettes financières</td>
+                                                                            <td>Autres dettes financières</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->autres_dettes_financieres ?></td>
                                                                                 @if(!$loop->last)
@@ -1502,7 +1552,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td colspan="2">Remboursements des emprunts et autres dettes financières</td>
+                                                                            <td>Remboursements des emprunts et autres dettes financières</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->remboursement_emprunts ?></td>
                                                                                 @if(!$loop->last)
@@ -1512,9 +1562,9 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td colspan="2">TOTAL</td>
+                                                                            <td>TOTAL</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
-                                                                                <td>-</td>
+                                                                                <td><-</td>
                                                                                 @if(!$loop->last)
                                                                                 <td>-</td>
                                                                                 @endif
@@ -1533,60 +1583,7 @@
                                  </div>
 
                                  <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4 class="card-title">MONTAGE FINANCIER</h4>
-
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-md-4 col-sm-12">
-
-                                                    <div class="info-box">
-                                                      <span class="info-box-icon bg-info"><i class="fa fa-coins"></i></span>
-                                                      <div class="info-box-content">
-                                                        <span class="info-box-text">MONTANT DES INVESTISSEMENTS</span>
-                                                        <span class="info-box-number">{{ $projet->montant_investissement }} <sup>{{ $projet->devise->abb }}</sup></span>
-                                                      </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-12">
-
-                                                    <div class="info-box">
-                                                      <span class="info-box-icon bg-warning"><i class="fa fa-coins"></i></span>
-                                                      <div class="info-box-content">
-                                                        <span class="info-box-text">BESOIN EN FONDS DE ROULEMENT</span>
-                                                        <span class="info-box-number">{{ $projet->bfr }} <sup>{{ $projet->devise->abb }}</sup></span>
-                                                      </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-12">
-                                                    <div class="info-box">
-                                                      <span class="info-box-icon bg-success"><i class="fa fa-coins"></i></span>
-                                                      <div class="info-box-content">
-                                                        <span class="info-box-text">COUT GLOBAL DU PROJET</span>
-                                                        <span class="info-box-number">{{ $projet->coutglobal }} <sup>{{ $projet->devise->abb }}</sup></span>
-                                                      </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            @if($projet->financements->count() >=1)
-                                                <table class="table">
-                                                    <tbody>
-                                                        @foreach($projet->financements as $fin)
-                                                            <tr>
-                                                                <td>{{ $fin->moyen->name }}</td>
-                                                                <th>{{ $fin->montant }} <sup>{{ $projet->devise->abb }}</sup> </th>
-                                                            </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            @else
-
-                                            @endif
-                                        </div>
-                                    </div>
+                                    <h6 class="page-header">MONTAGE FINANCIER</h6>
                                  </div>
 
                               </div>
@@ -1595,10 +1592,14 @@
 
                          </div>
                     </div>
-                    @endif
+                    </div>
+
+                  @endif
                   </div>
+
               </div>
 
+    <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
 
     <script>
         $(document).ready(function(){
@@ -1721,154 +1722,131 @@
 
     <!-- Edition de la synthese du diagnostic interne -->
     <div class="modal fade" id="synDiagIntModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-    	<form method="post" action="/consultant/projet/synthese1">
-    		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-    		{{csrf_field()}}
+
     		<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
-    			        <div class="modal-header">
-                            <h6  class="modal-title text-center">SYNTHESE DU DIAGNOSTIC INTERNE</h6>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        				<div class="modal-header bg-info">
+        					<h5 class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC INTERNE</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
-                          </div>
+        				</div>
+        				<div class="modal-body">
+        				    <div class="card">
+        				        <div class="card-body">
+        				            <p><?= $projet->synthese_diagnostic_interne ?></p>
+        				        </div>
+        				    </div>
 
-    				<div class="modal-body">
-    					<div class="form-group">
-    						<textarea class="form-control"  name="synthese1" id="synthese1" cols="30" rows="10" >{{ $projet->synthese_diagnostic_interne }}</textarea>
-    					</div>
-    				</div>
-    				<div class="modal-footer">
-    					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
-    				</div>
+        				</div>
 
-    			</div>
+        			</div>
     		</div>
-    	</form>
     </div>
 
 
     <!-- Edition de la synthese du diagnostic externe-->
         <div class="modal fade" id="synDiagExtModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        	<form method="post" action="/consultant/projet/synthese2">
-        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-        		{{csrf_field()}}
+
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
-        			    <div class="modal-header bg-info">
-                            <h6  class="modal-title text-center">SYNTHESE DU DIAGNOSTIC EXTERNE</h6>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        				<div class="modal-header bg-info">
+        					<h5 class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC EXTERNE</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
-                          </div>
-
-        				<div class="modal-body">
-        					<div class="form-group">
-        						<textarea class="form-control"  name="synthese2" id="synthese2" cols="30" rows="10">{{ $projet->synthese_diagnostic_externe }}</textarea>
-        					</div>
         				</div>
-        				<div class="modal-footer">
-        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+        				<div class="modal-body">
+        				    <div class="card">
+        				        <div class="card-body">
+        				            <p><?= $projet->synthese_diagnostic_externe ?></p>
+        				        </div>
+        				    </div>
+
         				</div>
 
         			</div>
         		</div>
-        	</form>
-
 
         </div>
 
         <!-- Edition de la synthese du diagnostic Strategique -->
         <div class="modal fade" id="synDiagStratModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        	<form method="post" action="/consultant/projet/synthese3">
-        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-        		{{csrf_field()}}
+
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
-        				<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        				<div class="modal-header bg-primary">
+
         					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span> SYNTHESE DU DIAGNOSTIC STRATEGIQUE</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
         				</div>
         				<div class="modal-body">
-        					<div class="form-group">
-        						<textarea class="form-control"  name="synthese3" id="synthese3" cols="30" rows="10" >{{ $projet->synthese_diagnostic_strategique }}</textarea>
-        					</div>
+        				    <div class="card">
+        				        <div class="card-body">
+        				            <p><?= $projet->synthese_diagnostic_strategique ?></p>
+        				        </div>
+        				    </div>
         				</div>
-        				<div class="modal-footer">
-        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
-        				</div>
-
         			</div>
         		</div>
-        	</form>
+
         </div>
-
-
-
 
         <!-- Edition du teaser-->
         <div class="modal fade" id="teaserModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        	<form method="post" action="/consultant/projet/teaser">
-        		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-        		{{csrf_field()}}
         		<div class="modal-dialog modal-lg" role="document">
         			<div class="modal-content">
         				<div class="modal-header bg-success">
-                          <h6  class="modal-title text-center">ELABORATION DU TEASER</h6>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
+        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>TEASER</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+        				</div>
         				<div class="modal-body">
-        					 <div class="row">
+        				    <div class="card">
+        				        <div class="card-header">
+        				            <small class=""><?= $projet->teaser?date_format($projet->teaser->created_at,'d/m/Y'):'-' ?> - <span class="text-primary"><?= $projet->teaser?$projet->teaser->user->name:'-' ?></span></small>
+        				        </div>
+        				        <div class="card-body">
+                                    <dl>
+                                      <dt>CONTEXTE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->contexte:'-' ?></dd>
+                                      <dt>PROBLEMATIQUE</dt>
+                                     <dd><?= $projet->teaser?$projet->teaser->problematique:'-' ?></dd>
+                                      <dt>MARCHE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->marche:'-' ?></dd>
+                                      <dt>STRATEGIE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->strategie:'-' ?></dd>
+                                      <dt>CHIFFRES CLEFS</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->chiffres:'-' ?></dd>
+                                      <dt>FOCUS REALISATION</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->focus_realisations:'-' ?></dd>
+                                    </dl>
+        				        </div>
+        				    </div>
 
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="contexte">CONTEXTE</label>
-                                        <textarea name="contexte" rows="3" id="contexte"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="problematique">PROBLEMATIQUE</label>
-                                        <input name="problematique" type="text" class="form-control" id="problematique"/>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                <div class="form-group">
-                                     <label for="marche">MARCHE</label>
-                                    <input name="marche" type="text" class="form-control" id="marche"/>
-                                </div>
-
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="strategie">STRATEGIE</label>
-                                        <input name="strategie" type="text" class="form-control" id="strategie"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="chiffres">CHIFFRES CLES</label>
-                                        <input name="chiffres" type="text" class="form-control" id="chiffres" placeholder="Saisir ici quelques chiffres clefs" />
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="">FOCUS SUR LES REALISATIONS DE L'ENTREPRISE</label>
-                                        <textarea name="focus_realisations" class="form-control telt" id="focus_realisations" placeholder=""></textarea>
-                                    </div>
-                                </div>
-                            </div>
         				</div>
-        				<div class="modal-footer">
-        					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
-        				</div>
-
         			</div>
         		</div>
-        	</form>
+
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                      $('textarea').summernote({
+                        height: 300,
+                        tabsize: 2,
+                        followingToolbar: true,
+                        lang:'fr-FR'
+                      });
+
+                    });
+
+
+                  </script>
+
+
         </div>
 
 <style>
@@ -1881,16 +1859,57 @@
                     border-color: none;
                 }
 
-                .card.maximized-card {
-
-                            overflow-y: scroll;
-                        }
+                label{
+                color: #000000;
+                margin-top: 10px;
+                }
     </style>
 
+@endsection
 
 
 
-    <div class="modal" id="angelsModal">
+@section('nav_actions')
+<main>
+    <nav style="top:30%" class="floating-menu">
+        <ul class="main-menu">
+
+            @if(count($projet->investissements)>=1)
+                   <li>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                   </li>
+            @endif
+            <li>
+                <a title=Modifier" href="#" class="ripple">
+                    <i class="fa fa-edit fa-lg"></i>
+                </a>
+            </li>
+
+
+
+
+            <li>
+                <a data-toggle="modal" data-target="#reportEditModal" title="Editer le rapport mensuel de gestion" href="#" class="ripple">
+                    <i class="fa fa-pencil-alt fa-lg"></i>
+                </a>
+            </li>
+
+
+        </ul>
+        <div
+         style="
+          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
+          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
+          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
+          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
+        "
+        class="menu-bg"></div>
+    </nav>
+</main>
+
+<div class="modal fade" id="angelsModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-success">
@@ -1934,9 +1953,9 @@
                                                     <a class="dropdown-item" href="#">Lettre d'intention</a>
                                                   <?php endif; ?>
                                                   <?php if($invest->validated): ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
+                                                    <a class="dropdown-item" href="/consultant/investissements/close/{{ $invest->token }}">Fermer la data room</a>
                                                   <?php else: ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
+                                                    <a class="dropdown-item" href="/consultant/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
                                                   <?php endif; ?>
 
                                                 </div>
@@ -1955,6 +1974,7 @@
     </div>
 </div>
 
+
 <style>
    .modal .card-title{
         color: #000000;
@@ -1970,210 +1990,14 @@
                overflow-y: scroll;
            }
 </style>
-
-
-<script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('textarea').summernote({
-      height: 300,
-      tabsize: 2,
-      followingToolbar: true,
-      lang:'fr-FR'
-    });
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+<script>
+  $(function () {
+    $("#table-invest").DataTable();
 
   });
 </script>
 
-<script>
-        $(document).ready(function(){
-           // $('#side2').height($('#side1').height());
-           //$('#side2').height(890);
-            getPlan($('#pl_id').val());
-
-            $.ajax({
-                url: "/consultant/projet/getchoices",
-                type:'Get',
-                dataType:'json',
-                data:{id:$('#id').val()},
-                success:function(data){
-                    if(data!=null){
-                        $.ajax({
-                            url:orm+'carto',
-                            type:'Post',
-                            dataType:'json',
-                            data:{choix:data},
-                            success:function(rep){
-                                $('#risks-loader').hide();
-
-                                var html = '';
-                                //console.log(Object.entries(rep));
-                                var risks=Object.entries(rep);
-                                for(var i=0; i<risks.length;i++){
-
-                                    var rs= parseInt(risks[i][1].length) + 1;
-                                    var tr= '<tr><th style="align-content: center; margin-top: auto" align="center" rowspan='+ rs  +'>'+ risks[i][0] +'</th></tr>';
-                                    html=html+tr;
-                                    for(var k=0; k<risks[i][1].length; k++){
-                                        $value = risks[i][1][k];
-                                        $cb= parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite);
-                                        $cn=parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite) * parseFloat($value.taux);
-
-                                        if(parseFloat($cb) >= 13){
-                                            $clrb='red';
-                                        }else{
-                                            if( parseFloat($cb) >=4 && parseFloat($cb) <= 12){
-                                                $clrb='yellow';
-                                            }else{
-                                                $clrb = '#0ac60a';
-                                            }
-                                        }
-
-                                        if( parseFloat($cn) >= 13){
-                                            $clr='red';
-                                        }else{
-                                            if( parseFloat($cn) >=4 &&  parseFloat($cn) <= 12){
-                                                $clr='yellow';
-                                            }else{
-                                                $clr = '#0ac60a';
-                                            }
-                                        }
-
-                                        var trr = '<tr>'+
-                                            '<td>'+ $value.question.produits_risque.name +'</td>'+
-                                            '<td>'+$value.question.produits_risque.causes +'</td>'+
-                                            '<td>'+ $value.question.produits_risque.consequences +'</td>'+
-                                            '<td>'+ $value.question.produits_risque.frequence +'</td>'+
-                                            '<td>'+ $value.question.produits_risque.gravite+'</td>'+
-                                            '<td style="background-color:'+ $clrb +'; font-weight: 900; text-align: right">'+ $cb  +'</td>'+
-                                            '<td style="background-color:'+ $clr +'">'+ $cn +'</td>'+
-                                        '</tr>';
-
-                                        html=html+trr;
-
-                                        //console.log(risks[i][1][k]);
-                                    }
-                                   // console.log(risks[i][1]);
-                                }
-
-                                $('#risques-tab').find('tbody').html(html);
-                            },
-                            Error:function(){
-                                $('#risks-loader').hide();
-                            }
-                        });
-                    }
-
-                }
-            })
-        });
-
-        function getPlan(id){
-
-                 $.ajax({
-                   url:orm+'get-plan',
-                   type:'Get',
-                   dataType:'json',
-                   data:{id:id},
-                       success:function(data){
-                           //console.log(data);
-                           if(data!=null){
-                                $.ajax({
-                                  url:orm+'get-plan',
-                                  type:'Get',
-                                  dataType:'json',
-                                  data:{id:id},
-                                success:function(){
-                                }
-                                });
-                           }
-                           var html = '';
-                           var pls = data.plignes;
-                           for(var i = 0; i<data.plignes.length; i++){
-
-                                var tr ='<tr data-id="'+ pls[i].id +'"><td style="width: 13%">'+ pls[i].produits_risque.risque.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.produit.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.name +'</td><td contenteditable="true" style="width: 37%">'+ pls[i].amelioration +'</td></tr>';
-                                html = html + tr;
-                           }
-                           $('#example').find('tbody').html(html);
-                       },
-                   Error:function(){
-
-                   }
-                 });
-            }
-
-    </script>
-
 @endsection
-
-
-
-
-
-@section('nav_actions')
-<main>
-    <nav style="top:15%" class="floating-menu">
-        <ul class="main-menu">
-
-            @if($projet->modepaiement_id>1)
-                @if($projet->validated_step==1)
-                   <li>
-                        <a title="Editer le diagnostic externe" class="ripple" href="/consultant/projet/create-diag-externe/{{ $projet->token }}"><i class="fa fa-edit text-warning"></i></a>
-                   </li>
-                @endif
-            @endif
-
-            @if($projet->etape==2)
-                @if($projet->validated_step==2)
-                <li>
-                     <a title="Editer le diagnostic strategique"  class="ripple" href="/consultant/projet/create-diag-strategique/{{$projet->token}}"><i class="fa fa-edit text-primary"></i></a>
-                </li>
-                @endif
-            @endif
-
-            @if($projet->etape==3)
-                @if($projet->validated_step==3)
-                <li>
-                     <a title="Editer le plan financier"  class="ripple" href="/consultant/projet/create-plan-financier/{{$projet->token}}"><i class="fa fa-edit text-success"></i></a>
-                </li>
-
-                @endif
-            @endif
-
-            @if($projet->etape==4)
-                @if($projet->validated_step==4)
-                    <a data-target="#angelsModal" data-toggle="modal" title="Editer le teaser" class="ripple" href="#"><i class="fa fa-edit text-success"></i></a>
-                @endif
-            @endif
-
-
-            @if(count($projet->investissements)>=1)
-                   <li>
-                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
-                   </li>
-            @endif
-
-        </ul>
-        <div
-         style="
-          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
-          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
-          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
-          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
-          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
-          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
-        "
-        class="menu-bg"></div>
-    </nav>
-</main>
-@endsection
-
-
-
-
-
