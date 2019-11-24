@@ -56,7 +56,7 @@ Route::prefix('admin')
 	    Route::resource('dossiers','ProjetController');
 
 	    //  Pojets Early stage
-	    Route::resource('projet','EarlyController');
+	    Route::resource('projets','EarlyController');
 	    Route::get('projet/expert','EarlyController@addExpert');
 	    Route::get('projet/getchoices','EarlyController@getChoicesJson');
 	    Route::get('projet/validate-diag-interne/{token}','EarlyController@validateDiagInterne');
