@@ -192,7 +192,7 @@ Route::prefix('consultant')
 	    Route::get('projet/create-diag-externe/{token}','EarlyController@createDiagExterne');
 	    Route::post('projet/save-diag-externe','EarlyController@saveDiagExterne');
 	    Route::get('projet/update-plan','EarlyController@updatePlanJson');
-	    Route::get('projt/add-mode','EarlyController@addMode');
+	    Route::get('projet/add-mode','EarlyController@addMode');
 
 	    Route::resource('partenariats','InfrastructureController');
 	    Route::post('partenariat/synthese1','InfrastructureController@synthese1');

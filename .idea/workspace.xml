@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/api.js" afterPath="$PROJECT_DIR$/public/js/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -45,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11510792" vertical-offset="0" max-vertical-offset="417">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
               <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
@@ -366,12 +366,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.92" vertical-offset="720" max-vertical-offset="4240">
-              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-              <folding />
+            <state vertical-scroll-proportion="0.9183673" vertical-offset="2104" max-vertical-offset="3792">
+              <caret line="194" column="63" selection-start-line="194" selection-start-column="63" selection-end-line="194" selection-end-column="63" />
+              <folding>
+                <element signature="e#4774#5657#2#PHP" expanded="false" />
+                <element signature="e#5826#5948#2#PHP" expanded="false" />
+                <element signature="e#6124#6369#2#PHP" expanded="false" />
+                <element signature="e#6550#6795#2#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -435,11 +440,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/EarlyController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Earlies/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
         <option value="$PROJECT_DIR$/public/js/api.js" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -1217,14 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.92" vertical-offset="720" max-vertical-offset="4240">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.4" vertical-offset="5749" max-vertical-offset="11344">
@@ -1504,9 +1501,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11510792" vertical-offset="0" max-vertical-offset="417">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9183673" vertical-offset="2104" max-vertical-offset="3792">
+          <caret line="194" column="63" selection-start-line="194" selection-start-column="63" selection-end-line="194" selection-end-column="63" />
+          <folding>
+            <element signature="e#4774#5657#2#PHP" expanded="false" />
+            <element signature="e#5826#5948#2#PHP" expanded="false" />
+            <element signature="e#6124#6369#2#PHP" expanded="false" />
+            <element signature="e#6550#6795#2#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
