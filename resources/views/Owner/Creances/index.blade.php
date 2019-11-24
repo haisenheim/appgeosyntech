@@ -42,7 +42,7 @@ CESSIONS DE CREANCES
                             <td>{{$projet->consultant?$projet->consultant->name:'-'}}</td>
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/owner/actifs/{{ $projet->token  }}">
+                          <a class="btn btn-primary btn-xs" href="/owner/creances/{{ $projet->token  }}">
                               <i class="fas fa-folder">
                               </i>
                               Afficher
