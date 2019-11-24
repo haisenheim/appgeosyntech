@@ -8,7 +8,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <form enctype="multipart/form-data" class="form" action="{{route('owner.creances.update')}}" method="post">
+                <form enctype="multipart/form-data" class="form" action="'owner/creances/update/{{ $projet }}" method="post">
                     {{csrf_field()}}
 
                     <fieldset>
