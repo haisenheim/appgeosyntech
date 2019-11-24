@@ -202,6 +202,7 @@ Route::prefix('owner')
 	    Route::resource('partenariats','InfrastructureController');
 	    Route::resource('actifs','ActifController');
 	    Route::resource('creances','CreanceController');
+	    Route::post('/creances/update','CreanceController@update');
         Route::get('about','AboutController');
         Route::get('profil','ProfilController');
 	    Route::post('/dossier/initJson','DossierController@initJson');
