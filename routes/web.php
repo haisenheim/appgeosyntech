@@ -185,6 +185,7 @@ Route::prefix('consultant')
 	    Route::get('dossier/update-plan','DossierController@updatePlanJson');
 	    Route::resource('porteurs','ClientController');
 
+	    // Early stage
 	    Route::resource('projets','EarlyController');
 	    Route::post('projet/synthese1','EarlyController@synthese1');
 	    Route::post('projet/synthese2','EarlyController@synthese2');
@@ -193,6 +194,11 @@ Route::prefix('consultant')
 	    Route::post('projet/save-diag-externe','EarlyController@saveDiagExterne');
 	    Route::get('projet/update-plan','EarlyController@updatePlanJson');
 	    Route::get('projet/add-mode','EarlyController@addMode');
+	    Route::get('projet/create-diag-strategique/{token}','EarlyController@createDiagStrategique');
+	    Route::post('projet/save-diag-strategique','EarlyController@saveDiagStrategique');
+	    Route::get('projet/create-plan-financier/{token}','EarlyController@createPlanFinancier');
+	    Route::post('projet/save-plan-financier','EarlyController@savePlanFinancier');
+	    Route::post('projet/teaser','EarlyController@saveTeaser');
 
 	    Route::resource('partenariats','InfrastructureController');
 	    Route::post('partenariat/synthese1','InfrastructureController@synthese1');
