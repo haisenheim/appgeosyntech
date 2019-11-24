@@ -50,7 +50,7 @@ class EarlyController extends Controller
 
 
 	public function getProduitsJson(Request $request){
-		$projet = Earlie::find($request->id);
+		$projet = Earlie::where($request->id)->first();
 		$choices = $projet->produits;
 
 		$produits = [];
