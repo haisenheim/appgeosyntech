@@ -91,8 +91,8 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Creances/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.12" vertical-offset="10" max-vertical-offset="2240">
-              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+            <state vertical-scroll-proportion="-10.88" vertical-offset="768" max-vertical-offset="2240">
+              <caret line="65" column="73" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -131,8 +131,8 @@
       <file leaf-file-name="CreanceController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/CreanceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84656084" vertical-offset="2992" max-vertical-offset="3632">
-              <caret line="225" column="50" selection-start-line="225" selection-start-column="50" selection-end-line="225" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.3227513" vertical-offset="3190" max-vertical-offset="3632">
+              <caret line="225" column="59" selection-start-line="225" selection-start-column="59" selection-end-line="225" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -234,8 +234,8 @@
         <option value="$PROJECT_DIR$/app/Models/Creance.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Creances/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Creances/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Owner/Creances/edit.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Creances/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/CreanceController.php" />
       </list>
     </option>
@@ -1117,14 +1117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Creances/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.12" vertical-offset="10" max-vertical-offset="2240">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.12" vertical-offset="2803" max-vertical-offset="3888">
@@ -1133,10 +1125,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Creances/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.88" vertical-offset="768" max-vertical-offset="2240">
+          <caret line="65" column="73" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/CreanceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84656084" vertical-offset="2992" max-vertical-offset="3632">
-          <caret line="225" column="50" selection-start-line="225" selection-start-column="50" selection-end-line="225" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.3227513" vertical-offset="3190" max-vertical-offset="3632">
+          <caret line="225" column="59" selection-start-line="225" selection-start-column="59" selection-end-line="225" selection-end-column="59" />
           <folding />
         </state>
       </provider>

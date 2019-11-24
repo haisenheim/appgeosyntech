@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-body">
                 <form  class="form" action="/owner/creances/save" method="post">
-
+                    <input type="hidden" name="token" value="{{ $projet->token }}"/>
                     {{csrf_field()}}
 
                     <fieldset>
