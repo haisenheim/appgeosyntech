@@ -213,7 +213,7 @@ class CreanceController extends Controller
     public function update(Request $request)
     {
         //
-	   $creance=Creance::createOrUpdate(['token',$request->token],[$request->all()]);
+	   $creance=Creance::updateOrCreate(['token',$request->token],[$request->all()]);
 	    return '/owner/creances/'.$creance['token'];
     }
 
