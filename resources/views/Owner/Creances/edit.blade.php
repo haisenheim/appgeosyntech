@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-body">
                 <form  class="form" action="/owner/creances/update" method="post">
-                    <input type="hidden" name="token" value="PUT"/>
+
                     {{csrf_field()}}
 
                     <fieldset>
