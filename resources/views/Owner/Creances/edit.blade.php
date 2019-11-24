@@ -8,7 +8,8 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <form enctype="multipart/form-data" class="form" action="/owner/creances/update/{{ $projet->token }}" method="post">
+                <form  class="form" action="/owner/creances/update/{{ $projet->token }}" method="post">
+                    <input type="hidden" name="_method" value="PUT"/>
                     {{csrf_field()}}
 
                     <fieldset>
