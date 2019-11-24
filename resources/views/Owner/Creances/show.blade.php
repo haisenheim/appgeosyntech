@@ -11,10 +11,7 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
     <div style="padding-top: 30px" class="container">
         <div class="row">
 
-            <div class="callout callout-info">
-              <h5><i class="fas fa-info"></i> CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->devise->montant }}</sup></h5>
 
-            </div>
 
 
             <!-- Main content -->
@@ -23,7 +20,7 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
               <div class="row">
                 <div class="col-12">
                   <h4>
-                     <?= Auth::user()->name ?>.
+
                     <small class="float-right">Date: {{ date_format($projet->created_at,'d/m/Y') }}</small>
                   </h4>
                 </div>
@@ -38,7 +35,7 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
                     {{ $projet->address }}<br>
 
                     Téléphone: {{ $projet->phone }}<br>
-                    Email: {{ $projet->email }}
+                    Email: {{ $projet->email }}<br/>
                     Representé par: {{ $projet->representant }}
                   </address>
                 </div>
@@ -55,19 +52,19 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4 invoice-col">
-                  <b>MONTANT : {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->devise->montant }}</sup></b><br>
+                  <b>MONTANT : {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></b><br>
                   <br>
-                  <b>PRIX DE LA CESSION :{{ number_format($projet->prix_cession, 0,',','.') }} <sup>{{ $projet->devise->montant }}</sup> </b><br>
+                  <b>PRIX DE LA CESSION :{{ number_format($projet->prix_cession, 0,',','.') }} <sup>{{ $projet->devise->abb }}</sup> </b><br>
                   <b>DATE DE PAIEMENT:</b> <?= date_format($projet->dt_paiement,'d/m/Y') ?><br>
 
                 </div>
                 <!-- /.col -->
               </div>
               <!-- /.row -->
-
+                <hr/>
               <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <p>{{ $projet->description }}</p>
+                    <p><?= $projet->description ?></p>
                 </div>
               </div>
 
