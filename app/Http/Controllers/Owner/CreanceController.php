@@ -222,8 +222,8 @@ class CreanceController extends Controller
 	public function save(Request $request){
 
 		//$creance=Creance::updateOrCreate(['token',$request->token],$request->input());
-		$creance=Creance::updateOrCreate(['token',$request->token],['debiteur'=>$request->debiteur,'address'=>$request->address,'phone'=>$request->phone,'montant'=>$request->montant,'prix_cession'=>$request->prix_cession,'dt_paiement'=>$request->dt_paiement,'devise_id'=>$request->devise_id]);
-		return '/owner/creances/'.$creance['token'];
+		$creance=Creance::where('token',$request->token)->update(['debiteur'=>$request->debiteur,'address'=>$request->address,'phone'=>$request->phone,'montant'=>$request->montant,'prix_cession'=>$request->prix_cession,'dt_paiement'=>$request->dt_paiement,'devise_id'=>$request->devise_id]);
+		return '/owner/creances/'.$request->token;
 	}
 
     /**
