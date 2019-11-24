@@ -38,7 +38,7 @@ class EarlyController extends Controller
     }
 
 	public function getChoicesJson(Request $request){
-		$projet = Earlie::find($request->id);
+		$projet = Earlie::where('token',$request->id)->first();
 		$choices = $projet->choices;
 
 		$choix = [];
@@ -61,7 +61,7 @@ class EarlyController extends Controller
 	}
 
 	public function updatePlanJson(Request $request){
-		$projet = Earlie::find($request->id);
+		$projet = Earlie::where('token',$request->id)->first();
 		$projet->plan_id = $request->plan_id;
 
 		$projet->save();
