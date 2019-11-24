@@ -199,6 +199,7 @@ Route::prefix('consultant')
 	    Route::get('projet/create-plan-financier/{token}','EarlyController@createPlanFinancier');
 	    Route::post('projet/save-plan-financier','EarlyController@savePlanFinancier');
 	    Route::post('projet/teaser','EarlyController@saveTeaser');
+	    Route::get('projet/get-produits','EarlyController@getProduitsJson');
 
 	    Route::resource('partenariats','InfrastructureController');
 	    Route::post('partenariat/synthese1','InfrastructureController@synthese1');
