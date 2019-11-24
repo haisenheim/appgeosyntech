@@ -2149,7 +2149,9 @@
 
             @if($projet->etape==4)
                 @if($projet->validated_step==4)
-                    <a data-target="#angelsModal" data-toggle="modal" title="Editer le teaser" class="ripple" href="#"><i class="fa fa-edit text-success"></i></a>
+                    <li>
+                         <a data-target="#teaserModal" data-toggle="modal" title="Editer le teaser" class="ripple" href="#"><i class="fa fa-edit text-success"></i></a>
+                    </li>
                 @endif
             @endif
 
