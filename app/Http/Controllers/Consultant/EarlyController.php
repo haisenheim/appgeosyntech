@@ -224,9 +224,12 @@ class EarlyController extends Controller
 	//Sauvegarde du diagnostic strategique
 	public function saveDiagStrategique(Request $request){
 		$token = $request->token;
-		$projet = Earlie::find($token);
+		$projet = Earlie::where('token',$token)->first();
 		//dd($request->token);
 
+		if($projet->swot){
+			Swot::where('earlie_id',$projet->id)->delete();
+		}
 		$swot = new Swot();
 		$swot->earlie_id= $projet->id;
 		$swot->user_id = Auth::user()->id;
@@ -246,6 +249,9 @@ class EarlyController extends Controller
 
 		$ressouces = $request->organisation;
 		//dd($ressouces);
+		if($projet->ressourcess){
+			Ressource::where('earlie_id',$projet->id)->delete();
+		}
 		foreach($ressouces as $ress){
 			$ressouce = new Ressource();
 			$ressouce->name = $ress['nom'];
