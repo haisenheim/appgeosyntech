@@ -1275,6 +1275,7 @@
                                             <h4>FLUX DE TRESORERIE PREVISIONNELS</h4>
                                          </div>
                                         <div class="card-body table-responsive">
+                                        @if($projet->prevtresoreries)
                                             <table class="table table-bordered table-hover table-condensed">
                                                                     <thead>
                                                                         <tr>
@@ -1524,6 +1525,7 @@
 
                                                                     </tbody>
                                                             </table>
+                                            @endif
                                         </div>
                                     </div>
 

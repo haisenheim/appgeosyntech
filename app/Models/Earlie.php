@@ -147,6 +147,11 @@ class Earlie extends Model
 		return $this->belongsToMany('App\Models\Moyen','earlies_moyens');
 	}
 
+	public function financements(){
+		return $this->hasMany('App\Models\Moyens_projet');
+	}
+
+
 
 	public function prevtresoreries(){
 		return $this->hasMany('App\Models\Prevtresorerie');
