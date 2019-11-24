@@ -8,7 +8,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <form enctype="multipart/form-data" class="form" action="'owner/creances/update/{{ $projet->token }}" method="post">
+                <form enctype="multipart/form-data" class="form" action="/owner/creances/update/{{ $projet->token }}" method="post">
                     {{csrf_field()}}
 
                     <fieldset>
@@ -31,19 +31,19 @@
                                  <div class="col-md-4">
                                      <div class="form-group">
                                          <label class="control-label">ADRESSE</label>
-                                         <input id="name" name="address" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                         <input id="name" name="address" maxlength="250" type="text" required="required" class="form-control" value="{{ $projet->address }}">
                                      </div>
                                  </div>
                                  <div class="col-md-4">
                                      <div class="form-group">
                                          <label class="control-label">TELEPHONE</label>
-                                         <input id="name" name="phone" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                         <input id="name" name="phone" maxlength="250" type="text" required="required" class="form-control" value="{{ $projet->phone }}">
                                      </div>
                                  </div>
                                  <div class="col-md-4">
                                      <div class="form-group">
                                          <label class="control-label">EMAIL</label>
-                                         <input id="name" name="email" maxlength="250" type="email" required="required" class="form-control" placeholder="">
+                                         <input id="name" name="email" maxlength="250" type="email" required="required" class="form-control" value="{{ $projet->email }}">
                                      </div>
                                  </div>
                             </div>
@@ -64,9 +64,12 @@
                                      <div class="form-group">
                                          <label for="prix" class="control-label">DEVISE</label>
                                          <select class="form-control" name="devise_id" id="">
-                                            <option value="">CHOIX D'UNE DEVISE</option>
+                                            <option value="{{$projet->devise_id}}">{{ $projet->devise->name }}</option>
+
                                             @foreach($devises as $devise)
-                                                <option value="{{ $devise->id }}">{{ $devise->name }}</option>
+                                                @if($devise->id!= $projet->devise_id)
+                                                    <option value="{{ $devise->id }}">{{ $devise->name }}</option>
+                                                @endif
                                             @endforeach
                                          </select>
                                      </div>
