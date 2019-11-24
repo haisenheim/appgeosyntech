@@ -26,10 +26,11 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
                 </div>
                 <!-- /.col -->
               </div>
+              <hr/>
               <!-- info row -->
               <div class="row invoice-info">
                 <div class="col-sm-4 invoice-col">
-                  CREANCE DE
+                  DEBITEUR:
                   <address>
                     <strong>{{ $projet->debiteur }} </strong><br>
                     {{ $projet->address }}<br>
@@ -41,12 +42,12 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4 invoice-col">
-                  ENVERS
+                  CREANCIER:
                   <address>
                     <strong>{{ \Illuminate\Support\Facades\Auth::user()->name }}</strong><br>
                     <?= Auth::user()->address ?><br>
 
-                    Phone: <?= Auth::user()->phone ?><br>
+                    Téléphone: <?= Auth::user()->phone ?><br>
                     Email: <?= Auth::user()->email ?>
                   </address>
                 </div>
