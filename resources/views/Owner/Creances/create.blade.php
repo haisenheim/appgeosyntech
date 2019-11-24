@@ -23,7 +23,7 @@ NOUVELLE CESSION DE CREANCE
                                  <div class="col-md-4">
                                      <div class="form-group">
                                          <label class="control-label">REPRESENTE(E) PAR</label>
-                                         <input id="name" name="reprensentant" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                         <input id="name" name="representant" maxlength="250" type="text" required="required" class="form-control" placeholder="">
                                      </div>
                                  </div>
                             </div>

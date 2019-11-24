@@ -86,6 +86,7 @@ class CreanceController extends Controller
         $actif->devise_id = $request['devise_id'];
 	    $actif->representant = $request['representant'];
 	    $actif->description = $request['description'];
+	    $actif->montant = $request['montant'];
 
 	    $actif->prix_cession = $request['prix_cession'];
 	    $actif->owner_id = Auth::user()->id;
@@ -209,7 +210,7 @@ class CreanceController extends Controller
      * @param  \App\Models\Projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Actif $actif)
+    public function update(Request $request)
     {
         //
 	    dd($request);

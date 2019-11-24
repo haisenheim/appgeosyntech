@@ -8,36 +8,73 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <form enctype="multipart/form-data" class="form" action="'owner/creances/update/{{ $projet }}" method="post">
+                <form enctype="multipart/form-data" class="form" action="'owner/creances/update/{{ $projet->token }}" method="post">
                     {{csrf_field()}}
 
                     <fieldset>
                         <legend>INFORMATIONS SUR LA CREANCE</legend>
                             <div class="row">
-                                 <div class="col-md-12">
+                                 <div class="col-md-8">
                                      <div class="form-group">
                                          <label class="control-label">NOM DU DEBITEUR</label>
                                          <input id="name" name="debiteur" maxlength="250" type="text" required="required" class="form-control" value="{{ $projet->debiteur }}" placeholder="">
                                      </div>
                                  </div>
+                                 <div class="col-md-4">
+                                     <div class="form-group">
+                                         <label class="control-label">REPRESENTE(E) PAR</label>
+                                         <input id="name" name="representant" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                     </div>
+                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-4">
+                                 <div class="col-md-4">
+                                     <div class="form-group">
+                                         <label class="control-label">ADRESSE</label>
+                                         <input id="name" name="address" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <div class="form-group">
+                                         <label class="control-label">TELEPHONE</label>
+                                         <input id="name" name="phone" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <div class="form-group">
+                                         <label class="control-label">EMAIL</label>
+                                         <input id="name" name="email" maxlength="250" type="email" required="required" class="form-control" placeholder="">
+                                     </div>
+                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
                                      <div class="form-group">
                                          <label for="prix" class="control-label">MONTANT</label>
                                          <input id="prix" name="montant"  type="number"  class="form-control" placeholder="" value="{{ $projet->montant }}">
                                      </div>
                                  </div>
-                                 <div class="col-md-4">
+                                 <div class="col-md-3">
                                      <div class="form-group">
                                          <label for="prix" class="control-label">PRIX DE LA CESSION</label>
                                          <input id="prix" name="prix_cession"  type="number"  class="form-control" placeholder="" value="{{ $projet->prix_cession }}">
                                      </div>
                                  </div>
+                                 <div class="col-md-3">
+                                     <div class="form-group">
+                                         <label for="prix" class="control-label">DEVISE</label>
+                                         <select class="form-control" name="devise_id" id="">
+                                            <option value="">CHOIX D'UNE DEVISE</option>
+                                            @foreach($devises as $devise)
+                                                <option value="{{ $devise->id }}">{{ $devise->name }}</option>
+                                            @endforeach
+                                         </select>
+                                     </div>
+                                 </div>
                                  <div class="col-md-4">
                                      <div class="form-group">
                                          <label for="prix" class="control-label">DATE DE PAIEMENT</label>
-                                         <input id="prix" name="dt_paiement"  type="date"  class="form-control" placeholder="" value="{{$projet->dt_paiement}}"
+                                         <input id="prix" name="dt_paiement"  type="date"  class="form-control" placeholder="" value="{{$projet->dt_paiement}}"/>
                                      </div>
                                  </div>
 
