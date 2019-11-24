@@ -8,7 +8,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <form  class="form" action="/owner/creances/update" method="post">
+                <form  class="form" action="/owner/creances/save" method="post">
 
                     {{csrf_field()}}
 
