@@ -128,7 +128,9 @@ class Earlie extends Model
 		return $this->hasMany('App\Models\EarliesProduit');
 	}
 
-
+	public function ressources(){
+		return $this->hasMany('App\Models\Ressource');
+	}
 
 
 
