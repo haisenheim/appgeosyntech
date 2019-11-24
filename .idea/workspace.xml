@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -35,10 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EarlyController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EarlyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6092184" vertical-offset="1552" max-vertical-offset="5360">
+            <state vertical-scroll-proportion="-12.16" vertical-offset="1552" max-vertical-offset="5360">
               <caret line="178" column="47" selection-start-line="178" selection-start-column="47" selection-end-line="178" selection-end-column="47" />
               <folding>
                 <element signature="e#2211#3790#0#PHP" expanded="false" />
@@ -67,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.12" vertical-offset="7274" max-vertical-offset="34960">
-              <caret line="472" column="60" selection-start-line="472" selection-start-column="60" selection-end-line="472" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.93415636" vertical-offset="9178" max-vertical-offset="34960">
+              <caret line="602" column="66" selection-start-line="602" selection-start-column="66" selection-end-line="602" selection-end-column="66" />
               <folding>
                 <element signature="e#123#171#0#HTML" expanded="true" />
                 <element signature="e#294#339#0#HTML" expanded="true" />
@@ -1342,10 +1341,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.24" vertical-offset="1962" max-vertical-offset="4160">
+          <caret line="159" column="4" selection-start-line="159" selection-start-column="4" selection-end-line="161" selection-end-column="5" />
+          <folding>
+            <element signature="e#1093#2097#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Earlie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.8" vertical-offset="1536" max-vertical-offset="3488">
+          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+          <folding>
+            <element signature="e#700#2115#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/create_diag_strategique.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.21917808" vertical-offset="7552" max-vertical-offset="10112">
+          <caret line="473" column="33" selection-start-line="473" selection-start-column="33" selection-end-line="473" selection-end-column="33" />
+          <folding>
+            <element signature="e#136#161#0#HTML" expanded="true" />
+            <element signature="e#400#433#0#HTML" expanded="true" />
+            <element signature="e#875#899#0#HTML" expanded="true" />
+            <element signature="e#1559#1592#0#HTML" expanded="true" />
+            <element signature="e#1745#1769#0#HTML" expanded="true" />
+            <element signature="e#1897#1921#0#HTML" expanded="true" />
+            <element signature="e#2049#2073#0#HTML" expanded="true" />
+            <element signature="e#2293#2326#0#HTML" expanded="true" />
+            <element signature="e#2503#2527#0#HTML" expanded="true" />
+            <element signature="e#2641#2665#0#HTML" expanded="true" />
+            <element signature="e#2782#2806#0#HTML" expanded="true" />
+            <element signature="e#6352#6389#0#HTML" expanded="true" />
+            <element signature="e#15235#15259#0#HTML" expanded="true" />
+            <element signature="e#19621#19642#0#HTML" expanded="true" />
+            <element signature="e#23410#23434#0#HTML" expanded="true" />
+            <marker date="1574625023281" expanded="true" signature="32521:32531" placeholder="..." />
+            <marker date="1574625023281" expanded="true" signature="32589:32599" placeholder="..." />
+            <marker date="1574625023281" expanded="true" signature="32658:32668" placeholder="..." />
+            <marker date="1574625023281" expanded="true" signature="32742:32752" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4" vertical-offset="2592" max-vertical-offset="6368">
+          <caret line="189" column="47" selection-start-line="188" selection-start-column="12" selection-end-line="189" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.16" vertical-offset="1552" max-vertical-offset="5360">
+          <caret line="178" column="47" selection-start-line="178" selection-start-column="47" selection-end-line="178" selection-end-column="47" />
+          <folding>
+            <element signature="e#2211#3790#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.12" vertical-offset="7274" max-vertical-offset="34960">
-          <caret line="472" column="60" selection-start-line="472" selection-start-column="60" selection-end-line="472" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.93415636" vertical-offset="9178" max-vertical-offset="34960">
+          <caret line="602" column="66" selection-start-line="602" selection-start-column="66" selection-end-line="602" selection-end-column="66" />
           <folding>
             <element signature="e#123#171#0#HTML" expanded="true" />
             <element signature="e#294#339#0#HTML" expanded="true" />
@@ -1412,72 +1477,6 @@
             <marker date="1574623947748" expanded="true" signature="154162:154172" placeholder="..." />
             <marker date="1574623947748" expanded="true" signature="154231:154241" placeholder="..." />
             <marker date="1574623947748" expanded="true" signature="154315:154325" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.24" vertical-offset="1962" max-vertical-offset="4160">
-          <caret line="159" column="4" selection-start-line="159" selection-start-column="4" selection-end-line="161" selection-end-column="5" />
-          <folding>
-            <element signature="e#1093#2097#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Earlie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.8" vertical-offset="1536" max-vertical-offset="3488">
-          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
-          <folding>
-            <element signature="e#700#2115#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/create_diag_strategique.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.21917808" vertical-offset="7552" max-vertical-offset="10112">
-          <caret line="473" column="33" selection-start-line="473" selection-start-column="33" selection-end-line="473" selection-end-column="33" />
-          <folding>
-            <element signature="e#136#161#0#HTML" expanded="true" />
-            <element signature="e#400#433#0#HTML" expanded="true" />
-            <element signature="e#875#899#0#HTML" expanded="true" />
-            <element signature="e#1559#1592#0#HTML" expanded="true" />
-            <element signature="e#1745#1769#0#HTML" expanded="true" />
-            <element signature="e#1897#1921#0#HTML" expanded="true" />
-            <element signature="e#2049#2073#0#HTML" expanded="true" />
-            <element signature="e#2293#2326#0#HTML" expanded="true" />
-            <element signature="e#2503#2527#0#HTML" expanded="true" />
-            <element signature="e#2641#2665#0#HTML" expanded="true" />
-            <element signature="e#2782#2806#0#HTML" expanded="true" />
-            <element signature="e#6352#6389#0#HTML" expanded="true" />
-            <element signature="e#15235#15259#0#HTML" expanded="true" />
-            <element signature="e#19621#19642#0#HTML" expanded="true" />
-            <element signature="e#23410#23434#0#HTML" expanded="true" />
-            <marker date="1574625023281" expanded="true" signature="32521:32531" placeholder="..." />
-            <marker date="1574625023281" expanded="true" signature="32589:32599" placeholder="..." />
-            <marker date="1574625023281" expanded="true" signature="32658:32668" placeholder="..." />
-            <marker date="1574625023281" expanded="true" signature="32742:32752" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4" vertical-offset="2592" max-vertical-offset="6368">
-          <caret line="189" column="47" selection-start-line="188" selection-start-column="12" selection-end-line="189" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6092184" vertical-offset="1552" max-vertical-offset="5360">
-          <caret line="178" column="47" selection-start-line="178" selection-start-column="47" selection-end-line="178" selection-end-column="47" />
-          <folding>
-            <element signature="e#2211#3790#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

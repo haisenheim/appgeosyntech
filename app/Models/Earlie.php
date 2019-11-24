@@ -26,8 +26,8 @@ class Earlie extends Model
     }
 
 	public function getVariationsAttribute(){
-		$prevrs = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
-		$prevbls = Prevbilan::all()->where('projet_id',$this->id)->sortBy('annee');
+		$prevrs = Prevresultat::all()->where('earlie_id',$this->id)->sortBy('annee');
+		$prevbls = Prevbilan::all()->where('earlie_id',$this->id)->sortBy('annee');
 		$bc = $prevbls->count();
 		$nb = $prevrs->count();
 		$data=[];
@@ -168,7 +168,7 @@ class Earlie extends Model
 	}
 
 	protected function getTotalAttribute(){
-		$investissements = Investissement::all()->where('projet_id',$this->id);
+		$investissements = Investissement::all()->where('earlie_id',$this->id);
 		$total = 0;
 		foreach($investissements as $investissement){
 			$letter = $investissement->lettre;
