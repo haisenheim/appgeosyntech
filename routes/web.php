@@ -66,13 +66,13 @@ Route::prefix('admin')
 
 
 	    //  Pojets de Partenariats public-prive
-	    Route::resource('partenariats','InfrastuctureController');
-	    Route::get('partenariat/expert','InfrastuctureController@addExpert');
-	    Route::get('partenariat/getchoices','InfrastuctureController@getChoicesJson');
-	    Route::get('partenariat/validate-diag-interne/{token}','InfrastuctureController@validateDiagInterne');
-	    Route::get('partenariat/validate-diag-externe/{token}','InfrastuctureController@validateDiagExterne');
-	    Route::get('partenariat/validate-plan-strategique/{token}','InfrastuctureController@validateDiagStrategique');
-	    Route::get('partenariat/validate-plan-financier/{token}','EInfrastuctureController@validateMontageFinancier');
+	    Route::resource('partenariats','InfrastructureController');
+	    Route::get('partenariat/expert','InfrastructureController@addExpert');
+	    Route::get('partenariat/getchoices','InfrastructureController@getChoicesJson');
+	    Route::get('partenariat/validate-diag-interne/{token}','InfrastructureController@validateDiagInterne');
+	    Route::get('partenariat/validate-diag-externe/{token}','InfrastructureController@validateDiagExterne');
+	    Route::get('partenariat/validate-plan-strategique/{token}','InfrastructureController@validateDiagStrategique');
+	    Route::get('partenariat/validate-plan-financier/{token}','EInfrastructureController@validateMontageFinancier');
 
 	    // Creances
 	    Route::resource('creances','CreanceController');
