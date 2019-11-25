@@ -19,9 +19,9 @@ class CreanceController extends Controller
     public function index()
     {
         //
-	    $projets = Creance::orderBy('created_at','desc')->paginate(10);
+	    $ossiers = Creance::orderBy('created_at','desc')->paginate(10);
 
-	    return view('/Admin/Creances/index')->with(compact('projets'));
+	    return view('/Admin/Creances/index')->with(compact('dossiers'));
     }
 
     /**
