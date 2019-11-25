@@ -70,6 +70,7 @@ Route::prefix('admin')
 	    Route::get('creances/enable/{token}','CreanceController@enable')->name('enable.creance');
 	    Route::get('creance/expert','CreanceController@addExpert');
 	    Route::get('creance/close/{token}','CreanceController@close');
+	    Route::get('creance/pay/{token}','CreanceController@pay');
 
 	    Route::resource('users','UserController');
 	    Route::resource('pays','PayController');
@@ -200,6 +201,10 @@ Route::prefix('consultant')
 	    Route::post('projet/save-plan-financier','EarlyController@savePlanFinancier');
 	    Route::post('projet/teaser','EarlyController@saveTeaser');
 	    Route::get('projet/get-produits','EarlyController@getProduitsJson');
+
+	    // Creances
+	    Route::resource('creances','CreanceController');
+	    Route::post('creance/teaser','CreanceController@saveTeaser');
 
 	    Route::resource('partenariats','InfrastructureController');
 	    Route::post('partenariat/synthese1','InfrastructureController@synthese1');

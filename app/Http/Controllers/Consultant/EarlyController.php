@@ -208,6 +208,9 @@ class EarlyController extends Controller
 		$data = $request->all();
 
 		$teaser = new Teaser();
+		if($projet->teaser){
+			$teaser = Teaser::where('earlie_id',$projet->id)->first();
+		}
 		$teaser->problematique = $data['problematique'];
 		$teaser->chiffres = $data['chiffres'];
 		$teaser->contexte = $data['contexte'];
