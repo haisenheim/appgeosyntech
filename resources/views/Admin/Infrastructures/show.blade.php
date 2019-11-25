@@ -28,29 +28,10 @@
                             <p>CODE : {{ $projet->code }}</p>
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-                            <p>AUTEUR : {{ $projet->auteur->name }}</p>
+
                             <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
 
-                            @if($projet->etape>=4)
-                                <ul class="list-group">
-                                    <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
-                                    <li class="list-group-item">BESOIN EN FONDS DE ROULEMENT : <span class="value"><?= $projet->bfr ?></span></li>
-                                    <li style="font-weight: bold;" class="list-group-item">COUT GLOBAL DU PROJET : <span class="value"><?= $projet->montant_investissement + $projet->bfr ?></span></li>
-                                </ul>
 
-                                <fieldset>
-                                    <legend>MOYENS DE FINANCEMENT</legend>
-                                    <ul class="list-group">
-                                        @if($projet->moyens)
-                                            @foreach($projet->financements as $moyen)
-
-                                                <li class="list-group-item"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class="value"><?= $moyen->montant ?></span></li>
-                                            @endforeach
-                                        @endif
-                                    </ul>
-                                </fieldset>
-                                
-                            @endif
                             <input type="hidden" id="id" value="<?= $projet->id ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
                             <span class="text-sm">Consultant </span>
