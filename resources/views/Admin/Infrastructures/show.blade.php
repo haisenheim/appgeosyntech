@@ -2191,6 +2191,32 @@
     </nav>
 </main>
 
+<div class="modal fade" id="uploadAppelModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h6  class="modal-title text-center">PUBLICATION DE L'APPEL D'OFFRE</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+            <div class="card card-danger">
+                <div class="card-body">
+                    <form action="/admin/partenariat/publish" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="appelUri">APPEL D'OFFRE</label>
+                            <input type="file" class="form-control" name="appelUri"/>
+                        </div>
+                        <button class="btn btn-block btn-outline-success btn-sm"><i class="fa fa-upload"></i> PUBLIER</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="angelsModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
