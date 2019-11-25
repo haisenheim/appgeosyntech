@@ -22,8 +22,8 @@ class InfrastructureController extends Controller
     public function index()
     {
         //
-	    $infrastructures = Infrastructure::orderBy('created_at','desc')->paginate(10);
-	    return view('/Admin/Infrastructures/index')->with(compact('infrastructures'));
+	    $dossiers = Infrastructure::orderBy('created_at','desc')->paginate(10);
+	    return view('/Admin/Infrastructures/index')->with(compact('dossiers'));
     }
 
     /**

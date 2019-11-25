@@ -40,7 +40,7 @@ DOSSIERS DE PARTENARIATS PUBLIC - PRIVE
               <tbody>
 
 
-                   @foreach($projets as $projet)
+                   @foreach($dossiers as $projet)
                         <tr>
                             <td>#</td>
                             <td>
@@ -75,7 +75,7 @@ DOSSIERS DE PARTENARIATS PUBLIC - PRIVE
               </tbody>
           </table>
           <div>
-            <ul class="pagination">{{ $projets->links() }}</ul>
+            <ul class="pagination">{{ $dossiers->links() }}</ul>
           </div>
         </div>
         <!-- /.card-body -->
