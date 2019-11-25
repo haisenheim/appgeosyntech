@@ -64,6 +64,16 @@ Route::prefix('admin')
 	    Route::get('projet/validate-plan-strategique/{token}','EarlyController@validateDiagStrategique');
 	    Route::get('projet/validate-plan-financier/{token}','EarlyController@validateMontageFinancier');
 
+
+	    //  Pojets de Partenariats public-prive
+	    Route::resource('partenariats','InfrastuctureController');
+	    Route::get('partenariat/expert','InfrastuctureController@addExpert');
+	    Route::get('partenariat/getchoices','InfrastuctureController@getChoicesJson');
+	    Route::get('partenariat/validate-diag-interne/{token}','InfrastuctureController@validateDiagInterne');
+	    Route::get('partenariat/validate-diag-externe/{token}','InfrastuctureController@validateDiagExterne');
+	    Route::get('partenariat/validate-plan-strategique/{token}','InfrastuctureController@validateDiagStrategique');
+	    Route::get('partenariat/validate-plan-financier/{token}','EInfrastuctureController@validateMontageFinancier');
+
 	    // Creances
 	    Route::resource('creances','CreanceController');
 	    Route::get('creance/disable/{token}','CreanceController@disable')->name('disable.creance');

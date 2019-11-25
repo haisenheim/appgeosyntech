@@ -20,32 +20,6 @@
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-md-12 col-lg-9 order-2 order-md-1">
-              <div class="row">
-                <div class="col-12 col-sm-4">
-                  <div class="info-box bg-light">
-                    <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Investissement</span>
-                      <span class="info-box-number text-center text-muted mb-0"><?= $projet->montant_investissement ?></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                  <div class="info-box bg-light">
-                    <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Besoin en fonds de roulement</span>
-                      <span class="info-box-number text-center text-muted mb-0"><?= $projet->bfr ?></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                  <div class="info-box bg-light">
-                    <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Cout global</span>
-                      <span class="info-box-number text-center text-muted mb-0"><?= $projet->montant_investissement + $projet->bfr ?> </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               <div class="row">
                 <div class="col-12">

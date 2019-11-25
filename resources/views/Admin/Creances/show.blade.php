@@ -65,6 +65,31 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
                     <p><?= $projet->description ?></p>
                 </div>
               </div>
+              <hr/>
+              <span class="text-sm">Consultant</span>
+                   @if($projet->consultant)
+
+
+                   <b class="d-block">{{$projet->consultant->name}}</b>
+                       <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
+
+                   @else
+                                <form class="form-inline"  action="/admin/creance/expert">
+                                {{csrf_field()}}
+                                <input type="hidden" name="id" value="{{ $projet->id }}"/>
+                                    <div class="form-group">
+                                        <select class="form-control" name="expert_id" id="id">
+                                            @foreach($experts as $expert)
+                                                <option value="{{ $expert->id }}">{{ $expert->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-danger"><i class="fa fa-link"></i> LIER</button>
+                                    </div>
+                                </form>
+
+                     @endif
 
 
 
