@@ -1848,6 +1848,7 @@
                     <div class="card-body">
                         <form action="/admin/partenariat/publish" method="post" enctype="multipart/form-data">
                         @csrf
+                        <input type="hidden" name="token" value="{{ $projet->token }}"/>
                             <div class="form-group">
                                 <label for="appelUri">APPEL D'OFFRE</label>
                                 <input type="file" class="form-control" name="appelUri"/>
