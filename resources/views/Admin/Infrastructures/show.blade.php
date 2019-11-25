@@ -2215,7 +2215,7 @@
                    <li>
                         <a title="Verrouiller le dossier" class="ripple" href="/admin/partenariat/disable/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
                    </li>
-             @if(!$projet->pubished)
+             @if(!$projet->published)
                    <li>
                         <a data-toggle="modal" data-target="#uploadAppelModal" title="Publier l'appel d'offre" class="ripple" href="#"><i class="fa fa-upload text-warning"></i></a>
                    </li>
