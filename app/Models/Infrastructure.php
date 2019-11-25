@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,8 +18,8 @@ class Infrastructure extends Model
 
 
 
-	public function auteur(){
-		return $this->belongsTo('App\User','author_id');
+	public function selector(){
+		return $this->belongsTo('App\User','selector_id');
 	}
 
 
@@ -26,11 +27,115 @@ class Infrastructure extends Model
         return $this->belongsTo('App\User','owner_id');
     }
 
+
+
+	public function getStageAttribute(){
+		$stage = "";
+		$delai = 0;
+		$publicated_at = $this->published_at;
+		$received_at = $this->received_at;
+		$consortia_selected_at = $this->consortia_selected_at;
+		$first_rendered_at = $this->first_rendered_at;
+		$bidders_selected_at = $this->bidders_selected_at;
+		$final_rendered_at = $this->final_rendered_at;
+		$concessionnaire_selected_at = $this->concessionnaire_selected_at;
+		$signed_at = $this->signed_at;
+		$alert = false;
+
+		if($publicated_at){
+			$pd = Carbon::parse($publicated_at);
+			$diff = $pd->diffInDays(Carbon::now());
+			if(!$received_at){
+				$stage = 'REMISE DE PREQUALIFICATION';
+				$delai = $diff;
+				$pd->addDays(60)->greaterThan(Carbon::now())?$alert = true:$alert=false;
+			}
+
+
+		}
+
+		if($received_at){
+			$pd = Carbon::parse($received_at);
+			$diff = $pd->diffInDays(Carbon::now());
+			if(!$consortia_selected_at){
+				$stage = 'Choix des consortia retenus';
+				$delai = $diff;
+				$pd->addDays(240)->greaterThan(Carbon::now())?$alert = true:$alert=false;
+			}
+		}
+
+		if($consortia_selected_at){
+			$pd = Carbon::parse($consortia_selected_at);
+			$diff = $pd->diffInDays(Carbon::now());
+			if(!$first_rendered_at){
+				$stage = 'Remise de la première offre';
+				$delai = $diff;
+				$pd->addDays(60)->greaterThan(Carbon::now())?$alert = true:$alert=false;
+			}
+		}
+
+		if($first_rendered_at){
+			$pd = Carbon::parse($first_rendered_at);
+			$diff = $pd->diffInDays(Carbon::now());
+			if(!$bidders_selected_at){
+				$stage = 'Sélection des Preffered bidders';
+				$delai = $diff;
+				$pd->addDays(90)->greaterThan(Carbon::now())?$alert = true:$alert=false;
+			}
+		}
+
+		if($bidders_selected_at){
+			$pd = Carbon::parse($bidders_selected_at);
+			$diff = $pd->diffInDays(Carbon::now());
+			if(!$final_rendered_at){
+				$stage = 'Remise de la Best And Final Offer';
+				$delai = $diff;
+				$pd->addDays(60)->greaterThan(Carbon::now())?$alert = true:$alert=false;
+			}
+		}
+
+		if($final_rendered_at){
+			$pd = Carbon::parse($final_rendered_at);
+			$diff = $pd->diffInDays(Carbon::now());
+			if(!$concessionnaire_selected_at){
+				$stage = 'Choix concessionnaire pressenti';
+				$delai = $diff;
+				$pd->addDays(90)->greaterThan(Carbon::now())?$alert = true:$alert=false;
+			}
+		}
+
+		if($concessionnaire_selected_at){
+			$pd = Carbon::parse($concessionnaire_selected_at);
+			$diff = $pd->diffInDays(Carbon::now());
+			if(!$signed_at){
+				$stage = 'Financial Close et Signature de contrat';
+				$delai = $diff;
+				$pd->addDays(90)->greaterThan(Carbon::now())?$alert = true:$alert=false;
+			}
+		}
+
+	}
+
+
 	public function getVariationsAttribute(){
-		$prevrs = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
-		$prevbls = Prevbilan::all()->where('projet_id',$this->id)->sortBy('annee');
-		$bc = $prevbls->count();
-		$nb = $prevrs->count();
+		$prevrls = Prevresultat::all()->where('insfrastructure_id',$this->id)->sortBy('annee');
+		$prevbils = Prevbilan::all()->where('infrastructure_id',$this->id)->sortBy('annee');
+		$prevbls = [];
+		$prevrs=[];
+		$i=0;
+		foreach($prevbils as $pb){
+			$prevbls[$i++] = $pb;
+		}
+
+		$i=0;
+		foreach($prevrls as $pb){
+			$prevrs[$i++] = $pb;
+		}
+
+		//debug($prevrs);
+		//dd($pbilans);
+		$bc = count($prevbls);
+		$nb = count($prevrs);
 		$data=[];
 		for($i=0;$i<$nb-1;$i++){
 			$data['ca'][$i]=$prevrs[$i]->ca?round((($prevrs[$i+1]->ca-$prevrs[$i]->ca)/$prevrs[$i]->ca)*100,2):0;
@@ -49,9 +154,9 @@ class Infrastructure extends Model
 			$data['tn'][$i]=$prevbls[$i]->tn?round((($prevbls[$i+1]->tn-$prevbls[$i]->tn)/$prevbls[$i]->tn)*100,2):0;
 
 		}
+		//dd($data);
 		return $data;
 	}
-
     public function ville(){
         return $this->belongsTo('App\Models\Ville');
     }

@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Concession;
 use App\Models\Infrastructure;
 use App\Models\Investissement;
 use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use PHPUnit\Framework\Exception;
 
 class InfrastructureController extends Controller
@@ -20,8 +22,8 @@ class InfrastructureController extends Controller
     public function index()
     {
         //
-	    $projets = Infrastructure::orderBy('created_at','desc')->paginate(10);
-	    return view('/Admin/Infrastructures/index')->with(compact('projets'));
+	    $infrastructures = Infrastructure::orderBy('created_at','desc')->paginate(10);
+	    return view('/Admin/Infrastructures/index')->with(compact('infrastructures'));
     }
 
     /**
@@ -106,6 +108,123 @@ class InfrastructureController extends Controller
 		return redirect()->back();
 	}
 
+	
+	
+	
+	
+	
+	/*
+	 * Publication de l'appel d'offre
+	 */
+
+	public function publish(Request $request){
+
+		//dd(public_path('img'));
+		$projet = Infrastructure::where('token',$request->token)->first();
+		$file = $request->appelUril;
+		$ext = $file->getClientOriginalExtension();
+		$arr_ext = array('jpg','png','jpeg','gif','pdf');
+		if(in_array($ext,$arr_ext)){
+			if(!file_exists(public_path('file').'/infrastructures')){
+				mkdir(public_path('file').'/infrastructures');
+			}
+			//dd($projet);
+			if(file_exists(public_path('file').'/infrastructures/'.$projet->token.'.'.$ext)){
+				unlink(public_path('file').'/infrastructures/'.$projet->token.'.'.$ext);
+			}
+			$name = $projet->token.'.'.$ext;
+			$file->move(public_path('file/infrastructures'), $name);
+			//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
+			$projet->appelUri = 'infrastructures/'.$name;
+			$projet->published=1;
+			$projet->published_at = new \DateTime();
+			$projet->save();
+			$request->session()->flash('success','Appel d\'offre enregistré!!!');
+		}
+		return redirect()->back();
+	}
+	
+	
+	
+	
+	/*
+	 * Remise des dossiers de prequalification
+	 */
+	public function receive(Request $request, $token){
+		Infrastructure::updateOrCreate(['token'=>$token],['received'=>1,'received_at'=> new \DateTime()]);
+		$request->session()->flash('success','Remise des dossiers de préqualification faite avec succès!!!');
+		return redirect()->back();
+	}
+
+
+	/*
+	 * Remise des dossiers de prequalification
+	 */
+	public function selectConsortia(Request $request){
+		$concessions = $request->concessions;
+		foreach($concessions as $concession){
+			$cons= Concession::updateOrCreate(['token'=>$concession['token'],'selected'=>1,'selected_at'=>new \DateTime(), 'selctor_id'=>Auth::user()->id]);
+		}
+		Infrastructure::updateOrCreate(['token'=>$request->token],['consortia_selected'=>1,'consortia_selected_at'=> new \DateTime()]);
+		$request->session()->flash('success','	Choix des consortia retenus fait avec succès!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 * Remise premiere offre
+	 */
+	public function remiseFirst(Request $request, $token){
+		Infrastructure::updateOrCreate(['token'=>$token],['first_rendered'=>1,'first_rendered_at'=> new \DateTime()]);
+		$request->session()->flash('success','Remise de la première offre faite avec succès!!!');
+		return redirect()->back();
+	}
+
+
+	/*
+	 * Sélection des Preffered bidders
+	 */
+	public function selectBidders(Request $request, $token){
+		Infrastructure::updateOrCreate(['token'=>$token],['bidders_selected'=>1,'bidders_selected_at'=> new \DateTime()]);
+		$request->session()->flash('success','Sélection des Preffered bidders faite avec succès!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 * Remise de la Best And Final Offer
+	 */
+	public function remiseFinal(Request $request, $token){
+		Infrastructure::updateOrCreate(['token'=>$token],['final_rendered'=>1,'final_rendered_at'=> new \DateTime()]);
+		$request->session()->flash('success','Remise de la Best And Final Offer faite avec succès!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 * Choix du concessionnaire pressenti
+	 */
+	public function selectConcessionnaire(Request $request){
+		$projet = Infrastructure::where('token',$request->id)->first();
+		$projet->concessionnaire_id = $request->angel_id;
+		$projet->save();
+		$request->session()->flash('success','Choix concessionnaire pressenti fait avec succès!!!');
+		return redirect()->back();
+	}
+
+	/*
+	 * Financial Close et Signature de contrat
+	 */
+	public function signature(Request $request, $token){
+		Infrastructure::updateOrCreate(['token'=>$token],['signed'=>1,'signed_at'=> new \DateTime()]);
+		$request->session()->flash('success','Financial Close et Signature de contrat  faite avec succès!!!');
+		return redirect()->back();
+	}
+
+
+
+
+
+
+
+
 	/*
 	 *
 	 */
@@ -139,68 +258,7 @@ class InfrastructureController extends Controller
 		return redirect()->back();
 	}
 
-	public function createLetter($token){
-		$invest = Investissement::where('token',$token)->first();
-		$letter = $invest->lettre;
-		if($letter){
-			// Creating the new document...
-			$phpWord = new \PhpOffice\PhpWord\PhpWord();
 
-			/* Note: any element you append to a document must reside inside of a Section. */
-
-// Adding an empty Section to the document...
-			$section = $phpWord->addSection();
-// Adding Text element to the Section having font styled by default...
-
-			$section->addText(
-				'La présente lettre d’intention décrit les principales conditions et '
-				.'modalités selon lesquelles l’investissement envisagé dans le projet  '. $invest->projet->name .'  pourrait être réalisé. '
-			);
-
-			$section->addText(
-				'Elle ne constitue en aucun cas un engagement ferme et irrévocable des parties de procéder à cet investissement. '
-			);
-
-			$section->addText(
-				'Cette lettre d’intention a été préparée sur la base et en l’état des informations reçues de la Société à ce jour, et particulièrement du business plan qui ont été préparés par les Fondateurs.'
-			);
-
-			$choix = '';
-			if($invest->lettre->personnel){
-				$choix = 'Mon compte personnel';
-			}else{
-				if($invest->angel->entreprise){
-					$choix= $invest->angel->entreprise->name;
-				}else{
-					if($invest->angel->organisme){
-						$choix = $invest->angel->organisme->name;
-					}
-				}
-			}
-
-			$section->addText(
-				'Le montant total de l’investissement étant estimé à '. $invest->projet->montant .' ' . $invest->projet->devise->name.', je, soussigné, '. $invest->angel?$invest->angel->name:' Inconnu' .', agissant pour'. $invest->lettre->personnel?' Mon propre compte':' le compte de '.$choix.', manifeste le souhait de participer à cette opération sous forme de '. $invest->lettre->type->name .'  à hauteur de '.$invest->lettre->montant .' ' . $invest->lettre->devise->name
-			);
-
-
-
-			// Saving the document as OOXML file...
-			$objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-			try{
-				$objWriter->save(public_path('files/docs').'/Lettre_intention.docx');
-			}catch (Exception $e){
-
-			}
-
-			return response()->download(public_path('files/docs').'/Lettre_intention.docx');
-
-
-
-		}else{
-			return back();
-		}
-
-	}
 
     /**
      * Display the specified resource.

@@ -72,7 +72,18 @@ Route::prefix('admin')
 	    Route::get('partenariat/validate-diag-interne/{token}','InfrastructureController@validateDiagInterne');
 	    Route::get('partenariat/validate-diag-externe/{token}','InfrastructureController@validateDiagExterne');
 	    Route::get('partenariat/validate-plan-strategique/{token}','InfrastructureController@validateDiagStrategique');
-	    Route::get('partenariat/validate-plan-financier/{token}','EInfrastructureController@validateMontageFinancier');
+	    Route::get('partenariat/validate-plan-financier/{token}','InfrastructureController@validateMontageFinancier');
+	    Route::get('partenariat/disable/{token}','InfrastructureController@disable')->name('disable.infrastructure');
+	    Route::get('partenariat/enable/{token}','InfrastructureController@enable')->name('enable.infrastructure');
+
+	    Route::get('partenariat/publish','InfrastructureController@publish')->name('publish.infrastructure');
+	    Route::get('partenariat/receive/{token}','InfrastructureController@receive')->name('receive.infrastructure');
+	    Route::get('partenariat/select-consortia','InfrastructureController@selectConsortia');
+	    Route::get('partenariat/remise-first/{token}','InfrastructureController@remiseFirst');
+	    Route::get('partenariat/select-bidders/{token}','InfrastructureController@selectBidders');
+	    Route::get('partenariat/remise-final-offer/{token}','InfrastructureController@remiseFinal');
+	    Route::get('partenariat/select-concessionnaire','InfrastructureController@selectConcessionnaire');
+	    Route::get('partenariat/signature/{token}','InfrastructureController@signature');
 
 	    // Creances
 	    Route::resource('creances','CreanceController');
