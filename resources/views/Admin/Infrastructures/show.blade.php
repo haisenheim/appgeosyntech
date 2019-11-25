@@ -1847,6 +1847,7 @@
                 <div class="card card-danger">
                     <div class="card-body">
                         <form action="/admin/partenariat/publish" method="post" enctype="multipart/form-data">
+                        @csrf
                             <div class="form-group">
                                 <label for="appelUri">APPEL D'OFFRE</label>
                                 <input type="file" class="form-control" name="appelUri"/>

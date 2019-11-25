@@ -76,7 +76,7 @@ Route::prefix('admin')
 	    Route::get('partenariat/disable/{token}','InfrastructureController@disable')->name('disable.infrastructure');
 	    Route::get('partenariat/enable/{token}','InfrastructureController@enable')->name('enable.infrastructure');
 
-	    Route::get('partenariat/publish','InfrastructureController@publish')->name('publish.infrastructure');
+	    Route::post('partenariat/publish','InfrastructureController@publish')->name('publish.infrastructure');
 	    Route::get('partenariat/receive/{token}','InfrastructureController@receive')->name('receive.infrastructure');
 	    Route::get('partenariat/select-consortia','InfrastructureController@selectConsortia');
 	    Route::get('partenariat/remise-first/{token}','InfrastructureController@remiseFirst');
