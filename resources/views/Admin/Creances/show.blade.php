@@ -82,24 +82,24 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
 
             @if(!$projet->pay)
                    <li>
-                        <a  title="Enregister le paiement" class="ripple" href="admin/creance/pay/{{$projet->token}}"><i class="fa fa-coins fa-lg text-success"></i></a>
+                        <a  title="Enregister le paiement" class="ripple" href="/admin/creance/pay/{{$projet->token}}"><i class="fa fa-coins fa-lg text-success"></i></a>
                    </li>
             @endif
 
             @if($projet->active)
                    <li>
-                        <a  title="Verrouiller" class="ripple" href="admin/creance/disable/{{$projet->token}}"><i class="fa fa-lock fa-lg text-danger"></i></a>
+                        <a  title="Verrouiller" class="ripple" href="/admin/creance/disable/{{$projet->token}}"><i class="fa fa-lock fa-lg text-danger"></i></a>
                    </li>
              @else
                    <li>
-                        <a  title="Deverrouiller" class="ripple" href="admin/creance/enable/{{$projet->token}}"><i class="fa fa-unlock fa-lg text-success"></i></a>
+                        <a  title="Deverrouiller" class="ripple" href="/admin/creance/enable/{{$projet->token}}"><i class="fa fa-unlock fa-lg text-success"></i></a>
                    </li>
             @endif
 
 
             @if(!$projet->clos)
                    <li>
-                        <a  title="Clore la transaction" class="ripple" href="admin/creance/close/{{$projet->token}}"><i class="fa fa-lock fa-lg primary"></i></a>
+                        <a  title="Clore la transaction" class="ripple" href="/admin/creance/close/{{$projet->token}}"><i class="fa fa-gift fa-lg primary"></i></a>
                    </li>
             @endif
 
@@ -197,21 +197,7 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
 
 
 
-<style>
-   .modal .card-title{
-        color: #000000;
-        font-weight: bold;
-   }
 
-   .modal label{
-        font-size: x-small;
-        line-height: 0.5;
-   }
-   .card.maximized-card {
-
-               overflow-y: scroll;
-           }
-</style>
  <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 <script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
 <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
