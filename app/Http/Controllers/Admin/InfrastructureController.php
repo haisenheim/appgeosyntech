@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Infrastructure;
 use App\Models\Investissement;
 use App\Models\Projet;
 use App\User;
