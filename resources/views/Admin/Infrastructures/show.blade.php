@@ -2227,7 +2227,7 @@
                 @else
                    @if(!$projet->consortia_selected)
                         <li>
-                            <a title="Choisir les consortia" class="ripple" href="#"><i class="fa fa-edit text-danger"></i></a>
+                            <a title="Choisir les consortia" class="ripple" href="#"><i class="fa fa-users text-info"></i></a>
                         </li>
                    @else
                         @if(!$projet->first_rendered)

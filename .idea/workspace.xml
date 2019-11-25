@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Infrastructures/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Infrastructures/show.blade.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/Infrastructures/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.64" vertical-offset="390" max-vertical-offset="6144">
-              <caret line="1850" column="79" selection-start-line="1850" selection-start-column="79" selection-end-line="1850" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.8848921" vertical-offset="2623" max-vertical-offset="4288">
+              <caret line="2229" column="106" selection-start-line="2229" selection-start-column="106" selection-end-line="2229" selection-end-column="106" />
               <folding>
                 <element signature="e#427#475#0#HTML" expanded="true" />
                 <element signature="tag#div#0;tag#div#0" expanded="false" />
@@ -138,21 +138,25 @@
                 <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="e#151636#151655#0#HTML" expanded="true" />
                 <element signature="tag#script#1" expanded="false" />
-                <marker date="1574716100830" expanded="false" signature="155776:155815" placeholder="..." />
-                <marker date="1574716100830" expanded="false" signature="159908:159918" placeholder="..." />
-                <marker date="1574716100830" expanded="false" signature="159976:159986" placeholder="..." />
-                <marker date="1574716100830" expanded="false" signature="160045:160055" placeholder="..." />
-                <marker date="1574716100830" expanded="false" signature="160129:160139" placeholder="..." />
+                <element signature="tag#div#3" expanded="false" />
+                <element signature="tag#div#4" expanded="false" />
+                <element signature="tag#div#5" expanded="false" />
+                <element signature="tag#div#6" expanded="false" />
+                <marker date="1574716447240" expanded="false" signature="155776:155815" placeholder="..." />
+                <marker date="1574716447240" expanded="false" signature="159908:159918" placeholder="..." />
+                <marker date="1574716447240" expanded="false" signature="159976:159986" placeholder="..." />
+                <marker date="1574716447240" expanded="false" signature="160045:160055" placeholder="..." />
+                <marker date="1574716447240" expanded="false" signature="160129:160139" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InfrastructureController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InfrastructureController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/InfrastructureController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9232614" vertical-offset="2095" max-vertical-offset="5520">
-              <caret line="155" column="4" selection-start-line="155" selection-start-column="4" selection-end-line="155" selection-end-column="4" />
+            <state vertical-scroll-proportion="-11.56" vertical-offset="2095" max-vertical-offset="5520">
+              <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
               <folding>
                 <element signature="e#46#82#0#PHP" expanded="true" />
               </folding>
@@ -1463,10 +1467,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/InfrastructureController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.56" vertical-offset="2095" max-vertical-offset="5520">
+          <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Infrastructures/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.64" vertical-offset="390" max-vertical-offset="6144">
-          <caret line="1850" column="79" selection-start-line="1850" selection-start-column="79" selection-end-line="1850" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.8848921" vertical-offset="2623" max-vertical-offset="4288">
+          <caret line="2229" column="106" selection-start-line="2229" selection-start-column="106" selection-end-line="2229" selection-end-column="106" />
           <folding>
             <element signature="e#427#475#0#HTML" expanded="true" />
             <element signature="tag#div#0;tag#div#0" expanded="false" />
@@ -1482,21 +1496,15 @@
             <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="e#151636#151655#0#HTML" expanded="true" />
             <element signature="tag#script#1" expanded="false" />
-            <marker date="1574716100830" expanded="false" signature="155776:155815" placeholder="..." />
-            <marker date="1574716100830" expanded="false" signature="159908:159918" placeholder="..." />
-            <marker date="1574716100830" expanded="false" signature="159976:159986" placeholder="..." />
-            <marker date="1574716100830" expanded="false" signature="160045:160055" placeholder="..." />
-            <marker date="1574716100830" expanded="false" signature="160129:160139" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/InfrastructureController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9232614" vertical-offset="2095" max-vertical-offset="5520">
-          <caret line="155" column="4" selection-start-line="155" selection-start-column="4" selection-end-line="155" selection-end-column="4" />
-          <folding>
-            <element signature="e#46#82#0#PHP" expanded="true" />
+            <element signature="tag#div#3" expanded="false" />
+            <element signature="tag#div#4" expanded="false" />
+            <element signature="tag#div#5" expanded="false" />
+            <element signature="tag#div#6" expanded="false" />
+            <marker date="1574716447240" expanded="false" signature="155776:155815" placeholder="..." />
+            <marker date="1574716447240" expanded="false" signature="159908:159918" placeholder="..." />
+            <marker date="1574716447240" expanded="false" signature="159976:159986" placeholder="..." />
+            <marker date="1574716447240" expanded="false" signature="160045:160055" placeholder="..." />
+            <marker date="1574716447240" expanded="false" signature="160129:160139" placeholder="..." />
           </folding>
         </state>
       </provider>
