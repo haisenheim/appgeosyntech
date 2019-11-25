@@ -121,26 +121,34 @@ class InfrastructureController extends Controller
 
 		//dd(public_path('img'));
 		$projet = Infrastructure::where('token',$request->token)->first();
-		$file = $request->appelUril;
-		$ext = $file->getClientOriginalExtension();
-		$arr_ext = array('jpg','png','jpeg','gif','pdf');
-		if(in_array($ext,$arr_ext)){
-			if(!file_exists(public_path('file').'/infrastructures')){
-				mkdir(public_path('file').'/infrastructures');
+		$file = $request->appelUri;
+		if($file){
+			$ext = $file->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif','pdf');
+			if(in_array($ext,$arr_ext)){
+
+				if(!file_exists(public_path('file').'/infrastructures')){
+					mkdir(public_path('file').'/infrastructures');
+				}
+
+				if(!file_exists(public_path('file').'/infrastructures/appels')){
+					mkdir(public_path('file').'/infrastructures/appels');
+				}
+				//dd($projet);
+				if(file_exists(public_path('file').'/infrastructures/appels/'.$projet->token.'.'.$ext)){
+					unlink(public_path('file').'/infrastructures/appels/'.$projet->token.'.'.$ext);
+				}
+				$name = $projet->token.'.'.$ext;
+				$file->move(public_path('file/infrastructures/appels'), $name);
+				//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
+				$projet->appelUri = 'infrastructures/appels/'.$name;
+				$projet->published=1;
+				$projet->published_at = new \DateTime();
+				$projet->save();
+				$request->session()->flash('success','Appel d\'offre enregistré!!!');
 			}
-			//dd($projet);
-			if(file_exists(public_path('file').'/infrastructures/'.$projet->token.'.'.$ext)){
-				unlink(public_path('file').'/infrastructures/'.$projet->token.'.'.$ext);
-			}
-			$name = $projet->token.'.'.$ext;
-			$file->move(public_path('file/infrastructures'), $name);
-			//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
-			$projet->appelUri = 'infrastructures/'.$name;
-			$projet->published=1;
-			$projet->published_at = new \DateTime();
-			$projet->save();
-			$request->session()->flash('success','Appel d\'offre enregistré!!!');
 		}
+
 		return redirect()->back();
 	}
 	
