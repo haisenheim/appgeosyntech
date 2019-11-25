@@ -127,19 +127,19 @@ class InfrastructureController extends Controller
 			$arr_ext = array('jpg','png','jpeg','gif','pdf');
 			if(in_array($ext,$arr_ext)){
 
-				if(!file_exists(public_path('file').'/infrastructures')){
-					mkdir(public_path('file').'/infrastructures');
+				if(!file_exists(public_path('files').'/infrastructures')){
+					mkdir(public_path('files').'/infrastructures');
 				}
 
-				if(!file_exists(public_path('file').'/infrastructures/appels')){
-					mkdir(public_path('file').'/infrastructures/appels');
+				if(!file_exists(public_path('files').'/infrastructures/appels')){
+					mkdir(public_path('files').'/infrastructures/appels');
 				}
 				//dd($projet);
-				if(file_exists(public_path('file').'/infrastructures/appels/'.$projet->token.'.'.$ext)){
-					unlink(public_path('file').'/infrastructures/appels/'.$projet->token.'.'.$ext);
+				if(file_exists(public_path('files').'/infrastructures/appels/'.$projet->token.'.'.$ext)){
+					unlink(public_path('files').'/infrastructures/appels/'.$projet->token.'.'.$ext);
 				}
 				$name = $projet->token.'.'.$ext;
-				$file->move(public_path('file/infrastructures/appels'), $name);
+				$file->move(public_path('files/infrastructures/appels'), $name);
 				//move_uploaded_file($file['tmp_name'], WWW_ROOT.'img'.DS.'membres'.DS.$name.'.'.$ext);
 				$projet->appelUri = 'infrastructures/appels/'.$name;
 				$projet->published=1;
