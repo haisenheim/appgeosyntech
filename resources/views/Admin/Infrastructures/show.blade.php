@@ -2120,7 +2120,7 @@
 
             @if($projet->active)
                    <li>
-                        <a title="Verrouiller le dossier" class="ripple" href="/amin/partenariat/disable/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
+                        <a title="Verrouiller le dossier" class="ripple" href="/admin/partenariat/disable/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
                    </li>
              @if(!$projet->pubished)
                    <li>
@@ -2129,37 +2129,37 @@
              @else
                 @if(!$projet->received)
                     <li>
-                        <a title="Boucler la remise des dossiers de prequalification" class="ripple" href="/amin/partenariat/receive/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
+                        <a title="Boucler la remise des dossiers de prequalification" class="ripple" href="/admin/partenariat/receive/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                    </li>
                 @else
                    @if(!$projet->consortia_selected)
                         <li>
-                            <a title="Choisir les consortia" class="ripple" href="#"><i class="fa fa-lock text-danger"></i></a>
+                            <a title="Choisir les consortia" class="ripple" href="#"><i class="fa fa-edit text-danger"></i></a>
                         </li>
                    @else
                         @if(!$projet->first_rendered)
                             <li>
-                                <a title="Boucler la remise de la première offre" class="ripple" href="/amin/partenariat/remise-first/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
+                                <a title="Boucler la remise de la première offre" class="ripple" href="/admin/partenariat/remise-first/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                             </li>
                         @else
                             @if(!$projet->bidders_selected)
                                 <li>
-                                    <a title="Boucler la sélection des Preffered bidders " class="ripple" href="/amin/partenariat/select-bidders/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
+                                    <a title="Boucler la sélection des Preffered bidders " class="ripple" href="/admin/partenariat/select-bidders/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                                 </li>
                             @else
                                 @if(!$projet->final_rendered)
                                     <li>
-                                        <a title="Boucler la remise de la Best And Final Offer" class="ripple" href="/amin/partenariat/remise-final-offer/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
+                                        <a title="Boucler la remise de la Best And Final Offer" class="ripple" href="/admin/partenariat/remise-final-offer/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                                     </li>
                                  @else
                                     @if(!$projet->concessionnaire_selected)
                                         <li>
-                                            <a title="Choisir concessionnaire pressentir " class="ripple" data-target="#selectConcessionnaireModal" href="#"><i class="fa fa-lock text-danger"></i></a>
+                                            <a title="Choisir concessionnaire pressentir " class="ripple" data-target="#selectConcessionnaireModal" href="#"><i class="fa fa-edit text-danger"></i></a>
                                         </li>
                                      @else
                                         @if(!$projet->signed)
                                            <li>
-                                                <a title="Marquer la signature de contrat" class="ripple" href="/amin/partenariat/signature/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
+                                                <a title="Marquer la signature de contrat" class="ripple" href="/admin/partenariat/signature/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                                             </li>
                                         @endif
                                     @endif
@@ -2171,7 +2171,7 @@
              @endif
             @else
                    <li>
-                         <a title="deverrouiller le dossier" class="ripple" href="/amin/partenariat/enable/{{ $projet->token}}"><i class="fa fa-unlock text-success"></i></a>
+                         <a title="deverrouiller le dossier" class="ripple" href="/admin/partenariat/enable/{{ $projet->token}}"><i class="fa fa-unlock text-success"></i></a>
                    </li>
             @endif
 
