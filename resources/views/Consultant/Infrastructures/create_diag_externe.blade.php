@@ -429,7 +429,7 @@ CREATION DU DIAGNOSTIC EXTERNE
         });
     });
 
-    var saveurl = '/consultant/partenanriat/save-diag-externe';
+    var saveurl = '/consultant/partenariat/save-diag-externe';
     var redirectUrl = '/consultant/partenariats/';
     $('#btn-save').click(function(e){
         e.preventDefault();
