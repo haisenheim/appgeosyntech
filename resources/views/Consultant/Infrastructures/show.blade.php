@@ -75,30 +75,6 @@
                             @endif
 
 
-                            @if($projet->modepaiement_id>0)
-                                <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
-                                    <li class="list-group-item" >PRIX HT : <span style="font-weight: 700">{{ $projet->modepaiement->prix }}</span></li>
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->modepaiement->prixttc }}</span></li>
-                                </ul>
-                            @else
-                                <div>
-                                    <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
-
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><span id="mode_name" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item" >PRIX HT : <span id="mode_prix" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">PRIX TTC : <span id="mode_prixttc" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">
-                                        <p id="mode_description"></p>
-                                        </li>
-                                    </ul>
-                                    <hr/>
-
-                                </div>
-                            @endif
-
                         </div>
                         </div>
 
@@ -2267,11 +2243,11 @@
                     <i class="fa fa-edit fa-lg text-warning"></i>
                 </a>
             </li>
-            @if($projet->modepaiement_id >=1)
+
                    <li>
                         <a  title="Editer le diagnostic externe" class="ripple" href="/consultant/partenariat/create-diag-externe/{{ $projet->token }}"><i class="fa fa-pencil-alt"></i></a>
                    </li>
-            @endif
+
             @if($projet->etape>=2)
                 <li>
                     <a data-toggle="modal" data-target="#synDiagExtModal" title="Editer le diagnostic externe" href="#" class="ripple">
