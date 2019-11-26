@@ -8,6 +8,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
                             <div class="card-body">
+                                <input type="hidden" name="token" id="token" value="{{ $projet->token }}"/>
 
                                 <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
                                 <p>CODE : {{ $projet->code }}</p>
@@ -467,7 +468,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
             url:saveurl,
             type:'Post',
             dataType:'JSON',
-            data:{_csrf:$('input[name="_token"]').val(), etapes:etapes,faisabilite:$('#faisabilite').val(),swot:swot,token:$('#projet_token').val(),
+            data:{_csrf:$('input[name="_token"]').val(), etapes:etapes,faisabilite:$('#faisabilite').val(),swot:swot,token:$('#token').val(),
            organisation:ressources,objectifs_courts:$('#objectifs_courts').val(),objectifs_moyens:$('#objectifs_moyens').val(),objectifs_longs:$('#objectifs_longs').val() },
             beforeSend:function(xhr){
                 xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());

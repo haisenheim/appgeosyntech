@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Infrastructure.php" afterPath="$PROJECT_DIR$/app/Models/Infrastructure.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -87,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_diag_strategique.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create_diag_strategique.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Infrastructures/create_diag_strategique.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.48" vertical-offset="7055" max-vertical-offset="8656">
-              <caret line="499" column="0" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2326139" vertical-offset="6975" max-vertical-offset="8656">
+              <caret line="479" column="51" selection-start-line="479" selection-start-column="51" selection-end-line="479" selection-end-column="51" />
               <folding>
                 <element signature="e#406#439#0#HTML" expanded="true" />
                 <element signature="e#897#921#0#HTML" expanded="true" />
@@ -122,8 +121,8 @@
       <file leaf-file-name="Infrastructure.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Infrastructure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.64" vertical-offset="3314" max-vertical-offset="5408">
-              <caret line="232" column="56" selection-start-line="232" selection-start-column="56" selection-end-line="232" selection-end-column="56" />
+            <state vertical-scroll-proportion="-13.36" vertical-offset="3314" max-vertical-offset="5408">
+              <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,11 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProduitsProjet.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProduitsProjet.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/ProduitsProjet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="430">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.68" vertical-offset="0" max-vertical-offset="288">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -152,8 +151,8 @@
       <file leaf-file-name="InfrastructureController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/InfrastructureController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.92" vertical-offset="290" max-vertical-offset="6048">
-              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+            <state vertical-scroll-proportion="-15.28" vertical-offset="3202" max-vertical-offset="6048">
+              <caret line="243" column="42" selection-start-line="243" selection-start-column="42" selection-end-line="243" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -655,10 +654,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2919605" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2919605" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -833,6 +832,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.4" vertical-offset="5749" max-vertical-offset="11344">
           <caret line="1319" column="0" selection-start-line="1319" selection-start-column="0" selection-end-line="1319" selection-end-column="0" />
+          <folding>
+            <element signature="e#5551#5582#0#HTML" expanded="true" />
+            <element signature="e#14562#14580#0#HTML" expanded="true" />
+            <element signature="e#15071#15089#0#HTML" expanded="true" />
+            <element signature="e#15544#15562#0#HTML" expanded="true" />
+            <element signature="e#16036#16054#0#HTML" expanded="true" />
+            <element signature="e#16516#16534#0#HTML" expanded="true" />
+            <element signature="e#16992#17010#0#HTML" expanded="true" />
+            <element signature="e#17476#17494#0#HTML" expanded="true" />
+            <element signature="e#17957#17975#0#HTML" expanded="true" />
+            <element signature="e#18454#18472#0#HTML" expanded="true" />
+            <element signature="e#18946#18964#0#HTML" expanded="true" />
+            <element signature="e#19450#19468#0#HTML" expanded="true" />
+            <element signature="e#54606#54667#0#HTML" expanded="true" />
+            <element signature="e#65367#65400#0#HTML" expanded="true" />
+            <element signature="e#65513#65546#0#HTML" expanded="true" />
+            <element signature="e#68922#68955#0#HTML" expanded="true" />
+            <element signature="e#73842#73875#0#HTML" expanded="true" />
+            <element signature="e#74407#74446#0#HTML" expanded="true" />
+            <element signature="e#75855#75881#0#HTML" expanded="true" />
+            <element signature="e#76600#76633#0#HTML" expanded="true" />
+            <element signature="e#81550#81583#0#HTML" expanded="true" />
+            <element signature="e#85803#85829#0#HTML" expanded="true" />
+            <element signature="e#86558#86591#0#HTML" expanded="true" />
+            <element signature="e#89554#89587#0#HTML" expanded="true" />
+            <element signature="e#91721#91747#0#HTML" expanded="true" />
+            <element signature="e#92544#92570#0#HTML" expanded="true" />
+            <element signature="e#93532#93558#0#HTML" expanded="true" />
+            <element signature="e#95520#95563#0#HTML" expanded="true" />
+            <element signature="e#108496#108515#0#HTML" expanded="true" />
+            <element signature="e#108681#108699#0#HTML" expanded="true" />
+            <element signature="e#108978#108997#0#HTML" expanded="true" />
+            <element signature="e#109276#109294#0#HTML" expanded="true" />
+            <element signature="e#109501#109565#0#HTML" expanded="true" />
+            <element signature="e#110089#110153#0#HTML" expanded="true" />
+            <element signature="e#110794#110858#0#HTML" expanded="true" />
+            <element signature="e#111618#111637#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -840,6 +877,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.64" vertical-offset="25536" max-vertical-offset="28400">
           <caret line="1597" column="12" selection-start-line="1597" selection-start-column="12" selection-end-line="1597" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -861,6 +899,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.21917808" vertical-offset="7552" max-vertical-offset="10112">
           <caret line="473" column="33" selection-start-line="473" selection-start-column="33" selection-end-line="473" selection-end-column="33" />
+          <folding>
+            <element signature="e#136#161#0#HTML" expanded="true" />
+            <element signature="e#400#433#0#HTML" expanded="true" />
+            <element signature="e#875#899#0#HTML" expanded="true" />
+            <element signature="e#1559#1592#0#HTML" expanded="true" />
+            <element signature="e#1745#1769#0#HTML" expanded="true" />
+            <element signature="e#1897#1921#0#HTML" expanded="true" />
+            <element signature="e#2049#2073#0#HTML" expanded="true" />
+            <element signature="e#2293#2326#0#HTML" expanded="true" />
+            <element signature="e#2503#2527#0#HTML" expanded="true" />
+            <element signature="e#2641#2665#0#HTML" expanded="true" />
+            <element signature="e#2782#2806#0#HTML" expanded="true" />
+            <element signature="e#6352#6389#0#HTML" expanded="true" />
+            <element signature="e#15235#15259#0#HTML" expanded="true" />
+            <element signature="e#19621#19642#0#HTML" expanded="true" />
+            <element signature="e#23410#23434#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -945,6 +1000,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.44" vertical-offset="586" max-vertical-offset="6608">
           <caret line="1578" column="16" selection-start-line="1578" selection-start-column="16" selection-end-line="1601" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,10 +1190,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/InfrastructuresProduit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ProduitsProjet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.68" vertical-offset="0" max-vertical-offset="288">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Infrastructure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.36" vertical-offset="3314" max-vertical-offset="5408">
+          <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/InfrastructureController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.28" vertical-offset="3202" max-vertical-offset="6048">
+          <caret line="243" column="42" selection-start-line="243" selection-start-column="42" selection-end-line="243" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Infrastructures/create_diag_strategique.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.48" vertical-offset="7055" max-vertical-offset="8656">
-          <caret line="499" column="0" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2326139" vertical-offset="6975" max-vertical-offset="8656">
+          <caret line="479" column="51" selection-start-line="479" selection-start-column="51" selection-end-line="479" selection-end-column="51" />
           <folding>
             <element signature="e#406#439#0#HTML" expanded="true" />
             <element signature="e#897#921#0#HTML" expanded="true" />
@@ -1151,38 +1239,6 @@
             <marker date="1574805642726" expanded="false" signature="31777:31787" placeholder="..." />
             <marker date="1574805642726" expanded="false" signature="31861:31871" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/InfrastructureController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.92" vertical-offset="290" max-vertical-offset="6048">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Infrastructure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.64" vertical-offset="3314" max-vertical-offset="5408">
-          <caret line="232" column="56" selection-start-line="232" selection-start-column="56" selection-end-line="232" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/InfrastructuresProduit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ProduitsProjet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
