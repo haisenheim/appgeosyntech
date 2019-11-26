@@ -148,7 +148,7 @@ class InfrastructureController extends Controller
 
 	//Creation du diagnostic strategique
 	public function createDiagStrategique($token){
-		$projet = Projet::where('token',$token)->first();
+		$projet = Infrastructure::where('token',$token)->first();
 		return view('/Consultant/Infrastructures/create_diag_strategique')->with(compact('projet'));
 	}
 
@@ -159,7 +159,7 @@ class InfrastructureController extends Controller
 	public function createPlanFinancier($token){
 
 		$moyens = Moyen::all();
-		$projet = Projet::where('token',$token)->first();
+		$projet = Infrastructure::where('token',$token)->first();
 		return view('/Consultant/Infrastructures/create_plan_financier')->with(compact('projet','moyens'));
 	}
 
