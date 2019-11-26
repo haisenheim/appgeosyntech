@@ -1931,11 +1931,7 @@
                                                  <?php if($invest->lettre): ?>
                                                     <a class="dropdown-item" href="#">Lettre d'intention</a>
                                                   <?php endif; ?>
-                                                  <?php if($invest->validated): ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
-                                                  <?php else: ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
-                                                  <?php endif; ?>
+
 
                                                 </div>
                                               </div>

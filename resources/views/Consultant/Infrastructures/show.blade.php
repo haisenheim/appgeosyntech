@@ -2190,32 +2190,6 @@
                 margin-top: 10px;
                 }
     </style>
-
-<script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
-<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-<link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('textarea').summernote({
-      height: 150,
-      tabsize: 2,
-      followingToolbar: true,
-      lang:'fr-FR'
-    });
-
-  });
-</script>
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
-    <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-    <script>
-      $(function () {
-        $("#table-invest").DataTable();
-
-      });
-    </script>
-
 <div class="modal fade" id="angelsModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -2280,6 +2254,23 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('textarea').summernote({
+      height: 150,
+      tabsize: 2,
+      followingToolbar: true,
+      lang:'fr-FR'
+    });
+
+  });
+</script>
+
 
 
 
