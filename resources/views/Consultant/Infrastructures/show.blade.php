@@ -71,7 +71,7 @@
                             <p>CODE : {{ $projet->code }}</p>
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-                            <p>AUTEUR : {{ $projet->auteur->name }}</p>
+
                             <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
 
                             @if($projet->etape>=4)
