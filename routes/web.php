@@ -233,6 +233,10 @@ Route::prefix('consultant')
 	    Route::post('partenariat/synthese3','InfrastructureController@synthese3');
 	    Route::get('partenariat/create-diag-externe/{token}','InfrastructureController@createDiagExterne');
 	    Route::post('partenariat/save-diag-externe','InfrastructureController@saveDiagExterne');
+	    Route::get('partenariat/create-diag-strategique/{token}','InfrastructureController@createDiagStrategique');
+	    Route::post('partenariat/save-diag-strategique','InfrastructureController@saveDiagStrategique');
+	    Route::get('partenariat/create-plan-financier/{token}','InfrastructureController@createPlanFinancier');
+	    Route::post('partenariat/save-plan-financier','InfrastructureController@savePlanFinancier');
 	    Route::get('partenariat/update-plan','InfrastructureController@updatePlanJson');
 
 	    Route::post('actif/save','ActifController@saveTeaser');
