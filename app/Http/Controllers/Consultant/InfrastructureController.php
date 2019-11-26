@@ -38,7 +38,7 @@ class InfrastructureController extends Controller
     }
 
 	public function getChoicesJson(Request $request){
-		$projet = Infrastructure::find($request->id);
+		$projet = Infrastructure::where('token',$request->id)->first();
 		$choices = $projet->choices;
 
 		$choix = [];
@@ -50,7 +50,7 @@ class InfrastructureController extends Controller
 
 
 	public function getProduitsJson(Request $request){
-		$projet = Infrastructure::find($request->id);
+		$projet = Infrastructure::where('token',$request->id)->first();
 		$choices = $projet->produits;
 
 		$produits = [];
@@ -61,7 +61,7 @@ class InfrastructureController extends Controller
 	}
 
 	public function updatePlanJson(Request $request){
-		$projet = Infrastructure::find($request->id);
+		$projet = Infrastructure::where('token',$request->id)->first();
 		$projet->plan_id = $request->plan_id;
 
 		$projet->save();
@@ -160,7 +160,7 @@ class InfrastructureController extends Controller
 
 	public function savePlanFinancier(Request $request){
 		//dd($request);
-		$projet = Infrastructure::find($request->token);
+		$projet = Infrastructure::where('token',$request->token)->first();
 		$projet->montant_investissement = $request->montage['montant'];
 		$projet->bfr= $request->montage['bfr'];
 		$projet->etape =4;
@@ -202,7 +202,7 @@ class InfrastructureController extends Controller
 
 
 	public function saveTeaser(Request $request){
-		$projet = Infrastructure::find($request->projet_token);
+		$projet = Infrastructure::where('token',$request->projet_token)->first();
 		$data = $request->all();
 
 		$teaser = new Teaser();
@@ -224,7 +224,7 @@ class InfrastructureController extends Controller
 	//Sauvegarde du diagnostic strategique
 	public function saveDiagStrategique(Request $request){
 		$token = $request->token;
-		$projet = Infrastructure::find($token);
+		$projet = Infrastructure::where('token',$token)->first();
 		//dd($request->token);
 
 		$swot = new Swot();
