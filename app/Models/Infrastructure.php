@@ -238,6 +238,10 @@ class Infrastructure extends Model
 		return $this->hasMany('App\Models\Ressource');
 	}
 
+	public function etapes(){
+		return $this->hasMany('App\Models\Etape');
+	}
+
 	public function modepaiement(){
 		return $this->belongsTo('App\Models\Modepaiement');
 	}
