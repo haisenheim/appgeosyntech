@@ -356,6 +356,11 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+        <!-- SweetAlert2 -->
+    <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+        <!-- Toastr -->
+    <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
 <script type="text/javascript">
 
@@ -445,7 +450,19 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
 
              etapes.push(elt);
          });
-        var spinHandle_firstProcess = loadingOverlay.activate();
+         const Toast = Swal.mixin({
+                       toast: true,
+                       position: 'top-end',
+                       showConfirmButton: false,
+                       timer: 5000
+                     });
+        if((etapes.length<1) || (ressources.length<1)){
+            Toast.fire({
+                type: 'error',
+                title: 'Les informations saisies sont incorrectes. Verifiez que les actions strategiques ont été saisies !!!!'
+                })
+        }else{
+            var spinHandle_firstProcess = loadingOverlay.activate();
         $.ajax({
             url:saveurl,
             type:'Post',
@@ -473,9 +490,14 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
             },
             Error:function(){
                  loadingOverlay.cancel(spinHandle_firstProcess);
-                 alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
+                 Toast.fire({
+                    type: 'error',
+                    title: 'Les informations saisies sont incorrectes. Verifiez que les actions strategiques ont été saisies !!!!'
+                  })
             }
         });
+        }
+
 
 
     });
@@ -532,7 +554,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                         if(data!=null){
 
                         $.ajax({
-                            url: "/consultant/dossier/get-produits",
+                            url: "/consultant/partenariat/get-produits",
                             type:'Get',
                             dataType:'json',
                             data:{id:$('#id').val()},
@@ -545,7 +567,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                                     success:function(rep){
 
                                        $.ajax({
-                                       url:"/consultant/dossier/update-plan",
+                                       url:"/consultant/partenariat/update-plan",
                                        type:'get',
                                        dataType:'json',
                                         data:{id:$('#id').val(), plan_id:rep.id},
@@ -560,7 +582,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
 
                                     },
                                     Error:function(){
-                                        $('#risks-loader').hide();
+
                                     }
                             });
                             }
