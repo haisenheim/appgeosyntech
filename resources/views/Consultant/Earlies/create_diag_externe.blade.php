@@ -391,6 +391,7 @@ CREATION DU DIAGNOSTIC EXTERNE
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+    <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
 
 <script>
@@ -511,11 +512,16 @@ CREATION DU DIAGNOSTIC EXTERNE
         analyse_env.perf_prdt_subst_men=$("#pps").find('td').last().text();
         analyse_env.intensite_concu_op=$("#ic").find('td').first().text();
         analyse_env.intensite_concu_men=$("#ic").find('td').last().text();
-        var spinHandle_firstProcess = loadingOverlay.activate();
+
 
         if((concurrents.length<1) || (segments.length<1)){
             alert('Les informations saisies sont incorrectes. Verifiez que les concurrents et les segments clients ont été saisis !!!!');
+            Toast.fire({
+                    type: 'error',
+                    title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+                  })
         }else{
+         var spinHandle_firstProcess = loadingOverlay.activate();
             $.ajax({
                         url:saveurl,
                         type:'Post',

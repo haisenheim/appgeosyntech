@@ -488,11 +488,12 @@ CREATION DU DIAGNOSTIC EXTERNE
         analyse_env.perf_prdt_subst_men=$("#pps").find('td').last().text();
         analyse_env.intensite_concu_op=$("#ic").find('td').first().text();
         analyse_env.intensite_concu_men=$("#ic").find('td').last().text();
-        var spinHandle_firstProcess = loadingOverlay.activate();
+
 
         if((concurrents.length<1) || (segments.length<1)){
             alert('Les informations saisies sont incorrectes. Verifiez que les concurrents et les segments clients ont été saisis !!!!');
         }else{
+            var spinHandle_firstProcess = loadingOverlay.activate();
             $.ajax({
                         url:saveurl,
                         type:'Post',
