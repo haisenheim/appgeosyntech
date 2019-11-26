@@ -272,7 +272,7 @@ class InfrastructureController extends Controller
 			Etape::where('infrastructure_id',$projet->id)->delete();
 			foreach($etapes as $et){
 				$etape = new Etape();
-				$etape->projet_id = $projet->id;
+				$etape->infrastructure_id = $projet->id;
 				$etape->name = $et['name'];
 				$etape->action = $et['action'];
 				$etape->save();
