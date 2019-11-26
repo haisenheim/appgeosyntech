@@ -500,7 +500,7 @@ CREATION DU DIAGNOSTIC EXTERNE
               toast: true,
               position: 'top-end',
               showConfirmButton: false,
-              timer: 3000
+              timer: 5000
             });
         if((concurrents.length<1) || (segments.length<1)){
 

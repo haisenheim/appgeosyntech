@@ -127,9 +127,12 @@ class InfrastructureController extends Controller
 					$dossier->etape=2;
 					$dossier->save();
 				}
+				return response()->json($dossier);
+			}else{
+				return response('Jojo',500);
 			}
 			// $id=$dossier->id;
-			return response()->json($dossier);
+
 
 	}
 
