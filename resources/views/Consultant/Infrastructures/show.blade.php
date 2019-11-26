@@ -2206,76 +2206,6 @@
   });
 </script>
 
-
-@endsection
-
-
-
-@section('nav_actions')
-<main>
-    <nav style="top:30%" class="floating-menu">
-        <ul class="main-menu">
-
-
-            @if($projet->concessions->count() >=1)
-                   <li>
-                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
-                   </li>
-            @endif
-            <li>
-                <a data-toggle="modal" data-target="#synDiagIntModal" title="Editer la synthese du diagnostic interne" href="#" class="ripple">
-                    <i class="fa fa-edit fa-lg text-warning"></i>
-                </a>
-            </li>
-            @if($projet->modepaiement_id >=1)
-                   <li>
-                        <a  title="Editer le diagnostic externe" class="ripple" href="/consultant/partenariat/create-diag-externe/{{ $projet->token }}"><i class="fa fa-pencil-alt"></i></a>
-                   </li>
-            @endif
-            @if($projet->etape>=2)
-                <li>
-                    <a data-toggle="modal" data-target="#synDiagExtModal" title="Editer le diagnostic externe" href="#" class="ripple">
-                        <i class="fa fa-edit fa-lg text-info"></i>
-                    </a>
-                </li>
-                <li>
-                      <a  title="Editer le diagnostic strategique" class="ripple" href="/consultant/partenariat/create-diag-strategique/{{ $projet->token }}"><i class="fa fa-pencil-alt"></i></a>
-                </li>
-            @endif
-            @if($projet->etape>=3)
-                <li>
-                    <a data-toggle="modal" data-target="#synDiagStratModal" title="Editer le diagnostic strategique" href="#" class="ripple">
-                        <i class="fa fa-edit fa-lg text-primary"></i>
-                    </a>
-                </li>
-                <li>
-                      <a  title="Editer le plan financier" class="ripple" href="/consultant/partenariat/create-plan-financier/{{ $projet->token }}"><i class="fa fa-pencil-alt"></i></a>
-                </li>
-            @endif
-            @if($projet->etape>=4)
-                <li>
-                    <a data-toggle="modal" data-target="#teaserModal" title="Editer le teasear" href="#" class="ripple">
-                        <i class="fa fa-edit fa-lg text-success"></i>
-                    </a>
-                </li>
-            @endif
-
-
-
-        </ul>
-        <div
-         style="
-          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
-          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
-          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
-          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
-          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
-          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
-        "
-        class="menu-bg"></div>
-    </nav>
-</main>
-
 <div class="modal fade" id="angelsModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -2367,5 +2297,75 @@
 
   });
 </script>
+@endsection
+
+
+
+@section('nav_actions')
+<main>
+    <nav style="top:30%" class="floating-menu">
+        <ul class="main-menu">
+
+
+            @if($projet->concessions->count() >=1)
+                   <li>
+                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
+                   </li>
+            @endif
+            <li>
+                <a data-toggle="modal" data-target="#synDiagIntModal" title="Editer la synthese du diagnostic interne" href="#" class="ripple">
+                    <i class="fa fa-edit fa-lg text-warning"></i>
+                </a>
+            </li>
+            @if($projet->modepaiement_id >=1)
+                   <li>
+                        <a  title="Editer le diagnostic externe" class="ripple" href="/consultant/partenariat/create-diag-externe/{{ $projet->token }}"><i class="fa fa-pencil-alt"></i></a>
+                   </li>
+            @endif
+            @if($projet->etape>=2)
+                <li>
+                    <a data-toggle="modal" data-target="#synDiagExtModal" title="Editer le diagnostic externe" href="#" class="ripple">
+                        <i class="fa fa-edit fa-lg text-info"></i>
+                    </a>
+                </li>
+                <li>
+                      <a  title="Editer le diagnostic strategique" class="ripple" href="/consultant/partenariat/create-diag-strategique/{{ $projet->token }}"><i class="fa fa-pencil-alt"></i></a>
+                </li>
+            @endif
+            @if($projet->etape>=3)
+                <li>
+                    <a data-toggle="modal" data-target="#synDiagStratModal" title="Editer le diagnostic strategique" href="#" class="ripple">
+                        <i class="fa fa-edit fa-lg text-primary"></i>
+                    </a>
+                </li>
+                <li>
+                      <a  title="Editer le plan financier" class="ripple" href="/consultant/partenariat/create-plan-financier/{{ $projet->token }}"><i class="fa fa-pencil-alt"></i></a>
+                </li>
+            @endif
+            @if($projet->etape>=4)
+                <li>
+                    <a data-toggle="modal" data-target="#teaserModal" title="Editer le teasear" href="#" class="ripple">
+                        <i class="fa fa-edit fa-lg text-success"></i>
+                    </a>
+                </li>
+            @endif
+
+
+
+        </ul>
+        <div
+         style="
+          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
+          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
+          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
+          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
+          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
+        "
+        class="menu-bg"></div>
+    </nav>
+</main>
+
+
 
 @endsection
