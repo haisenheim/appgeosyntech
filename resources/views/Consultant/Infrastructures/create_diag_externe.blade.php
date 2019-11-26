@@ -500,7 +500,6 @@ CREATION DU DIAGNOSTIC EXTERNE
               timer: 3000
             });
         if((concurrents.length<1) || (segments.length<1)){
-            alert('Les informations saisies sont incorrectes. Verifiez que les concurrents et les segments clients ont été saisis !!!!');
 
             Toast.fire({
                     type: 'error',
