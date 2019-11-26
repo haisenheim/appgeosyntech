@@ -15,49 +15,6 @@
                         <div class="card">
                             <div class="card-body">
 
-                                @if($projet->validated_step >3)
-                                <div class="info-box bg-{{$projet->investcolor}}">
-                                  <span class="info-box-icon"><i class="fa fa-coins"></i></span>
-
-                                  <div class="info-box-content">
-                                    <span class="info-box-text">Collecte</span>
-                                    <span class="info-box-number"> {{ $projet->total . ' '. $projet->devise->abb }} </span>
-
-                                    <div class="progress">
-                                      <div class="progress-bar" style="width: {{$projet->pourcentage}}%"></div>
-                                    </div>
-                                    <span class="progress-description">
-                                      {{$projet->pourcentage}}% de fonds collectés
-                                    </span>
-                                  </div>
-                                  <!-- /.info-box-content -->
-                                </div>
-                                <!-- /.info-box -->
-                                @endif
-
-                                <ul class="list-inline">
-                                    @if(!$projet->ordrevirementUri)
-                                        <li class="list-inline-item">
-                                            <span class="badge badge-danger">Ordre de vir. absent</span>
-                                        </li>
-                                    @else
-                                        @if(!$projet->ordrevirement_validated)
-                                            <li class="list-inline-item">
-                                                <span class="badge badge-danger">Ordre de vir. non validé</span>
-                                            </li>
-                                        @endif
-                                    @endif
-                                    @if(!$projet->pacte_associesUri)
-                                        <li class="list-inline-item">
-                                            <span class="badge badge-danger">Pacte des associés absent</span>
-                                        </li>
-                                    @endif
-                                    @if(!$projet->contrat_pretUri)
-                                        <li class="list-inline-item">
-                                            <span class="badge badge-danger">Contrat de prêt absent</span>
-                                        </li>
-                                    @endif
-                                </ul>
 
                             <div class="progress progress-sm">
                               <div class="progress-bar progress-bar-striped bg-{{$projet->progresscolor}}" role="progressbar" aria-volumenow="{{$projet->progress }}" aria-volumemin="0" aria-volumemax="100" style="width: {{$projet->progress .'%'}} ">
