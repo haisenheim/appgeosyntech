@@ -230,7 +230,7 @@ class Infrastructure extends Model
 	}
 
 	public function produits(){
-		return $this->hasMany('App\Models\ProduitsProjet');
+		return $this->hasMany('App\Models\InfrastructureProduit');
 	}
 
 
