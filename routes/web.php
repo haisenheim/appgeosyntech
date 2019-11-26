@@ -195,7 +195,7 @@ Route::prefix('consultant')
         Route::get('dashboard','DashboardController');
 	    Route::get('dossier/getchoices','DossierController@getChoicesJson');
 	    Route::get('projet/getchoices','EarlyController@getChoicesJson');
-	    Route::get('partenariat/getchoices','InfrastructureController@getChoicesJson');
+
 	    Route::get('dossier/get-produits','DossierController@getProduitsJson');
 	    Route::get('dossier/getmodes','DossierController@getModesJson');
 	    Route::get('dossier/add-mode','DossierController@addMode');
@@ -223,6 +223,7 @@ Route::prefix('consultant')
 	    Route::post('projet/teaser','EarlyController@saveTeaser');
 	    Route::get('projet/get-produits','EarlyController@getProduitsJson');
 
+
 	    // Creances
 	    Route::resource('creances','CreanceController');
 	    Route::post('creance/teaser','CreanceController@saveTeaser');
@@ -238,6 +239,9 @@ Route::prefix('consultant')
 	    Route::get('partenariat/create-plan-financier/{token}','InfrastructureController@createPlanFinancier');
 	    Route::post('partenariat/save-plan-financier','InfrastructureController@savePlanFinancier');
 	    Route::get('partenariat/update-plan','InfrastructureController@updatePlanJson');
+	    Route::get('partenariat/getchoices','InfrastructureController@getChoicesJson');
+	    Route::get('partenariat/get-produits','InfrastructureController@getProduitsJson');
+	    Route::post('partenariat/teaser','InfrastructureController@saveTeaser');
 
 	    Route::post('actif/save','ActifController@saveTeaser');
 

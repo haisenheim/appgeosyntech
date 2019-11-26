@@ -407,8 +407,8 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
 
 
 
-    var saveurl = '/consultant/dossier/save-diag-strategique';
-    var redirectUrl = '/consultant/dossiers/';
+    var saveurl = '/consultant/partenariat/save-diag-strategique';
+    var redirectUrl = '/consultant/partenariats/';
 
     $('#btn-save').click(function(e){
         e.preventDefault();
@@ -523,7 +523,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                 $('#create_plan').hide();
                 $('#example').show();
                 $.ajax({
-                    url: "/consultant/dossier/getchoices",
+                    url: "/consultant/partenariat/getchoices",
                     type:'Get',
                     dataType:'json',
                     data:{id:$('#id').val()},
