@@ -1804,10 +1804,6 @@
         		</div>
         	</form>
         </div>
-
-
-
-
         <!-- Edition du teaser-->
         <div class="modal fade" id="teaserModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
         	<form method="post" action="/consultant/projet/teaser">
