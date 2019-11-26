@@ -7,23 +7,21 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                 <div class="row">
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
+                            <div class="card-body">
+
+                                <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
+                                <p>CODE : {{ $projet->code }}</p>
+                                <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
+                                <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
+                                <p>SOCIETE : {{ $projet->societe }}</p>
+                                <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
+                                <p>TYPE DE FINANCEMENT : {{ $projet->type?$projet->type->name:'-' }}</p>
+                                <p>MONTANT : {{ $projet->montant }}</p>
+                                <input type="hidden" id="id" value="<?= $projet->token ?>"/>
+                                <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
 
 
-                        <div class="card-body">
-
-                            <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
-                            <p>CODE : {{ $projet->code }}</p>
-                            <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
-                            <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-                            <p>AUTEUR : {{ $projet->societe }}</p>
-                            <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
-                            <p>TYPE DE FINANCEMENT : {{ $projet->type?$projet->type->name:'-' }}</p>
-                            <p>MONTANT : {{ $projet->montant }}</p>
-                            <input type="hidden" id="id" value="<?= $projet->token ?>"/>
-                            <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-                            <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
-
-                        </div>
+                            </div>
                         </div>
 
                     </div>
