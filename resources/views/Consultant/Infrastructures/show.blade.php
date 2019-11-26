@@ -2190,6 +2190,15 @@
                 margin-top: 10px;
                 }
     </style>
+    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
+    <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+    <script>
+      $(function () {
+        $("#table-invest").DataTable();
+
+      });
+    </script>
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
@@ -2288,15 +2297,7 @@
                overflow-y: scroll;
            }
 </style>
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-<script>
-  $(function () {
-    $("#table-invest").DataTable();
 
-  });
-</script>
 @endsection
 
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Infrastructures/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Infrastructures/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,8 +102,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Infrastructures/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9232614" vertical-offset="31919" max-vertical-offset="32672">
-              <caret line="2298" column="9" selection-start-line="2298" selection-start-column="9" selection-end-line="2298" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.7673861" vertical-offset="30576" max-vertical-offset="32688">
+              <caret line="2200" column="13" selection-start-line="2200" selection-start-column="13" selection-end-line="2200" selection-end-column="13" />
               <folding>
                 <element signature="tag#script#1" expanded="false" />
                 <element signature="tag#div#1" expanded="false" />
@@ -111,14 +111,14 @@
                 <element signature="tag#div#3" expanded="false" />
                 <element signature="tag#div#4" expanded="false" />
                 <element signature="tag#style#0" expanded="false" />
-                <element signature="tag#script#5" expanded="false" />
-                <element signature="e#169460#169479#0#HTML" expanded="true" />
+                <element signature="tag#script#9" expanded="false" />
+                <element signature="e#169804#169823#0#HTML" expanded="true" />
                 <element signature="tag#ul#0;tag#nav#0;tag#main#0" expanded="false" />
-                <marker date="1574798561101" expanded="false" signature="155270:155309" placeholder="..." />
-                <marker date="1574798561101" expanded="false" signature="159402:159412" placeholder="..." />
-                <marker date="1574798561101" expanded="false" signature="159470:159480" placeholder="..." />
-                <marker date="1574798561101" expanded="false" signature="159539:159549" placeholder="..." />
-                <marker date="1574798561101" expanded="false" signature="159623:159633" placeholder="..." />
+                <marker date="1574798627620" expanded="false" signature="155270:155309" placeholder="..." />
+                <marker date="1574798627620" expanded="false" signature="159402:159412" placeholder="..." />
+                <marker date="1574798627620" expanded="false" signature="159470:159480" placeholder="..." />
+                <marker date="1574798627620" expanded="false" signature="159539:159549" placeholder="..." />
+                <marker date="1574798627620" expanded="false" signature="159623:159633" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1165,8 +1165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Infrastructures/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9232614" vertical-offset="31919" max-vertical-offset="32672">
-          <caret line="2298" column="9" selection-start-line="2298" selection-start-column="9" selection-end-line="2298" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.7673861" vertical-offset="30576" max-vertical-offset="32688">
+          <caret line="2200" column="13" selection-start-line="2200" selection-start-column="13" selection-end-line="2200" selection-end-column="13" />
           <folding>
             <element signature="tag#script#1" expanded="false" />
             <element signature="tag#div#1" expanded="false" />
@@ -1174,14 +1174,14 @@
             <element signature="tag#div#3" expanded="false" />
             <element signature="tag#div#4" expanded="false" />
             <element signature="tag#style#0" expanded="false" />
-            <element signature="tag#script#5" expanded="false" />
-            <element signature="e#169460#169479#0#HTML" expanded="true" />
+            <element signature="tag#script#9" expanded="false" />
+            <element signature="e#169804#169823#0#HTML" expanded="true" />
             <element signature="tag#ul#0;tag#nav#0;tag#main#0" expanded="false" />
-            <marker date="1574798561101" expanded="false" signature="155270:155309" placeholder="..." />
-            <marker date="1574798561101" expanded="false" signature="159402:159412" placeholder="..." />
-            <marker date="1574798561101" expanded="false" signature="159470:159480" placeholder="..." />
-            <marker date="1574798561101" expanded="false" signature="159539:159549" placeholder="..." />
-            <marker date="1574798561101" expanded="false" signature="159623:159633" placeholder="..." />
+            <marker date="1574798627620" expanded="false" signature="155270:155309" placeholder="..." />
+            <marker date="1574798627620" expanded="false" signature="159402:159412" placeholder="..." />
+            <marker date="1574798627620" expanded="false" signature="159470:159480" placeholder="..." />
+            <marker date="1574798627620" expanded="false" signature="159539:159549" placeholder="..." />
+            <marker date="1574798627620" expanded="false" signature="159623:159633" placeholder="..." />
           </folding>
         </state>
       </provider>
