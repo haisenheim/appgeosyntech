@@ -1980,17 +1980,17 @@
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('textarea').summernote({
-      height: 150,
-      tabsize: 2,
-      followingToolbar: true,
-      lang:'fr-FR'
-    });
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('textarea').summernote({
+          height: 150,
+          tabsize: 2,
+          followingToolbar: true,
+          lang:'fr-FR'
+        });
 
-  });
-</script>
+      });
+    </script>
 
 <script>
         $(document).ready(function(){

@@ -2351,5 +2351,16 @@
 
   });
 </script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('textarea').summernote({
+      height: 150,
+      tabsize: 2,
+      followingToolbar: true,
+      lang:'fr-FR'
+    });
+
+  });
+</script>
 
 @endsection
