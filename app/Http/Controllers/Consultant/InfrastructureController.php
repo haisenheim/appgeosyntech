@@ -9,6 +9,7 @@ use App\Models\Environnment;
 use App\Models\Etape;
 use App\Models\Infrastructure;
 use App\Models\Modepaiement;
+use App\Models\Moi;
 use App\Models\Moyen;
 use App\Models\InfrastructuresMoyen;
 use App\Models\Prevbilan;
@@ -336,9 +337,10 @@ class InfrastructureController extends Controller
 	public function show($token)
 	{
 		$projet = Infrastructure::where('token',$token)->first();
-		$modes = Modepaiement::all()->where('active',1);
+		//$modes = Modepaiement::all()->where('active',1);
+		$mois = Moi::all();
 
-		return view('/Consultant/Infrastructures/show')->with(compact('projet','modes'));
+		return view('/Consultant/Infrastructures/show')->with(compact('projet','mois'));
 	}
 
     /**
