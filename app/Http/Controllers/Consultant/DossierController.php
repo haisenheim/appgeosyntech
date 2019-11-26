@@ -274,6 +274,7 @@ class DossierController extends Controller
 
 		$etapes = $request->etapes;
 		if($etapes){
+			Etape::where('projet_id',$projet->id)->delete();
 			foreach($etapes as $et){
 				$etape = new Etape();
 				$etape->projet_id = $projet->id;

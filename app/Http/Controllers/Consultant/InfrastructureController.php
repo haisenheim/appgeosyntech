@@ -238,7 +238,7 @@ class InfrastructureController extends Controller
 		$token = $request->token;
 		$projet = Infrastructure::where('token',$token)->first();
 		//dd($request->token);
-
+		Swot::where('infrastructure_id',$projet->id)->delete();
 		$swot = new Swot();
 		$swot->infrastructure_id= $projet->id;
 		$swot->user_id = Auth::user()->id;
@@ -256,6 +256,7 @@ class InfrastructureController extends Controller
 
 		$ressouces = $request->organisation;
 		//dd($ressouces);
+		Ressource::where('infrastructure_id',$projet->id)->delete();
 		foreach($ressouces as $ress){
 			$ressouce = new Ressource();
 			$ressouce->name = $ress['nom'];
@@ -265,6 +266,19 @@ class InfrastructureController extends Controller
 			$ressouce->infrastructure_id = $projet->id;
 			$ressouce->save();
 		}
+
+		$etapes = $request->etapes;
+		if($etapes){
+			Etape::where('infrastructure_id',$projet->id)->delete();
+			foreach($etapes as $et){
+				$etape = new Etape();
+				$etape->projet_id = $projet->id;
+				$etape->name = $et['name'];
+				$etape->action = $et['action'];
+				$etape->save();
+			}
+		}
+
 		return response()->json($projet);
 	}
 

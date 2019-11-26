@@ -267,7 +267,17 @@ class EarlyController extends Controller
 			$ressouce->save();
 		}
 
-
+		$etapes = $request->etapes;
+		if($etapes){
+			Etape::where('earlie_id',$projet->id)->delete();
+			foreach($etapes as $et){
+				$etape = new Etape();
+				$etape->earlie_id = $projet->id;
+				$etape->name = $et['name'];
+				$etape->action = $et['action'];
+				$etape->save();
+			}
+		}
 
 		return response()->json($projet);
 	}
