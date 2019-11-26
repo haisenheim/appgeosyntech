@@ -85,6 +85,9 @@ class InfrastructureController extends Controller
 			//dd($request->env);
 
 			if($dossier){
+				if($dossier->concurrents){
+					Concurrent::where('infrastructure_id',$dossier->id)->delete();
+				}
 				for($i=0; $i<count($concurrents); $i++){
 					$concurrent = new Concurrent();
 					$concurrent->infractructure_id=$dossier->id;
@@ -104,6 +107,9 @@ class InfrastructureController extends Controller
 					$concurrent = $concurrent->save();
 				}
 				//dd($concurrent);
+				if($dossier->segments){
+					Segment::where('infrastructure_id',$dossier->id)->delete();
+				}
 
 				for($i=0; $i<count($segments); $i++){
 					$concurrent = new Segment();
@@ -119,6 +125,9 @@ class InfrastructureController extends Controller
 
 
 				$env = $request->env;
+				if($dossier->environnement){
+					Environnement::where('infrastructure_id',$dossier->id)->delete();
+				}
 				$environnement = new Environnement();
 				$env['infrastructure_id'] = $dossier->id;
 				$env['user_id'] = Auth::user()->id;
