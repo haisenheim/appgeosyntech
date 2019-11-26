@@ -90,7 +90,7 @@ class InfrastructureController extends Controller
 				}
 				for($i=0; $i<count($concurrents); $i++){
 					$concurrent = new Concurrent();
-					$concurrent->infractructure_id=$dossier->id;
+					$concurrent->infrastructure_id=$dossier->id;
 					$concurrent->name=$concurrents[$i]['qui'];
 					$concurrent->quoi=$concurrents[$i]['quoi'];
 					$concurrent->quand=$concurrents[$i]['quand'];
@@ -113,7 +113,7 @@ class InfrastructureController extends Controller
 
 				for($i=0; $i<count($segments); $i++){
 					$concurrent = new Segment();
-					$concurrent->infractructure_id=$dossier->id;
+					$concurrent->infrastructure_id=$dossier->id;
 					$concurrent->name=$segments[$i]['qui'];
 					$concurrent->quoi=$segments[$i]['quoi'];
 					$concurrent->quand=$segments[$i]['quand'];
