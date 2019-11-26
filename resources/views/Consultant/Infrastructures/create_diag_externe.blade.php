@@ -489,9 +489,19 @@ CREATION DU DIAGNOSTIC EXTERNE
         analyse_env.intensite_concu_op=$("#ic").find('td').first().text();
         analyse_env.intensite_concu_men=$("#ic").find('td').last().text();
 
-
+const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000
+            });
         if((concurrents.length<1) || (segments.length<1)){
             alert('Les informations saisies sont incorrectes. Verifiez que les concurrents et les segments clients ont été saisis !!!!');
+
+            Toast.fire({
+                    type: 'error',
+                    title: 'Les informations saisies sont incorrectes. Verifiez que les concurrents et les segments clients ont été saisis !!!!'
+                  })
         }else{
             var spinHandle_firstProcess = loadingOverlay.activate();
             $.ajax({
