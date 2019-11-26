@@ -368,6 +368,10 @@ CREATION DU DIAGNOSTIC EXTERNE
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+    <!-- SweetAlert2 -->
+    <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+    <!-- Toastr -->
+    <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
 
 <script>
@@ -489,7 +493,7 @@ CREATION DU DIAGNOSTIC EXTERNE
         analyse_env.intensite_concu_op=$("#ic").find('td').first().text();
         analyse_env.intensite_concu_men=$("#ic").find('td').last().text();
 
-const Toast = Swal.mixin({
+    const Toast = Swal.mixin({
               toast: true,
               position: 'top-end',
               showConfirmButton: false,
