@@ -134,11 +134,22 @@ Route::prefix('angel')
 	    Route::resource('mailbox','MessageController');
 	    Route::post('/letter/','DossierController@saveLetter');
 	    Route::post('/comment/save','DossierController@addComment');
-	    Route::resource('dossiers','DossierController');
+
+	     Route::resource('dossiers','DossierController');
 	    Route::resource('actifs','ActifController');
-        Route::resource('opportunites','OpportuniteController');
-        Route::resource('investissements','InvestissementController');
-	    Route::resource('cessions','CessionController');
+	    Route::resource('creances','CreanceController');
+	    Route::resource('partenariats','InfrastructureController');
+	    Route::resource('projets','EarlyController');
+	    Route::resource('ressources','RessourceController');
+
+        //Route::resource('opportunites','OpportuniteController');
+        Route::resource('investissements/projets','EinvestissementController');
+	    Route::resource('investissements/dossiers','DinvestissementController');
+	    Route::resource('cessions/actifs','AcessionController');
+	    Route::resource('cessions/creances','CcessionController');
+	    Route::resource('concessions/partenariats','PconcessionController');
+	    Route::resource('concessions/ressources','RconcessionController');
+
         Route::resource('alertes','AlerteController');
         Route::get('profil','ProfilController');
 	    Route::get('/','FrontController');

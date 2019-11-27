@@ -30,10 +30,10 @@
               <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
               <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
                 <li>
-                  <a tabindex="-1" href="/angel/cessions" class="dropdown-item">CESSIONS D'ACTIFS</a>
+                  <a tabindex="-1" href="/angel/cessions/actifs" class="dropdown-item">CESSIONS D'ACTIFS</a>
                 </li>
                 <li>
-                  <a tabindex="-1" href="#" class="dropdown-item">CESSIONS DE CREANCES</a>
+                  <a tabindex="-1" href="/angel/cessions/creances" class="dropdown-item">CESSIONS DE CREANCES</a>
                 </li>
 
               </ul>
@@ -56,7 +56,20 @@
                   <a tabindex="-1" href="/angel/actifs" class="dropdown-item">CESSIONS D'ACTIFS</a>
                 </li>
                 <li>
-                  <a tabindex="-1" href="#" class="dropdown-item">CESSIONS DE CREANCES</a>
+                  <a tabindex="-1" href="/angel/creances" class="dropdown-item">CESSIONS DE CREANCES</a>
+                </li>
+
+              </ul>
+            </li>
+
+            <li class="dropdown-submenu dropdown-hover">
+              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">FINANCEMENTS STRUCTURES</a>
+              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                <li>
+                  <a tabindex="-1" href="/angel/partenariats" class="dropdown-item">Partenariats Pulic-Privé</a>
+                </li>
+                <li>
+                  <a tabindex="-1" href="#" class="dropdown-item">Ressources Naturelles</a>
                 </li>
 
               </ul>
