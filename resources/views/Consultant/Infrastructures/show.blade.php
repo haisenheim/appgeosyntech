@@ -782,15 +782,12 @@
                     </div>
                     @endif
                     @if($projet->etape>=4)
-                    <div class="col-md-12 col-sm-12">
-                        <div class="card card-default collapsed-card">
-                        <div class="card-header">
+                         <div class="col-md-12 card card-default">
+                            <div class="card-header">
                             <h3 class="card-title">PLAN FINANCIER</h3>
 
                               <div class="card-tools">
 
-                                  <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                  </button>
                                   <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
                                   </button>
                               </div>
@@ -821,15 +818,18 @@
                                     <div  class="tab-content">
                                         <div class="tab-pane active" role="tabpanel" id="prevresultats" aria-labelledby="tab1">
                                       <div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12">
+                                        <div class="">
+                                            <div class="">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h4>COMPTE DE RESULTAT</h4>
                                                      </div>
                                                      <div class="card-body">
-                                                        <?php $nbsim = $projet->prevresultats->count() ?>
-                                                        <table class="table table-bordered table-hover table-condensed">
+                                                        <?php $nbsim = count($projet->prevresultats) ?>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="table-responsive">
+                                                            <table class="table table-bordered table-hover table-condensed">
                                                         <thead>
                                                             <tr>
                                                                     <th></th>
@@ -1019,7 +1019,7 @@
                                                                 <th>RESULTAT EXCEPTIONNEL</th>
                                                                 <?php $i=0; ?>
                                                                 @foreach($projet->prevresultats as $prevr)
-                                                                    <th><?= $prevr->re ?></th>
+                                                                    <th><?= $prevr->rex ?></th>
                                                                     @if(!$loop->last)
                                                                     <th>{{ $projet->variations['rex'][$i++] }}%</th>
                                                                     @endif
@@ -1056,6 +1056,9 @@
                                                             </tr>
                                                         </tbody>
                                                         </table>
+                                                        </div>
+                                                            </div>
+                                                         </div>
                                                      </div>
                                                 </div>
 
@@ -1072,9 +1075,9 @@
                                             <br/>
                                             <hr/>
                                             <h3>BILAN</h3>
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-12">
-                                                         <table class="table table-bordered table-hover table-condensed">
+                                            <div class="">
+                                                <div class="table-responsive">
+                                                       <table class="table table-bordered table-hover table-condensed">
                                                                     <thead>
                                                                         <tr>
                                                                             <th colspan="3"></th>
@@ -1556,7 +1559,8 @@
                                         <div class="card-header">
                                             <h4>FLUX DE TRESORERIE PREVISIONNELS</h4>
                                          </div>
-                                        <div class="card-body">
+                                        <div class="card-body table-responsive">
+                                        @if($projet->prevtresoreries)
                                             <table class="table table-bordered table-hover table-condensed">
                                                                     <thead>
                                                                         <tr>
@@ -1572,11 +1576,11 @@
                                                                     </thead>
                                                                     <tbody>
                                                                         <tr>
-                                                                        <th style="writing-mode: vertical-rl;" rowspan="8">Trésorerie provenant des act. opér.</th>
+                                                                        <th colspan="1" style="writing-mode: vertical-rl;" rowspan="8">Trésorerie provenant des act. opér.</th>
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="">CAPACITE D'AUTOFINANCEMENT</td>
+                                                                            <td colspan="2">CAPACITE D'AUTOFINANCEMENT</td>
                                                                             <?php $i=0; ?>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->capacite_autofinancement  ?></td>
@@ -1587,7 +1591,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="">ACTIF CIRCULANT HAO</td>
+                                                                            <td colspan="2">ACTIF CIRCULANT HAO</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->actif_circulant_hao ?></td>
                                                                                 @if(!$loop->last)
@@ -1597,7 +1601,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="">VARIATION DES STOCKS</td>
+                                                                            <td colspan="2">VARIATION DES STOCKS</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_stocks ?></td>
                                                                                 @if(!$loop->last)
@@ -1607,7 +1611,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td colspan="">VARIATION DES CREANCES ET EMPLOIS ASSIMILES</td>
+                                                                            <td colspan="2">VARIATION DES CREANCES ET EMPLOIS ASSIMILES</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_creances ?></td>
                                                                                 @if(!$loop->last)
@@ -1616,7 +1620,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <td colspan="">VARIATION DU PASSIF CIRCULANT</td>
+                                                                            <td colspan="2">VARIATION DU PASSIF CIRCULANT</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->variation_passif_circulant ?></td>
                                                                                 @if(!$loop->last)
@@ -1625,7 +1629,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <td colspan="">VARIATION DU BF LIE AUX ACT. OP.</td>
+                                                                            <td colspan="2">VARIATION DU BF LIE AUX ACT. OP.</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td>-</td>
                                                                                 @if(!$loop->last)
@@ -1634,7 +1638,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <th colspan="">TOTAL</th>
+                                                                            <th colspan="2">TOTAL</th>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <th></th>
                                                                                 @if(!$loop->last)
@@ -1645,11 +1649,11 @@
 
 
 
-                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="7">Trésorerie issue des activités d'invest.</th></tr>
+                                                                        <tr><th colspan="1" style="writing-mode: vertical-rl" rowspan="7">Trésorerie issue des activités d'invest.</th></tr>
 
                                                                         <tr>
 
-                                                                            <td>Décaissements liés aux acquisitions d'immobilisations incorporelles</td>
+                                                                            <td colspan="2">Décaissements liés aux acquisitions d'immobilisations incorporelles</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->decaissements_acquisitions_incorporelles ?></td>
                                                                                 @if(!$loop->last)
@@ -1659,7 +1663,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td>Décaissements liés aux acquisitions d'immobilisations corporelles</td>
+                                                                            <td colspan="2">Décaissements liés aux acquisitions d'immobilisations corporelles</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->decaissements_acquisitions_corporelles ?></td>
                                                                                 @if(!$loop->last)
@@ -1669,7 +1673,7 @@
                                                                         </tr>
                                                                         <tr>
 
-                                                                            <td>Décaissements liés aux acquisitions d'immobilisations financières</td>
+                                                                            <td colspan="2">Décaissements liés aux acquisitions d'immobilisations financières</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->decaissements_acquisitions_financieres ?></td>
                                                                                 @if(!$loop->last)
@@ -1678,7 +1682,7 @@
                                                                             @endforeach
                                                                         </tr>
                                                                         <tr>
-                                                                            <td>Cessions d'immobilisations incorporelles et corporelles</td>
+                                                                            <td colspan="2">Cessions d'immobilisations incorporelles et corporelles</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->cessions_immo_incoporelles_corporelles  ?></td>
                                                                                 @if(!$loop->last)
@@ -1688,7 +1692,7 @@
                                                                         </tr>
 
                                                                          <tr>
-                                                                            <td>Cessions d'immobilisations financières</td>
+                                                                            <td colspan="2">Cessions d'immobilisations financières</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->cessions_immo_financieres ?></td>
                                                                                 @if(!$loop->last)
@@ -1698,7 +1702,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td>TOTAL</td>
+                                                                            <td colspan="2">TOTAL</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td>-</td>
                                                                                 @if(!$loop->last)
@@ -1707,10 +1711,10 @@
                                                                             @endforeach
                                                                         </tr>
 
-                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="6">Trésorerie provenant  des cap. propres </th></tr>
+                                                                        <tr><th colspan="1" style="writing-mode: vertical-rl" rowspan="6">Trésorerie provenant  des cap. propres </th></tr>
 
                                                                         <tr>
-                                                                            <td>Augmentation de capital par apports de capitaux nouveaux</td>
+                                                                            <td colspan="2">Augmentation de capital par apports de capitaux nouveaux</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->augmentation_capital_apports_nouveaux  ?></td>
                                                                                 @if(!$loop->last)
@@ -1720,7 +1724,7 @@
                                                                         </tr>
 
                                                                          <tr>
-                                                                            <td>Subventions d'investissements reçues</td>
+                                                                            <td colspan="2">Subventions d'investissements reçues</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->subventions_investissement_recues ?></td>
                                                                                 @if(!$loop->last)
@@ -1730,7 +1734,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td>Prélèvements sur le capital</td>
+                                                                            <td colspan="2">Prélèvements sur le capital</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->prelevements_capital ?></td>
                                                                                 @if(!$loop->last)
@@ -1740,7 +1744,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td>Distribution de dividendes</td>
+                                                                            <td colspan="2">Distribution de dividendes</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->distribution_dividendes ?></td>
                                                                                 @if(!$loop->last)
@@ -1750,9 +1754,9 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td>TOTAL</td>
+                                                                            <td colspan="2">TOTAL</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
-                                                                                <td><-</td>
+                                                                                <td></td>
                                                                                 @if(!$loop->last)
                                                                                 <td>-</td>
                                                                                 @endif
@@ -1761,10 +1765,10 @@
 
 
 
-                                                                        <tr><th style="writing-mode: vertical-rl" rowspan="5">Trésorerie issue des cap. étrangers </th></tr>
+                                                                        <tr><th colspan="1" style="padding:5px; writing-mode: vertical-rl" rowspan="5">Trésorerie issue des cap. étrangers </th></tr>
 
                                                                         <tr>
-                                                                            <td>Emprunts</td>
+                                                                            <td colspan="2">Emprunts</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->emprunts  ?></td>
                                                                                 @if(!$loop->last)
@@ -1774,7 +1778,7 @@
                                                                         </tr>
 
                                                                          <tr>
-                                                                            <td>Autres dettes financières</td>
+                                                                            <td colspan="2">Autres dettes financières</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->autres_dettes_financieres ?></td>
                                                                                 @if(!$loop->last)
@@ -1784,7 +1788,7 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td>Remboursements des emprunts et autres dettes financières</td>
+                                                                            <td colspan="2">Remboursements des emprunts et autres dettes financières</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
                                                                                 <td><?= $prevr->remboursement_emprunts ?></td>
                                                                                 @if(!$loop->last)
@@ -1794,9 +1798,9 @@
                                                                         </tr>
 
                                                                         <tr>
-                                                                            <td>TOTAL</td>
+                                                                            <td colspan="2">TOTAL</td>
                                                                             @foreach($projet->prevtresoreries as $prevr)
-                                                                                <td><-</td>
+                                                                                <td>-</td>
                                                                                 @if(!$loop->last)
                                                                                 <td>-</td>
                                                                                 @endif
@@ -1806,6 +1810,7 @@
 
                                                                     </tbody>
                                                             </table>
+                                            @endif
                                         </div>
                                     </div>
 
@@ -1815,7 +1820,60 @@
                                  </div>
 
                                  <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
-                                    <h6 class="page-header">MONTAGE FINANCIER</h6>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">MONTAGE FINANCIER</h4>
+
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-12">
+
+                                                    <div class="info-box">
+                                                      <span class="info-box-icon bg-info"><i class="fa fa-coins"></i></span>
+                                                      <div class="info-box-content">
+                                                        <span class="info-box-text">MONTANT DES INVESTISSEMENTS</span>
+                                                        <span class="info-box-number">{{ $projet->montant_investissement }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+
+                                                    <div class="info-box">
+                                                      <span class="info-box-icon bg-warning"><i class="fa fa-coins"></i></span>
+                                                      <div class="info-box-content">
+                                                        <span class="info-box-text">BESOIN EN FONDS DE ROULEMENT</span>
+                                                        <span class="info-box-number">{{ $projet->bfr }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+                                                    <div class="info-box">
+                                                      <span class="info-box-icon bg-success"><i class="fa fa-coins"></i></span>
+                                                      <div class="info-box-content">
+                                                        <span class="info-box-text">COUT GLOBAL DU PROJET</span>
+                                                        <span class="info-box-number">{{ $projet->coutglobal }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            @if($projet->financements->count() >=1)
+                                                <table class="table">
+                                                    <tbody>
+                                                        @foreach($projet->financements as $fin)
+                                                            <tr>
+                                                                <td>{{ $fin->moyen->name }}</td>
+                                                                <th>{{ $fin->montant }} <sup>{{ $projet->devise->abb }}</sup> </th>
+                                                            </tr>
+                                                        @endforeach
+                                                    </tbody>
+                                                </table>
+                                            @else
+
+                                            @endif
+                                        </div>
+                                    </div>
                                  </div>
 
                               </div>
@@ -1824,9 +1882,7 @@
 
                          </div>
                     </div>
-                    </div>
-
-                  @endif
+                    @endif
                   </div>
 
               </div>
