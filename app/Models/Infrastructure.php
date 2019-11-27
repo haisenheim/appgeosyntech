@@ -249,10 +249,10 @@ class Infrastructure extends Model
 
 
 	public function moyens(){
-		return $this->belongsToMany('App\Models\Moyen','moyens_projets');
+		return $this->belongsToMany('App\Models\Moyen','infrastructures_moyens');
 	}
 	public function financements(){
-		return $this->hasMany('App\Models\Moyens_projet');
+		return $this->hasMany('App\Models\InfrastructuresMoyen');
 	}
 
 	public function prevtresoreries(){
