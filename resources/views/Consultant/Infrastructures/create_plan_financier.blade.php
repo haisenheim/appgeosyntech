@@ -8,7 +8,6 @@ ELABORATION DU PLAN FINANCIER
                     <div class="col-md-3 col-sm-12">
                         <div class="card">
                         <div class="card-body">
-
                             <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
                             <p>CODE : {{ $projet->code }}</p>
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
@@ -20,21 +19,8 @@ ELABORATION DU PLAN FINANCIER
                             <input type="hidden" id="id" value="<?= $projet->token ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
                             <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
->
-                                    <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
+                        </div>
 
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><span id="mode_name" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item" >PRIX HT : <span id="mode_prix" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">PRIX TTC : <span id="mode_prixttc" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">
-                                        <p id="mode_description"></p>
-                                        </li>
-                                    </ul>
-                                    <hr/>
-
-                                </div>
-                            @endif
                         </div>
                         </div>
 
@@ -2004,8 +1990,8 @@ ELABORATION DU PLAN FINANCIER
         }
     });
 
-    var saveurl = '/consultant/dossier/save-plan-financier';
-    var redirectUrl = '/consultant/dossiers/';
+    var saveurl = '/consultant/partenariat/save-plan-financier';
+    var redirectUrl = '/consultant/partenanriats/';
     var spinHandle_firstProcess = loadingOverlay.activate();
     $.ajax({
         url:saveurl,
@@ -2628,6 +2614,10 @@ ELABORATION DU PLAN FINANCIER
              $('#step-1 #myTabContent').html(html1);
              $('#step-2 #myTabContent').html(html_bilan_body);
              $('#step-3 #myTabContent').html(html_flux_body);
+              $('input[type="Number"]').val(0);
+    $           ('input[type="Number"]').css({
+                        'text-align':'right'
+                        });
     }
 
 
