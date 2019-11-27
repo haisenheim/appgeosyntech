@@ -24,7 +24,25 @@
         <li class="nav-item dropdown">
           <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">MES INVESTISSEMENTS</a>
           <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-            <li><a href="/angel/investissements" class="dropdown-item">LEVEES DE FONDS</a></li>
+
+            <!-- Level two dropdown-->
+            <li class="dropdown-submenu dropdown-hover">
+              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">LEVEE DE FONDS</a>
+              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                <li>
+                  <a tabindex="-1" href="/angel/investissements/dossiers" class="dropdown-item">PROJETS INDUSTRIELS ET DE SERVICE</a>
+                </li>
+                <li>
+                  <a tabindex="-1" href="/angel/investissements/projets" class="dropdown-item">PROJETS EN PHASE DE DEMARRAGE</a>
+                </li>
+
+              </ul>
+            </li>
+
+
+
+
+
             <!-- Level two dropdown-->
             <li class="dropdown-submenu dropdown-hover">
               <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
@@ -39,7 +57,20 @@
               </ul>
             </li>
             <!-- End Level two -->
-            <li><a href="#" class="dropdown-item">FINANCEMENTS STRUCTURES</a></li>
+
+            <!-- Level two dropdown-->
+            <li class="dropdown-submenu dropdown-hover">
+              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">FINANCEMENTS STRUCTURES</a>
+              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                <li>
+                  <a tabindex="-1" href="/angel/cessions/actifs" class="dropdown-item">Partenariats Public-Privé </a>
+                </li>
+                <li>
+                  <a tabindex="-1" href="#" class="dropdown-item">Ressources Naturelles</a>
+                </li>
+
+              </ul>
+            </li>
 
           </ul>
         </li>
@@ -47,8 +78,20 @@
         <li class="nav-item dropdown">
           <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">OPPORTUNITES D'INVESTISSEMENT</a>
           <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-            <li><a href="/angel/opportunites" class="dropdown-item">LEVEES DE FONDS</a></li>
-            <!-- Level two dropdown-->
+
+            <li class="dropdown-submenu dropdown-hover">
+              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">LEVEE DE FONDS</a>
+              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                <li>
+                  <a tabindex="-1" href="/angel/dossiers" class="dropdown-item">PROJETS INDUSTRIELS ET DE SERVICE</a>
+                </li>
+                <li>
+                  <a tabindex="-1" href="/angel/projets" class="dropdown-item">PROJETS EN PHASE DE DEMARRAGE</a>
+                </li>
+
+              </ul>
+            </li>
+
             <li class="dropdown-submenu dropdown-hover">
               <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
               <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
@@ -74,8 +117,7 @@
 
               </ul>
             </li>
-            <!-- End Level two -->
-            <li><a href="#" class="dropdown-item">FINANCEMENTS STRUCTURES</a></li>
+
 
           </ul>
         </li>
