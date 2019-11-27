@@ -33,7 +33,7 @@ class EarlyController extends Controller
     public function index()
     {
         //
-        $dossiers = Earlie::orderBy('created_at','desc')->where('expert_id',Auth::user()->id)->paginate(12);
+        $dossiers = Earlie::orderBy('created_at','desc')->paginate(12);
         return view('/Angel/Earlies/index')->with(compact('dossiers'));
     }
 

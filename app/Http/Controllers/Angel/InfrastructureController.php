@@ -33,7 +33,7 @@ class InfrastructureController extends Controller
     public function index()
     {
         //
-        $dossiers = Infrastructure::orderBy('created_at','desc')->where('expert_id',Auth::user()->id)->paginate(12);
+        $dossiers = Infrastructure::orderBy('created_at','desc')->paginate(12);
         return view('/Angel/Infrastructures/index')->with(compact('dossiers'));
     }
 

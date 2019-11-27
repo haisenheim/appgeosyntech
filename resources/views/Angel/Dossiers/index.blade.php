@@ -23,7 +23,7 @@
                                    style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover">
                                     <div class="ribbon-wrapper ribbon-xl">
                                         <div class="ribbon bg-primary">
-                                            {{ number_format($projet->montant,0,',','.') }} <sup> {{ $projet->devise->abb }} </sup>
+                                            <?= number_format( $projet->montant,0,',','.') ?> <sup> {{ $projet->devise->abb }} </sup>
                                         </div>
                                     </div>
                                     <h3 style="font-weight: 900" class="widget-user-username text-left"><?= $projet->name ?></h3>

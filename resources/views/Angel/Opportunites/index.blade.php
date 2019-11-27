@@ -90,11 +90,11 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="">
-                        <ul class="pagination justify-content-end">
-                        {{ $projets->links() }}
-                    </ul>
-                  </div>
+                      <div class="">
+                            <ul class="pagination justify-content-end">
+                            {{ $projets->links() }}
+                        </ul>
+                      </div>
                   </div>
                   <!-- /.tab-pane -->
                   <div class="tab-pane" id="tab_2">

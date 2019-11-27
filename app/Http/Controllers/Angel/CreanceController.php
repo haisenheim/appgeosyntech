@@ -33,7 +33,7 @@ class CreanceController extends Controller
     public function index()
     {
         //
-        $dossiers = Creance::orderBy('created_at','desc')->where('expert_id',Auth::user()->id)->paginate(12);
+        $dossiers = Creance::orderBy('created_at','desc')->paginate(12);
         return view('/Angel/Creances/index')->with(compact('dossiers'));
     }
 
@@ -72,8 +72,6 @@ class CreanceController extends Controller
 	public function show($token)
 	{
 		$projet = Creance::where('token',$token)->first();
-
-
 		return view('/Angel/Creances/show')->with(compact('projet'));
 	}
 
