@@ -178,6 +178,7 @@ class InfrastructureController extends Controller
 		$projet->etape =4;
 		$projet->save();
 		$bilans = $request->bilans;
+		Prevbilan::where('infrastructure_id',$projet->id)->delete();
 		foreach($bilans as $bilan){
 			$bilan['infrastructure_id']=$projet->id;
 			$bilan['user_id'] = Auth::user()->id;
@@ -185,13 +186,16 @@ class InfrastructureController extends Controller
 		}
 
 		$tresos = $request->tresoreries;
+		Prevtresorerie::where('infrastructure_id',$projet->id)->delete();
 		foreach($tresos as $tr){
 			$tr['infrastructure_id']=$projet->id;
-
+			$tr['prelevements_capital']=$tr['prevelements_capital'];
+			unset($tr['prevelements_capital']);
 			Prevtresorerie::create($tr);
 		}
 
 		$resultats = $request->resultats;
+		Prevresultat::where('infrastructure_id',$projet->id)->delete();
 		foreach($resultats as $res) {
 			$res['infrastructure_id'] = $projet->id;
 			$res['token']=$request->_csrf;

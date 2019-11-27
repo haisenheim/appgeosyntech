@@ -1902,11 +1902,44 @@ ELABORATION DU PLAN FINANCIER
                     </div>
                 </div>
     </div>
+     <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+        		<div class="modal-dialog modal-lg" role="document">
+        			<div class="modal-content">
+        				<div class="modal-body">
+        					<div class="row">
+        					    <div class="col-md-7 col-sm-12">
+        					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                     </div>
+        					    </div>
+        					    <div class="col-md-5 col-sm-12">
+                                        <p>
+                                            -	Description du modèle économique du projet
+                                            -	Analyse préliminaire des risques
+                                            -	Diagnostic financier (Il sera spécifique en fonction du fait que nous ayons un projet industriel-exploitation de ressources naturelles d’une part et d’autre part les infrastructures. Pour les infrastructures, on devra faire le choix entre l’Etat porteur de projet, les mairies porteurs de projet)
+
+                                        </p>
+                                        <a class="btn btn-success btn-block" href="/consultant/partenariats/{{ $projet->token }}">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+        					    </div>
+        					</div>
+        				</div>
+
+
+        			</div>
+        		</div>
+
+        </div>
 <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+            <!-- SweetAlert2 -->
+    <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+            <!-- Toastr -->
+    <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
 <script type="text/javascript">
 
@@ -1993,6 +2026,12 @@ ELABORATION DU PLAN FINANCIER
     var saveurl = '/consultant/partenariat/save-plan-financier';
     var redirectUrl = '/consultant/partenanriats/';
     var spinHandle_firstProcess = loadingOverlay.activate();
+    const Toast = Swal.mixin({
+                       toast: true,
+                       position: 'top-end',
+                       showConfirmButton: false,
+                       timer: 5000
+                     });
     $.ajax({
         url:saveurl,
         dataType:'json',
@@ -2004,7 +2043,15 @@ ELABORATION DU PLAN FINANCIER
          },
         success:function(data){
             //console.log(data);
-            window.location.replace(redirectUrl+data.token);
+            loadingOverlay.cancel(spinHandle_firstProcess);
+            Toast.fire({
+                    type: 'success',
+                    title: 'Plan financier créé avec succes!!!'
+                  });
+                  setTimeout(function() {
+                    $('#popup').show();
+                  },2000);
+           // window.location.replace(redirectUrl+data.token);
         },
         Error:function(){
              loadingOverlay.cancel(spinHandle_firstProcess);
