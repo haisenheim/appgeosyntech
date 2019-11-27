@@ -118,7 +118,9 @@ class Infrastructure extends Model
 
 
 	public function getVariationsAttribute(){
-		$prevrls = Prevresultat::all()->where('insfrastructure_id',$this->id)->sortBy('annee');
+
+
+		$prevrls = Prevresultat::all()->where('infrastructure_id',$this->id)->sortBy('annee');
 		$prevbils = Prevbilan::all()->where('infrastructure_id',$this->id)->sortBy('annee');
 		$prevbls = [];
 		$prevrs=[];
