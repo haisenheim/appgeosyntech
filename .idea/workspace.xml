@@ -119,8 +119,8 @@
       <file leaf-file-name="create_plan_financier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Infrastructures/create_plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92086333" vertical-offset="34000" max-vertical-offset="44464">
-              <caret line="2178" column="45" selection-start-line="2178" selection-start-column="45" selection-end-line="2178" selection-end-column="45" />
+            <state vertical-scroll-proportion="26.630695" vertical-offset="30303" max-vertical-offset="44528">
+              <caret line="2617" column="16" selection-start-line="2617" selection-start-column="16" selection-end-line="2617" selection-end-column="16" />
               <folding>
                 <element signature="e#199485#199865#0#HTML" expanded="false" />
                 <element signature="e#199938#200323#0#HTML" expanded="false" />
@@ -224,8 +224,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
         <option value="$PROJECT_DIR$/app/Models/Infrastructure.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/InfrastructureController.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Infrastructures/create_plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Earlies/create_plan_financier.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Infrastructures/create_plan_financier.blade.php" />
       </list>
     </option>
   </component>
@@ -651,10 +651,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2919605" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2919605" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1232,8 +1232,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Infrastructures/create_plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92086333" vertical-offset="34000" max-vertical-offset="44464">
-          <caret line="2178" column="45" selection-start-line="2178" selection-start-column="45" selection-end-line="2178" selection-end-column="45" />
+        <state vertical-scroll-proportion="26.630695" vertical-offset="30303" max-vertical-offset="44528">
+          <caret line="2617" column="16" selection-start-line="2617" selection-start-column="16" selection-end-line="2617" selection-end-column="16" />
           <folding>
             <element signature="e#199485#199865#0#HTML" expanded="false" />
             <element signature="e#199938#200323#0#HTML" expanded="false" />

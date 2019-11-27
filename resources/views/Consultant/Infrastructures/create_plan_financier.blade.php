@@ -24,7 +24,7 @@ ELABORATION DU PLAN FINANCIER
                         </div>
                         </div>
 
-                    </div>
+
                     <div class="col-md-9 col-sm-12">
                         <div class="card">
                             <div class="card-header">
