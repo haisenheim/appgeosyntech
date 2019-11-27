@@ -63,7 +63,7 @@
               <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">FINANCEMENTS STRUCTURES</a>
               <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
                 <li>
-                  <a tabindex="-1" href="/angel/cessions/actifs" class="dropdown-item">Partenariats Public-Privé </a>
+                  <a tabindex="-1" href="/angel/concessions/partenariats" class="dropdown-item">Partenariats Public-Privé </a>
                 </li>
                 <li>
                   <a tabindex="-1" href="#" class="dropdown-item">Ressources Naturelles</a>
