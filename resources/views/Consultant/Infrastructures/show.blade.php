@@ -2285,7 +2285,7 @@
 
 @section('nav_actions')
 <main>
-    <nav style="top:30%" class="floating-menu">
+    <nav style="top:45%" class="floating-menu">
         <ul class="main-menu">
 
 
