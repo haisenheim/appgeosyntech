@@ -255,6 +255,7 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                              },
                     success:function(data){
                         loadingOverlay.cancel(spinHandle_firstProcess);
+                        $('#IpM').hide();
                                     Toast.fire({
                                             type: 'success',
                                             title: 'Demande initialisée succès!!!'

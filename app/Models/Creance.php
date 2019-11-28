@@ -50,4 +50,39 @@ class Creance extends Model
 
 		return $exist;
 	}
+
+	protected function getAuthorizedAttribute(){
+		if(Auth::user()->role_id==4){
+			if(Auth::user()->organisme_id){
+				$investissement = Cession::all()->where('creance_id',$this->id)->where('organisme_id',Auth::user()->organisme_id)->first();
+				if($investissement){
+					//debug($investissement);
+					if($investissement->angel_id!=Auth::user()->id){
+						return false;
+					}
+				}
+			}
+
+			if(Auth::user()->entreprise_id){
+				$investissement = Cession::all()->where('creance_id',$this->id)->where('entreprise_id',Auth::user()->entreprise_id)->first();
+				if($investissement){
+					if($investissement->angel_id!=Auth::user()->id){
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
+
+	public function getAlreadyAttribute(){
+		if(Auth::user()->role_id==4){
+			$investissement = Cession::where('creance_id',$this->id)->where('angel_id',Auth::user()->id)->first();
+			if($investissement){
+				return true;
+			}
+			return false;
+		}
+		return false;
+	}
 }

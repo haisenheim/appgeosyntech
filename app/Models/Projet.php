@@ -262,4 +262,15 @@ class Projet extends Model
 	protected function getCoutglobalAttribute(){
 		return ($this->bfr + $this->montant_investissement);
 	}
+
+	public function getAlreadyAttribute(){
+		if(Auth::user()->role_id==4){
+			$investissement = Investissement::where('projet_id',$this->id)->where('angel_id',Auth::user()->id)->first();
+			if($investissement){
+				return true;
+			}
+			return false;
+		}
+		return false;
+	}
 }

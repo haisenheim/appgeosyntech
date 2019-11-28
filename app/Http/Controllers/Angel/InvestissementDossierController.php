@@ -19,7 +19,7 @@ class InvestissementDossierController extends Controller
     {
         //
 	    $investissements = Investissement::orderBy('created_at','desc')->where('projet_id','>',0)->where('angel_id',Auth::user()->id)->paginate(8);
-	    return view('Angel/Investissements/Dossiers/index')->with(compact('investissements'))->with('Liste des investissements');
+	    return view('Angel/Investissements/Projets/index')->with(compact('investissements'))->with('Liste des investissements');
     }
 
     /**
@@ -51,10 +51,10 @@ class InvestissementDossierController extends Controller
 			    'organisme_id'=>Auth::user()->organisme_id,
 			    'token'=>sha1(Auth::user()->id . date('Yhmdis'))
 		    ]);
-		    $request->session()->flash('success','Votre investissement a été correctement initialisée !!!');
+		    //$request->session()->flash('success','Votre investissement a été correctement initialisée !!!');
 	    }
-
-	    return back();
+			return response()->json($projet);
+	    //return back();
     }
 
     /**
@@ -67,7 +67,7 @@ class InvestissementDossierController extends Controller
     {
         //
 	    $investissement = Investissement::where('token',$token)->first();
-	    return view('Angel/Investissements/Dossiers/show')->with(compact('investissement'));
+	    return view('Angel/Investissements/Projets/show')->with(compact('investissement'));
 
     }
 
