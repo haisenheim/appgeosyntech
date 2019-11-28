@@ -2144,7 +2144,7 @@
                 </button>
               </div>
               <div style="padding: 20px 20px 40px 20px; font-family: 'Gill Sans MT', Calibri, sans-serif" class="modal-body">
-                 <form enctype="multipart/form-data" class="form" action="/angel/letter/" method="post">
+                 <form id="letter" enctype="multipart/form-data" class="form" action="/angel/letter/" method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="token" value="{{ $investissement->token }}"/>
 
@@ -2194,14 +2194,14 @@
                     </p>
 
                     <p class="blocx" style="display: none" id="block-3">
-                        L’engagement par signature sera effectué sur une durée de <span style="font-weight: bold; width:100px"> <input class="form-control" name="duree_engagement" type="number"/> </span> année(s), a une commission de caution de <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_engagement" type="number"/> </span>% ou <span style="font-weight: bold; width: 300px"> <input class="form-control" placeholder="Saisir un montant" name="mt_engagement" type="number"/> </span>.
+                        L’engagement par signature sera effectué sur une durée de <span style="font-weight: bold; width:100px"> <input id="duree_engagement" class="form-control" name="duree_engagement" type="number"/> </span> année(s), a une commission de caution de <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_engagement" type="number"/> </span>% ou <span style="font-weight: bold; width: 300px"> <input class="form-control" placeholder="Saisir un montant" name="mt_engagement" type="number"/> </span>.
                     </p>
 
                     <br/>
                     <br/>
 
                     <div style="float: right; margin-right: 50px">
-                        Fait à <span style="font-weight: bold; width:300px"> <input class="form-control" name="lieu" type="text" required="true"/> </span>, le {{ date('d/m/Y') }}.
+                        Fait à <span style="font-weight: bold; width:300px"> <input id="lieu" class="form-control" name="lieu" type="text" required="true"/> </span>, le {{ date('d/m/Y') }}.
                         <br/> <br/>
                         Pour l’investisseur
                         <br/>
@@ -2209,7 +2209,7 @@
                         <span style="font-weight: bold">{{ $investissement->angel->name }}</span>
 
                     </div>
-
+                    <input type="hidden" name="token" id="token" value="{{ $investissement->token }}"/>
                     <button id="btn-save" type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
                 </form>
               </div>
@@ -2427,11 +2427,29 @@
                                   showConfirmButton: false,
                                   timer: 5000
                                 });
+
+           var letter = $('#letter');
+           var inputs = letter.find('input');
+           var selects = letter.find('select');
+           //var donnees = [];
+
+                   var values = {};
+                   for (var i=0; i < inputs.length; i++) {
+                       var id = inputs[i].getAttribute('name');
+                       values[id] = $('input[name="'+id+'"]').val();
+                   }
+                   for (var i=0; i < selects.length; i++) {
+                                          var id = selects[i].getAttribute('name');
+                                          values[id] = $('select[name="'+id+'"]').val();
+                                      }
+
+                   //values.type_remboursement_id = $('')
+
            $.ajax({
                url:'/angel/letter',
                dataType:'json',
                type:'post',
-               data:{_csrf:$('input[name="_token"]').val(),token:$('#token').val(), dt_rdv:$('#rdv').val()},
+               data:values,
                beforeSend:function(xhr){
                             xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
                         },
