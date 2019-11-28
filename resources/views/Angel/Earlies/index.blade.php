@@ -250,6 +250,9 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                     dataType:'json',
                     type:'post',
                     data:{_csrf:$('input[name="_token"]').val(),token:$('#token').val(), dt_rdv:$('#rdv').val()},
+                    beforeSend:function(xhr){
+                                 xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                             },
                     success:function(data){
                         loadingOverlay.cancel(spinHandle_firstProcess);
                                     Toast.fire({
