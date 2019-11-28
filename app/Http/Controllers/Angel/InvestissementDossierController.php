@@ -45,7 +45,7 @@ class InvestissementDossierController extends Controller
 				}
 				$name =  $projet->token .'.'. $ext;
 				$ordre->move(public_path($path), $name);
-				Projet::updateOrCreate(['token'=>$projet->token],['doc_juridiqueUri'=>$name]);
+				Investissement::updateOrCreate(['token'=>$projet->token],['doc_juridiqueUri'=>$name]);
 			}
 
 		}

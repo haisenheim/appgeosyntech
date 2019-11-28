@@ -2100,7 +2100,7 @@
                     </div>
 
                 </div>
-                <div class="row" >
+
                     <div class="col-md-2">
                         <a class="btn btn-outline btn-block btn-sm btn-success" id="btn-letter" data-target="#LetterModal" data-toggle="modal" href="#"> <i class="fa fa-edit"></i> Editer la lettre d'intention </a>
                     </div>
@@ -2109,7 +2109,7 @@
                         <a class="btn btn-outline btn-block btn-sm btn-danger" id="btn-doc" data-target="#DocModal" data-toggle="modal" href="#"> <i class="fas fa-file-pdf"></i> Editer la lettre d'intention </a>
                     </div>
                     @endif
-                </div>
+
               </div>
 
                 </div>
@@ -2544,7 +2544,7 @@
 
 
                    $.ajax({
-                       url:'/angel/investissement/doc',
+                       url:'/angel/investissement/dossier/doc',
                        dataType:'json',
                        type:'post',
                         enctype:'multipart/form-data',
