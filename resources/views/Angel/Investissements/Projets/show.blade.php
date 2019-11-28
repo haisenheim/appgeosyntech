@@ -2207,7 +2207,7 @@
 
                     </div>
 
-                    <button type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
+                    <button id="btn-save" type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
                 </form>
               </div>
 
@@ -2372,6 +2372,81 @@
                            }
                          });
                     }
+    </script>
+
+     <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+            		<div class="modal-dialog modal-lg" role="document">
+            			<div class="modal-content">
+            				<div class="modal-body">
+            					<div class="row">
+            					    <div class="col-md-5 col-sm-12">
+            					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                         </div>
+            					    </div>
+            					    <div class="col-md-7 col-sm-12">
+                                            <p>Félicitations ! Votre lettre d’intention a été envoyée au porteur de projet.</p>
+
+                                               <p>Dès que la somme des intentions d’investissement atteindra le montant sollicité par le porteur de projet,
+                                               vous aurez la possibilité d’accéder à la documentation juridique à savoir le contrat qui encadre votre relation d’affaires.
+                                                Celle-ci pourra faire l’objet d’une discussion avec le porteur de projet dans l’onglet « Messagerie ».</p>
+
+                                               <p>Une fois un accord trouvé, la documentation juridique devra être signée par les deux parties puis mis en ligne pour
+                                               être validée par OBAC</p>
+                                            <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+            					    </div>
+            					</div>
+            				</div>
+
+
+            			</div>
+            		</div>
+
+            </div>
+    <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+                <!-- SweetAlert2 -->
+        <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+                <!-- Toastr -->
+        <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
+
+    <script>
+
+
+
+        $('#btn-save').click(function(e){
+           e.preventDefault();
+           var spinHandle_firstProcess = loadingOverlay.activate();
+           const Toast = Swal.mixin({
+                                  toast: true,
+                                  position: 'top-end',
+                                  showConfirmButton: false,
+                                  timer: 5000
+                                });
+           $.ajax({
+               url:'/angel/letter/save',
+               dataType:'json',
+               type:'post',
+               data:{_csrf:$('input[name="_token"]').val(),token:$('#token').val(), dt_rdv:$('#rdv').val()},
+               beforeSend:function(xhr){
+                            xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                        },
+               success:function(data){
+
+                   $('#IpM').hide();
+                               Toast.fire({
+                                       type: 'success',
+                                       title: 'Demande initialisée succès!!!'
+                                     });
+                                     setTimeout(function() {
+                                        loadingOverlay.cancel(spinHandle_firstProcess);
+                                       $('#popup').show();
+                                     },2000);
+               }
+           });
+        });
+
     </script>
 
 @endsection

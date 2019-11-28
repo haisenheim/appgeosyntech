@@ -93,7 +93,7 @@ class DossierController extends Controller
 			$data['pct_engagement']=$request->pct_engagement;
 			$data['duree_engagement']=$request->duree_engagement;
 			$data['mt_engagement']=$request->mt_engagement;
-			$data['devise_id']=$request->devise_id;
+
 			$data['personnel']=$request->personnel;
 			$data['pct_pret']=$request->pct_pret;
 			$data['duree_pret']=$request->duree_pret;
@@ -109,7 +109,7 @@ class DossierController extends Controller
 			$lettre->pct_engagement=$request->pct_engagement;
 			$lettre->duree_engagement=$request->duree_engagement;
 			$lettre->mt_engagement=$request->mt_engagement;
-			$lettre->devise_id=$request->devise_id;
+
 			$lettre->personnel=$request->personnel;
 			$lettre->pct_pret=$request->pct_pret;
 			$lettre->duree_pret=$request->duree_pret;
@@ -117,7 +117,7 @@ class DossierController extends Controller
 			$lettre->save();
 		}
 
-		return back();
+		return response()->json($lettre);
 	}
 
     /**
