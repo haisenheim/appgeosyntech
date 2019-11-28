@@ -25,46 +25,55 @@ class InvestissementDossierController extends Controller
 	    return view('Angel/Investissements/Projets/index')->with(compact('investissements'))->with('Liste des investissements');
     }
 
-	public function saveLetter(Request $request){
-		$projet = Investissement::where('token', $request->token)->first();
-		if($projet->lettre){
-			$lettre = $projet->lettre;
-			$data = [];
-			//$data['id']=$lettre->id;
-			$data['type_remboursement']= $request->type_remboursement;
-			$data['forme_id'] = $request->forme_id;
-			$data['montant'] = $request->montant;
-			$data['pct_participation']=$request->pct_participation;
-			$data['pct_engagement']=$request->pct_engagement;
-			$data['duree_engagement']=$request->duree_engagement;
-			$data['mt_engagement']=$request->mt_engagement;
+	public function saveDoc(Request $request){
 
-			$data['personnel']=$request->personnel;
-			$data['pct_pret']=$request->pct_pret;
-			$data['duree_pret']=$request->duree_pret;
-			$data['lieu'] = $request->lieu;
-			Lettre::updateOrCreate(['investissement_id'=>$lettre->investissement_id],$data);
-		}else{
-			$lettre =new Lettre();
-			$lettre->investissement_id = $projet->id;
-			$lettre->type_remboursement= $request->type_remboursement;
-			$lettre->forme_id = $request->forme_id;
-			$lettre->montant = $request->montant;
-			$lettre->pct_participation=$request->pct_participation;
-			$lettre->pct_engagement=$request->pct_engagement;
-			$lettre->duree_engagement=$request->duree_engagement;
-			$lettre->mt_engagement=$request->mt_engagement;
+		//dd(public_path('img'));
+		$projet = Investissement::where('token',$request->token)->first();
 
-			$lettre->personnel=$request->personnel;
-			$lettre->pct_pret=$request->pct_pret;
-			$lettre->duree_pret=$request->duree_pret;
-			$lettre->lieu = $request->lieu;
-			$lettre->save();
+		$ordre = $request->doc_juridiqueUri;
+		if($ordre){
+			$ext = $ordre->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif','pdf');
+			if(in_array($ext,$arr_ext)){
+				$path = 'files/investissements/projets/docjuridiques';
+				if (!file_exists(public_path())) {
+					mkdir(public_path($path,777,true));
+				}
+				$path = $path.'/';
+				if (file_exists(public_path($path) . $projet->token.'.' . $ext)) {
+					unlink(public_path($path) . $projet->token .  '.' . $ext);
+				}
+				$name =  $projet->token .'.'. $ext;
+				$ordre->move(public_path($path), $name);
+				Projet::updateOrCreate(['token'=>$projet->token],['doc_juridiqueUri'=>$name]);
+			}
+
 		}
 
-		return back();
-	}
+		$pret = $request->pret;
+		if($pret){
+			$ext = $pret->getClientOriginalExtension();
+			$arr_ext = array('doc','docx','pdf','odt');
+			if(in_array($ext,$arr_ext)){
+				if(!file_exists(public_path('files'))){
+					mkdir(public_path('files'));
+				}
+				if (!file_exists(public_path('files/contrats_pret'))) {
+					mkdir(public_path('files/contrats_pret'));
+				}
 
+				if (file_exists(public_path('files/contrats_pret/') . $projet->token.'.' . $ext)) {
+					unlink(public_path('files/contrats_pret/') . $projet->token .  '.' . $ext);
+				}
+				$name =  $projet->token .'.'. $ext;
+				$pret->move(public_path('files/contrats_pret'), $name);
+				Projet::updateOrCreate(['token'=>$projet->token],['contrat_pretUri'=>$name]);
+			}
+
+		}
+		return back();
+
+	}
     /**
      * Show the form for creating a new resource.
      *

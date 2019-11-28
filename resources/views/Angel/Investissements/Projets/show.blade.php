@@ -4,9 +4,8 @@
 @endsection
 @section('content')
 
-
-
 <div class="card">
+          <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}" />
         <div class="card-header">
             <?php $projet = $investissement->projet ?>
           <h3 class="card-title">{{$projet->name}} - {{$projet->code}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
@@ -2101,10 +2100,18 @@
                     </div>
 
                 </div>
-              </div>
+                <div class="row" >
+                    <div class="col-md-2">
                         <a class="btn btn-outline btn-block btn-sm btn-success" id="btn-letter" data-target="#LetterModal" data-toggle="modal" href="#"> <i class="fa fa-edit"></i> Editer la lettre d'intention </a>
-
                     </div>
+                    @if($investissement->lettre)
+                    <div class="col-md-2">
+                        <a class="btn btn-outline btn-block btn-sm btn-danger" id="btn-doc" data-target="#DocModal" data-toggle="modal" href="#"> <i class="fas fa-file-pdf"></i> Editer la lettre d'intention </a>
+                    </div>
+                    @endif
+                </div>
+              </div>
+
                 </div>
                 </div>
             <div class="col-12 col-md-3 col-lg-3 order-1 order-md-2">
@@ -2133,7 +2140,30 @@
         </div>
         <!-- /.card-body -->
       </div>
+       <div  class="modal fade" id="DocModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-success">
+                <h4  class="modal-title text-center">CHARGEMENT DE VOTRE {{ $investissement->lettre->forme_id==1?'CONTRAT D\'ASSOCIES':$investissement->lettre->forme_id==2?'CONTRAT DE PRET':'CONTRAT D\'ENGAGEMENT' }}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div style="padding: 20px 20px 40px 20px; font-family: 'Gill Sans MT', Calibri, sans-serif" class="modal-body">
+                 <form id="letter" enctype="multipart/form-data" class="form" action="/angel/investissement/doc/" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="token" value="{{ $investissement->token }}"/>
+                    <input type="file" name="docUri" id="docUri" class="form-control"/>
 
+                    <button id="btn-save2" type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
+                </form>
+              </div>
+
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+    </div>
       <div  class="modal fade" id="LetterModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -2265,7 +2295,7 @@
         $(document).ready(function(){
            // var orm = 'http://localhost/ormsys/api/';
             $.ajax({
-                url: "/angel/dossier/getchoices",
+                url: "/angel/opportunites/dossier/getchoices",
                 type:'Get',
                 dataType:'json',
                 data:{id:$('#id').val()},
@@ -2277,7 +2307,6 @@
                             dataType:'json',
                             data:{choix:data},
                             success:function(rep){
-                                $('#risks-loader').hide();
 
                                 var html = '';
                                 //console.log(Object.entries(rep));
@@ -2407,8 +2436,35 @@
             		</div>
 
             </div>
+     <div class="modal" id="popup2" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+            		<div class="modal-dialog modal-lg" role="document">
+            			<div class="modal-content">
+            				<div class="modal-body">
+            					<div class="row">
+            					    <div class="col-md-5 col-sm-12">
+            					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                         </div>
+            					    </div>
+            					    <div class="col-md-7 col-sm-12">
+                                            <p>Félicitations ! Vous venez de mettre en ligne votre contrat d’affaires. </p>
+
+                                            <p> L’équipe juridique d’OBAC prendra le temps de l’analyser dans un délai de 48 heures avant de procéder à sa validation. </p>
+
+                                            <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+            					    </div>
+            					</div>
+            				</div>
+
+
+            			</div>
+            		</div>
+
+            </div>
     <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+
+
                 <!-- SweetAlert2 -->
         <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
                 <!-- Toastr -->
@@ -2468,7 +2524,54 @@
            });
         });
 
-    </script>
+         $('#btn-save2').click(function(e){
 
+                   e.preventDefault();
+                   const Toast = Swal.mixin({
+                                          toast: true,
+                                          position: 'top-end',
+                                          showConfirmButton: false,
+                                          timer: 5000
+                                        });
+
+                   if($('#docUri').val().length<1){
+                        alert('Aucun document n\'a été soumis');
+                   }else{
+                         var spinHandle_firstProcess = loadingOverlay.activate();
+                         var fd = new FormData();
+                         fd.append('doc_juridiqueUri',$('#docUri')[0].files[0]);
+                         fd.append('token',$('#token').val())
+
+
+                   $.ajax({
+                       url:'/angel/investissement/doc',
+                       dataType:'json',
+                       type:'post',
+                        enctype:'multipart/form-data',
+                        processData:false,
+                        contentType:false,
+                        data:fd,
+                       beforeSend:function(xhr){
+                                    xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                                },
+                       success:function(data){
+
+                           $('#IpM').hide();
+                                       Toast.fire({
+                                               type: 'success',
+                                               title: 'Demande initialisée succès!!!'
+                                             });
+                                             setTimeout(function() {
+                                                loadingOverlay.cancel(spinHandle_firstProcess);
+                                               $('#popup2').show();
+                                             },2000);
+                       }
+                   });
+                   }
+
+                });
+
+    </script>
+</div>
 @endsection
 

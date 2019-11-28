@@ -149,6 +149,8 @@ Route::prefix('angel')
 	    Route::resource('investissements/creances','CessionCreanceController');
 	    Route::resource('investissements/partenariats','ConcessionInfrastructureController');
 	    Route::resource('investissements/ressources','ConcessionRessourceController');
+	    Route::post('/investissement/dossier/doc/','InvestissementDossierController@saveDoc');
+	    Route::get('opportunites/dossier/getchoices','DossierController@getChoices');
 
         Route::resource('alertes','AlerteController');
         Route::get('profil','ProfilController');

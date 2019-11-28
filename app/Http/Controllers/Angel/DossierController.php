@@ -80,6 +80,7 @@ class DossierController extends Controller
 		return back();
 	}
 
+
 	public function saveLetter(Request $request){
 		$projet = Investissement::where('token', $request->token)->first();
 		if($projet->lettre){
@@ -119,6 +120,8 @@ class DossierController extends Controller
 
 		return response()->json($lettre);
 	}
+
+
 
     /**
      * Show the form for editing the specified resource.

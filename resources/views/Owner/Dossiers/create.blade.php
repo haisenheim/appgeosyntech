@@ -1214,7 +1214,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                     url:url,
                     type:'Post',
                     dataType:'JSON',
-                    denctype:'multipart/form-data',
+                    enctype:'multipart/form-data',
                     processData:false,
                     contentType:false,
                     data:fd,
