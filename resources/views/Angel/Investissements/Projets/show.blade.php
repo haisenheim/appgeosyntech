@@ -2425,7 +2425,7 @@
                                   timer: 5000
                                 });
            $.ajax({
-               url:'/angel/letter/save',
+               url:'/angel/letter',
                dataType:'json',
                type:'post',
                data:{_csrf:$('input[name="_token"]').val(),token:$('#token').val(), dt_rdv:$('#rdv').val()},
