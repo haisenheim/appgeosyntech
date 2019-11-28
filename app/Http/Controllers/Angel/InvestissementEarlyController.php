@@ -52,11 +52,11 @@ class InvestissementEarlyController extends Controller
 			    'token'=>sha1(Auth::user()->id . date('Yhmdis'))
 		    ]);
 
-		    return response()->json($projet);
+
 		   // $request->session()->flash('success','Votre investissement a été correctement initialisé !!!');
 	    }
-
-	    return back();
+	    return response()->json($projet);
+	   // return back();
     }
 
     /**
