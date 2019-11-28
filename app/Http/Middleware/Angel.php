@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class Angel
 {
@@ -20,8 +21,11 @@ class Angel
 
             return redirect('/login');
         }
-	    dd($request->path());
-	    $path = $request->path();
+	   // dd($request->path());
+	    $path = explode('/',$request->path());
+	    if(in_array('mailbox',$path)){
+		    Session::put('slides', 4);
+	    }
         return $next($request);
     }
 }
