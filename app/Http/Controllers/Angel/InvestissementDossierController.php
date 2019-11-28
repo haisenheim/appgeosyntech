@@ -18,7 +18,7 @@ class InvestissementDossierController extends Controller
     public function index()
     {
         //
-	    $investissements = Investissement::orderBy('created_at','desc')->where('projet_id >',0)->where('angel_id',Auth::user()->id)->paginate(8);
+	    $investissements = Investissement::orderBy('created_at','desc')->where('projet_id','>',0)->where('angel_id',Auth::user()->id)->paginate(8);
 	    return view('Angel/Investissements/Dossiers/index')->with(compact('investissements'))->with('Liste des investissements');
     }
 

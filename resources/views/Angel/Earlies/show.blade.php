@@ -1,4 +1,4 @@
-@extends('......layouts.owner')
+@extends('......layouts.angel')
 
 @section('content-header')
  <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">{{$projet->name}}</h3>

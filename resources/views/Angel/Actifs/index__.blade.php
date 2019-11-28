@@ -8,6 +8,7 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
     <div style="padding-top: 30px" class="container-fluid">
 
                 <div class="row">
+                    <?php $i=0; $colors=['danger','info','warning','primary','success'] ?>
 
                     @foreach($dossiers as $projet)
 
@@ -16,8 +17,8 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
 
 
                     <!-- small card -->
-                    <div class="small-box">
-
+                    <div class="small-box bg-{{ $colors[$i] }}">
+                    <?php $i==5?$i=0:$i++ ?>
                       <div class="inner">
                         <h3>{{ $projet->prix }}<sup style="font-size: 20px">{{ $projet->devise->abb }}</sup></h3>
 

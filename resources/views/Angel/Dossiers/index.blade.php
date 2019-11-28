@@ -1,10 +1,12 @@
 @extends('......layouts.angel')
-
+@section('page-title')
+PROJETS INDUSTRIELS ET/OU DE SERVICES
+@endsection
 
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
 
-        <h1>PROJETS INDUSTIELS ET DE SERVICES</h1>
+
          <div class="row">
           <div class="col-12">
             <!-- Custom Tabs -->

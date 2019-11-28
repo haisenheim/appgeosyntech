@@ -1,10 +1,7 @@
 @extends('layouts.angel')
 
-@section('content-header')
-    <div class="">
-       <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">GESTION DES ACTIFS</h3>
-        <h5 style="font-weight: 600; margin-top: 20px; color: #FFFFFF; padding-bottom: 5px; border-bottom: solid #FFFFFF 1px;"> {{$projet->name}}</h5>
-    </div>
+@section('page-title')
+{{ $projet->name }}
 @endsection
 
 @section('content')

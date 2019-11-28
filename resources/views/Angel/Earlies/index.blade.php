@@ -1,126 +1,195 @@
-@extends('......layouts.owner')
+@extends('......layouts.angel')
 
 @section('page-title')
 DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
 @endsection
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
+
+
         <div class="card">
-        <div class="card-header">
 
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-              <i class="fas fa-minus"></i></button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fas fa-times"></i></button>
-          </div>
-        </div>
+              <div class="card-body">
 
-        <div class="card-body p-0">
-          <table class="table table-striped projects" id="table-projets">
-              <thead>
-                  <tr>
-                      <th style="width: 1%">
-                          #
-                      </th>
-                      <th style="width: 38%">
-                          Projet
-                      </th>
-                      <th style="width: 20%">
-                          Consultant
-                      </th>
-                      <th>
-                          Progression
-                      </th>
+                    <div class="row">
+                    @foreach($projets as $projet)
 
-                      <th style="width: 10%">
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-
-
-                   @foreach($dossiers as $projet)
-                        <tr>
-                            <td>#</td>
-                            <td>
-                            <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small>  - <span class="badge badge-default"><i class="fa fa-map-marker"></i>&nbsp; {{ $projet->ville->name  }}</span> <br/>
-                            <?= $projet->active?'<span class="badge badge-success">ACTIF</span>':'<span class="badge badge-danger">Bloqué</span>' ?> -
-                            <?= $projet->public?'<span class="badge badge-info">PUBLIC</span>':'<span class="badge badge-warning">PRIVE</span>' ?>
-                            </td>
-
-                            <td>{{$projet->consultant?$projet->consultant->name:'-'}}</td>
-                            <td class="project_progress">
-                          <div class="progress progress-sm">
-                              <div class="progress-bar progress-bar-striped bg-{{$projet->progresscolor}}" role="progressbar" aria-volumenow="{{$projet->progress }}" aria-volumemin="0" aria-volumemax="100" style="width: {{$projet->progress .'%'}} ">
+                         <div class="col-md-3">
+                            <!-- Widget: user widget style 1 -->
+                             <div class="card card-widget widget-user position-relative">
+                              <!-- Add the bg color to the header using any of the bg-* classes -->
+                              <div class="widget-user-header text-white"
+                                   style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover">
+                                    <div class="ribbon-wrapper ribbon-xl">
+                                        <div class="ribbon bg-primary">
+                                            <?= number_format( $projet->montant,0,',','.') ?> <sup> {{ $projet->devise->abb }} </sup>
+                                        </div>
+                                    </div>
+                                    <h3 style="font-weight: 900" class="widget-user-username text-left"><?= $projet->name ?></h3>
+                                    <h5 style="font-weight: 700" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
                               </div>
-                          </div>
-                          <small>
-                             Complet à {{$projet->progress}}%
-                          </small>
-                      </td>
+                              <div class="widget-user-image">
+                                <img class="img-circle" src="{{$projet->user?$projet->user->imageUri? asset('img/'.$projet->user->imageUri):asset('img/avatar.png'):asset('img/avatar.png')}}" alt="User Avatar">
+                              </div>
+                              <div class="card-body">
+
+                              </div>
+                              <div style="padding: .75rem 1rem" class="card-footer ">
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                          <span class="description-text"><i class="fa fa-map-marker"></i> {{ $projet->ville->name  }}</span>
+
+                                    </div>
+                                  <!-- /.col -->
+
+                                </div>
+
+                                <div style="display: none" id="teaser-{{$projet->token}}">
+                                    <input type="hidden" name="token" value="<?= $projet->token ?>"/>
+                                    <?php if($projet->teaser): ?>
+                                    <div>
+
+                                        <dl>
+                                          <dt>Le Contexte</dt>
+                                          <dd><?= $projet->teaser->contexte ?></dd>
+                                          <dt>Problematique</dt>
+                                          <dd><?= $projet->teaser->problematique ?></dd>
+
+                                          <dt>LE MARCHE</dt>
+                                          <dd><?= $projet->teaser->marche ?></dd>
+                                        </dl>
+
+                                    </div>
+                                    <?php else: ?>
+                                        <div>
+                                            <p>Resume indisponible</p>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                <!-- /.row -->
+                               @if($projet->authorized)
+                                <button data-token="{{$projet->token}}" data-name="<?= $projet->name ?>" data-toggle="modal" data-target="#IpM" class="btn btn-block btn-outline-success btn-xs btn-p"><i class="fas fa-heart"></i> CE PROJET M'INTERESSE</button>
+                              @else
+                                <span class="btn-block btn-danger btn">DOSSIER DEJA OUVERT</span>
+                              @endif
+
+                              </div>
+                            </div>
+                            <!-- /.widget-user -->
+                        </div>
+                    @endforeach
+                </div>
+                    <ul class="pagination justify-content-end">
+                        {{ $projets->links() }}
+                    </ul>
+
+                </div>
 
 
-                      <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/owner/projets/{{ $projet->token  }}">
-                              <i class="fas fa-folder">
-                              </i>
-                              Afficher
-                          </a>
+                </div>
 
-
-                      </td>
-                        </tr>
-                   @endforeach
-              </tbody>
-          </table>
-        </div>
-        <!-- /.card-body -->
-      </div>
-
-        <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
-        <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-
-
-
-
-        <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
-        <!-- DataTables -->
-        <script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-        <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
-        <script>
-          $(function () {
-
-            $('#table-projets').DataTable({
-              "paging": true,
-              "lengthChange": false,
-
-              "ordering": true,
-              "info": true,
-              "autoWidth": false
-            });
-          });
-        </script>
 
      </div>
 
+      <div  class="modal fade" id="IpM">
+             <div class="modal-dialog modal-lg">
+                 <div class="modal-content">
+                   <div class="modal-header bg-success">
+                     <h4  class="modal-title project-title"></h4>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                   </div>
+                   <div class="modal-body">
+                         <form enctype="multipart/form-data" class="form" action="/angel/investissements/" method="post">
+                         {{csrf_field()}}
+
+                         <div class="">
+                                 <div class="stepwizard">
+                                     <div class="stepwizard-row setup-panel">
+                                         <div class="stepwizard-step">
+                                             <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                             <p>AVERTISSEMENT</p>
+                                         </div>
+                                         <div class="stepwizard-step">
+                                             <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                             <p>RESUME EXECUTIF</p>
+                                         </div>
+                                         <div class="stepwizard-step">
+                                             <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                             <p>RENCONTRE</p>
+                                         </div>
+
+
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="card-body">
+                                 <div class="">
+
+                                         <div class="setup-content" id="step-1">
+                                             <div class="alert alert-warning">
+
+                                                <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
+                                                Investir dans un actif est une prise de risque. <br> Nous recommandons aux investisseurs d’appliquer des règles de vigilance avant tout investissement : l'investissement dans des actifs comporte des risques de perte totale ou partielle du montant investi, risque d'illiquidité et risque opérationnel du projet pouvant entraîner une rentabilité moindre que prévue.
+                                                 N’investissez pas dans ce que vous ne comprenez pas parfaitement.
+                                              </div>
+                                              <div class="btn-div card-footer text-center">
+                                                     <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
+                                                     <button class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
+                                                 </div>
+                                         </div>
+
+                                          <div class="setup-content" id="step-2">
+                                             <div class="card">
+
+                                                 <div class="card-body">
+                                                    <div id="teaser-content"></div>
+                                                 </div>
+                                                 <div class="btn-div card-footer text-center">
+                                                     <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
+                                                     <button class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
+                                                 </div>
+                                             </div>
+
+                                          </div>
+                                          <div class="setup-content" id="step-3">
+                                             <div class="card">
+                                                 <div class="card-header">
+                                                      <h4>PROGRAMMER UNE RENCONTRE AVEC LE PORTEUR DE PROJET</h4>
+                                                 </div>
+                                                 <div class="card-body">
+                                                     <input type="date" name="dt_rdv" class="form-control"/>
+                                                 </div>
+                                                 <div class="btn-div card-footer text-center">
+                                                     <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
+                                                    <button id="btn-save" class="btn btn-success btn-sm"><i class="fa fa-save"></i> ENREGISTRER</button>
+                                                 </div>
+                                             </div>
+                                          </div>
+
+                                 </div>
+                             </div>
+                     </form>
+                   </div>
+
+                 </div>
+                 <!-- /.modal-content -->
+               </div>
+               <!-- /.modal-dialog -->
+         </div>
+
+
+         <script>
+             $('.btn-p').click(function(e){
+                 e.preventDefault();
+                 $('.project-title').text($(this).data('name'));
+                 var token = $(this).data('token');
+                 var teaser = $('#teaser-'+token).html();
+                 $('#teaser-content').html(teaser);
+             });
+         </script>
+
 @endsection
 
-@section('nav_actions')
-<main>
-    <nav class="floating-menu">
-        <ul class="main-menu">
-            <li>
-                <a title="Nouveau Dossier" href="/owner/projets/create" class="ripple">
-                    <i class="fa fa-plus-circle fa-lg"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="menu-bg"></div>
-    </nav>
-</main>
-
-@endsection

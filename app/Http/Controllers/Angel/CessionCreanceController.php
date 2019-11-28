@@ -19,7 +19,7 @@ class CessionCreanceController extends Controller
     public function index()
     {
         //
-	    $cessions = Cession::all()->where('creance_id >',0)->where('angel_id',Auth::user()->id)->sortBy('created_at',null,true);
+	    $cessions = Cession::all()->where('creance_id','>',0)->where('angel_id',Auth::user()->id)->sortBy('created_at',null,true);
 	    //dd($cessions);
 	    return view('Angel/Cessions/Creances/index')->with(compact('cessions'));
     }
