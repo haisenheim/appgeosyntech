@@ -20,13 +20,13 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                              <div style="top:40px" class="card card-widget widget-user position-relative">
                               <!-- Add the bg color to the header using any of the bg-* classes -->
                               <div class="widget-user-header text-white"
-                                   style="width: 60px;background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover">
+                                   style="background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover">
                                     <div class="ribbon-wrapper ribbon-xl">
                                         <div class="ribbon bg-success">
                                             <?= number_format( $projet->montant,0,',','.') ?> <sup> {{ $projet->devise->abb }} </sup>
                                         </div>
                                     </div>
-                                    <h3 style="font-weight: 900; font-size: 1rem" class="widget-user-username text-left p-1 bg-success"><?= $projet->name ?></h3>
+                                    <h3 style="font-weight: 900; font-size: 1rem" class="widget-user-username text-left p-1"><?= $projet->name ?></h3>
                                     <h5 style="font-weight: 700" class="widget-user-desc text-right">{{ $projet->owner->name }}</h5>
                               </div>
                               <div class="widget-user-image">
