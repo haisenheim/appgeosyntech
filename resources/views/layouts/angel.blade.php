@@ -34,7 +34,7 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-
+        <?php $active = \Illuminate\Support\Facades\Session::get('active'); //dd($slides); ?>
       <!-- Actions Dropdown Menu -->
       <li class="nav-item dropdown">
         @yield('nav_actions')
@@ -102,7 +102,7 @@
 
 
           <li class="nav-item">
-            <a href="/angel/dashboard" class="nav-link active">
+            <a href="/angel/dashboard" class="nav-link {{ $active?$active==1?'active':'':'active' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 TABLEAU DE BORD
@@ -112,7 +112,7 @@
           </li>
 
            <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ $active==2?'active':'' }}">
               <i class="nav-icon fas fa-cloud-sun text-bold text-info"></i>
               <p>
                  OPPORTUNITES
@@ -158,7 +158,7 @@
 
 
           <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ $active==3?'active':'' }}">
               <i class="nav-icon fas fa-coins text-warning"></i>
               <p>
                 MES INVESTISSEMENTS
@@ -202,7 +202,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="/consultant/porteurs" class="nav-link">
+            <a href="/angel/mailbox" class="nav-link {{ $active==4?'active':'' }}">
               <i class="nav-icon text-success fas fa-envelope "></i>
               <p>
                MESSAGERIE

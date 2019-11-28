@@ -17,6 +17,7 @@ class Angel
     public function handle($request, Closure $next)
     {
         if(Auth::user()->role_id != 4){
+	        dd($request);
             return redirect('/login');
         }
 
