@@ -24,7 +24,7 @@ class Angel
 	   // dd($request->path());
 	    $path = explode('/',$request->path());
 	    if(in_array('mailbox',$path)){
-		    Session::put('slides', 4);
+		    Session::put('active', 4);
 	    }
         return $next($request);
     }
