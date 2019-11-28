@@ -246,7 +246,7 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                                        timer: 5000
                                      });
                 $.ajax({
-                    url:'/angel/investissements/dossiers/',
+                    url:'/angel/investissements/projets/',
                     dataType:'json',
                     type:'get',
                     data:{token:$('#token').val(), dt_rdv:$('#rdv').val()},
