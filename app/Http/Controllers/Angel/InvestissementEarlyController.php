@@ -55,6 +55,7 @@ class InvestissementEarlyController extends Controller
 
 		   // $request->session()->flash('success','Votre investissement a été correctement initialisé !!!');
 	    }
+	    dd($inv);
 	    return response()->json($projet);
 	   // return back();
     }
