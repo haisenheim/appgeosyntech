@@ -2,261 +2,259 @@
 <html>
 @include('includes.head-tl3')
 
-<body class="layout-navbar-fixed">
+<body class="hold-transition sidebar-mini layout-fixed sidebar-collapse">
 <div class="wrapper">
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand navbar-dark navbar-success">
-    <div class="container">
-      <a href="#" class="navbar-brand">
-        <img src="{{asset('img/logo-obac.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-             style="opacity: .8">
-        <span class="brand-text font-weight-light">OBAC ALERT</span>
-      </a>
+  <nav class="main-header navbar navbar-expand navbar-dark navbar-success">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/angel/dashboard" class="nav-link">Accueil</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
 
-      <!-- Left navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">ACCUEIL</a>
-        </li>
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
 
-        <li class="nav-item dropdown">
-          <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">MES INVESTISSEMENTS</a>
-          <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
 
-            <!-- Level two dropdown-->
-            <li class="dropdown-submenu dropdown-hover">
-              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">LEVEE DE FONDS</a>
-              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                <li>
-                  <a tabindex="-1" href="/angel/investissements/dossiers" class="dropdown-item">PROJETS INDUSTRIELS ET DE SERVICE</a>
-                </li>
-                <li>
-                  <a tabindex="-1" href="/angel/investissements/projets" class="dropdown-item">PROJETS EN PHASE DE DEMARRAGE</a>
-                </li>
+      <!-- Actions Dropdown Menu -->
+      <li class="nav-item dropdown">
+        @yield('nav_actions')
+      </li>
 
-              </ul>
-            </li>
+   
 
+      <!-- Profil Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge  navbar-badge"> <img style="max-height: 20px; max-width: 20px;" src="<?= Auth::user()->imageUri?asset(Auth::user()->imageUri):asset('img/avatar.png') ?>" class="img-circle" alt="User Image"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <small style="font-size: 0.7rem" class="dropdown-item dropdown-header"><?= Auth::user()->name ?> - <?= Auth::user()->email ?></small>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-pencil-alt mr-2"></i> Mon Profil
 
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> Contacter OBAC
 
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="/logout" class="dropdown-item">
+            <i class="fas fa-switch-off mr-2"></i> Se Déconnecter
+          </a>
 
-
-            <!-- Level two dropdown-->
-            <li class="dropdown-submenu dropdown-hover">
-              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
-              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                <li>
-                  <a tabindex="-1" href="/angel/cessions/actifs" class="dropdown-item">CESSIONS D'ACTIFS</a>
-                </li>
-                <li>
-                  <a tabindex="-1" href="/angel/cessions/creances" class="dropdown-item">CESSIONS DE CREANCES</a>
-                </li>
-
-              </ul>
-            </li>
-            <!-- End Level two -->
-
-            <!-- Level two dropdown-->
-            <li class="dropdown-submenu dropdown-hover">
-              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">FINANCEMENTS STRUCTURES</a>
-              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                <li>
-                  <a tabindex="-1" href="/angel/concessions/partenariats" class="dropdown-item">Partenariats Public-Privé </a>
-                </li>
-                <li>
-                  <a tabindex="-1" href="#" class="dropdown-item">Ressources Naturelles</a>
-                </li>
-
-              </ul>
-            </li>
-
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">OPPORTUNITES D'INVESTISSEMENT</a>
-          <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-
-            <li class="dropdown-submenu dropdown-hover">
-              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">LEVEE DE FONDS</a>
-              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                <li>
-                  <a tabindex="-1" href="/angel/dossiers" class="dropdown-item">PROJETS INDUSTRIELS ET DE SERVICE</a>
-                </li>
-                <li>
-                  <a tabindex="-1" href="/angel/projets" class="dropdown-item">PROJETS EN PHASE DE DEMARRAGE</a>
-                </li>
-
-              </ul>
-            </li>
-
-            <li class="dropdown-submenu dropdown-hover">
-              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">CESSIONS</a>
-              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                <li>
-                  <a tabindex="-1" href="/angel/actifs" class="dropdown-item">CESSIONS D'ACTIFS</a>
-                </li>
-                <li>
-                  <a tabindex="-1" href="/angel/creances" class="dropdown-item">CESSIONS DE CREANCES</a>
-                </li>
-
-              </ul>
-            </li>
-
-            <li class="dropdown-submenu dropdown-hover">
-              <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">FINANCEMENTS STRUCTURES</a>
-              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                <li>
-                  <a tabindex="-1" href="/angel/partenariats" class="dropdown-item">Partenariats Pulic-Privé</a>
-                </li>
-                <li>
-                  <a tabindex="-1" href="#" class="dropdown-item">Ressources Naturelles</a>
-                </li>
-
-              </ul>
-            </li>
+        </div>
+      </li>
 
 
-          </ul>
-        </li>
-
-
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="/angel/mailbox" class="nav-link">MESSAGERIE</a>
-        </li>
-      </ul>
-
-
-    <?php
-        use \Illuminate\Support\Facades\Auth;
-     ?>
-       <!-- Right navbar links -->
-         <ul class="navbar-nav ml-auto">
-             <!-- Notifications Dropdown Menu -->
-                   <li class="nav-item dropdown">
-                     <a class="nav-link" data-toggle="dropdown" href="#">
-                       <i class="far fa-bell"></i>
-                       <span class="badge badge-warning navbar-badge">12</span>
-                     </a>
-                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                       <span class="dropdown-item dropdown-header">12 Notifications</span>
-                       <div class="dropdown-divider"></div>
-                       <a href="#" class="dropdown-item">
-                         <i class="fas fa-envelope mr-2"></i> 4 nouveaux projets
-                         <span class="float-right text-muted text-sm">3 mins</span>
-                       </a>
-                       <div class="dropdown-divider"></div>
-                       <a href="#" class="dropdown-item">
-                         <i class="fas fa-users mr-2"></i>8 cessions d'actifs
-                         <span class="float-right text-muted text-sm">12 hours</span>
-                       </a>
-
-
-                     </div>
-                   </li>
-
-               <!-- Actions Dropdown Menu -->
-               <li class="nav-item dropdown">
-                 @yield('nav_actions')
-               </li>
-               <!-- Profil Dropdown Menu -->
-               <li class="nav-item dropdown">
-                 <a class="nav-link" data-toggle="dropdown" href="#">
-                   <span class="badge  navbar-badge"> <img style="max-height: 20px; max-width: 20px;" src="<?= Auth::user()->imageUri?asset('img/'.Auth::user()->imageUri):asset('img/avatar.png') ?>" class="img-circle"></span>
-                 </a>
-                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                   <small style="font-size: 0.7rem" class="dropdown-item dropdown-header"><?= Auth::user()->name ?> - <?= Auth::user()->email ?></small>
-                   <div class="dropdown-divider"></div>
-                   <a href="#" class="dropdown-item">
-                     <i class="fas fa-pencil-alt mr-2"></i> Mon Profil
-                   </a>
-                   <div class="dropdown-divider"></div>
-                   <a href="/angel/tags" class="dropdown-item">
-                       <i class="far fa-circle text-info mr-2"></i>
-                       Mots Clefs
-                   </a>
-                   <div class="dropdown-divider"></div>
-                   <a href="#" class="dropdown-item">
-                     <i class="fas fa-envelope mr-2"></i> Contacter OBAC
-
-                   </a>
-                   <div class="dropdown-divider"></div>
-                   <a href="/logout" class="dropdown-item">
-                     <i class="fas fa-switch-off mr-2"></i> Se Déconnecter
-                   </a>
-
-
-
-                 </div>
-               </li>
-
-
-             </ul>
-    </div>
+    </ul>
   </nav>
   <!-- /.navbar -->
 
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar elevation-4 sidebar-light-success">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link navbar-success">
+      <img src="{{asset('img/logo-obac.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">OBAC ALERT</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="<?= Auth::user()->imageUri?asset(Auth::user()->imageUri):asset('img/avatar.png') ?>" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block"><?= Auth::user()->name ?></a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+
+          <li class="nav-item">
+            <a href="/angel/dashboard" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                TABLEAU DE BORD
+
+              </p>
+            </a>
+          </li>
+
+           <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cloud-sun text-bold text-info"></i>
+              <p>
+                 OPPORTUNITES
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/angel/dossiers" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>LEVEE DE FONDS</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="/angel/projets" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>EARLY STAGE</p>
+                </a>
+                </li>
+
+                <li class="nav-item">
+                <a href="/angel/actifs" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>CESSIONS D'ACTIFS</p>
+                </a>
+                </li>
+
+                <li class="nav-item">
+                <a href="/angel/creances" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>CESSIONS DE CREANCES</p>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a title="partenaiat public prive" href="/angel/partenariats" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>PPP</p>
+                </a>
+                </li>
+            </ul>
+          </li>
+
+
+
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-coins text-warning"></i>
+              <p>
+                MES INVESTISSEMENTS
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/angel/investissements/dossiers" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>LEVEE DE FONDS</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="/angel/investissements/projets" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>EARLY STAGE</p>
+                </a>
+                </li>
+
+                <li class="nav-item">
+                <a href="/angel/cessions/actifs" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>CESSIONS D'ACTIFS</p>
+                </a>
+                </li>
+
+                <li class="nav-item">
+                <a href="/angel/cessions/creances" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>CESSIONS DE CREANCES</p>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a title="partenaiat public prive" href="/angel/concessions/partenariats" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>PPP</p>
+                </a>
+                </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/consultant/porteurs" class="nav-link">
+              <i class="nav-icon text-success fas fa-envelope "></i>
+              <p>
+               MESSAGERIE
+              </p>
+            </a>
+          </li>
+
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
   <!-- Content Wrapper. Contains page content -->
-  <div class="">
-<div style="height: 300px;" class="content-header">
-            <?php $slides = \Illuminate\Support\Facades\Session::get('slides'); //dd($slides); ?>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div style="min-height: 300px; background: url('{{$slides['projet']->imageUri? asset('img/'.$slides['projet']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
-                            <div class="carousel-content">
-                                <div class="carousel-title">{{ $slides['projet']->name }}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div  class="carousel-item">
-                        <div style="min-height: 300px; background: url('{{$slides['actif']->imageUri? asset('img/'.$slides['actif']->imageUri):asset('img/logo-obac.png')}}'); background-size: cover">
-                            <div style=" " class="carousel-content">
-
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div style="height: 180px; " class="content-head bg-gradient-success">
+        <div>
+           <h1 style="margin-top: 3%" class="content-title text-center">@yield('page-title')</h1>
+             @yield('nav_actions')
+        </div>
      </div>
+    <!-- /.content-header -->
 
     <!-- Main content -->
     <section class="content">
+
        <div class="container">
             @include('includes.flash-message')
        </div>
-        <div style="">
+       <div class="">
             <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
-             @yield('content')
-        </div>
+            @yield('content')
+
+       </div>
+
     </section>
+    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
 
-
-   @include('includes.footer')
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
 </div>
+<!-- ./wrapper -->
 
-
+@include('includes.footer')
 </body>
 </html>
