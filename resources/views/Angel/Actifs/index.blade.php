@@ -20,10 +20,10 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
                     <div class="small-box">
 
                       <div class="inner">
-                        <h3>{{ $projet->prix }}<sup style="font-size: 20px">{{ $projet->devise->abb }}</sup></h3>
+                        <h3 style="font: 1rem;">{{ $projet->prix }}<sup style="font-size: 0.5rem">{{ $projet->devise->abb }}</sup></h3>
 
                         <p>{{ $projet->name }}</p>
-                        <img src="{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}" style="width: 100px; height: 100px; border-radius: 50px; position: absolute; top:15px; right: 10px"/>
+                        <img src="{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}" style="width: 60px; height: 60px; border-radius: 50px; position: absolute; top:15px; right: 2px"/>
                       </div>
 
                       <a data-token="{{ $projet->token }}" data-target="#viewModal" data-name="{{ $projet->name }}" data-toggle="modal" href="#" data-teaser="{{ $projet->teaser }}" class="small-box-footer btn-p">
@@ -52,7 +52,7 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
                 </button>
               </div>
               <div class="modal-body">
-                    <form enctype="multipart/form-data" class="form" action="/angel/cessions/" method="post">
+                    <form enctype="multipart/form-data" class="form" action="/angel/cessions/actifs" method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="token" id="token"/>
 

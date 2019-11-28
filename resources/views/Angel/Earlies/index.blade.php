@@ -219,7 +219,11 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
 
                  </div>
          <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
-
+         <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+                     <!-- SweetAlert2 -->
+             <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+                     <!-- Toastr -->
+             <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
          <script>
              $('.btn-p').click(function(e){
