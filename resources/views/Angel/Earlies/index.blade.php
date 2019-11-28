@@ -103,7 +103,7 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                      </button>
                    </div>
                    <div class="modal-body">
-                         <form enctype="multipart/form-data" class="form" action="/angel/investissements/" method="post">
+                         <form enctype="multipart/form-data" class="form" action="/angel/investissements/projets" method="post">
                          {{csrf_field()}}
 
                          <div class="">
@@ -121,6 +121,7 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                                              <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
                                              <p>RENCONTRE</p>
                                          </div>
+
 
 
                                      </div>
@@ -161,7 +162,8 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                                                       <h4>PROGRAMMER UNE RENCONTRE AVEC LE PORTEUR DE PROJET</h4>
                                                  </div>
                                                  <div class="card-body">
-                                                     <input type="date" name="dt_rdv" class="form-control"/>
+                                                     <input type="date" id="rdv" name="dt_rdv" class="form-control"/>
+                                                     <input type="hidden" id="token" />
                                                  </div>
                                                  <div class="btn-div card-footer text-center">
                                                      <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
@@ -180,6 +182,43 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                </div>
                <!-- /.modal-dialog -->
          </div>
+              <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+                 		<div class="modal-dialog modal-lg" role="document">
+                 			<div class="modal-content">
+                 				<div class="modal-body">
+                 					<div class="row">
+                 					    <div class="col-md-7 col-sm-12">
+                 					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                              </div>
+                 					    </div>
+                 					    <div class="col-md-5 col-sm-12">
+                                                 <ul class="" style="list-style: decimal">
+                                                     <li> Vous pouvez dès lors obtenir la confirmation de votre prise de rendez-vous
+                                                      en échangeant avec le porteur de projet sur l’onglet « messagerie ». </li>
+
+                                                     <li> A la suite de votre discussion et de votre rencontre avec le porteur de projet, n’hésitez pas à lui
+                                                     demander de vous donner accès à la « DATA ROOM » afin que vous puissiez analyser tous les éléments relatifs
+                                                     à son plan d’affaires.
+
+                                                     Vous retrouverez la « DATA ROOM » en cliquant sur l’onglet « Mes investissements » puis sur le dossier correspondant.</li>
+
+                                                     <li> Pour aller plus loin, après analyse des informations présentées dans la DATA ROOM, vous pourrez dès lors
+                                                     éditer une « lettre d’intention »</li>
+
+                                                 </ul>
+                                                 <a class="btn btn-success btn-block" href="/angel/investissements/projets">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+                 					    </div>
+                 					</div>
+                 				</div>
+
+
+                 			</div>
+                 		</div>
+
+                 </div>
+         <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 
 
          <script>
@@ -188,8 +227,38 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                  $('.project-title').text($(this).data('name'));
                  var token = $(this).data('token');
                  var teaser = $('#teaser-'+token).html();
+                 $('#token').val(token);
                  $('#teaser-content').html(teaser);
              });
+
+
+             $('#btn-save').click(function(e){
+                e.preventDefault();
+                var spinHandle_firstProcess = loadingOverlay.activate();
+                const Toast = Swal.mixin({
+                                       toast: true,
+                                       position: 'top-end',
+                                       showConfirmButton: false,
+                                       timer: 5000
+                                     });
+                $.ajax({
+                    url:'/angel/investissements/dossiers/',
+                    dataType:'json',
+                    type:'get',
+                    data:{token:$('#token').val(), dt_rdv:$('#rdv').val()},
+                    success:function(data){
+                        loadingOverlay.cancel(spinHandle_firstProcess);
+                                    Toast.fire({
+                                            type: 'success',
+                                            title: 'Demande initialisée succès!!!'
+                                          });
+                                          setTimeout(function() {
+                                            $('#popup').show();
+                                          },2000);
+                    }
+                });
+             });
+
          </script>
 
 @endsection

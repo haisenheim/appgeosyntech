@@ -60,7 +60,7 @@ MES INVESTISSEMENTS SUR LES PROJETS EN PHASE DE DEMARRAGE
           </table>
           <div>
             <ul class="pagination">
-                {{ $investissements->links(); }}
+                {{ $investissements->links() }}
             </ul>
           </div>
         </div>

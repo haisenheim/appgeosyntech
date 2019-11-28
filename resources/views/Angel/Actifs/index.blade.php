@@ -6,13 +6,14 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
 
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
-
-                <div class="row">
+            <div class="card">
+                <div class="card-body">
+                     <div class="row">
 
                     @foreach($dossiers as $projet)
 
 
-                     <div class="col-md-3 col-sm-12">
+                     <div class="col-md-2 col-sm-12">
 
 
                     <!-- small card -->
@@ -37,6 +38,9 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
                     @endforeach
 
                 </div>
+                </div>
+            </div>
+
             </div>
 <div  class="modal fade" id="viewModal">
         <div class="modal-dialog modal-lg">

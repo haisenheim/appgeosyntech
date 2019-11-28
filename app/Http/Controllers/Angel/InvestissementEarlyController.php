@@ -45,13 +45,15 @@ class InvestissementEarlyController extends Controller
 	    if($projet){
 		    $inv = Investissement::create([
 			    'rencontre'=>$request->dt_rdv,
-			    'projet_id'=>$projet->id,
+			    'earlie_id'=>$projet->id,
 			    'angel_id'=>Auth::user()->id,
 			    'entreprise_id'=>Auth::user()->entreprise_id,
 			    'organisme_id'=>Auth::user()->organisme_id,
 			    'token'=>sha1(Auth::user()->id . date('Yhmdis'))
 		    ]);
-		    $request->session()->flash('success','Votre investissement a été correctement initialisé !!!');
+
+		    return response()->json($projet);
+		   // $request->session()->flash('success','Votre investissement a été correctement initialisé !!!');
 	    }
 
 	    return back();
