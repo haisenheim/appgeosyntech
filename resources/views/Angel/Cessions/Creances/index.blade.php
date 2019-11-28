@@ -7,7 +7,7 @@ CESSIONS DE CREANCES
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
         <div class="card">
-        <div class="card-body p-0">
+        <div class="card-body p-15">
           <table class="table table-striped projects" id="table-projets">
               <thead>
                   <tr>
@@ -20,7 +20,7 @@ CESSIONS DE CREANCES
                       <th style="width: 20%">MONTANT</th>
                       <th>PRIX DE LA CESSION</th>
                       <th style="width: 20%">
-                          CONSULTANT
+                          CREANCIER
                       </th>
                       <th style="width: 20%">
                       </th>
@@ -29,7 +29,8 @@ CESSIONS DE CREANCES
               <tbody>
 
 
-                   @foreach($dossiers as $projet)
+                   @foreach($cessions as $cession)
+                        <?php $projet = $cession->creance ?>
                         <tr>
                             <td><span class="badge badge-<?= $projet->active?'success':'danger' ?>"><i class="fa fa-<?= $projet->active?'check-circle':'trash' ?>"></i></span></td>
                             <td>
@@ -39,10 +40,10 @@ CESSIONS DE CREANCES
                             <td>{{ number_format($projet->montant,0,',','.') }} <sup>{{$projet->devise->abb }}</sup></td>
                             <td>{{ number_format($projet->prix_cession,0,',','.') }} <sup>{{$projet->devise->abb }}</sup></td>
 
-                            <td>{{$projet->consultant?$projet->consultant->name:'-'}}</td>
+                            <td>{{$projet->owner?$projet->owner->name:'-'}}</td>
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/owner/creances/{{ $projet->token  }}">
+                          <a class="btn btn-primary btn-xs" href="/angel/cessions/creances/{{ $cession->token  }}">
                               <i class="fas fa-folder">
                               </i>
                               Afficher
@@ -54,7 +55,7 @@ CESSIONS DE CREANCES
           </table>
           <div>
             <ul class="pagination">
-                {{ $dossiers->links()  }}
+                {{ $cessions->links()  }}
             </ul>
           </div>
         </div>
@@ -64,18 +65,3 @@ CESSIONS DE CREANCES
 
 @endsection
 
-@section('nav_actions')
-<main>
-    <nav class="floating-menu">
-        <ul class="main-menu">
-            <li>
-                <a title="Nouveau Dossier" href="/owner/creances/create" class="ripple">
-                    <i class="fa fa-plus-circle fa-lg"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="menu-bg"></div>
-    </nav>
-</main>
-
-@endsection

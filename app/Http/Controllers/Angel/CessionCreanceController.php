@@ -9,7 +9,7 @@ use App\Models\Projet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class CessionController extends Controller
+class CessionCreanceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +19,9 @@ class CessionController extends Controller
     public function index()
     {
         //
-	    $cessions = Cession::all()->where('angel_id',Auth::user()->id)->sortBy('created_at',null,true);
+	    $cessions = Cession::all()->where('creance_id >',0)->where('angel_id',Auth::user()->id)->sortBy('created_at',null,true);
 	    //dd($cessions);
-	    return view('Angel/Cessions/index')->with(compact('cessions'));
+	    return view('Angel/Cessions/Creances/index')->with(compact('cessions'));
     }
 
     /**
@@ -47,13 +47,13 @@ class CessionController extends Controller
 	    if($projet){
 		    $inv = Cession::create([
 
-			    'actif_id'=>$projet->id,
+			    'creance_id'=>$projet->id,
 			    'angel_id'=>Auth::user()->id,
 			    'entreprise_id'=>Auth::user()->entreprise_id,
 			    'organisme_id'=>Auth::user()->organisme_id,
 			    'token'=>sha1(Auth::user()->id . date('Yhmdis'))
 		    ]);
-		    $request->session()->flash('success','Votre demande a été correctement initialisé !!!');
+		    $request->session()->flash('success','Votre demande a été correctement initialisée !!!');
 	    }
 
 	    return back();
@@ -65,9 +65,11 @@ class CessionController extends Controller
      * @param  \App\Models\Investissement  $investissement
      * @return \Illuminate\Http\Response
      */
-    public function show(Investissement $investissement)
+    public function show($token)
     {
         //
+	    $cession = Cession::where('token',$token)->first();
+	    return view('Angel/Cessions/Creances/show')->with(compact('cession'));
     }
 
     /**

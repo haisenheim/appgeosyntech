@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cession;
 use App\Models\Investissement;
 use App\Models\Projet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class InvestissementController extends Controller
+class CessionActifController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +19,9 @@ class InvestissementController extends Controller
     public function index()
     {
         //
-	    $investissements = Investissement::orderBy('created_at','desc')->where('angel_id',Auth::user()->id)->paginate(8);
-	    return view('Angel/Investissements/index')->with(compact('investissements'))->with('Liste des investissements');
+	    $cessions = Cession::all()->where('actif_id >',0)->where('angel_id',Auth::user()->id)->sortBy('created_at',null,true);
+	    //dd($cessions);
+	    return view('Angel/Cessions/Actifs/index')->with(compact('cessions'));
     }
 
     /**
@@ -41,17 +43,17 @@ class InvestissementController extends Controller
     public function store(Request $request)
     {
         //
-	    $projet = Projet::where('token',$request->token)->first();
+	    $projet = Cession::where('token',$request->token)->first();
 	    if($projet){
-		    $inv = Investissement::create([
-			    'rencontre'=>$request->dt_rdv,
-			    'projet_id'=>$projet->id,
+		    $inv = Cession::create([
+
+			    'actif_id'=>$projet->id,
 			    'angel_id'=>Auth::user()->id,
 			    'entreprise_id'=>Auth::user()->entreprise_id,
 			    'organisme_id'=>Auth::user()->organisme_id,
 			    'token'=>sha1(Auth::user()->id . date('Yhmdis'))
 		    ]);
-		    $request->session()->flash('success','Votre investissement a été correctement initialisé !!!');
+		    $request->session()->flash('success','Votre demande a été correctement initialisée !!!');
 	    }
 
 	    return back();
@@ -63,9 +65,11 @@ class InvestissementController extends Controller
      * @param  \App\Models\Investissement  $investissement
      * @return \Illuminate\Http\Response
      */
-    public function show(Investissement $investissement)
+    public function show($token)
     {
         //
+	    $cession = Cession::where('token',$token)->first();
+	    return view('Angel/Cessions/Actifs/show')->with(compact('cession'));
     }
 
     /**

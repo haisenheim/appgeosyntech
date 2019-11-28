@@ -1,6 +1,6 @@
 @extends('......layouts.angel')
-@section('content-header')
- <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">MES INVESTISSEMENTS</h3>
+@section('page-title')
+MES INVESTISSEMENTS SUR LES PROJETS EN PHASE DE DEMARRAGE
 @endsection
 
 @section('content')
@@ -8,11 +8,8 @@
 
 
         <div class="card">
-        <div class="card-header">
-            <h3>INVESTISSEMENTS SUR LES LEVEES DE FONDS </h3>
-        </div>
 
-        <div class="card-body p-0">
+        <div class="card-body p-0 table-responsive">
           <table class="table table-striped projects" id="table-projets">
               <thead>
                   <tr>
@@ -35,7 +32,7 @@
 
 
                    @foreach($investissements as $investissement)
-                        <?php $projet= $investissement->projet ?>
+                        <?php $projet= $investissement->earlie ?>
                         <tr>
                             <td>#</td>
                             <td>
@@ -48,7 +45,7 @@
 
                               <td class="project-actions text-right">
                                     @if($investissement->validated)
-                                          <a class="btn btn-success btn-xs" href="/angel/dossiers/{{ $investissement->token  }}">
+                                          <a class="btn btn-success btn-xs" href="/angel/investissements/projets/{{ $investissement->token  }}">
                                               <i class="fas fa-door-open">
                                               </i>
                                               Data room
@@ -61,36 +58,16 @@
                    @endforeach
               </tbody>
           </table>
+          <div>
+            <ul class="pagination">
+                {{ $investissements->links(); }}
+            </ul>
+          </div>
         </div>
         <!-- /.card-body -->
       </div>
 
-        <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
-        <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 
-
-
-
-        <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
-        <!-- DataTables -->
-        <script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-        <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
-        <script>
-          $(function () {
-
-            $('#table-projets').DataTable({
-              "paging": true,
-              "lengthChange": false,
-
-              "ordering": true,
-              "info": true,
-              "autoWidth": false
-            });
-          });
-        </script>
     </div>
 
 

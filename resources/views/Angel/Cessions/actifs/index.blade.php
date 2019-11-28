@@ -1,18 +1,16 @@
 @extends('......layouts.angel')
-@section('content-header')
- <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">INVESTISSEMENTS DANS LES CESSIONS D'ACTIFS</h3>
+@section('page-title')
+MES INVESTISSEMENTS DANS LES CESSIONS D'ACTIFS
 @endsection
 
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
 
         <div class="card">
-        <div class="card-header">
-            <h3>INVESTISSEMENTS DANS LES CESSIONS D'ACTIFS</h3>
-        </div>
 
-        <div class="card-body p-0">
-          <table class="table table-striped projects" id="table-projets">
+
+        <div class="card-body p-15 table-responsive">
+          <table class="table table-striped projects">
               <thead>
                   <tr>
                       <th style="width: 1%">
@@ -60,36 +58,16 @@
                    @endforeach
               </tbody>
           </table>
+          <div>
+            <ul class="pagination pagination-sm">
+                {{ $cessions->link() }}
+            </ul>
+          </div>
         </div>
         <!-- /.card-body -->
       </div>
 
-        <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
-        <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 
-
-
-
-        <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
-        <!-- DataTables -->
-        <script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-        <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
-        <script>
-          $(function () {
-
-            $('#table-projets').DataTable({
-              "paging": true,
-              "lengthChange": false,
-
-              "ordering": true,
-              "info": true,
-              "autoWidth": false
-            });
-          });
-        </script>
     </div>
 
 

@@ -26,6 +26,15 @@ class Angel
 	    if(in_array('mailbox',$path)){
 		    Session::put('active', 4);
 	    }
+	    if(in_array('investissements',$path)){
+		    Session::put('active', 3);
+	    }
+	    if(in_array('opportunites',$path)){
+		    Session::put('active', 2);
+	    }
+	    if(in_array('dashboard',$path)){
+		    Session::put('active', 1);
+	    }
         return $next($request);
     }
 }

@@ -13,6 +13,10 @@ class Cession extends Model
 		return $this->belongsTo('App\Models\Actif');
 	}
 
+	public function creance(){
+		return $this->belongsTo('App\Models\Creance');
+	}
+
 	public function comments(){
 		return $this->hasMany('App\Models\Comment');
 	}

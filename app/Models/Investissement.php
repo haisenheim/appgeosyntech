@@ -15,6 +15,10 @@ class Investissement extends Model
 		return $this->belongsTo('App\Models\Projet');
 	}
 
+	public function earlie(){
+		return $this->belongsTo('App\Models\Earlie');
+	}
+
 	public function angel(){
 		return $this->belongsTo('App\User','angel_id');
 	}

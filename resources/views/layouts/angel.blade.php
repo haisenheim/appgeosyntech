@@ -113,7 +113,7 @@
 
            <li  class="nav-item has-treeview">
             <a href="#" class="nav-link {{ $active==2?'active':'' }}">
-              <i class="nav-icon fas fa-cloud-sun text-bold text-info"></i>
+              <i class="nav-icon fas fa-cloud-sun text-warning"></i>
               <p>
                  OPPORTUNITES
                 <i class="fas fa-angle-left right"></i>
@@ -121,33 +121,33 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/angel/dossiers" class="nav-link">
+                  <a href="/angel/opportunites/dossiers" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
                     <p>LEVEE DE FONDS</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/angel/projets" class="nav-link">
+                <a href="/angel/opportunites/projets" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>EARLY STAGE</p>
                 </a>
                 </li>
 
                 <li class="nav-item">
-                <a href="/angel/actifs" class="nav-link">
+                <a href="/angel/opportunites/actifs" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>CESSIONS D'ACTIFS</p>
                 </a>
                 </li>
 
                 <li class="nav-item">
-                <a href="/angel/creances" class="nav-link">
+                <a href="/angel/opportunites/creances" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>CESSIONS DE CREANCES</p>
                 </a>
                 </li>
                 <li class="nav-item">
-                <a title="partenaiat public prive" href="/angel/partenariats" class="nav-link">
+                <a title="partenaiat public prive" href="/angel/opportunites/partenariats" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>PPP</p>
                 </a>
@@ -159,7 +159,7 @@
 
           <li  class="nav-item has-treeview">
             <a href="#" class="nav-link {{ $active==3?'active':'' }}">
-              <i class="nav-icon fas fa-coins text-warning"></i>
+              <i class="nav-icon fas fa-coins"></i>
               <p>
                 MES INVESTISSEMENTS
                 <i class="fas fa-angle-left right"></i>
@@ -180,20 +180,20 @@
                 </li>
 
                 <li class="nav-item">
-                <a href="/angel/cessions/actifs" class="nav-link">
+                <a href="/angel/investissements/actifs" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>CESSIONS D'ACTIFS</p>
                 </a>
                 </li>
 
                 <li class="nav-item">
-                <a href="/angel/cessions/creances" class="nav-link">
+                <a href="/angel/investissements/creances" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>CESSIONS DE CREANCES</p>
                 </a>
                 </li>
                 <li class="nav-item">
-                <a title="partenaiat public prive" href="/angel/concessions/partenariats" class="nav-link">
+                <a title="partenaiat public prive" href="/angel/investissements/partenariats" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>PPP</p>
                 </a>
@@ -203,7 +203,7 @@
 
           <li class="nav-item">
             <a href="/angel/mailbox" class="nav-link {{ $active==4?'active':'' }}">
-              <i class="nav-icon text-success fas fa-envelope "></i>
+              <i class="nav-icon text-warning fas fa-envelope "></i>
               <p>
                MESSAGERIE
               </p>

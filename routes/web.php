@@ -135,20 +135,20 @@ Route::prefix('angel')
 	    Route::post('/letter/','DossierController@saveLetter');
 	    Route::post('/comment/save','DossierController@addComment');
 
-	     Route::resource('dossiers','DossierController');
-	    Route::resource('actifs','ActifController');
-	    Route::resource('creances','CreanceController');
-	    Route::resource('partenariats','InfrastructureController');
-	    Route::resource('projets','EarlyController');
-	    Route::resource('ressources','RessourceController');
+	     Route::resource('opportunites/dossiers','DossierController');
+	    Route::resource('opportunites/actifs','ActifController');
+	    Route::resource('opportunites/creances','CreanceController');
+	    Route::resource('opportunites/partenariats','InfrastructureController');
+	    Route::resource('opportunites/projets','EarlyController');
+	    Route::resource('opportunites/ressources','RessourceController');
 
         //Route::resource('opportunites','OpportuniteController');
-        Route::resource('investissements/projets','EinvestissementController');
-	    Route::resource('investissements/dossiers','DinvestissementController');
-	    Route::resource('cessions/actifs','AcessionController');
-	    Route::resource('cessions/creances','CcessionController');
-	    Route::resource('concessions/partenariats','PconcessionController');
-	    Route::resource('concessions/ressources','RconcessionController');
+        Route::resource('investissements/projets','InvestissementEarlyController');
+	    Route::resource('investissements/dossiers','InvestissementDossierController');
+	    Route::resource('investissements/actifs','CessionActifController');
+	    Route::resource('investissements/creances','CessionCreanceController');
+	    Route::resource('investissements/partenariats','ConcessionInfrastructureController');
+	    Route::resource('investissements/ressources','ConcessionRessourceController');
 
         Route::resource('alertes','AlerteController');
         Route::get('profil','ProfilController');
