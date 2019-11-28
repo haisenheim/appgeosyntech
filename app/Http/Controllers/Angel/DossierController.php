@@ -24,7 +24,10 @@ class DossierController extends Controller
      */
     public function index()
     {
-       return back();
+	    $projets = Projet::orderBy('created_at','desc')->where('etape',4)->where('validated_step',4)->paginate(12);
+
+
+	    return view('/Angel/Dossiers/index')->with(compact('projets'));
     }
 
     /**
