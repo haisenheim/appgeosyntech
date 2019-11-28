@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Angel/Actifs/index__.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Angel/CessionActifController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Angel/CessionActifController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Angel/CessionCreanceController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Angel/CessionCreanceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementEarlyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementEarlyController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Actifs/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Dossiers/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Dossiers/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Earlies/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Earlies/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Actifs/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Actifs/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -44,16 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Angel/Cessions/Creances/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-42.88" vertical-offset="0" max-vertical-offset="1168">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Cessions/Actifs/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Earlies/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9232614" vertical-offset="2671" max-vertical-offset="3216">
+            <state vertical-scroll-proportion="-15.4" vertical-offset="2671" max-vertical-offset="3216">
               <caret line="191" column="18" selection-start-line="191" selection-start-column="18" selection-end-line="191" selection-end-column="18" />
               <folding>
                 <element signature="e#759#887#0#HTML" expanded="true" />
@@ -100,6 +80,16 @@
                 <element signature="e#1996#2024#0#HTML" expanded="true" />
                 <element signature="e#2470#2491#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EarlyController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/EarlyController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.83488375" vertical-offset="5801" max-vertical-offset="6256">
+              <caret line="404" column="0" selection-start-line="404" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -949,16 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/EarlyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7945204" vertical-offset="6114" max-vertical-offset="6560">
-          <caret line="404" column="0" selection-start-line="404" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#82#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.56" vertical-offset="0" max-vertical-offset="432">
@@ -1225,7 +1205,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Earlies/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9232614" vertical-offset="2671" max-vertical-offset="3216">
+        <state vertical-scroll-proportion="-15.4" vertical-offset="2671" max-vertical-offset="3216">
           <caret line="191" column="18" selection-start-line="191" selection-start-column="18" selection-end-line="191" selection-end-column="18" />
           <folding>
             <element signature="e#759#887#0#HTML" expanded="true" />
@@ -1234,6 +1214,14 @@
             <element signature="e#1996#2024#0#HTML" expanded="true" />
             <element signature="e#2470#2491#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/EarlyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83488375" vertical-offset="5801" max-vertical-offset="6256">
+          <caret line="404" column="0" selection-start-line="404" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

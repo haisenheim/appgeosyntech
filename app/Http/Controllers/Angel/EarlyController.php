@@ -33,8 +33,8 @@ class EarlyController extends Controller
     public function index()
     {
         //
-        $dossiers = Earlie::orderBy('created_at','desc')->paginate(12);
-        return view('/Angel/Earlies/index')->with(compact('dossiers'));
+        $projets = Earlie::orderBy('created_at','desc')->paginate(12);
+        return view('/Angel/Earlies/index')->with(compact('projets'));
     }
 
 	public function getChoicesJson(Request $request){
