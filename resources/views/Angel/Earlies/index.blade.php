@@ -248,8 +248,8 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                 $.ajax({
                     url:'/angel/investissements/projets/',
                     dataType:'json',
-                    type:'get',
-                    data:{token:$('#token').val(), dt_rdv:$('#rdv').val()},
+                    type:'post',
+                    data:{_csrf:$('input[name="_token"]').val(),token:$('#token').val(), dt_rdv:$('#rdv').val()},
                     success:function(data){
                         loadingOverlay.cancel(spinHandle_firstProcess);
                                     Toast.fire({
