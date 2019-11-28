@@ -35,7 +35,13 @@ class MessageController extends Controller
 
 		    $invests = Investissement::all()->where('angel_id',Auth::user()->id);
 		    foreach($invests as $inv){
-			    $users = $users->add($inv->projet->owner);
+			    if($inv->projet){
+				    $users = $users->add($inv->projet->owner);
+			    }
+			    if($inv->earlie){
+				    $users = $users->add($inv->earlie->owner);
+			    }
+
 		    }
 
 
