@@ -188,12 +188,12 @@ DOSSIERS DE PROJETS EN PHASE DE DEMARRAGE
                  			<div class="modal-content">
                  				<div class="modal-body">
                  					<div class="row">
-                 					    <div class="col-md-7 col-sm-12">
+                 					    <div class="col-md-5 col-sm-12">
                  					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
 
                                               </div>
                  					    </div>
-                 					    <div class="col-md-5 col-sm-12">
+                 					    <div class="col-md-7 col-sm-12">
                                                  <ul class="" style="list-style: decimal">
                                                      <li> Vous pouvez dès lors obtenir la confirmation de votre prise de rendez-vous
                                                       en échangeant avec le porteur de projet sur l’onglet « messagerie ». </li>

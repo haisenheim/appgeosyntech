@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Earlie;
 use App\Models\Investissement;
 use App\Models\Projet;
 use Illuminate\Http\Request;
@@ -41,7 +42,7 @@ class InvestissementEarlyController extends Controller
     public function store(Request $request)
     {
         //
-	    $projet = Projet::where('token',$request->token)->first();
+	    $projet = Earlie::where('token',$request->token)->first();
 	    if($projet){
 		    $inv = Investissement::create([
 			    'rencontre'=>$request->dt_rdv,
