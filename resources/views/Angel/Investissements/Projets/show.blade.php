@@ -2144,14 +2144,7 @@
                  <form enctype="multipart/form-data" class="form" action="/angel/letter/" method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="token" value="{{ $investissement->token }}"/>
-                    <div style="font-weight: bold; width:300px" class="form-group">
-                        <label for="devise_id">CHOIX DE LA DEVISE</label>
-                        <select class="form-control" name="devise_id" id="devise_id">
-                            @foreach($devises as $devise)
-                                <option value="{{ $devise->id }}">{{ $devise->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+
                     <p>La présente lettre d’intention décrit les principales conditions et modalités selon lesquelles l’investissement envisagé dans la société <span style="font-weight: bold"> {{ $investissement->projet->owner->name }} </span>  pourrait être réalisé. </p>
                     <p>Elle ne constitue en aucun cas un engagement ferme et irrévocable des parties de procéder à cet investissement. </p>
                     <p>Cette lettre d’intention a été préparée sur la base et en l’état des informations reçues de la Société à ce jour,

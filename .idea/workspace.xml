@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Creances/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Creances/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvestissementDossierController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InvestissementDossierController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.24" vertical-offset="1009" max-vertical-offset="1744">
-              <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.1336117" vertical-offset="992" max-vertical-offset="1760">
+              <caret line="71" column="96" selection-start-line="71" selection-start-column="96" selection-end-line="71" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -80,17 +80,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="38256">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-17.36" vertical-offset="34494" max-vertical-offset="38144">
+              <caret line="2183" column="34" selection-start-line="2183" selection-start-column="34" selection-end-line="2183" selection-end-column="34" />
               <folding>
-                <marker date="1574006180288" expanded="false" signature="160304:160343" placeholder="..." />
-                <marker date="1574006180288" expanded="false" signature="164601:164611" placeholder="..." />
-                <marker date="1574006180288" expanded="false" signature="164669:164679" placeholder="..." />
-                <marker date="1574006180288" expanded="false" signature="164738:164748" placeholder="..." />
-                <marker date="1574006180288" expanded="false" signature="164822:164832" placeholder="..." />
+                <marker date="1574960672286" expanded="false" signature="159807:159846" placeholder="..." />
+                <marker date="1574960672286" expanded="false" signature="164104:164114" placeholder="..." />
+                <marker date="1574960672286" expanded="false" signature="164172:164182" placeholder="..." />
+                <marker date="1574960672286" expanded="false" signature="164241:164251" placeholder="..." />
+                <marker date="1574960672286" expanded="false" signature="164325:164335" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -175,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/Admin/Creances/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Infrastructures/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/InfrastructureController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Infrastructures/show.blade.php" />
@@ -223,9 +222,10 @@
         <option value="$PROJECT_DIR$/app/Models/Projet.php" />
         <option value="$PROJECT_DIR$/app/Models/Actif.php" />
         <option value="$PROJECT_DIR$/app/Models/Creance.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Angel/MessageController.php" />
         <option value="$PROJECT_DIR$/resources/views/Angel/Creances/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php" />
       </list>
     </option>
   </component>
@@ -1139,14 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.24" vertical-offset="1009" max-vertical-offset="1744">
-          <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/MessageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.12" vertical-offset="289" max-vertical-offset="2160">
@@ -1165,15 +1157,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="38256">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.36" vertical-offset="34494" max-vertical-offset="38144">
+          <caret line="2183" column="34" selection-start-line="2183" selection-start-column="34" selection-end-line="2183" selection-end-column="34" />
           <folding>
-            <marker date="1574006180288" expanded="false" signature="160304:160343" placeholder="..." />
-            <marker date="1574006180288" expanded="false" signature="164601:164611" placeholder="..." />
-            <marker date="1574006180288" expanded="false" signature="164669:164679" placeholder="..." />
-            <marker date="1574006180288" expanded="false" signature="164738:164748" placeholder="..." />
-            <marker date="1574006180288" expanded="false" signature="164822:164832" placeholder="..." />
+            <marker date="1574960672286" expanded="false" signature="159807:159846" placeholder="..." />
+            <marker date="1574960672286" expanded="false" signature="164104:164114" placeholder="..." />
+            <marker date="1574960672286" expanded="false" signature="164172:164182" placeholder="..." />
+            <marker date="1574960672286" expanded="false" signature="164241:164251" placeholder="..." />
+            <marker date="1574960672286" expanded="false" signature="164325:164335" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1336117" vertical-offset="992" max-vertical-offset="1760">
+          <caret line="71" column="96" selection-start-line="71" selection-start-column="96" selection-end-line="71" selection-end-column="96" />
+          <folding />
         </state>
       </provider>
     </entry>

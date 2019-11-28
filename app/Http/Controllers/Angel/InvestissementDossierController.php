@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Angel;
 use App\Http\Controllers\Controller;
 use App\Models\Investissement;
 use App\Models\Projet;
+use App\Models\Tletrre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -66,8 +67,9 @@ class InvestissementDossierController extends Controller
     public function show($token)
     {
         //
+	    $formes =Tletrre::all();
 	    $investissement = Investissement::where('token',$token)->first();
-	    return view('Angel/Investissements/Projets/show')->with(compact('investissement'));
+	    return view('Angel/Investissements/Projets/show')->with(compact('investissement','formes'));
 
     }
 
