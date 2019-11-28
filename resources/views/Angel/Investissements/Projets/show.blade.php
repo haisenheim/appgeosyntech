@@ -2114,6 +2114,7 @@
 
                 </div>
                 </div>
+            </div>
             <div class="col-12 col-md-3 col-lg-3 order-1 order-md-2">
               <div style="max-height: 240px; max-width: 300px">
                   @if($projet->imageUri)
