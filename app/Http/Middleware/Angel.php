@@ -20,7 +20,8 @@ class Angel
 
             return redirect('/login');
         }
-	    dd($request);
+	    dd($request->path());
+	    $path = $request->path();
         return $next($request);
     }
 }
