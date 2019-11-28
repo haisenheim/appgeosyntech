@@ -40,8 +40,8 @@ CESSIONS DE CREANCES
                             <td>{{$projet->owner?$projet->owner->name:'-'}}</td>
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/angel/creances/{{ $projet->token  }}">
-                              <i class="fas fa-folder">
+                          <a class="btn btn-success btn-xs" href="/angel/opportunites/creances/{{ $projet->token  }}">
+                              <i class="fas fa-search-plus">
                               </i>
                               Afficher
                           </a>
