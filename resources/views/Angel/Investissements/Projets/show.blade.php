@@ -2106,7 +2106,7 @@
                     </div>
                     @if($investissement->lettre)
                     <div class="col-md-2">
-                        <a class="btn btn-outline btn-block btn-sm btn-danger" id="btn-doc" data-target="#DocModal" data-toggle="modal" href="#"> <i class="fas fa-file-pdf"></i> Editer la lettre d'intention </a>
+                        <a class="btn btn-outline btn-block btn-sm btn-danger" id="btn-doc" data-target="#DocModal" data-toggle="modal" href="#"> <i class="fas fa-file-pdf"></i> Charger la documentation juridique </a>
                     </div>
                     @endif
 

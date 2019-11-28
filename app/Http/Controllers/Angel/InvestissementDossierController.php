@@ -50,28 +50,8 @@ class InvestissementDossierController extends Controller
 
 		}
 
-		$pret = $request->pret;
-		if($pret){
-			$ext = $pret->getClientOriginalExtension();
-			$arr_ext = array('doc','docx','pdf','odt');
-			if(in_array($ext,$arr_ext)){
-				if(!file_exists(public_path('files'))){
-					mkdir(public_path('files'));
-				}
-				if (!file_exists(public_path('files/contrats_pret'))) {
-					mkdir(public_path('files/contrats_pret'));
-				}
 
-				if (file_exists(public_path('files/contrats_pret/') . $projet->token.'.' . $ext)) {
-					unlink(public_path('files/contrats_pret/') . $projet->token .  '.' . $ext);
-				}
-				$name =  $projet->token .'.'. $ext;
-				$pret->move(public_path('files/contrats_pret'), $name);
-				Projet::updateOrCreate(['token'=>$projet->token],['contrat_pretUri'=>$name]);
-			}
-
-		}
-		return back();
+		return response()->json($projet);
 
 	}
     /**
