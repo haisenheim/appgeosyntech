@@ -9,9 +9,6 @@ class Lettre extends Model
     //
 	protected $guarded =['id'];
 
-	public function devise(){
-		return $this->belongsTo('App\Models\Devise');
-	}
 
 	public function angel(){
 		return $this->belongsTo('App\Models\User','angel_id');

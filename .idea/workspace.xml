@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvestissementDossierController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InvestissementDossierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1336117" vertical-offset="992" max-vertical-offset="1760">
-              <caret line="71" column="96" selection-start-line="71" selection-start-column="96" selection-end-line="71" selection-end-column="96" />
+            <state vertical-scroll-proportion="-7.68" vertical-offset="992" max-vertical-offset="1760">
+              <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -80,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.36" vertical-offset="34494" max-vertical-offset="38144">
-              <caret line="2183" column="34" selection-start-line="2183" selection-start-column="34" selection-end-line="2183" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.034334764" vertical-offset="36592" max-vertical-offset="38144">
+              <caret line="2288" column="34" selection-start-line="2288" selection-start-column="34" selection-end-line="2288" selection-end-column="34" />
               <folding>
                 <marker date="1574960672286" expanded="false" signature="159807:159846" placeholder="..." />
                 <marker date="1574960672286" expanded="false" signature="164104:164114" placeholder="..." />
@@ -583,10 +583,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22284909" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22284909" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1155,10 +1155,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.68" vertical-offset="992" max-vertical-offset="1760">
+          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.36" vertical-offset="34494" max-vertical-offset="38144">
-          <caret line="2183" column="34" selection-start-line="2183" selection-start-column="34" selection-end-line="2183" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.034334764" vertical-offset="36592" max-vertical-offset="38144">
+          <caret line="2288" column="34" selection-start-line="2288" selection-start-column="34" selection-end-line="2288" selection-end-column="34" />
           <folding>
             <marker date="1574960672286" expanded="false" signature="159807:159846" placeholder="..." />
             <marker date="1574960672286" expanded="false" signature="164104:164114" placeholder="..." />
@@ -1166,14 +1174,6 @@
             <marker date="1574960672286" expanded="false" signature="164241:164251" placeholder="..." />
             <marker date="1574960672286" expanded="false" signature="164325:164335" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Angel/InvestissementDossierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1336117" vertical-offset="992" max-vertical-offset="1760">
-          <caret line="71" column="96" selection-start-line="71" selection-start-column="96" selection-end-line="71" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>

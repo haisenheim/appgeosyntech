@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Flettre;
 use App\Models\Investissement;
 use App\Models\Projet;
 use App\Models\Tletrre;
@@ -67,7 +68,7 @@ class InvestissementDossierController extends Controller
     public function show($token)
     {
         //
-	    $formes =Tletrre::all();
+	    $formes =Flettre::all();
 	    $investissement = Investissement::where('token',$token)->first();
 	    return view('Angel/Investissements/Projets/show')->with(compact('investissement','formes'));
 
