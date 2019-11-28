@@ -1,4 +1,7 @@
 @extends('......layouts.angel')
+@section('page-title')
+{{ $investissement->projet->name }}
+@endsection
 @section('content')
 
 
