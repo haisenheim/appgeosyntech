@@ -2172,6 +2172,12 @@
           </div>
           <!-- /.modal-dialog -->
     </div>
+    <script>
+        $('#closemsg').click(function(e){
+            e.preventDefault();
+            $('#msg').hide();
+        });
+    </script>
 
        <div  class="modal fade" id="DocModal">
         <div class="modal-dialog modal-lg">
@@ -2303,7 +2309,7 @@
          		<div class="modal-content">
          		    <div class="modal-header bg-success">
                     <h4></h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button id="closemsg" type="button" class="close" data-dismiss="modal" aria-label="Close">
                          <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
