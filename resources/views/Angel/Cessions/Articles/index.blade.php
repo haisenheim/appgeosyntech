@@ -58,11 +58,7 @@ MES INVESTISSEMENTS DANS LES CESSIONS D'ACTIFS
                    @endforeach
               </tbody>
           </table>
-          <div>
-            <ul class="pagination pagination-sm">
-                {{ $cessions->link() }}
-            </ul>
-          </div>
+
         </div>
         <!-- /.card-body -->
       </div>

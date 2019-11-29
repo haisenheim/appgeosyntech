@@ -20,8 +20,8 @@ class CessionActifController extends Controller
     public function index()
     {
         //
-	   // $cessions = Cession::all()->where('actif_id','>',0)->where('angel_id',Auth::user()->id)->sortBy('created_at',null,true);
-	    $cessions = Cession::orderBy('created_at','desc')->where('actif_id','>',0)->where('angel_id',Auth::user()->id)->paginate(10);
+	    $cessions = Cession::all()->where('actif_id','>',0)->where('angel_id',Auth::user()->id)->sortBy('created_at',null,true);
+	   // $cessions = Cession::orderBy('created_at','desc')->where('actif_id','>',0)->where('angel_id',Auth::user()->id);
 	    //dd($cessions);
 	    return view('Angel/Cessions/Articles/index')->with(compact('cessions'));
     }
