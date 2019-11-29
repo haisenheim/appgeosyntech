@@ -2297,6 +2297,42 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="msg" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+         	<div class="modal-dialog modal-lg" role="document">
+         		<div class="modal-content">
+         		    <div class="modal-header bg-success">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+         			<div class="modal-body">
+         				<div class="row">
+         				    <div class="col-md-5 col-sm-12">
+         				         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                   </div>
+         				    </div>
+         				    <div class="col-md-7 col-sm-12">
+                                 <p> Félicitations ! Vous êtes sur le point de clôturer votre opération. </p>
+                                 <p>  Afin de procéder à votre investissement, nous vous invitons à effectuer un virement ou un dépôt sur le numéro de compte suivant : </p>
+                                 <ul>
+                                    <li>Code Banque : 30014</li>
+                                    <li>Code Guichet : 00001</li>
+                                    <li> Numéro de compte : 01206971401</li>
+                                    <li>Clé RIB : 80</li>
+                                 </ul>
+
+         				    </div>
+         				</div>
+         			</div>
+
+
+         		</div>
+         	</div>
+
+         </div>
 
 
 
@@ -2337,9 +2373,6 @@
              }
 
            },2000);
-
-
-
 
 
             $.ajax({
@@ -2541,42 +2574,7 @@
 
      </div>
 
-      <div class="modal" id="msg" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
 
-     	<div class="modal-dialog modal-lg" role="document">
-     		<div class="modal-content">
-     		    <div class="modal-header bg-success">
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-     			<div class="modal-body">
-     				<div class="row">
-     				    <div class="col-md-5 col-sm-12">
-     				         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
-
-                               </div>
-     				    </div>
-     				    <div class="col-md-7 col-sm-12">
-                             <p> Félicitations ! Vous êtes sur le point de clôturer votre opération. </p>
-                             <p>  Afin de procéder à votre investissement, nous vous invitons à effectuer un virement ou un dépôt sur le numéro de compte suivant : </p>
-                             <ul>
-                                <li>Code Banque : 30014</li>
-                                <li>Code Guichet : 00001</li>
-                                <li> Numéro de compte : 01206971401</li>
-                                <li>Clé RIB : 80</li>
-                             </ul>
-
-     				    </div>
-     				</div>
-     			</div>
-
-
-     		</div>
-     	</div>
-
-     </div>
     <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 
 
