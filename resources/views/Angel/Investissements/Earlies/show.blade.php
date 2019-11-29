@@ -274,7 +274,7 @@
 
 
             $.ajax({
-                url: "/angel/opportunites/dossier/getchoices",
+                url: "/angel/opportunites/projet/getchoices",
                 type:'Get',
                 dataType:'json',
                 data:{id:$('#id').val()},
@@ -555,7 +555,7 @@
 
 
                    $.ajax({
-                       url:'/angel/investissement/dossier/doc',
+                       url:'/angel/investissement/projet/doc',
                        dataType:'json',
                        type:'post',
                         enctype:'multipart/form-data',
@@ -602,7 +602,7 @@
 
 
                    $.ajax({
-                       url:'/angel/investissement/dossier/justificatif',
+                       url:'/angel/investissement/projet/justificatif',
                        dataType:'json',
                        type:'post',
                         enctype:'multipart/form-data',
