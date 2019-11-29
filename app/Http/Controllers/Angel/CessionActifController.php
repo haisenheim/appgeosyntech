@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Actif;
 use App\Models\Cession;
 use App\Models\Investissement;
 use App\Models\Projet;
@@ -43,7 +44,7 @@ class CessionActifController extends Controller
     public function store(Request $request)
     {
         //
-	    $projet = Cession::where('token',$request->token)->first();
+	    $projet = Actif::where('token',$request->token)->first();
 	    if($projet){
 		    $inv = Cession::create([
 
@@ -53,10 +54,10 @@ class CessionActifController extends Controller
 			    'organisme_id'=>Auth::user()->organisme_id,
 			    'token'=>sha1(Auth::user()->id . date('Yhmdis'))
 		    ]);
-		    $request->session()->flash('success','Votre demande a été correctement initialisée !!!');
+		   // $request->session()->flash('success','Votre demande a été correctement initialisée !!!');
 	    }
 
-	    return back();
+	    return response()->json($projet);
     }
 
     /**

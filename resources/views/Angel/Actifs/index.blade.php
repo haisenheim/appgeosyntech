@@ -97,7 +97,7 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
                                             </div>
                                             <div class="btn-div card-footer text-center">
                                                 <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
-                                               <button id="btn-save" class="btn btn-success btn-sm"><i class="fa fa-save"></i> ENREGISTRER</button>
+                                               <button id="btn-save" class="btn btn-success btn-sm"><i class="fa fa-check-circle"></i> VALIDER</button>
                                             </div>
                                         </div>
                                      </div>
@@ -112,6 +112,47 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
           </div>
           <!-- /.modal-dialog -->
     </div>
+    <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+                     <!-- SweetAlert2 -->
+    <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+                     <!-- Toastr -->
+    <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
+
+    <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-12">
+                             <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                             </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12">
+                                <ul class="" style="list-style: decimal">
+                                    <li> Vous pouvez dès lors obtenir la confirmation de votre prise de rendez-vous
+                                     en échangeant avec le porteur de projet sur l’onglet « messagerie ». </li>
+
+                                    <li> A la suite de votre discussion et de votre rencontre avec le porteur de projet, n’hésitez pas à lui
+                                    demander de vous donner accès à la « DATA ROOM » afin que vous puissiez analyser tous les éléments relatifs
+                                    à son plan d’affaires.
+
+                                    Vous retrouverez la « DATA ROOM » en cliquant sur l’onglet « Mes investissements » puis sur le dossier correspondant.</li>
+
+                                    <li> Pour aller plus loin, après analyse des informations présentées dans la DATA ROOM, vous pourrez dès lors
+                                    éditer une « lettre d’intention »</li>
+
+                                </ul>
+                                <a class="btn btn-success btn-block" href="/angel/investissements/actifs">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 
 
     <script>
@@ -123,6 +164,37 @@ OPPORTUNITES D'ACQUISITION D'ACTIFS
             $('#token').val($(this).data('token'));
             $('#teaser-content').html($(this).data('teaser'));
         });
+
+         $('#btn-save').click(function(e){
+                        e.preventDefault();
+                        var spinHandle_firstProcess = loadingOverlay.activate();
+                        const Toast = Swal.mixin({
+                                               toast: true,
+                                               position: 'top-end',
+                                               showConfirmButton: false,
+                                               timer: 5000
+                                             });
+                        $.ajax({
+                            url:'/angel/investissements/actifs/',
+                            dataType:'json',
+                            type:'post',
+                            data:{_csrf:$('input[name="_token"]').val(),token:$('#token').val()},
+                            beforeSend:function(xhr){
+                                         xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                                     },
+                            success:function(data){
+                                loadingOverlay.cancel(spinHandle_firstProcess);
+                                $('#IpM').hide();
+                                            Toast.fire({
+                                                    type: 'success',
+                                                    title: 'Demande initialisée succès!!!'
+                                                  });
+                                                  setTimeout(function() {
+                                                    $('#popup').show();
+                                                  },2000);
+                            }
+                        });
+                     });
     </script>
 @endsection
 
