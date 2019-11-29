@@ -43,7 +43,7 @@ class InvestissementDossierController extends Controller
 				}
 				$name =  $projet->token .'.'. $ext;
 				$ordre->move(public_path($path), $name);
-				Investissement::updateOrCreate(['token'=>$projet->token],['doc_juridiqueUri'=>$path.'/'.$name]);
+				Investissement::updateOrCreate(['token'=>$projet->token],['doc_juridiqueUri'=>$path.$name]);
 			}
 		}
 		return response()->json($projet);
@@ -70,7 +70,7 @@ class InvestissementDossierController extends Controller
 				}
 				$name =  $projet->token .'.'. $ext;
 				$ordre->move(public_path($path), $name);
-				Investissement::updateOrCreate(['token'=>$projet->token],['justificatifUri'=>$path.'/'.$name]);
+				Investissement::updateOrCreate(['token'=>$projet->token],['justificatifUri'=>$path.$name]);
 			}
 
 		}

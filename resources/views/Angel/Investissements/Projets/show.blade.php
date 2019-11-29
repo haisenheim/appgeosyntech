@@ -2108,6 +2108,11 @@
                     <div class="col-md-2">
                         <a class="btn btn-outline btn-block btn-sm btn-danger" id="btn-doc" data-target="#DocModal" data-toggle="modal" href="#"> <i class="fas fa-file-pdf"></i> Charger la documentation juridique </a>
                     </div>
+                        @if($investissement->obac_doc_juridique_validated)
+                        <div class="col-md-2">
+                            <a class="btn btn-outline btn-block btn-sm btn-info" id="btn-justificatif" data-target="#JustificatifModal" data-toggle="modal" href="#"> <i class="fas fa-file-pdf"></i> Charger le justificatif de paiement</a>
+                        </div>
+                        @endif
                     @endif
 
               </div>
@@ -2141,6 +2146,31 @@
         </div>
         <!-- /.card-body -->
       </div>
+      <div  class="modal fade" id="JustificatifModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-success">
+                <h4  class="modal-title text-center">CHARGEMENT Du JUSTIFICATIF DE VOTRE PAIEMENT</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div style="padding: 20px 20px 40px 20px; font-family: 'Gill Sans MT', Calibri, sans-serif" class="modal-body">
+                 <form id="letter" enctype="multipart/form-data" class="form" action="/angel/investissement/doc/" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="token" value="{{ $investissement->token }}"/>
+                    <input type="file" name="justificatifUri" id="justificatifUri" class="form-control"/>
+
+                    <button id="btn-save3" type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
+                </form>
+              </div>
+
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+    </div>
+
        <div  class="modal fade" id="DocModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -2463,6 +2493,36 @@
             		</div>
 
             </div>
+
+     <div class="modal" id="popup3" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+     	<div class="modal-dialog modal-lg" role="document">
+     		<div class="modal-content">
+     			<div class="modal-body">
+     				<div class="row">
+     				    <div class="col-md-5 col-sm-12">
+     				         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                               </div>
+     				    </div>
+     				    <div class="col-md-7 col-sm-12">
+                                <p>Félicitations ! vous venez d’envoyer le justificatif de versement des fonds. L’équipe juridique d’OBAC procèdera
+                                 à son authentification et sa validation dans un délai de 72h.</p>
+
+                                <p>A la suite de la validation de ce justificatif, votre opération sera validée et vous pourrez dès lors suivre l’évolution
+                                de votre investissement en souscrivant à l’offre « Rapport d’activité mensuel » à hauteur de 145 000 FCFA HT / trimestre</p>
+
+
+                                  <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+     				    </div>
+     				</div>
+     			</div>
+
+
+     		</div>
+     	</div>
+
+     </div>
     <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 
 
@@ -2571,6 +2631,54 @@
                    }
 
                 });
+
+          $('#btn-save3').click(function(e){
+
+                   e.preventDefault();
+                   const Toast = Swal.mixin({
+                                          toast: true,
+                                          position: 'top-end',
+                                          showConfirmButton: false,
+                                          timer: 5000
+                                        });
+
+                   if($('#justificatifUri').val().length<1){
+                        alert('Aucun document n\'a été soumis');
+                   }else{
+                         var spinHandle_firstProcess = loadingOverlay.activate();
+                         var fd = new FormData();
+                         fd.append('justificatifUri',$('#justificatifUri')[0].files[0]);
+                         fd.append('token',$('#token').val())
+
+
+                   $.ajax({
+                       url:'/angel/investissement/dossier/justificatif',
+                       dataType:'json',
+                       type:'post',
+                        enctype:'multipart/form-data',
+                        processData:false,
+                        contentType:false,
+                        data:fd,
+                       beforeSend:function(xhr){
+                                    xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                                },
+                       success:function(data){
+
+                           $('#IpM').hide();
+                                       Toast.fire({
+                                               type: 'success',
+                                               title: 'Demande initialisée succès!!!'
+                                             });
+                                             setTimeout(function() {
+                                                loadingOverlay.cancel(spinHandle_firstProcess);
+                                               $('#popup3').show();
+                                             },2000);
+                       }
+                   });
+                   }
+
+                });
+
 
     </script>
 </div>

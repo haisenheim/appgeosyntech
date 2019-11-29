@@ -156,6 +156,7 @@ Route::prefix('angel')
 	    Route::resource('investissements/partenariats','ConcessionInfrastructureController');
 	    Route::resource('investissements/ressources','ConcessionRessourceController');
 	    Route::post('/investissement/dossier/doc/','InvestissementDossierController@saveDoc');
+	    Route::post('/investissement/dossier/justificatif/','InvestissementDossierController@saveJustificatif');
 	    Route::get('opportunites/dossier/getchoices','DossierController@getChoices');
 
         Route::resource('alertes','AlerteController');
