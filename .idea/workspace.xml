@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Investissements/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Investissements/Earlies/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -49,13 +47,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21770334" vertical-offset="34741" max-vertical-offset="43600">
-              <caret line="2200" column="14" selection-start-line="2200" selection-start-column="14" selection-end-line="2200" selection-end-column="14" />
+            <state vertical-scroll-proportion="-1.9041096" vertical-offset="34741" max-vertical-offset="43968">
+              <caret line="2180" column="102" selection-start-line="2180" selection-start-column="101" selection-end-line="2180" selection-end-column="102" />
               <folding>
-                <element signature="tag#div#2" expanded="false" />
                 <marker date="1575058816101" expanded="true" signature="165780:165819" placeholder="..." />
                 <marker date="1575058816101" expanded="true" signature="170077:170087" placeholder="..." />
                 <marker date="1575058816101" expanded="true" signature="170145:170155" placeholder="..." />
@@ -142,13 +139,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.2" vertical-offset="120" max-vertical-offset="37680">
-              <caret line="160" column="54" selection-start-line="160" selection-start-column="54" selection-end-line="160" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.3325359" vertical-offset="1013" max-vertical-offset="39840">
+              <caret line="72" column="80" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="80" />
               <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <marker date="1574942093447" expanded="false" signature="130836:130875" placeholder="..." />
                 <marker date="1574942093447" expanded="false" signature="134968:134978" placeholder="..." />
@@ -1156,33 +1152,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9041096" vertical-offset="34741" max-vertical-offset="43968">
+          <caret line="2180" column="102" selection-start-line="2180" selection-start-column="101" selection-end-line="2180" selection-end-column="102" />
+          <folding>
+            <marker date="1575058816101" expanded="true" signature="165780:165819" placeholder="..." />
+            <marker date="1575058816101" expanded="true" signature="170077:170087" placeholder="..." />
+            <marker date="1575058816101" expanded="true" signature="170145:170155" placeholder="..." />
+            <marker date="1575058816101" expanded="true" signature="170214:170224" placeholder="..." />
+            <marker date="1575058816101" expanded="true" signature="170298:170308" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.2" vertical-offset="120" max-vertical-offset="37680">
-          <caret line="160" column="54" selection-start-line="160" selection-start-column="54" selection-end-line="160" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.3325359" vertical-offset="1013" max-vertical-offset="39840">
+          <caret line="72" column="80" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="80" />
           <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <marker date="1574942093447" expanded="false" signature="130836:130875" placeholder="..." />
             <marker date="1574942093447" expanded="false" signature="134968:134978" placeholder="..." />
             <marker date="1574942093447" expanded="false" signature="135036:135046" placeholder="..." />
             <marker date="1574942093447" expanded="false" signature="135105:135115" placeholder="..." />
             <marker date="1574942093447" expanded="false" signature="135189:135199" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21770334" vertical-offset="34741" max-vertical-offset="43600">
-          <caret line="2200" column="14" selection-start-line="2200" selection-start-column="14" selection-end-line="2200" selection-end-column="14" />
-          <folding>
-            <element signature="tag#div#2" expanded="false" />
-            <marker date="1575058816101" expanded="true" signature="165780:165819" placeholder="..." />
-            <marker date="1575058816101" expanded="true" signature="170077:170087" placeholder="..." />
-            <marker date="1575058816101" expanded="true" signature="170145:170155" placeholder="..." />
-            <marker date="1575058816101" expanded="true" signature="170214:170224" placeholder="..." />
-            <marker date="1575058816101" expanded="true" signature="170298:170308" placeholder="..." />
           </folding>
         </state>
       </provider>

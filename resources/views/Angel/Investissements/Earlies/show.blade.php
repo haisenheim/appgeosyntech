@@ -107,12 +107,12 @@
                     {{csrf_field()}}
                     <input type="hidden" name="token" value="{{ $investissement->token }}"/>
 
-                    <p>La présente lettre d’intention décrit les principales conditions et modalités selon lesquelles l’investissement envisagé dans la société <span style="font-weight: bold"> {{ $investissement->projet->owner->name }} </span>  pourrait être réalisé. </p>
+                    <p>La présente lettre d’intention décrit les principales conditions et modalités selon lesquelles l’investissement envisagé dans la société <span style="font-weight: bold"> {{ $investissement->earlie->owner->name }} </span>  pourrait être réalisé. </p>
                     <p>Elle ne constitue en aucun cas un engagement ferme et irrévocable des parties de procéder à cet investissement. </p>
                     <p>Cette lettre d’intention a été préparée sur la base et en l’état des informations reçues de la Société à ce jour,
                      particulièrement du business plan qui ont été préparés par les Fondateurs.</p>
                     <p>Le montant total de l’investissement étant estimé à
-                    <span style="font-weight: bold"> {{ $investissement->projet->montant }} &nbsp; {{ $investissement->projet->devise->name }} </span>, je, soussigné,<span style="font-weight: bold"> {{ $investissement->angel->name }} </span>, agissant pour
+                    <span style="font-weight: bold"> {{ $investissement->earlie->montant }} &nbsp; {{ $investissement->earlie->devise->name }} </span>, je, soussigné,<span style="font-weight: bold"> {{ $investissement->angel->name }} </span>, agissant pour
                      <span style="width: 300px;">
                         <select style="font-weight: bold" class="form-control" name="personnel" id="">
                             <option value="1">MON PROPRE COMPTE</option>
@@ -138,7 +138,7 @@
                      à hauteur de <span style="font-weight: bold; width:300px"> <input class="form-control" name="montant" type="number"/> </span>. </p>
                     <p class="blocx" style="display: block" id="block-1">
                         La prise de participation représentera donc un pourcentage de
-                         <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_participation" type="number"/> </span> % au capital du projet <span style="font-weight: bold"> {{ $investissement->projet->name }}  </span>
+                         <span style="font-weight: bold; width:100px"> <input class="form-control" name="pct_participation" type="number"/> </span> % au capital du projet <span style="font-weight: bold"> {{ $investissement->earlie->name }}  </span>
                     </p>
                     <p class="blocx" style="display: none" id="block-2">
                         Le prêt sera effectué
