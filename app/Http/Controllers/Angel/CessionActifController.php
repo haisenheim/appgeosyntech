@@ -22,7 +22,7 @@ class CessionActifController extends Controller
         //
 	    $cessions = Cession::all()->where('actif_id','>',0)->where('angel_id',Auth::user()->id)->sortBy('created_at',null,true);
 	    //dd($cessions);
-	    return view('Angel/Cessions/Actifs/index')->with(compact('cessions'));
+	    return view('Angel/Cessions/Articles/index')->with(compact('cessions'));
     }
 
     /**
