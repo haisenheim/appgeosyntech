@@ -1,11 +1,13 @@
 @extends('......layouts.angel')
 @section('page-title')
 {{ $investissement->projet->name }}
+<?php $doc = $investissement->doc_juridiqueUri?1:0; $doc_validated=$investissement->obac_doc_juridique_validated; ?>
+<input type="hidden" id="doc" value="{{ $doc }}"/>
+<input type="hidden" id="doc_validated" value="{{ $doc_validated }}"/>
 @endsection
 @section('content')
-
+<link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}" />
 <div class="card">
-          <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}" />
         <div class="card-header">
             <?php $projet = $investissement->projet ?>
           <h3 class="card-title">{{$projet->name}} - {{$projet->code}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
@@ -2325,6 +2327,21 @@
 
         $(document).ready(function(){
            // var orm = 'http://localhost/ormsys/api/';
+
+
+           setTimeout(function() {
+             if($('#doc').val()==1){
+                if($('#doc_validated').val()==0){
+                    $('#msg').show();
+                }
+             }
+
+           },2000);
+
+
+
+
+
             $.ajax({
                 url: "/angel/opportunites/dossier/getchoices",
                 type:'Get',
@@ -2514,6 +2531,43 @@
 
 
                                   <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+     				    </div>
+     				</div>
+     			</div>
+
+
+     		</div>
+     	</div>
+
+     </div>
+
+      <div class="modal" id="msg" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+     	<div class="modal-dialog modal-lg" role="document">
+     		<div class="modal-content">
+     		    <div class="modal-header bg-success">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+     			<div class="modal-body">
+     				<div class="row">
+     				    <div class="col-md-5 col-sm-12">
+     				         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                               </div>
+     				    </div>
+     				    <div class="col-md-7 col-sm-12">
+                             <p> Félicitations ! Vous êtes sur le point de clôturer votre opération. </p>
+                             <p>  Afin de procéder à votre investissement, nous vous invitons à effectuer un virement ou un dépôt sur le numéro de compte suivant : </p>
+                             <ul>
+                                <li>Code Banque : 30014</li>
+                                <li>Code Guichet : 00001</li>
+                                <li> Numéro de compte : 01206971401</li>
+                                <li>Clé RIB : 80</li>
+                             </ul>
+
      				    </div>
      				</div>
      			</div>

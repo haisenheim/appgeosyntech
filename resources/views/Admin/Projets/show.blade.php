@@ -1897,7 +1897,7 @@
                                                                 @if($invest->obac_justificatif_validated)
                                                                     <a class="dropdown-item" href="/admin/investissement/justificatif/reject/{{ $invest->token }}">Rejeter le justificatif de paiement</a>
                                                                 @else
-                                                                    <a class="dropdown-item" href="/admin/investissement/justificatif/validated/{{ $invest->token }}">Valider le justificatif de paiement</a>
+                                                                    <a class="dropdown-item" href="/admin/investissement/justificatif/validate/{{ $invest->token }}">Valider le justificatif de paiement</a>
                                                                 @endif
                                                             @endif
                                                         @else
