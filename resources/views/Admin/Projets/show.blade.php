@@ -1888,7 +1888,7 @@
                                                 <div class="dropdown-menu" role="menu">
                                                  <?php if($invest->lettre): ?>
                                                     <a class="dropdown-item" href="/admin/letter/create/{{ $invest->token }}">Lettre d'intention</a>
-                                                    @if($invest->doc_doc_juridiqueUri)
+                                                    @if($invest->doc_juridiqueUri)
                                                          <a class="dropdown-item" href="/admin/investissement/doc/display/{{ $invest->token }}">Voir le document juridique</a>
                                                         @if($invest->obac_doc_juridique_validated)
                                                             <a class="dropdown-item" href="/admin/investissement/doc/reject/{{ $invest->token }}">Rejeter le document juridique</a>
