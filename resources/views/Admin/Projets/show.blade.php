@@ -1875,7 +1875,7 @@
                                              <?php endif; ?>
                                         </td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y'):'-' ?></td>
-                                        <td><?= \Illuminate\Support\Carbon::createFromTimeString($invest->rencontre)->format('d/m/Y'); ?></td>
+                                        <td></td>
 
                                         <td style="width: 10%;">
 
