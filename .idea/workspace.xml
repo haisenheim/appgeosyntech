@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -85,8 +83,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7939914" vertical-offset="37982" max-vertical-offset="39696">
-              <caret line="2569" column="18" selection-start-line="2569" selection-start-column="18" selection-end-line="2569" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.034334764" vertical-offset="36288" max-vertical-offset="39696">
+              <caret line="2327" column="20" selection-start-line="2327" selection-start-column="20" selection-end-line="2327" selection-end-column="20" />
               <folding>
                 <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="e#153149#153235#0#HTML" expanded="true" />
@@ -98,13 +96,13 @@
                 <element signature="tag#div#7" expanded="false" />
                 <element signature="e#172321#172478#0#HTML" expanded="true" />
                 <element signature="e#173972#174129#0#HTML" expanded="true" />
-                <element signature="e#175365#177396#0#HTML" expanded="false" />
-                <element signature="e#177442#179485#0#HTML" expanded="false" />
-                <marker date="1575029956451" expanded="false" signature="163995:164034" placeholder="..." />
-                <marker date="1575029956451" expanded="false" signature="168292:168302" placeholder="..." />
-                <marker date="1575029956451" expanded="false" signature="168360:168370" placeholder="..." />
-                <marker date="1575029956451" expanded="false" signature="168429:168439" placeholder="..." />
-                <marker date="1575029956451" expanded="false" signature="168513:168523" placeholder="..." />
+                <element signature="e#175347#177378#0#HTML" expanded="false" />
+                <element signature="e#177424#179467#0#HTML" expanded="false" />
+                <marker date="1575029958437" expanded="false" signature="163995:164034" placeholder="..." />
+                <marker date="1575029958437" expanded="false" signature="168292:168302" placeholder="..." />
+                <marker date="1575029958437" expanded="false" signature="168360:168370" placeholder="..." />
+                <marker date="1575029958437" expanded="false" signature="168429:168439" placeholder="..." />
+                <marker date="1575029958437" expanded="false" signature="168513:168523" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1288,8 +1286,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7939914" vertical-offset="37982" max-vertical-offset="39696">
-          <caret line="2569" column="18" selection-start-line="2569" selection-start-column="18" selection-end-line="2569" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.034334764" vertical-offset="36288" max-vertical-offset="39696">
+          <caret line="2327" column="20" selection-start-line="2327" selection-start-column="20" selection-end-line="2327" selection-end-column="20" />
           <folding>
             <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="e#153149#153235#0#HTML" expanded="true" />
@@ -1301,13 +1299,13 @@
             <element signature="tag#div#7" expanded="false" />
             <element signature="e#172321#172478#0#HTML" expanded="true" />
             <element signature="e#173972#174129#0#HTML" expanded="true" />
-            <element signature="e#175365#177396#0#HTML" expanded="false" />
-            <element signature="e#177442#179485#0#HTML" expanded="false" />
-            <marker date="1575029956451" expanded="false" signature="163995:164034" placeholder="..." />
-            <marker date="1575029956451" expanded="false" signature="168292:168302" placeholder="..." />
-            <marker date="1575029956451" expanded="false" signature="168360:168370" placeholder="..." />
-            <marker date="1575029956451" expanded="false" signature="168429:168439" placeholder="..." />
-            <marker date="1575029956451" expanded="false" signature="168513:168523" placeholder="..." />
+            <element signature="e#175347#177378#0#HTML" expanded="false" />
+            <element signature="e#177424#179467#0#HTML" expanded="false" />
+            <marker date="1575029958437" expanded="false" signature="163995:164034" placeholder="..." />
+            <marker date="1575029958437" expanded="false" signature="168292:168302" placeholder="..." />
+            <marker date="1575029958437" expanded="false" signature="168360:168370" placeholder="..." />
+            <marker date="1575029958437" expanded="false" signature="168429:168439" placeholder="..." />
+            <marker date="1575029958437" expanded="false" signature="168513:168523" placeholder="..." />
           </folding>
         </state>
       </provider>

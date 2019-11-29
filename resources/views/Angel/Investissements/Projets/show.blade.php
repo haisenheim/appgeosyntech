@@ -2331,7 +2331,7 @@
 
            setTimeout(function() {
              if($('#doc').val()==1){
-                if($('#doc_validated').val()==0){
+                if($('#doc_validated').val()==1){
                     $('#msg').show();
                 }
              }
