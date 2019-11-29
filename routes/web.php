@@ -123,9 +123,12 @@ Route::prefix('admin')
 	    Route::get('dossier/validate-ordre-virement/{token}','ProjetController@validateOrdre');
 	    Route::get('dossier/disvalidate-ordre-virement/{token}','ProjetController@unvalidateOrdre');
 	    Route::get('/letter/create/{token}','ProjetController@createLetter');
-	    Route::get('investissement/doc/validate/{token}','InvestissementController@validate');
-	    Route::get('investissement/doc/reject/{token}','InvestissementController@reject');
-	    Route::get('investissement/doc/display/{token}','InvestissementController@display');
+	    Route::get('investissement/doc/validate/{token}','InvestissementController@validateDoc');
+	    Route::get('investissement/doc/reject/{token}','InvestissementController@rejectDoc');
+	    Route::get('investissement/doc/display/{token}','InvestissementController@displayDoc');
+	    Route::get('investissement/justificatif/validate/{token}','InvestissementController@validateJustificatif');
+	    Route::get('investissement/justificatif/reject/{token}','InvestissementController@rejectJustificatif');
+	    Route::get('investissement/justificatif/display/{token}','InvestissementController@displayJustificatif');
     });
 
 //Liste des routes de l'investisseur

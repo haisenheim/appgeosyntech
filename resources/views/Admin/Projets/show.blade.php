@@ -1892,6 +1892,14 @@
                                                          <a class="dropdown-item" href="/admin/investissement/doc/display/{{ $invest->token }}">Voir le document juridique</a>
                                                         @if($invest->obac_doc_juridique_validated)
                                                             <a class="dropdown-item" href="/admin/investissement/doc/reject/{{ $invest->token }}">Rejeter le document juridique</a>
+                                                            @if($invest->justificatifUri)
+                                                                <a class="dropdown-item" href="/admin/investissement/justificatif/display/{{ $invest->token }}">Voir le justificatif de paiement</a>
+                                                                @if($invest->obac_justificatif_validated)
+                                                                    <a class="dropdown-item" href="/admin/investissement/justificatif/reject/{{ $invest->token }}">Rejeter le justificatif de paiement</a>
+                                                                @else
+                                                                    <a class="dropdown-item" href="/admin/investissement/justificatif/validated/{{ $invest->token }}">Valider le justificatif de paiement</a>
+                                                                @endif
+                                                            @endif
                                                         @else
                                                              <a class="dropdown-item" href="/admin/investissement/doc/validate/{{ $invest->token }}">Valider le document juridique</a>
                                                         @endif

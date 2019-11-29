@@ -26,10 +26,8 @@ class InvestissementDossierController extends Controller
     }
 
 	public function saveDoc(Request $request){
-
 		//dd(public_path('img'));
 		$projet = Investissement::where('token',$request->token)->first();
-
 		$ordre = $request->doc_juridiqueUri;
 		if($ordre){
 			$ext = $ordre->getClientOriginalExtension();
@@ -45,7 +43,34 @@ class InvestissementDossierController extends Controller
 				}
 				$name =  $projet->token .'.'. $ext;
 				$ordre->move(public_path($path), $name);
-				Investissement::updateOrCreate(['token'=>$projet->token],['doc_juridiqueUri'=>$name]);
+				Investissement::updateOrCreate(['token'=>$projet->token],['doc_juridiqueUri'=>$path.'/'.$name]);
+			}
+		}
+		return response()->json($projet);
+	}
+
+
+	public function saveJustificatif(Request $request){
+
+		//dd(public_path('img'));
+		$projet = Investissement::where('token',$request->token)->first();
+
+		$ordre = $request->justificatifUri;
+		if($ordre){
+			$ext = $ordre->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif','pdf');
+			if(in_array($ext,$arr_ext)){
+				$path = 'files/investissements/projets/justificatifs';
+				if (!file_exists(public_path())) {
+					mkdir(public_path($path,777,true));
+				}
+				$path = $path.'/';
+				if (file_exists(public_path($path) . $projet->token.'.' . $ext)) {
+					unlink(public_path($path) . $projet->token .  '.' . $ext);
+				}
+				$name =  $projet->token .'.'. $ext;
+				$ordre->move(public_path($path), $name);
+				Investissement::updateOrCreate(['token'=>$projet->token],['justificatifUri'=>$path.'/'.$name]);
 			}
 
 		}
@@ -54,6 +79,7 @@ class InvestissementDossierController extends Controller
 		return response()->json($projet);
 
 	}
+
     /**
      * Show the form for creating a new resource.
      *

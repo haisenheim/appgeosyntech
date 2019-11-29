@@ -29,6 +29,43 @@ class InvestissementController extends Controller
         //
     }
 
+	public function validateDoc($token){
+		$invest = Investissement::where('token',$token)->first();
+		$invest->obac_doc_juridique_validated =1;
+		$invest->save();
+		return back();
+	}
+
+	public function rejectDoc($token){
+		$invest = Investissement::where('token',$token)->first();
+		$invest->obac_doc_juridique_validated =0;
+		$invest->save();
+		return back();
+	}
+
+	public function displayDoc($token){
+		$invest = Investissement::where('token',$token)->first();
+		return response()->file($invest->doc_juridiqueUri);
+	}
+
+	public function validateJustificatif($token){
+		$invest = Investissement::where('token',$token)->first();
+		$invest->obac_justificatif_validated =1;
+		$invest->save();
+		return back();
+	}
+
+	public function rejectJustificatif($token){
+		$invest = Investissement::where('token',$token)->first();
+		$invest->obac_justificatif_validated =0;
+		$invest->save();
+		return back();
+	}
+	public function displayJustificatif($token){
+		$invest = Investissement::where('token',$token)->first();
+		return response()->file($invest->justificatifUri);
+	}
+
     /**
      * Store a newly created resource in storage.
      *
