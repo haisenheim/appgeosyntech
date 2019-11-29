@@ -9,6 +9,8 @@ class Investissement extends Model
 
     //
 
+	protected $dates = ['rencontre'];
+
 	protected $guarded = [];
 
 	public function projet(){
