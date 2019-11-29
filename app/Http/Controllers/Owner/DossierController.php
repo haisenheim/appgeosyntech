@@ -61,6 +61,83 @@ class DossierController extends Controller
 		return back();
 	}
 
+	//Creation du diagnostic externe
+	public function createDiagExterne($token){
+		$projet = Projet::where('token',$token)->first();
+		return view('/Owner/Dossiers/create_diag_externe')->with(compact('projet'));
+	}
+
+	//Sauvegarde du diagnostic externe
+	public function saveDiagExterne(Request $request){
+
+		$dossier = Projet::where('token',$request->token)->first();
+		$segments = $request->segments;
+		$concurrents=$request->concurrents;
+
+		//dd($request->env);
+
+		if($dossier){
+			$ocs = $dossier->concurrents;
+			$segs = $dossier->segments;
+			if($ocs){
+				Concurrent::where('projet_id',$dossier->id)->delete();
+			}
+
+			if($segs){
+				Segment::where('projet_id',$dossier->id)->delete();
+			}
+			for($i=0; $i<count($concurrents); $i++){
+				$concurrent = new Concurrent();
+				$concurrent->projet_id=$dossier->id;
+				$concurrent->name=$concurrents[$i]['qui'];
+				$concurrent->quoi=$concurrents[$i]['quoi'];
+				$concurrent->quand=$concurrents[$i]['quand'];
+				$concurrent->ou=$concurrents[$i]['ou'];
+				$concurrent->combien=$concurrents[$i]['combien'];
+				$concurrent->pourquoi=$concurrents[$i]['pourquoi'];
+				$concurrent->ca=$concurrents[$i]['ca'];
+				$concurrent->salaires=$concurrents[$i]['sal'];
+				//$concurrent->ebe=$concurrents[$i]['ebe'];
+				//$concurrent->va=$concurrents[$i]['va'];
+				$concurrent->cv=$concurrents[$i]['cv'];
+				$concurrent->cf=$concurrents[$i]['cf'];
+				//$concurrent->marge_brute=$concurrents[$i]['mb'];
+				$concurrent = $concurrent->save();
+			}
+			//dd($concurrent);
+
+			for($i=0; $i<count($segments); $i++){
+				$concurrent = new Segment();
+				$concurrent->projet_id=$dossier->id;
+				$concurrent->name=$segments[$i]['qui'];
+				$concurrent->quoi=$segments[$i]['quoi'];
+				$concurrent->quand=$segments[$i]['quand'];
+				$concurrent->ou=$segments[$i]['ou'];
+				$concurrent->combien=$segments[$i]['combien'];
+				$concurrent->pourquoi=$segments[$i]['pourquoi'];
+				$segment = $concurrent->save();
+			}
+
+
+			$env = $request->env;
+			$ev = $dossier->environnement;
+			if($ev){
+				Environnement::where('projet_id',$dossier->id)->delete();
+			}
+			$environnement = new Environnement();
+			$env['projet_id'] = $dossier->id;
+			$env['user_id'] = Auth::user()->id;
+			$environnement = Environnement::create($env);
+			if($environnement){
+				$dossier->etape=2;
+				$dossier->save();
+			}
+		}
+		// $id=$dossier->id;
+		return response()->json($dossier);
+
+	}
+
 	public function createLetter($token){
 		$invest = Investissement::where('token',$token)->first();
 		$letter = $invest->lettre;

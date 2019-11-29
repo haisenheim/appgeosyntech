@@ -40,6 +40,16 @@ class DossierController extends Controller
         //
     }
 
+	public function getChoicesJson(Request $request){
+		$projet = Projet::where('token',$request->id)->first();
+		$choices = $projet->choices;
+
+		$choix = [];
+		foreach($choices as $choice){
+			$choix[] = $choice->choice_id;
+		}
+		return response()->json($choix);
+	}
     /**
      * Store a newly created resource in storage.
      *

@@ -1873,7 +1873,13 @@
 <main>
     <nav style="top:30%" class="floating-menu">
         <ul class="main-menu">
-
+            @if($projet->modepaiement_id==1)
+                @if($projet->validated_step==1)
+                   <li>
+                        <a title="Editer le diagnostic externe" class="ripple" href="/owner/projet/create-diag-externe/{{ $projet->token }}"><i class="fa fa-pencil"></i></a>
+                   </li>
+                @endif
+            @endif
             @if(count($projet->investissements)>=1)
                    <li>
                         <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>

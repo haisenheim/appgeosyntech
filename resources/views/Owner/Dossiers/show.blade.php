@@ -2164,19 +2164,17 @@
 
 @endsection
 
-@section('action')
 
-@endsection
 
 @section('nav_actions')
 <main>
     <nav style="top:30%" class="floating-menu">
         <ul class="main-menu">
 
-            @if($projet->modepaiement_id>1)
+            @if($projet->modepaiement_id==1)
                 @if($projet->validated_step==1)
                    <li>
-                        <a title="Editer le diagnostic externe" class="ripple" href="/owner/dossiers/add-step"><i class="fa fa-pencil"></i></a>
+                        <a title="Editer le diagnostic externe" class="ripple" href="/owner/dossier/create-diag-externe/{{ $projet->token }}"><i class="fa fa-pencil"></i></a>
                    </li>
                 @endif
             @endif

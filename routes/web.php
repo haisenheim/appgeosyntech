@@ -315,6 +315,10 @@ Route::prefix('owner')
 	    Route::get('/mails/get-investissements','MessageController@getInvestissements');
 	    Route::get('/letter/contrat-concession','ModeleController@concession');
 	    Route::post('/dossier/edit-report','DossierController@editReport');
+	    Route::get('dossier/create-diag-externe/{token}','DossierController@createDiagExterne');
+	    Route::post('dossier/save-diag-externe','DossierController@saveDiagExterne');
+	    Route::get('projet/create-diag-externe/{token}','EarlyController@createDiagExterne');
+	    Route::post('projet/save-diag-externe','EarlyController@saveDiagExterne');
     });
 
 

@@ -6,9 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Bilan;
 use App\Models\ChoicesEarlie;
 use App\Models\ChoicesProjet;
+use App\Models\Concurrent;
 use App\Models\Devise;
 use App\Models\Earlie;
 use App\Models\EarliesProduit;
+use App\Models\Environnement;
 use App\Models\Investissement;
 use App\Models\Moi;
 use App\Models\ProduitsProjet;
@@ -16,6 +18,7 @@ use App\Models\Projet;
 use App\Models\Reportbilan;
 use App\Models\Reportresultat;
 use App\Models\Resultat;
+use App\Models\Segment;
 use App\Models\Tags;
 use App\Models\TagsProjet;
 use App\Models\Tinvestissement;
@@ -53,6 +56,79 @@ class EarlyController extends Controller
 		}
 		return response()->json($choix);
 	}
+
+	//Creation du diagnostic externe
+	public function createDiagExterne($token){
+		$projet = Earlie::where('token',$token)->first();
+		return view('/Consultant/Earlies/create_diag_externe')->with(compact('projet'));
+	}
+
+	//Sauvegarde du diagnostic externe
+	public function saveDiagExterne(Request $request){
+
+		$dossier = Earlie::where('token',$request->token)->first();
+		$segments = $request->segments;
+		$concurrents=$request->concurrents;
+
+		//dd($request->env);
+
+		if($dossier){
+			if($dossier->concurrents){
+				Concurrent::where('earlie_id',$dossier->id)->delete();
+			}
+			for($i=0; $i<count($concurrents); $i++){
+				$concurrent = new Concurrent();
+				$concurrent->earlie_id=$dossier->id;
+				$concurrent->name=$concurrents[$i]['qui'];
+				$concurrent->quoi=$concurrents[$i]['quoi'];
+				$concurrent->quand=$concurrents[$i]['quand'];
+				$concurrent->ou=$concurrents[$i]['ou'];
+				$concurrent->combien=$concurrents[$i]['combien'];
+				$concurrent->pourquoi=$concurrents[$i]['pourquoi'];
+				$concurrent->ca=$concurrents[$i]['ca'];
+				$concurrent->salaires=$concurrents[$i]['sal'];
+				//$concurrent->ebe=$concurrents[$i]['ebe'];
+				//$concurrent->va=$concurrents[$i]['va'];
+				$concurrent->cv=$concurrents[$i]['cv'];
+				$concurrent->cf=$concurrents[$i]['cf'];
+				//$concurrent->marge_brute=$concurrents[$i]['mb'];
+				$concurrent = $concurrent->save();
+			}
+			//dd($concurrent);
+			if($dossier->segments){
+				Segment::where('earlie_id',$dossier->id)->delete();
+			}
+			for($i=0; $i<count($segments); $i++){
+				$concurrent = new Segment();
+				$concurrent->earlie_id=$dossier->id;
+				$concurrent->name=$segments[$i]['qui'];
+				$concurrent->quoi=$segments[$i]['quoi'];
+				$concurrent->quand=$segments[$i]['quand'];
+				$concurrent->ou=$segments[$i]['ou'];
+				$concurrent->combien=$segments[$i]['combien'];
+				$concurrent->pourquoi=$segments[$i]['pourquoi'];
+				$segment = $concurrent->save();
+			}
+
+			if($dossier->environnement){
+				Environnement::where('earlie_id',$dossier->id)->delete();
+			}
+
+			$env = $request->env;
+			$environnement = new Environnement();
+			$env['earlie_id'] = $dossier->id;
+			$env['user_id'] = Auth::user()->id;
+			$environnement = Environnement::create($env);
+			if($environnement){
+				$dossier->etape=2;
+				$dossier->save();
+			}
+		}
+		// $id=$dossier->id;
+		return response()->json($dossier);
+
+	}
+
 
 	public function openDataroom($token){
 		$invest = Investissement::updateOrCreate(['token'=>$token],['validated'=>1]);

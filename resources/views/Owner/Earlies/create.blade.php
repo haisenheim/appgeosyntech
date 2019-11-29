@@ -589,73 +589,80 @@ CREATION D'UN DOSSIER EARLY STAGE
 
             e.preventDefault();
 
-                var init = document.getElementById('step-1');
+                if($('#imageUri').val().length<1){
+                    alert('Impossible de créer le dossier car vous n\'avez associé aucune image à votre projet.');
+                }
+                else
+                {
+                    var init = document.getElementById('step-1');
 
-                var inputs = init.getElementsByTagName('input');
-                var values = {};
+                                    var inputs = init.getElementsByTagName('input');
+                                    var values = {};
 
-                for (var i=0; i < inputs.length; i++) {
-                    var id = inputs[i].getAttribute('id');
-                    values[id] = $('#' + id).val();
+                                    for (var i=0; i < inputs.length; i++) {
+                                        var id = inputs[i].getAttribute('id');
+                                        values[id] = $('#' + id).val();
+
+                                    }
+                                    values['type_id'] = $('#tprojet_id').val();
+                                    values['ville_id'] = $('#ville_id').val();
+
+                                    var bm = $('#businessmodel').val();
+
+
+                                    var url = '/owner/projet/initJson';
+                                    var redirectUrl = '/owner/projets';
+
+                                    var reponses = [];
+                                    var produits=[];
+                                    $('#list-produit').find('li').each(function(){
+                                        produits.push($(this).data('id'));
+                                    });
+
+                                    $('.questionnaire').find('ul').find('li').find('input:checked').each(function(){
+                                        var elt = {};
+                                        elt.choice_id=$(this).val();
+                                        elt.question_id=$(this).prop('name');
+                                        reponses.push(elt);
+                                    });
+
+
+                                        var fd = new FormData();
+                                        fd.append('imageUri',$('#imageUri')[0].files[0]);
+                                        fd.append('dossier',JSON.stringify(values));
+                                        fd.append('answers',JSON.stringify(reponses));
+                                        fd.append('produits',JSON.stringify(produits));
+                                        fd.append('bm',bm);
+                                        var spinHandle_firstProcess = loadingOverlay.activate();
+
+
+                                    $.ajax({
+                                        url:url,
+                                        type:'Post',
+
+                                        data:fd,
+                                        enctype:'multipart/form-data',
+                                        processData:false,
+                                        contentType:false,
+                                        beforeSend:function(xhr){
+                                            xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                                             $('#btn-save').hide();
+
+                                        },
+                                        success: function(data){
+                                           loadingOverlay.cancel(spinHandle_firstProcess);
+                                            window.location.replace(redirectUrl+"/"+data);
+                                            //console.log(data);
+
+                                        },
+                                        Error:function(){
+                                            loadingOverlay.cancel(spinHandle_firstProcess);
+                                            alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
+                                            $('#btn-save').show();
+                                        }
+                                    });
 
                 }
-                values['type_id'] = $('#tprojet_id').val();
-                values['ville_id'] = $('#ville_id').val();
-
-                var bm = $('#businessmodel').val();
-
-
-                var url = '/owner/projet/initJson';
-                var redirectUrl = '/owner/projets';
-
-                var reponses = [];
-                var produits=[];
-                $('#list-produit').find('li').each(function(){
-                    produits.push($(this).data('id'));
-                });
-
-                $('.questionnaire').find('ul').find('li').find('input:checked').each(function(){
-                    var elt = {};
-                    elt.choice_id=$(this).val();
-                    elt.question_id=$(this).prop('name');
-                    reponses.push(elt);
-                });
-
-
-                    var fd = new FormData();
-                    fd.append('imageUri',$('#imageUri')[0].files[0]);
-                    fd.append('dossier',JSON.stringify(values));
-                    fd.append('answers',JSON.stringify(reponses));
-                    fd.append('produits',JSON.stringify(produits));
-                    fd.append('bm',bm);
-                    var spinHandle_firstProcess = loadingOverlay.activate();
-
-
-                $.ajax({
-                    url:url,
-                    type:'Post',
-
-                    data:fd,
-                    enctype:'multipart/form-data',
-                    processData:false,
-                    contentType:false,
-                    beforeSend:function(xhr){
-                        xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
-                         $('#btn-save').hide();
-
-                    },
-                    success: function(data){
-                       loadingOverlay.cancel(spinHandle_firstProcess);
-                        window.location.replace(redirectUrl+"/"+data);
-                        //console.log(data);
-
-                    },
-                    Error:function(){
-                        loadingOverlay.cancel(spinHandle_firstProcess);
-                        alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
-                        $('#btn-save').show();
-                    }
-                });
 
 
         });

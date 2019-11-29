@@ -1120,6 +1120,10 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
 
             e.preventDefault();
 
+             if($('#imageUri').val().length<1){
+                                alert('Impossible de créer le dossier car vous n\'avez associé aucune image à votre projet.');
+                            }else{
+
                 var init = document.getElementById('step-1');
 
                 var inputs = init.getElementsByTagName('input');
@@ -1238,7 +1242,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                         $('#btn-save').show();
                     }
                 });
-
+            }
 
         });
 
