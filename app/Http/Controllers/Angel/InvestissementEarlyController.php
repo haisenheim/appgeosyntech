@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Angel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Earlie;
+use App\Models\Flettre;
 use App\Models\Investissement;
 use App\Models\Projet;
 use Illuminate\Http\Request;
@@ -32,6 +33,61 @@ class InvestissementEarlyController extends Controller
     {
         //
     }
+
+	public function saveDoc(Request $request){
+		//dd(public_path('img'));
+		$projet = Investissement::where('token',$request->token)->first();
+		$ordre = $request->doc_juridiqueUri;
+		if($ordre){
+			$ext = $ordre->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif','pdf');
+			if(in_array($ext,$arr_ext)){
+				$path = 'files/investissements/earlies/docjuridiques';
+				if (!file_exists(public_path())) {
+					mkdir(public_path($path,777,true));
+				}
+				$path = $path.'/';
+				if (file_exists(public_path($path) . $projet->token.'.' . $ext)) {
+					unlink(public_path($path) . $projet->token .  '.' . $ext);
+				}
+				$name =  $projet->token .'.'. $ext;
+				$ordre->move(public_path($path), $name);
+				Investissement::updateOrCreate(['token'=>$projet->token],['doc_juridiqueUri'=>$path.$name]);
+			}
+		}
+		return response()->json($projet);
+	}
+
+
+	public function saveJustificatif(Request $request){
+
+		//dd(public_path('img'));
+		$projet = Investissement::where('token',$request->token)->first();
+
+		$ordre = $request->justificatifUri;
+		if($ordre){
+			$ext = $ordre->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif','pdf');
+			if(in_array($ext,$arr_ext)){
+				$path = 'files/investissements/earlies/justificatifs';
+				if (!file_exists(public_path())) {
+					mkdir(public_path($path,777,true));
+				}
+				$path = $path.'/';
+				if (file_exists(public_path($path) . $projet->token.'.' . $ext)) {
+					unlink(public_path($path) . $projet->token .  '.' . $ext);
+				}
+				$name =  $projet->token .'.'. $ext;
+				$ordre->move(public_path($path), $name);
+				Investissement::updateOrCreate(['token'=>$projet->token],['justificatifUri'=>$path.$name]);
+			}
+
+		}
+
+
+		return response()->json($projet);
+
+	}
 
     /**
      * Store a newly created resource in storage.
@@ -70,8 +126,9 @@ class InvestissementEarlyController extends Controller
 	public function show($token)
 	{
 		//
+		$formes =Flettre::all();
 		$investissement = Investissement::where('token',$token)->first();
-		return view('Angel/Investissements/Earlies/show')->with(compact('investissement'));
+		return view('Angel/Investissements/Earlies/show')->with(compact('investissement','formes'));
 
 	}
 
