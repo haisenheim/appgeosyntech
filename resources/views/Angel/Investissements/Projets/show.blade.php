@@ -2172,12 +2172,7 @@
           </div>
           <!-- /.modal-dialog -->
     </div>
-    <script>
-        $('#closemsg').click(function(e){
-            e.preventDefault();
-            $('#msg').hide();
-        });
-    </script>
+
 
        <div  class="modal fade" id="DocModal">
         <div class="modal-dialog modal-lg">
@@ -2360,7 +2355,7 @@
      <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script>
 
-
+         $('#closemsg').click(function(e){$('#msg').hide()})
         $('#forme_id').change(function(e){
             $('.blocx').hide();
             var id = $('#forme_id').val();
@@ -2379,6 +2374,8 @@
              }
 
            },2000);
+
+
 
 
             $.ajax({
