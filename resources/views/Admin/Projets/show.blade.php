@@ -1888,17 +1888,27 @@
                                                 <div class="dropdown-menu" role="menu">
                                                  <?php if($invest->lettre): ?>
                                                     <a class="dropdown-item" href="/admin/letter/create/{{ $invest->token }}">Lettre d'intention</a>
+                                                    @if($invest->doc_doc_juridiqueUri)
+                                                         <a class="dropdown-item" href="/admin/investissement/doc/display/{{ $invest->token }}">Voir le document juridique</a>
+                                                        @if($invest->obac_doc_juridique_validated)
+                                                            <a class="dropdown-item" href="/admin/investissement/doc/reject/{{ $invest->token }}">Rejeter le document juridique</a>
+                                                        @else
+                                                             <a class="dropdown-item" href="/admin/investissement/doc/validate/{{ $invest->token }}">Valider le document juridique</a>
+                                                        @endif
+                                                    @endif
                                                   <?php endif; ?>
-                                                  <?php if(!$invest->doc_juridique): ?>
-                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
-                                                  <?php else: ?>
-                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/close/{{ $invest->token }}">Fermer la documentation</a>
-                                                  <?php endif; ?>
-                                                  <?php if($invest->validated): ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
-                                                  <?php else: ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
-                                                  <?php endif; ?>
+                                                  @if($invest->obac_doc_juridique_validated)
+                                                      <?php if(!$invest->doc_juridique): ?>
+                                                        <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
+                                                      <?php else: ?>
+                                                        <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/dossier/docs/close/{{ $invest->token }}">Fermer la documentation</a>
+                                                      <?php endif; ?>
+                                                      <?php if($invest->validated): ?>
+                                                        <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
+                                                      <?php else: ?>
+                                                        <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
+                                                      <?php endif; ?>
+                                                  @endif
 
                                                 </div>
                                               </div>
