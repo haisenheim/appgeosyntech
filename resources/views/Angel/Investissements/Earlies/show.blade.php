@@ -67,7 +67,7 @@
           <!-- /.modal-dialog -->
     </div>
 
-
+       @if($investissement->lettre)
        <div  class="modal fade" id="DocModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -92,6 +92,7 @@
           </div>
           <!-- /.modal-dialog -->
     </div>
+      @endif
       <div  class="modal fade" id="LetterModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
