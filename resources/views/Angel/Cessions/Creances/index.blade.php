@@ -1,7 +1,7 @@
 @extends('......layouts.angel')
 
 @section('page-title')
-CESSIONS DE CREANCES
+MES INVESTISSEMENTS DANS LES CESSIONS DE CREANCES
 @endsection
 
 @section('content')
