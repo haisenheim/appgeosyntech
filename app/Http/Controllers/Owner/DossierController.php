@@ -7,6 +7,7 @@ use App\Models\Bilan;
 use App\Models\ChoicesProjet;
 use App\Models\Concurrent;
 use App\Models\Devise;
+use App\Models\Environnement;
 use App\Models\Investissement;
 use App\Models\Moi;
 use App\Models\ProduitsProjet;

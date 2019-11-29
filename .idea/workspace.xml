@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -122,8 +123,8 @@
       <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31330472" vertical-offset="1150" max-vertical-offset="9264">
-              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.86266094" vertical-offset="1630" max-vertical-offset="9312">
+              <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
               <folding>
                 <element signature="e#46#82#0#PHP" expanded="true" />
               </folding>
@@ -147,8 +148,8 @@
       <file leaf-file-name="EarlyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.12" vertical-offset="1214" max-vertical-offset="7872">
-              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.24" vertical-offset="688" max-vertical-offset="7872">
+              <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -219,7 +220,6 @@
         <option value="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Angel/DossierController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
@@ -228,6 +228,7 @@
         <option value="$PROJECT_DIR$/resources/views/Owner/Earlies/create_diag_externe.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
       </list>
     </option>
   </component>
@@ -1062,17 +1063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.04" vertical-offset="656" max-vertical-offset="5328">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="134" selection-end-column="0" />
-          <folding>
-            <element signature="e#1774#1954#0#PHP" expanded="false" />
-            <element signature="e#1993#3856#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.36" vertical-offset="8622" max-vertical-offset="9152">
@@ -1154,18 +1144,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.04" vertical-offset="656" max-vertical-offset="5328">
+          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="e#1774#1954#0#PHP" expanded="false" />
+            <element signature="e#1993#3856#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.12" vertical-offset="1214" max-vertical-offset="7872">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.24" vertical-offset="688" max-vertical-offset="7872">
+          <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31330472" vertical-offset="1150" max-vertical-offset="9264">
-          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.86266094" vertical-offset="1630" max-vertical-offset="9312">
+          <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
           <folding>
             <element signature="e#46#82#0#PHP" expanded="true" />
           </folding>
