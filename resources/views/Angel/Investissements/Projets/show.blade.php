@@ -4,6 +4,7 @@
 <?php $doc = $investissement->doc_juridiqueUri?1:0; $doc_validated=$investissement->obac_doc_juridique_validated; ?>
 <input type="hidden" id="doc" value="{{ $doc }}"/>
 <input type="hidden" id="doc_validated" value="{{ $doc_validated }}"/>
+<input type="hidden" id="id" value="{{ $investissement->earlie->token }}"/>
 @endsection
 @section('content')
 <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}" />
