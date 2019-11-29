@@ -53,11 +53,7 @@ CESSIONS DE CREANCES
                    @endforeach
               </tbody>
           </table>
-          <div>
-            <ul class="pagination">
-                {{ $cessions->links()  }}
-            </ul>
-          </div>
+
         </div>
         <!-- /.card-body -->
       </div>
