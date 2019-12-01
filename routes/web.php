@@ -16,7 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 	$projets = \App\Models\Projet::all()->where('active',1);
-    return view('Front/index')->with(compact('projets'));
+	$entreprises = \App\Models\Entreprise::all();
+	$organismes = \App\Models\Organisme::all();
+	$partenaires = collect([]);
+	foreach($entreprises as $entreprise){
+		$partenaires->add($entreprise);
+	}
+	foreach($organismes as $organisme){
+		$partenaires->add($organisme);
+	}
+    return view('Front/index')->with(compact('projets','partenaires'));
 });
 
 Route::get('/getvilles',function(){

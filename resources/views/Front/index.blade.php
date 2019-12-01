@@ -19,7 +19,7 @@
 
 
         <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="{{asset('front/ico/favicon.png')}}">
+        <link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('front/ico/apple-touch-icon-144-precomposed.png')}}">
 
          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
@@ -110,19 +110,19 @@
             			    <div class="collapse navbar-collapse" id="navbarNav">
             			        <ul class="navbar-nav ml-auto">
             			            <li class="nav-item">
-            			                <a class="nav-link" href="/">ACCUEIL</a>
+            			                <a class="nav-link" href="/"><i class="fa fa-home -fa-lg"></i></a>
             			            </li>
             			             <li class="nav-item">
             			                <a class="nav-link" href="/projets">TOUS LES PROJETS</a>
             			            </li>
             			            <li class="nav-item">
-            			                <a class="nav-link" href="/about">A PROPOS</a>
+            			                <a class="nav-link" href="#about">COMMENT CA MARCHE?</a>
             			            </li>
             			            <li class="nav-item">
-            			                <a class="nav-link" href="http://cabinet-obac.com">OBAC</a>
+            			                <a class="nav-link" href="#obac">OBAC</a>
             			            </li>
             			            <li class="nav-item">
-            			                <a class="nav-link" href="/contact">CONTACT</a>
+            			                <a class="nav-link" href="#contact">CONTACT</a>
             			            </li>
             			        </ul>
             			    </div>
@@ -134,22 +134,22 @@
 
 		 <div class="section-1-container section-container">
         	        <div class="container">
-        	            <div class="row">
         	                <div class="col section-1 section-description wow fadeIn ">
 
                                  <h1>BIENVENU SUR OBAC ALERT</h1>
                                  <div class="divider-1 wow fadeInUp"><span></span></div>
           	                    <p>
-          	                    	Plateforme vitrine des projet <strong>Carousel</strong> template with <strong>Multiple Items</strong> made with
-          	                    	the <strong>Bootstrap 4</strong> framework. Check it out now. Download it, customize and use it as you like!
+          	                    	Obac alert est l’outil de mobilisation de capitaux du cabinet de conseils stratégiques et financiers et à vocation de banques d’affaires : OBAC Sarl. Cet outil nous permet de présenter à notre réseau de partenaires financiers locaux,
+          	                    	 régionaux et internationaux <b> les projets structurés par le cabinet dans les pays dans lesquels nous intervenons.</b>
           	                    </p>
         	                </div>
-        	            </div>
         	        </div>
           </div>
 
         <!-- Top content -->
-        <div class="" style="background: #f8f8f8;">
+        <div class="section-1-container section-container" style="background: #f8f8f8;">
+             <h1>Découvrez les projets que nous avons structurés</h1>
+             <div class="divider-1 wow fadeInUp"><span></span></div>
         	<div class="container-fluid">
         		<div id="carousel-example" class="carousel slide" data-ride="carousel">
         			<div class="carousel-inner row w-100 mx-auto" role="listbox">
@@ -162,9 +162,8 @@
             			        <h3 style="position: relative; top: 120px; color: #FFFFFF; font-weight: 700">{{$projet->name}}</h3>
 							<img style="height: 240px;" src="{{asset($projet->imageUri?'img/'.$projet->imageUri:'front/img/backgrounds/1.jpg')}}" class="img-fluid mx-auto d-block" alt="img1">
                             <div class="carousel-caption">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                                Ut wisi enim ad minim veniam, quis nostrud.
-                                 <a class="btn btn-sm btn-primary" href="#">Lire la suite</a>
+
+                                 <a class="btn btn-sm btn-primary" href="/projet/{{ $projet->token }}">Consulter</a>
                             </div>
             			    </div>
 
@@ -190,183 +189,261 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col section-1 section-description wow fadeIn">
-	                    <h1>Projets divers, d'horizons divers pour des investisseurs divers</h1>
+	                    <h1>NOUS VOUS PRESENTONS 3 TYPES DE PROJETS</h1>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                    <p>
-	                    	This is a free <strong>Carousel</strong> template with <strong>Multiple Items</strong> made with 
-	                    	the <strong>Bootstrap 4</strong> framework. Check it out now. Download it, customize and use it as you like!
+	                    	Nous présentons à notre réseau de partenaires financiers, 3 types de projets :
 	                    </p>
 	                </div>
 	            </div>
 	            <div class="row">
                 	<div class="col-md-4 section-1-box wow fadeInUp">
                 		<div class="row">
-                			<div class="col-md-4">
+                			<div class="col-md-12">
 			                	<div class="section-1-box-icon">
 			                		<i class="fas fa-magic"></i>
 			                	</div>
+			                	<h3>Projets Industriels</h3>
 		                	</div>
-	                		<div class="col-md-8">
-	                    		<h3>Projets Industriels</h3>
-	                    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                		<div class="col-md-12">
+	                    		<p>Des projets industriels ou de services à forte valeur ajoutée</p>
 	                    	</div>
 	                    </div>
                     </div>
                     <div class="col-md-4 section-1-box wow fadeInDown">
 	                	<div class="row">
-                			<div class="col-md-4">
+                			<div class="col-md-12">
 			                	<div class="section-1-box-icon">
 			                		<i class="fas fa-cog"></i>
 			                	</div>
+			                	<h3>Projets liés aux financements structurés </h3>
 		                	</div>
-	                		<div class="col-md-8">
-	                    		<h3>Projets d'exploitations des ressources naturelles</h3>
-	                    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                		<div class="col-md-12">
+
+	                    		<p>Des projets liés aux financements structurés (Ressources naturelles et infrastructures)</p>
 	                    	</div>
 	                    </div>
                     </div>
                     <div class="col-md-4 section-1-box wow fadeInUp">
 	                	<div class="row">
-                			<div class="col-md-4">
+                			<div class="col-md-12">
 			                	<div class="section-1-box-icon">
 			                		<i class="fab fa-twitter"></i>
 			                	</div>
+			                	<h3>Projets de cession d’actifs ou de créances</h3>
 		                	</div>
-	                		<div class="col-md-8">
-	                    		<h3>Projets de partenariat public privé</h3>
-	                    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                		<div class="col-md-12">
+
+	                    		<p>projets de cession d’actifs immobilisés ou de créances</p>
 	                    	</div>
 	                    </div>
                     </div>
 	            </div>
+	            <div class="row">
+                    <div class="col section-1 section-description wow fadeIn">
+                        <h3>Afin d’intégrer notre réseau de partenaires financiers</h3>
+                        <p><b>Cliquez sur <a href="#contact">Contacter le cabinet OBAC</a></b></p>
+                        <div class="divider-1 wow fadeInUp"><span></span></div>
+                    </div>
+                </div>
 	        </div>
         </div>
 
+
+       <div class="section-1-container section-container" style="background: #f8f8f8;">
+             <h1>NOS PARTENAIRES FINANCIERS</h1>
+             <div class="divider-1 wow fadeInUp"><span></span></div>
+        	<div class="container-fluid">
+        		<div id="carousel-example" class="carousel slide" data-ride="carousel">
+        			<div class="carousel-inner row w-100 mx-auto" role="listbox">
+        			    <?php $i=0; ?>
+        			    @foreach($partenaires as $projet)
+                        @if($projet->imageUri)
+            			<div class="carousel-item col-12 col-sm-12 col-md-3 col-lg-3 <?= $i==0?'active':'' ?>">
+            			    <div class="carousel-item-inner">
+							    <img style="height: 120px; border-radius: 50%" src="{{asset('img/'.$projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
+            			    </div>
+						</div>
+						<?php $i++ ?>
+						@endif
+						@endforeach
+
+        			</div>
+        			<a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Precedent</span>
+					</a>
+					<a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Suivant</span>
+					</a>
+        		</div>
+        	</div>
+        </div>
+
         <!-- Section 2 -->
-        <div class="section-2-container section-container section-container-gray-bg">
+        <div id="about" class="section-2-container section-container section-container-gray-bg">
 	        <div class="container">
 	            <div class="row">
+	                <h1>COMMENT CA MARCHE ?</h1>
+
 	                <div class="col section-2 section-description wow fadeIn">
+	                    Nous sélectionnons nos partenaires financiers
 	                </div>
 	            </div>
 	            <div class="row">
 	            	<div class="col section-2-box wow fadeInLeft">
-                    	<h3>Section 2</h3>
-                    	<p class="medium-paragraph">
-                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                    		sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
-                    	</p>
-                    	<p>
-                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                    		Ut wisi enim ad minim veniam, quis nostrud. 
-                    		Exerci tation ullamcorper suscipit <a href="#">lobortis nisl</a> ut aliquip ex ea commodo consequat. 
-                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl. 
-                    	</p>
-                    	<p>
-                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                    		Ut wisi enim ad minim veniam, quis nostrud. 
-                    		Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    	</p>
+	            	    <ul style="list-style: decimal;">
+	            	        <li class="col section-2-box wow fadeInLeft">
+	            	            <h3>PRISE DE CONTACT </h3>
+	            	            <p>
+	            	                Nous prenons connaissance de votre politique d’investissement, de votre appétence pour le risque ainsi que de la valeur ajoutée financière et
+	            	                non financière que vous pouvez apporter aux projets que nous accompagnons.
+	            	            </p>
+	            	        </li>
+	            	        <li class="col section-2-box wow fadeInRight">
+	            	            <h3>SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
+	            	            <p>
+	            	                Nous développons des partenariats avec des fonds d’investissement, des banques, des microfinances, des groupes d’entreprises
+	            	                ou des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons.
+	            	            </p>
+	            	        </li>
+	            	        <li class="col section-2-box wow fadeInLeft">
+	            	            <h3>CREATION D’UN COMPTE « INVESTISSEUR »  </h3>
+	            	            <p>
+	            	               Le compte Investisseur vous permettra d’accéder aux projets structurés par le cabinet dans les pays dans lesquels nous intervenons.
+	            	               Vous pouvez dès lors vous intéresser à un projet après avoir lu le teaser puis solliciter une rencontre avec le porteur de projet
+	            	            </p>
+	            	        </li>
+	            	        <li class="col section-2-box wow fadeInRight">
+	            	            <h3>RENCONTRE AVEC LES PORTEURS DE PROJET   </h3>
+	            	            <p>
+	            	                Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs qui s’intéressent à son projet. Cette rencontre est importante
+	            	                car c’est le porteur de projet qui décidera s’il souhaite poursuivre la discussion avec vous en vous donnant accès à la DATA ROOM.
+	            	            </p>
+	            	        </li>
+
+
+	            	        <li class="col section-2-box wow fadeInLeft">
+	            	            <h3>ANALYSE DE LA DATE ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3>
+
+	            	        </li>
+	            	        <li class="col section-2-box wow fadeInRight">
+	            	            <h3>VALIDATION DE LA DOCUMENTATION JURIDIQUE DE L’OPERATION   </h3>
+	            	            <p>
+	            	                Après avoir rencontré , Vous pouvez investir à moyen - long terme en participant aux financements
+	            	                de projets présentés sur la plateforme ou à court terme en investissant par exemple sur les cessions de créances.
+	            	            </p>
+	            	        </li>
+	            	        <li class="col section-2-box wow fadeInLeft">
+	            	            <h3>VERSEMENT DES FONDS   </h3>
+	            	            <p>
+	            	              Le versement des fonds se fera sur un numéro de compte qui vous sera communiqué le moment venu
+	            	            </p>
+	            	        </li>
+	            	        <li class="col section-2-box wow fadeInRight">
+	            	            <h3>LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3>
+	            	            <p>
+	            	               Le cabinet OBAC utilise son outil de gestion des risques intitulé OBAC RISK MANAGEMENT afin de maitriser les risques
+	            	               liés à l’exécution des projets qui ont reçu des financements. OBAC RISK MANAGEMENT est un logiciel expert qui permet
+	            	               d’identifier les risques d’exploitation, financiers, d’aléas et stratégiques relatifs à un projet
+	            	               puis de mettre en place un plan d’actions en vue de maitriser réduire ces probabilités d’occurrence et limiter les pertes de capital.
+	            	            </p>
+	            	            <p><b>Par ailleurs, chaque mois le porteur de projet est tenu de rédiger un rapport de gestion. </b></p>
+	            	        </li>
+	            	        <li class="col section-2-box wow fadeInLeft">
+	            	            <h3>RECOLTEZ DANS LE RESPECT DE LA DOCUMENTATION JURIDIQUE QUI A ETE SIGNEE</h3>
+
+	            	        </li>
+	            	    </ul>
 	                </div>
 	            </div>
 	        </div>
         </div>
 
 		<!-- Section 3 -->
-        <div class="section-3-container section-container">
+        <div id="obac" class="section-3-container section-container">
 	        <div class="container">
 	        	
 	            <div class="row">
 	                <div class="col section-3 section-description wow fadeIn">
-	                    <h2>Section 3</h2>
+	                    <h1>A PROPOS DU CABINET OBAC</h1>
+	                        <p>
+	                            Créé en 2014, OBAC est un cabinet de conseils stratégiques et financiers spécialisé sur l'Afrique Centrale et à vocation de Banque d’affaires.
+	                             OBAC est structuré autour de 3 pôles d’expertise visant chacun à accomplir une mission spécifique.
+	                        </p>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
 	            
 	            <div class="row">
-	                <div class="col-md-6 section-3-box wow fadeInLeft">
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
 	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="section-3-box-icon">
-	                				<i class="fas fa-paperclip"></i>
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3>Ut wisi enim ad minim</h3>
-		                    	<p>
-		                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                    		Ut wisi enim ad minim veniam, quis nostrud.
-		                    	</p>
+	                		<div style="border-radius: 50%">
+                                <h3>POLE STRUCTURATION DE PROJETS </h3>
+                                Nous aidons les porteurs de projet à créer de la valeur en structurant leur entreprise
 	                		</div>
 	                	</div>
 	                </div>
-	                <div class="col-md-6 section-3-box wow fadeInLeft">
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
 	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="section-3-box-icon">
-	                				<i class="fas fa-pencil-alt"></i>
-	                			</div>
+	                		<div style="border-radius: 50%">
+                                <h3>POLE RISK MANAGEMENT </h3>
+                                Nous accompagnons les porteurs de projets dans la maitrise des risques liés à l’exécution de leur plan d’actions
 	                		</div>
-	                		<div class="col-md-9">
-	                			<h3>Sed do eiusmod tempor</h3>
-		                    	<p>
-		                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                    		Ut wisi enim ad minim veniam, quis nostrud.
-		                    	</p>
+	                	</div>
+	                </div>
+
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                	<div class="row">
+	                		<div style="border-radius: 50%">
+                                <h3>POLE FORMATION  </h3>
+                                <p>Nous accompagnons les porteurs de projet dans le renforcement de leurs capacités managériales</p>
 	                		</div>
 	                	</div>
 	                </div>
 	            </div>
 	            
 	            <div class="row">
-	                <div class="col-md-6 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="section-3-box-icon">
-	                				<i class="fas fa-cloud"></i>
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3>Quis nostrud exerci tat</h3>
-		                    	<p>
-		                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                    		Ut wisi enim ad minim veniam, quis nostrud.
-		                    	</p>
-	                		</div>
-	                	</div>
-	                </div>
-	                <div class="col-md-6 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="section-3-box-icon">
-	                				<i class="fab fa-google"></i>
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3>Minim veniam quis nostrud</h3>
-		                    	<p>
-		                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                    		Ut wisi enim ad minim veniam, quis nostrud.
-		                    	</p>
-	                		</div>
-	                	</div>
-	                </div>
+	                <p>Notre ambition à moyen terme est d’être présent dans les 6 pays de la CEMAC d’ici 2025
+	                tout en saisissant les opportunités présentes dans les pays de la CEDEAO.  </p>
+	                <p>Notre mission est d'accompagner d'une part les porteurs de projets dans la structuration
+	                de leur projet afin de leur permettre de retrouver une bonne performance et santé financière
+                       et d’autre part les investisseurs institutionnels ou privés dans la réduction / maîtrise
+                       des risques liés aux investissements.</p>
+                    <p>
+                        Par ailleurs, le cabinet OBAC forme chaque année des centaines de porteurs de projets à travers différents programmes et séminaires de
+                        formation afin de leur donner les outils qui leur permettront de réussir leur aventure entrepreneuriale
+                    </p>
 	            </div>
+                <div class="divider-1 wow fadeInUp"><span></span></div>
+                <div class="row">
+                    <div class="col section-3 section-description wow fadeIn">
+	                    <h2>DECOUVREZ EN IMAGES NOS EVENEMENTS  </h2>
 
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+                </div>
 	        </div>
         </div>
 
 		<!-- Section 4 -->
-        <div class="section-4-container section-container section-container-image-bg">
+        <div id="contact" class="section-4-container section-container section-container-image-bg">
 	        <div class="container">
 	            <div class="row">
-	                <div class="col section-4 section-description wow fadeInLeftBig">
-	                	<h2>Section 4</h2>
-	                    <p>
-	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-	                    	aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
-	                    </p>
-	                </div>
+                    <h1>CONTACTEZ NOUS</h1>
+                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	            </div>
+	            <div class="row">
+	                <form action="/contact" method="post">
+	                    <div class="row">
+	                        <div class="col-md-12">
+	                            <div class="form-group">
+	                                <label for="name">NOM</label>
+	                                <input type="text" name="name" class="form-control"/>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </form>
 	            </div>
 	        </div>
         </div>
@@ -378,7 +455,7 @@
 	        	<div class="row">
 	        		
                     <div class="col">
-                    	&copy; Bootstrap 4 Carousel with Multiple Items. Download it for free on <a href="https://azmind.com">AZMIND</a>.
+                    	&copy; OBAC ALERT - Cabinet Obac 2019 - Tous droits Reservés.
                     </div>
                     
                 </div>
