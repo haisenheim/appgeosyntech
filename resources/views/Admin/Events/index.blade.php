@@ -53,7 +53,7 @@ EVENEMENTS
                                 @if($projet->active)
                                 <li class="list-inline-item">
                                     <a class="btn btn-danger btn-xs" href="/admin/event/disable/{{ $projet->token  }}">
-                                      <i class="fas fa-unlock">
+                                      <i class="fas fa-lock">
                                       </i>
                                       DESACTIVER
                                     </a>

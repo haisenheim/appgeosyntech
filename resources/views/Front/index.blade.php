@@ -433,7 +433,7 @@
                     <h1>CONTACTEZ NOUS</h1>
                     <div class="divider-1 wow fadeInUp"><span></span></div>
 	            </div>
-	            <div class="row">
+	            <div class="">
 	                <form action="/contact" method="post">
 	                    <div class="row">
 	                        <div class="col-md-12">
@@ -441,6 +441,27 @@
 	                                <label for="name">NOM</label>
 	                                <input type="text" name="name" class="form-control"/>
 	                            </div>
+	                        </div>
+	                        <div class="col-md-12">
+	                            <div class="form-group">
+	                                <label for="name">ADRESSE EMAIL</label>
+	                                <input type="text" name="email" class="form-control"/>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-12">
+	                            <div class="form-group">
+	                                <label for="name">OBJET</label>
+	                                <input type="text" name="objet" class="form-control"/>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-12">
+	                            <div class="form-group">
+	                                <label for="name">MESSAGE</label>
+	                                <textarea name="message" id="" cols="30" rows="10"></textarea>
+	                            </div>
+	                        </div>
+	                        <div>
+	                            <button class="btn btn-success btn-sm"><i class="fa fa-enveloppe"></i> ENVOYER</button>
 	                        </div>
 	                    </div>
 	                </form>

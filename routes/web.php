@@ -28,6 +28,8 @@ Route::get('/', function () {
     return view('Front/index')->with(compact('projets','partenaires'));
 });
 
+Route::get('send-email', 'EmailController@sendEMail');
+
 Route::get('/getvilles',function(){
 	$villes = \App\Models\Ville::all()->where('pay_id',1);
 	return json_encode($villes);
