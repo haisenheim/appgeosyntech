@@ -55,6 +55,7 @@ Route::prefix('admin')
 	    Route::resource('organismes','OrganismeController');
 	    Route::resource('entreprises','EntrepriseController');
 	    Route::resource('devises','DeviseController');
+	    Route::resource('events','EventController');
 
 	    // Actifs
 	    Route::resource('actifs','ActifController');
