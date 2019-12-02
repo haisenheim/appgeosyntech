@@ -113,7 +113,7 @@ EVENEMENTS
                                     </div>
 
                                      <div class="row">
-                                         <div class="col-md-6 col-sm-12">
+                                         <div class="col-md-12 col-sm-12">
                                              <div class="form-group">
                                                  <label for="description" class="control-label">DESCRIPTION</label>
                                                  <textarea name="description" id="description" cols="30" rows="3"></textarea>

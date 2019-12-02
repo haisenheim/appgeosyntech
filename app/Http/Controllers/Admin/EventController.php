@@ -44,7 +44,7 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //
-	    $data = $request->except('_csrf');
+	    $data = $request->except('_token');
 	    $token = sha1(Auth::user()->id . date('Ydmshi'));
 	    $data['token']=$token;
 	    if($request->imageUri){
