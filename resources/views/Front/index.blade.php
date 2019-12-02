@@ -425,7 +425,7 @@
                 </div>
 	        </div>
         </div>
-
+       </div>
 		<!-- Section 4 -->
         <div id="contact" class="section-4-container section-container section-container-image-bg">
 	        <div class="container">
@@ -460,8 +460,8 @@
 	                                <textarea name="message" id="" cols="30" rows="10"></textarea>
 	                            </div>
 	                        </div>
-	                        <div>
-	                            <button class="btn btn-success btn-sm"><i class="fa fa-enveloppe"></i> ENVOYER</button>
+	                        <div class="col-md-12">
+	                            <button class="btn btn-success btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
 	                        </div>
 	                    </div>
 	                </form>
@@ -483,6 +483,13 @@
 	        </div>
                 	
         </footer>
+        <style>
+            form label{
+            text-align: left;
+            color: black;
+            }
+        </style>
+
 
         <!-- Javascript -->
 		<script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>

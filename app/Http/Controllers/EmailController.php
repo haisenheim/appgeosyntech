@@ -11,14 +11,17 @@ class EmailController extends Controller
 {
 	public function sendEmail(Request $request)
 	{
-		$data['title'] = "This is Test Mail Tuts Make";
+		$data['title'] = $request->email;
+		$data['message'] = $request->message;
+		$data['name']= $request->name;
 
-		Mail::send('emails.email', $data, function($message) {
+
+		Mail::send('emails.email', $data, function($message) use ($request) {
 
 
 			$message->to('ormsystem2018@gmail.com', 'FRONT OFFICE')
 
-				->subject('Un mail en provenance du front office');
+				->subject($request->objet);
 		});
 
 		if (Mail::failures()) {

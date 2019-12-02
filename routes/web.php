@@ -43,6 +43,8 @@ Route::get('/about',function(){
 
 Route::get('/pdf','FrontController@makePdf');
 
+Route::post('/contact','EmailController@sendEmail');
+
 /*
 
 Route::get('/roles/',
