@@ -50,7 +50,7 @@ EVENEMENTS
                                           Afficher
                                       </a>
                                 </li>
-                                @if($event->active)
+                                @if($projet->active)
                                 <li class="list-inline-item">
                                     <a class="btn btn-danger btn-xs" href="/admin/event/disable/{{ $projet->token  }}">
                                       <i class="fas fa-unlock">

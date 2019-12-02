@@ -1,4 +1,4 @@
-@extends('......layouts.owner')
+@extends('......layouts.admin')
 
 @section('content')
     <div class="md-container">
@@ -6,77 +6,64 @@
 
             <div class="widget-content">
             <div class="page-header">
-                <h3 class="text-center">Modification de {{$actif->name}}</h3>
+                <h3 class="text-center">Modification de {{$event->name}}</h3>
             </div>
-                <form enctype="multipart/form-data" class="form" action="{{route('owner.update.actif')}}"  method="post">
-                    {{csrf_field()}}
-                    <input type="hidden" name="token" value="{{$actif->token}}"/>
-                    <input type="hidden" name="id" value="{{$actif->id}}"/>
+                <form enctype="multipart/form-data" class="form" action="/admin/events/save"  method="post">
+                                    {{csrf_field()}}
+                                    <input type="hidden" name="token" value="{{$event->token}}"/>
+                                    <input type="hidden" name="id" value="{{$event->id}}"/>
 
-                    <fieldset>
-                        <legend>INFORMATIONS SUR L'ARTICLE</legend>
-                            <div class="row">
-                                 <div class="col-md-8">
-                                     <div class="form-group">
-                                         <label class="control-label">NOM</label>
-                                         <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" value="{{$actif->name}}">
-                                     </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                     <div class="form-group">
-                                         <label for="prix" class="control-label">PRIX INITIAL</label>
-                                         <input id="prix" name="prix"  type="number"  class="form-control" value="{{$actif->prix}}">
-                                     </div>
-                                 </div>
+                                    <fieldset>
+                                        <legend>INFORMATIONS SUR L'EVENEMENT</legend>
+                                            <div class="row">
+                                                 <div class="col-md-8">
+                                                     <div class="form-group">
+                                                         <label class="control-label">NOM</label>
+                                                         <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" value="{{$event->name}}">
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-4">
+                                                     <div class="form-group">
+                                                         <label for="prix" class="control-label">DEBUT</label>
+                                                         <input id="prix" name="start"  type="date"  class="form-control" value="{{$event->start}}">
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-4">
+                                                     <div class="form-group">
+                                                         <label for="prix" class="control-label">FIN</label>
+                                                         <input id="prix" name="end"  type="date"  class="form-control" value="{{$event->end}}">
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-4">
+                                                     <div class="form-group">
+                                                         <label for="prix" class="control-label">LINK</label>
+                                                         <input id="prix" name="link"  type="text"  class="form-control" value="{{$event->link}}">
+                                                     </div>
+                                                 </div>
 
-                                 <div class="col-md-6 col-sm-12">
-                                     <div class="form-group">
-                                         <label class="control-label">TYPE D'IMMOBILISATION</label>
-                                         <select class="form-control" name="tactif_id" id="variante_id">
-                                         <option value="{{$actif->tactif_id}}">{{$actif->tactif->name}}</option>
-                                            @foreach($tactifs as $p)
-                                               <option value='{!! $p->id !!}'>{{$p->name}}</option>
-                                            @endforeach
-                                         </select>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6">
-                                     <div class="form-group">
-                                         <label for="imageUri" class="control-label">PHOTO DE L'ARTICLE</label>
-                                         <input id="imageUri" name="imageUri" type="file"  class="form-control" placeholder="">
-                                     </div>
-                                 </div>
-                                 <div class="col-md-12 col-sm-12">
-                                     <div class="form-group">
-                                         <label for="description" class="control-label">DESCRIPTION</label>
-                                         <textarea name="description" id="description" cols="30" rows="3"><?= $actif->description ?></textarea>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-12 col-sm-12">
-                                     <div class="form-group">
-                                         <label for="caracteristiques" class="control-label">CARACTERISTIQUES</label>
-                                         <textarea name="caracteristiques" id="caracteristiques" cols="30" rows="3"><?= $actif->caracteristiques ?></textarea>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6 col-sm-12">
-                                     <div class="form-group">
-                                         <label for="ville_id" class="control-label">VILLE</label>
-                                         <select class="form-control" name="ville_id" id="ville_id">
-                                         <option value="{{$actif->ville_id}}">{{$actif->ville->name}}</option>
-                                            @foreach($villes as $p)
-                                               <option value='{!! $p->id !!}'>{{$p->name}}</option>
-                                            @endforeach
-                                         </select>
-                                     </div>
-                                 </div>
-                             </div>
 
-                             <div class="btn-div card-footer text-center">
-                                 <button class="btn btn-success  btn-sm " type="submit"> Enregister <i class="fa fa-save"></i></button>
-                            </div>
+                                                 <div class="col-md-6">
+                                                     <div class="form-group">
+                                                         <label for="imageUri" class="control-label">PHOTO</label>
+                                                         <input id="imageUri" name="imageUri" type="file"  class="form-control" placeholder="">
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-12 col-sm-12">
+                                                     <div class="form-group">
+                                                         <label for="description" class="control-label">DESCRIPTION</label>
+                                                         <textarea name="description" id="description" cols="30" rows="3"><?= $event->description ?></textarea>
+                                                     </div>
+                                                 </div>
 
-                     </fieldset>
-                </form>
+
+                                             </div>
+
+                                             <div class="btn-div card-footer text-center">
+                                                 <button class="btn btn-success  btn-block " type="submit"> Enregister <i class="fa fa-save"></i></button>
+                                            </div>
+
+                                     </fieldset>
+                                </form>
             </div>
         </div>
     </div>
