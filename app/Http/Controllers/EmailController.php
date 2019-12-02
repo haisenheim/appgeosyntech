@@ -16,7 +16,7 @@ class EmailController extends Controller
 		$data['name']= $request->name;
 
 
-		Mail::send('emails.email', $data, function($message) use ($request) {
+		Mail::send('email', $data, function($message) use ($request) {
 
 
 			$message->to('ormsystem2018@gmail.com', 'FRONT OFFICE')
