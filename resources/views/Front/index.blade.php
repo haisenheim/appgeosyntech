@@ -80,6 +80,12 @@
                 text-decoration: none;
                 border-bottom: none;
             }
+
+            form label {
+            text-align: left;
+            color: #000000;
+            font-weight: 800;
+            }
         </style>
     </head>
 
@@ -435,6 +441,7 @@
 	            </div>
 	            <div class="">
 	                <form action="/contact" method="post">
+	                {{ csrf() }}
 	                    <div class="row">
 	                        <div class="col-md-12">
 	                            <div class="form-group">
@@ -457,7 +464,7 @@
 	                        <div class="col-md-12">
 	                            <div class="form-group">
 	                                <label for="name">MESSAGE</label>
-	                                <textarea name="message" id="" cols="30" rows="10"></textarea>
+	                                <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
 	                            </div>
 	                        </div>
 	                        <div class="col-md-12">
@@ -483,12 +490,7 @@
 	        </div>
                 	
         </footer>
-        <style>
-            form label{
-            text-align: left;
-            color: black;
-            }
-        </style>
+
 
 
         <!-- Javascript -->
