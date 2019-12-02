@@ -44,9 +44,15 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //
-	    $data = $request->except('_token');
+	   // $data = $request->except('_token');
 	    $token = sha1(Auth::user()->id . date('Ydmshi'));
 	    $data['token']=$token;
+	    $data['name']=$request->name;
+	    $data['start']=$request->start;
+	    $data['end']=$request->end;
+	    $data['description']= $request->description;
+	    $data['link']=$request->link;
+	    $data['user_id']= Auth::user()->id;
 	    if($request->imageUri){
 		    $file = $request->imageUri;
 		    $ext = $file->getClientOriginalExtension();
