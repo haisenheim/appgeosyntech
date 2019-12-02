@@ -108,7 +108,7 @@ class EventController extends Controller
 				$data['imageUri']=$path.$name;
 			}
 		}
-		$event = Event::updateOrCreate($data);
+		$event = Event::updateOrCreate(['token',$token],$data);
 
 		if($event){
 			return redirect('/admin/events');

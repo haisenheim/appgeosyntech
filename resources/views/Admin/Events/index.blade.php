@@ -42,11 +42,33 @@ EVENEMENTS
 
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-success btn-xs" href="/admin/events/{{ $projet->token  }}">
-                              <i class="fas fa-search">
-                              </i>
-                              Afficher
-                          </a>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="btn btn-success btn-xs" href="/admin/events/{{ $projet->token  }}">
+                                          <i class="fas fa-search">
+                                          </i>
+                                          Afficher
+                                      </a>
+                                </li>
+                                @if($event->active)
+                                <li class="list-inline-item">
+                                    <a class="btn btn-danger btn-xs" href="/admin/event/disable/{{ $projet->token  }}">
+                                      <i class="fas fa-unlock">
+                                      </i>
+                                      DESACTIVER
+                                    </a>
+                                </li>
+                                @else
+                                    <li class="list-inline-item">
+                                        <a class="btn btn-success btn-xs" href="/admin/event/enable/{{ $projet->token  }}">
+                                          <i class="fas fa-unlock">
+                                          </i>
+                                          ACTIVER
+                                        </a>
+                                    </li>
+                                @endif
+                            </ul>
+
 
 
                       </td>
