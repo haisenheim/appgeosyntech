@@ -7,7 +7,7 @@ EVENEMENTS
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
         <div class="card">
-        <div class="card-body p-0">
+        <div class="card-body p-15">
           <table class="table table-striped projects" id="table-projets">
               <thead>
                   <tr>
