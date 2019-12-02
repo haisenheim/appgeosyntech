@@ -71,7 +71,7 @@ class EventController extends Controller
 			    $data['imageUri']=$path.$name;
 		    }
 	    }
-	    $event = Event::updateOrCreate($request->except('_csrf'));
+	    $event = Event::updateOrCreate($data);
 
 	    if($event){
 		    return redirect('/admin/events');
