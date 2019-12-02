@@ -10,7 +10,7 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                    <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+                                    <div style="height: 300px; width: 100%; background: url('{{ $event->imageUri?asset($event->imageUri):asset('img/logo.png') }}'); background-size: cover ">
 
                                     </div>
                                     <p>DEBUT: <b>{{ date_format($event->start, 'd/m/Y') }}</b></p>
