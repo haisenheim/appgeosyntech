@@ -48,7 +48,7 @@
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
             </div>
             <div class="modal-body">
-                 <form enctype="multipart/form-data" class="form" action="{{route('admin.update.actif')}}"  method="post">
+                 <form enctype="multipart/form-data" class="form" action="{{route('admin.update.events')}}"  method="post">
                                     {{csrf_field()}}
                                     <input type="hidden" name="token" value="{{$event->token}}"/>
                                     <input type="hidden" name="id" value="{{$event->id}}"/>
