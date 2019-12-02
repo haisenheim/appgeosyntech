@@ -76,7 +76,7 @@ EVENEMENTS
                             <fieldset>
                                 <legend>INFORMATIONS SUR L'EVENEMENT</legend>
                                     <div class="row">
-                                         <div class="col-md-6">
+                                         <div class="col-md-12">
                                              <div class="form-group">
                                                  <label class="control-label">NOM</label>
                                                  <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" placeholder="">
@@ -88,13 +88,13 @@ EVENEMENTS
                                          <div class="col-md-3">
                                              <div class="form-group">
                                                  <label for="prix" class="control-label">DATE DE DEBUT</label>
-                                                 <input id="start" name="start"  type="datetime"  class="form-control" placeholder="">
+                                                 <input id="start" name="start"  type="date"  class="form-control" placeholder="">
                                              </div>
                                          </div>
                                          <div class="col-md-3">
                                              <div class="form-group">
                                                  <label for="prix" class="control-label">DATE DE FIN</label>
-                                                 <input id="end" name="end"  type="datetime"  class="form-control" placeholder="">
+                                                 <input id="end" name="end"  type="date"  class="form-control" placeholder="">
                                              </div>
                                          </div>
 
@@ -136,6 +136,30 @@ EVENEMENTS
       </div>
 
     </div>
+    <style>
+            div.note-editor.note-frame{
+                padding: 0;
+            }
+          .note-frame .btn-default {
+                color: #222;
+                background-color: #FFF;
+                border-color: none;
+            }
+        </style>
+        <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $('textarea').summernote({
+                height: 200,
+                tabsize: 2,
+                followingToolbar: true,
+                lang:'fr-FR'
+              });
+            });
+          </script>
 @endsection
 
 @section('nav_actions')
