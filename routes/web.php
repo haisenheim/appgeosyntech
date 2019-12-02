@@ -57,8 +57,8 @@ Route::prefix('admin')
 	    Route::resource('devises','DeviseController');
 	    Route::resource('events','EventController');
 	    Route::post('events/save','EventController@save');
-	    Route::post('event/disable/{token}','EventController@disable');
-	    Route::post('event/enable/{token}','EventController@enable');
+	    Route::get('event/disable/{token}','EventController@disable');
+	    Route::get('event/enable/{token}','EventController@enable');
 
 	    // Actifs
 	    Route::resource('actifs','ActifController');
