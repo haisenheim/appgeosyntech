@@ -135,7 +135,7 @@ class EventController extends Controller
 
 
 	public function disable($id){
-		$event = Event::where('token',$id);
+		$event = Event::where('token',$id)->first();
 		$event->active = 0;
 		$event->save();
 
@@ -143,7 +143,7 @@ class EventController extends Controller
 	}
 
 	public function enable($id){
-		$projet = Event::where('token',$id);
+		$projet = Event::where('token',$id)->first();
 		$projet->active = 1;
 		$projet->save();
 
