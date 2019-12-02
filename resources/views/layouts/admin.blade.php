@@ -252,6 +252,12 @@
             </a>
             <ul style="overflow-y: scroll;" class="nav nav-treeview">
                 <li class="nav-item">
+                  <a href="/admin/events" class="nav-link">
+                    <i class="far fa-circle text-success nav-icon"></i>
+                    <p>EVENEMENTS</p>
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a href="/admin/tinvestissements" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
                     <p>Types d'investissement</p>

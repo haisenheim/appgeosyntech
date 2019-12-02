@@ -6,9 +6,6 @@ EVENEMENTS
 
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
-
-
-
         <div class="card">
         <div class="card-body p-0">
           <table class="table table-striped projects" id="table-projets">
@@ -57,31 +54,87 @@ EVENEMENTS
                    @endforeach
               </tbody>
           </table>
+
+          <div class="pagination">
+            {{ $events->links() }}
+          </div>
         </div>
         <!-- /.card-body -->
+        <div class="modal fade" id="modal-lg">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">NOUVEL EVENEMENT</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                           <form enctype="multipart/form-data" class="form" action="{{route('admin.events.store')}}" method="post">
+                            {{csrf_field()}}
+
+                            <fieldset>
+                                <legend>INFORMATIONS SUR L'EVENEMENT</legend>
+                                    <div class="row">
+                                         <div class="col-md-6">
+                                             <div class="form-group">
+                                                 <label class="control-label">NOM</label>
+                                                 <input id="name" name="name" maxlength="250" type="text" required="required" class="form-control" placeholder="">
+                                             </div>
+                                         </div>
+                                    </div>
+
+                                    <div class="row">
+                                         <div class="col-md-3">
+                                             <div class="form-group">
+                                                 <label for="prix" class="control-label">DATE DE DEBUT</label>
+                                                 <input id="start" name="start"  type="datetime"  class="form-control" placeholder="">
+                                             </div>
+                                         </div>
+                                         <div class="col-md-3">
+                                             <div class="form-group">
+                                                 <label for="prix" class="control-label">DATE DE FIN</label>
+                                                 <input id="end" name="end"  type="datetime"  class="form-control" placeholder="">
+                                             </div>
+                                         </div>
+
+                                         <div class="col-md-3">
+                                             <div class="form-group">
+                                                 <label for="link" class="control-label">LIEN YOUTUBE</label>
+                                                 <input id="link" name="link"  type="datetime"  class="form-control" placeholder="">
+                                             </div>
+                                         </div>
+                                         <div class="col-md-3">
+                                             <div class="form-group">
+                                                 <label for="link" class="control-label">PHOTO</label>
+                                                 <input id="imageUri" name="imageUri"  type="file"  class="form-control" placeholder="">
+                                             </div>
+                                         </div>
+                                    </div>
+
+                                     <div class="row">
+                                         <div class="col-md-6 col-sm-12">
+                                             <div class="form-group">
+                                                 <label for="description" class="control-label">DESCRIPTION</label>
+                                                 <textarea name="description" id="description" cols="30" rows="3"></textarea>
+                                             </div>
+                                         </div>
+                                     </div>
+
+                                     <div class="btn-div card-footer text-center">
+                                         <button class="btn btn-outline-success btn-block" type="submit"> Enregister <i class="fa fa-save"></i></button>
+                                    </div>
+                             </fieldset>
+                        </form>
+                      </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+           </div>
       </div>
 
-        <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
-        <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-
-        <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
-        <!-- DataTables -->
-        <script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-        <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
-        <script>
-          $(function () {
-            $('#table-projets').DataTable({
-              "paging": true,
-              "lengthChange": false,
-              "ordering": true,
-              "info": true,
-              "autoWidth": false
-            });
-          });
-        </script>
     </div>
 @endsection
 
@@ -90,7 +143,7 @@ EVENEMENTS
     <nav class="floating-menu">
         <ul class="main-menu">
             <li>
-                <a title="Nouveau Dossier" href="/admin/events/create" class="ripple">
+                <a title="Nouvel évènement" href="#" data-target="#modal-lg" data-toggle="modal" class="ripple">
                     <i class="fa fa-plus-circle fa-lg"></i>
                 </a>
             </li>

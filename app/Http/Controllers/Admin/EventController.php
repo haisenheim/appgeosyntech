@@ -21,7 +21,7 @@ class EventController extends Controller
     {
         //
 
-		$events = Event::all();
+		$events = Event::orderBy('created_at','desc')->paginate(10);
 	    return view('/Admin/Events/index')->with(compact('events'));
     }
 
