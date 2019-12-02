@@ -78,7 +78,42 @@ class EventController extends Controller
 	    }
     }
 
+	public function save(Request $request)
+	{
+		//
+		// $data = $request->except('_token');
+		$token = $request->token;
+		$data['token']=$request->token;
+		$data['name']=$request->name;
+		$data['start']=$request->start;
+		$data['end']=$request->end;
+		$data['description']= $request->description;
+		$data['link']=$request->link;
+		$data['user_id']= Auth::user()->id;
+		if($request->imageUri){
+			$file = $request->imageUri;
+			$ext = $file->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif');
+			if(in_array($ext,$arr_ext)){
+				$path = 'files/events';
+				if (!file_exists(public_path())) {
+					mkdir(public_path($path,777,true));
+				}
+				$path = $path.'/';
+				if (file_exists(public_path($path) . $token.'.' . $ext)) {
+					unlink(public_path($path) . $token .  '.' . $ext);
+				}
+				$name =  $token .'.'. $ext;
+				$file->move(public_path($path), $name);
+				$data['imageUri']=$path.$name;
+			}
+		}
+		$event = Event::updateOrCreate($data);
 
+		if($event){
+			return redirect('/admin/events');
+		}
+	}
 
 
 

@@ -48,13 +48,13 @@
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
             </div>
             <div class="modal-body">
-                 <form enctype="multipart/form-data" class="form" action="{{route('admin.update.events')}}"  method="post">
+                 <form enctype="multipart/form-data" class="form" action="/admin/events/save"  method="post">
                                     {{csrf_field()}}
                                     <input type="hidden" name="token" value="{{$event->token}}"/>
                                     <input type="hidden" name="id" value="{{$event->id}}"/>
 
                                     <fieldset>
-                                        <legend>INFORMATIONS SUR L'ARTICLE</legend>
+                                        <legend>INFORMATIONS SUR L'EVENEMENT</legend>
                                             <div class="row">
                                                  <div class="col-md-8">
                                                      <div class="form-group">
@@ -72,6 +72,12 @@
                                                      <div class="form-group">
                                                          <label for="prix" class="control-label">FIN</label>
                                                          <input id="prix" name="end"  type="date"  class="form-control" value="{{$event->end}}">
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-4">
+                                                     <div class="form-group">
+                                                         <label for="prix" class="control-label">LINK</label>
+                                                         <input id="prix" name="link"  type="text"  class="form-control" value="{{$event->link}}">
                                                      </div>
                                                  </div>
 
