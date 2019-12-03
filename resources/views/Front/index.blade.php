@@ -716,40 +716,36 @@
 	                    <h2>DECOUVREZ EN IMAGES NOS EVENEMENTS  </h2>
 
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                    <div>
-	                        <div class="row mx-auto my-auto">
-        <div id="recipeCarousel" class="carousel s3 slide w-100" data-ride="carousel">
-            <div class="carousel-inner s3inner" role="listbox">
-                <div class="carousel-item items3 active">
-                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=1">
-                </div>
-                <div class="carousel-item items3">
-                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=2">
-                </div>
-                <div class="carousel-item items3">
-                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=3">
-                </div>
-                <div class="carousel-item items3">
-                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=4">
-                </div>
-                <div class="carousel-item items3">
-                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=5">
-                </div>
-                <div class="carousel-item items3">
-                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=6">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-	                    </div>
+	                    <div class="container-fluid">
+        		<div id="carousel-example" class="carousel slide" data-ride="carousel">
+        			<div class="carousel-inner row w-100 mx-auto" role="listbox">
+        			    <?php $i=0; ?>
+        			    @foreach($events as $projet)
+                        @if($projet->imageUri)
+            			<div class="carousel-item col-12 col-sm-12 col-md-3 col-lg-3 <?= $i==0?'active':'' ?>">
+            			    <div class="carousel-item-inner">
+							    <img style="height: 120px; border-radius: 50%" src="{{asset('img/'.$projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
+
+            			    </div>
+            			    <div class="carousel-caption">
+            			        <p>{{ $projet->description }}</p>
+            			    </div>
+						</div>
+						<?php $i++ ?>
+						@endif
+						@endforeach
+
+        			</div>
+        			<a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Precedent</span>
+					</a>
+					<a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Suivant</span>
+					</a>
+        		</div>
+        	</div>
                 </div>
 	        </div>
         </div>

@@ -25,7 +25,9 @@ Route::get('/', function () {
 	foreach($organismes as $organisme){
 		$partenaires->add($organisme);
 	}
-    return view('Front/index')->with(compact('projets','partenaires'));
+
+	$events = \App\Models\Event::all();
+    return view('Front/index')->with(compact('projets','partenaires','events'));
 });
 
 Route::get('send-email', 'EmailController@sendEMail');
