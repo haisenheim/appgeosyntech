@@ -91,7 +91,7 @@
                 border-radius: 50%;
                 background: #28a745;
                 height: 360px;
-                padding: 6%;
+                padding: 1%;
                 color:#fff;
             }
 
@@ -100,6 +100,10 @@
             font-size: 1.2rem;
             font-family: initial;
             font-weight: bold;
+            position:relative;
+            top:2%;
+            right:6%;
+            left:6%;
             }
 
 
@@ -318,7 +322,7 @@
 	            	<div class="col section-2-box wow fadeInLeft">
 	            	    <div id="howto" class="row">
 	            	        <div class="col col-sm-12 col-md-4 section-2-box wow fadeInLeft">
-	            	            <div class="sup"><h3>1PRISE DE CONTACT </h3></div>
+	            	            <div class="sup"><h3>1- PRISE DE CONTACT </h3></div>
 
 	            	            <div class="inf">
                                      <p>
@@ -329,14 +333,14 @@
 
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	            <h3>SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
+	            	            <h3>2- SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
 	            	            <p>
 	            	                Nous développons des partenariats avec des fonds d’investissement, des banques, des microfinances, des groupes d’entreprises
 	            	                ou des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons.
 	            	            </p>
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	            <h3>CREATION D’UN COMPTE « INVESTISSEUR »  </h3>
+	            	            <h3>3- CREATION D’UN COMPTE « INVESTISSEUR »  </h3>
 	            	            <p>
 	            	               Le compte Investisseur vous permettra d’accéder aux projets structurés par le cabinet dans les pays dans lesquels nous intervenons.
 	            	               Vous pouvez dès lors vous intéresser à un projet après avoir lu le teaser puis solliciter une rencontre avec le porteur de projet
