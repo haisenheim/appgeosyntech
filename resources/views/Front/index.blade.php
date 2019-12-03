@@ -365,7 +365,7 @@
 	            	            </p>
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	            <h3>RENCONTRE AVEC LES PORTEURS DE PROJET   </h3>
+	            	            <h3>4- RENCONTRE AVEC LES PORTEURS DE PROJET   </h3>
 	            	            <p>
 	            	                Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs qui s’intéressent à son projet. Cette rencontre est importante
 	            	                car c’est le porteur de projet qui décidera s’il souhaite poursuivre la discussion avec vous en vous donnant accès à la DATA ROOM.
@@ -374,29 +374,29 @@
 
 
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	            <h3>ANALYSE DE LA DATE ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3>
+	            	            <h3>5- ANALYSE DE LA DATE ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3>
 
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3>6- VALIDATION DE LA DOCUMENTATION JURIDIQUE DE L’OPERATION   </h3>
 
-	            	                Après avoir rencontré , Vous pouvez investir à moyen - long terme en participant aux financements
-	            	                de projets présentés sur la plateforme ou à court terme en investissant par exemple sur les cessions de créances.
+	            	              <p>  Après avoir rencontré , Vous pouvez investir à moyen - long terme en participant aux financements
+	            	                de projets présentés sur la plateforme ou à court terme en investissant par exemple sur les cessions de créances. </p>
 
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
 	            	            <h3>7- VERSEMENT DES FONDS   </h3>
 
-	            	              Le versement des fonds se fera sur un numéro de compte qui vous sera communiqué le moment venu
+	            	             <p>Le versement des fonds se fera sur un numéro de compte qui vous sera communiqué le moment venu </p>
 
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3> 8- LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3>
 
-	            	               Le cabinet OBAC utilise son outil de gestion des risques intitulé OBAC RISK MANAGEMENT afin de maitriser les risques
+	            	             <p style="font-size: 0.8rem">  Le cabinet OBAC utilise son outil de gestion des risques intitulé OBAC RISK MANAGEMENT afin de maitriser les risques
 	            	               liés à l’exécution des projets qui ont reçu des financements. OBAC RISK MANAGEMENT est un logiciel expert qui permet
 	            	               d’identifier les risques d’exploitation, financiers, d’aléas et stratégiques relatifs à un projet
-	            	               puis de mettre en place un plan d’actions en vue de maitriser réduire ces probabilités d’occurrence et limiter les pertes de capital.
+	            	               puis de mettre en place un plan d’actions en vue de maitriser réduire ces probabilités d’occurrence et limiter les pertes de capital.</p>
 
 	            	            <b>Par ailleurs, chaque mois le porteur de projet est tenu de rédiger un rapport de gestion. </b>
 	            	        </div>
