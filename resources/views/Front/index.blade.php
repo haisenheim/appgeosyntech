@@ -724,12 +724,12 @@
                         @if($projet->imageUri)
             			<div class="carousel-item col-12 col-sm-12 col-md-3 col-lg-3 <?= $i==0?'active':'' ?>">
             			    <div class="carousel-item-inner">
-							    <img style="height: 120px; border-radius: 50%" src="{{asset('img/'.$projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
+							    <img style="height: 120px; border-radius: 50%" src="{{asset($projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
+                                <div class="carousel-caption">
+                                    <p>{{ $projet->description }}</p>
+                                </div>
+            			    </div>
 
-            			    </div>
-            			    <div class="carousel-caption">
-            			        <p>{{ $projet->description }}</p>
-            			    </div>
 						</div>
 						<?php $i++ ?>
 						@endif
