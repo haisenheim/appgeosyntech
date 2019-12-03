@@ -115,7 +115,7 @@
             }
 
             #poles h3, #howto h3{
-            color: #fff;
+
             font-size: 1.2rem;
             font-family: initial;
             font-weight: bold;
@@ -322,7 +322,20 @@
              }
 
 
+             .carousel-inner .carousel-item-right.active,
+                .carousel-inner .carousel-item-next {
+                  transform: translateX(33.33%);
+                }
 
+                .carousel-inner .carousel-item-left.active,
+                .carousel-inner .carousel-item-prev {
+                  transform: translateX(-33.33%)
+                }
+
+                .carousel-inner .carousel-item-right,
+                .carousel-inner .carousel-item-left{
+                  transform: translateX(0);
+                }
 
         </style>
     </head>
@@ -703,6 +716,40 @@
 	                    <h2>DECOUVREZ EN IMAGES NOS EVENEMENTS  </h2>
 
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <div>
+	                        <div class="row mx-auto my-auto">
+        <div id="recipeCarousel" class="carousel s3 slide w-100" data-ride="carousel">
+            <div class="carousel-inner s3inner" role="listbox">
+                <div class="carousel-item items3 active">
+                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=1">
+                </div>
+                <div class="carousel-item items3">
+                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=2">
+                </div>
+                <div class="carousel-item items3">
+                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=3">
+                </div>
+                <div class="carousel-item items3">
+                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=4">
+                </div>
+                <div class="carousel-item items3">
+                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=5">
+                </div>
+                <div class="carousel-item items3">
+                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=6">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+	                    </div>
                 </div>
 	        </div>
         </div>
@@ -778,6 +825,27 @@
         <script src="{{asset('front/js/wow.min.js')}}"></script>
         <script src="{{asset('front/js/scripts.js')}}"></script>
             <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+        <script>
+            $('#recipeCarousel').carousel({
+              interval: 10000
+            });
+
+            $('.carousel .carousel-item').each(function(){
+                var next = $(this).next();
+                if (!next.length) {
+                next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+
+                if (next.next().length>0) {
+                next.next().children(':first-child').clone().appendTo($(this));
+                }
+                else {
+                  $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+                }
+            });
+
+        </script>
         	<script type="text/javascript">
         	// On initialise la latitude et la longitude de Paris (centre de la carte)
                                                 var lat = -2.300;
