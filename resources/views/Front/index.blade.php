@@ -197,7 +197,7 @@
                           bottom: 0;
                           right: 0;
                           border-radius: 50%;
-                          width: 100%;
+                          width: 360px;
                           height: 360px;
                           background: none;
                           border: 1px solid #28a745;
@@ -265,7 +265,7 @@
               bottom: 0;
               right: 0;
               border-radius: 50%;
-              width: 100%;
+              width: 360px;
               height: 360px;
               background: none;
               border: 1px solid #FFFFFF;
@@ -518,7 +518,7 @@
         </div>
 
         <!-- Section 2 -->
-        <div id="about" class="section-2-container section-container section-container-gray-bg">
+        <div id="about" class="section-2-container section-container">
 	        <div class="container">
 	            <div class="row">
 	                <h1>COMMENT CA MARCHE ?</h1>
@@ -535,7 +535,7 @@
                                   <div class="disc">
                                     <div class="label">
                                          <div class="disc-font disc-title">
-                                           1- PRISE DE CONTACT
+                                           <h3>1- PRISE DE CONTACT</h3>
                                           </div>
                                           <div class="disc-font disc-group">
                                                Nous prenons connaissance de votre politique d’investissement, de votre appétence pour le risque ainsi que de la valeur ajoutée financière et
