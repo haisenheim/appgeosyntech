@@ -254,6 +254,14 @@
                           color:#fff
                         }
 
+           .disc-group {
+              top: 180px;
+              left: 10px;
+              width: 260px;
+              color:#fff;
+              font-size: 0.8rem;
+            }
+
 
 
 
