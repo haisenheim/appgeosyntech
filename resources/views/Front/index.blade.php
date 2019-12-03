@@ -721,22 +721,22 @@
         <div id="recipeCarousel" class="carousel s3 slide w-100" data-ride="carousel">
             <div class="carousel-inner s3inner" role="listbox">
                 <div class="carousel-item items3 active">
-                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=1">
+                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=1">
                 </div>
                 <div class="carousel-item items3">
-                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=2">
+                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=2">
                 </div>
                 <div class="carousel-item items3">
-                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=3">
+                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=3">
                 </div>
                 <div class="carousel-item items3">
-                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=4">
+                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=4">
                 </div>
                 <div class="carousel-item items3">
-                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=5">
+                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=5">
                 </div>
                 <div class="carousel-item items3">
-                    <img class="d-block col-4 img-fluid" src="http://placehold.it/350x180?text=6">
+                    <img class="d-block col-md-4 img-fluid" src="http://placehold.it/350x180?text=6">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
