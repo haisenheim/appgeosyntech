@@ -95,7 +95,7 @@
                 color:#fff;
             }
 
-            #poles h3{
+            #poles h3, #howto h3{
             color: #fff;
             font-size: 1.2rem;
             font-family: initial;
