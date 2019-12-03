@@ -99,7 +99,7 @@
 
 
 
-            #poles .col-md-4, #poles .col-sm-12, #howto .col-md-4, #howto .col-sm-12 p{
+             #howto .col-sm-12 p{
                font-size: 0.9rem;
                margin-top: 0;
 
