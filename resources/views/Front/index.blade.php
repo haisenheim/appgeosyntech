@@ -101,6 +101,20 @@
             font-family: initial;
             font-weight: bold;
             }
+
+            #howto li{
+            visibility: visible;
+
+            animation-name: fadeInLeft;
+
+            float: left;
+
+            height: 360px;
+
+            shape-outside: circle();
+
+            width: 37%;
+            }
         </style>
     </head>
 
@@ -314,7 +328,7 @@
 	            </div>
 	            <div class="row">
 	            	<div class="col section-2-box wow fadeInLeft">
-	            	    <ul style="list-style: decimal;">
+	            	    <ul id="howto" style="list-style: decimal;">
 	            	        <li class="col section-2-box wow fadeInLeft">
 	            	            <h3>PRISE DE CONTACT </h3>
 	            	            <p>
