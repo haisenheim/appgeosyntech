@@ -337,6 +337,15 @@
                   transform: translateX(0);
                 }
 
+
+         .section-container{
+            padding: 70px 5px;
+         }
+
+         .section-reverse{
+            background:#28a745 ;
+         }
+
         </style>
     </head>
 
@@ -378,9 +387,7 @@
             			            <li class="nav-item">
             			                <a class="nav-link" href="#obac">OBAC</a>
             			            </li>
-            			            <li class="nav-item">
-            			                <a class="nav-link" href="#contact">CONTACT</a>
-            			            </li>
+
             			        </ul>
             			    </div>
             		    </div>
@@ -404,7 +411,7 @@
           </div>
 
         <!-- Top content -->
-        <div class="section-1-container section-container" style="background: #f8f8f8;">
+        <div class="section-1-container section-container section-reverse" style="">
              <h1>Découvrez les projets que nous avons structurés</h1>
              <div class="divider-1 wow fadeInUp"><span></span></div>
         	<div class="container-fluid">
@@ -507,7 +514,7 @@
         </div>
 
 
-       <div class="section-1-container section-container" style="background: #f8f8f8;">
+       <div class="section-1-container section-container section-reverse " style="">
              <h1>NOS PARTENAIRES FINANCIERS</h1>
              <div class="divider-1 wow fadeInUp"><span></span></div>
         	<div class="container-fluid">
@@ -713,7 +720,7 @@
 	            </div>
 	         </div>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
-                <div class="section-container section-reverse">
+                <div class="section-container">
                     <div class="col section-3 section-description wow fadeIn">
 	                    <h2>DECOUVREZ EN IMAGES NOS EVENEMENTS  </h2>
 
@@ -752,46 +759,56 @@
 	        </div>
 
 		<!-- Section 4 -->
-        <div id="contact" class="section-4-container section-container section-container-image-bg">
+        <div id="contact" class="section-4-container section-container section-reverse section-container-image-bg">
 	        <div class="container">
 	            <div class="row">
-                    <h1>CONTACTEZ NOUS</h1>
-                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                  <div class="col-md-4">
+
+	                  </div>
+	                  <div class="col-md-4">
+
+	                  </div>
+	                  <div class="col-md-4">
+	                    <h1>CONTACTEZ NOUS</h1>
+                        <div class="divider-1 wow fadeInUp"><span></span></div>
+                        <div class="">
+                                <form action="/contact" method="post">
+                                 @csrf
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="name">NOM</label>
+                                                <input type="text" name="name" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="name">ADRESSE EMAIL</label>
+                                                <input type="text" name="email" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="name">OBJET</label>
+                                                <input type="text" name="objet" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="name">MESSAGE</label>
+                                                <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-success btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+	                  </div>
+
 	            </div>
-	            <div class="">
-	                <form action="/contact" method="post">
-	                 @csrf
-	                    <div class="row">
-	                        <div class="col-md-12">
-	                            <div class="form-group">
-	                                <label for="name">NOM</label>
-	                                <input type="text" name="name" class="form-control"/>
-	                            </div>
-	                        </div>
-	                        <div class="col-md-12">
-	                            <div class="form-group">
-	                                <label for="name">ADRESSE EMAIL</label>
-	                                <input type="text" name="email" class="form-control"/>
-	                            </div>
-	                        </div>
-	                        <div class="col-md-12">
-	                            <div class="form-group">
-	                                <label for="name">OBJET</label>
-	                                <input type="text" name="objet" class="form-control"/>
-	                            </div>
-	                        </div>
-	                        <div class="col-md-12">
-	                            <div class="form-group">
-	                                <label for="name">MESSAGE</label>
-	                                <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
-	                            </div>
-	                        </div>
-	                        <div class="col-md-12">
-	                            <button class="btn btn-success btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
-	                        </div>
-	                    </div>
-	                </form>
-	            </div>
+
 	        </div>
         </div>
 
