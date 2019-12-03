@@ -821,9 +821,9 @@
 		<script src="{{asset('front/js/popper.min.js')}}"></script>
 		<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <script src="{{asset('front/js/jquery.backstretch.min.js')}}"></script>
+
         <script src="{{asset('front/js/wow.min.js')}}"></script>
-        <script src="{{asset('front/js/scripts.js')}}"></script>
+
             <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 
         	<script type="text/javascript">
