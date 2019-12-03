@@ -339,7 +339,7 @@
 	            <div class="row">
 	            	<div class="col section-2-box wow fadeInLeft">
 	            	    <div id="howto" class="row">
-	            	        <div class="col col-sm-12 col-md-5 section-2-box wow fadeInLeft">
+	            	        <div class="col col-sm-12 col-md-4 section-2-box wow fadeInLeft">
 	            	            <div class="sup"><h3>1- PRISE DE CONTACT </h3></div>
 
 	            	            <div class="inf">
@@ -350,14 +350,14 @@
 	            	            </div>
 
 	            	        </div>
-	            	        <div class="col col-md-5 col-sm-12 col-offset-md-2 section-2-box wow fadeInRight">
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3>2- SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
 	            	            <p>
 	            	                Nous développons des partenariats avec des fonds d’investissement, des banques, des microfinances, des groupes d’entreprises
 	            	                ou des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons.
 	            	            </p>
 	            	        </div>
-	            	        <div class="col col-md-5 col-sm-12 section-2-box wow fadeInLeft">
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
 	            	            <h3>3- CREATION D’UN COMPTE « INVESTISSEUR »  </h3>
 	            	            <p>
 	            	               Le compte Investisseur vous permettra d’accéder aux projets structurés par le cabinet dans les pays dans lesquels nous intervenons.
