@@ -82,7 +82,7 @@
             }
 
             form label {
-            text-align: left;
+            float: left;
             color: #000000;
             font-weight: 800;
             }
@@ -710,8 +710,10 @@
                         formation afin de leur donner les outils qui leur permettront de réussir leur aventure entrepreneuriale
                     </p>
 	            </div>
+	            </div>
+	         </div>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
-                <div class="row">
+                <div class="section-container section-reverse">
                     <div class="col section-3 section-description wow fadeIn">
 	                    <h2>DECOUVREZ EN IMAGES NOS EVENEMENTS  </h2>
 
@@ -748,8 +750,7 @@
         	</div>
                 </div>
 	        </div>
-        </div>
-       </div>
+
 		<!-- Section 4 -->
         <div id="contact" class="section-4-container section-container section-container-image-bg">
 	        <div class="container">
