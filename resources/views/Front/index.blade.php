@@ -175,7 +175,10 @@
             }
 
             .disc-title {
-              margin: 90px;
+              margin-top: 100px;
+              width: 300px;
+              margin-left: auto;
+              margin-right: auto;
             }
 
             .disc-group {
@@ -183,6 +186,134 @@
               left: 10px;
               width: 260px;
             }
+
+
+
+             .label {
+                          position: absolute;
+                          margin: auto;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          border-radius: 50%;
+                          width: 100%;
+                          height: 360px;
+                          background: none;
+                          border: 1px solid #28a745;
+                        }
+
+                        .label::before,
+                        .label::after {
+                          content: "";
+                          position: absolute;
+                          margin: auto;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          border-radius: 50%;
+                        }
+
+                        .label::before {
+                          width: 350px;
+                          height: 350px;
+                          background: #28a745;
+                          border: solid 1px #28a745;
+                        }
+
+                        .label::after {
+                          width: 345px;
+                          height: 172.5px;
+                          bottom: 172.5px;
+                          background: #FFF;
+                          border-radius: 172.5px 172.5px 0 0;
+                        }
+
+                        .disc-font {
+                          font-family: Roboto, Arial, Sans-serif;
+                          font-size: 0.5em;
+                          text-align: center;
+                          z-index: 10;
+                          position: absolute;
+                          color: #331832;
+                        }
+
+                       .label .disc-title {
+                          margin-top: 100px;
+                          width: 300px;
+                          margin-left: auto;
+                          margin-right: auto;
+                          color: #28a745;
+                        }
+
+                       .label .disc-group {
+                          top: 50px;
+                          left: 10px;
+                          width: 260px;
+                          color:#fff
+                        }
+
+
+
+
+             .label-reverse {
+              position: absolute;
+              margin: auto;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              border-radius: 50%;
+              width: 100%;
+              height: 360px;
+              background: none;
+              border: 1px solid #FFFFFF;
+            }
+
+            .label-reverse::before,
+            .label-reverse::after {
+              content: "";
+              position: absolute;
+              margin: auto;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              border-radius: 50%;
+            }
+
+            .label-reverse::before {
+              width: 350px;
+              height: 350px;
+              background: #FFFFFF;
+              border: solid 1px #FFFFFF;
+            }
+
+            .label-reverse::after {
+              width: 345px;
+              height: 172.5px;
+              bottom: 172.5px;
+              background: #28a745;
+              border-radius: 172.5px 172.5px 0 0;
+            }
+
+            .label-reverse .disc-title {
+               margin-top: 100px;
+               width: 300px;
+               margin-left: auto;
+               margin-right: auto;
+               color: #FFFFFF;
+             }
+
+            .label-reverse .disc-group {
+               top: 50px;
+               left: 10px;
+               width: 260px;
+               color:#28a745
+             }
+
+
 
 
         </style>
@@ -404,10 +535,26 @@
                                   <div class="disc">
                                     <div class="label">
                                          <div class="disc-font disc-title">
-                                            CSS rocks!
+                                           1- PRISE DE CONTACT
                                           </div>
                                           <div class="disc-font disc-group">
-                                            wubba lubba dub dub
+                                               Nous prenons connaissance de votre politique d’investissement, de votre appétence pour le risque ainsi que de la valeur ajoutée financière et
+                                            non financière que vous pouvez apporter aux projets que nous accompagnons.
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+	            	        </div>
+	            	        <div style="background: none" class="col-md-4">
+                                <div class="turntable">
+                                  <div class="disc">
+                                    <div class="label-reverse">
+                                         <div class="disc-font disc-title">
+                                            <h3>2- SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
+                                          </div>
+                                          <div class="disc-font disc-group">
+                                            Nous développons des partenariats avec des fonds d’investissement, des banques, des microfinances, des groupes d’entreprises
+	            	                        ou des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons.
                                           </div>
                                     </div>
                                   </div>
