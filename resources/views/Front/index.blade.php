@@ -86,6 +86,21 @@
             color: #000000;
             font-weight: 800;
             }
+
+            #poles .col-md-4, #poles .col-sm-12{
+                border-radius: 50%;
+                background: #28a745;
+                height: 360px;
+                padding: 6%;
+                color:#fff;
+            }
+
+            #poles h3{
+            color: #fff;
+            font-size: 1.2rem;
+            font-family: initial;
+            font-weight: bold;
+            }
         </style>
     </head>
 
@@ -382,27 +397,30 @@
 	                </div>
 	            </div>
 	            
-	            <div class="row">
-	                <div class="col-md-4 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div style="border-radius: 50%">
-                                <h3>POLE STRUCTURATION DE PROJETS </h3>
+	            <div id="poles" style="margin-bottom: 30px;" class="row">
+	                <div style="border-radius: 50%;background: #28a745;height: 360px; padding: 6%" class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
+	                	<div class="">
+	                	    <span><i class="fa fa-lg fa-coins"></i></span>
+	                		<div style="">
+                                <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE STRUCTURATION DE PROJETS </h3>
                                 Nous aidons les porteurs de projet à créer de la valeur en structurant leur entreprise
 	                		</div>
 	                	</div>
 	                </div>
-	                <div class="col-md-4 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div style="border-radius: 50%">
+	                <div class="col-md-4 col-sm-12 section-3-box wow fadeInRight">
+	                	<div class="">
+	                	    <span><i class="fa fa-lg fa-cloud"></i></span>
+	                		<div style="">
                                 <h3>POLE RISK MANAGEMENT </h3>
                                 Nous accompagnons les porteurs de projets dans la maitrise des risques liés à l’exécution de leur plan d’actions
 	                		</div>
 	                	</div>
 	                </div>
 
-	                <div class="col-md-4 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div style="border-radius: 50%">
+	                <div class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
+	                	<div class="">
+	                	    <span><i class="fa fa-lg fa-graduate"></i></span>
+	                		<div style="">
                                 <h3>POLE FORMATION  </h3>
                                 <p>Nous accompagnons les porteurs de projet dans le renforcement de leurs capacités managériales</p>
 	                		</div>
