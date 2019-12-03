@@ -318,11 +318,15 @@
 	            	<div class="col section-2-box wow fadeInLeft">
 	            	    <div id="howto" class="row">
 	            	        <div class="col col-sm-12 col-md-4 section-2-box wow fadeInLeft">
-	            	            <h3>PRISE DE CONTACT </h3>
-	            	            <p>
-	            	                Nous prenons connaissance de votre politique d’investissement, de votre appétence pour le risque ainsi que de la valeur ajoutée financière et
-	            	                non financière que vous pouvez apporter aux projets que nous accompagnons.
-	            	            </p>
+	            	            <div class="sup"><h3>1PRISE DE CONTACT </h3></div>
+
+	            	            <div class="inf">
+                                     <p>
+                                        Nous prenons connaissance de votre politique d’investissement, de votre appétence pour le risque ainsi que de la valeur ajoutée financière et
+                                        non financière que vous pouvez apporter aux projets que nous accompagnons.
+                                    </p>
+	            	            </div>
+
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3>SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
