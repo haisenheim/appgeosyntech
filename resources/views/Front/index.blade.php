@@ -124,6 +124,65 @@
 
             }
 
+            .label {
+              position: absolute;
+              margin: auto;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              border-radius: 50%;
+              width: 80px;
+              height: 80px;
+              background: #FFD166;
+            }
+
+            .label::before,
+            .label::after {
+              content: "";
+              position: absolute;
+              margin: auto;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              border-radius: 50%;
+            }
+
+            .label::before {
+              width: 70px;
+              height: 70px;
+              background: #FFD166;
+              border: solid 1px #FF4D80;
+            }
+
+            .label::after {
+              width: 65px;
+              height: 32.5px;
+              bottom: 32.5px;
+              background: #FF4D80;
+              border-radius: 32.5px 32.5px 0 0;
+            }
+
+            .disc-font {
+              font-family: Roboto, Arial, Sans-serif;
+              font-size: 0.5em;
+              text-align: center;
+              z-index: 10;
+              position: absolute;
+              color: #331832;
+            }
+
+            .disc-title {
+              margin: 20px;
+            }
+
+            .disc-group {
+              top: 50px;
+              left: 10px;
+              width: 60px;
+            }
+
 
         </style>
     </head>
@@ -339,6 +398,20 @@
 	            <div class="row">
 	            	<div class="col section-2-box wow fadeInLeft">
 	            	    <div id="howto" class="row">
+	            	        <div class="col-md-4">
+                                <div class="turntable">
+                                  <div class="disc">
+                                    <div class="label">
+                                         <div class="disc-font disc-title">
+                                            CSS rocks!
+                                          </div>
+                                          <div class="disc-font disc-group">
+                                            wubba lubba dub dub
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+	            	        </div>
 	            	        <div class="col col-sm-12 col-md-4 section-2-box wow fadeInLeft">
 	            	            <div class="sup"><h3>1- PRISE DE CONTACT </h3></div>
 
