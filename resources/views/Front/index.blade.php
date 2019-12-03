@@ -132,9 +132,9 @@
               bottom: 0;
               right: 0;
               border-radius: 50%;
-              width: 80px;
-              height: 80px;
-              background: #FFD166;
+              width: 280px;
+              height: 280px;
+              background: #c3c7cd;
             }
 
             .label::before,
@@ -150,18 +150,18 @@
             }
 
             .label::before {
-              width: 70px;
-              height: 70px;
+              width: 270px;
+              height: 270px;
               background: #FFD166;
-              border: solid 1px #FF4D80;
+              border: solid 1px #28a745;
             }
 
             .label::after {
-              width: 65px;
-              height: 32.5px;
-              bottom: 32.5px;
-              background: #FF4D80;
-              border-radius: 32.5px 32.5px 0 0;
+              width: 265px;
+              height: 132.5px;
+              bottom: 132.5px;
+              background: #28a745;
+              border-radius: 132.5px 132.5px 0 0;
             }
 
             .disc-font {
@@ -180,7 +180,7 @@
             .disc-group {
               top: 50px;
               left: 10px;
-              width: 60px;
+              width: 260px;
             }
 
 
@@ -398,7 +398,7 @@
 	            <div class="row">
 	            	<div class="col section-2-box wow fadeInLeft">
 	            	    <div id="howto" class="row">
-	            	        <div class="col-md-4">
+	            	        <div style="background: none" class="col-md-4">
                                 <div class="turntable">
                                   <div class="disc">
                                     <div class="label">
