@@ -132,9 +132,10 @@
               bottom: 0;
               right: 0;
               border-radius: 50%;
-              width: 280px;
-              height: 280px;
-              background: #c3c7cd;
+              width: 100%;
+              height: 360px;
+              background: none;
+              border: 1px solid #28a745;
             }
 
             .label::before,
@@ -150,18 +151,18 @@
             }
 
             .label::before {
-              width: 270px;
-              height: 270px;
-              background: #FFD166;
+              width: 350px;
+              height: 350px;
+              background: #28a745;
               border: solid 1px #28a745;
             }
 
             .label::after {
-              width: 265px;
-              height: 132.5px;
-              bottom: 132.5px;
-              background: #28a745;
-              border-radius: 132.5px 132.5px 0 0;
+              width: 345px;
+              height: 172.5px;
+              bottom: 172.5px;
+              background: #FFF;
+              border-radius: 172.5px 172.5px 0 0;
             }
 
             .disc-font {
@@ -174,7 +175,7 @@
             }
 
             .disc-title {
-              margin: 20px;
+              margin: 90px;
             }
 
             .disc-group {
