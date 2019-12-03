@@ -91,8 +91,27 @@
                 border-radius: 50%;
                 background: #28a745;
                 height: 360px;
-                padding: 1%;
+                padding: 4%;
                 color:#fff;
+                box-sizing: border-box;
+            }
+
+
+
+
+            #poles .col-md-4, #poles .col-sm-12, #howto .col-md-4, #howto .col-sm-12 p{
+               font-size: 0.9rem;
+               margin-top: 0;
+
+               margin-bottom: 1rem;
+
+               box-sizing: border-box;
+
+               margin-left: -15px;
+
+               margin-right: -15px;
+
+               text-align: center;
             }
 
             #poles h3, #howto h3{
@@ -101,9 +120,8 @@
             font-family: initial;
             font-weight: bold;
             position:relative;
-            top:2%;
-            right:6%;
-            left:6%;
+            margin:6%;
+
             }
 
 
