@@ -87,7 +87,7 @@
             font-weight: 800;
             }
 
-            #poles .col-md-4, #poles .col-sm-12{
+            #poles .col-md-4, #poles .col-sm-12, #howto .col-md-4, #howto .col-sm-12{
                 border-radius: 50%;
                 background: #28a745;
                 height: 360px;
@@ -102,19 +102,7 @@
             font-weight: bold;
             }
 
-            #howto li{
-            visibility: visible;
 
-            animation-name: fadeInLeft;
-
-            float: left;
-
-            height: 360px;
-
-            shape-outside: circle();
-
-            width: 37%;
-            }
         </style>
     </head>
 
@@ -328,56 +316,56 @@
 	            </div>
 	            <div class="row">
 	            	<div class="col section-2-box wow fadeInLeft">
-	            	    <ul id="howto" style="list-style: decimal;">
-	            	        <li class="col section-2-box wow fadeInLeft">
+	            	    <div id="howto" class="row">
+	            	        <div class="col col-sm-12 col-md-4 section-2-box wow fadeInLeft">
 	            	            <h3>PRISE DE CONTACT </h3>
 	            	            <p>
 	            	                Nous prenons connaissance de votre politique d’investissement, de votre appétence pour le risque ainsi que de la valeur ajoutée financière et
 	            	                non financière que vous pouvez apporter aux projets que nous accompagnons.
 	            	            </p>
-	            	        </li>
-	            	        <li class="col section-2-box wow fadeInRight">
+	            	        </div>
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3>SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
 	            	            <p>
 	            	                Nous développons des partenariats avec des fonds d’investissement, des banques, des microfinances, des groupes d’entreprises
 	            	                ou des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons.
 	            	            </p>
-	            	        </li>
-	            	        <li class="col section-2-box wow fadeInLeft">
+	            	        </div>
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
 	            	            <h3>CREATION D’UN COMPTE « INVESTISSEUR »  </h3>
 	            	            <p>
 	            	               Le compte Investisseur vous permettra d’accéder aux projets structurés par le cabinet dans les pays dans lesquels nous intervenons.
 	            	               Vous pouvez dès lors vous intéresser à un projet après avoir lu le teaser puis solliciter une rencontre avec le porteur de projet
 	            	            </p>
-	            	        </li>
-	            	        <li class="col section-2-box wow fadeInRight">
+	            	        </div>
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3>RENCONTRE AVEC LES PORTEURS DE PROJET   </h3>
 	            	            <p>
 	            	                Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs qui s’intéressent à son projet. Cette rencontre est importante
 	            	                car c’est le porteur de projet qui décidera s’il souhaite poursuivre la discussion avec vous en vous donnant accès à la DATA ROOM.
 	            	            </p>
-	            	        </li>
+	            	        </div>
 
 
-	            	        <li class="col section-2-box wow fadeInLeft">
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
 	            	            <h3>ANALYSE DE LA DATE ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3>
 
-	            	        </li>
-	            	        <li class="col section-2-box wow fadeInRight">
-	            	            <h3>VALIDATION DE LA DOCUMENTATION JURIDIQUE DE L’OPERATION   </h3>
+	            	        </div>
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
+	            	            <h3>6- VALIDATION DE LA DOCUMENTATION JURIDIQUE DE L’OPERATION   </h3>
 	            	            <p>
 	            	                Après avoir rencontré , Vous pouvez investir à moyen - long terme en participant aux financements
 	            	                de projets présentés sur la plateforme ou à court terme en investissant par exemple sur les cessions de créances.
 	            	            </p>
-	            	        </li>
-	            	        <li class="col section-2-box wow fadeInLeft">
-	            	            <h3>VERSEMENT DES FONDS   </h3>
+	            	        </div>
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
+	            	            <h3>7- VERSEMENT DES FONDS   </h3>
 	            	            <p>
 	            	              Le versement des fonds se fera sur un numéro de compte qui vous sera communiqué le moment venu
 	            	            </p>
-	            	        </li>
-	            	        <li class="col section-2-box wow fadeInRight">
-	            	            <h3>LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3>
+	            	        </div>
+	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
+	            	            <h3> 8- LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3>
 	            	            <p>
 	            	               Le cabinet OBAC utilise son outil de gestion des risques intitulé OBAC RISK MANAGEMENT afin de maitriser les risques
 	            	               liés à l’exécution des projets qui ont reçu des financements. OBAC RISK MANAGEMENT est un logiciel expert qui permet
@@ -385,12 +373,12 @@
 	            	               puis de mettre en place un plan d’actions en vue de maitriser réduire ces probabilités d’occurrence et limiter les pertes de capital.
 	            	            </p>
 	            	            <p><b>Par ailleurs, chaque mois le porteur de projet est tenu de rédiger un rapport de gestion. </b></p>
-	            	        </li>
-	            	        <li class="col section-2-box wow fadeInLeft">
-	            	            <h3>RECOLTEZ DANS LE RESPECT DE LA DOCUMENTATION JURIDIQUE QUI A ETE SIGNEE</h3>
+	            	        </div>
+	            	        <div class="col  col-md-4 col-sm-12 wow fadeInLeft">
+	            	            <h3> 9- RECOLTEZ DANS LE RESPECT DE LA DOCUMENTATION JURIDIQUE QUI A ETE SIGNEE</h3>
 
-	            	        </li>
-	            	    </ul>
+	            	        </div>
+	            	    </div>
 	                </div>
 	            </div>
 	        </div>
