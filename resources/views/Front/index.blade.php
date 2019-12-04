@@ -106,6 +106,16 @@
                 box-sizing: border-box;
             }
 
+             #types .col-md-4, #types .col-sm-12{
+                border-radius: 50%;
+                background: #ffff;
+                border: solid 1px #28a745;
+                height: 360px;
+                padding: 4%;
+
+                box-sizing: border-box;
+            }
+
 
 
 
@@ -460,7 +470,7 @@
 
         <!-- Section 1 -->
         <div class="section-1-container section-container">
-	        <div class="container">
+	        <div id="types" class="container">
 	            <div class="row">
 	                <div class="col section-1 section-description wow fadeIn">
 	                    <h1>NOUS VOUS PRESENTONS 3 TYPES DE PROJETS</h1>
