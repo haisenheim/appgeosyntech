@@ -87,12 +87,22 @@
             font-weight: 800;
             }
 
-            #poles .col-md-4, #poles .col-sm-12, #howto .col-md-4, #howto .col-sm-12{
+            #poles .col-md-4, #poles .col-sm-12{
                 border-radius: 50%;
                 background: #28a745;
                 height: 360px;
                 padding: 4%;
                 color:#fff;
+                box-sizing: border-box;
+            }
+
+             #howto .col-md-4, #howto .col-sm-12{
+                border-radius: 50%;
+                background: #ffff;
+                border: solid 1px #28a745;
+                height: 360px;
+                padding: 4%;
+                color:#28a745;
                 box-sizing: border-box;
             }
 
