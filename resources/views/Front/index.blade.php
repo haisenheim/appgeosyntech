@@ -507,8 +507,8 @@
                 	<div class="col-md-4 section-1-box wow fadeInUp">
                 		<div class="row">
                 			<div class="col-md-12">
-			                	<div class="section-1-box-icon">
-			                		<i class="fas fa-magic"></i>
+			                	<div class="">
+			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/projet-industriel.png" alt=""/>
 			                	</div>
 			                	<h3>Projets Industriels</h3>
 		                	</div>
@@ -776,8 +776,8 @@
                         @if($projet->imageUri)
             			<div class="carousel-item col-12 col-sm-12 col-md-3 col-lg-3 <?= $i==0?'active':'' ?>">
             			    <div class="carousel-item-inner">
-							    <h3 style="position: relative; top: 120px; color: #FFFFFF; font-weight: 700">{{$projet->name}}</h3>
-							     <h4 style="position: relative; top: 140px; color: #FFFFFF; font-weight: 500">{{ date_format($projet->start,'d/m/Y') }} - {{ date_format($projet->end,'d/m/Y') }}</h4>
+							    <h3 style="position: relative; top: 120px; color: #000; font-weight: 700">{{$projet->name}}</h3>
+							     <h4 style="position: relative; top: 140px; color: #003; font-weight: 500">{{ date_format($projet->start,'d/m/Y') }} - {{ date_format($projet->end,'d/m/Y') }}</h4>
                                 <img style="height: 240px;" src="{{asset($projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
 
             			    </div>
