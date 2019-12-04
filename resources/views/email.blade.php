@@ -65,9 +65,10 @@
     </head>
     <body>
        <div class="container">
-            <h1>OBAC ALERT</h1>
-            <h1>{{ $title }}</h1>
-            <p>Votre Message a été envoyé !!!!</p>
+
+            <h3>EXPEDITEUR: <b> {{ $name }} </b> - <small>{{ $email }}</small></h3>
+            <h5>OBJET: {{ $objet }}</h5>
+            <p>{{ $message }}</p>
        </div>
     </body>
 </html>
