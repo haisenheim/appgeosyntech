@@ -84,7 +84,7 @@
             form label {
             float: left;
             color: #000000;
-            font-weight: 800;
+
             }
 
             #poles .col-md-4, #poles .col-sm-12{
@@ -373,12 +373,21 @@
          }
 
           .bottom-inner{
-            height: 400px;
-            float: left;
+            height: 560px;
+
           }
 
           .border-right{
             border-right: 1px solid #fff;
+          }
+
+          .section-1-container h1 {
+            color:#28a745 ;
+            font-weight: 700;
+          }
+
+          .section-reverse h1, .section-reverse h2, .section-reverse h3{
+            color:#FFFFFF;
           }
         </style>
     </head>
@@ -835,11 +844,11 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="name">MESSAGE</label>
-                                                <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
+                                                <textarea name="message" id="" cols="30" rows="4" class="form-control"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <button class="btn btn-success btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
+                                            <button class="btn btn-warning btn-block btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
                                         </div>
                                     </div>
                                 </form>
