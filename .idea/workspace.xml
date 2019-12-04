@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EmailController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmailController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/email.blade.php" afterPath="$PROJECT_DIR$/resources/views/email.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,15 +37,15 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.4" vertical-offset="2769" max-vertical-offset="3248">
-              <caret line="353" column="0" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.76" vertical-offset="255" max-vertical-offset="3248">
+              <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
               <folding>
-                <element signature="e#7875#9811#2#PHP" expanded="false" />
-                <element signature="e#9980#10102#2#PHP" expanded="false" />
-                <element signature="e#10278#10523#2#PHP" expanded="false" />
-                <element signature="e#10704#10949#2#PHP" expanded="false" />
-                <element signature="e#11122#15212#2#PHP" expanded="false" />
-                <element signature="e#15361#18111#2#PHP" expanded="false" />
+                <element signature="e#7873#9809#2#PHP" expanded="false" />
+                <element signature="e#9978#10100#2#PHP" expanded="false" />
+                <element signature="e#10276#10521#2#PHP" expanded="false" />
+                <element signature="e#10702#10947#2#PHP" expanded="false" />
+                <element signature="e#11120#15210#2#PHP" expanded="false" />
+                <element signature="e#15359#18109#2#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -68,8 +64,8 @@
       <file leaf-file-name="email.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/email.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.798" vertical-offset="721" max-vertical-offset="1280">
-              <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.68" vertical-offset="780" max-vertical-offset="1280">
+              <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -78,8 +74,8 @@
       <file leaf-file-name="EmailController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.44" vertical-offset="252" max-vertical-offset="928">
-              <caret line="43" column="81" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="81" />
+            <state vertical-scroll-proportion="-16.16" vertical-offset="252" max-vertical-offset="928">
+              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
               <folding>
                 <element signature="e#42#70#0#PHP" expanded="true" />
               </folding>
@@ -90,8 +86,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Front/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8493152" vertical-offset="5200" max-vertical-offset="12512">
-              <caret line="510" column="123" selection-start-line="510" selection-start-column="123" selection-end-line="510" selection-end-column="123" />
+            <state vertical-scroll-proportion="-2.0684931" vertical-offset="10393" max-vertical-offset="12512">
+              <caret line="831" column="63" selection-start-line="831" selection-start-column="63" selection-end-line="831" selection-end-column="63" />
               <folding>
                 <element signature="e#1673#1867#0#HTML" expanded="false" />
                 <element signature="e#1886#2209#0#HTML" expanded="false" />
@@ -253,11 +249,11 @@
         <option value="$PROJECT_DIR$/resources/views/Admin/Events/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/EventController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Events/index.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/Front/index.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EmailController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Front/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/email.blade.php" />
       </list>
     </option>
@@ -1009,21 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.4" vertical-offset="2769" max-vertical-offset="3248">
-          <caret line="353" column="0" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
-          <folding>
-            <element signature="e#7875#9811#2#PHP" expanded="false" />
-            <element signature="e#9980#10102#2#PHP" expanded="false" />
-            <element signature="e#10278#10523#2#PHP" expanded="false" />
-            <element signature="e#10704#10949#2#PHP" expanded="false" />
-            <element signature="e#11122#15212#2#PHP" expanded="false" />
-            <element signature="e#15361#18111#2#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.031746034" vertical-offset="0" max-vertical-offset="504">
@@ -1040,10 +1021,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.76" vertical-offset="255" max-vertical-offset="3248">
+          <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+          <folding>
+            <element signature="e#7873#9809#2#PHP" expanded="false" />
+            <element signature="e#9978#10100#2#PHP" expanded="false" />
+            <element signature="e#10276#10521#2#PHP" expanded="false" />
+            <element signature="e#10702#10947#2#PHP" expanded="false" />
+            <element signature="e#11120#15210#2#PHP" expanded="false" />
+            <element signature="e#15359#18109#2#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Front/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8493152" vertical-offset="5200" max-vertical-offset="12512">
-          <caret line="510" column="123" selection-start-line="510" selection-start-column="123" selection-end-line="510" selection-end-column="123" />
+        <state vertical-scroll-proportion="-2.0684931" vertical-offset="10393" max-vertical-offset="12512">
+          <caret line="831" column="63" selection-start-line="831" selection-start-column="63" selection-end-line="831" selection-end-column="63" />
           <folding>
             <element signature="e#1673#1867#0#HTML" expanded="false" />
             <element signature="e#1886#2209#0#HTML" expanded="false" />
@@ -1101,8 +1097,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmailController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.44" vertical-offset="252" max-vertical-offset="928">
-          <caret line="43" column="81" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="81" />
+        <state vertical-scroll-proportion="-16.16" vertical-offset="252" max-vertical-offset="928">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
           <folding>
             <element signature="e#42#70#0#PHP" expanded="true" />
           </folding>
@@ -1111,8 +1107,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/email.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.798" vertical-offset="721" max-vertical-offset="1280">
-          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.68" vertical-offset="780" max-vertical-offset="1280">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
           <folding />
         </state>
       </provider>
