@@ -77,28 +77,28 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Front/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.923445" vertical-offset="4030" max-vertical-offset="13520">
-              <caret line="385" column="29" selection-start-line="385" selection-start-column="29" selection-end-line="385" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.7320574" vertical-offset="4574" max-vertical-offset="13520">
+              <caret line="414" column="127" selection-start-line="414" selection-start-column="127" selection-end-line="414" selection-end-column="127" />
               <folding>
-                <element signature="e#5906#6385#0#HTML" expanded="false" />
-                <element signature="e#6465#6805#0#HTML" expanded="false" />
-                <element signature="e#6846#7054#0#HTML" expanded="false" />
-                <element signature="e#7094#7353#0#HTML" expanded="false" />
-                <element signature="e#7390#7700#0#HTML" expanded="false" />
-                <element signature="e#7744#7989#0#HTML" expanded="false" />
-                <element signature="e#8033#8212#0#HTML" expanded="false" />
-                <element signature="e#8237#8391#0#HTML" expanded="false" />
-                <element signature="e#8424#8759#0#HTML" expanded="false" />
-                <element signature="e#8831#9063#0#HTML" expanded="false" />
-                <element signature="e#9100#9248#0#HTML" expanded="false" />
-                <element signature="e#9284#9474#0#HTML" expanded="false" />
-                <element signature="e#9515#9694#0#HTML" expanded="false" />
-                <element signature="e#9735#9862#0#HTML" expanded="false" />
-                <element signature="e#9975#10043#0#HTML" expanded="false" />
-                <element signature="e#10157#10225#0#HTML" expanded="false" />
-                <element signature="e#10332#10395#0#HTML" expanded="false" />
-                <element signature="e#10425#10468#0#HTML" expanded="false" />
-                <element signature="e#10495#10540#0#HTML" expanded="false" />
+                <element signature="e#5877#6356#0#HTML" expanded="false" />
+                <element signature="e#6436#6776#0#HTML" expanded="false" />
+                <element signature="e#6817#7025#0#HTML" expanded="false" />
+                <element signature="e#7065#7324#0#HTML" expanded="false" />
+                <element signature="e#7361#7671#0#HTML" expanded="false" />
+                <element signature="e#7715#7960#0#HTML" expanded="false" />
+                <element signature="e#8004#8183#0#HTML" expanded="false" />
+                <element signature="e#8208#8362#0#HTML" expanded="false" />
+                <element signature="e#8395#8730#0#HTML" expanded="false" />
+                <element signature="e#8802#9034#0#HTML" expanded="false" />
+                <element signature="e#9071#9219#0#HTML" expanded="false" />
+                <element signature="e#9255#9445#0#HTML" expanded="false" />
+                <element signature="e#9486#9665#0#HTML" expanded="false" />
+                <element signature="e#9706#9833#0#HTML" expanded="false" />
+                <element signature="e#9946#10014#0#HTML" expanded="false" />
+                <element signature="e#10128#10196#0#HTML" expanded="false" />
+                <element signature="e#10303#10366#0#HTML" expanded="false" />
+                <element signature="e#10396#10439#0#HTML" expanded="false" />
+                <element signature="e#10466#10511#0#HTML" expanded="false" />
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1051,28 +1051,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Front/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.923445" vertical-offset="4030" max-vertical-offset="13520">
-          <caret line="385" column="29" selection-start-line="385" selection-start-column="29" selection-end-line="385" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.7320574" vertical-offset="4574" max-vertical-offset="13520">
+          <caret line="414" column="127" selection-start-line="414" selection-start-column="127" selection-end-line="414" selection-end-column="127" />
           <folding>
-            <element signature="e#5906#6385#0#HTML" expanded="false" />
-            <element signature="e#6465#6805#0#HTML" expanded="false" />
-            <element signature="e#6846#7054#0#HTML" expanded="false" />
-            <element signature="e#7094#7353#0#HTML" expanded="false" />
-            <element signature="e#7390#7700#0#HTML" expanded="false" />
-            <element signature="e#7744#7989#0#HTML" expanded="false" />
-            <element signature="e#8033#8212#0#HTML" expanded="false" />
-            <element signature="e#8237#8391#0#HTML" expanded="false" />
-            <element signature="e#8424#8759#0#HTML" expanded="false" />
-            <element signature="e#8831#9063#0#HTML" expanded="false" />
-            <element signature="e#9100#9248#0#HTML" expanded="false" />
-            <element signature="e#9284#9474#0#HTML" expanded="false" />
-            <element signature="e#9515#9694#0#HTML" expanded="false" />
-            <element signature="e#9735#9862#0#HTML" expanded="false" />
-            <element signature="e#9975#10043#0#HTML" expanded="false" />
-            <element signature="e#10157#10225#0#HTML" expanded="false" />
-            <element signature="e#10332#10395#0#HTML" expanded="false" />
-            <element signature="e#10425#10468#0#HTML" expanded="false" />
-            <element signature="e#10495#10540#0#HTML" expanded="false" />
+            <element signature="e#5877#6356#0#HTML" expanded="false" />
+            <element signature="e#6436#6776#0#HTML" expanded="false" />
+            <element signature="e#6817#7025#0#HTML" expanded="false" />
+            <element signature="e#7065#7324#0#HTML" expanded="false" />
+            <element signature="e#7361#7671#0#HTML" expanded="false" />
+            <element signature="e#7715#7960#0#HTML" expanded="false" />
+            <element signature="e#8004#8183#0#HTML" expanded="false" />
+            <element signature="e#8208#8362#0#HTML" expanded="false" />
+            <element signature="e#8395#8730#0#HTML" expanded="false" />
+            <element signature="e#8802#9034#0#HTML" expanded="false" />
+            <element signature="e#9071#9219#0#HTML" expanded="false" />
+            <element signature="e#9255#9445#0#HTML" expanded="false" />
+            <element signature="e#9486#9665#0#HTML" expanded="false" />
+            <element signature="e#9706#9833#0#HTML" expanded="false" />
+            <element signature="e#9946#10014#0#HTML" expanded="false" />
+            <element signature="e#10128#10196#0#HTML" expanded="false" />
+            <element signature="e#10303#10366#0#HTML" expanded="false" />
+            <element signature="e#10396#10439#0#HTML" expanded="false" />
+            <element signature="e#10466#10511#0#HTML" expanded="false" />
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
