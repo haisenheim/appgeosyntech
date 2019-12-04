@@ -507,10 +507,10 @@
                 	<div class="col-md-4 section-1-box wow fadeInUp">
                 		<div class="row">
                 			<div class="col-md-12">
-			                	<div class="">
-			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/projet-industriel.png" alt=""/>
+			                	<div style="width: 150px; margin: 10px auto;" class="">
+			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/projets-industriels.png" alt=""/>
 			                	</div>
-			                	<h3>Projets Industriels</h3>
+			                	<h3>Projets Industriels et de service</h3>
 		                	</div>
 	                		<div class="col-md-12">
 	                    		<p>Des projets industriels ou de services à forte valeur ajoutée</p>
