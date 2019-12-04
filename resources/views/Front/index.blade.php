@@ -412,7 +412,7 @@
 		</div>
 		<div class="nav navbar navbar-dark navbar-expand-md">
             <div class="container">
-            				<a class="navbar-brand" style="background: none; text-indent: 0" href=""><i><img src="img/bg-obac.png" alt=""/></i> OBAC ALERT</a>
+            				<a class="navbar-brand" style="background: none; text-indent: 0" href=""><i><img style="border-radius:35px; height: 60px; width:70px;" src="img/bg-obac.png" alt=""/></i> OBAC ALERT</a>
             			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             			        <span class="navbar-toggler-icon"></span>
             			    </button>
@@ -441,7 +441,7 @@
 
 		 <div class="section-1-container section-container">
         	        <div class="container">
-        	                <div class="col section-1 section-description wow fadeIn ">
+        	                <div class="col section-1 section-description wow fadeIn">
 
                                  <h1>BIENVENU SUR OBAC ALERT</h1>
                                  <div class="divider-1 wow fadeInUp"><span></span></div>
@@ -466,7 +466,7 @@
             			<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 <?= $i==0?'active':'' ?>">
             			    <div class="carousel-item-inner">
 
-            			        <h3 style="position: relative; top: 120px; color: #FFFFFF; font-weight: 700">{{$projet->name}}</h3>
+            			       <h3 style="position: relative; top: 120px; color: #FFFFFF; font-weight: 700">{{$projet->name}}</h3>
 							<img style="height: 240px;" src="{{asset($projet->imageUri?'img/'.$projet->imageUri:'front/img/backgrounds/1.jpg')}}" class="img-fluid mx-auto d-block" alt="img1">
                             <div class="carousel-caption">
 
@@ -557,10 +557,10 @@
         </div>
 
 
-       <div class="section-1-container section-container section-reverse " style="">
+       <div class="section-1-container section-container section-reverse">
              <h1>NOS PARTENAIRES FINANCIERS</h1>
              <div class="divider-1 wow fadeInUp"><span></span></div>
-        	<div class="container-fluid">
+        	<div style="margin-top: 50px;" class="container-fluid">
         		<div id="carousel-example" class="carousel slide" data-ride="carousel">
         			<div class="carousel-inner row w-100 mx-auto" role="listbox">
         			    <?php $i=0; ?>
@@ -776,10 +776,10 @@
                         @if($projet->imageUri)
             			<div class="carousel-item col-12 col-sm-12 col-md-3 col-lg-3 <?= $i==0?'active':'' ?>">
             			    <div class="carousel-item-inner">
-							    <img style="height: 120px; border-radius: 50%" src="{{asset($projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
-                                <div class="carousel-caption">
-                                    <p>{{ $projet->description }}</p>
-                                </div>
+							    <h3 style="position: relative; top: 120px; color: #FFFFFF; font-weight: 700">{{$projet->name}}</h3>
+							     <h4 style="position: relative; top: 140px; color: #FFFFFF; font-weight: 500">{{ date_format($projet->start,'d/m/Y') }} - {{ date_format($projet->end,'d/m/Y') }}</h4>
+                                <img style="height: 240px;" src="{{asset($projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
+
             			    </div>
 
 						</div>
