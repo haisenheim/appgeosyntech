@@ -37,7 +37,7 @@ class EmailController extends Controller
 
 	public function contact(Request $request){
 
-		Mail::send('email', ['name'=>$request->name, 'email'=>$request->email, 'message'=>$request->message, 'objet'=>$request->objet], function ($message) use($request) {
+		Mail::send('email', ['name'=>$request->name, 'email'=>$request->email, 'msg'=>$request->message, 'objet'=>$request->objet], function ($message) use($request) {
 
 			$message->from($request->email, 'Email du frontOffice');
 

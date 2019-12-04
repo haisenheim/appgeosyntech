@@ -68,7 +68,7 @@
 
             <h3>EXPEDITEUR: <b> {{ $name }} </b> - <small>{{ $email }}</small></h3>
             <h5>OBJET: {{ $objet }}</h5>
-            <p><?= $message ?></p>
+            <p><?= $msg ?></p>
        </div>
     </body>
 </html>
