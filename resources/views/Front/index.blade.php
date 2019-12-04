@@ -116,6 +116,12 @@
                 box-sizing: border-box;
             }
 
+            .divider-1 span {
+                display: inline-block;
+                width: 200px;
+                border-bottom: 1px solid #fff;
+            }
+
 
 
 
@@ -366,6 +372,14 @@
             background:#28a745 ;
          }
 
+          .bottom-inner{
+            height: 400px;
+            float: left;
+          }
+
+          .border-right{
+            border-right: 1px solid #fff;
+          }
         </style>
     </head>
 
@@ -783,13 +797,18 @@
 	        <div class="container">
 	            <div class="row">
 	                  <div class="col-md-4">
+                            <div class="bottom-inner border-right">
 
+                          </div>
 	                  </div>
 	                  <div class="col-md-4">
+                          <div class="bottom-inner border-right">
 
+                          </div>
 	                  </div>
 	                  <div class="col-md-4">
-	                    <h1>CONTACTEZ NOUS</h1>
+	                    <div class="bottom-inner">
+	                        <h4>CONTACTEZ NOUS</h4>
                         <div class="divider-1 wow fadeInUp"><span></span></div>
                         <div class="">
                                 <form action="/contact" method="post">
@@ -824,7 +843,8 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+                        </div>
+	                    </div>
 	                  </div>
 
 	            </div>
