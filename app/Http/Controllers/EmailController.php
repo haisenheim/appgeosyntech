@@ -46,8 +46,8 @@ class EmailController extends Controller
 		});
 
 		//dd(Mail::failures());
+		return back();
 
-		return redirect()->action('IndexController@contact')->withConfirmation("Votre message a bien été envoyé");
 
 	}
 }
