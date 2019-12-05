@@ -1226,7 +1226,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                             background:'http://alert.test/img/'+data.imageUri,
                             height: '300px',
                             width: '100%',
-                            'background-size': cover
+                            'background-size': 'cover'
                        });
                        Toast.fire({
                                    type: 'success',
