@@ -509,7 +509,7 @@ class DossierController extends Controller
 
 		}
 
-		return response()->json($dossier->token);
+		return response()->json($dossier);
 		//dd($request->all());
 	}
 

@@ -901,68 +901,41 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                 </form>
             </div>
         </div>
+        <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+    	<div class="modal-content">
+    		<div class="modal-body">
+    			<div class="row">
+    			    <div class="col-md-5 col-sm-12">
+    			         <div id="popup-img">
+
+                         </div>
+    			    </div>
+    			    <div class="col-md-7 col-sm-12">
+                            <p>Félicitations ! vous venez de créer un dossier de levée de fonds.</p>
+                             <p>  Le dossier de levée de fonds est composé de 4 parties.</p>
+                              <p> La constitution de ce dossier est soumise à la souscription d’une formule GOLD ou SILVER.</p>
+                             <p>  Un consultant du Cabinet prendra contact avec vous afin de vous apporter des éclaircissements
+                             sur chacune de ces formules et vous accompagner dans la constitution de ce dossier.</p>
+                             <p>  Si aucun consultant ne vous contacte dans les 48h, n’hésitez pa	s à contacter le cabinet OBAC.</p>
+                            <a class="btn btn-success btn-block" id="btn-continue">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+    			    </div>
+    			</div>
+    		</div>
+
+
+    	</div>
+    </div>
+</div>
     </div>
 
     <style>
-
-        .loader {
-                position: relative;
-                text-align: center;
-                margin: 15px auto 35px auto;
-                z-index: 9999;
-                display: block;
-                width: 80px;
-                height: 80px;
-                border: 10px solid rgba(0, 0, 0, .3);
-                border-radius: 50%;
-                border-top-color: #000;
-                animation: spin 1s ease-in-out infinite;
-
-                -webkit-animation-name: spin;
-                -webkit-animation-duration: 600ms;
-                -webkit-animation-timing-function: ease-in-out;
-                -webkit-animation-iteration-count: infinite;
-            }
-
-            @keyframes spin {
-               from{
-                   transform: rotate(0deg);
-               }
-                to {
-                    -webkit-transform: rotate(360deg);
-                }
-            }
-
-            @-webkit-keyframes spin {
-                to {
-                    -webkit-transform: rotate(360deg);
-                }
-            }
-
-
-            /** MODAL STYLING **/
+        /** MODAL STYLING **/
 
             .modal-content {
                 border-radius: 0px;
                 box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.7);
             }
-
-            .modal-backdrop.show {
-                opacity: 0.75;
-            }
-
-            .loader-txt {
-            p {
-                font-size: 13px;
-                color: #666;
-            small {
-                font-size: 11.5px;
-                color: #999;
-            }
-            }
-            }
-
-
 
         div.note-editor.note-frame{
             padding: 0;
@@ -977,6 +950,12 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+            <!-- SweetAlert2 -->
+    <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+            <!-- Toastr -->
+    <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
+
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -1119,9 +1098,18 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
         $('#btn-save').click(function(e){
 
             e.preventDefault();
+              const Toast = Swal.mixin({
+                              toast: true,
+                              position: 'top-end',
+                              showConfirmButton: false,
+                              timer: 5000
+                            });
 
              if($('#imageUri').val().length<1){
-                                alert('Impossible de créer le dossier car vous n\'avez associé aucune image à votre projet.');
+                               Toast.fire({
+                                   type: 'error',
+                                   title: 'Impossible de creer un dossier sans image!!!'
+                                 });
                             }else{
 
                 var init = document.getElementById('step-1');
@@ -1214,6 +1202,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                  fd.append('compte3',JSON.stringify(cr3));
                 var spinHandle_firstProcess = loadingOverlay.activate();
 
+
                 $.ajax({
                     url:url,
                     type:'Post',
@@ -1232,7 +1221,25 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                     },
                     success: function(data){
                        loadingOverlay.cancel(spinHandle_firstProcess);
-                        window.location.replace(redirectUrl+"/"+data);
+                       $('#popup-img').css({
+                            background:'http://alert.test/img/'+data.imageUri,
+                            height: '300px',
+                            width: '100%',
+                            'background-size': cover
+                       });
+                       Toast.fire({
+                                   type: 'success',
+                                   title: 'Votre dossier a été créé avec succès!!!'
+                                 });
+                                 setTimeout(function() {
+                                   $('#popup').show();
+                                 },2000);
+
+                             $('#btn-continue').click(function(e){
+                                e.preventDefault();
+                                window.location.replace(redirectUrl+"/"+data.token);
+                             });
+                       // window.location.replace(redirectUrl+"/"+data);
                         //console.log(data);
 
                     },
