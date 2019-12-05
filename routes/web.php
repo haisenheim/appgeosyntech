@@ -30,6 +30,8 @@ Route::get('/', function () {
     return view('Front/index')->with(compact('projets','partenaires','events'));
 });
 
+
+
 Route::get('send-email', 'EmailController@sendEMail');
 
 Route::get('/getvilles',function(){
@@ -43,7 +45,7 @@ Route::get('/about',function(){
 	return view('Front/about');
 })->name('about');
 
-Route::get('/pdf','FrontController@makePdf');
+Route::get('/print-pdf','FrontController@makePdf');
 
 Route::post('/contact','EmailController@contact');
 

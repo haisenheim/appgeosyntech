@@ -8,8 +8,7 @@ use App\Models\Projet;
 use App\Models\Ville;
 use Illuminate\Http\Request;
 
-use Knp\Snappy\Pdf;
-use Illuminate\Support\Facades\App;
+use Barryvdh\DomPDF\PDF;
 
 
 class FrontController extends Controller
@@ -37,7 +36,14 @@ class FrontController extends Controller
 
 	public function makePdf()
 	{
-		return view('facebook');
+		$data = [
+			'title' => 'Mon document en Pdf',
+			'heading' => 'OBAC ALERT - By Alliages Technologies',
+			'content' => 'Le contenu du document'
+		];
+
+		$pdf = PDF::loadView('pdf_view',$data);
+		return $pdf->download('medium.pdf');
 	}
 
     /**
