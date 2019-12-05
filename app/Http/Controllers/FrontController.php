@@ -8,7 +8,7 @@ use App\Models\Projet;
 use App\Models\Ville;
 use Illuminate\Http\Request;
 
-use Barryvdh\DomPDF\PDF;
+use PDF;
 
 
 class FrontController extends Controller
@@ -41,6 +41,7 @@ class FrontController extends Controller
 			'heading' => 'OBAC ALERT - By Alliages Technologies',
 			'content' => 'Le contenu du document'
 		];
+
 
 		$pdf = PDF::loadView('pdf_view',$data);
 		return $pdf->download('medium.pdf');
