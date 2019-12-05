@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 @include('includes.head-tl3')
-
+<link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
