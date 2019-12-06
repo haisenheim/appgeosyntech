@@ -121,7 +121,13 @@
 
             .divider-1 span {
                 display: inline-block;
-                width: 200px;
+                width: 300px;
+                border-bottom: 1px solid  #28a745;
+            }
+
+           .section-reverse .divider-1 span {
+                display: inline-block;
+                width: 300px;
                 border-bottom: 1px solid #fff;
             }
 
