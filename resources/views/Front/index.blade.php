@@ -675,8 +675,8 @@
 
 	            	            <div class="inf">
                                      <p>
-                                        Nous prenons connaissance de votre politique d’investissement, de votre appétence pour le risque ainsi que de la valeur ajoutée financière et
-                                        non financière que vous pouvez apporter aux projets que nous accompagnons.
+                                        Nous prenons connaissance de votre politique d’investissement ainsi que de la valeur ajoutée,
+                                        tant financière que non financière, que vous pouvez apporter aux projets que nous structurons.
                                     </p>
 	            	            </div>
 
@@ -684,35 +684,34 @@
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3>2- SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
 	            	            <p>
-	            	                Nous développons des partenariats avec des fonds d’investissement, des banques, des microfinances, des groupes d’entreprises
-	            	                ou des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons.
+	            	                Nous développons des partenariats avec des organismes financiers,
+	            	                des groupes d’entreprises et des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons
 	            	            </p>
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
 	            	            <h3>3- CREATION D’UN COMPTE « INVESTISSEUR »  </h3>
 	            	            <p>
 	            	               Le compte Investisseur vous permettra d’accéder aux projets structurés par le cabinet dans les pays dans lesquels nous intervenons.
-	            	               Vous pouvez dès lors vous intéresser à un projet après avoir lu le teaser puis solliciter une rencontre avec le porteur de projet
 	            	            </p>
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3>4- RENCONTRE AVEC LES PORTEURS DE PROJET   </h3>
 	            	            <p>
 	            	                Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs qui s’intéressent à son projet. Cette rencontre est importante
-	            	                car c’est le porteur de projet qui décidera s’il souhaite poursuivre la discussion avec vous en vous donnant accès à la DATA ROOM.
+	            	               Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs qui s’intéressent à son projet. Le porteur de projet décide ensuite
+	            	               s’il souhaite poursuivre la discussion avec vous en vous donnant accès à la DATA ROOM.
 	            	            </p>
 	            	        </div>
 
 
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	            <h3>5- ANALYSE DE LA DATE ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3>
-
+	            	            <h3>5- ANALYSE DE LA DATA ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3>
+                                <p>Vous y trouverez une présentation détaillée du projet. </p>
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3>6- VALIDATION DE LA DOCUMENTATION JURIDIQUE DE L’OPERATION   </h3>
 
-	            	              <p>  Après avoir rencontré , Vous pouvez investir à moyen - long terme en participant aux financements
-	            	                de projets présentés sur la plateforme ou à court terme en investissant par exemple sur les cessions de créances. </p>
+	            	              <p>  Nous mettons à votre disposition des documents types vous permettant d’encadrer juridiquement votre investissement. </p>
 
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
@@ -724,15 +723,14 @@
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3> 8- LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3>
 
-	            	             <p style="font-size: 0.8rem">  Le cabinet OBAC utilise son outil de gestion des risques intitulé OBAC RISK MANAGEMENT afin de maitriser les risques
-	            	               liés à l’exécution des projets qui ont reçu des financements. OBAC RISK MANAGEMENT est un logiciel expert qui permet
-	            	               d’identifier les risques d’exploitation, financiers, d’aléas et stratégiques relatifs à un projet
-	            	               puis de mettre en place un plan d’actions en vue de maitriser réduire ces probabilités d’occurrence et limiter les pertes de capital.</p>
+	            	             <p style="font-size: 0.8rem">  Après la clôture du Deal, le pôle RISK MANAGEMENT accompagne le porteur de projet
+	            	             dans l’exécution du projet afin d’identifier, évaluer et maitriser les risques d’exploitation,
+	            	             financiers, d’aléas et stratégiques y relatifs.</p>
 
-	            	            <b>Par ailleurs, chaque mois le porteur de projet est tenu de rédiger un rapport de gestion. </b>
+	            	            <b>De plus, chaque mois le porteur de projet est tenu de rédiger un rapport de gestion.  </b>
 	            	        </div>
 	            	        <div class="col  col-md-4 col-sm-12 wow fadeInLeft">
-	            	            <h3> 9- RECOLTEZ DANS LE RESPECT DE LA DOCUMENTATION JURIDIQUE QUI A ETE SIGNEE</h3>
+	            	            <h3> 9-RECOLTEZ LES FRUITS DE VOTRE INVESTISSEMENT DANS LE RESPECT DE LA DOCUMENTATION JURIDIQUE QUI A ETE SIGNEE</h3>
 
 	            	        </div>
 	            	    </div>
