@@ -375,6 +375,14 @@
             background:#28a745 ;
          }
 
+         .section-reverse a{
+            color: #a4f095;;
+         }
+
+         .section-reverse a:hover{
+            color: #6cddf0;
+         }
+
           .bottom-inner{
             height: 560px;
 
@@ -415,7 +423,7 @@
 		</div>
 		<div class="nav navbar navbar-dark navbar-expand-md">
             <div class="container">
-            				<a class="navbar-brand" style="background: none; text-indent: 0" href=""><i><img style="border-radius:35px; height: 60px; width:70px;" src="img/bg-obac.png" alt=""/></i> OBAC ALERT</a>
+            				<a class="navbar-brand" style="background: none; text-indent: 0" href=""><i><img style="border-radius:35px; height: 45px; width:50px;" src="img/bg-obac.png" alt=""/></i> OBAC ALERT</a>
             			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             			        <span class="navbar-toggler-icon"></span>
             			    </button>
