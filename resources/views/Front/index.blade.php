@@ -401,6 +401,10 @@
             color:#FFFFFF;
           }
 
+          .section-1-box{
+            text-align: center;
+          }
+
           #types h3{
           font-size: 1rem;
           font-weight: 700;
