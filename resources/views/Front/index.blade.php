@@ -139,7 +139,7 @@
 
 
              #howto .col-sm-12 p{
-               font-size: 0.9rem;
+               font-size: 0.8rem;
                margin-top: 0;
 
                margin-bottom: 1rem;
@@ -155,11 +155,11 @@
 
             #poles h3, #howto h3{
 
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             font-family: initial;
             font-weight: bold;
             position:relative;
-            margin:6%;
+            margin:3%;
 
             }
 
@@ -301,9 +301,6 @@
               font-size: 0.8rem;
             }
 
-
-
-
              .label-reverse {
               position: absolute;
               margin: auto;
@@ -359,8 +356,6 @@
                width: 260px;
                color:#28a745
              }
-
-
              .carousel-inner .carousel-item-right.active,
                 .carousel-inner .carousel-item-next {
                   transform: translateX(33.33%);
@@ -375,8 +370,6 @@
                 .carousel-inner .carousel-item-left{
                   transform: translateX(0);
                 }
-
-
          .section-container{
             padding: 70px 5px;
          }
