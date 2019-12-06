@@ -425,7 +425,7 @@
             text-align: center;
           }
 
-          #obac h1, #events h1 {
+          #obac h1, #events h1, #about h1 {
             color:#28a745 ;
           }
         </style>
@@ -630,7 +630,7 @@
         <!-- Section 2 -->
         <div id="about" class="section-2-container section-container">
 	        <div class="container">
-	            <div class="row">
+	            <div class="">
 	                <h1>COMMENT CA MARCHE ?</h1>
 
 	                <div class="col section-2 section-description wow fadeIn">
