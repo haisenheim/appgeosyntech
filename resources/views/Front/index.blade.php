@@ -702,8 +702,8 @@
 	            	            <h3>4- RENCONTRE AVEC LES PORTEURS DE PROJET   </h3>
 	            	            <p>
 	            	                Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs qui s’intéressent à son projet. Cette rencontre est importante
-	            	               Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs qui s’intéressent à son projet. Le porteur de projet décide ensuite
-	            	               s’il souhaite poursuivre la discussion avec vous en vous donnant accès à la DATA ROOM.
+	            	               Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs
+	            	               qui s’intéressent à son projet.
 	            	            </p>
 	            	        </div>
 
