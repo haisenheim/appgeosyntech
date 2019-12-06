@@ -817,11 +817,11 @@
                                         <li>ETUDES DE MARCHE</li>
                                         <li>LEVEE DE FONDS</li>
                                     </ul>
-                                    <h6>POINTE-NOIRE</h6>
-                                    <ul style="list-style: none;">
-                                        <li style="font-weight: 600; font-size: larger">ROND-POINT KASSAI-Pointe-Noire, Congo</li>
-                                        <li>TEL : +242 0666656</li>
-                                    </ul>
+
+
+                                        <p style="font-weight: 600; font-size: larger">ROND-POINT KASSAI-Pointe-Noire, Congo</p>
+                                        <p>TEL : +242 0666656</p>
+
 
                                     <p>SITE WEB:<a href="http://cabinet-obac.org">http://cabinet-obac.org</a></p>
                                 </div>
