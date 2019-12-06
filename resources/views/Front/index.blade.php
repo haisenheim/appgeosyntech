@@ -81,10 +81,13 @@
                 border-bottom: none;
             }
 
-            form label {
-            float: left;
-            color: #000000;
+            form .form-control {
+                font-size: 0.9rem;
 
+            }
+
+            .bottom-inner{
+                padding: 25px 5px;
             }
 
             #poles .col-md-4, #poles .col-sm-12{
@@ -836,7 +839,7 @@
 	                    <div class="bottom-inner">
 	                        <h4>CONTACTEZ NOUS</h4>
                         <div class="divider-1 wow fadeInUp"><span></span></div>
-                        <div class="">
+                        <div style="margin-top:40px;" class="">
                                 <form action="/contact" method="post">
                                  @csrf
                                     <div class="row">
