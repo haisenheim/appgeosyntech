@@ -115,6 +115,7 @@
                 border: solid 1px #28a745;
                 height: 360px;
                 padding: 4%;
+                text-align: center;
 
                 box-sizing: border-box;
             }
@@ -132,6 +133,9 @@
             }
 
 
+            #howto h3{
+                font-size: 0.8rem;
+            }
 
 
              #howto .col-sm-12 p{
@@ -723,11 +727,13 @@
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
 	            	            <h3> 8- LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3>
 
-	            	             <p style="font-size: 0.8rem">  Après la clôture du Deal, le pôle RISK MANAGEMENT accompagne le porteur de projet
+	            	             <p style="font-size: 0.7rem">  Après la clôture du Deal, le pôle RISK MANAGEMENT accompagne le porteur de projet
 	            	             dans l’exécution du projet afin d’identifier, évaluer et maitriser les risques d’exploitation,
-	            	             financiers, d’aléas et stratégiques y relatifs.</p>
+	            	             financiers, d’aléas et stratégiques y relatifs.
+	            	             <b>De plus, chaque mois le porteur de projet est tenu de rédiger un rapport de gestion.  </b>
+	            	             </p>
 
-	            	            <b>De plus, chaque mois le porteur de projet est tenu de rédiger un rapport de gestion.  </b>
+
 	            	        </div>
 	            	        <div class="col  col-md-4 col-sm-12 wow fadeInLeft">
 	            	            <h3> 9-RECOLTEZ LES FRUITS DE VOTRE INVESTISSEMENT DANS LE RESPECT DE LA DOCUMENTATION JURIDIQUE QUI A ETE SIGNEE</h3>
