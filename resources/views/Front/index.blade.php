@@ -532,7 +532,7 @@
 	                	<div class="row">
                 			<div class="col-md-12">
 			                	<div style="width: 150px; margin: 10px auto;" class="">
-			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/financement-de-linnovation.png" alt=""/>
+			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/financement-de-linnovation.jpg" alt=""/>
 			                	</div>
 			                	<h3>Projets liés aux financements structurés </h3>
 		                	</div>
@@ -546,7 +546,7 @@
 	                	<div class="row">
                 			<div class="col-md-12">
 			                	<div style="width: 150px; margin: 10px auto;" class="">
-			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/cessions.png" alt=""/>
+			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/cessions.jpg" alt=""/>
 			                	</div>
 			                	<h3>Projets de cession d’actifs ou de créances</h3>
 		                	</div>
