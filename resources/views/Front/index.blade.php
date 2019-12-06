@@ -400,6 +400,16 @@
           .section-reverse h1, .section-reverse h2, .section-reverse h3{
             color:#FFFFFF;
           }
+
+          #types h3{
+          font-size: 1rem;
+          font-weight: 700;
+          color:#28a745 ;
+          }
+
+          #types p {
+          color: #000000;
+          }
         </style>
     </head>
 
@@ -534,7 +544,7 @@
 			                	<div style="width: 150px; margin: 10px auto;" class="">
 			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/financement-de-linnovation.jpg" alt=""/>
 			                	</div>
-			                	<h3>Projets liés aux financements structurés </h3>
+			                	<h3>Projets d'infrastructures </h3>
 		                	</div>
 	                		<div class="col-md-12">
 
@@ -548,7 +558,7 @@
 			                	<div style="width: 150px; margin: 10px auto;" class="">
 			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/cessions.jpg" alt=""/>
 			                	</div>
-			                	<h3>Projets de cession d’actifs ou de créances</h3>
+			                	<h3>Cession d’actifs ou de créances</h3>
 		                	</div>
 	                		<div class="col-md-12">
 
