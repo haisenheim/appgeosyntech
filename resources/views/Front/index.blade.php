@@ -632,9 +632,9 @@
 	        <div class="container">
 	            <div class="">
 	                <h1>COMMENT CA MARCHE ?</h1>
-
+                       <div class="divider-1 wow fadeInUp"><span></span></div>
 	                <div class="col section-2 section-description wow fadeIn">
-	                    Nous sélectionnons nos partenaires financiers
+	                  <p>  Nous sélectionnons nos partenaires financiers </p>
 	                </div>
 	            </div>
 	            <div class="row">
