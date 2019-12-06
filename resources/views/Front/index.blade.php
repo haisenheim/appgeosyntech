@@ -164,184 +164,9 @@
 
             }
 
-            .label {
-              position: absolute;
-              margin: auto;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              border-radius: 50%;
-              width: 100%;
-              height: 360px;
-              background: none;
-              border: 1px solid #28a745;
-            }
-
-            .label::before,
-            .label::after {
-              content: "";
-              position: absolute;
-              margin: auto;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              border-radius: 50%;
-            }
-
-            .label::before {
-              width: 350px;
-              height: 350px;
-              background: #28a745;
-              border: solid 1px #28a745;
-            }
-
-            .label::after {
-              width: 345px;
-              height: 172.5px;
-              bottom: 172.5px;
-              background: #FFF;
-              border-radius: 172.5px 172.5px 0 0;
-            }
-
-            .disc-font {
-              font-family: Roboto, Arial, Sans-serif;
-              font-size: 0.5em;
-              text-align: center;
-              z-index: 10;
-              position: absolute;
-              color: #331832;
-            }
-
-            .disc-title {
-              margin-top: 100px;
-              width: 300px;
-              margin-left: auto;
-              margin-right: auto;
-            }
-
-            .disc-group {
-              top: 50px;
-              left: 10px;
-              width: 260px;
-            }
-
-
-
-             .label {
-                          position: absolute;
-                          margin: auto;
-                          top: 0;
-                          left: 0;
-                          bottom: 0;
-                          right: 0;
-                          border-radius: 50%;
-                          width: 360px;
-                          height: 360px;
-                          background: none;
-                          border: 1px solid #28a745;
-                        }
-
-                        .label::before,
-                        .label::after {
-                          content: "";
-                          position: absolute;
-                          margin: auto;
-                          top: 0;
-                          left: 0;
-                          bottom: 0;
-                          right: 0;
-                          border-radius: 50%;
-                        }
-
-                        .label::before {
-                          width: 350px;
-                          height: 350px;
-                          background: #28a745;
-                          border: solid 1px #28a745;
-                        }
-
-                        .label::after {
-                          width: 345px;
-                          height: 172.5px;
-                          bottom: 172.5px;
-                          background: #FFF;
-                          border-radius: 172.5px 172.5px 0 0;
-                        }
-
-                        .disc-font {
-                          font-family: Roboto, Arial, Sans-serif;
-                          font-size: 0.5em;
-                          text-align: center;
-                          z-index: 10;
-                          position: absolute;
-                          color: #331832;
-                        }
-
-                       .label .disc-title {
-                          margin-top: 100px;
-                          width: 300px;
-                          margin-left: auto;
-                          margin-right: auto;
-                          color: #28a745;
-                        }
-
-                       .label .disc-group {
-                          top: 50px;
-                          left: 10px;
-                          width: 260px;
-                          color:#fff
-                        }
-
-           .disc-group {
-              top: 180px;
-              left: 10px;
-              width: 260px;
-              color:#fff;
-              font-size: 0.8rem;
-            }
-
-             .label-reverse {
-              position: absolute;
-              margin: auto;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              border-radius: 50%;
-              width: 360px;
-              height: 360px;
-              background: none;
-              border: 1px solid #FFFFFF;
-            }
-
-            .label-reverse::before,
-            .label-reverse::after {
-              content: "";
-              position: absolute;
-              margin: auto;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              border-radius: 50%;
-            }
-
-            .label-reverse::before {
-              width: 350px;
-              height: 350px;
-              background: #FFFFFF;
-              border: solid 1px #FFFFFF;
-            }
-
-            .label-reverse::after {
-              width: 345px;
-              height: 172.5px;
-              bottom: 172.5px;
-              background: #28a745;
-              border-radius: 172.5px 172.5px 0 0;
-            }
+           .sup{
+            height: 60px;
+           }
 
             .label-reverse .disc-title {
                margin-top: 100px;
@@ -651,46 +476,47 @@
 
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	            <h3>2- SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
+	            	            <div class="sup"><h3>2- SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3></div>
+
 	            	            <p>
 	            	                Nous développons des partenariats avec des organismes financiers,
 	            	                des groupes d’entreprises et des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons
 	            	            </p>
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	            <h3>3- CREATION D’UN COMPTE « INVESTISSEUR »  </h3>
+	            	        <div class="sup"><h3>3- CREATION D’UN COMPTE « INVESTISSEUR »  </h3></div>
+
 	            	            <p>
 	            	               Le compte Investisseur vous permettra d’accéder aux projets structurés par le cabinet dans les pays dans lesquels nous intervenons.
 	            	            </p>
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	            <h3>4- RENCONTRE AVEC LES PORTEURS DE PROJET   </h3>
+	            	        <div class="sup"><h3>4- RENCONTRE AVEC LES PORTEURS DE PROJET   </h3></div>
+
 	            	            <p>
-	            	                Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs qui s’intéressent à son projet. Cette rencontre est importante
-	            	               Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et les investisseurs
-	            	               qui s’intéressent à son projet.
+	            	                Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et
+	            	                les investisseurs qui s’intéressent à son projet.
 	            	            </p>
 	            	        </div>
 
 
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	            <h3>5- ANALYSE DE LA DATA ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3>
+	            	        <div class="sup"><h3>5- ANALYSE DE LA DATA ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3></div>
                                 <p>Vous y trouverez une présentation détaillée du projet. </p>
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	            <h3>6- VALIDATION DE LA DOCUMENTATION JURIDIQUE DE L’OPERATION   </h3>
+	            	            <div class="sup"><h3>6- VALIDATION DE LA DOCUMENTATION JURIDIQUE DE L’OPERATION   </h3></div>
 
 	            	              <p>  Nous mettons à votre disposition des documents types vous permettant d’encadrer juridiquement votre investissement. </p>
 
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	            <h3>7- VERSEMENT DES FONDS   </h3>
-
+	            	        <div class="sup"><h3>7- VERSEMENT DES FONDS   </h3></div>
 	            	             <p>Le versement des fonds se fera sur un numéro de compte qui vous sera communiqué le moment venu </p>
 
 	            	        </div>
 	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	            <h3> 8- LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3>
+	            	        <div class="sup"><h3> 8- LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3></div>
 
 	            	             <p style="font-size: 0.7rem">  Après la clôture du Deal, le pôle RISK MANAGEMENT accompagne le porteur de projet
 	            	             dans l’exécution du projet afin d’identifier, évaluer et maitriser les risques d’exploitation,

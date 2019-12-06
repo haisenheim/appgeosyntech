@@ -130,8 +130,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Front/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3613963" vertical-offset="1568" max-vertical-offset="12848">
-              <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.86858314" vertical-offset="7753" max-vertical-offset="12864">
+              <caret line="694" column="31" selection-start-line="694" selection-start-column="31" selection-end-line="694" selection-end-column="31" />
               <folding>
                 <element signature="e#4691#5025#0#HTML" expanded="false" />
                 <element signature="e#5081#5313#0#HTML" expanded="false" />
@@ -979,8 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Front/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3613963" vertical-offset="1568" max-vertical-offset="12848">
-          <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.86858314" vertical-offset="7753" max-vertical-offset="12864">
+          <caret line="694" column="31" selection-start-line="694" selection-start-column="31" selection-end-line="694" selection-end-column="31" />
           <folding>
             <element signature="e#4691#5025#0#HTML" expanded="false" />
             <element signature="e#5081#5313#0#HTML" expanded="false" />
