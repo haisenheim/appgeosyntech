@@ -414,6 +414,14 @@
           #types p, #obac p {
           color: #000000;
           }
+
+          #poles .col-sm-12{
+            text-align: center;
+          }
+
+          #obac h1{
+            color:#28a745 ;
+          }
         </style>
     </head>
 
@@ -746,7 +754,7 @@
 	                <div style="border-radius: 50%;background: #28a745;height: 360px; padding: 6%" class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
 	                	<div class="">
 	                	    <div style="width: 150px; margin: 10px auto;" class="">
-			                	<img style="height: 80px; width:90px; border-radius: 40px" src="img/structuration-projet.jpg" alt=""/>
+			                	<img style="height: 90px; width:90px; border-radius: 50%" src="img/structuration-projet.jpg" alt=""/>
 			                </div>
 	                		<div style="">
                                 <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE STRUCTURATION DE PROJETS </h3>
@@ -756,9 +764,11 @@
 	                </div>
 	                <div class="col-md-4 col-sm-12 section-3-box wow fadeInRight">
 	                	<div class="">
-	                	    <span><i class="fa fa-lg fa-cloud"></i></span>
-	                		<div style="">
-                                <h3>POLE RISK MANAGEMENT </h3>
+	                	    <div style="width: 150px; margin: 10px auto;" class="">
+			                	<img style="height: 90px; width:90px; border-radius: 50%" src="img/risk-management.jpg" alt=""/>
+			                </div>
+	                		<div>
+                                <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE RISK MANAGEMENT </h3>
                                 Nous accompagnons les porteurs de projets dans la maitrise des risques liés à l’exécution de leur plan d’actions
 	                		</div>
 	                	</div>
@@ -766,9 +776,11 @@
 
 	                <div class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
 	                	<div class="">
-	                	    <span><i class="fa fa-lg fa-graduate"></i></span>
+	                	    <div style="width: 150px; margin: 10px auto;" class="">
+			                	<img style="height: 90px; width:90px; border-radius: 50%" src="img/pole-formation.jpg" alt=""/>
+			                </div>
 	                		<div style="">
-                                <h3>POLE FORMATION  </h3>
+                                <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE FORMATION  </h3>
                                 <p>Nous accompagnons les porteurs de projet dans le renforcement de leurs capacités managériales</p>
 	                		</div>
 	                	</div>
