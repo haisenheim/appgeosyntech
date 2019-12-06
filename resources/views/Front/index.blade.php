@@ -419,7 +419,7 @@
             text-align: center;
           }
 
-          #obac h1{
+          #obac h1, #events h1 {
             color:#28a745 ;
           }
         </style>
@@ -476,7 +476,7 @@
         	        <div class="container">
         	                <div class="col section-1 section-description wow fadeIn">
 
-                                 <h1>BIENVENU SUR OBAC ALERT</h1>
+                                 <h1>BIENVENUE SUR OBAC ALERT</h1>
                                  <div class="divider-1 wow fadeInUp"><span></span></div>
           	                    <p>
           	                    	Obac alert est l’outil de mobilisation de capitaux du cabinet de conseils stratégiques et financiers et à vocation de banques d’affaires : OBAC Sarl. Cet outil nous permet de présenter à notre réseau de partenaires financiers locaux,
@@ -742,6 +742,7 @@
 	            <div class="row">
 	                <div class="col section-1 section-description wow fadeIn">
 	                    <h1>A PROPOS DU CABINET OBAC</h1>
+	                     <div class="divider-1 wow fadeInUp"><span></span></div>
 	                        <p>
 	                            Créé en 2014, OBAC est un cabinet de conseils stratégiques et financiers spécialisé sur l'Afrique Centrale et à vocation de Banque d’affaires.
 	                             OBAC est structuré autour de 3 pôles d’expertise visant chacun à accomplir une mission spécifique.
@@ -781,7 +782,7 @@
 			                </div>
 	                		<div style="">
                                 <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE FORMATION  </h3>
-                                <p>Nous accompagnons les porteurs de projet dans le renforcement de leurs capacités managériales</p>
+                                Nous accompagnons les porteurs de projet dans le renforcement de leurs capacités managériales
 	                		</div>
 	                	</div>
 	                </div>
@@ -802,7 +803,7 @@
 	            </div>
 	         </div>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
-                <div class="section-container">
+                <div id="events" class="section-container">
                     <div class="col section-3 section-description wow fadeIn">
 	                    <h2>DECOUVREZ EN IMAGES NOS EVENEMENTS  </h2>
 
