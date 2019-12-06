@@ -807,7 +807,28 @@
 	            <div class="row">
 	                  <div class="col-md-4">
                             <div class="bottom-inner border-right">
+                                <div style='background: url("img/logo-obac.png"); background-size: cover; width: 90%; height: 240px;'>
 
+                                </div>
+                                <div style="color: #fff" class="address-obac">
+                                    <h5 class="page-header">CABINET OBAC</h5>
+                                    <ul>
+                                        <li>CONSEIL STRATEGIQUE ET FINANCIER</li>
+                                        <li>ETUDES DE MARCHE</li>
+                                        <li>LEVEE DE FONDS</li>
+                                    </ul>
+                                    <h5>POINTE-NOIRE</h5>
+                                    <ul style="list-style: none;">
+                                        <li><h6>ROND-POINT KASSAI</h6></li>
+                                        <li>TEL : +242 0666656</li>
+                                    </ul>
+                                    <h5>BRAZAVILLE</h5>
+                                    <ul style="list-style: none;">
+                                        <li><h6>xxxxxxxx</h6></li>
+                                        <li>TEL : +242 0666656</li>
+                                    </ul>
+                                    <p><a href="http://cabinet-obac.org">http://cabinet-obac.org</a></p>
+                                </div>
                           </div>
 	                  </div>
 	                  <div class="col-md-4">
