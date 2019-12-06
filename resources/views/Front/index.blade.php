@@ -654,23 +654,28 @@
                                 <div style="color: #fff; text-align: left;" class="address-obac">
                                     <h5 class="page-header">CABINET OBAC</h5>
                                     <ul>
-                                        <li>CONSEIL STRATEGIQUE ET FINANCIER</li>
-                                        <li>ETUDES DE MARCHE</li>
-                                        <li>LEVEE DE FONDS</li>
+                                        <li>POLE STRUCTURATION</li>
+                                        <li>POLE RISK MANAGEMENT</li>
+                                        <li>POLE FORMATION</li>
                                     </ul>
 
 
-                                        <p style="font-weight: 600;">ROND-POINT KASSAI - Pointe-Noire, Congo</p>
-                                        <p>TEL : +242 0666656</p>
+                                        <p style="font-weight: 600;">TOUR MIROIR, 2 <sup>e</sup> Etage - Pointe-Noire, Rep. Congo</p>
+                                        <p>TEL : +242 069704898 </p>
 
 
-                                    <p>SITE WEB:<a href="http://cabinet-obac.org">http://cabinet-obac.org</a></p>
+                                    <p>SITE WEB:<a href="http://cabinet-obac.com">http://cabinet-obac.com</a></p>
                                 </div>
                           </div>
 	                  </div>
 	                  <div class="col-md-4">
                           <div class="bottom-inner border-right">
-
+                            <ul style="list-style: none;">
+                                <li><a href="/">Accueil</a></li>
+                                <li><a href="/projets">Tous les projets</a></li>
+                                <li><a href="#obac"></a>A Propos du cabinet OBAC</li>
+                                <li><a href="#about">Investir - Comment ça marche?</a></li>
+                            </ul>
                           </div>
 	                  </div>
 	                  <div class="col-md-4">
