@@ -411,7 +411,7 @@
           color:#28a745 ;
           }
 
-          #types p {
+          #types p, #obac p {
           color: #000000;
           }
         </style>
@@ -732,7 +732,7 @@
 	        <div class="container">
 	        	
 	            <div class="row">
-	                <div class="col section-3 section-description wow fadeIn">
+	                <div class="col section-1 section-description wow fadeIn">
 	                    <h1>A PROPOS DU CABINET OBAC</h1>
 	                        <p>
 	                            Créé en 2014, OBAC est un cabinet de conseils stratégiques et financiers spécialisé sur l'Afrique Centrale et à vocation de Banque d’affaires.
@@ -745,7 +745,9 @@
 	            <div id="poles" style="margin-bottom: 30px;" class="row">
 	                <div style="border-radius: 50%;background: #28a745;height: 360px; padding: 6%" class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
 	                	<div class="">
-	                	    <span><i class="fa fa-lg fa-coins"></i></span>
+	                	    <div style="width: 150px; margin: 10px auto;" class="">
+			                	<img style="height: 80px; width:90px; border-radius: 40px" src="img/structuration-projet.jpg" alt=""/>
+			                </div>
 	                		<div style="">
                                 <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE STRUCTURATION DE PROJETS </h3>
                                 Nous aidons les porteurs de projet à créer de la valeur en structurant leur entreprise
