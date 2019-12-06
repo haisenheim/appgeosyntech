@@ -531,8 +531,8 @@
                     <div class="col-md-4 section-1-box wow fadeInDown">
 	                	<div class="row">
                 			<div class="col-md-12">
-			                	<div class="section-1-box-icon">
-			                		<i class="fas fa-cog"></i>
+			                	<div style="width: 150px; margin: 10px auto;" class="">
+			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/financement-de-linnovation.png" alt=""/>
 			                	</div>
 			                	<h3>Projets liés aux financements structurés </h3>
 		                	</div>
@@ -545,8 +545,8 @@
                     <div class="col-md-4 section-1-box wow fadeInUp">
 	                	<div class="row">
                 			<div class="col-md-12">
-			                	<div class="section-1-box-icon">
-			                		<i class="fab fa-twitter"></i>
+			                	<div style="width: 150px; margin: 10px auto;" class="">
+			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/cessions.png" alt=""/>
 			                	</div>
 			                	<h3>Projets de cession d’actifs ou de créances</h3>
 		                	</div>
