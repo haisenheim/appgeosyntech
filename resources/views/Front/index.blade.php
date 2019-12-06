@@ -98,6 +98,9 @@
                 color:#fff;
                 box-sizing: border-box;
             }
+            #menu-bottom li{
+            margin: 10px 0 5px 0;
+            }
 
              #howto .col-md-4, #howto .col-sm-12{
                 border-radius: 50%;
@@ -669,11 +672,11 @@
                           </div>
 	                  </div>
 	                  <div class="col-md-4">
-                          <div class="bottom-inner border-right">
-                            <ul style="list-style: none;">
+                          <div style="text-align: left;" class="bottom-inner border-right">
+                            <ul id="menu-bottom" style="list-style: none;">
                                 <li><a href="/">Accueil</a></li>
                                 <li><a href="/projets">Tous les projets</a></li>
-                                <li><a href="#obac"></a>A Propos du cabinet OBAC</li>
+                                <li><a href="#obac">A Propos du cabinet OBAC</a></li>
                                 <li><a href="#about">Investir - Comment ça marche?</a></li>
                             </ul>
                           </div>
