@@ -819,7 +819,7 @@
                                     </ul>
 
 
-                                        <p style="font-weight: 600; font-size: larger">ROND-POINT KASSAI-Pointe-Noire, Congo</p>
+                                        <p style="font-weight: 600;">ROND-POINT KASSAI - Pointe-Noire, Congo</p>
                                         <p>TEL : +242 0666656</p>
 
 
@@ -842,26 +842,26 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="name">NOM</label>
-                                                <input required="required" type="text" name="name" class="form-control"/>
+
+                                                <input required="required" type="text" name="name" class="form-control" placeholder="Votre nom complet"/>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="name">ADRESSE EMAIL</label>
-                                                <input required="required" type="email" name="email" class="form-control"/>
+
+                                                <input required="required" type="email" name="email" class="form-control" placeholder="Votre adresse email"/>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="name">OBJET</label>
-                                                <input required="required" type="text" name="objet" class="form-control"/>
+
+                                                <input required="required" type="text" name="objet" class="form-control" placeholder="Objet"/>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="name">MESSAGE</label>
-                                                <textarea required="required" name="message" id="" cols="30" rows="4" class="form-control"></textarea>
+
+                                                <textarea required="required" name="message" id="" cols="30" rows="4" class="form-control" placeholder="Votre message ..."></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
