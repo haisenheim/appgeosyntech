@@ -637,7 +637,36 @@
 	            <div class="row">
 	            	<div class="col section-2-box wow fadeInLeft">
 	            	    <div id="howto" class="row">
-
+	            	        <div style="background: none" class="col-md-4">
+                                <div class="turntable">
+                                  <div class="disc">
+                                    <div class="label">
+                                         <div class="disc-font disc-title">
+                                           <h3>1- PRISE DE CONTACT</h3>
+                                          </div>
+                                          <div class="disc-font disc-group">
+                                               Nous prenons connaissance de votre politique d’investissement, de votre appétence pour le risque ainsi que de la valeur ajoutée financière et
+                                            non financière que vous pouvez apporter aux projets que nous accompagnons.
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+	            	        </div>
+	            	        <div style="background: none" class="col-md-4">
+                                <div class="turntable">
+                                  <div class="disc">
+                                    <div class="label-reverse">
+                                         <div class="disc-font disc-title">
+                                            <h3>2- SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3>
+                                          </div>
+                                          <div class="disc-font disc-group">
+                                            Nous développons des partenariats avec des fonds d’investissement, des banques, des microfinances, des groupes d’entreprises
+	            	                        ou des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons.
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+	            	        </div>
 	            	        <div class="col col-sm-12 col-md-4 section-2-box wow fadeInLeft">
 	            	            <div class="sup"><h3>1- PRISE DE CONTACT </h3></div>
 
