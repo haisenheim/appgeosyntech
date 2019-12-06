@@ -107,6 +107,7 @@
                 padding: 4%;
                 color:#28a745;
                 box-sizing: border-box;
+                text-align: center;
             }
 
              #types .col-md-4, #types .col-sm-12{
