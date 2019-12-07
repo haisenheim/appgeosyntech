@@ -2127,7 +2127,49 @@
         				</div>
         			</div>
         		</div>
-        		@if($projet->teaser)
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                      $('textarea').summernote({
+                        height: 300,
+                        tabsize: 2,
+                        followingToolbar: true,
+                        lang:'fr-FR'
+                      });
+
+
+                    var tsr = $('#has_teaser').val();
+                    if(tsr){
+                        setTimeout(function(){$('#popup').show()}, 7000);
+                    }
+
+                    });
+
+
+
+
+                  </script>
+
+
+        </div>
+
+<style>
+         div.note-editor.note-frame{
+                    padding: 0;
+                }
+              .note-frame .btn-default {
+                    color: #222;
+                    background-color: #FFF;
+                    border-color: none;
+                }
+
+                label{
+                color: #000000;
+                margin-top: 10px;
+                }
+    </style>
+
+   @if($projet->teaser)
         		    <input type="hidden" id="has_teaser" value="1"/>
         		    <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
                         <div class="modal-dialog modal-lg" role="document">
@@ -2170,48 +2212,6 @@
         		@else
         		    <input type="hidden" id="has_teaser" value="0"/>
         		@endif
-
-
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('textarea').summernote({
-                        height: 300,
-                        tabsize: 2,
-                        followingToolbar: true,
-                        lang:'fr-FR'
-                      });
-
-
-                    var tsr = $('#has_teaser').val();
-                    if(tsr){
-                        setTimeout(function(){$('#popup').show()}, 7000);
-                    }
-
-                    });
-
-
-
-
-                  </script>
-
-
-        </div>
-
-<style>
-         div.note-editor.note-frame{
-                    padding: 0;
-                }
-              .note-frame .btn-default {
-                    color: #222;
-                    background-color: #FFF;
-                    border-color: none;
-                }
-
-                label{
-                color: #000000;
-                margin-top: 10px;
-                }
-    </style>
 
 @endsection
 
