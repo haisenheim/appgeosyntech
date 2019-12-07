@@ -2172,12 +2172,8 @@
                          </div>
                        <div class="modal-body">
                            <div class="row">
-                               <div class="col-md-5 col-sm-12">
-                                    <div style="background: url('{{asset('img/'.$projet->imageUri)}}'); background-size: cover; height: 300px; width: 100%" id="popup-img">
 
-                                    </div>
-                               </div>
-                               <div class="col-md-7 col-sm-12">
+                               <div class="col-md-11 col-sm-12">
                                        <p>Félicitations, votre teaser a été enregistré et Il a été envoyé à notre réseau d’investisseurs. </p>
 
                                           <p> Vous pouvez dès lors :</p>
@@ -2209,7 +2205,7 @@
                     if(tsr){
                        setTimeout(function() {
                                    $('#popup').show();
-                                 },6000);
+                                 },9000);
                     }
 
                     });
