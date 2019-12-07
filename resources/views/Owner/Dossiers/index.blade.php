@@ -76,6 +76,7 @@ DOSSIERS DE LEVEE DE FONDS
           </table>
         </div>
         <!-- /.card-body -->
+        <ul class="pagination">{{ $dossiers->link() }}</ul>
       </div>
 
         <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
