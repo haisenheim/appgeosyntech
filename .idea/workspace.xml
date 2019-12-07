@@ -194,14 +194,15 @@
       <file leaf-file-name="create_diag_externe.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5193133" vertical-offset="5454" max-vertical-offset="8080">
-              <caret line="402" column="38" selection-start-line="402" selection-start-column="38" selection-end-line="402" selection-end-column="38" />
+            <state vertical-scroll-proportion="1.6416309" vertical-offset="99" max-vertical-offset="3504">
+              <caret line="386" column="26" selection-start-line="386" selection-start-column="26" selection-end-line="386" selection-end-column="26" />
               <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#34399#35267#0#HTML" expanded="false" />
-                <element signature="e#35310#36508#0#HTML" expanded="false" />
-                <element signature="e#36897#37260#0#HTML" expanded="false" />
-                <element signature="e#37361#37982#0#HTML" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="e#32555#32669#0#HTML" expanded="true" />
+                <element signature="e#34514#35382#0#HTML" expanded="false" />
+                <element signature="e#35425#36623#0#HTML" expanded="false" />
+                <element signature="e#37012#37375#0#HTML" expanded="false" />
+                <element signature="e#37476#38097#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -573,10 +574,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22284909" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22284909" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1073,14 +1074,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5193133" vertical-offset="5454" max-vertical-offset="8080">
-          <caret line="402" column="38" selection-start-line="402" selection-start-column="38" selection-end-line="402" selection-end-column="38" />
+        <state vertical-scroll-proportion="1.6416309" vertical-offset="99" max-vertical-offset="3504">
+          <caret line="386" column="26" selection-start-line="386" selection-start-column="26" selection-end-line="386" selection-end-column="26" />
           <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#34399#35267#0#HTML" expanded="false" />
-            <element signature="e#35310#36508#0#HTML" expanded="false" />
-            <element signature="e#36897#37260#0#HTML" expanded="false" />
-            <element signature="e#37361#37982#0#HTML" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#32555#32669#0#HTML" expanded="true" />
+            <element signature="e#34514#35382#0#HTML" expanded="false" />
+            <element signature="e#35425#36623#0#HTML" expanded="false" />
+            <element signature="e#37012#37375#0#HTML" expanded="false" />
+            <element signature="e#37476#38097#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
