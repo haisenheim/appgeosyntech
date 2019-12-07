@@ -402,7 +402,7 @@ CREATION DU DIAGNOSTIC EXTERNE
                                       <p> Votre consultant vous contactera afin de valider les informations communiquées, rédiger une synthèse
                                       sur l’évolution du marché et de l’environnement puis recueillir le second paiement qui vous permettra d’accéder à la prochaine étape.
                                         </p>
-                                    <a href="/owner/dossiers/show/{{ $projet->token }}" class="btn btn-success btn-block" id="btn-continue">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+                                    <a href="/owner/dossiers/{{ $projet->token }}" class="btn btn-success btn-block" id="btn-continue">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
                             </div>
                         </div>
                     </div>
