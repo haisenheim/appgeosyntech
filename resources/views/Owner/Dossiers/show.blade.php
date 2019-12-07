@@ -2138,16 +2138,6 @@
                       });
 
 
-                    var tsr = $('#has_teaser').val();
-                    if(tsr){
-                        setTimeout($('#popup').show(), 7000);
-                    }
-
-                    });
-
-
-
-
                   </script>
 
 
@@ -2217,7 +2207,9 @@
 
                     var tsr = $('#has_teaser').val();
                     if(tsr){
-                        setTimeout($('#popup').show(), 7000);
+                       setTimeout(function() {
+                                   $('#popup').show();
+                                 },6000);
                     }
 
                     });
