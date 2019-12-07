@@ -39,7 +39,7 @@ class DossierController extends Controller
     public function index()
     {
         //
-        $dossiers = Projet::orderBy('created_at','desc')->paginate(10);
+        $dossiers = Projet::orderBy('created_at','desc')->where('owner_id',Auth::user()->id)->paginate(10);
         return view('/Owner/Dossiers/index')->with(compact('dossiers'));
     }
 

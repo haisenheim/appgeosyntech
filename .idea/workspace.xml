@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -152,14 +152,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.56" vertical-offset="51" max-vertical-offset="7504">
-              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.7145923" vertical-offset="51" max-vertical-offset="7504">
+              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
               <folding>
-                <element signature="e#9230#11646#0#PHP" expanded="false" />
-                <element signature="e#12420#13040#0#PHP" expanded="false" />
+                <element signature="e#9266#11682#0#PHP" expanded="false" />
+                <element signature="e#12456#13076#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -193,11 +193,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7253219" vertical-offset="910" max-vertical-offset="2112">
-              <caret line="78" column="53" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+            <state vertical-scroll-proportion="-9.68" vertical-offset="910" max-vertical-offset="2112">
+              <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -290,8 +290,8 @@
         <option value="$PROJECT_DIR$/resources/views/Front/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
       </list>
     </option>
   </component>
@@ -668,10 +668,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22284909" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22284909" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1191,22 +1191,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.56" vertical-offset="51" max-vertical-offset="7504">
-          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
-          <folding>
-            <element signature="e#9230#11646#0#PHP" expanded="false" />
-            <element signature="e#12420#13040#0#PHP" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-9.68" vertical-offset="910" max-vertical-offset="2112">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7253219" vertical-offset="910" max-vertical-offset="2112">
-          <caret line="78" column="53" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
-          <folding />
+        <state vertical-scroll-proportion="0.7145923" vertical-offset="51" max-vertical-offset="7504">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding>
+            <element signature="e#9266#11682#0#PHP" expanded="false" />
+            <element signature="e#12456#13076#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
