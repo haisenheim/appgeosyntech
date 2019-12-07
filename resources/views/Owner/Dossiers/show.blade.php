@@ -2166,14 +2166,14 @@
                    <div class="modal-content">
                         <div class="modal-header">
 
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <button onclick="$('#popup').hide();" type="button" class="close" data-dismiss="modal" aria-label="Close">
                              <span aria-hidden="true">&times;</span>
                            </button>
                          </div>
                        <div class="modal-body">
                            <div class="row">
 
-                               <div class="col-md-11 col-sm-12">
+                               <div style="overflow-y: scroll" class="col-md-11 col-sm-12">
                                        <p>Félicitations, votre teaser a été enregistré et Il a été envoyé à notre réseau d’investisseurs. </p>
 
                                           <p> Vous pouvez dès lors :</p>
