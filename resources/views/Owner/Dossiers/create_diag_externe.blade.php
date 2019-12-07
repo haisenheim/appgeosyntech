@@ -386,11 +386,42 @@ CREATION DU DIAGNOSTIC EXTERNE
                         </div>
                     </div>
                 </div>
+
+        <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-12">
+                                 <div style="background: url('{{asset('img/'.$projet->imageUri)}}'); background-size: cover; height: 300px; width: 100%" id="popup-img">
+
+                                 </div>
+                            </div>
+                            <div class="col-md-7 col-sm-12">
+                                    <p>Félicitations ! vous venez de terminer votre diagnostic externe. </p>
+                                      <p> Votre consultant vous contactera afin de valider les informations communiquées, rédiger une synthèse
+                                      sur l’évolution du marché et de l’environnement puis recueillir le second paiement qui vous permettra d’accéder à la prochaine étape.
+                                        </p>
+                                    <a href="/owner/dossiers/show/{{ $projet->token }}" class="btn btn-success btn-block" id="btn-continue">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
     </div>
 <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+            <!-- SweetAlert2 -->
+    <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+            <!-- Toastr -->
+    <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
 
 <script>
@@ -513,8 +544,18 @@ CREATION DU DIAGNOSTIC EXTERNE
         analyse_env.intensite_concu_men=$("#ic").find('td').last().text();
         var spinHandle_firstProcess = loadingOverlay.activate();
 
+              const Toast = Swal.mixin({
+                              toast: true,
+                              position: 'top-end',
+                              showConfirmButton: false,
+                              timer: 5000
+                            });
         if((concurrents.length<1) || (segments.length<1)){
-            alert('Les informations saisies sont incorrectes. Verifiez que les concurrents et les segments clients ont été saisis !!!!');
+            Toast.fire({
+              type: 'error',
+              title: 'Les informations saisies sont incorrectes. Verifiez que les concurrents et les segments clients ont été saisis !!!!'
+            });
+
         }else{
             $.ajax({
                         url:saveurl,
@@ -528,7 +569,15 @@ CREATION DU DIAGNOSTIC EXTERNE
                         },
                         success: function(data){
                             if(data.id!=null){
-                                window.location.replace(redirectUrl+data.token);
+                                loadingOverlay.cancel(spinHandle_firstProcess);
+                                Toast.fire({
+                                   type: 'success',
+                                   title: 'Données enregistrées avec succès!!!'
+                                 });
+                                 setTimeout(function() {
+                                   $('#popup').show();
+                                 },2000);
+                               // window.location.replace(redirectUrl+data.token);
                             }
                            /// console.log(data);
                         },
