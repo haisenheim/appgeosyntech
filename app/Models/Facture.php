@@ -56,18 +56,11 @@ class Facture extends Model
 			}
 
 		}
+
+		return $s;
 	}
 
-	public function getMontantconsultantAttribute(){
-		$facture = Facture::find($this->id);
-		$lignes = $facture->lignes;
-		$s=0;
-		if($lignes){
-			foreach($lignes as $ligne){
-				$s = $s+$ligne->montant_consultant;
-			}
-		}
-	}
+
 
 	public function getMontantalliagesAttribute(){
 		$facture = Facture::find($this->id);
