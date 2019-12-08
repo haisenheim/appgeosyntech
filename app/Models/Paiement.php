@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Paiement extends Model
 {
     //
+	protected $guarded = [];
 	public function facture_consultant(){
 		return $this->belongsTo('App\Models\Facture','facture_consultant_id');
 	}
