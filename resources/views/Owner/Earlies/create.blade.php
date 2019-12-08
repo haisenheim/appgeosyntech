@@ -449,6 +449,12 @@ CREATION D'UN DOSSIER EARLY STAGE
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+            <!-- SweetAlert2 -->
+    <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+            <!-- Toastr -->
+    <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -466,6 +472,7 @@ CREATION D'UN DOSSIER EARLY STAGE
     <script>
 
                 $(document).ready(function() {
+
 
                     var sectors=[];
 
@@ -588,9 +595,18 @@ CREATION D'UN DOSSIER EARLY STAGE
         $('#btn-save').click(function(e){
 
             e.preventDefault();
+             const Toast = Swal.mixin({
+                              toast: true,
+                              position: 'top-end',
+                              showConfirmButton: false,
+                              timer: 5000
+                            });
 
                 if($('#imageUri').val().length<1){
-                    alert('Impossible de créer le dossier car vous n\'avez associé aucune image à votre projet.');
+                   Toast.fire({
+                      type: 'error',
+                      title: 'Impossible de creer un dossier sans image!!!'
+                   });
                 }
                 else
                 {
@@ -650,14 +666,38 @@ CREATION D'UN DOSSIER EARLY STAGE
 
                                         },
                                         success: function(data){
-                                           loadingOverlay.cancel(spinHandle_firstProcess);
-                                            window.location.replace(redirectUrl+"/"+data);
+
+                                            loadingOverlay.cancel(spinHandle_firstProcess);
+                                           $('#popup-img').css({
+                                                background:'http://alert.test/img/'+data.imageUri,
+                                                height: '300px',
+                                                width: '100%',
+                                                'background-size': 'cover'
+                                           });
+                                           Toast.fire({
+                                                       type: 'success',
+                                                       title: 'Votre dossier a été créé avec succès!!!'
+                                                     });
+                                                     setTimeout(function() {
+                                                       $('#popup').show();
+                                                     },2000);
+
+                                                 $('#btn-continue').click(function(e){
+                                                    e.preventDefault();
+                                                    window.location.replace(redirectUrl+"/"+data.token);
+                                                 });
+                                          // loadingOverlay.cancel(spinHandle_firstProcess);
+                                           // window.location.replace(redirectUrl+"/"+data);
                                             //console.log(data);
 
                                         },
                                         Error:function(){
                                             loadingOverlay.cancel(spinHandle_firstProcess);
-                                            alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
+                                            Toast.fire({
+                                                       type: 'error',
+                                                       title: 'Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!'
+                                                     });
+
                                             $('#btn-save').show();
                                         }
                                     });

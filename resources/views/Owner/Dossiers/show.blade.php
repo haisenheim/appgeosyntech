@@ -2174,7 +2174,7 @@
                            <div class="row">
 
                                <div style="overflow-y: scroll" class="col-md-11 col-sm-12">
-                                       <p>Félicitations, votre teaser a été enregistré et Il a été envoyé à notre réseau d’investisseurs. </p>
+                                       <p><b>Félicitations, votre teaser a été enregistré et Il a été envoyé à notre réseau d’investisseurs.</b> </p>
 
                                           <p> Vous pouvez dès lors :</p>
                                           <ul style="list-style: decimal">
