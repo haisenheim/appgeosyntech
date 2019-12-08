@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Facture.php" afterPath="$PROJECT_DIR$/app/Models/Facture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php" afterPath="$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -55,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Facture.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Facture.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Facture.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9346939" vertical-offset="454" max-vertical-offset="1392">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state vertical-scroll-proportion="-17.04" vertical-offset="406" max-vertical-offset="1392">
+              <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -101,13 +102,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creances.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="creances.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.56" vertical-offset="307" max-vertical-offset="1344">
-              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.4297694" vertical-offset="307" max-vertical-offset="1344">
+              <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
               <folding>
-                <element signature="e#1031#1055#0#HTML" expanded="true" />
+                <element signature="e#1022#1046#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,8 +208,8 @@
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/Apporteur/Factures/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Facture.php" />
+        <option value="$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php" />
       </list>
     </option>
   </component>
@@ -1063,21 +1064,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Facture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.56" vertical-offset="307" max-vertical-offset="1344">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding>
-            <element signature="e#1031#1055#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-17.04" vertical-offset="406" max-vertical-offset="1392">
+          <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Facture.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9346939" vertical-offset="454" max-vertical-offset="1392">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.4297694" vertical-offset="307" max-vertical-offset="1344">
+          <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+          <folding>
+            <element signature="e#1022#1046#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

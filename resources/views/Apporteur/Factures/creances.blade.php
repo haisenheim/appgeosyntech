@@ -30,7 +30,7 @@ CREANCES
                           <tr>
                               <td>{{$creance->name }} </td>
                               <td>{{$creance->mois->name  }} / {{ $creance->annee }} </td>
-                              <td>{{ number_format($creance->montantapporteur,0,',','.') }} </td>
+                              <td>{{ number_format($creance->montant,0,',','.') }} </td>
 
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
