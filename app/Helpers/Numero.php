@@ -20,6 +20,10 @@ class  Numero {
 		    $parametre->num_facture=1;
 		    $parametre->annee = date('Y');
 		    $parametre->save();
+	    }else{
+		    $nfc = $parametre->num_facture + 1;
+		    $parametre->num_facture = $parametre->num_facture + 1;
+		    $parametre->save();
 	    }
 
 	  return $nfc;

@@ -2,12 +2,22 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
 	<title>{{ $title }}</title>
 </head>
 <body>
-    <h2>{{ $heading }}</h2>
+    <h2>{{ $heading }} <small style="float: right;">{{ date_format($paiement->created_at,'d/m/Y H:i') }}</small></h2>
     <div>
-        <p>{{ $content }}</p>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>CLIENT :</th> <th>{{ $paiement->owner->name }}</th>
+                    <th>PROJET :</th> <th>{{ $paiement->projet->name }}</th>
+                    <th>ETAPE :</th> <th>{{ $paiement->step }}</th>
+                    <th>MONTANT DU PAIEMENT :</th> <th>{{ number_format($paiement->montant,0,',','.') }} <sup>{{ $paiement->projet->devise->abb }}</sup></th>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

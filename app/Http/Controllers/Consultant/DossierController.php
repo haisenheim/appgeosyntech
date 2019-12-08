@@ -299,7 +299,7 @@ class DossierController extends Controller
 	public function addMode(Request $request){
 		$projet = Projet::where('token',$request->projet_token)->first();
 		$projet->modepaiement_id = $request->mode_id;
-		$projet->validated_step=1;
+		//$projet->validated_step=1;
 		$projet->save();
 		return redirect()->back();
 	}

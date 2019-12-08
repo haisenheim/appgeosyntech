@@ -50,30 +50,27 @@ class ProjetController extends Controller
         //
     }
 
-	/**
-	 * Validation du premier paiement
-	 */
 
-	public function validateDiagInterne(Request $request, $token){
+	private function facturer($step, $projet_id){
 
-		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>1]);
+		 $projet = Projet::find($projet_id);
 		$num =str_pad(Numero::facture(),8,0,STR_PAD_LEFT);
 		$facture_consultant = Facture::where('consultant',1)->where('moi_id',date('m'))->where('annee',date('Y'))->where('owner_id',$projet->expert_id)->first();
 		if(!$facture_consultant){
 			$facture_consultant = Facture::updateOrCreate(['name'=>$num.'EXP-'.date('Y'), 'moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->expert_id, 'consultant'=>1,'token'=>sha1(Auth::user()->id.date('HsmdYi').'CONSULTANT')]);
 		}
 
-			$fapp_id =0;
-		 if($projet->owner){
-			 if($projet->owner->apporteur_id){
-				 $facture_apporteur = Facture::where('apporteur',1)->where('moi_id',date('m'))->where('annee',date('Y'))->where('owner_id',$projet->owner->apporteur_id)->first();
-				 if(!$facture_apporteur){
-					 $facture_apporteur = Facture::updateOrCreate(['name'=>$num.'APP-'.date('Y'), 'moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->owner->apporteur_id, 'apporteur'=>1,'token'=>sha1(Auth::user()->id.date('HsmdYi').'Apporteur')]);
+		$fapp_id =0;
+		if($projet->owner){
+			if($projet->owner->apporteur_id){
+				$facture_apporteur = Facture::where('apporteur',1)->where('moi_id',date('m'))->where('annee',date('Y'))->where('owner_id',$projet->owner->apporteur_id)->first();
+				if(!$facture_apporteur){
+					$facture_apporteur = Facture::updateOrCreate(['name'=>$num.'APP-'.date('Y'), 'moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->owner->apporteur_id, 'apporteur'=>1,'token'=>sha1(Auth::user()->id.date('HsmdYi').'Apporteur')]);
 
-				 }
-				 $fapp_id = $facture_apporteur->id;
-			 }
-		 }
+				}
+				$fapp_id = $facture_apporteur->id;
+			}
+		}
 
 		$facture_alliages = Facture::where('alliages',1)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
 		if(!$facture_alliages){
@@ -81,20 +78,33 @@ class ProjetController extends Controller
 		}
 
 
-		$paiement = Paiement::updateOrCreate(['moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->owner_id,'projet_id'=>$projet->id,'step'=>1,
+		$paiement = Paiement::updateOrCreate(['moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->owner_id,'projet_id'=>$projet->id,'step'=>$step,
 			'montant'=>$projet->traite,'status'=>1,'facture_consultant_id'=>$facture_consultant->id,'facture_apporteur_id'=>$fapp_id,'facture_alliages_id'=>$facture_alliages->id, 'name'=>'Premier paiement dans le projet '.$projet->name,
 			'montant_consultant'=>$projet->comexpert,'montant_apporteur'=>$projet->commission, 'montant_alliages'=>$projet->comalliages,
 			'user_id'=>Auth::user()->id,'token'=>sha1(Auth::user()->id.date('HsmdYi').'Projet_etape1'.$projet->id)]);
 
+
+
+		return $paiement;
+	}
+
+	/**
+	 * Validation du premier paiement
+	 */
+
+	public function validateDiagInterne(Request $request, $token){
+
+		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>1]);
+		$paiement = $this->facturer(1,$projet->id);
 		$data = [
 			'title' => 'Paiement Premiere etape',
-			'heading' => 'Paiement',
-			'content' => 'Le contenu du paiement'
+			'heading' => 'Paiement ETAPE 1 - '.$projet->name,
+
+			'paiement'=>$paiement
 		];
 
-
 		$pdf = PDF::loadView('pdf_view',$data);
-		$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 		return $pdf->download('recu-etape1-'. $projet->name.'.pdf');
 
 	}
@@ -104,9 +114,20 @@ class ProjetController extends Controller
 	 */
 
 	public function validateDiagExterne(Request $request, $token){
-		Projet::updateOrCreate(['token'=>$token],['validated_step'=>2]);
-		$request->session()->flash('success','Deuxieme paiement enregistré avec succès!!!');
-		return redirect()->back();
+		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>2]);
+		$paiement = $this->facturer(2,$projet->id);
+		$data = [
+			'title' => 'Paiement Premiere etape',
+			'heading' => 'Paiement ETAPE 2 - '.$projet->name,
+
+			'paiement'=>$paiement
+		];
+
+		$pdf = PDF::loadView('pdf_view',$data);
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		return $pdf->download('recu-etape 2 - '. $projet->name.'.pdf');
+		//$request->session()->flash('success','Deuxieme paiement enregistré avec succès!!!');
+		//return redirect()->back();
 	}
 
 	/**
@@ -114,9 +135,20 @@ class ProjetController extends Controller
 	 */
 
 	public function validateDiagStrategique(Request $request, $token){
-		Projet::updateOrCreate(['token'=>$token],['validated_step'=>3]);
-		$request->session()->flash('success','Troisieme paiement enregistré avec succès!!!');
-		return redirect()->back();
+		$projet= Projet::updateOrCreate(['token'=>$token],['validated_step'=>3]);
+		$paiement = $this->facturer(3,$projet->id);
+		$data = [
+			'title' => 'Paiement Premiere etape',
+			'heading' => 'Paiement ETAPE 3 - '.$projet->name,
+
+			'paiement'=>$paiement
+		];
+
+		$pdf = PDF::loadView('pdf_view',$data);
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		return $pdf->download('recu-etape 3 - '. $projet->name.'.pdf');
+		//$request->session()->flash('success','Troisieme paiement enregistré avec succès!!!');
+		//return redirect()->back();
 	}
 
 
@@ -125,9 +157,20 @@ class ProjetController extends Controller
 	 */
 
 	public function validateMontageFinancier(Request $request, $token){
-		Projet::updateOrCreate(['token'=>$token],['validated_step'=>4]);
-		$request->session()->flash('success','Quatrieme paiement enregistré avec succès!!!');
-		return redirect()->back();
+		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>4]);
+		$paiement = $this->facturer(4,$projet->id);
+		$data = [
+			'title' => 'Paiement Premiere etape',
+			'heading' => 'Paiement ETAPE 4 - '.$projet->name,
+
+			'paiement'=>$paiement
+		];
+
+		$pdf = PDF::loadView('pdf_view',$data);
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		return $pdf->download('recu-etape 4 - '. $projet->name.'.pdf');
+		//$request->session()->flash('success','Quatrieme paiement enregistré avec succès!!!');
+		//return redirect()->back();
 	}
 
 	/*
