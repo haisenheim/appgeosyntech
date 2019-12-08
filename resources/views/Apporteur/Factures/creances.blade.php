@@ -29,7 +29,7 @@ CREANCES
                     @foreach($factures as $creance)
                           <tr>
                               <td>{{$creance->name }} </td>
-                              <td>{{$creance->moi->name  }} / {{ $creance->annee }} </td>
+                              <td>{{$creance->mois->name  }} / {{ $creance->annee }} </td>
                               <td>{{ number_format($creance->montantapporteur,0,',','.') }} </td>
 
                               <td>
