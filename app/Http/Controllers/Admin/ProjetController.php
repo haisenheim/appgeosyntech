@@ -64,7 +64,7 @@ class ProjetController extends Controller
 		if($projet->owner){
 			if($projet->owner->creator_id){
 				if($projet->owner->creator->role_id==7) {
-					$facture_apporteur = Facture::where('apporteur', 1)->where('moi_id', date('m'))->where('annee', date('Y'))->where('owner_id', $projet->owner->apporteur_id)->first();
+					$facture_apporteur = Facture::where('apporteur', 1)->where('moi_id', date('m'))->where('annee', date('Y'))->where('owner_id', $projet->owner->creator_id)->first();
 					if (!$facture_apporteur) {
 						$facture_apporteur = Facture::updateOrCreate(['name' => $num . 'APP-' . date('Y'), 'moi_id' => date('m'), 'annee' => date('Y'), 'owner_id' => $projet->owner->creator_id, 'apporteur' => 1, 'token' => sha1(Auth::user()->id . date('HsmdYi') . 'Apporteur')]);
 
