@@ -196,9 +196,9 @@ Route::prefix('apporteur')
 	->middleware(['auth','apporteur'])
 	->name('apporteur.')
 	->group(function(){
-		Route::get('finances/','ClientController@getFinances');
+		Route::get('finances/creances','FinanceController@creances');
+		Route::get('finances/payees','FinanceController@payees');
 		Route::resource('clients','ClientController');
-
 	});
 
 //Liste des routes de l'administrateur d'entreprise
