@@ -11,10 +11,10 @@
         <table class="table table-bordered">
             <tbody>
                 <tr>
-                    <th>CLIENT :</th> <th>{{ $paiement->owner->name }}</th>
-                    <th>PROJET :</th> <th>{{ $paiement->projet->name }}</th>
-                    <th>ETAPE :</th> <th>{{ $paiement->step }}</th>
-                    <th>MONTANT DU PAIEMENT :</th> <th>{{ number_format($paiement->montant,0,',','.') }} <sup>{{ $paiement->projet->devise->abb }}</sup></th>
+                    <th>CLIENT :</th> <th>{{ $paiement->owner->name }}</th> </tr>
+                   <tr> <th>PROJET :</th> <th>{{ $paiement->projet->name }}</th> </tr>
+                   <tr> <th>ETAPE :</th> <th>{{ $paiement->step }}</th> </tr>
+                   <tr> <th>MONTANT DU PAIEMENT :</th> <th>{{ number_format($paiement->montant,0,',','.') }} <sup>{{ $paiement->projet->devise->abb }}</sup></th>
                 </tr>
             </tbody>
         </table>
