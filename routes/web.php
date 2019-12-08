@@ -196,8 +196,8 @@ Route::prefix('apporteur')
 	->middleware(['auth','apporteur'])
 	->name('apporteur.')
 	->group(function(){
-		Route::get('finances/creances','FinanceController@creances');
-		Route::get('finances/payees','FinanceController@payees');
+		Route::get('finances/creances','FactureController@creances');
+		Route::get('finances/payees','FactureController@payees');
 		Route::resource('clients','ClientController');
 	});
 
