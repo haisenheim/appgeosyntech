@@ -69,10 +69,10 @@ Route::prefix('admin')
 	    Route::get('event/enable/{token}','EventController@enable');
 
 	    //Finances
-	    Route::get('finances/apporteur/creances/{token}','FinanceController@getCreancesApporteur');
-	    Route::get('finances/apporteur/payees/{token}','FinanceController@getPayeesApporteur');
-	    Route::get('finances/apporteur/facture/{token}','FinanceController@showFactureApporteur');
-	    Route::get('/facture/fill/{token}','FinanceController@fillFacture');
+	    Route::get('apporteur/creances/{token}','FinanceController@getCreancesApporteur');
+	    Route::get('apporteur/payees/{token}','FinanceController@getPayeesApporteur');
+	    Route::get('apporteur/facture/{token}','FinanceController@showFactureApporteur');
+	    Route::get('facture/fill/{token}','FinanceController@fillFacture');
 
 	    // Actifs
 	    Route::resource('actifs','ActifController');
