@@ -15,7 +15,8 @@
               <div class="row">
                 <div class="col-12">
                   <h4>
-
+                    <b># {{ $facture->name }}</b> -
+                    <b>TOTAL : {{ number_format($facture->montant, 0,',','.') }} </b>
                     <small class="float-right">Date: {{ date_format($facture->created_at,'d/m/Y') }}</small>
                   </h4>
                 </div>
@@ -23,8 +24,8 @@
               </div>
               <hr/>
               <!-- info row -->
-              <div style="max-width: 700px;" class="row invoice-info">
-                <div style="width: 50%; float: left;" class="col-sm-4 invoice-col">
+              <div class="row invoice-info">
+                <div  class="col-sm-4 invoice-col">
                   PARTENAIRE:
                   <address>
                     <strong>{{ $facture->owner->name }} </strong><br>
@@ -35,17 +36,10 @@
 
                   </address>
                 </div>
+               </div>
                 <!-- /.col -->
 
-                <!-- /.col -->
-                <div style="width: 50%; float: left;" class="col-sm-4 invoice-col">
-                  <b style="font-size: larger"># {{ $facture->name }}</b>
-                  <b>TOTAL : {{ number_format($facture->montant, 0,',','.') }} </b><br>
-                  <br>
 
-
-                </div>
-                <!-- /.col -->
               </div>
               <!-- /.row -->
                 <hr/>
