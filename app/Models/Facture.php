@@ -19,6 +19,10 @@ class Facture extends Model
 		return $this->belongsTo('App\User', 'owner_id');
 	}
 
+	public function payeur(){
+		return $this->belongsTo('App\User', 'filled_by');
+	}
+
 	public function lignes(){
 		if($this->apporteur){
 			return $this->hasMany('App\Models\Paiement','facture_apporteur_id');
