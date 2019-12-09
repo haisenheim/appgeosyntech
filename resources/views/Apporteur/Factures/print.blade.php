@@ -16,8 +16,8 @@
                 <div class="col-12">
                   <h4>
                     <b># {{ $facture->name }}</b> -
-                    <b>TOTAL : {{ number_format($facture->montant, 0,',','.') }} </b>
-                    <small class="float-right">Date: {{ date_format($facture->created_at,'d/m/Y') }}</small>
+
+                    <small style="float: right; font-weight: 200;">Date: {{ date_format($facture->created_at,'d/m/Y') }}</small>
                   </h4>
                 </div>
                 <!-- /.col -->
@@ -39,7 +39,15 @@
                </div>
                 <!-- /.col -->
 
+                <!-- /.col -->
+                <div  class="col-sm-4 invoice-col">
 
+                  <b>TOTAL : {{ number_format($facture->montant, 0,',','.') }} </b><br>
+                  <br>
+
+
+                </div>
+                <!-- /.col -->
               </div>
               <!-- /.row -->
                 <hr/>
