@@ -1,4 +1,4 @@
-@extends('......layouts.apporteur')
+@extends('......layouts.commercial')
 
 @section('page-title')
 {{ $facture->name }}

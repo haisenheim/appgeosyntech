@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Apporteur/Factures/print.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Apporteur/Factures/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Facture.php" afterPath="$PROJECT_DIR$/app/Models/Facture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Apporteur/FactureController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apporteur/FactureController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Projet.php" afterPath="$PROJECT_DIR$/app/Models/Projet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php" afterPath="$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Apporteur/Factures/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Apporteur/Factures/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -102,15 +96,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Factures/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.32" vertical-offset="45" max-vertical-offset="672">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="88" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.78979594" vertical-offset="45" max-vertical-offset="672">
+              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
               <folding>
                 <element signature="e#124#149#0#HTML" expanded="true" />
                 <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#3472#3503#0#HTML" expanded="true" />
+                <element signature="e#3407#3438#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,10 +120,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FactureController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FactureController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apporteur/FactureController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67346936" vertical-offset="742" max-vertical-offset="1840">
+            <state vertical-scroll-proportion="-13.2" vertical-offset="742" max-vertical-offset="1840">
               <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding>
                 <element signature="e#50#86#0#PHP" expanded="true" />
@@ -221,9 +215,9 @@
         <option value="$PROJECT_DIR$/app/Models/Projet.php" />
         <option value="$PROJECT_DIR$/resources/views/Apporteur/Factures/creances.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/Apporteur/Factures/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Apporteur/Factures/print.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Apporteur/FactureController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Apporteur/Factures/show.blade.php" />
       </list>
     </option>
   </component>
@@ -1108,18 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Factures/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.32" vertical-offset="45" max-vertical-offset="672">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="88" selection-end-column="10" />
-          <folding>
-            <element signature="e#124#149#0#HTML" expanded="true" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#3472#3503#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.92" vertical-offset="177" max-vertical-offset="720">
@@ -1148,10 +1130,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apporteur/FactureController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67346936" vertical-offset="742" max-vertical-offset="1840">
+        <state vertical-scroll-proportion="-13.2" vertical-offset="742" max-vertical-offset="1840">
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="e#50#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Apporteur/Factures/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78979594" vertical-offset="45" max-vertical-offset="672">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <element signature="e#124#149#0#HTML" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#3407#3438#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
