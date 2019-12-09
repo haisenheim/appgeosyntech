@@ -50,7 +50,8 @@ FACTURES PAYEES
                       <th>#</th>
                       <th>MOIS</th>
                       <th>MONTANT</th>
-
+                      <th>PAYEE LE</th>
+                      <th>PAR</th>
                       <th></th>
                     </tr>
                     </tfoot>
