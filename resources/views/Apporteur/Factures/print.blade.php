@@ -23,8 +23,8 @@
               </div>
               <hr/>
               <!-- info row -->
-              <div class="row invoice-info">
-                <div class="col-sm-4 invoice-col">
+              <div style="max-width: 700px;" class="row invoice-info">
+                <div style="width: 50%; float: left;" class="col-sm-4 invoice-col">
                   PARTENAIRE:
                   <address>
                     <strong>{{ $facture->owner->name }} </strong><br>
@@ -38,7 +38,8 @@
                 <!-- /.col -->
 
                 <!-- /.col -->
-                <div class="col-sm-4 invoice-col">
+                <div style="width: 50%; float: left;" class="col-sm-4 invoice-col">
+                  <b style="font-size: larger"># {{ $facture->name }}</b>
                   <b>TOTAL : {{ number_format($facture->montant, 0,',','.') }} </b><br>
                   <br>
 
