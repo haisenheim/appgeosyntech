@@ -43,7 +43,7 @@ class Facture extends Model
 				}
 			}
 
-			if($this->consulatnt){
+			if($this->consultant){
 				foreach($lignes as $ligne){
 					$s = $s+$ligne->montant_consultant;
 				}
@@ -60,16 +60,4 @@ class Facture extends Model
 		return $s;
 	}
 
-
-
-	public function getMontantalliagesAttribute(){
-		$facture = Facture::find($this->id);
-		$lignes = $facture->lignes;
-		$s=0;
-		if($lignes){
-			foreach($lignes as $ligne){
-				$s = $s+$ligne->montant_alliages;
-			}
-		}
-	}
 }

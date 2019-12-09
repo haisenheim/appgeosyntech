@@ -198,6 +198,8 @@ Route::prefix('apporteur')
 	->group(function(){
 		Route::get('finances/creances','FactureController@creances');
 		Route::get('finances/payees','FactureController@payees');
+		Route::get('facture/{token}','FactureController@show');
+		Route::get('facture/print/{token}','FactureController@printit');
 		Route::resource('clients','ClientController');
 	});
 

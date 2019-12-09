@@ -11,6 +11,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use PDF;
 
 class FactureController extends Controller
 {
@@ -53,6 +54,24 @@ class FactureController extends Controller
 	    return view('Apporteur/Factures/show')->with(compact('facture'));
         //
     }
+
+	public function printit( $token)
+	{
+		$facture = Facture::where('token',$token)->first();
+		$data = [
+			'title' => 'FACTURE - '.$facture->name,
+			'heading' => 'FACTURE - '.$facture->name,
+
+			'facture'=>$facture
+		];
+		$pdf = PDF::loadView('Apporteur/Factures/print',$data);
+
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		return $pdf->download('Facture -'. $facture->name.'.pdf');
+
+		//return view('Apporteur/Factures/show')->with(compact('facture'));
+		//
+	}
 
     /**
      * Show the form for editing the specified resource.

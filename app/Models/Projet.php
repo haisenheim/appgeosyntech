@@ -45,9 +45,12 @@ class Projet extends Model
 
 		if($projet->modepaiement_id==2){
 			$s= 880000;
+
 			if($projet->owner){
-				if($projet->owner->apporteur_id){
-					$s=967200;
+				if($projet->owner->creator){
+					if($projet->owner->creator->role_id==7){
+						$s=967200;
+					}
 				}
 			}
 		}
@@ -61,8 +64,10 @@ class Projet extends Model
 		if($projet->modepaiement_id==1){
 
 			if($projet->owner){
-				if($projet->owner->apporteur_id){
-					$s=10875;
+				if($projet->owner->creator){
+					if($projet->owner->creator->role_id==7){
+						$s=10875;
+					}
 				}
 			}
 		}
@@ -70,10 +75,14 @@ class Projet extends Model
 		if($projet->modepaiement_id==2){
 
 			if($projet->owner){
-				if($projet->owner->apporteur_id){
-					$s=73950;
+				if($projet->owner->creator){
+					if($projet->owner->creator->role_id==7){
+						$s=73950;
+					}
 				}
 			}
+
+
 		}
 
 		return $s;
