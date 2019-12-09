@@ -25,7 +25,7 @@
               <!-- info row -->
               <div class="row invoice-info">
                 <div class="col-sm-4 invoice-col">
-                  PARTENAIRE:
+                  CONSULTANT:
                   <address>
                     <strong>{{ $facture->owner->name }} </strong><br>
                     {{ $facture->owner->address }}<br>
@@ -98,7 +98,7 @@
 
 
                    <li>
-                        <a  title="Imprimer" class="ripple" href="/apporteur/facture/print/{{ $facture->token }}"><i class="fa fa-print fa-lg"></i></a>
+                        <a  title="Imprimer" class="ripple" href="/consultant/facture/print/{{ $facture->token }}"><i class="fa fa-print fa-lg"></i></a>
                    </li>
 
 
