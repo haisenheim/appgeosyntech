@@ -89,7 +89,7 @@
               <div style="margin-top: 30px; width: 100%">
                 <div class="row">
                     <div style="min-width: 200px; width: auto; float: left" class="col-md-6">
-                        <h3>PARTENAIRE</h3>
+                        <h3>Pour Alliages</h3>
                     </div>
                     <div style="min-width: 200px; width: auto; float: right; margin-right: 30px" class="col-md-6">
                         <h3>Pour OBAC</h3>

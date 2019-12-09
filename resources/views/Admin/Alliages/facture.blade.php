@@ -35,18 +35,16 @@
 
                   </address>
                 </div>
-               </div>
+
                 <!-- /.col -->
 
                 <!-- /.col -->
                 <div class="col-sm-4 invoice-col">
                   <b>TOTAL : {{ number_format($facture->montant, 0,',','.') }} </b><br>
                   <br>
-
-
                 </div>
                 <!-- /.col -->
-              </div>
+
               <!-- /.row -->
                 <hr/>
               <div class="row">

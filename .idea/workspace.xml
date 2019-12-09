@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Alliages/creances.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Alliages/facture.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Alliages/payees.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Alliages/recu.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FinanceController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FinanceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Experts/facture.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Experts/facture.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Alliages/facture.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Alliages/facture.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -42,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FinanceController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FinanceController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/FinanceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.32" vertical-offset="486" max-vertical-offset="1984">
-              <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.9346939" vertical-offset="502" max-vertical-offset="1984">
+              <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
               <folding>
                 <element signature="e#437#793#0#PHP" expanded="false" />
                 <element signature="e#796#1127#0#PHP" expanded="false" />
@@ -73,9 +66,13 @@
       <file leaf-file-name="facture.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/Alliages/facture.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.48" vertical-offset="288" max-vertical-offset="1888">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="37" selection-end-column="21" />
-              <folding />
+            <state vertical-scroll-proportion="-12.04" vertical-offset="611" max-vertical-offset="1152">
+              <caret line="101" column="22" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
+              <folding>
+                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32914045" vertical-offset="3347" max-vertical-offset="4704">
-              <caret line="247" column="44" selection-start-line="247" selection-start-column="44" selection-end-line="247" selection-end-column="44" />
+            <state vertical-scroll-proportion="-8.84" vertical-offset="3347" max-vertical-offset="4704">
+              <caret line="251" column="18" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
               <folding>
                 <element signature="tag#li#4;tag#ul#0;tag#nav#0;tag#div#0;tag#aside#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#li#5;tag#ul#0;tag#nav#0;tag#div#0;tag#aside#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
@@ -219,14 +216,14 @@
         <option value="$PROJECT_DIR$/resources/views/Admin/Experts/creances.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Experts/payees.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Commercials/payees.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/FinanceController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Alliages/creances.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Experts/facture.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Alliages/facture.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Alliages/recu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Alliages/payees.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/FinanceController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Alliages/facture.blade.php" />
       </list>
     </option>
   </component>
@@ -753,10 +750,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1176,22 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/FinanceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.32" vertical-offset="486" max-vertical-offset="1984">
-          <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
-          <folding>
-            <element signature="e#437#793#0#PHP" expanded="false" />
-            <element signature="e#796#1127#0#PHP" expanded="false" />
-            <element signature="e#1130#1310#0#PHP" expanded="false" />
-            <element signature="e#1313#2189#0#PHP" expanded="false" />
-            <element signature="e#2193#2547#0#PHP" expanded="false" />
-            <element signature="e#2550#2879#0#PHP" expanded="false" />
-            <element signature="e#2882#3059#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Alliages/creances.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.8" vertical-offset="803" max-vertical-offset="1344">
@@ -1204,14 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.68" vertical-offset="944" max-vertical-offset="1872">
           <caret line="71" column="73" selection-start-line="71" selection-start-column="73" selection-end-line="71" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Alliages/facture.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.48" vertical-offset="288" max-vertical-offset="1888">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="37" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1257,14 +1230,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32914045" vertical-offset="3347" max-vertical-offset="4704">
-          <caret line="247" column="44" selection-start-line="247" selection-start-column="44" selection-end-line="247" selection-end-column="44" />
+        <state vertical-scroll-proportion="-8.84" vertical-offset="3347" max-vertical-offset="4704">
+          <caret line="251" column="18" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
           <folding>
             <element signature="tag#li#4;tag#ul#0;tag#nav#0;tag#div#0;tag#aside#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#li#5;tag#ul#0;tag#nav#0;tag#div#0;tag#aside#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#li#6;tag#ul#0;tag#nav#0;tag#div#0;tag#aside#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#li#7;tag#ul#0;tag#nav#0;tag#div#0;tag#aside#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#li#9;tag#ul#0;tag#nav#0;tag#div#0;tag#aside#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Alliages/facture.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.04" vertical-offset="611" max-vertical-offset="1152">
+          <caret line="101" column="22" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
+          <folding>
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#1;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/FinanceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9346939" vertical-offset="502" max-vertical-offset="1984">
+          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+          <folding>
+            <element signature="e#437#793#0#PHP" expanded="false" />
+            <element signature="e#796#1127#0#PHP" expanded="false" />
+            <element signature="e#1130#1310#0#PHP" expanded="false" />
+            <element signature="e#1313#2189#0#PHP" expanded="false" />
+            <element signature="e#2193#2547#0#PHP" expanded="false" />
+            <element signature="e#2550#2879#0#PHP" expanded="false" />
+            <element signature="e#2882#3059#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
