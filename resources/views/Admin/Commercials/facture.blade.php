@@ -98,7 +98,7 @@
 
                 @if(!$facture->filled)
                    <li>
-                        <a  title="Payer Cette Facture" class="ripple" href="/admin/facture/fill/{{ $facture->token }}"><i class="fa fa-coins fa-lg text-success"></i></a>
+                        <a  title="Payer Cette Facture" class="ripple" href="/admin/facture/fill/{{ $facture->token }}"><i class="fa fa-coins fa-lg text-warning"></i></a>
                    </li>
                 @endif
 

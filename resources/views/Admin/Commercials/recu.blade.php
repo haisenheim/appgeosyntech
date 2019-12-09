@@ -85,14 +85,14 @@
               </div>
 
               <div>
-                <div style="color: red; padding: 20px; border: 1px red solid; width: 500px; float: right; margin-right: 100px;"><h1>PAYE</h1></div>
+                <div style="color: red; padding: 10px; border: 1px red solid; min-width: 100px; float: right; margin-right: 100px; font-weight: 900; width: auto"><h4>PAYE</h4></div>
               </div>
               <div style="margin-top: 30px;">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div style="min-width: 200px; width: auto; float: left" class="col-md-6">
                         <h3>PARTENAIRE</h3>
                     </div>
-                    <div class="col-md-6">
+                    <div style="min-width: 200px; width: auto; float: right; margin-right: 30px" class="col-md-6">
                         <h3>Pour OBAC</h3>
                     </div>
                 </div>

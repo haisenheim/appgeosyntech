@@ -9,6 +9,7 @@ use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use PDF;
 
 class FinanceController extends Controller
@@ -43,9 +44,14 @@ class FinanceController extends Controller
 		//
 	}
 
-	public function fillFacture( $token)
+	public function fillFacture(Request $request, $token)
 	{
+
 		$facture = Facture::where('token',$token)->first();
+		if($facture->filled){
+			$request->session()->flash('danger','Impossible de payer doublement la même facture!!!');
+			return back();
+		}
 		$facture->filled =1;
 		$facture->filled_at = new \DateTime();
 		$facture->filled_by = Auth::user()->id;

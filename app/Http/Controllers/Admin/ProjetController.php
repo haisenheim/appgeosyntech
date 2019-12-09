@@ -98,6 +98,10 @@ class ProjetController extends Controller
 	public function validateDiagInterne(Request $request, $token){
 
 		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>1]);
+		if($projet->validated_step >= 1){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
 		$paiement = $this->facturer(1,$projet->id);
 		$data = [
 			'title' => 'Paiement Premiere etape',
@@ -118,6 +122,10 @@ class ProjetController extends Controller
 
 	public function validateDiagExterne(Request $request, $token){
 		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>2]);
+		if($projet->validated_step >= 2){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
 		$paiement = $this->facturer(2,$projet->id);
 		$data = [
 			'title' => 'Paiement Premiere etape',
@@ -139,6 +147,10 @@ class ProjetController extends Controller
 
 	public function validateDiagStrategique(Request $request, $token){
 		$projet= Projet::updateOrCreate(['token'=>$token],['validated_step'=>3]);
+		if($projet->validated_step >= 3){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
 		$paiement = $this->facturer(3,$projet->id);
 		$data = [
 			'title' => 'Paiement Premiere etape',
@@ -161,6 +173,10 @@ class ProjetController extends Controller
 
 	public function validateMontageFinancier(Request $request, $token){
 		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>4]);
+		if($projet->validated_step >= 4){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
 		$paiement = $this->facturer(4,$projet->id);
 		$data = [
 			'title' => 'Paiement Premiere etape',
