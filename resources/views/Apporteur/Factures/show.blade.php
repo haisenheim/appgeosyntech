@@ -95,12 +95,12 @@
     <nav style="top:30%" class="floating-menu">
         <ul class="main-menu">
 
-            @if($projet->cessions->count() >=1)
+
 
                    <li>
                         <a  title="Imprimer" class="ripple" href="/apporteur/facture/print/{{ $facture->token }}"><i class="fa fa-print fa-lg"></i></a>
                    </li>
-            @endif
+
 
         </ul>
         <div style="background: transparent" class="menu-bg"></div>
