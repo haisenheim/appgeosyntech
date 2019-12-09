@@ -64,9 +64,11 @@ class FinanceController extends Controller
 			'facture'=>$facture
 		];
 
-		$pdf = PDF::loadView('Admin/Commercials/recu',$data);
+
 		if($facture->alliages){
 			$pdf = PDF::loadView('Admin/Alliages/recu',$data);
+		}else{
+			$pdf = PDF::loadView('Admin/Commercials/recu',$data);
 		}
 		return $pdf->stream('RECU - Facture -'. $facture->name.'.pdf');
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
