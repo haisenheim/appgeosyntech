@@ -27,14 +27,15 @@
                 <div class="col-sm-4 invoice-col">
                   PARTENAIRE:
                   <address>
-                    <strong>{{ $facture->owner->name }} </strong><br>
-                    {{ $facture->owner->address }}<br>
+                    <strong>ALLIAGES TECHNOLOGIES </strong><br>
+                    Blvd Ch. De Gaulle<br>
 
-                    Téléphone: {{ $facture->owner->phone }}<br>
-                    Email: {{ $facture->owner->email }}<br/>
+                    Téléphone: +242 064576186<br>
+                    Email: info@alliages-techologies<br/>
 
                   </address>
                 </div>
+               </div>
                 <!-- /.col -->
 
                 <!-- /.col -->
@@ -69,7 +70,7 @@
                                     <tr>
                                         <td>{{ $i++ }}</td>
                                         <td>{{ $ligne->name }}</td>
-                                        <td>{{ $ligne->montant_consultant }}</td>
+                                        <td>{{ $ligne->montant_alliages }}</td>
                                         <td>{{ $ligne->owner->name }}</td>
                                         <td>{{ $ligne->projet->name }}</td>
                                         <td>{{ date_format($ligne->created_at, 'd/m/Y') }}</td>

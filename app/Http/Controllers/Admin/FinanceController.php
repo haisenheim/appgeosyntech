@@ -98,6 +98,31 @@ class FinanceController extends Controller
 	}
 
 
+	public function getCreancesAlliages($token)
+	{
+		//
+
+		$factures = Facture::orderBy('created_at','desc')->where('alliages',1)->where('filled',0)->paginate(12);
+
+		return view('Admin/Alliages/creances')->with(compact('factures'));
+	}
+
+	public function getPayeesAlliages($token)
+	{
+		//
+
+		$factures = Facture::orderBy('created_at','desc')->where('alliages',1)->where('filled',1)->paginate(12);
+
+		return view('Admin/Alliages/payees')->with(compact('factures'));
+	}
+
+	public function showFactureAlliages( $token)
+	{
+		$facture = Facture::where('token',$token)->first();
+		return view('Admin/Alliages/facture')->with(compact('facture'));
+		//
+	}
+
     /**
      * Show the form for creating a new resource.
      *

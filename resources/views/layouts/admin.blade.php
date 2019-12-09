@@ -242,6 +242,31 @@
             </a>
           </li>
 
+
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-code"></i>
+              <p>
+                 ALLIAGES TECHNOLOGIES
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/admin/alliages/creances" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>IMPAYEES</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="/admin/alliages/payees" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>PAYEES</p>
+                </a>
+                </li>
+            </ul>
+          </li>
+
           <li  class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cogs"></i>

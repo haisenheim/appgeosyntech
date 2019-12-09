@@ -76,8 +76,8 @@ Route::prefix('admin')
 	    Route::get('consultant/creances/{token}','FinanceController@getCreancesConsultant');
 	    Route::get('consultant/payees/{token}','FinanceController@getPayeesConsultant');
 	    Route::get('consultant/facture/{token}','FinanceController@showFactureConsultant');
-	    Route::get('alliages/creances/{token}','FinanceController@getCreancesAlliages');
-	    Route::get('alliages/payees/{token}','FinanceController@getPayeesAlliages');
+	    Route::get('alliages/creances','FinanceController@getCreancesAlliages');
+	    Route::get('alliages/payees','FinanceController@getPayeesAlliages');
 	    Route::get('alliages/facture/{token}','FinanceController@showFactureAlliages');
 
 	    // Actifs
