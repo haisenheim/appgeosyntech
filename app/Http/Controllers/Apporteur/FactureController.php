@@ -65,9 +65,10 @@ class FactureController extends Controller
 			'facture'=>$facture
 		];
 		$pdf = PDF::loadView('Apporteur/Factures/print',$data);
+		return $pdf->stream();
 
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		return $pdf->download('Facture -'. $facture->name.'.pdf');
+		//return $pdf->download('Facture -'. $facture->name.'.pdf');
 
 		//return view('Apporteur/Factures/show')->with(compact('facture'));
 		//
