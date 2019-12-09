@@ -1,7 +1,7 @@
 
 
 
-@extends('......layouts.commercial')
+@extends('......layouts.admin')
 
 @section('page-title')
 {{ $apporteur->name }} - FACTURES PAYEES

@@ -45,7 +45,7 @@
       <!-- Profil Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
+          <?php $active = \Illuminate\Support\Facades\Session::get('active'); ?>
           <span class="badge  navbar-badge"> <img style="max-height: 20px; max-width: 20px;" src="<?= Auth::user()->imageUri?asset(Auth::user()->imageUri):asset('img/avatar.png') ?>" class="img-circle" alt="User Image"></span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -96,13 +96,14 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
+
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
 
           <li class="nav-item">
-            <a href="/consultant/dashboard" class="nav-link active">
+            <a href="/consultant/dashboard" class="nav-link {{ $active==1?'active':'' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 TABLEAU DE BORD
@@ -112,7 +113,7 @@
           </li>
 
            <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ $active==2?'active':'' }}">
               <i class="nav-icon fas fa-file-invoice-dollar"></i>
               <p>
                  LEVEES DE FONDS
@@ -136,7 +137,7 @@
           </li>
 
           <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ $active==3?'active':'' }}">
               <i class="nav-icon fas fa-gift"></i>
               <p>
                  CESSIONS
@@ -160,7 +161,7 @@
           </li>
 
           <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ $active==4?'active':'' }}">
               <i class="nav-icon fas fa-coins text-warning"></i>
               <p>
                  FIN. STRUCTURES
@@ -175,7 +176,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/admin/ressources" class="nav-link">
+                <a href="/consultant/ressources" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>RES. NATURELLES</p>
                 </a>
@@ -184,14 +185,36 @@
           </li>
 
           <li class="nav-item">
-            <a href="/consultant/porteurs" class="nav-link">
+            <a href="/consultant/porteurs" class="nav-link {{ $active==5?'active':'' }}">
               <i class="nav-icon text-success fas fa-users"></i>
               <p>
                 CLIENTS
               </p>
             </a>
           </li>
-
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link {{ $active==6?'active':'' }}">
+              <i class="nav-icon fa fa-coins text-info"></i>
+              <p>
+                FINANCES
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/consultant/finances/creances" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>CREANCES</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="/consultant/finances/payees" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>FACTURES PAYEEs</p>
+                </a>
+                </li>
+            </ul>
+          </li>
 
         </ul>
       </nav>

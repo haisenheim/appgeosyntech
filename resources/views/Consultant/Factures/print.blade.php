@@ -15,9 +15,9 @@
               <div class="row">
                 <div class="col-12">
                   <h4>
-                    <b>RECU - PAIEMENT FACTURE - {{ $facture->name }}</b> -
+                    <b># {{ $facture->name }}</b> -
 
-                    <small style="float: right; font-weight: 200;">Date: {{ date_format($facture->filled_at,'d/m/Y') }} Par: {{ $facture->payeur->name }} </small>
+                    <small style="float: right; font-weight: 200;">Date: {{ date_format($facture->created_at,'d/m/Y') }}</small>
                   </h4>
                 </div>
                 <!-- /.col -->
@@ -83,23 +83,9 @@
                    </table>
                 </div>
               </div>
-
-              <div style="width: 100%;">
-                <div style="color: red; padding: 3px; border: 1px red solid; min-width: 100px; float: right; margin-right: 100px; font-weight: 900; width: auto"><h4>PAYE</h4></div>
-              </div>
-              <div style="margin-top: 30px; width: 100%">
-                <div class="row">
-                    <div style="min-width: 200px; width: auto; float: left" class="col-md-6">
-                        <h3>PARTENAIRE</h3>
-                    </div>
-                    <div style="min-width: 200px; width: auto; float: right; margin-right: 30px" class="col-md-6">
-                        <h3>Pour OBAC</h3>
-                    </div>
-                </div>
-              </div>
             <!-- /.invoice -->
         </div>
     </div>
-
+  </div>
 </body>
 </html>

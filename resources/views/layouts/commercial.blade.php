@@ -92,7 +92,7 @@
 
 
           <li class="nav-item">
-            <a href="/apporteur/" class="nav-link {{ $active?$active==1?'active':'':'active' }}">
+            <a href="#" class="nav-link {{ $active?$active==1?'active':'':'active' }}">
               <i class="nav-icon fa fa-home"></i>
               <p>
                 ACCUEIL

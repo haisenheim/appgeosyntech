@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
-	<link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-	<title>{{ $title }}</title>
-</head>
-<body>
+@extends('......layouts.consultant')
+
+@section('page-title')
+{{ $facture->name }}
+@endsection
+
+@section('content')
+
     <div style="padding-top: 30px" class="container">
         <div class="row">
+
             <!-- Main content -->
             <div class="invoice p-3 mb-3">
               <!-- title row -->
               <div class="row">
                 <div class="col-12">
                   <h4>
-                    <b>RECU - PAIEMENT FACTURE - {{ $facture->name }}</b> -
 
-                    <small style="float: right; font-weight: 200;">Date: {{ date_format($facture->filled_at,'d/m/Y') }} Par: {{ $facture->payeur->name }} </small>
+                    <small class="float-right">Date: {{ date_format($facture->created_at,'d/m/Y') }}</small>
                   </h4>
                 </div>
                 <!-- /.col -->
@@ -25,7 +24,7 @@
               <hr/>
               <!-- info row -->
               <div class="row invoice-info">
-                <div  class="col-sm-4 invoice-col">
+                <div class="col-sm-4 invoice-col">
                   PARTENAIRE:
                   <address>
                     <strong>{{ $facture->owner->name }} </strong><br>
@@ -36,12 +35,10 @@
 
                   </address>
                 </div>
-               </div>
                 <!-- /.col -->
 
                 <!-- /.col -->
-                <div  class="col-sm-4 invoice-col">
-
+                <div class="col-sm-4 invoice-col">
                   <b>TOTAL : {{ number_format($facture->montant, 0,',','.') }} </b><br>
                   <br>
 
@@ -84,22 +81,31 @@
                 </div>
               </div>
 
-              <div style="width: 100%;">
-                <div style="color: red; padding: 3px; border: 1px red solid; min-width: 100px; float: right; margin-right: 100px; font-weight: 900; width: auto"><h4>PAYE</h4></div>
-              </div>
-              <div style="margin-top: 30px; width: 100%">
-                <div class="row">
-                    <div style="min-width: 200px; width: auto; float: left" class="col-md-6">
-                        <h3>PARTENAIRE</h3>
-                    </div>
-                    <div style="min-width: 200px; width: auto; float: right; margin-right: 30px" class="col-md-6">
-                        <h3>Pour OBAC</h3>
-                    </div>
-                </div>
-              </div>
+
+
             <!-- /.invoice -->
+
         </div>
     </div>
+@endsection
 
-</body>
-</html>
+
+@section('nav_actions')
+<main>
+    <nav style="top:30%" class="floating-menu">
+        <ul class="main-menu">
+
+
+
+                   <li>
+                        <a  title="Imprimer" class="ripple" href="/apporteur/facture/print/{{ $facture->token }}"><i class="fa fa-print fa-lg"></i></a>
+                   </li>
+
+
+        </ul>
+        <div style="background: transparent" class="menu-bg"></div>
+    </nav>
+</main>
+
+@endsection
+

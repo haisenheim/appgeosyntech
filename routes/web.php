@@ -73,6 +73,12 @@ Route::prefix('admin')
 	    Route::get('apporteur/payees/{token}','FinanceController@getPayeesApporteur');
 	    Route::get('apporteur/facture/{token}','FinanceController@showFactureApporteur');
 	    Route::get('facture/fill/{token}','FinanceController@fillFacture');
+	    Route::get('consultant/creances/{token}','FinanceController@getCreancesConsultant');
+	    Route::get('consultant/payees/{token}','FinanceController@getPayeesConsultant');
+	    Route::get('consultant/facture/{token}','FinanceController@showFactureConsultant');
+	    Route::get('alliages/creances/{token}','FinanceController@getCreancesAlliages');
+	    Route::get('alliages/payees/{token}','FinanceController@getPayeesAlliages');
+	    Route::get('alliages/facture/{token}','FinanceController@showFactureAlliages');
 
 	    // Actifs
 	    Route::resource('actifs','ActifController');
@@ -301,6 +307,12 @@ Route::prefix('consultant')
 	    Route::get('dossier/create-plan-financier/{token}','DossierController@createPlanFinancier');
 	    Route::post('dossier/save-plan-financier','DossierController@savePlanFinancier');
 	    Route::post('dossier/teaser','DossierController@saveTeaser');
+
+	    // Finances
+	    Route::get('finances/creances','FactureController@creances');
+	    Route::get('finances/payees','FactureController@payees');
+	    Route::get('facture/{token}','FactureController@show');
+	    Route::get('facture/print/{token}','FactureController@printit');
     });
 
 //Liste des routes du client

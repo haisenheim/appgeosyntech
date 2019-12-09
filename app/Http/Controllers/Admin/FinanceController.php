@@ -70,6 +70,34 @@ class FinanceController extends Controller
 		return $pdf->download('RECU - Facture -'. $facture->name.'.pdf');
 
 	}
+
+
+	public function getCreancesConsultant($token)
+    {
+        //
+	    $apporteur = User::where('token',$token)->first();
+	    $factures = Facture::orderBy('created_at','desc')->where('consultant',1)->where('owner_id',$apporteur->id)->where('filled',0)->paginate(12);
+
+	    return view('Admin/Experts/creances')->with(compact('factures','apporteur'));
+    }
+
+	public function getPayeesConsultant($token)
+	{
+		//
+		$apporteur = User::where('token',$token)->first();
+		$factures = Facture::orderBy('created_at','desc')->where('consultant',1)->where('owner_id',$apporteur->id)->where('filled',1)->paginate(12);
+
+		return view('Admin/Experts/payees')->with(compact('factures','apporteur'));
+	}
+
+	public function showFactureConsultant( $token)
+	{
+		$facture = Facture::where('token',$token)->first();
+		return view('Admin/Experts/facture')->with(compact('facture'));
+		//
+	}
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -95,44 +123,7 @@ class FinanceController extends Controller
 
 
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Projet  $projet
-     * @return \Illuminate\Http\Response
-     */
-    public function show($token)
-    {
-	    $projet = Actif::where('token',$token)->first();
-	    //dd($projet);
 
-	    $experts = User::all()->where('role_id',2);
-	    return view('/Admin/Actifs/show')->with(compact('projet','experts'));
-    }
-
-	public function addExpert(Request $request){
-		$projet = Actif::find($request->id);
-		$projet->expert_id = $request->expert_id;
-		$projet->save();
-
-		return redirect()->back();
-	}
-
-	public function disable($id){
-		$projet = Actif::find($id);
-		$projet->active = 0;
-		$projet->save();
-
-		return redirect()->back();
-	}
-
-	public function enable($id){
-		$projet = Actif::find($id);
-		$projet->active = 1;
-		$projet->save();
-
-		return redirect()->back();
-	}
 
 
 
