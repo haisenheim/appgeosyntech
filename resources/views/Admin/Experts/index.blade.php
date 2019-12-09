@@ -50,9 +50,11 @@
                                 <td>{!! $user->email !!} </td>
                                 <td>{!! $user->senior?'CONSULTANT SENIOR' :'CONSULTANT JUNIOR' !!} </td>
                                 <td>
-                                <ul class="list-inline">
-                                  <li class="list-inline-item"><a class="btn btn-primary btn-xs" href="{{route('admin.experts.show',[$user->id])}}"><i class="fa fa-search"></i></a></li>
-                                </ul>
+                                    <ul class="list-inline">
+                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/consultant/creances/{{ $user->token }}"><i class="fa fa-coins"></i></a></li>
+                                        <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/admin/consultant/payees/{{ $user->token }}"><i class="fa fa-search"></i></a></li>
+
+                                    </ul>
                                 </td>
                             </tr>
                         @endforeach
