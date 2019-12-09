@@ -98,7 +98,7 @@ class FinanceController extends Controller
 	}
 
 
-	public function getCreancesAlliages($token)
+	public function getCreancesAlliages()
 	{
 		//
 
@@ -107,7 +107,7 @@ class FinanceController extends Controller
 		return view('Admin/Alliages/creances')->with(compact('factures'));
 	}
 
-	public function getPayeesAlliages($token)
+	public function getPayeesAlliages()
 	{
 		//
 
