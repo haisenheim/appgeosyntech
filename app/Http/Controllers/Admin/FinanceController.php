@@ -147,7 +147,8 @@ class FinanceController extends Controller
 		foreach($projets as $k=>$v){
 			var_dump($k); echo '<br/>';
 			foreach($v as $c=>$m){
-				var_dump($c); echo '=>'; var_dump($m); echo '<br/>';
+				foreach($m as $a=>$b){var_dump($a); echo '=>'; var_dump($b); echo '<br/>';}
+
 			}
 
 		}
