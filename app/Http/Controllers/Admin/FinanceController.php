@@ -145,10 +145,10 @@ class FinanceController extends Controller
 			return $item['moi_id'];
 		}], $preserveKeys = true);
 		foreach($projets as $k=>$v){
-			debug($k);
+			var_dump($k);
 
 		}
-		die('fin');
+		die('la fin');
 		$projets = Projet::all();
 		$projets = $projets->sortByDesc('moi_id');
 		$projets = $projets->groupBy(['annee',function($item){
