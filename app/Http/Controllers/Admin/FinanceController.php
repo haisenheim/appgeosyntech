@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Actif;
 use App\Models\Facture;
+use App\Models\Paiement;
 use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
@@ -128,6 +129,26 @@ class FinanceController extends Controller
 		//
 	}
 
+
+	public function getPerformance(){
+		$paiements = Paiement::all();
+		$paiements = $paiements->sortByDesc('annee');
+		$paiements = $paiements->groupBy('moi_id',function($item){
+			return $item['annee'];
+		});
+
+		return view('Admin/Finances/performance')->with(compact('paiements'));
+	}
+
+	public function test(){
+		$projets = Projet::all();
+		$projets = $projets->sortByDesc('annee');
+		$projets = $projets->groupBy('moi_id',function($item){
+			return $item['annee'];
+		});
+
+		dd($projets);
+	}
     /**
      * Show the form for creating a new resource.
      *

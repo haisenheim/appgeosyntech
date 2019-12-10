@@ -269,6 +269,42 @@
 
           <li  class="nav-item has-treeview">
             <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-coins"></i>
+              <p>
+                 FINANCES
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/admin/finances/performance" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>PERFORMANCE</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/finances/creances-client" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>CREANCES CLIENT</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/finances/factures/non-payees" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>FACTURES A PAYER</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/finances/factures/payees" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>FACTURES PAYEES</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 PARAMETRES

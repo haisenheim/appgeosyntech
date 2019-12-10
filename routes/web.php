@@ -80,6 +80,8 @@ Route::prefix('admin')
 	    Route::get('alliages/payees','FinanceController@getPayeesAlliages');
 	    Route::get('alliages/facture/{token}','FinanceController@showFactureAlliages');
 
+	    Route::get('test','FinanceController@test');
+
 	    // Actifs
 	    Route::resource('actifs','ActifController');
 	    Route::get('actif/expert','ActifController@addExpert');
