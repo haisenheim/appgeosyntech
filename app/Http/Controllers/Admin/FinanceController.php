@@ -151,7 +151,7 @@ class FinanceController extends Controller
 				debug('t=>'.$t);
 			}
 		}
-		dd();
+		die('fin');
 		$projets = Projet::all();
 		$projets = $projets->sortByDesc('moi_id');
 		$projets = $projets->groupBy(['annee',function($item){
