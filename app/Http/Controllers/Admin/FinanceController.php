@@ -142,9 +142,10 @@ class FinanceController extends Controller
 
 	public function test(){
 		$projets =Projet::with('mois')->get(['name','annee','moi_id'])->sortByDesc('moi_id')->groupBy(['annee',function($item){
-			return $item['mois.name'];
+			return $item['moi_id'];
 		}], $preserveKeys = true);
-		dd($projets);
+
+		dd(Projet::with('mois')->get()->groupBy('mois.name'));
 		foreach($projets as $k=>$v){
 			var_dump($k); echo '<br/>';
 			foreach($v as $c=>$m){
