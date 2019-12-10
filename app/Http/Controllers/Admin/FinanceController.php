@@ -141,9 +141,17 @@ class FinanceController extends Controller
 	}
 
 	public function test(){
-		dd(Projet::with('mois')->get(['name','annee','moi_id'])->sortByDesc('moi_id')->groupBy(['annee',function($item){
+		$projets =Projet::with('mois')->get(['name','annee','moi_id'])->sortByDesc('moi_id')->groupBy(['annee',function($item){
 			return $item['moi_id'];
-		}], $preserveKeys = true));
+		}], $preserveKeys = true);
+		foreach($projets as $k=>$v){
+			debug('k=>'.$k);
+			foreach($v as $c=>$t){
+				debug('c=>'.$c);
+				debug('t=>'.$t);
+			}
+		}
+		dd();
 		$projets = Projet::all();
 		$projets = $projets->sortByDesc('moi_id');
 		$projets = $projets->groupBy(['annee',function($item){
