@@ -145,10 +145,10 @@ class FinanceController extends Controller
 			return $item['moi_id'];
 		}], $preserveKeys = true);
 		foreach($projets as $k=>$v){
-			debug('k=>'.$k);
+			debug($k);
 			foreach($v as $c=>$t){
-				debug('c=>'.$c);
-				debug('t=>'.$t);
+				debug($c);
+				debug($t);
 			}
 		}
 		die('fin');
