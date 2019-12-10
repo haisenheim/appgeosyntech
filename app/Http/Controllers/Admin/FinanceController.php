@@ -146,10 +146,7 @@ class FinanceController extends Controller
 		}], $preserveKeys = true);
 		foreach($projets as $k=>$v){
 			debug($k);
-			foreach($v as $c=>$t){
-				debug($c);
-				debug($t);
-			}
+
 		}
 		die('fin');
 		$projets = Projet::all();
