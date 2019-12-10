@@ -142,8 +142,9 @@ class FinanceController extends Controller
 
 	public function test(){
 		$projets =Projet::with('mois')->get(['name','annee','moi_id'])->sortByDesc('moi_id')->groupBy(['annee',function($item){
-			return $item['moi_id'];
+			return $item['mois.name'];
 		}], $preserveKeys = true);
+		dd($projets);
 		foreach($projets as $k=>$v){
 			var_dump($k); echo '<br/>';
 			foreach($v as $c=>$m){
@@ -152,7 +153,7 @@ class FinanceController extends Controller
 			}
 
 		}
-		die('la fin');
+		//die('la fin');
 		$projets = Projet::all();
 		$projets = $projets->sortByDesc('moi_id');
 		$projets = $projets->groupBy(['annee',function($item){
