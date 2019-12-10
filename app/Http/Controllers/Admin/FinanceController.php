@@ -141,6 +141,7 @@ class FinanceController extends Controller
 	}
 
 	public function test(){
+		dd(Projet::with('moi'));
 		$projets = Projet::all();
 		$projets = $projets->sortByDesc('moi_id');
 		$projets = $projets->groupBy(['annee',function($item){
