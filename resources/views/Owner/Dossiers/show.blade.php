@@ -2198,7 +2198,7 @@
                                    </div>
         				        </div>
         				        <div class="card-footer">
-        				           <button type="submit">ENREGISTRER</button>
+        				           <button class="btn btn-block btn-success" type="submit">ENREGISTRER</button>
         				        </div>
         				    </div>
         				    </form>
@@ -2208,7 +2208,7 @@
         		</div>
 
         </div>
-      <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+
      <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
@@ -2934,14 +2934,6 @@
                overflow-y: scroll;
            }
 </style>
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-<script>
-  $(function () {
-    $("#table-invest").DataTable();
 
-  });
-</script>
 
 @endsection
