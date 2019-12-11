@@ -1848,7 +1848,7 @@
      @endif
 
     <!-- Edition de la synthese du diagnostic interne -->
-    <div class="modal" id="synDiagIntModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    <div class="modal" id="synDiagIntModal" tabindex="-1" role="dialog" aria-labelledby="ad">
 
     		<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
@@ -1861,16 +1861,10 @@
                           </div>
 
     				<div class="modal-body">
-    				<form method="post" action="/consultant/projet/synthese1">
-                        <input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-                        {{csrf_field()}}
-    					<div class="form-group">
-    						<textarea class="form-control"  name="synthese1" id="synthese1" cols="30" rows="10" >{{ $projet->synthese_diagnostic_interne }}</textarea>
-    					</div>
-    					<div class="form-group">
-    					    <button type="submit" class="btn btn-danger btn-block"><i class="fa fa-save"></i> ENREGISTRER</button>
-    					</div>
-    			    </form>
+    				<div class="card">
+
+    				</div>
+
     				</div>
 
     			</div>
@@ -1880,7 +1874,7 @@
 
 
     <!-- Edition de la synthese du diagnostic externe-->
-        <div class="modal fade" id="synDiagExtModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        <div class="modal fade" id="synDiagExtModal" tabindex="-1" role="dialog" aria-labelledby="addM">
         	<form method="post" action="/consultant/projet/synthese2">
         		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
         		{{csrf_field()}}
@@ -1910,7 +1904,7 @@
         </div>
 
         <!-- Edition de la synthese du diagnostic Strategique -->
-        <div class="modal fade" id="synDiagStratModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        <div class="modal fade" id="synDiagStratModal" tabindex="-1" role="dialog" aria-labelledby="addModa">
         	<form method="post" action="/consultant/projet/synthese3">
         		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
         		{{csrf_field()}}
