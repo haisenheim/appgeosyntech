@@ -87,7 +87,7 @@ class EarlyController extends Controller
 			'user_id'=>Auth::user()->id,'token'=>sha1(Auth::user()->id.date('HsmdYi').'Early_etape1'.$projet->id)]);
 
 
-		dd($paiement);
+		//dd($paiement);
 		return $paiement;
 	}
 
@@ -103,7 +103,7 @@ class EarlyController extends Controller
 		//dd($projet);
 
 		$paiement = $this->facturer(1,$projet->id);
-		dd($paiement);
+		//dd($paiement);
 		$data = [
 			'title' => 'Paiement Premiere etape',
 			'heading' => 'Paiement ETAPE 1 - '.$projet->name,
