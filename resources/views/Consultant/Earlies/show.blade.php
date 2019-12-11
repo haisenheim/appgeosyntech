@@ -50,9 +50,7 @@
 
 
                             <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-sm btn-outline-info btn-block"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
-                            @if($projet->modele)
-                                <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
-                             @endif
+
 
 
                             @if($projet->etape>=2)
