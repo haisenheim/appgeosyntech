@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Helpers\Numero;
 use App\Http\Controllers\Controller;
+use App\Models\Earlie;
 use App\Models\Facture;
 use App\Models\Investissement;
 use App\Models\Paiement;
@@ -96,12 +97,13 @@ class ProjetController extends Controller
 	 */
 
 	public function validateDiagInterne(Request $request, $token){
-
-		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>1]);
+		$projet = Projet::where('token',$token)->first();
 		if($projet->validated_step >= 1){
 			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
 			return back();
 		}
+		$projet = Projet::updateOrCreate(['token'=>$token],['validated_step'=>1]);
+
 		$paiement = $this->facturer(1,$projet->id);
 		$data = [
 			'title' => 'Paiement Premiere etape',

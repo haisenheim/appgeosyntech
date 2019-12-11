@@ -98,7 +98,11 @@ class EarlyController extends Controller
 	 */
 
 	public function validateDiagInterne(Request $request, $token){
-
+		$projet = Earlie::where('token',$token)->first();
+		if($projet->validated_step >= 1){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
 		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>1]);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 		//dd($projet);
