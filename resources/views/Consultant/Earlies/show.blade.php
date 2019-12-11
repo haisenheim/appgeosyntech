@@ -23,9 +23,6 @@
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
 
                             <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
-                            @if($projet->modele)
-                                <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
-                             @endif
 
                             @if($projet->etape>=4)
                                 <ul class="list-group">
@@ -52,7 +49,10 @@
                             <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
 
-                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-info btn-block"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-sm btn-outline-info btn-block"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+                            @if($projet->modele)
+                                <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
+                             @endif
 
 
                             @if($projet->etape>=2)
@@ -1523,9 +1523,6 @@
                                         </div>
                                     </div>
 
-
-
-
                                  </div>
 
                                  <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
@@ -2085,9 +2082,7 @@
 
 
 
-    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-      <!-- Bootstrap 4 -->
-     <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
