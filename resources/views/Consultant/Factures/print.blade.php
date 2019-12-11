@@ -116,7 +116,7 @@
                                     <th>Paiement</th>
                                     <th>MONTANT</th>
                                     <th>CLIENT</th>
-                                    <th>DOSSIER</th>
+
                                     <th>DATE DU PAIEMENT</th>
                                 </tr>
                             </thead>
@@ -130,7 +130,7 @@
                                             <td>{{ $ligne->name }}</td>
                                             <td>{{ $ligne->montant_apporteur }}</td>
                                             <td>{{ $ligne->owner->name }}</td>
-                                            <td>{{ $ligne->projet->name }}</td>
+
                                             <td>{{ date_format($ligne->created_at, 'd/m/Y') }}</td>
                                         </tr>
                                     @endforeach
