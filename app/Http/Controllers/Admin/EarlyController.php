@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\Numero;
 use App\Http\Controllers\Controller;
 use App\Models\Earlie;
+use App\Models\Facture;
 use App\Models\Investissement;
+use App\Models\Paiement;
 use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
 use PHPUnit\Framework\Exception;
+use PDF;
 
 class EarlyController extends Controller
 {
@@ -45,16 +49,73 @@ class EarlyController extends Controller
         //
     }
 
+
+
+	private function facturer($step, $projet_id){
+
+		$projet = Earlie::find($projet_id);
+		$num =str_pad(Numero::facture(),8,0,STR_PAD_LEFT);
+		$facture_consultant = Facture::where('consultant',1)->where('moi_id',date('m'))->where('annee',date('Y'))->where('owner_id',$projet->expert_id)->first();
+		if(!$facture_consultant){
+			$facture_consultant = Facture::updateOrCreate(['name'=>$num.'EXP-'.date('Y'), 'moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->expert_id, 'consultant'=>1,'token'=>sha1(Auth::user()->id.date('HsmdYi').'CONSULTANT')]);
+		}
+
+		$fapp_id =0;
+		if($projet->owner){
+			if($projet->owner->creator_id){
+				if($projet->owner->creator->role_id==7) {
+					$facture_apporteur = Facture::where('apporteur', 1)->where('moi_id', date('m'))->where('annee', date('Y'))->where('owner_id', $projet->owner->creator_id)->first();
+					if (!$facture_apporteur) {
+						$facture_apporteur = Facture::updateOrCreate(['name' => $num . 'APP-' . date('Y'), 'moi_id' => date('m'), 'annee' => date('Y'), 'owner_id' => $projet->owner->creator_id, 'apporteur' => 1, 'token' => sha1(Auth::user()->id . date('HsmdYi') . 'Apporteur')]);
+
+					}
+					$fapp_id = $facture_apporteur->id;
+				}
+
+			}
+		}
+
+		$facture_alliages = Facture::where('alliages',1)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
+		if(!$facture_alliages){
+			$facture_alliages = Facture::updateOrCreate(['name'=>$num.'ALT-'.date('Y'), 'moi_id'=>date('m'), 'annee'=>date('Y'),  'alliages'=>1,'token'=>sha1(Auth::user()->id.date('HsmdYi').'ALLIAGES')]);
+		}
+
+
+		$paiement = Paiement::updateOrCreate(['moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->owner_id,'earlie_id'=>$projet->id,'step'=>$step,
+			'montant'=>$projet->traite,'status'=>1,'facture_consultant_id'=>$facture_consultant->id,'facture_apporteur_id'=>$fapp_id,'facture_alliages_id'=>$facture_alliages->id, 'name'=>'Premier paiement dans le projet '.$projet->name,
+			'montant_consultant'=>$projet->comexpert,'montant_apporteur'=>$projet->commission, 'montant_alliages'=>$projet->comalliages,
+			'user_id'=>Auth::user()->id,'token'=>sha1(Auth::user()->id.date('HsmdYi').'Early_etape1'.$projet->id)]);
+
+
+
+		return $paiement;
+	}
+
+
 	/**
 	 * Validation du premier paiement
 	 */
 
 	public function validateDiagInterne(Request $request, $token){
 
-		Earlie::updateOrCreate(['token'=>$token],['validated_step'=>1]);
+		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>1]);
 		$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 
-		return redirect()->back();
+		if($projet->validated_step >= 1){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
+		$paiement = $this->facturer(1,$projet->id);
+		$data = [
+			'title' => 'Paiement Premiere etape',
+			'heading' => 'Paiement ETAPE 1 - '.$projet->name,
+
+			'paiement'=>$paiement
+		];
+
+		$pdf = PDF::loadView('pdf_view',$data);
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		return $pdf->stream('recu-etape1-'. $projet->name.'.pdf');
 	}
 
 	/**
