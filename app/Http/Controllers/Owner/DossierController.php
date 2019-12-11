@@ -9,6 +9,7 @@ use App\Models\Concurrent;
 use App\Models\Devise;
 use App\Models\Environnement;
 use App\Models\Investissement;
+use App\Models\Modele;
 use App\Models\Moi;
 use App\Models\ProduitsProjet;
 use App\Models\Projet;
@@ -432,6 +433,8 @@ class DossierController extends Controller
 			$res1 = isset($request->all()['compte1'])?json_decode($request->all()['compte1'],true):null;
 			$res2 = isset($request->all()['compte2'])?json_decode($request->all()['compte2'],true):null;
 			$res3 = isset($request->all()['compte3'])?json_decode($request->all()['compte3'],true):null;
+			$modele = isset($request->all()['modele'])?json_decode($request->all()['modele'],true):null;
+
 			if($bilan1){
 				//$bilan1 = $request->all()['bil1'];
 				$bilan1['annee'] = date('Y') -1;
@@ -482,8 +485,15 @@ class DossierController extends Controller
 				$res3['annee'] = date('Y') -3;
 				$res3['moi_id'] = date('m');
 				$res3['projet_id'] = $dossier->id;
-				$res3['token'] =sha1(date('myhsiyd').Auth::user()->id);
+				$res3['token'] =sha1(date('myhsiyd').Auth::user()->id.'res3');
 				$result = Resultat::create($res3);
+			}
+
+			if($modele){
+				$modele['projet_id'] = $dossier->id;
+				$modele['token'] =sha1(date('myhsiyd').Auth::user()->id);
+				$modele = Modele::create($modele);
+
 			}
 
 			if($produits){

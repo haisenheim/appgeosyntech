@@ -1201,7 +1201,17 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                 values['type_id'] = $('#tprojet_id').val();
                 values['ville_id'] = $('#ville_id').val();
 
-                var bm = $('#businessmodel').val();
+               // var bm = $('#businessmodel').val();
+
+               var modl = document.getElementById('step-3');
+
+               var txts = modl.getElementsByTagName('textarea');
+               var vals = {};
+               for (var l=0; l < txts.length; l++) {
+                    var id = txts[l].getAttribute('id');
+                    vals[id] = $('#' + id).val();
+
+                }
 
                 var compte1 = document.getElementById('compte1');
 
@@ -1276,6 +1286,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                  fd.append('compte1',JSON.stringify(cr1));
                  fd.append('compte2',JSON.stringify(cr2));
                  fd.append('compte3',JSON.stringify(cr3));
+                 fd.append('modele', JSON.stringify(vals));
                 var spinHandle_firstProcess = loadingOverlay.activate();
 
 
@@ -1298,7 +1309,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                     success: function(data){
                        loadingOverlay.cancel(spinHandle_firstProcess);
                        $('#popup-img').css({
-                            background:'http://alert.test/img/'+data.imageUri,
+                            background:'http://alert.test/img/projets/'+data.imageUri,
                             height: '300px',
                             width: '100%',
                             'background-size': 'cover'
