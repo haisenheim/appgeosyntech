@@ -1622,6 +1622,12 @@
 
 
         @if($projet->modele)
+        <style>
+            #meModal .card-title{
+                font-weight: 800;
+                font-size: 0.9rem;
+            }
+        </style>
         <div class="modal fade" id="meModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
         		<div class="modal-dialog modal-xl" role="document">
         			<div class="modal-content">
@@ -1746,6 +1752,7 @@
         		</div>
 
         </div>
+
         @endif
 
 
