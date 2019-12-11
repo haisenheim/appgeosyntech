@@ -112,7 +112,7 @@ class EarlyController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('pdf_view',$data);
+		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 		return $pdf->stream('recu-etape1-'. $projet->name.'.pdf');
 	}
