@@ -154,8 +154,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                              <div class="setup-content" id="step-2">
 
                                    <div class="">
-                                       <fieldset>
-                                            <legend>VALIDATION DE LA CONVENTION DE CONFIDENTIALITE</legend>
+
 
                                               <div style="margin: 20px auto; width: 1000px; margin-bottom: 100px">
                                                     <h4 class="text-center page-header"> ACCORD DE CONFIDENTIALITE </h4>
@@ -349,7 +348,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                                                <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
                                                <button class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
                                           </div>
-                                       </fieldset>
+
                                    </div>
                                </div>
                                <div class="setup-content" id="step-3">
@@ -357,9 +356,43 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                                       <div class="">
                                           <fieldset>
                                                <legend>DESCRIPTION DU MODELE ECONOMIQUE</legend>
-                                               <textarea name="businessmodel" id="businessmodel" cols="30" rows="10"></textarea>
 
-
+                                                <div class="form-group">
+                                                    <label for="offre">OFFRE</label>
+                                                    <textarea name="offre" id="offre" cols="30" rows="3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="segment">SEGMENTS DE CLIENTELE</label>
+                                                    <textarea name="segment" id="segment" cols="30" rows="3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="canaux">CANAUX DE DISTRIBUTION </label>
+                                                    <textarea name="canaux" id="canaux" cols="30" rows="3" class="form-contol"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="relation">RELATION CLIENTS </label>
+                                                    <textarea name="relation" id="relation" cols="30" rows="3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="partenaires">PARTENAIRES CLES</label>
+                                                    <textarea name="partenaires" id="partenaires" cols="30" rows="3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="activites">ACTIVITES CLES </label>
+                                                    <textarea name="activites" id="activites" cols="30" rows="3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="ressources">RESSOURCES CLES </label>
+                                                    <textarea name="ressources" id="ressources" cols="30" rows="3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="couts">COUTS</label>
+                                                    <textarea name="couts" id="couts" cols="30" rows="3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="revenus">REVENUS</label>
+                                                    <textarea name="revenus" id="revenus" cols="30" rows="3" class="form-control"></textarea>
+                                                </div>
 
                                           <div class="btn-div card-footer text-center">
                                                <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>

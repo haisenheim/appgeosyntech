@@ -25,6 +25,112 @@ class Earlie extends Model
         return $this->belongsTo('App\User','owner_id');
     }
 
+	public function getTraiteAttribute(){
+		$s=0;
+		$projet = Projet::find($this->id);
+		if($projet->modepaiement_id==1){
+			$s= 129500;
+			if($projet->owner){
+				if($projet->owner->apporteur_id){
+					$s=143000;
+				}
+			}
+		}
+
+		if($projet->modepaiement_id==2){
+			$s= 880000;
+
+			if($projet->owner){
+				if($projet->owner->creator){
+					if($projet->owner->creator->role_id==7){
+						$s=967200;
+					}
+				}
+			}
+		}
+
+		return $s;
+	}
+
+	public function getCommissionAttribute(){
+		$s=0;
+		$projet = Projet::find($this->id);
+		if($projet->modepaiement_id==1){
+
+			if($projet->owner){
+				if($projet->owner->creator){
+					if($projet->owner->creator->role_id==7){
+						$s=10875;
+					}
+				}
+			}
+		}
+
+		if($projet->modepaiement_id==2){
+
+			if($projet->owner){
+				if($projet->owner->creator){
+					if($projet->owner->creator->role_id==7){
+						$s=73950;
+					}
+				}
+			}
+
+
+		}
+
+		return $s;
+	}
+
+	public function getComexpertAttribute(){
+		$s=0;
+		$projet = Projet::find($this->id);
+		if($projet->modepaiement_id==1){
+			$s=10000;
+			if($projet->consultant){
+				if($projet->consultant->confirmed){
+					$s=12500;
+				}
+
+				if($projet->consultant->senior){
+					$s=15000;
+				}
+			}
+		}
+
+		if($projet->modepaiement_id==2){
+
+			$s=75000;
+			if($projet->consultant){
+				if($projet->consultant->confirmed){
+					$s=93750;
+				}
+
+				if($projet->consultant->senior){
+					$s=112500;
+				}
+			}
+		}
+
+		return $s;
+	}
+
+	public function getComalliagesAttribute(){
+		$s=0;
+		$projet = Projet::find($this->id);
+		if($projet->modepaiement_id==1){
+			$s = 33750;
+		}
+
+		if($projet->modepaiement_id==2){
+			$s = 229500;
+		}
+
+		return $s;
+	}
+
+
+
 	public function getVariation_sAttribute(){
 		$prevrs = Prevresultat::all()->where('earlie_id',$this->id)->sortBy('annee');
 		$prevbls = Prevbilan::all()->where('earlie_id',$this->id)->sortBy('annee');
@@ -153,6 +259,9 @@ class Earlie extends Model
 		return $this->hasOne('App\Models\Environnement');
 	}
 
+	public function modele(){
+		return $this->hasOne('App\Models\Modele');
+	}
     public function swot(){
         return $this->hasOne('App\Models\Swot');
     }

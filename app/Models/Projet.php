@@ -249,6 +249,10 @@ class Projet extends Model
         return $this->hasOne('App\Models\Swot');
     }
 
+	public function modele(){
+		return $this->hasOne('App\Models\Modele');
+	}
+
 	public function choices(){
 		return $this->hasMany('App\Models\ChoicesProjet');
 	}
