@@ -33,7 +33,9 @@
                                     <li class="list-group-item">BESOIN EN FONDS DE ROULEMENT : <span class="value"><?= $projet->bfr ?></span></li>
                                     <li style="font-weight: bold;" class="list-group-item">COUT GLOBAL DU PROJET : <span class="value"><?= $projet->montant_investissement + $projet->bfr ?></span></li>
                                 </ul>
-
+                                @if($projet->modele)
+                                    <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
+                                @endif
                                 <fieldset>
                                     <legend>MOYENS DE FINANCEMENT</legend>
                                     <ul class="list-group">
@@ -69,24 +71,16 @@
 
 
                             @if($projet->modepaiement_id>0)
-                                <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
+                                <h6 class="page-header" style="background-color: inherit">FORMULE DE PAIEMENT</h6>
                                 <ul class="list-group">
                                     <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
-                                    <li class="list-group-item" >PRIX HT : <span style="font-weight: 700">{{ $projet->modepaiement->prix }}</span></li>
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->modepaiement->prixttc }}</span></li>
+
+                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span></li>
                                 </ul>
                             @else
                                 <div>
-                                    <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
+                                    <h6 class="page-header" style="background-color: inherit">CHOIX DE LA FORMULE DE PAIEMENT</h6>
 
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><span id="mode_name" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item" >PRIX HT : <span id="mode_prix" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">PRIX TTC : <span id="mode_prixttc" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">
-                                        <p id="mode_description"></p>
-                                        </li>
-                                    </ul>
                                     <hr/>
                                     <form action="/consultant/projet/add-mode" method="get" class="form-inline">
                                         <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
@@ -108,9 +102,7 @@
 
                     </div>
                     <div style="overflow-y: scroll; max-height: 860px" id="side2" class="col-md-8 col-sm-12">
-                       
-                                               
-                                                <div class="card-body">
+                                <div class="card-body">
                                                     <div class="table-responsive">
                                                          <table id="risques-tab" class="table table-condensed table-hover table-bordered">
                                                            <thead>

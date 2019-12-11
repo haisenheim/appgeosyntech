@@ -2272,72 +2272,136 @@
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
     @if($projet->modele)
-            <div class="modal fade" id="bm" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-            		<div class="modal-dialog modal-xl" role="document">
-            			<div class="modal-content">
-            				<div class="modal-header bg-success">
-            					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>MODELE ECONOMIQUE</span></h5>
-            					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-            				</div>
-            				<div class="modal-body">
-            				    <form method="get" action="/owner/dossier/save-modele">
-            				    <div class="card maximized-card">
-            				        <div class="">
+        <style>
+            #meModal .card-title{
+                font-weight: 800;
+                font-size: 0.9rem;
+            }
+        </style>
+        <div class="modal fade" id="meModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        		<div class="modal-dialog modal-xl" role="document">
+        			<div class="modal-content">
+        				<div class="modal-header bg-success">
+        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>MODELE ECONOMIQUE</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+        				</div>
+        				<div class="modal-body">
 
-            				        </div>
-            				        <div class="card-body">
-            				        <input type="hidden" name="token" value="{{ $projet->modele->token }}"/>
-            				           <div class="form-group">
-                                           <label for="offre">OFFRE</label>
-                                           <textarea name="offre" id="offre" cols="30" rows="3" class="form-control">{{ $projet->modele->offre }}</textarea>
-                                       </div>
-                                       <div class="form-group">
-                                           <label for="segment">SEGMENTS DE CLIENTELE</label>
-                                           <textarea name="segment" id="segment" cols="30" rows="3" class="form-control">{{ $projet->modele->segment }}</textarea>
-                                       </div>
-                                       <div class="form-group">
-                                           <label for="canaux">CANAUX DE DISTRIBUTION </label>
-                                           <textarea name="canaux" id="canaux" cols="30" rows="3" class="form-contol">{{ $projet->modele->canaux }}</textarea>
-                                       </div>
-                                       <div class="form-group">
-                                           <label for="relation">RELATION CLIENTS </label>
-                                           <textarea name="relation" id="relation" cols="30" rows="3" class="form-control">{{ $projet->modele->relation }}</textarea>
-                                       </div>
-                                       <div class="form-group">
-                                           <label for="partenaires">PARTENAIRES CLES</label>
-                                           <textarea name="partenaires" id="partenaires" cols="30" rows="3" class="form-control">{{ $projet->modele->partenaires }}</textarea>
-                                       </div>
-                                       <div class="form-group">
-                                           <label for="activites">ACTIVITES CLES </label>
-                                           <textarea name="activites" id="activites" cols="30" rows="3" class="form-control">{{ $projet->modele->activites }}</textarea>
-                                       </div>
-                                       <div class="form-group">
-                                           <label for="ressources">RESSOURCES CLES </label>
-                                           <textarea name="ressources" id="ressources" cols="30" rows="3" class="form-control">{{ $projet->modele->ressources }}</textarea>
-                                       </div>
-                                       <div class="form-group">
-                                           <label for="couts">COUTS</label>
-                                           <textarea name="couts" id="couts" cols="30" rows="3" class="form-control">{{ $projet->modele->couts }}</textarea>
-                                       </div>
-                                       <div class="form-group">
-                                           <label for="revenus">REVENUS</label>
-                                           <textarea name="revenus" id="revenus" cols="30" rows="3" class="form-control">{{ $projet->modele->revenus }}</textarea>
-                                       </div>
-            				        </div>
-            				        <div class="card-footer">
-            				           <button class="btn btn-block btn-success" type="submit">ENREGISTRER</button>
-            				        </div>
-            				    </div>
-            				    </form>
-            				</div>
-            			</div>
+        				    <div class="card">
+        				        <div class="card-header">
 
-            		</div>
 
-            </div>
-            @endif
+                                      <div class="card-tools">
+
+                                           <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                           </button>
+
+                                      </div>
+                                </div>
+        				        <div class="card-body">
+        				            <div class="row">
+        				                <div class="col-md-2 col-sm-12">
+        				                    <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">PARTENAIRES</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->partenaires ?>
+        				                        </div>
+        				                    </div>
+        				                </div>
+        				                <div class="col-md-3 col-sm-12">
+        				                    <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">ACTIVITES</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->activites ?>
+        				                        </div>
+        				                    </div>
+        				                    <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">RESSOURCES</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->ressources ?>
+        				                        </div>
+        				                    </div>
+        				                </div>
+        				                <div class="col-md-2 col-sm-12">
+        				                    <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">OFFRE</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->offre ?>
+        				                        </div>
+        				                    </div>
+        				                </div>
+        				                <div class="col-md-3 col-sm-12">
+        				                    <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">RELATION CLIENT</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->relation ?>
+        				                        </div>
+        				                    </div>
+        				                    <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">CANAUX DE DISTRIBUTION</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->canaux ?>
+        				                        </div>
+        				                    </div>
+        				                </div>
+        				                <div class="col-md-2 col-sm-12">
+        				                    <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">SEGMENTS CLIENT</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->segment ?>
+        				                        </div>
+        				                    </div>
+        				                </div>
+        				            </div>
+        				            <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">STRUCTURE DES COUTS</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->couts ?>
+        				                        </div>
+        				                    </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="card">
+        				                        <div class="card-header">
+        				                            <h3 class="card-title">SOURCES DE REVENUS</h3>
+        				                        </div>
+        				                        <div class="card-body">
+        				                            <?= $projet->modele->revenus ?>
+        				                        </div>
+        				                    </div>
+                                        </div>
+        				            </div>
+
+        				    </div>
+
+        				</div>
+        			</div>
+
+        		</div>
+
+        </div>
+
+     @endif
 
 <script type="text/javascript">
   $(document).ready(function() {
