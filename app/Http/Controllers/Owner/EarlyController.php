@@ -12,6 +12,7 @@ use App\Models\Earlie;
 use App\Models\EarliesProduit;
 use App\Models\Environnement;
 use App\Models\Investissement;
+use App\Models\Modele;
 use App\Models\Moi;
 use App\Models\ProduitsProjet;
 use App\Models\Projet;
