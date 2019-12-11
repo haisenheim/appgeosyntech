@@ -1279,7 +1279,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
                  fd.append('dossier',JSON.stringify(values));
                  fd.append('answers',JSON.stringify(reponses));
                  fd.append('produits',JSON.stringify(produits));
-                 fd.append('bm',bm);
+
                  fd.append('bil1',JSON.stringify(bil1));
                  fd.append('bil2',JSON.stringify(bil2));
                  fd.append('bil3',JSON.stringify(bil3));
