@@ -328,6 +328,7 @@ Route::prefix('owner')
 	    Route::resource('projets','EarlyController');
 
 	    Route::resource('dossiers','DossierController');
+	    Route::get('/dossier/save-modele','DossierController@saveModele');
 	    Route::resource('partenariats','InfrastructureController');
 	    Route::resource('actifs','ActifController');
 	    Route::resource('creances','CreanceController');

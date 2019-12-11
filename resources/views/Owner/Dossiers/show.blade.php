@@ -73,7 +73,9 @@
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
                             <p>AUTEUR : {{ $projet->auteur->name }}</p>
                             <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
-
+                            @if($projet->modele)
+                                <a href="#" data-toggle="modal" data-target="#bm" class="btn btn-outtline-success btn-block">MODELE ECONOMIQUE</a>
+                            @endif
                             @if($projet->etape>=4)
                                 <ul class="list-group">
                                     <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
@@ -2088,8 +2090,8 @@
         				</div>
         			</div>
         		</div>
-
         </div>
+
 
         <!-- Edition du teaser-->
         <div class="modal fade" id="teaserModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
@@ -2141,9 +2143,71 @@
 
                   </script>
 
-
         </div>
 
+        @if($projet->modele)
+        <div class="modal fade" id="bm" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        		<div class="modal-dialog modal-lg" role="document">
+        			<div class="modal-content">
+        				<div class="modal-header bg-primary">
+        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>MODELE ECONOMIQUE</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+        				</div>
+        				<div class="modal-body">
+        				    <form method="get" action="/owner/dossier/save-modele">
+        				    <div class="card">
+        				        <div class="card-body">
+        				        <input type="hidden" name="token" value="{{ $projet->modele->token }}"/>
+        				           <div class="form-group">
+                                       <label for="offre">OFFRE</label>
+                                       <textarea name="offre" id="offre" cols="30" rows="3" class="form-control">{{ $projet->modele->offre }}</textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="segment">SEGMENTS DE CLIENTELE</label>
+                                       <textarea name="segment" id="segment" cols="30" rows="3" class="form-control">{{ $projet->modele->segment }}</textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="canaux">CANAUX DE DISTRIBUTION </label>
+                                       <textarea name="canaux" id="canaux" cols="30" rows="3" class="form-contol">{{ $projet->modele->canaux }}</textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="relation">RELATION CLIENTS </label>
+                                       <textarea name="relation" id="relation" cols="30" rows="3" class="form-control">{{ $projet->modele->relation }}</textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="partenaires">PARTENAIRES CLES</label>
+                                       <textarea name="partenaires" id="partenaires" cols="30" rows="3" class="form-control">{{ $projet->modele->partenaires }}</textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="activites">ACTIVITES CLES </label>
+                                       <textarea name="activites" id="activites" cols="30" rows="3" class="form-control">{{ $projet->modele->activites }}</textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="ressources">RESSOURCES CLES </label>
+                                       <textarea name="ressources" id="ressources" cols="30" rows="3" class="form-control">{{ $projet->modele->ressources }}</textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="couts">COUTS</label>
+                                       <textarea name="couts" id="couts" cols="30" rows="3" class="form-control">{{ $projet->modele->couts }}</textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="revenus">REVENUS</label>
+                                       <textarea name="revenus" id="revenus" cols="30" rows="3" class="form-control">{{ $projet->modele->revenus }}</textarea>
+                                   </div>
+        				        </div>
+        				        <div class="card-footer">
+        				           <button type="submit">ENREGISTRER</button>
+        				        </div>
+        				    </div>
+        				    </form>
+        				</div>
+        			</div>
+        		</div>
+
+        </div>
+        @endif
 <style>
          div.note-editor.note-frame{
                     padding: 0;

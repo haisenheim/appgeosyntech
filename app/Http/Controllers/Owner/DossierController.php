@@ -214,6 +214,12 @@ class DossierController extends Controller
 	 * edit a field with a new value
 	 */
 
+	public function saveModele(Request $request){
+		 Modele::updateOrCreate(['token',$request->token],$request->all());
+		return back();
+	}
+
+
 	public function editFieldJson(Request $request){
 		$model = $request->model;
 		$id = $request->id;
