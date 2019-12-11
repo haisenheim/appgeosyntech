@@ -87,7 +87,7 @@ class EarlyController extends Controller
 			'user_id'=>Auth::user()->id,'token'=>sha1(Auth::user()->id.date('HsmdYi').'Early_etape1'.$projet->id)]);
 
 
-
+		dd($paiement);
 		return $paiement;
 	}
 
