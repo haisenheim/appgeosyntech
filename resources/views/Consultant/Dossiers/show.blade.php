@@ -2165,7 +2165,7 @@
         	</form>
         </div>
 
-<style>
+    <style>
          div.note-editor.note-frame{
                     padding: 0;
                 }
