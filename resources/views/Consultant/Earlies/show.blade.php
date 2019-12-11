@@ -1848,7 +1848,7 @@
      @endif
 
     <!-- Edition de la synthese du diagnostic interne -->
-    <div class="modal fade" id="synDiagIntModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    <div class="modal" id="synDiagIntModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
 
     		<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
