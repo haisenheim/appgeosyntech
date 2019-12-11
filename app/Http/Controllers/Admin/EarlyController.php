@@ -11,6 +11,7 @@ use App\Models\Paiement;
 use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use PHPUnit\Framework\Exception;
 use PDF;
 
@@ -113,7 +114,7 @@ class EarlyController extends Controller
 
 		$pdf = PDF::loadView('pdf_view',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		return $pdf->download('recu-etape1-'. $projet->name.'.pdf');
+		return $pdf->stream('recu-etape1-'. $projet->name.'.pdf');
 	}
 
 	/**
