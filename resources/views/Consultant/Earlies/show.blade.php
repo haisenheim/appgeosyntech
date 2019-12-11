@@ -52,7 +52,7 @@
                             <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
 
-                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-default btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-info btn-block"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
 
 
                             @if($projet->etape>=2)
@@ -1849,11 +1849,10 @@
 
     <!-- Edition de la synthese du diagnostic interne -->
     <div class="modal fade" id="synDiagIntModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-    	<form method="post" action="/consultant/projet/synthese1">
-    		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
-    		{{csrf_field()}}
+
     		<div class="modal-dialog modal-lg" role="document">
     			<div class="modal-content">
+
     			        <div class="modal-header">
                             <h6  class="modal-title text-center">SYNTHESE DU DIAGNOSTIC INTERNE</h6>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -1862,17 +1861,21 @@
                           </div>
 
     				<div class="modal-body">
+    				<form method="post" action="/consultant/projet/synthese1">
+                        <input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
+                        {{csrf_field()}}
     					<div class="form-group">
     						<textarea class="form-control"  name="synthese1" id="synthese1" cols="30" rows="10" >{{ $projet->synthese_diagnostic_interne }}</textarea>
     					</div>
-    				</div>
-    				<div class="modal-footer">
-    					<button type="submit" class="btn btn-danger"><i class="fa fa-save"></i> ENREGISTRER</button>
+    					<div class="form-group">
+    					    <button type="submit" class="btn btn-danger btn-block"><i class="fa fa-save"></i> ENREGISTRER</button>
+    					</div>
+    			    </form>
     				</div>
 
     			</div>
     		</div>
-    	</form>
+
     </div>
 
 
