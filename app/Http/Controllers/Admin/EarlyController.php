@@ -100,12 +100,13 @@ class EarlyController extends Controller
 
 		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>1]);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		dd($projet);
+		//dd($projet);
 		if($projet->validated_step >= 1){
 			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
 			return back();
 		}
 		$paiement = $this->facturer(1,$projet->id);
+		dd($paiement);
 		$data = [
 			'title' => 'Paiement Premiere etape',
 			'heading' => 'Paiement ETAPE 1 - '.$projet->name,
