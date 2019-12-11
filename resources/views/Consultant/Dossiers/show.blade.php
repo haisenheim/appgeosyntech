@@ -21,9 +21,11 @@
                             <p>CODE : {{ $projet->code }}</p>
                             <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
                             <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-                            <p>AUTEUR : {{ $projet->auteur->name }}</p>
-                            <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
 
+                            <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
+                            @if($projet->modele)
+                                <a href="#" data-toggle="modal" data-target="#bm" class="btn btn-outline-success btn-block">MODELE ECONOMIQUE</a>
+                            @endif
                             @if($projet->etape>=4)
                                 <ul class="list-group">
                                     <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
@@ -69,21 +71,13 @@
                                 <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
                                 <ul class="list-group">
                                     <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
-                                    <li class="list-group-item" >PRIX HT : <span style="font-weight: 700">{{ $projet->modepaiement->prix }}</span></li>
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->modepaiement->prixttc }}</span></li>
+
+                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span></li>
                                 </ul>
                             @else
                                 <div>
                                     <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
 
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><span id="mode_name" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item" >PRIX HT : <span id="mode_prix" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">PRIX TTC : <span id="mode_prixttc" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">
-                                        <p id="mode_description"></p>
-                                        </li>
-                                    </ul>
                                     <hr/>
                                     <form action="/consultant/dossier/add-mode" method="get" class="form-inline">
                                         <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
@@ -807,7 +801,6 @@
                             <h3 class="card-title">PLAN FINANCIER</h3>
 
                               <div class="card-tools">
-
                                   <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
                                   </button>
                               </div>
@@ -1907,8 +1900,6 @@
 
     <script>
         $(document).ready(function(){
-           // $('#side2').height($('#side1').height());
-           //$('#side2').height(890);
             getPlan($('#plan_id').val());
 
             $.ajax({
@@ -1924,8 +1915,6 @@
                             dataType:'json',
                             data:{choix:data},
                             success:function(rep){
-                                $('#risks-loader').hide();
-
                                 var html = '';
                                 //console.log(Object.entries(rep));
                                 var risks=Object.entries(rep);
@@ -2277,11 +2266,78 @@
 </style>
 
 
-<script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
+    @if($projet->modele)
+            <div class="modal fade" id="bm" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+            		<div class="modal-dialog modal-xl" role="document">
+            			<div class="modal-content">
+            				<div class="modal-header bg-success">
+            					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>MODELE ECONOMIQUE</span></h5>
+            					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+            				</div>
+            				<div class="modal-body">
+            				    <form method="get" action="/owner/dossier/save-modele">
+            				    <div class="card maximized-card">
+            				        <div class="">
+
+            				        </div>
+            				        <div class="card-body">
+            				        <input type="hidden" name="token" value="{{ $projet->modele->token }}"/>
+            				           <div class="form-group">
+                                           <label for="offre">OFFRE</label>
+                                           <textarea name="offre" id="offre" cols="30" rows="3" class="form-control">{{ $projet->modele->offre }}</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="segment">SEGMENTS DE CLIENTELE</label>
+                                           <textarea name="segment" id="segment" cols="30" rows="3" class="form-control">{{ $projet->modele->segment }}</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="canaux">CANAUX DE DISTRIBUTION </label>
+                                           <textarea name="canaux" id="canaux" cols="30" rows="3" class="form-contol">{{ $projet->modele->canaux }}</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="relation">RELATION CLIENTS </label>
+                                           <textarea name="relation" id="relation" cols="30" rows="3" class="form-control">{{ $projet->modele->relation }}</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="partenaires">PARTENAIRES CLES</label>
+                                           <textarea name="partenaires" id="partenaires" cols="30" rows="3" class="form-control">{{ $projet->modele->partenaires }}</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="activites">ACTIVITES CLES </label>
+                                           <textarea name="activites" id="activites" cols="30" rows="3" class="form-control">{{ $projet->modele->activites }}</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="ressources">RESSOURCES CLES </label>
+                                           <textarea name="ressources" id="ressources" cols="30" rows="3" class="form-control">{{ $projet->modele->ressources }}</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="couts">COUTS</label>
+                                           <textarea name="couts" id="couts" cols="30" rows="3" class="form-control">{{ $projet->modele->couts }}</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="revenus">REVENUS</label>
+                                           <textarea name="revenus" id="revenus" cols="30" rows="3" class="form-control">{{ $projet->modele->revenus }}</textarea>
+                                       </div>
+            				        </div>
+            				        <div class="card-footer">
+            				           <button class="btn btn-block btn-success" type="submit">ENREGISTRER</button>
+            				        </div>
+            				    </div>
+            				    </form>
+            				</div>
+            			</div>
+
+            		</div>
+
+            </div>
+            @endif
 
 <script type="text/javascript">
   $(document).ready(function() {
@@ -2292,6 +2348,12 @@
       lang:'fr-FR'
     });
 
+     $('#bm textarea').summernote({
+      height: 125,
+      tabsize: 2,
+      followingToolbar: true,
+      lang:'fr-FR'
+    });
   });
 </script>
 
@@ -2413,6 +2475,7 @@
             }
 
     </script>
+
 
 @endsection
 

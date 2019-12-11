@@ -124,24 +124,10 @@
                                 <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
                                 <ul class="list-group">
                                     <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
-                                    <li class="list-group-item" >PRIX HT : <span style="font-weight: 700">{{ $projet->modepaiement->prix }}</span></li>
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->modepaiement->prixttc }}</span></li>
+
+                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->traite }}</span></li>
                                 </ul>
-                            @else
-                                <div>
-                                    <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
 
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><span id="mode_name" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item" >PRIX HT : <span id="mode_prix" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">PRIX TTC : <span id="mode_prixttc" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">
-                                        <p id="mode_description"></p>
-                                        </li>
-                                    </ul>
-                                    <hr/>
-
-                                </div>
                             @endif
 
                         </div>
@@ -2208,22 +2194,6 @@
         		</div>
 
         </div>
-
-     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-          $('textarea').summernote({
-            height: 125,
-            tabsize: 2,
-            followingToolbar: true,
-            lang:'fr-FR'
-          });
-        });
-      </script>
         @endif
 <style>
          div.note-editor.note-frame{
@@ -2292,6 +2262,22 @@
 
        });
    </script>
+
+    <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('textarea').summernote({
+            height: 125,
+            tabsize: 2,
+            followingToolbar: true,
+            lang:'fr-FR'
+          });
+        });
+      </script>
 
 @endsection
 
