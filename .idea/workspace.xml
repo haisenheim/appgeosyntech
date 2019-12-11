@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -128,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.13061224" vertical-offset="848" max-vertical-offset="3792">
-              <caret line="217" column="26" selection-start-line="217" selection-start-column="26" selection-end-line="217" selection-end-column="26" />
+              <caret line="217" column="10" selection-start-line="217" selection-start-column="10" selection-end-line="217" selection-end-column="10" />
               <folding>
                 <element signature="e#1438#1575#0#PHP" expanded="false" />
                 <element signature="e#1578#1716#0#PHP" expanded="false" />
@@ -136,18 +135,18 @@
                 <element signature="e#1968#4114#0#PHP" expanded="false" />
                 <element signature="e#4117#6115#0#PHP" expanded="false" />
                 <element signature="e#6235#6454#0#PHP" expanded="false" />
-                <element signature="e#6738#7137#0#PHP" expanded="false" />
-                <element signature="e#7140#7534#0#PHP" expanded="false" />
-                <element signature="e#7538#8558#0#PHP" expanded="false" />
-                <element signature="e#8562#9399#0#PHP" expanded="false" />
-                <element signature="e#9451#11867#0#PHP" expanded="false" />
-                <element signature="e#12641#13261#0#PHP" expanded="false" />
-                <element signature="e#14535#14786#0#PHP" expanded="false" />
-                <element signature="e#14791#15042#0#PHP" expanded="false" />
-                <element signature="e#15047#15298#0#PHP" expanded="false" />
-                <element signature="e#15303#15565#0#PHP" expanded="false" />
-                <element signature="e#15570#15832#0#PHP" expanded="false" />
-                <element signature="e#16500#16683#0#PHP" expanded="false" />
+                <element signature="e#6740#7139#0#PHP" expanded="false" />
+                <element signature="e#7142#7536#0#PHP" expanded="false" />
+                <element signature="e#7540#8560#0#PHP" expanded="false" />
+                <element signature="e#8564#9401#0#PHP" expanded="false" />
+                <element signature="e#9453#11869#0#PHP" expanded="false" />
+                <element signature="e#12643#13263#0#PHP" expanded="false" />
+                <element signature="e#14537#14788#0#PHP" expanded="false" />
+                <element signature="e#14793#15044#0#PHP" expanded="false" />
+                <element signature="e#15049#15300#0#PHP" expanded="false" />
+                <element signature="e#15305#15567#0#PHP" expanded="false" />
+                <element signature="e#15572#15834#0#PHP" expanded="false" />
+                <element signature="e#16502#16685#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1400,7 +1399,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13061224" vertical-offset="848" max-vertical-offset="3792">
-          <caret line="217" column="26" selection-start-line="217" selection-start-column="26" selection-end-line="217" selection-end-column="26" />
+          <caret line="217" column="10" selection-start-line="217" selection-start-column="10" selection-end-line="217" selection-end-column="10" />
           <folding>
             <element signature="e#1438#1575#0#PHP" expanded="false" />
             <element signature="e#1578#1716#0#PHP" expanded="false" />
@@ -1408,18 +1407,18 @@
             <element signature="e#1968#4114#0#PHP" expanded="false" />
             <element signature="e#4117#6115#0#PHP" expanded="false" />
             <element signature="e#6235#6454#0#PHP" expanded="false" />
-            <element signature="e#6738#7137#0#PHP" expanded="false" />
-            <element signature="e#7140#7534#0#PHP" expanded="false" />
-            <element signature="e#7538#8558#0#PHP" expanded="false" />
-            <element signature="e#8562#9399#0#PHP" expanded="false" />
-            <element signature="e#9451#11867#0#PHP" expanded="false" />
-            <element signature="e#12641#13261#0#PHP" expanded="false" />
-            <element signature="e#14535#14786#0#PHP" expanded="false" />
-            <element signature="e#14791#15042#0#PHP" expanded="false" />
-            <element signature="e#15047#15298#0#PHP" expanded="false" />
-            <element signature="e#15303#15565#0#PHP" expanded="false" />
-            <element signature="e#15570#15832#0#PHP" expanded="false" />
-            <element signature="e#16500#16683#0#PHP" expanded="false" />
+            <element signature="e#6740#7139#0#PHP" expanded="false" />
+            <element signature="e#7142#7536#0#PHP" expanded="false" />
+            <element signature="e#7540#8560#0#PHP" expanded="false" />
+            <element signature="e#8564#9401#0#PHP" expanded="false" />
+            <element signature="e#9453#11869#0#PHP" expanded="false" />
+            <element signature="e#12643#13263#0#PHP" expanded="false" />
+            <element signature="e#14537#14788#0#PHP" expanded="false" />
+            <element signature="e#14793#15044#0#PHP" expanded="false" />
+            <element signature="e#15049#15300#0#PHP" expanded="false" />
+            <element signature="e#15305#15567#0#PHP" expanded="false" />
+            <element signature="e#15572#15834#0#PHP" expanded="false" />
+            <element signature="e#16502#16685#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
