@@ -47,7 +47,9 @@
                             <input type="hidden" id="id" value="<?= $projet->token ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
                             <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
-
+                            @if($projet->modele)
+                                <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
+                            @endif
 
                             <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-sm btn-outline-info btn-block"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
 
