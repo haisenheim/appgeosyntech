@@ -293,7 +293,7 @@ class EarlyController extends Controller
 	public function addMode(Request $request){
 		$projet = Earlie::where('token',$request->projet_token)->first();
 		$projet->modepaiement_id = $request->mode_id;
-		$projet->validated_step=1;
+		//$projet->validated_step=1;
 		$projet->save();
 		return redirect()->back();
 	}

@@ -391,6 +391,7 @@ class EarlyController extends Controller
 		$dossier = json_decode($request->all()['dossier'],true);
 		$answers = isset($request->all()['answers'])?json_decode($request->all()['answers'],true):null;
 		$produits = isset($request->all()['produits'])?json_decode($request->all()['produits'],true):null;
+		$modele = isset($request->all()['modele'])?json_decode($request->all()['modele'],true):null;
 
 		//$dossier = $request->all()['dossier'];
 
@@ -442,6 +443,13 @@ class EarlyController extends Controller
 					$an->earlie_id=$dossier->id;
 					$an->save();
 				}
+			}
+
+			if($modele){
+				$modele['projet_id'] = $dossier->id;
+				$modele['token'] =sha1(date('myhsiyd').Auth::user()->id);
+				$modele = Modele::create($modele);
+
 			}
 
 
