@@ -2136,6 +2136,7 @@
                         followingToolbar: true,
                         lang:'fr-FR'
                       });
+                      });
 
 
                   </script>
@@ -2195,25 +2196,21 @@
                    </div>
                </div>
            </div>
-       @else
+   @else
            <input type="hidden" id="has_teaser" value="0"/>
-       @endif
-        		<script type="text/javascript">
-                    $(document).ready(function() {
+   @endif
+   <script type="text/javascript">
+       $(document).ready(function() {
 
-                    var tsr = $('#has_teaser').val();
-                    if(tsr){
-                       setTimeout(function() {
-                                   $('#popup').show();
-                                 },9000);
-                    }
+       var tsr = $('#has_teaser').val();
+       if(tsr){
+          setTimeout(function() {
+                      $('#popup').show();
+                    },9000);
+       }
 
-                    });
-
-
-
-
-                  </script>
+       });
+   </script>
 
 @endsection
 
