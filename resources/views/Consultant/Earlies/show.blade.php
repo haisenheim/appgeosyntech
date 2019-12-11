@@ -33,9 +33,7 @@
                                     <li class="list-group-item">BESOIN EN FONDS DE ROULEMENT : <span class="value"><?= $projet->bfr ?></span></li>
                                     <li style="font-weight: bold;" class="list-group-item">COUT GLOBAL DU PROJET : <span class="value"><?= $projet->montant_investissement + $projet->bfr ?></span></li>
                                 </ul>
-                                @if($projet->modele)
-                                    <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
-                                @endif
+
                                 <fieldset>
                                     <legend>MOYENS DE FINANCEMENT</legend>
                                     <ul class="list-group">
@@ -54,7 +52,7 @@
                             <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
 
-                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-default btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
 
 
                             @if($projet->etape>=2)
@@ -79,7 +77,8 @@
                                 </ul>
                             @else
                                 <div>
-                                    <h6 class="page-header" style="background-color: inherit">CHOIX DE LA FORMULE DE PAIEMENT</h6>
+                                <hr/>
+                                    <h6 class="page-header" style="background-color: inherit; font-weight: 700; font-size: 1rem">CHOIX DE LA FORMULE DE PAIEMENT</h6>
 
                                     <hr/>
                                     <form action="/consultant/projet/add-mode" method="get" class="form-inline">
@@ -2076,21 +2075,7 @@
     </div>
 </div>
 
-<style>
-   .modal .card-title{
-        color: #000000;
-        font-weight: bold;
-   }
 
-   .modal label{
-        font-size: x-small;
-        line-height: 0.5;
-   }
-   .card.maximized-card {
-
-               overflow-y: scroll;
-           }
-</style>
 
 
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
