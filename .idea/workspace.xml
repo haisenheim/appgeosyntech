@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.72" vertical-offset="616" max-vertical-offset="4544">
-              <caret line="354" column="48" selection-start-line="354" selection-start-column="48" selection-end-line="389" selection-end-column="54" />
+            <state vertical-scroll-proportion="-4.36" vertical-offset="1347" max-vertical-offset="4144">
+              <caret line="493" column="4" selection-start-line="493" selection-start-column="4" selection-end-line="512" selection-end-column="15" />
               <folding>
                 <element signature="tag#div#0;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
@@ -56,6 +57,7 @@
                 <element signature="tag#div#7;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#8;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#3;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0" expanded="false" />
                 <element signature="e#42195#43419#0#HTML" expanded="false" />
                 <element signature="e#43473#44282#0#HTML" expanded="false" />
                 <element signature="e#44336#46982#0#HTML" expanded="false" />
@@ -211,30 +213,34 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.033542976" vertical-offset="1136" max-vertical-offset="4992">
-              <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.1341719" vertical-offset="2192" max-vertical-offset="4000">
+              <caret line="2210" column="71" selection-start-line="2210" selection-start-column="71" selection-end-line="2210" selection-end-column="71" />
               <folding>
+                <element signature="tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#script#1" expanded="false" />
-                <element signature="e#154672#158699#0#HTML" expanded="false" />
-                <element signature="e#158742#160222#0#HTML" expanded="false" />
+                <element signature="e#154671#158698#0#HTML" expanded="false" />
+                <element signature="e#158741#160221#0#HTML" expanded="false" />
                 <element signature="tag#div#1" expanded="false" />
                 <element signature="tag#div#2" expanded="false" />
                 <element signature="tag#div#4" expanded="false" />
                 <element signature="tag#script#0;tag#div#4" expanded="false" />
-                <element signature="e#166097#166161#0#HTML" expanded="true" />
+                <element signature="e#166096#166160#0#HTML" expanded="true" />
                 <element signature="tag#style#0" expanded="false" />
                 <element signature="tag#div#6" expanded="false" />
-                <element signature="e#0#215155#0#Blade" expanded="false" />
-                <marker date="1576067024009" expanded="false" signature="155554:155593" placeholder="..." />
-                <marker date="1576067024009" expanded="false" signature="159686:159696" placeholder="..." />
-                <marker date="1576067024009" expanded="false" signature="159754:159764" placeholder="..." />
-                <marker date="1576067024009" expanded="false" signature="159823:159833" placeholder="..." />
-                <marker date="1576067024009" expanded="false" signature="159907:159917" placeholder="..." />
+                <element signature="tag#nav#0;tag#main#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#7" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#8" expanded="false" />
+                <element signature="tag#form#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#9" expanded="false" />
+                <marker date="1576067746804" expanded="false" signature="155553:155592" placeholder="..." />
+                <marker date="1576067746804" expanded="false" signature="159685:159695" placeholder="..." />
+                <marker date="1576067746804" expanded="false" signature="159753:159763" placeholder="..." />
+                <marker date="1576067746804" expanded="false" signature="159822:159832" placeholder="..." />
+                <marker date="1576067746804" expanded="false" signature="159906:159916" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -322,9 +328,9 @@
         <option value="$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php" />
-        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       </list>
     </option>
   </component>
@@ -1312,36 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.72" vertical-offset="616" max-vertical-offset="4544">
-          <caret line="354" column="48" selection-start-line="354" selection-start-column="48" selection-end-line="389" selection-end-column="54" />
-          <folding>
-            <element signature="tag#div#0;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#10573#10635#0#HTML" expanded="true" />
-            <element signature="e#19306#19338#0#HTML" expanded="true" />
-            <element signature="e#23385#23417#0#HTML" expanded="true" />
-            <element signature="tag#div#0;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#2;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#3;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#4;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#5;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#6;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#7;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#8;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#3;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#42195#43419#0#HTML" expanded="false" />
-            <element signature="e#43473#44282#0#HTML" expanded="false" />
-            <element signature="e#44336#46982#0#HTML" expanded="false" />
-            <marker date="1576062298916" expanded="false" signature="44983:44999" placeholder="..." />
-            <marker date="1576062298916" expanded="false" signature="45803:45819" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.48" vertical-offset="2982" max-vertical-offset="4272">
@@ -1382,32 +1358,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.36" vertical-offset="1347" max-vertical-offset="4144">
+          <caret line="493" column="4" selection-start-line="493" selection-start-column="4" selection-end-line="512" selection-end-column="15" />
+          <folding>
+            <element signature="tag#div#0;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#10573#10635#0#HTML" expanded="true" />
+            <element signature="e#19306#19338#0#HTML" expanded="true" />
+            <element signature="e#23385#23417#0#HTML" expanded="true" />
+            <element signature="tag#div#0;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#2;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#3;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#4;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#5;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#6;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#7;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#8;tag#fieldset#0;tag#div#0;tag#div#2;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#3;tag#form#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0" expanded="false" />
+            <element signature="e#42195#43419#0#HTML" expanded="false" />
+            <element signature="e#43473#44282#0#HTML" expanded="false" />
+            <element signature="e#44336#46982#0#HTML" expanded="false" />
+            <marker date="1576062298916" expanded="false" signature="44983:44999" placeholder="..." />
+            <marker date="1576062298916" expanded="false" signature="45803:45819" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033542976" vertical-offset="1136" max-vertical-offset="4992">
-          <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.1341719" vertical-offset="2192" max-vertical-offset="4000">
+          <caret line="2210" column="71" selection-start-line="2210" selection-start-column="71" selection-end-line="2210" selection-end-column="71" />
           <folding>
+            <element signature="tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#script#1" expanded="false" />
-            <element signature="e#154672#158699#0#HTML" expanded="false" />
-            <element signature="e#158742#160222#0#HTML" expanded="false" />
+            <element signature="e#154671#158698#0#HTML" expanded="false" />
+            <element signature="e#158741#160221#0#HTML" expanded="false" />
             <element signature="tag#div#1" expanded="false" />
             <element signature="tag#div#2" expanded="false" />
             <element signature="tag#div#4" expanded="false" />
             <element signature="tag#script#0;tag#div#4" expanded="false" />
-            <element signature="e#166097#166161#0#HTML" expanded="true" />
+            <element signature="e#166096#166160#0#HTML" expanded="true" />
             <element signature="tag#style#0" expanded="false" />
             <element signature="tag#div#6" expanded="false" />
-            <element signature="e#0#215155#0#Blade" expanded="false" />
-            <marker date="1576067024009" expanded="false" signature="155554:155593" placeholder="..." />
-            <marker date="1576067024009" expanded="false" signature="159686:159696" placeholder="..." />
-            <marker date="1576067024009" expanded="false" signature="159754:159764" placeholder="..." />
-            <marker date="1576067024009" expanded="false" signature="159823:159833" placeholder="..." />
-            <marker date="1576067024009" expanded="false" signature="159907:159917" placeholder="..." />
+            <element signature="tag#nav#0;tag#main#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#7" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#8" expanded="false" />
+            <element signature="tag#form#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#9" expanded="false" />
+            <marker date="1576067746804" expanded="false" signature="155553:155592" placeholder="..." />
+            <marker date="1576067746804" expanded="false" signature="159685:159695" placeholder="..." />
+            <marker date="1576067746804" expanded="false" signature="159753:159763" placeholder="..." />
+            <marker date="1576067746804" expanded="false" signature="159822:159832" placeholder="..." />
+            <marker date="1576067746804" expanded="false" signature="159906:159916" placeholder="..." />
           </folding>
         </state>
       </provider>
