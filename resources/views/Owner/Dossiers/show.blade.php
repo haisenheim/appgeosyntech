@@ -74,7 +74,7 @@
                             <p>AUTEUR : {{ $projet->auteur->name }}</p>
                             <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
                             @if($projet->modele)
-                                <a href="#" data-toggle="modal" data-target="#bm" class="btn btn-outtline-success btn-block">MODELE ECONOMIQUE</a>
+                                <a href="#" data-toggle="modal" data-target="#bm" class="btn btn-outline-success btn-block">MODELE ECONOMIQUE</a>
                             @endif
                             @if($projet->etape>=4)
                                 <ul class="list-group">
@@ -2147,9 +2147,9 @@
 
         @if($projet->modele)
         <div class="modal fade" id="bm" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        		<div class="modal-dialog modal-lg" role="document">
+        		<div class="modal-dialog modal-xl" role="document">
         			<div class="modal-content">
-        				<div class="modal-header bg-primary">
+        				<div class="modal-header bg-success">
         					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>MODELE ECONOMIQUE</span></h5>
         					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
@@ -2204,9 +2204,26 @@
         				    </form>
         				</div>
         			</div>
+
         		</div>
 
         </div>
+
+        <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('textarea').summernote({
+            height: 125,
+            tabsize: 2,
+            followingToolbar: true,
+            lang:'fr-FR'
+          });
+        });
+      </script>
         @endif
 <style>
          div.note-editor.note-frame{
