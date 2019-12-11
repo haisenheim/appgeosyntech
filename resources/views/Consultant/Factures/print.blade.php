@@ -128,7 +128,7 @@
                                         <tr>
                                             <td>{{ $i++ }}</td>
                                             <td>{{ $ligne->name }}</td>
-                                            <td>{{ $ligne->montant_apporteur }}</td>
+                                            <td>{{ $ligne->montant_consultant }}</td>
                                             <td>{{ $ligne->owner->name }}</td>
 
                                             <td>{{ date_format($ligne->created_at, 'd/m/Y') }}</td>
