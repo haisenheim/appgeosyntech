@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class Owner
 {
@@ -19,6 +20,23 @@ class Owner
         if(Auth::user()->role_id != 3){
             return redirect('/login');
         }
+
+	    $path = explode('/',$request->path());
+	    if(in_array('mailbox',$path)){
+		    Session::put('active', 6);
+	    }
+	    if(in_array('letter',$path)){
+		    Session::put('active', 5);
+	    }
+	    if(in_array('actifs',$path) ||in_array('creances',$path)){
+		    Session::put('active', 3);
+	    }
+	    if(in_array('projets',$path) ||in_array('dossiers',$path)){
+		    Session::put('active', 2);
+	    }
+	    if(in_array('dashboard',$path)){
+		    Session::put('active', 1);
+	    }
 
         return $next($request);
     }
