@@ -57,7 +57,7 @@
                                 <th>Paiement</th>
                                 <th>MONTANT</th>
                                 <th>CLIENT</th>
-                                <th>DOSSIER</th>
+
                                 <th>DATE DU PAIEMENT</th>
                             </tr>
                         </thead>
@@ -69,10 +69,9 @@
                                     <tr>
                                         <td>{{ $i++ }}</td>
                                         <td>{{ $ligne->name }}</td>
-                                        <td>{{ $ligne->montant_apporteur }}</td>
+                                        <td>{{ $ligne->montant_consultant }}</td>
                                         <td>{{ $ligne->owner->name }}</td>
 
-                                        <td>{{ $ligne->projet?$ligne->projet->name:$ligne->earlie?$ligne->earlie->name:$ligne->actif?$ligne->actif->name:$ligne->creance?$ligne->creance->name:$ligne->infrastructure?$ligne->infrastructure->name:'-' }}</td>
                                         <td>{{ date_format($ligne->created_at, 'd/m/Y') }}</td>
                                     </tr>
                                 @endforeach
