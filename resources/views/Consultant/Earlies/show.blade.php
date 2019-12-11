@@ -1893,10 +1893,8 @@
 
 
                                       <div class="card-tools">
-
                                            <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
                                            </button>
-
                                       </div>
                                 </div>
         				        <div class="card-body">

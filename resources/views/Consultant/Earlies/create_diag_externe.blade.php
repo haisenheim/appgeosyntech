@@ -23,30 +23,16 @@ CREATION DU DIAGNOSTIC EXTERNE
                             <p>MONTANT : {{ $projet->montant }}</p>
                             <input type="hidden" id="id" value="<?= $projet->token ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-
+                            <hr/>
 
                             @if($projet->modepaiement_id>0)
-                                <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
+                                <h6 class="page-header" style="background-color: inherit">FORMULE DE PAIEMENT</h6>
                                 <ul class="list-group">
                                     <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
-                                    <li class="list-group-item" >PRIX HT : <span style="font-weight: 700">{{ $projet->modepaiement->prix }}</span></li>
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->modepaiement->prixttc }}</span></li>
-                                </ul>
-                            @else
-                                <div>
-                                    <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
 
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><span id="mode_name" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item" >PRIX HT : <span id="mode_prix" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">PRIX TTC : <span id="mode_prixttc" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">
-                                        <p id="mode_description"></p>
-                                        </li>
-                                    </ul>
-                                    <hr/>
-                                    
-                                </div>
+                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite * 4 ,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span></li>
+                                </ul>
+
                             @endif
                         </div>
                         </div>
@@ -84,55 +70,63 @@ CREATION DU DIAGNOSTIC EXTERNE
                                             <div class="card">
                                               <div class="card-header">
                                                  <h6 style="background-color: transparent" class="text-center">ANALYSE DE LA DEMANDE</h6>
+                                                  <div class="card-tools">
+                                                       <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                                       </button>
+                                                  </div>
                                               </div>
                                               <div class="card-body">
                                                  <div class="">
                                                     <div class="" id="">
                                                      <div class="" id="segments" >
                                                          <div class="row" style="">
-                                                             <div class="col-md-2 col-sm-12">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Le nom du segment">QUI?</label>
+                                                                     <label for="qui" class="control-label" title="Le nom du segment">Qui sont les clients cibles ?</label>
                                                                      <input id="qui" name="name" type="text" class="form-control de"/>
                                                                  </div>
                                                              </div>
-                                                             <div class="col-md-3 col-sm-12">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Le nom du segment">QUOI?</label>
+                                                                     <label for="" class="control-label" title="Le nom du segment">Quel est la problématique à laquelle ils sont confrontés? </label>
                                                                      <input id="quoi" name="quoi" type="text" class="form-control de" placeholder=""/>
                                                                  </div>
                                                              </div>
-                                                             <div class="col-md-3 col-sm-12">
+                                                             </div>
+                                                             <div class="row">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">OU?</label>
+                                                                     <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">Où achètent-ils des produits-services pour résoudre cette problématique ?</label>
                                                                      <input id="ou" name="ou" type="text" class="form-control de" placeholder=""/>
                                                                  </div>
                                                              </div>
 
-                                                             <div class="col-md-4 col-sm-12">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">QUAND?</label>
+                                                                     <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">A quelle fréquence achètent-ils ces produits-services ?</label>
                                                                      <input id="quand" name="ou" type="text" class="form-control de" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
                                                                  </div>
                                                              </div>
-
-                                                             <div class="col-md-4 col-sm-12">
+                                                            </div>
+                                                            <div class="row">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">COMBIEN?</label>
+                                                                     <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?</label>
                                                                      <input id="combien" name="ou" type="text" class="form-control de" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
                                                                  </div>
                                                              </div>
 
-                                                             <div class="col-md-5 col-sm-12">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">POURQUOI?</label>
+                                                                     <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">Pourquoi apprécient-ils la solution qu'ils utilisent ?</label>
                                                                      <textarea id="pourquoi" name="ou" class="form-control de" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
                                                                  </div>
                                                              </div>
-                                                             <div class="col-md-2 col-sm-12">
-                                                                 <button style="margin-top: 40px" class="btn btn-success btn-sm" id="btn-seg-add"><i class="fa fa-plus-circle"></i></button>
                                                              </div>
-                                                         </div>
+                                                             <div class="">
+                                                                 <button style="margin-top: 40px" class="btn btn-outline-success btn-sm btn-block" id="btn-seg-add"><i class="fa fa-plus-circle"></i></button>
+                                                             </div>
+
                                                          <hr/>
                                                          <h6 class="">TABLE DES SEGMENTS</h6>
                                                          <div class="table-responsive">
