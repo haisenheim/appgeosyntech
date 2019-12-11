@@ -1036,7 +1036,7 @@ NOUVEAU DOSSIER DE LEVEE DE FONDS
     <script type="text/javascript">
         $(document).ready(function() {
           $('textarea').summernote({
-            height: 300,
+            height: 125,
             tabsize: 2,
             followingToolbar: true,
             lang:'fr-FR'
