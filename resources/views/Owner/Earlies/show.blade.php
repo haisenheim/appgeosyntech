@@ -269,7 +269,7 @@
                                                 $ou=$ou."<td>".$segment->ou."</td>";
                                                 $comment=$comment."<td>".$segment->comment."</td>";
                                                 $fournisseur=$fournisseur."<td>".$segment->fournisseur."</td>";
-                                                $communication=$commication."<td>".$segment->communication."</td>";
+                                                $communication=$communication."<td>".$segment->communication."</td>";
                                                 $fidelisation=$fidelisation."<td>".$segment->fidelisation."</td>";
                                                 $ca=$ca."<td>".number_format($segment->ca,0,',','.' ) ."</td>";
                                                 $cv=$cv."<td>".number_format($segment->cv,0,',','.')."</td>";
@@ -281,7 +281,7 @@
                                                 ?>
                                             <?php endforeach; ?>
                                             <tr><th></th><?= $con ?></tr>
-                                            <tr> <th>Qui sont vos concurrents sur le segment que vous avez ciblé?</th> <?= $qui ?> </tr>
+                                            <tr> <th >Qui sont vos concurrents sur le segment que vous avez ciblé?</th> <?= $qui ?> </tr>
                                            <tr><th>Quel est le produit-service proposé par vos  concurrents pour résoudre les problèmes auxquels vos clients sont confrontés? (Avantages et inconvénients)</th> <?= $quoi ?> </tr>
                                            <tr> <th>Quels sont les canaux de distribution utilisés par chaque concurrent pour acheminer le produit-service vers les clients? Canaux directs et indirects ; (Avantages et inconvénients)</th> <?= $ou ?> </tr>
                                            <tr> <th>Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)</th> <?= $commication ?> </tr>
@@ -1604,6 +1604,11 @@
                   </div>
 
               </div>
+     <style>
+        #concurrents table th{
+            width:50%;
+        }
+     </style>
 
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
 
