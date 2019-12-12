@@ -195,22 +195,36 @@ CREATION DU DIAGNOSTIC EXTERNE
 
                                                                               <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)</label>
-                                                                                      <input id="quandc" name="ou" type="text" class="form-control dec" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
+                                                                                      <label for="" class="control-label" title="">Quelle est la disponibilité des produits-services des concurrents (Saisonnière – toute l’année – dans la limite des niveaux de production) (Avantages et inconvénients)</label>
+                                                                                      <input id="quandc" name="ou" type="text" class="form-control dec" placeholder="Quelle est la disponibilité des produits-services des concurrents (Saisonnière – toute l’année – dans la limite des niveaux de production) (Avantages et inconvénients"/>
                                                                                   </div>
                                                                               </div>
 
                                                                               <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">Quelle est la stratégie mise en place par les concurrents pour pousser les clients à acheter ? (Avantages et inconvénients)</label>
-                                                                                      <input id="combienc" name="ou" type="text" class="form-control dec" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
+                                                                                      <label for="" class="control-label" title="Quel est le prix proposé par les concurrents ? (Avantages et inconvénients)">Quel est le prix proposé par les concurrents ? (Avantages et inconvénients)</label>
+                                                                                      <input id="combienc" name="ou" type="text" class="form-control dec" placeholder="Quel est le prix proposé par les concurrents ? (Avantages et inconvénients)"/>
                                                                                   </div>
                                                                               </div>
 
                                                                               <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)</label>
-                                                                                      <textarea id="pourquoic" name="ou" class="form-control dec" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
+                                                                                      <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">Qui sont les fournisseurs de vos concurrents et donnez en une appréciation en terme de qualité/Coût/Quantité/Délai de livraison ?</label>
+                                                                                      <input id="pourquoic" name="ou" class="form-control dec" placeholder="Qui sont les fournisseurs de vos concurrents et donnez en une appréciation en terme de qualité/Coût/Quantité/Délai de livraison ?" />
+                                                                                  </div>
+                                                                              </div>
+
+                                                                              <div class="col-md-12 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)">Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)</label>
+                                                                                      <input id="communication" name="communication" type="text" class="form-control dec" placeholder="Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)"/>
+                                                                                  </div>
+                                                                              </div>
+
+                                                                              <div class="col-md-12 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)">Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)</label>
+                                                                                      <input id="fidelisation" name="fidelisation" class="form-control dec" placeholder="Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)" />
                                                                                   </div>
                                                                               </div>
 
@@ -263,6 +277,8 @@ CREATION DU DIAGNOSTIC EXTERNE
                                                                          <th>QUAND</th>
                                                                          <th>COMBIEN</th>
                                                                          <th>POURQUOI</th>
+                                                                         <th>COMMUNICATION</th>
+                                                                         <th>FIDELISATION</th>
                                                                          <th>CA</th>
                                                                          <th>CV</th>
 
@@ -382,30 +398,7 @@ CREATION DU DIAGNOSTIC EXTERNE
                 </div>
     </div>
 
-    <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-    	<div class="modal-content">
-    		<div class="modal-body">
-    			<div class="row">
-    			    <div class="col-md-5 col-sm-12">
-    			         <div  id="popup-img">
 
-                         </div>
-    			    </div>
-    			    <div class="col-md-7 col-sm-12">
-                            « Félicitations ! Vous venez d’effectuer le diagnostic externe de ce projet. <br/>
-                            Le dossier de levée de fonds est composé de 4 parties. <br/>
-                            Afin de passer à la troisième partie nous vous prions de vous rapprocher du cabinet OBAC afin de solder le second paiement. »
-
-                            <a class="btn btn-success btn-block" id="btn-continue" href="/consultant/projets/{{ $projet->token }}">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
-    			    </div>
-    			</div>
-    		</div>
-
-
-    	</div>
-    </div>
-    </div>
 <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
@@ -447,6 +440,8 @@ CREATION DU DIAGNOSTIC EXTERNE
         var ou = $('#ouc').val();
         var pourquoi=$('#pourquoic').val();
         var combien = $('#combienc').val();
+        var communication=$('#communication').val();
+        var fidelisation = $('#fidelisation').val();
 
         var sal = $('#sal').val();
         var cv = $('#cv').val();
@@ -456,10 +451,12 @@ CREATION DU DIAGNOSTIC EXTERNE
 
 
         var table= $('#table-concurrents').find('tbody');
-        var tr = '<tr data-qui="'+ qui +'" data-quoi="'+ quoi +'" data-quand= "'+ quand +'" data-combien= "'+ combien
+        var tr = '<tr data-qui="'+ qui +'" data-quoi="'+ quoi +'" data-quand= "'+ quand +'" data-combien= "'+ combien+'" data-quand= "'+ communication +'" data-combien= "'+ fidelisation
             +'" data-ou="'+ ou +'" data-pourquoi="'+ pourquoi +'" data-ca="'+ ca +'" data-cv="'+ cv +'" data-cf="'+ cf +'" data-sal="'+ sal
             +'"><td>'+qui+'</td><td>'+quoi+'</td><td>'+ou+'</td><td>'+quand+'</td>' +
-            '<td>'+combien+'</td><td>'+pourquoi+'</td><td>'+ca+'</td><td>'+cv+'</td><td>'+cf+'</td><td>'+sal+'</td><td class="removec"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></td></tr>';
+            '<td>'+combien+'</td><td>'+pourquoi+'</td><td>'+communication+'</td><td>'+fidelisation+'</td><td>'+ca+'</td><td>'+cv+'</td><td>'+cf+'</td><td>'+sal+'</td>'
+
+            +'<td class="removec"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></td></tr>';
         console.log(tr);
         table.append(tr);
         $('.dec').val('');
@@ -500,12 +497,12 @@ CREATION DU DIAGNOSTIC EXTERNE
             elt.ou=$(this).data('ou');
             elt.quand=$(this).data('quand');
             elt.combien=$(this).data('combien');
-            elt.pourquoi=$(this).data('pourquoi');
+            elt.fournisseur=$(this).data('pourquoi');
             elt.ca=$(this).data('ca');
             elt.cv=$(this).data('cv');
             elt.cf=$(this).data('cf');
-            //elt.mb=$(this).data('mb');
-            //elt.va=$(this).data('va');
+            elt.communication=$(this).data('communication');
+            elt.fidelisation=$(this).data('fidelisation');
             elt.sal=$(this).data('sal');
             //elt.ebe=$(this).data('ebe');
             concurrents.push(elt);
@@ -563,16 +560,7 @@ CREATION DU DIAGNOSTIC EXTERNE
                         },
                         success: function(data){
                             if(data.id!=null){
-
-                               Toast.fire({
-                                           type: 'success',
-                                           title: 'Votre dossier a été créé avec succès!!!'
-                                         });
-                                         setTimeout(function() {
-                                           $('#popup').show();
-                                         },2000);
-
-                               // window.location.replace(redirectUrl+data.token);
+                                window.location.replace(redirectUrl+data.token);
                             }
                            /// console.log(data);
                         },
