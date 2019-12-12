@@ -215,8 +215,8 @@ class DossierController extends Controller
 	 */
 
 	public function saveModele(Request $request){
-		dd($request->all());
-		 Modele::updateOrCreate(['token'=>$request->token],$request->all());
+		//dd($request->all());
+		 Modele::updateOrCreate(['token'=>$request->token],['offre'=>$request->offre,'segment'=>$request->segment,'relation'=>$request->relation,'canaux'=>$request->canaux,'partenaires'=>$request->partenaires,'activites'=>$request->activites,'ressources'=>$request->ressources,'couts'=>$request->couts,'revenus'=>$request->revenus]);
 		return back();
 	}
 
