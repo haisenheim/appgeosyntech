@@ -258,7 +258,7 @@
 
                                             <tbody>
                                             <?php $i=0; $quoi=""; $qui=""; $ou=""; $comment=""; $combien=""; $quand="";
-                                            $ca=""; $cv=""; $cf=""; $mb=""; $va=""; $salaires=""; $ebe=""; $fournisseur=""; $fidelisation=""; $comment=""; $commication=""; $con ="";
+                                            $ca=""; $cv=""; $cf=""; $mb=""; $va=""; $salaires=""; $ebe=""; $fournisseur=""; $fidelisation=""; $comment=""; $communication=""; $con ="";
                                             foreach($projet->concurrents as $segment): ?>
                                                 <?php
                                                 $con = $con."<th>CONCURRENT ". ++$i ."</th>";
