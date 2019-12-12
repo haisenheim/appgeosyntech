@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Earlies/create_diag_externe.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Earlies/create_diag_externe.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Angel/Infrastructures/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Angel/Infrastructures/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" />
     </list>
     <ignored path="alert.iws" />
@@ -34,25 +48,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7648" max-vertical-offset="12320">
-              <caret line="478" column="6" selection-start-line="453" selection-start-column="9" selection-end-line="478" selection-end-column="6" />
-              <folding>
-                <marker date="1576062298916" expanded="false" signature="44983:44999" placeholder="..." />
-                <marker date="1576062298916" expanded="false" signature="45803:45819" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="create_diag_externe.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/create_diag_externe.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.84" vertical-offset="7248" max-vertical-offset="9776">
-              <caret line="459" column="184" selection-start-line="459" selection-start-column="184" selection-end-line="459" selection-end-column="184" />
-              <folding />
+            <state vertical-scroll-proportion="-5.8" vertical-offset="959" max-vertical-offset="5008">
+              <caret line="308" column="50" selection-start-line="68" selection-start-column="43" selection-end-line="308" selection-end-column="50" />
+              <folding>
+                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="e#38300#39861#0#HTML" expanded="false" />
+                <element signature="e#40258#40674#0#HTML" expanded="false" />
+                <element signature="e#40775#41446#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,135 +68,17 @@
       <file leaf-file-name="EarlyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.08" vertical-offset="935" max-vertical-offset="4288">
-              <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
+            <state vertical-scroll-proportion="-8.04" vertical-offset="887" max-vertical-offset="3920">
+              <caret line="110" column="17" selection-start-line="90" selection-start-column="16" selection-end-line="110" selection-end-column="17" />
               <folding>
                 <element signature="e#1774#1954#0#PHP" expanded="false" />
-                <element signature="e#4091#4279#0#PHP" expanded="false" />
-                <element signature="e#4323#4543#0#PHP" expanded="false" />
-                <element signature="e#4663#5773#0#PHP" expanded="false" />
-                <element signature="e#5777#6483#0#PHP" expanded="false" />
-                <element signature="e#6527#8102#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="256" max-vertical-offset="38256">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <marker date="1574006180288" expanded="false" signature="160304:160343" placeholder="..." />
-                <marker date="1574006180288" expanded="false" signature="164601:164611" placeholder="..." />
-                <marker date="1574006180288" expanded="false" signature="164669:164679" placeholder="..." />
-                <marker date="1574006180288" expanded="false" signature="164738:164748" placeholder="..." />
-                <marker date="1574006180288" expanded="false" signature="164822:164832" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5714286" vertical-offset="4064" max-vertical-offset="8496">
-              <caret line="271" column="67" selection-start-line="271" selection-start-column="67" selection-end-line="271" selection-end-column="67" />
-              <folding>
-                <element signature="e#4402#4426#0#HTML" expanded="true" />
-                <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="e#136443#137923#0#HTML" expanded="false" />
-                <element signature="tag#div#1" expanded="false" />
-                <element signature="tag#div#2" expanded="false" />
-                <element signature="tag#div#3" expanded="false" />
-                <element signature="tag#div#4" expanded="false" />
-                <element signature="tag#div#0;tag#div#5" expanded="false" />
-                <element signature="e#143844#143908#0#HTML" expanded="true" />
-                <element signature="tag#style#1" expanded="false" />
-                <element signature="tag#div#0;tag#div#6" expanded="false" />
-                <element signature="tag#script#2" expanded="false" />
-                <element signature="e#0#193065#0#Blade" expanded="false" />
-                <element signature="tag#main#0" expanded="false" />
-                <element signature="tag#div#7" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#7" expanded="false" />
-                <element signature="tag#div#8" expanded="false" />
-                <element signature="tag#div#9" expanded="false" />
-                <element signature="tag#div#0;tag#div#9" expanded="false" />
-                <element signature="tag#style#2" expanded="false" />
-                <marker date="1576154311525" expanded="false" signature="133255:133294" placeholder="..." />
-                <marker date="1576154311525" expanded="false" signature="137387:137397" placeholder="..." />
-                <marker date="1576154311525" expanded="false" signature="137455:137465" placeholder="..." />
-                <marker date="1576154311525" expanded="false" signature="137524:137534" placeholder="..." />
-                <marker date="1576154311525" expanded="false" signature="137608:137618" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_diag_externe.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.8" vertical-offset="131" max-vertical-offset="2848">
-              <caret line="410" column="22" selection-start-line="410" selection-start-column="22" selection-end-line="410" selection-end-column="22" />
-              <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#32555#32669#0#HTML" expanded="true" />
-                <element signature="e#34509#35377#0#HTML" expanded="false" />
-                <element signature="e#35420#36618#0#HTML" expanded="false" />
-                <element signature="e#37007#37370#0#HTML" expanded="false" />
-                <element signature="e#37471#38092#0#HTML" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_diag_externe.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create_diag_externe.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.8" vertical-offset="163" max-vertical-offset="4000">
-              <caret line="402" column="44" selection-start-line="402" selection-start-column="44" selection-end-line="402" selection-end-column="44" />
-              <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#31634#31748#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.96" vertical-offset="883" max-vertical-offset="9424">
-              <caret line="77" column="34" selection-start-line="75" selection-start-column="27" selection-end-line="77" selection-end-column="34" />
-              <folding>
-                <element signature="tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#script#3" expanded="false" />
-                <element signature="tag#div#1" expanded="false" />
-                <element signature="tag#div#2" expanded="false" />
-                <element signature="tag#div#3" expanded="false" />
-                <element signature="tag#div#4" expanded="false" />
-                <element signature="tag#div#0;tag#div#4" expanded="false" />
-                <element signature="tag#div#5" expanded="false" />
-                <element signature="tag#main#0" expanded="false" />
-                <element signature="tag#div#7" expanded="false" />
-                <element signature="tag#div#8" expanded="false" />
-                <element signature="tag#div#9" expanded="false" />
-                <marker date="1576146775332" expanded="false" signature="154877:154916" placeholder="..." />
-                <marker date="1576146775332" expanded="false" signature="159009:159019" placeholder="..." />
-                <marker date="1576146775332" expanded="false" signature="159077:159087" placeholder="..." />
-                <marker date="1576146775332" expanded="false" signature="159146:159156" placeholder="..." />
-                <marker date="1576146775332" expanded="false" signature="159230:159240" placeholder="..." />
+                <element signature="e#2326#3328#0#PHP" expanded="false" />
+                <element signature="e#3447#3890#0#PHP" expanded="false" />
+                <element signature="e#4379#4567#0#PHP" expanded="false" />
+                <element signature="e#4611#4831#0#PHP" expanded="false" />
+                <element signature="e#4951#6061#0#PHP" expanded="false" />
+                <element signature="e#6065#6771#0#PHP" expanded="false" />
+                <element signature="e#6815#8390#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -197,48 +87,152 @@
       <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.84" vertical-offset="832" max-vertical-offset="3792">
-              <caret line="218" column="310" selection-start-line="218" selection-start-column="310" selection-end-line="218" selection-end-column="310" />
+            <state vertical-scroll-proportion="-4.52" vertical-offset="639" max-vertical-offset="2608">
+              <caret line="141" column="9" selection-start-line="82" selection-start-column="8" selection-end-line="141" selection-end-column="9" />
               <folding>
                 <element signature="e#1438#1575#0#PHP" expanded="false" />
                 <element signature="e#1578#1716#0#PHP" expanded="false" />
                 <element signature="e#1753#1929#0#PHP" expanded="false" />
-                <element signature="e#1968#4114#0#PHP" expanded="false" />
-                <element signature="e#4117#6115#0#PHP" expanded="false" />
-                <element signature="e#6235#6454#0#PHP" expanded="false" />
-                <element signature="e#6998#7397#0#PHP" expanded="false" />
-                <element signature="e#7400#7794#0#PHP" expanded="false" />
-                <element signature="e#7798#8818#0#PHP" expanded="false" />
-                <element signature="e#8822#9659#0#PHP" expanded="false" />
-                <element signature="e#9711#12127#0#PHP" expanded="false" />
-                <element signature="e#12901#13521#0#PHP" expanded="false" />
-                <element signature="e#14795#15046#0#PHP" expanded="false" />
-                <element signature="e#15051#15302#0#PHP" expanded="false" />
-                <element signature="e#15307#15558#0#PHP" expanded="false" />
-                <element signature="e#15563#15825#0#PHP" expanded="false" />
-                <element signature="e#15830#16092#0#PHP" expanded="false" />
-                <element signature="e#16760#16943#0#PHP" expanded="false" />
+                <element signature="e#2181#4240#0#PHP" expanded="false" />
+                <element signature="e#4307#6305#0#PHP" expanded="false" />
+                <element signature="e#6425#6644#0#PHP" expanded="false" />
+                <element signature="e#7188#7587#0#PHP" expanded="false" />
+                <element signature="e#7590#7984#0#PHP" expanded="false" />
+                <element signature="e#7988#9008#0#PHP" expanded="false" />
+                <element signature="e#9012#9849#0#PHP" expanded="false" />
+                <element signature="e#9901#12317#0#PHP" expanded="false" />
+                <element signature="e#12357#17205#0#PHP" expanded="false" />
+                <element signature="e#13091#13711#0#PHP" expanded="false" />
+                <element signature="e#14985#15236#0#PHP" expanded="false" />
+                <element signature="e#15241#15492#0#PHP" expanded="false" />
+                <element signature="e#15497#15748#0#PHP" expanded="false" />
+                <element signature="e#15753#16015#0#PHP" expanded="false" />
+                <element signature="e#16020#16282#0#PHP" expanded="false" />
+                <element signature="e#16950#17133#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.38445807" vertical-offset="1012" max-vertical-offset="6432">
+              <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EarlyController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.8" vertical-offset="327" max-vertical-offset="3776">
+              <caret line="118" column="13" selection-start-line="116" selection-start-column="12" selection-end-line="118" selection-end-column="13" />
+              <folding>
+                <element signature="e#1025#1250#0#PHP" expanded="false" />
+                <element signature="e#1253#1497#0#PHP" expanded="false" />
+                <element signature="e#1534#1714#0#PHP" expanded="false" />
+                <element signature="e#2077#3059#0#PHP" expanded="false" />
+                <element signature="e#3173#3606#0#PHP" expanded="false" />
+                <element signature="e#4043#4180#0#PHP" expanded="false" />
+                <element signature="e#4183#4321#0#PHP" expanded="false" />
+                <element signature="e#4324#6322#0#PHP" expanded="false" />
+                <element signature="e#6442#6660#0#PHP" expanded="false" />
+                <element signature="e#6663#6779#0#PHP" expanded="false" />
+                <element signature="e#6782#7181#0#PHP" expanded="false" />
+                <element signature="e#7184#7578#0#PHP" expanded="false" />
+                <element signature="e#7582#8602#0#PHP" expanded="false" />
+                <element signature="e#8606#9443#0#PHP" expanded="false" />
+                <element signature="e#9495#12323#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.4" vertical-offset="30019" max-vertical-offset="36624">
-              <caret line="1894" column="37" selection-start-line="1894" selection-start-column="37" selection-end-line="1897" selection-end-column="44" />
+            <state vertical-scroll-proportion="-17.76" vertical-offset="1780" max-vertical-offset="37616">
+              <caret line="303" column="46" selection-start-line="303" selection-start-column="46" selection-end-line="303" selection-end-column="46" />
               <folding>
-                <marker date="1576105303074" expanded="false" signature="131370:131409" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="135502:135512" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="135570:135580" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="135639:135649" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="135723:135733" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="155698:155737" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="159830:159840" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="159898:159908" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="159967:159977" placeholder="..." />
-                <marker date="1576105303074" expanded="false" signature="160051:160061" placeholder="..." />
+                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <marker date="1576156642592" expanded="false" signature="133134:133173" placeholder="..." />
+                <marker date="1576156642592" expanded="false" signature="137266:137276" placeholder="..." />
+                <marker date="1576156642592" expanded="false" signature="137334:137344" placeholder="..." />
+                <marker date="1576156642592" expanded="false" signature="137403:137413" placeholder="..." />
+                <marker date="1576156642592" expanded="false" signature="137487:137497" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Angel/Infrastructures/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.2" vertical-offset="1732" max-vertical-offset="31312">
+              <caret line="531" column="48" selection-start-line="531" selection-start-column="48" selection-end-line="531" selection-end-column="48" />
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <marker date="1576156642527" expanded="false" signature="157544:157583" placeholder="..." />
+                <marker date="1576156642527" expanded="false" signature="161676:161686" placeholder="..." />
+                <marker date="1576156642527" expanded="false" signature="161744:161754" placeholder="..." />
+                <marker date="1576156642527" expanded="false" signature="161813:161823" placeholder="..." />
+                <marker date="1576156642527" expanded="false" signature="161897:161907" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_diag_externe.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.84" vertical-offset="2164" max-vertical-offset="3920">
+              <caret line="531" column="17" selection-start-line="515" selection-start-column="5" selection-end-line="531" selection-end-column="17" />
+              <folding>
+                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="e#6348#6385#0#HTML" expanded="true" />
+                <element signature="e#12165#12189#0#HTML" expanded="true" />
+                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="e#27221#27245#0#HTML" expanded="true" />
+                <element signature="tag#div#2;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="e#39820#41381#0#HTML" expanded="false" />
+                <element signature="e#42242#43009#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_diag_externe.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create_diag_externe.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.6" vertical-offset="6213" max-vertical-offset="8256">
+              <caret line="540" column="24" selection-start-line="540" selection-start-column="24" selection-end-line="540" selection-end-column="24" />
+              <folding>
+                <element signature="e#4436#4473#0#HTML" expanded="true" />
+                <element signature="e#10253#10277#0#HTML" expanded="true" />
+                <element signature="e#25309#25333#0#HTML" expanded="true" />
+                <element signature="tag#div#2;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="e#39831#41500#0#HTML" expanded="false" />
+                <element signature="e#42351#43230#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_diag_externe.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.76" vertical-offset="8468" max-vertical-offset="9712">
+              <caret line="606" column="27" selection-start-line="606" selection-start-column="27" selection-end-line="606" selection-end-column="27" />
+              <folding>
+                <element signature="e#5356#5393#0#HTML" expanded="true" />
+                <element signature="e#11173#11197#0#HTML" expanded="true" />
+                <element signature="e#26229#26253#0#HTML" expanded="true" />
+                <element signature="e#40750#42419#0#HTML" expanded="false" />
+                <element signature="e#43272#44151#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -257,13 +251,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/Apporteur/Factures/payees.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Commercials/facture.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Commercials/creances.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/commercial.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/consultant.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/Consultant.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Factures/creances.blade.php" />
         <option value="$PROJECT_DIR$/env.online" />
         <option value="$PROJECT_DIR$/public/js/api.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -290,11 +277,7 @@
         <option value="$PROJECT_DIR$/app/Models/Earlie.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pdf_view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Earlies/recu.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjetController.php" />
@@ -303,11 +286,22 @@
         <option value="$PROJECT_DIR$/resources/views/Consultant/Factures/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Factures/print.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
-        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Earlies/create_diag_externe.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Angel/Infrastructures/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Earlies/create_diag_externe.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
       </list>
     </option>
   </component>
@@ -435,11 +429,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Owner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Earlies" />
+              <option name="myItemId" value="Consultant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,11 +451,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Owner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dossiers" />
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -706,10 +692,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -775,27 +761,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Experts/recu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1744">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Commercials/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.96" vertical-offset="704" max-vertical-offset="2912">
-          <caret line="58" column="41" selection-start-line="54" selection-start-column="36" selection-end-line="58" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Experts/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.12" vertical-offset="611" max-vertical-offset="2944">
-          <caret line="54" column="191" selection-start-line="54" selection-start-column="191" selection-end-line="54" selection-end-column="191" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Experts/payees.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.12" vertical-offset="387" max-vertical-offset="1408">
@@ -944,20 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.44" vertical-offset="1181" max-vertical-offset="2096">
-          <caret line="1623" column="8" selection-start-line="1623" selection-start-column="8" selection-end-line="1755" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.84" vertical-offset="1590" max-vertical-offset="3200">
-          <caret line="450" column="26" selection-start-line="450" selection-start-column="26" selection-end-line="450" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4244898" vertical-offset="0" max-vertical-offset="720">
@@ -969,20 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-177.28" vertical-offset="0" max-vertical-offset="6928">
           <caret line="277" column="40" selection-start-line="277" selection-start-column="40" selection-end-line="277" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.8" vertical-offset="4291" max-vertical-offset="8048">
-          <caret line="2403" column="11" selection-start-line="2403" selection-start-column="11" selection-end-line="2403" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.84" vertical-offset="243" max-vertical-offset="5744">
-          <caret line="1286" column="20" selection-start-line="1284" selection-start-column="14" selection-end-line="1286" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1070,62 +1007,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1937" max-vertical-offset="9312">
-          <caret line="130" column="135" selection-start-line="130" selection-start-column="134" selection-end-line="130" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7648" max-vertical-offset="12320">
           <caret line="478" column="6" selection-start-line="453" selection-start-column="9" selection-end-line="478" selection-end-column="6" />
           <folding>
-            <marker date="1576062298916" expanded="false" signature="44983:44999" placeholder="..." />
-            <marker date="1576062298916" expanded="false" signature="45803:45819" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="256" max-vertical-offset="38256">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <marker date="1574006180288" expanded="false" signature="160304:160343" placeholder="..." />
-            <marker date="1574006180288" expanded="false" signature="164601:164611" placeholder="..." />
-            <marker date="1574006180288" expanded="false" signature="164669:164679" placeholder="..." />
-            <marker date="1574006180288" expanded="false" signature="164738:164748" placeholder="..." />
-            <marker date="1574006180288" expanded="false" signature="164822:164832" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.84" vertical-offset="832" max-vertical-offset="3792">
-          <caret line="218" column="310" selection-start-line="218" selection-start-column="310" selection-end-line="218" selection-end-column="310" />
-          <folding>
-            <element signature="e#1438#1575#0#PHP" expanded="false" />
-            <element signature="e#1578#1716#0#PHP" expanded="false" />
-            <element signature="e#1753#1929#0#PHP" expanded="false" />
-            <element signature="e#1968#4114#0#PHP" expanded="false" />
-            <element signature="e#4117#6115#0#PHP" expanded="false" />
-            <element signature="e#6235#6454#0#PHP" expanded="false" />
-            <element signature="e#6998#7397#0#PHP" expanded="false" />
-            <element signature="e#7400#7794#0#PHP" expanded="false" />
-            <element signature="e#7798#8818#0#PHP" expanded="false" />
-            <element signature="e#8822#9659#0#PHP" expanded="false" />
-            <element signature="e#9711#12127#0#PHP" expanded="false" />
-            <element signature="e#12901#13521#0#PHP" expanded="false" />
-            <element signature="e#14795#15046#0#PHP" expanded="false" />
-            <element signature="e#15051#15302#0#PHP" expanded="false" />
-            <element signature="e#15307#15558#0#PHP" expanded="false" />
-            <element signature="e#15563#15825#0#PHP" expanded="false" />
-            <element signature="e#15830#16092#0#PHP" expanded="false" />
-            <element signature="e#16760#16943#0#PHP" expanded="false" />
+            <marker date="1576062298916" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576062298916" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1135,26 +1023,46 @@
         <state vertical-scroll-proportion="-11.4" vertical-offset="30019" max-vertical-offset="36624">
           <caret line="1894" column="37" selection-start-line="1894" selection-start-column="37" selection-end-line="1897" selection-end-column="44" />
           <folding>
-            <marker date="1576105303074" expanded="false" signature="131370:131409" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="135502:135512" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="135570:135580" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="135639:135649" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="135723:135733" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="155698:155737" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="159830:159840" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="159898:159908" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="159967:159977" placeholder="..." />
-            <marker date="1576105303074" expanded="false" signature="160051:160061" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576105303074" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.96" vertical-offset="883" max-vertical-offset="9424">
-          <caret line="77" column="34" selection-start-line="75" selection-start-column="27" selection-end-line="77" selection-end-column="34" />
+        <state vertical-scroll-proportion="-17.76" vertical-offset="372" max-vertical-offset="2576">
+          <caret line="2027" column="13" selection-start-line="2027" selection-start-column="13" selection-end-line="2027" selection-end-column="13" />
           <folding>
-            <element signature="tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#a#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#ul#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="e#35611#35642#0#HTML" expanded="true" />
+            <element signature="e#46532#46550#0#HTML" expanded="true" />
+            <element signature="e#47041#47059#0#HTML" expanded="true" />
+            <element signature="e#47514#47532#0#HTML" expanded="true" />
+            <element signature="e#48006#48024#0#HTML" expanded="true" />
+            <element signature="e#48486#48504#0#HTML" expanded="true" />
+            <element signature="e#48962#48980#0#HTML" expanded="true" />
+            <element signature="e#49446#49464#0#HTML" expanded="true" />
+            <element signature="e#49927#49945#0#HTML" expanded="true" />
+            <element signature="e#50424#50442#0#HTML" expanded="true" />
+            <element signature="e#50916#50934#0#HTML" expanded="true" />
+            <element signature="e#51420#51438#0#HTML" expanded="true" />
+            <element signature="tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#script#3" expanded="false" />
             <element signature="tag#div#1" expanded="false" />
             <element signature="tag#div#2" expanded="false" />
@@ -1166,72 +1074,22 @@
             <element signature="tag#div#7" expanded="false" />
             <element signature="tag#div#8" expanded="false" />
             <element signature="tag#div#9" expanded="false" />
-            <marker date="1576146775332" expanded="false" signature="154877:154916" placeholder="..." />
-            <marker date="1576146775332" expanded="false" signature="159009:159019" placeholder="..." />
-            <marker date="1576146775332" expanded="false" signature="159077:159087" placeholder="..." />
-            <marker date="1576146775332" expanded="false" signature="159146:159156" placeholder="..." />
-            <marker date="1576146775332" expanded="false" signature="159230:159240" placeholder="..." />
+            <marker date="1576156642944" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642944" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642944" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642944" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642944" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.8" vertical-offset="131" max-vertical-offset="2848">
-          <caret line="410" column="22" selection-start-line="410" selection-start-column="22" selection-end-line="410" selection-end-column="22" />
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#32555#32669#0#HTML" expanded="true" />
-            <element signature="e#34509#35377#0#HTML" expanded="false" />
-            <element signature="e#35420#36618#0#HTML" expanded="false" />
-            <element signature="e#37007#37370#0#HTML" expanded="false" />
-            <element signature="e#37471#38092#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create_diag_externe.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.8" vertical-offset="163" max-vertical-offset="4000">
-          <caret line="402" column="44" selection-start-line="402" selection-start-column="44" selection-end-line="402" selection-end-column="44" />
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#31634#31748#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.08" vertical-offset="935" max-vertical-offset="4288">
-          <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
-          <folding>
-            <element signature="e#1774#1954#0#PHP" expanded="false" />
-            <element signature="e#4091#4279#0#PHP" expanded="false" />
-            <element signature="e#4323#4543#0#PHP" expanded="false" />
-            <element signature="e#4663#5773#0#PHP" expanded="false" />
-            <element signature="e#5777#6483#0#PHP" expanded="false" />
-            <element signature="e#6527#8102#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/create_diag_externe.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.84" vertical-offset="7248" max-vertical-offset="9776">
-          <caret line="459" column="184" selection-start-line="459" selection-start-column="184" selection-end-line="459" selection-end-column="184" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5714286" vertical-offset="4064" max-vertical-offset="8496">
-          <caret line="271" column="67" selection-start-line="271" selection-start-column="67" selection-end-line="271" selection-end-column="67" />
+        <state vertical-scroll-proportion="-17.28" vertical-offset="2944" max-vertical-offset="5552">
+          <caret line="1610" column="13" selection-start-line="1606" selection-start-column="5" selection-end-line="1610" selection-end-column="13" />
           <folding>
             <element signature="e#4402#4426#0#HTML" expanded="true" />
+            <element signature="tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
@@ -1241,17 +1099,18 @@
             <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="e#136443#137923#0#HTML" expanded="false" />
+            <element signature="tag#style#0" expanded="false" />
+            <element signature="e#136448#137928#0#HTML" expanded="false" />
             <element signature="tag#div#1" expanded="false" />
             <element signature="tag#div#2" expanded="false" />
             <element signature="tag#div#3" expanded="false" />
             <element signature="tag#div#4" expanded="false" />
             <element signature="tag#div#0;tag#div#5" expanded="false" />
-            <element signature="e#143844#143908#0#HTML" expanded="true" />
+            <element signature="e#143849#143913#0#HTML" expanded="true" />
             <element signature="tag#style#1" expanded="false" />
             <element signature="tag#div#0;tag#div#6" expanded="false" />
             <element signature="tag#script#2" expanded="false" />
-            <element signature="e#0#193065#0#Blade" expanded="false" />
+            <element signature="e#0#193070#0#Blade" expanded="false" />
             <element signature="tag#main#0" expanded="false" />
             <element signature="tag#div#7" expanded="false" />
             <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#7" expanded="false" />
@@ -1259,12 +1118,291 @@
             <element signature="tag#div#9" expanded="false" />
             <element signature="tag#div#0;tag#div#9" expanded="false" />
             <element signature="tag#style#2" expanded="false" />
-            <marker date="1576154311525" expanded="false" signature="133255:133294" placeholder="..." />
-            <marker date="1576154311525" expanded="false" signature="137387:137397" placeholder="..." />
-            <marker date="1576154311525" expanded="false" signature="137455:137465" placeholder="..." />
-            <marker date="1576154311525" expanded="false" signature="137524:137534" placeholder="..." />
-            <marker date="1576154311525" expanded="false" signature="137608:137618" placeholder="..." />
+            <marker date="1576155756865" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576155756865" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576155756865" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576155756865" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576155756865" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.64" vertical-offset="531" max-vertical-offset="6160">
+          <caret line="547" column="46" selection-start-line="454" selection-start-column="40" selection-end-line="547" selection-end-column="46" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#fieldset#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#33803#33834#0#HTML" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="e#44724#44742#0#HTML" expanded="true" />
+            <element signature="e#45233#45251#0#HTML" expanded="true" />
+            <element signature="e#45706#45724#0#HTML" expanded="true" />
+            <element signature="e#46198#46216#0#HTML" expanded="true" />
+            <element signature="e#46678#46696#0#HTML" expanded="true" />
+            <element signature="e#47154#47172#0#HTML" expanded="true" />
+            <element signature="e#47638#47656#0#HTML" expanded="true" />
+            <element signature="e#48119#48137#0#HTML" expanded="true" />
+            <element signature="e#48616#48634#0#HTML" expanded="true" />
+            <element signature="e#49108#49126#0#HTML" expanded="true" />
+            <element signature="e#49612#49630#0#HTML" expanded="true" />
+            <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#script#0" expanded="false" />
+            <element signature="tag#div#1" expanded="false" />
+            <element signature="tag#div#2" expanded="false" />
+            <element signature="tag#div#3" expanded="false" />
+            <element signature="tag#div#4" expanded="false" />
+            <element signature="tag#style#1" expanded="false" />
+            <element signature="tag#div#5" expanded="false" />
+            <element signature="tag#style#2" expanded="false" />
+            <element signature="tag#div#0;tag#div#6" expanded="false" />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642795" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.76" vertical-offset="2116" max-vertical-offset="29296">
+          <caret line="506" column="46" selection-start-line="506" selection-start-column="46" selection-end-line="506" selection-end-column="46" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#1" expanded="false" />
+            <element signature="tag#div#2" expanded="false" />
+            <element signature="e#161532#161654#0#HTML" expanded="false" />
+            <element signature="e#161694#165860#0#HTML" expanded="false" />
+            <element signature="e#165892#167604#0#HTML" expanded="false" />
+            <marker date="1576156642651" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642651" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642651" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642651" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642651" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.76" vertical-offset="1780" max-vertical-offset="37616">
+          <caret line="303" column="46" selection-start-line="303" selection-start-column="46" selection-end-line="303" selection-end-column="46" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <marker date="1576156642592" expanded="false" signature="133134:133173" placeholder="..." />
+            <marker date="1576156642592" expanded="false" signature="137266:137276" placeholder="..." />
+            <marker date="1576156642592" expanded="false" signature="137334:137344" placeholder="..." />
+            <marker date="1576156642592" expanded="false" signature="137403:137413" placeholder="..." />
+            <marker date="1576156642592" expanded="false" signature="137487:137497" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9327731" vertical-offset="1844" max-vertical-offset="25616">
+          <caret line="507" column="46" selection-start-line="507" selection-start-column="46" selection-end-line="507" selection-end-column="46" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#style#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1" expanded="false" />
+            <marker date="1576156741191" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1576156741191" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1576156741191" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1576156741191" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1576156741191" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9327731" vertical-offset="3108" max-vertical-offset="13136">
+          <caret line="222" column="46" selection-start-line="222" selection-start-column="46" selection-end-line="222" selection-end-column="46" />
+          <folding>
+            <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#script#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#3;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#3;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <marker date="1576156642856" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642856" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642856" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642856" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576156642856" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Angel/Infrastructures/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.2" vertical-offset="1732" max-vertical-offset="31312">
+          <caret line="531" column="48" selection-start-line="531" selection-start-column="48" selection-end-line="531" selection-end-column="48" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <marker date="1576156642527" expanded="false" signature="157544:157583" placeholder="..." />
+            <marker date="1576156642527" expanded="false" signature="161676:161686" placeholder="..." />
+            <marker date="1576156642527" expanded="false" signature="161744:161754" placeholder="..." />
+            <marker date="1576156642527" expanded="false" signature="161813:161823" placeholder="..." />
+            <marker date="1576156642527" expanded="false" signature="161897:161907" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/create_diag_externe.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8" vertical-offset="959" max-vertical-offset="5008">
+          <caret line="308" column="50" selection-start-line="68" selection-start-column="43" selection-end-line="308" selection-end-column="50" />
+          <folding>
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#38300#39861#0#HTML" expanded="false" />
+            <element signature="e#40258#40674#0#HTML" expanded="false" />
+            <element signature="e#40775#41446#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.84" vertical-offset="2164" max-vertical-offset="3920">
+          <caret line="531" column="17" selection-start-line="515" selection-start-column="5" selection-end-line="531" selection-end-column="17" />
+          <folding>
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#6348#6385#0#HTML" expanded="true" />
+            <element signature="e#12165#12189#0#HTML" expanded="true" />
+            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#27221#27245#0#HTML" expanded="true" />
+            <element signature="tag#div#2;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#39820#41381#0#HTML" expanded="false" />
+            <element signature="e#42242#43009#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create_diag_externe.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.6" vertical-offset="6213" max-vertical-offset="8256">
+          <caret line="540" column="24" selection-start-line="540" selection-start-column="24" selection-end-line="540" selection-end-column="24" />
+          <folding>
+            <element signature="e#4436#4473#0#HTML" expanded="true" />
+            <element signature="e#10253#10277#0#HTML" expanded="true" />
+            <element signature="e#25309#25333#0#HTML" expanded="true" />
+            <element signature="tag#div#2;tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="e#39831#41500#0#HTML" expanded="false" />
+            <element signature="e#42351#43230#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/create_diag_externe.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.76" vertical-offset="8468" max-vertical-offset="9712">
+          <caret line="606" column="27" selection-start-line="606" selection-start-column="27" selection-end-line="606" selection-end-column="27" />
+          <folding>
+            <element signature="e#5356#5393#0#HTML" expanded="true" />
+            <element signature="e#11173#11197#0#HTML" expanded="true" />
+            <element signature="e#26229#26253#0#HTML" expanded="true" />
+            <element signature="e#40750#42419#0#HTML" expanded="false" />
+            <element signature="e#43272#44151#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.8" vertical-offset="327" max-vertical-offset="3776">
+          <caret line="118" column="13" selection-start-line="116" selection-start-column="12" selection-end-line="118" selection-end-column="13" />
+          <folding>
+            <element signature="e#1025#1250#0#PHP" expanded="false" />
+            <element signature="e#1253#1497#0#PHP" expanded="false" />
+            <element signature="e#1534#1714#0#PHP" expanded="false" />
+            <element signature="e#2077#3059#0#PHP" expanded="false" />
+            <element signature="e#3173#3606#0#PHP" expanded="false" />
+            <element signature="e#4043#4180#0#PHP" expanded="false" />
+            <element signature="e#4183#4321#0#PHP" expanded="false" />
+            <element signature="e#4324#6322#0#PHP" expanded="false" />
+            <element signature="e#6442#6660#0#PHP" expanded="false" />
+            <element signature="e#6663#6779#0#PHP" expanded="false" />
+            <element signature="e#6782#7181#0#PHP" expanded="false" />
+            <element signature="e#7184#7578#0#PHP" expanded="false" />
+            <element signature="e#7582#8602#0#PHP" expanded="false" />
+            <element signature="e#8606#9443#0#PHP" expanded="false" />
+            <element signature="e#9495#12323#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.04" vertical-offset="887" max-vertical-offset="3920">
+          <caret line="110" column="17" selection-start-line="90" selection-start-column="16" selection-end-line="110" selection-end-column="17" />
+          <folding>
+            <element signature="e#1774#1954#0#PHP" expanded="false" />
+            <element signature="e#2326#3328#0#PHP" expanded="false" />
+            <element signature="e#3447#3890#0#PHP" expanded="false" />
+            <element signature="e#4379#4567#0#PHP" expanded="false" />
+            <element signature="e#4611#4831#0#PHP" expanded="false" />
+            <element signature="e#4951#6061#0#PHP" expanded="false" />
+            <element signature="e#6065#6771#0#PHP" expanded="false" />
+            <element signature="e#6815#8390#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.52" vertical-offset="639" max-vertical-offset="2608">
+          <caret line="141" column="9" selection-start-line="82" selection-start-column="8" selection-end-line="141" selection-end-column="9" />
+          <folding>
+            <element signature="e#1438#1575#0#PHP" expanded="false" />
+            <element signature="e#1578#1716#0#PHP" expanded="false" />
+            <element signature="e#1753#1929#0#PHP" expanded="false" />
+            <element signature="e#2181#4240#0#PHP" expanded="false" />
+            <element signature="e#4307#6305#0#PHP" expanded="false" />
+            <element signature="e#6425#6644#0#PHP" expanded="false" />
+            <element signature="e#7188#7587#0#PHP" expanded="false" />
+            <element signature="e#7590#7984#0#PHP" expanded="false" />
+            <element signature="e#7988#9008#0#PHP" expanded="false" />
+            <element signature="e#9012#9849#0#PHP" expanded="false" />
+            <element signature="e#9901#12317#0#PHP" expanded="false" />
+            <element signature="e#12357#17205#0#PHP" expanded="false" />
+            <element signature="e#13091#13711#0#PHP" expanded="false" />
+            <element signature="e#14985#15236#0#PHP" expanded="false" />
+            <element signature="e#15241#15492#0#PHP" expanded="false" />
+            <element signature="e#15497#15748#0#PHP" expanded="false" />
+            <element signature="e#15753#16015#0#PHP" expanded="false" />
+            <element signature="e#16020#16282#0#PHP" expanded="false" />
+            <element signature="e#16950#17133#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38445807" vertical-offset="1012" max-vertical-offset="6432">
+          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

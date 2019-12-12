@@ -85,6 +85,9 @@ class EarlyController extends Controller
 			//dd($request->env);
 
 			if($dossier){
+				if($dossier->concurrents){
+					Concurrent::where('earlie_id',$dossier->id)->delete();
+				}
 				for($i=0; $i<count($concurrents); $i++){
 					$concurrent = new Concurrent();
 					$concurrent->earlie_id=$dossier->id;
@@ -107,7 +110,9 @@ class EarlyController extends Controller
 					$concurrent = $concurrent->save();
 				}
 				//dd($concurrent);
-
+				if($dossier->segments){
+					Segment::where('earlie_id',$dossier->id)->delete();
+				}
 				for($i=0; $i<count($segments); $i++){
 					$concurrent = new Segment();
 					$concurrent->earlie_id=$dossier->id;
@@ -120,7 +125,9 @@ class EarlyController extends Controller
 					$segment = $concurrent->save();
 				}
 
-
+				if($dossier->environnement){
+					Environnement::where('earlie_id',$dossier->id)->delete();
+				}
 				$env = $request->env;
 				$environnement = new Environnement();
 				$env['earlie_id'] = $dossier->id;

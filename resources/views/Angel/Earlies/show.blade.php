@@ -232,12 +232,12 @@
                                                                     ?>
                                                                 <?php endforeach; ?>
                                                                 <tr><th></th><?= $con ?></tr>
-                                                                <tr> <th>QUI</th> <?= $qui ?> </tr>
-                                                                <tr><th>QUOI</th> <?= $quoi ?> </tr>
-                                                                <tr> <th>OU</th> <?= $ou ?> </tr>
-                                                                <tr> <th>QUAND</th> <?= $quand ?> </tr>
-                                                                <tr> <th>COMBIEN</th> <?= $combien ?> </tr>
-                                                                <tr> <th>POURQUOI</th> <?= $pourquoi ?> </tr>
+                                                                <tr> <th>Qui sont les clients cibles ?</th> <?= $qui ?> </tr>
+                                                                <tr><th>Quel est la problématique à laquelle ils sont confrontés? </th> <?= $quoi ?> </tr>
+                                                                <tr> <th>Où achètent-ils des produits-services pour résoudre cette problématique ?</th> <?= $ou ?> </tr>
+                                                                <tr> <th>A quelle fréquence achètent-ils ces produits-services ?</th> <?= $quand ?> </tr>
+                                                                <tr> <th>En moyenne, à combien achètent ils ces produits-services ?</th> <?= $combien ?> </tr>
+                                                                <tr> <th>Pourquoi achètent-ils ces produits-services en particulier et pas un autre ?</th> <?= $pourquoi ?> </tr>
 
                                                                 </tbody>
                                                             </table>
@@ -257,7 +257,7 @@
 
                                             <tbody>
                                             <?php $i=0; $quoi=""; $qui=""; $ou=""; $comment=""; $combien=""; $quand="";
-                                            $ca=""; $cv=""; $cf=""; $mb=""; $va=""; $salaires=""; $ebe=""; $pourquoi=""; $con ="";
+                                            $ca=""; $cv=""; $cf=""; $mb=""; $va=""; $salaires=""; $ebe=""; $fournisseur=""; $fidelisation=""; $comment=""; $communication=""; $con ="";
                                             foreach($projet->concurrents as $segment): ?>
                                                 <?php
                                                 $con = $con."<th>CONCURRENT ". ++$i ."</th>";
@@ -267,23 +267,28 @@
                                                 $combien=$combien."<td>".$segment->combien."</td>";
                                                 $ou=$ou."<td>".$segment->ou."</td>";
                                                 $comment=$comment."<td>".$segment->comment."</td>";
-                                                $pourquoi=$pourquoi."<td>".$segment->pourquoi."</td>";
-                                                $ca=$ca."<td>".$segment->ca."</td>";
-                                                $cv=$cv."<td>".$segment->cv."</td>";
-                                                $cf=$cf."<td>".$segment->cf."</td>";
-                                                $salaires=$salaires."<td>".$segment->salaires."</td>";
-                                                $va=$va."<td>".$segment->va."</td>";
-                                                $mb=$mb."<td>".$segment->marge_brute."</td>";
-                                                $ebe=$ebe."<td>".$segment->ebe."</td>";
+                                                $fournisseur=$fournisseur."<td>".$segment->fournisseur."</td>";
+                                                $communication=$communication."<td>".$segment->communication."</td>";
+                                                $fidelisation=$fidelisation."<td>".$segment->fidelisation."</td>";
+                                                $ca=$ca."<td>".number_format($segment->ca,0,',','.' ) ."</td>";
+                                                $cv=$cv."<td>".number_format($segment->cv,0,',','.')."</td>";
+                                                $cf=$cf."<td>".number_format($segment->cf,0,',','.')."</td>";
+                                                $salaires=$salaires."<td>".number_format($segment->salaires,0,',','.')."</td>";
+                                                $va=$va."<td>". ($segment->ca -$segment->cf - $segment->cv )."</td>";
+                                                $mb=$mb."<td>".($segment->ca - $segment->cv)."</td>";
+                                                $ebe=$ebe."<td>". number_format(($segment->ca -$segment->cv - $segment->cf - $segment->salaires),0,',','.' )."</td>";
                                                 ?>
                                             <?php endforeach; ?>
                                             <tr><th></th><?= $con ?></tr>
-                                            <tr> <th>QUI</th> <?= $qui ?> </tr>
-                                           <tr><th>QUOI</th> <?= $quoi ?> </tr>
-                                           <tr> <th>OU</th> <?= $ou ?> </tr>
-                                           <tr> <th>QUAND</th> <?= $quand ?> </tr>
-                                           <tr> <th>COMBIEN</th> <?= $combien ?> </tr>
-                                           <tr> <th>POURQUOI</th> <?= $pourquoi ?> </tr>
+                                            <tr> <th >Qui sont vos concurrents sur le segment que vous avez ciblé?</th> <?= $qui ?> </tr>
+                                           <tr><th>Quel est le produit-service proposé par vos  concurrents pour résoudre les problèmes auxquels vos clients sont confrontés? (Avantages et inconvénients)</th> <?= $quoi ?> </tr>
+                                           <tr> <th>Quels sont les canaux de distribution utilisés par chaque concurrent pour acheminer le produit-service vers les clients? Canaux directs et indirects ; (Avantages et inconvénients)</th> <?= $ou ?> </tr>
+                                           <tr> <th>Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)</th> <?= $communication?> </tr>
+                                           <tr> <th>Quelle est la stratégie mise en place par les concurrents pour pousser les clients à acheter ? (Avantages et inconvénients)</th> <?= $comment ?> </tr>
+                                           <tr> <th>Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)</th> <?= $fidelisation ?> </tr>
+                                           <tr> <th>Qui sont les fournisseurs de vos concurrents et donnez en une appréciation en terme de qualité/Coût/Quantité/Délai de livraison ?</th> <?= $fournisseur ?> </tr>
+                                            <tr> <th>Quelle est la disponibilité des produits-services des concurrents (Saisonnière – toute l’année – dans la limite des niveaux de production) (Avantages et inconvénients)</th> <?= $quand ?> </tr>
+                                             <tr> <th>Quelle est la disponibilité des produits-services des concurrents (Saisonnière – toute l’année – dans la limite des niveaux de production) (Avantages et inconvénients)</th> <?= $combien ?> </tr>
                                            <tr> <th>CA</th> <?= $ca ?> </tr>
                                            <tr> <th>Charges variables</th> <?= $cv ?> </tr>
                                            <tr> <th>Marge brute</th> <?= $mb ?> </tr>

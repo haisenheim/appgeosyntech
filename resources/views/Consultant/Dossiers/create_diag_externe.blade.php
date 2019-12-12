@@ -90,59 +90,67 @@ CREATION DU DIAGNOSTIC EXTERNE
 
 
                                     <div class="card-body">
-                                           <div class="setup-content" id="step-1">
+                                            <div class="setup-content" id="step-1">
                                             <div class="card">
                                               <div class="card-header">
                                                  <h6 style="background-color: transparent" class="text-center">ANALYSE DE LA DEMANDE</h6>
+                                                  <div class="card-tools">
+                                                       <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                                                       </button>
+                                                  </div>
                                               </div>
                                               <div class="card-body">
                                                  <div class="">
                                                     <div class="" id="">
                                                      <div class="" id="segments" >
                                                          <div class="row" style="">
-                                                             <div class="col-md-2 col-sm-12">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Le nom du segment">QUI?</label>
+                                                                     <label for="qui" class="control-label" title="Le nom du segment">Qui sont les clients cibles ?</label>
                                                                      <input id="qui" name="name" type="text" class="form-control de"/>
                                                                  </div>
                                                              </div>
-                                                             <div class="col-md-3 col-sm-12">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Le nom du segment">QUOI?</label>
+                                                                     <label for="" class="control-label" title="Le nom du segment">Quel est la problématique à laquelle ils sont confrontés? </label>
                                                                      <input id="quoi" name="quoi" type="text" class="form-control de" placeholder=""/>
                                                                  </div>
                                                              </div>
-                                                             <div class="col-md-3 col-sm-12">
+                                                             </div>
+                                                             <div class="row">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">OU?</label>
+                                                                     <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">Où achètent-ils des produits-services pour résoudre cette problématique ?</label>
                                                                      <input id="ou" name="ou" type="text" class="form-control de" placeholder=""/>
                                                                  </div>
                                                              </div>
 
-                                                             <div class="col-md-4 col-sm-12">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">QUAND?</label>
+                                                                     <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">A quelle fréquence achètent-ils ces produits-services ?</label>
                                                                      <input id="quand" name="ou" type="text" class="form-control de" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
                                                                  </div>
                                                              </div>
-
-                                                             <div class="col-md-4 col-sm-12">
+                                                            </div>
+                                                            <div class="row">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">COMBIEN?</label>
+                                                                     <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">En moyenne, à combien achètent ils ces produits-services ?</label>
                                                                      <input id="combien" name="ou" type="text" class="form-control de" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
                                                                  </div>
                                                              </div>
 
-                                                             <div class="col-md-5 col-sm-12">
+                                                             <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">POURQUOI?</label>
+                                                                     <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">Pourquoi achètent-ils ces produits-services en particulier et pas un autre ? </label>
                                                                      <textarea id="pourquoi" name="ou" class="form-control de" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
                                                                  </div>
                                                              </div>
-                                                             <div class="col-md-2 col-sm-12">
-                                                                 <button style="margin-top: 40px" class="btn btn-success btn-sm" id="btn-seg-add"><i class="fa fa-plus-circle"></i></button>
                                                              </div>
-                                                         </div>
+                                                             <div class="">
+                                                                 <button style="margin-top: 40px" class="btn btn-outline-success btn-sm btn-block" id="btn-seg-add"><i class="fa fa-plus-circle"></i></button>
+                                                             </div>
+
                                                          <hr/>
                                                          <h6 class="">TABLE DES SEGMENTS</h6>
                                                          <div class="table-responsive">
@@ -190,45 +198,63 @@ CREATION DU DIAGNOSTIC EXTERNE
                                                                    <div class="">
                                                                       <div class="" id="concurrents" >
                                                                           <div class="row" style="">
-                                                                              <div class="col-md-2 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Le nom du segment">QUI?</label>
+                                                                                      <label for="" class="control-label" title="Le nom du segment">Qui sont vos concurrents sur le segment que vous avez ciblé?</label>
                                                                                       <input id="quic" name="name" type="text" class="form-control dec"/>
                                                                                   </div>
                                                                               </div>
-                                                                              <div class="col-md-3 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Le nom du segment">QUOI?</label>
+                                                                                      <label for="" class="control-label" title="Le nom du segment">Quel est le produit-service proposé par vos  concurrents pour résoudre les problèmes auxquels vos clients sont confrontés? (Avantages et inconvénients)</label>
                                                                                       <input id="quoic" name="quoi" type="text" class="form-control dec" placeholder=""/>
                                                                                   </div>
                                                                               </div>
-                                                                              <div class="col-md-3 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">OU?</label>
+                                                                                      <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">Quels sont les canaux de distribution utilisés par chaque concurrent pour acheminer le produit-service vers les clients? Canaux directs et indirects ; (Avantages et inconvénients)</label>
                                                                                       <input id="ouc" name="ou" type="text" class="form-control dec" placeholder=""/>
                                                                                   </div>
                                                                               </div>
-
-                                                                              <div class="col-md-3 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">QUAND?</label>
-                                                                                      <input id="quandc" name="ou" type="text" class="form-control dec" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
+                                                                                      <label for="" class="control-label" title="Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)">Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)</label>
+                                                                                      <input id="communication" name="communication" type="text" class="form-control dec" placeholder="Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)"/>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="col-md-12 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Quelle est la stratégie mise en place par les concurrents pour pousser les clients à acheter ? (Avantages et inconvénients)">Quelle est la stratégie mise en place par les concurrents pour pousser les clients à acheter ? (Avantages et inconvénients)</label>
+                                                                                      <input id="commentc" name="comment" type="text" class="form-control dec" placeholder="Quelle est la stratégie mise en place par les concurrents pour pousser les clients à acheter ? (Avantages et inconvénients)"/>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="col-md-12 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)">Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)</label>
+                                                                                      <input id="fidelisation" name="fidelisation" class="form-control dec" placeholder="Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)" />
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="col-md-12 col-sm-12">
+                                                                                  <div class="form-group">
+                                                                                      <label for="" class="control-label" title="">Qui sont les fournisseurs de vos concurrents et donnez en une appréciation en terme de qualité/Coût/Quantité/Délai de livraison ?</label>
+                                                                                      <input id="fournisseur" name="ou" class="form-control dec" placeholder="Qui sont les fournisseurs de vos concurrents et donnez en une appréciation en terme de qualité/Coût/Quantité/Délai de livraison ?" />
                                                                                   </div>
                                                                               </div>
 
-                                                                              <div class="col-md-3 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">COMBIEN?</label>
-                                                                                      <input id="combienc" name="ou" type="text" class="form-control dec" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
+                                                                                      <label for="" class="control-label" title="">Quelle est la disponibilité des produits-services des concurrents (Saisonnière – toute l’année – dans la limite des niveaux de production) (Avantages et inconvénients)</label>
+                                                                                      <input id="quandc" name="ou" type="text" class="form-control dec" placeholder="Quelle est la disponibilité des produits-services des concurrents (Saisonnière – toute l’année – dans la limite des niveaux de production) (Avantages et inconvénients"/>
                                                                                   </div>
                                                                               </div>
 
-                                                                              <div class="col-md-4 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">POURQUOI?</label>
-                                                                                      <textarea id="pourquoic" name="ou" class="form-control dec" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
+                                                                                      <label for="" class="control-label" title="Quel est le prix proposé par les concurrents ? (Avantages et inconvénients)">Quel est le prix proposé par les concurrents ? (Avantages et inconvénients)</label>
+                                                                                      <input id="combienc" name="ou" type="text" class="form-control dec" placeholder="Quel est le prix proposé par les concurrents ? (Avantages et inconvénients)"/>
                                                                                   </div>
                                                                               </div>
+
 
                                                                               <div class="col-md-3 col-sm-12">
                                                                                   <div class="form-group">
@@ -260,8 +286,8 @@ CREATION DU DIAGNOSTIC EXTERNE
                                                                               </div>
 
 
-                                                                              <div class="col-md-1 col-sm-12">
-                                                                                  <button style="margin-top: 40px" class="btn btn-success btn-sm" id="btn-con-add"><i class="fa fa-plus-circle"></i></button>
+                                                                              <div class="">
+                                                                                  <button style="margin-top: 40px" class="btn btn-success btn-sm btn-block" id="btn-con-add"><i class="fa fa-plus-circle"></i> AJOUTER A LA LISTE</button>
                                                                               </div>
                                                                           </div>
                                                                     </div>
@@ -278,7 +304,10 @@ CREATION DU DIAGNOSTIC EXTERNE
                                                                          <th>OU</th>
                                                                          <th>QUAND</th>
                                                                          <th>COMBIEN</th>
-                                                                         <th>POURQUOI</th>
+                                                                         <th>FNR</th>
+                                                                         <th>COM.</th>
+                                                                         <th>FID.</th>
+                                                                         <th>COMMENT</th>
                                                                          <th>CA</th>
                                                                          <th>CV</th>
 
@@ -431,8 +460,11 @@ CREATION DU DIAGNOSTIC EXTERNE
         var quoi=$('#quoic').val();
         var quand=$('#quandc').val();
         var ou = $('#ouc').val();
-        var pourquoi=$('#pourquoic').val();
+        var fournisseur=$('#fournisseur').val();
         var combien = $('#combienc').val();
+        var communication=$('#communication').val();
+        var fidelisation = $('#fidelisation').val();
+        var comment = $('#commentc').val();
 
         var sal = $('#sal').val();
         var cv = $('#cv').val();
@@ -442,10 +474,12 @@ CREATION DU DIAGNOSTIC EXTERNE
 
 
         var table= $('#table-concurrents').find('tbody');
-        var tr = '<tr data-qui="'+ qui +'" data-quoi="'+ quoi +'" data-quand= "'+ quand +'" data-combien= "'+ combien
-            +'" data-ou="'+ ou +'" data-pourquoi="'+ pourquoi +'" data-ca="'+ ca +'" data-cv="'+ cv +'" data-cf="'+ cf +'" data-sal="'+ sal
+        var tr = '<tr data-qui="'+ qui +'" data-quoi="'+ quoi +'" data-quand= "'+ quand +'" data-comment= "'+ comment +'" data-combien= "'+ combien+'" data-communication= "'+ communication +'" data-fidelisation= "'+ fidelisation
+            +'" data-ou="'+ ou +'" data-fournisseur="'+ fournisseur +'" data-ca="'+ ca +'" data-cv="'+ cv +'" data-cf="'+ cf +'" data-sal="'+ sal
             +'"><td>'+qui+'</td><td>'+quoi+'</td><td>'+ou+'</td><td>'+quand+'</td>' +
-            '<td>'+combien+'</td><td>'+pourquoi+'</td><td>'+ca+'</td><td>'+cv+'</td><td>'+cf+'</td><td>'+sal+'</td><td class="removec"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></td></tr>';
+            '<td>'+combien+'</td><td>'+fournisseur+'</td><td>'+communication+'</td><td>'+fidelisation+'</td><td>'+comment+'</td><td>'+ca+'</td><td>'+cv+'</td><td>'+cf+'</td><td>'+sal+'</td>'
+
+            +'<td class="removec"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></td></tr>';
         console.log(tr);
         table.append(tr);
         $('.dec').val('');
@@ -479,23 +513,23 @@ CREATION DU DIAGNOSTIC EXTERNE
         var trs=table_conc.find('tr');
         var concurrents = [];
 
-        trs.each(function(){
-            var elt={};
-            elt.qui=$(this).data('qui');
-            elt.quoi=$(this).data('quoi');
-            elt.ou=$(this).data('ou');
-            elt.quand=$(this).data('quand');
-            elt.combien=$(this).data('combien');
-            elt.pourquoi=$(this).data('pourquoi');
-            elt.ca=$(this).data('ca');
-            elt.cv=$(this).data('cv');
-            elt.cf=$(this).data('cf');
-            //elt.mb=$(this).data('mb');
-            //elt.va=$(this).data('va');
-            elt.sal=$(this).data('sal');
-            //elt.ebe=$(this).data('ebe');
-            concurrents.push(elt);
-        });
+      trs.each(function(){
+                  var elt={};
+                  elt.qui=$(this).data('qui');
+                  elt.quoi=$(this).data('quoi');
+                  elt.ou=$(this).data('ou');
+                  elt.quand=$(this).data('quand');
+                  elt.combien=$(this).data('combien');
+                  elt.fournisseur=$(this).data('fournisseur');
+                  elt.ca=$(this).data('ca');
+                  elt.cv=$(this).data('cv');
+                  elt.cf=$(this).data('cf');
+                  elt.communication=$(this).data('communication');
+                  elt.fidelisation=$(this).data('fidelisation');
+                  elt.sal=$(this).data('sal');
+                  elt.comment=$(this).data('comment');
+                  concurrents.push(elt);
+              });
 
 
 

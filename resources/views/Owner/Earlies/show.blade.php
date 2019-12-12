@@ -1606,7 +1606,7 @@
               </div>
      <style>
         #concurrents table th{
-            width:50%;
+            max-width:50%;
         }
      </style>
 

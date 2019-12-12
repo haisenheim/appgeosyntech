@@ -98,7 +98,10 @@ class DossierController extends Controller
 				$concurrent->quand=$concurrents[$i]['quand'];
 				$concurrent->ou=$concurrents[$i]['ou'];
 				$concurrent->combien=$concurrents[$i]['combien'];
-				$concurrent->pourquoi=$concurrents[$i]['pourquoi'];
+				$concurrent->fournisseur=$concurrents[$i]['fournisseur'];
+				$concurrent->comment=$concurrents[$i]['comment'];
+				$concurrent->fidelisation=$concurrents[$i]['fidelisation'];
+				$concurrent->communication=$concurrents[$i]['communication'];
 				$concurrent->ca=$concurrents[$i]['ca'];
 				$concurrent->salaires=$concurrents[$i]['sal'];
 				//$concurrent->ebe=$concurrents[$i]['ebe'];
