@@ -457,7 +457,7 @@ CREATION DU DIAGNOSTIC EXTERNE
 
 
         var table= $('#table-concurrents').find('tbody');
-        var tr = '<tr data-qui="'+ qui +'" data-quoi="'+ quoi +'" data-quand= "'+ quand +'" data-comment= "'+ comment +'" data-combien= "'+ combien+'" data-commication= "'+ communication +'" data-fidelisation= "'+ fidelisation
+        var tr = '<tr data-qui="'+ qui +'" data-quoi="'+ quoi +'" data-quand= "'+ quand +'" data-comment= "'+ comment +'" data-combien= "'+ combien+'" data-communication= "'+ communication +'" data-fidelisation= "'+ fidelisation
             +'" data-ou="'+ ou +'" data-fournisseur="'+ fournisseur +'" data-ca="'+ ca +'" data-cv="'+ cv +'" data-cf="'+ cf +'" data-sal="'+ sal
             +'"><td>'+qui+'</td><td>'+quoi+'</td><td>'+ou+'</td><td>'+quand+'</td>' +
             '<td>'+combien+'</td><td>'+fournisseur+'</td><td>'+communication+'</td><td>'+fidelisation+'</td><td>'+comment+'</td><td>'+ca+'</td><td>'+cv+'</td><td>'+cf+'</td><td>'+sal+'</td>'
