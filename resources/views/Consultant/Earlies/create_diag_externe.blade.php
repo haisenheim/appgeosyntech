@@ -111,14 +111,14 @@ CREATION DU DIAGNOSTIC EXTERNE
                                                             <div class="row">
                                                              <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?</label>
+                                                                     <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">En moyenne, à combien achètent ils ces produits-services ?</label>
                                                                      <input id="combien" name="ou" type="text" class="form-control de" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
                                                                  </div>
                                                              </div>
 
                                                              <div class="col-md-12 col-sm-12">
                                                                  <div class="form-group">
-                                                                     <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">Pourquoi apprécient-ils la solution qu'ils utilisent ?</label>
+                                                                     <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">Pourquoi achètent-ils ces produits-services en particulier et pas un autre ? </label>
                                                                      <textarea id="pourquoi" name="ou" class="form-control de" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
                                                                  </div>
                                                              </div>
@@ -174,42 +174,42 @@ CREATION DU DIAGNOSTIC EXTERNE
                                                                    <div class="">
                                                                       <div class="" id="concurrents" >
                                                                           <div class="row" style="">
-                                                                              <div class="col-md-2 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Le nom du segment">QUI?</label>
+                                                                                      <label for="" class="control-label" title="Le nom du segment">Qui sont vos concurrents sur le segment que vous avez ciblé?</label>
                                                                                       <input id="quic" name="name" type="text" class="form-control dec"/>
                                                                                   </div>
                                                                               </div>
-                                                                              <div class="col-md-3 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Le nom du segment">QUOI?</label>
+                                                                                      <label for="" class="control-label" title="Le nom du segment">Quel est le produit-service proposé par vos  concurrents pour résoudre les problèmes auxquels vos clients sont confrontés? (Avantages et inconvénients)</label>
                                                                                       <input id="quoic" name="quoi" type="text" class="form-control dec" placeholder=""/>
                                                                                   </div>
                                                                               </div>
-                                                                              <div class="col-md-3 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">OU?</label>
+                                                                                      <label for="" class="control-label" title="Où comblent-ils leur besoin actuellement">Quels sont les canaux de distribution utilisés par chaque concurrent pour acheminer le produit-service vers les clients? Canaux directs et indirects ; (Avantages et inconvénients)</label>
                                                                                       <input id="ouc" name="ou" type="text" class="form-control dec" placeholder=""/>
                                                                                   </div>
                                                                               </div>
 
-                                                                              <div class="col-md-3 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">QUAND?</label>
+                                                                                      <label for="" class="control-label" title="À quel moment et à quelle fréquence procèdent-ils à un achat?">Quels sont les canaux de communication utilisés par chaque concurrent pour faire connaitre leur produit-service ?  (Avantages et inconvénients)</label>
                                                                                       <input id="quandc" name="ou" type="text" class="form-control dec" placeholder="À quel moment et à quelle fréquence procèdent-ils à un achat?"/>
                                                                                   </div>
                                                                               </div>
 
-                                                                              <div class="col-md-3 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">COMBIEN?</label>
+                                                                                      <label for="" class="control-label" title="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir ce besoin?">Quelle est la stratégie mise en place par les concurrents pour pousser les clients à acheter ? (Avantages et inconvénients)</label>
                                                                                       <input id="combienc" name="ou" type="text" class="form-control dec" placeholder="Combien dépensent-ils pour obtenir la solution / Combien sont-ils à avoir se besoin?"/>
                                                                                   </div>
                                                                               </div>
 
-                                                                              <div class="col-md-4 col-sm-12">
+                                                                              <div class="col-md-12 col-sm-12">
                                                                                   <div class="form-group">
-                                                                                      <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">POURQUOI?</label>
+                                                                                      <label for="" class="control-label" title="Pourquoi apprécient-ils la solution qu'ils utilisent ?">Quelle est la stratégie mise en place par les concurrents pour fidéliser les clients ? (Avantages et inconvénients)</label>
                                                                                       <textarea id="pourquoic" name="ou" class="form-control dec" placeholder="Pourquoi apprécient-ils la solution qu'ils utilisent ?"></textarea>
                                                                                   </div>
                                                                               </div>
@@ -381,12 +381,41 @@ CREATION DU DIAGNOSTIC EXTERNE
                     </div>
                 </div>
     </div>
+
+    <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+    	<div class="modal-content">
+    		<div class="modal-body">
+    			<div class="row">
+    			    <div class="col-md-5 col-sm-12">
+    			         <div  id="popup-img">
+
+                         </div>
+    			    </div>
+    			    <div class="col-md-7 col-sm-12">
+                            « Félicitations ! Vous venez d’effectuer le diagnostic externe de ce projet. <br/>
+                            Le dossier de levée de fonds est composé de 4 parties. <br/>
+                            Afin de passer à la troisième partie nous vous prions de vous rapprocher du cabinet OBAC afin de solder le second paiement. »
+
+                            <a class="btn btn-success btn-block" id="btn-continue" href="/consultant/projets/{{ $projet->token }}">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+    			    </div>
+    			</div>
+    		</div>
+
+
+    	</div>
+    </div>
+    </div>
 <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
+                <!-- SweetAlert2 -->
+    <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+                <!-- Toastr -->
     <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
-
 
 <script>
 
@@ -534,7 +563,16 @@ CREATION DU DIAGNOSTIC EXTERNE
                         },
                         success: function(data){
                             if(data.id!=null){
-                                window.location.replace(redirectUrl+data.token);
+
+                               Toast.fire({
+                                           type: 'success',
+                                           title: 'Votre dossier a été créé avec succès!!!'
+                                         });
+                                         setTimeout(function() {
+                                           $('#popup').show();
+                                         },2000);
+
+                               // window.location.replace(redirectUrl+data.token);
                             }
                            /// console.log(data);
                         },
