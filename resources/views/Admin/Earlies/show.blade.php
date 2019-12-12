@@ -1459,7 +1459,7 @@
         		</div>
 
         </div>
-
+        </div>
      @endif
 
 
@@ -1593,7 +1593,7 @@
                         <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
                    </li>
             @endif
-            @if($projet->etape==1 && $projet->validated_step==0 && $projet->modepaiement_id>1)
+            @if($projet->etape==1 && $projet->validated_step==0 && $projet->modepaiement_id>0)
                    <li>
                         <a  title="Valider le premier paiement" class="ripple" href="/admin/projet/validate-diag-interne/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
                    </li>
