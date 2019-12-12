@@ -27,12 +27,15 @@ class Earlie extends Model
 
 	public function getTraiteAttribute(){
 		$s=0;
-		$projet = Projet::find($this->id);
+		$projet = Earlie::find($this->id);
 		if($projet->modepaiement_id==1){
 			$s= 129500;
 			if($projet->owner){
-				if($projet->owner->apporteur_id){
-					$s=143000;
+				if($projet->owner->creator){
+					if($projet->owner->creator->role_id==7){
+						$s=143000;
+					}
+
 				}
 			}
 		}
@@ -54,7 +57,7 @@ class Earlie extends Model
 
 	public function getCommissionAttribute(){
 		$s=0;
-		$projet = Projet::find($this->id);
+		$projet = Earlie::find($this->id);
 		if($projet->modepaiement_id==1){
 
 			if($projet->owner){
@@ -84,7 +87,7 @@ class Earlie extends Model
 
 	public function getComexpertAttribute(){
 		$s=0;
-		$projet = Projet::find($this->id);
+		$projet = Earlie::find($this->id);
 		if($projet->modepaiement_id==1){
 			$s=10000;
 			if($projet->consultant){
@@ -117,7 +120,7 @@ class Earlie extends Model
 
 	public function getComalliagesAttribute(){
 		$s=0;
-		$projet = Projet::find($this->id);
+		$projet = Earlie::find($this->id);
 		if($projet->modepaiement_id==1){
 			$s = 33750;
 		}
