@@ -112,7 +112,7 @@ class ProjetController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('pdf_view',$data);
+		$pdf = PDF::loadView('Admin/Projets/recu',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 		return $pdf->download('recu-etape1-'. $projet->name.'.pdf');
 
@@ -136,9 +136,9 @@ class ProjetController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('pdf_view',$data);
+		$pdf = PDF::loadView('Admin/Projets/recu',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		return $pdf->download('recu-etape 2 - '. $projet->name.'.pdf');
+		return $pdf->stream('recu-etape 2 - '. $projet->name.'.pdf');
 		//$request->session()->flash('success','Deuxieme paiement enregistré avec succès!!!');
 		//return redirect()->back();
 	}
@@ -161,9 +161,9 @@ class ProjetController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('pdf_view',$data);
+		$pdf = PDF::loadView('Admin/Projets/recu',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		return $pdf->download('recu-etape 3 - '. $projet->name.'.pdf');
+		return $pdf->stream('recu-etape 3 - '. $projet->name.'.pdf');
 		//$request->session()->flash('success','Troisieme paiement enregistré avec succès!!!');
 		//return redirect()->back();
 	}
@@ -187,9 +187,9 @@ class ProjetController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('pdf_view',$data);
+		$pdf = PDF::loadView('Admin/Projets/recu',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		return $pdf->download('recu-etape 4 - '. $projet->name.'.pdf');
+		return $pdf->stream('recu-etape 4 - '. $projet->name.'.pdf');
 		//$request->session()->flash('success','Quatrieme paiement enregistré avec succès!!!');
 		//return redirect()->back();
 	}

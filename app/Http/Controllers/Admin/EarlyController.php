@@ -126,9 +126,26 @@ class EarlyController extends Controller
 	 */
 
 	public function validateDiagExterne(Request $request, $token){
-		Earlie::updateOrCreate(['token'=>$token],['validated_step'=>2]);
-		$request->session()->flash('success','Deuxieme paiement enregistré avec succès!!!');
-		return redirect()->back();
+		$projet = Earlie::where('token',$token)->first();
+		if($projet->validated_step >= 2){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
+		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>2]);
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		//dd($projet);
+
+		$paiement = $this->facturer(2,$projet->id);
+		//dd($paiement);
+		$data = [
+			'title' => 'Paiement Premiere etape',
+			'heading' => 'Paiement ETAPE 2 - '.$projet->name,
+
+			'paiement'=>$paiement
+		];
+
+		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
+		return $pdf->stream('recu-etape2-'. $projet->name.'.pdf');
 	}
 
 	/**
@@ -136,9 +153,24 @@ class EarlyController extends Controller
 	 */
 
 	public function validateDiagStrategique(Request $request, $token){
-		Earlie::updateOrCreate(['token'=>$token],['validated_step'=>3]);
-		$request->session()->flash('success','Troisieme paiement enregistré avec succès!!!');
-		return redirect()->back();
+		$projet = Earlie::where('token',$token)->first();
+		if($projet->validated_step >= 3){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
+		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>3]);
+
+		$paiement = $this->facturer(3,$projet->id);
+		$data = [
+			'title' => 'Paiement Premiere etape',
+			'heading' => 'Paiement ETAPE 3 - '.$projet->name,
+
+			'paiement'=>$paiement
+		];
+
+		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		return $pdf->stream('recu-etape3-'. $projet->name.'.pdf');
 	}
 
 
@@ -147,9 +179,27 @@ class EarlyController extends Controller
 	 */
 
 	public function validateMontageFinancier(Request $request, $token){
-		Earlie::updateOrCreate(['token'=>$token],['validated_step'=>4]);
-		$request->session()->flash('success','Quatrieme paiement enregistré avec succès!!!');
-		return redirect()->back();
+		$projet = Earlie::where('token',$token)->first();
+		if($projet->validated_step >= 4){
+			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
+			return back();
+		}
+		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>4]);
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		//dd($projet);
+
+		$paiement = $this->facturer(4,$projet->id);
+		//dd($paiement);
+		$data = [
+			'title' => 'Paiement Premiere etape',
+			'heading' => 'Paiement ETAPE 4 - '.$projet->name,
+
+			'paiement'=>$paiement
+		];
+
+		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
+		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
+		return $pdf->stream('recu-etape4-'. $projet->name.'.pdf');
 	}
 
 	/*
