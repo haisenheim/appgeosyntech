@@ -459,9 +459,6 @@
                                                 </div>
                                             </div>
 
-                                            <div style="width: 20%; margin:10px auto">
-                                                <span id="risks-loader"  class="dashboard-spinner spinner-success spinner-xl "></span>
-                                            </div>
                                         </div>
                                      </div>
                                </fieldset>
@@ -2131,8 +2128,6 @@
         			</div>
         		</div>
 
-
-
         </div>
 
         @if($projet->modele)
@@ -2254,12 +2249,6 @@
    @else
            <input type="hidden" id="has_teaser" value="0"/>
    @endif
-
-
-
-
-
-
 
 @endsection
 
