@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,8 +93,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44392523" vertical-offset="6098" max-vertical-offset="8496">
-              <caret line="1608" column="22" selection-start-line="1608" selection-start-column="22" selection-end-line="1608" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.5714286" vertical-offset="4064" max-vertical-offset="8496">
+              <caret line="271" column="67" selection-start-line="271" selection-start-column="67" selection-end-line="271" selection-end-column="67" />
               <folding>
                 <element signature="e#4402#4426#0#HTML" expanded="true" />
                 <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
@@ -107,17 +106,17 @@
                 <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="e#136441#137921#0#HTML" expanded="false" />
+                <element signature="e#136443#137923#0#HTML" expanded="false" />
                 <element signature="tag#div#1" expanded="false" />
                 <element signature="tag#div#2" expanded="false" />
                 <element signature="tag#div#3" expanded="false" />
                 <element signature="tag#div#4" expanded="false" />
                 <element signature="tag#div#0;tag#div#5" expanded="false" />
-                <element signature="e#143842#143906#0#HTML" expanded="true" />
+                <element signature="e#143844#143908#0#HTML" expanded="true" />
                 <element signature="tag#style#1" expanded="false" />
                 <element signature="tag#div#0;tag#div#6" expanded="false" />
                 <element signature="tag#script#2" expanded="false" />
-                <element signature="e#0#193063#0#Blade" expanded="false" />
+                <element signature="e#0#193065#0#Blade" expanded="false" />
                 <element signature="tag#main#0" expanded="false" />
                 <element signature="tag#div#7" expanded="false" />
                 <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#7" expanded="false" />
@@ -125,11 +124,11 @@
                 <element signature="tag#div#9" expanded="false" />
                 <element signature="tag#div#0;tag#div#9" expanded="false" />
                 <element signature="tag#style#2" expanded="false" />
-                <marker date="1576154198055" expanded="false" signature="133253:133292" placeholder="..." />
-                <marker date="1576154198055" expanded="false" signature="137385:137395" placeholder="..." />
-                <marker date="1576154198055" expanded="false" signature="137453:137463" placeholder="..." />
-                <marker date="1576154198055" expanded="false" signature="137522:137532" placeholder="..." />
-                <marker date="1576154198055" expanded="false" signature="137606:137616" placeholder="..." />
+                <marker date="1576154311525" expanded="false" signature="133255:133294" placeholder="..." />
+                <marker date="1576154311525" expanded="false" signature="137387:137397" placeholder="..." />
+                <marker date="1576154311525" expanded="false" signature="137455:137465" placeholder="..." />
+                <marker date="1576154311525" expanded="false" signature="137524:137534" placeholder="..." />
+                <marker date="1576154311525" expanded="false" signature="137608:137618" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1229,8 +1228,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44392523" vertical-offset="6098" max-vertical-offset="8496">
-          <caret line="1608" column="22" selection-start-line="1608" selection-start-column="22" selection-end-line="1608" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.5714286" vertical-offset="4064" max-vertical-offset="8496">
+          <caret line="271" column="67" selection-start-line="271" selection-start-column="67" selection-end-line="271" selection-end-column="67" />
           <folding>
             <element signature="e#4402#4426#0#HTML" expanded="true" />
             <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
@@ -1242,17 +1241,17 @@
             <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="e#136441#137921#0#HTML" expanded="false" />
+            <element signature="e#136443#137923#0#HTML" expanded="false" />
             <element signature="tag#div#1" expanded="false" />
             <element signature="tag#div#2" expanded="false" />
             <element signature="tag#div#3" expanded="false" />
             <element signature="tag#div#4" expanded="false" />
             <element signature="tag#div#0;tag#div#5" expanded="false" />
-            <element signature="e#143842#143906#0#HTML" expanded="true" />
+            <element signature="e#143844#143908#0#HTML" expanded="true" />
             <element signature="tag#style#1" expanded="false" />
             <element signature="tag#div#0;tag#div#6" expanded="false" />
             <element signature="tag#script#2" expanded="false" />
-            <element signature="e#0#193063#0#Blade" expanded="false" />
+            <element signature="e#0#193065#0#Blade" expanded="false" />
             <element signature="tag#main#0" expanded="false" />
             <element signature="tag#div#7" expanded="false" />
             <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#7" expanded="false" />
@@ -1260,11 +1259,11 @@
             <element signature="tag#div#9" expanded="false" />
             <element signature="tag#div#0;tag#div#9" expanded="false" />
             <element signature="tag#style#2" expanded="false" />
-            <marker date="1576154198055" expanded="false" signature="133253:133292" placeholder="..." />
-            <marker date="1576154198055" expanded="false" signature="137385:137395" placeholder="..." />
-            <marker date="1576154198055" expanded="false" signature="137453:137463" placeholder="..." />
-            <marker date="1576154198055" expanded="false" signature="137522:137532" placeholder="..." />
-            <marker date="1576154198055" expanded="false" signature="137606:137616" placeholder="..." />
+            <marker date="1576154311525" expanded="false" signature="133255:133294" placeholder="..." />
+            <marker date="1576154311525" expanded="false" signature="137387:137397" placeholder="..." />
+            <marker date="1576154311525" expanded="false" signature="137455:137465" placeholder="..." />
+            <marker date="1576154311525" expanded="false" signature="137524:137534" placeholder="..." />
+            <marker date="1576154311525" expanded="false" signature="137608:137618" placeholder="..." />
           </folding>
         </state>
       </provider>
