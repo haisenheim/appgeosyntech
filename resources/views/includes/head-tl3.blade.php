@@ -12,6 +12,9 @@
   <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
   <!-- Bootstrap 4 -->
   <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+  <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
   <script type="text/javascript" src="{{asset('js/multi-form.js')}}"></script>
   <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Ionicons -->
@@ -32,6 +35,7 @@
   <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.css')}}">
   <link rel="stylesheet" href="{{asset('css/timeline.css')}}"/>
   <script type="text/javascript" src="{{asset('js/multi-form.js')}}"></script>
+
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,8 +100,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40186915" vertical-offset="15492" max-vertical-offset="16704">
-              <caret line="1859" column="0" selection-start-line="1859" selection-start-column="0" selection-end-line="1859" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.22429906" vertical-offset="14320" max-vertical-offset="16704">
+              <caret line="1607" column="0" selection-start-line="1607" selection-start-column="0" selection-end-line="1609" selection-end-column="85" />
               <folding>
                 <element signature="tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
@@ -144,11 +145,11 @@
                 <element signature="e#144191#144255#0#HTML" expanded="true" />
                 <element signature="tag#style#0" expanded="false" />
                 <element signature="e#0#193048#0#Blade" expanded="false" />
-                <marker date="1576201179238" expanded="false" signature="134067:134106" placeholder="..." />
-                <marker date="1576201179238" expanded="false" signature="138199:138209" placeholder="..." />
-                <marker date="1576201179238" expanded="false" signature="138267:138277" placeholder="..." />
-                <marker date="1576201179238" expanded="false" signature="138336:138346" placeholder="..." />
-                <marker date="1576201179238" expanded="false" signature="138420:138430" placeholder="..." />
+                <marker date="1576201709947" expanded="false" signature="134067:134106" placeholder="..." />
+                <marker date="1576201709947" expanded="false" signature="138199:138209" placeholder="..." />
+                <marker date="1576201709947" expanded="false" signature="138267:138277" placeholder="..." />
+                <marker date="1576201709947" expanded="false" signature="138336:138346" placeholder="..." />
+                <marker date="1576201709947" expanded="false" signature="138420:138430" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -764,10 +765,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1457,8 +1458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40186915" vertical-offset="15492" max-vertical-offset="16704">
-          <caret line="1859" column="0" selection-start-line="1859" selection-start-column="0" selection-end-line="1859" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.22429906" vertical-offset="14320" max-vertical-offset="16704">
+          <caret line="1607" column="0" selection-start-line="1607" selection-start-column="0" selection-end-line="1609" selection-end-column="85" />
           <folding>
             <element signature="tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
@@ -1502,11 +1503,11 @@
             <element signature="e#144191#144255#0#HTML" expanded="true" />
             <element signature="tag#style#0" expanded="false" />
             <element signature="e#0#193048#0#Blade" expanded="false" />
-            <marker date="1576201179238" expanded="false" signature="134067:134106" placeholder="..." />
-            <marker date="1576201179238" expanded="false" signature="138199:138209" placeholder="..." />
-            <marker date="1576201179238" expanded="false" signature="138267:138277" placeholder="..." />
-            <marker date="1576201179238" expanded="false" signature="138336:138346" placeholder="..." />
-            <marker date="1576201179238" expanded="false" signature="138420:138430" placeholder="..." />
+            <marker date="1576201709947" expanded="false" signature="134067:134106" placeholder="..." />
+            <marker date="1576201709947" expanded="false" signature="138199:138209" placeholder="..." />
+            <marker date="1576201709947" expanded="false" signature="138267:138277" placeholder="..." />
+            <marker date="1576201709947" expanded="false" signature="138336:138346" placeholder="..." />
+            <marker date="1576201709947" expanded="false" signature="138420:138430" placeholder="..." />
           </folding>
         </state>
       </provider>
