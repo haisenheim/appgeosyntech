@@ -64,7 +64,7 @@
 
     <main>
         <div style="padding-top: 30px" class="container">
-            <div style="margin-top: 200px; margin-right: auto; margin-left: auto; width: 300px; text-align: center">
+            <div style="margin-top: 200px; margin-right: auto; margin-left: auto; width: 400px; text-align: center">
                <h1>RAPPORT D’EVALUATION DU PROJET </h1>
             </div>
 
