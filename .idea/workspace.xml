@@ -142,8 +142,8 @@
       <file leaf-file-name="printit.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79831934" vertical-offset="1332" max-vertical-offset="2032">
-              <caret line="107" column="100" selection-start-line="107" selection-start-column="100" selection-end-line="107" selection-end-column="100" />
+            <state vertical-scroll-proportion="0.9327731" vertical-offset="1844" max-vertical-offset="2480">
+              <caret line="143" column="97" selection-start-line="143" selection-start-column="97" selection-end-line="143" selection-end-column="97" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1139,8 +1139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79831934" vertical-offset="1332" max-vertical-offset="2032">
-          <caret line="107" column="100" selection-start-line="107" selection-start-column="100" selection-end-line="107" selection-end-column="100" />
+        <state vertical-scroll-proportion="0.9327731" vertical-offset="1844" max-vertical-offset="2480">
+          <caret line="143" column="97" selection-start-line="143" selection-start-column="97" selection-end-line="143" selection-end-column="97" />
           <folding>
             <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />

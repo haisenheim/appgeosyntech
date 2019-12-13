@@ -102,18 +102,46 @@
 
                     </li>
                     <li>
-                        <?= str_pad('DIAGNOSTIC INTERNE',$pad_length1,'_',STR_PAD_RIGHT).'.p.' ?>
+                        <?= str_pad('DIAGNOSTIC INTERNE',$pad_length1,'.',STR_PAD_RIGHT).'.p.' ?>
 
                         <ul style="list-style: none;">
-                            <li><?= str_pad('3.1. Présentation du modèle économique',$pad_length2,'_',STR_PAD_RIGHT).'.p.' ?></li>
+                            <li><?= str_pad('3.1. Présentation du modèle économique',$pad_length2,'.',STR_PAD_RIGHT).'.p.' ?></li>
 
                             <li>3.2. Présentation de la cartographie des risques..........p.</li>
-                            <li><?= str_pad('3.3. Présentation des états financiers',$pad_length2,'_',STR_PAD_RIGHT).'.p.' ?></li>
+                            <li><?= str_pad('3.3. Présentation des états financiers',$pad_length2,'.',STR_PAD_RIGHT).'.p.' ?></li>
 
                         </ul>
                     </li>
 
                 </ol>
+            </div>
+             <div class="page-break"></div>
+             <h3>TABLE DE MATIERE 2</h3>
+            <div class="sommaire2">
+                I/ RESUME EXECUTIF…………………………………………………………………………………………………………p.
+                II/ DIAGNOSTIC EXTERNE………………………………………………………………………………………………….p.
+                	2.1. Analyse de l’environnement……………………………………………………………………………p.
+                	2.2. Analyse de la demande……………………………………………………………………………………p.
+                	2.3. Analyse de l’offre……………………………………………………………………………………………p.
+                	2.4. Résumé du diagnostic externe…………………………………………………………………………p.
+                III/ DIAGNOSTIC INTERNE…………………………………………………………………………………………………p.
+                	3.1. Présentation du modèle économique………………………………………………………………p.
+                	3.2. Présentation de la cartographie des risques…………………………………………………….p.
+                	3.3. Présentation des états financiers…………………………………………………………………….p.
+                	3.4. Résumé du diagnostic interne…………………………………………………………………………p.
+                IV/ DIAGNOSTIC STRATEGIQUE…………………………………………………………………………………………p.
+                	4.1. Présentation du SWOT……………………………………………………………………………………p.
+                	4.2. Objectifs stratégiques……………………………………………………………………………………..p.
+                	4.3. Organisation du travail……………………………………………………………………………………p.
+                	4.4. Actions de maitrise des risques……………………………………………………………………….p.
+                	4.5. Plan d’actions stratégiques……………………………………………………………………………..p.
+                	4.6. Etudes de faisabilité………………………………………………………………………………………..p.
+                V/ PLAN FINANCIER………………………………………………………………………………………………………….p.
+                	5.1. Compte d’exploitation prévisionnel………………………………………………………………..p.
+                	5.2. Bilan prévisionnel……………………………………………………………………………………………p.
+                	5.3. Flux de trésorerie……………………………………………………………………………………………p.
+                	5.4. Montage financier…………………………………………………………………………………………..p.
+                	5.5. Rentabilité du projet et/ou tableau d’amortissement du prêt………………………….p.
             </div>
         </div>
     </main>
