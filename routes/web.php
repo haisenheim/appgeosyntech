@@ -55,7 +55,7 @@ Route::get('/roles/',
     'RoleController@index'
 );*/
 Route::name('utils.')
-		->namespace('Utlis')
+		->namespace('Utils')
 		->group(function(){
 			Route::get('dossier/print/{token}','DossierController@printit');
 		});
