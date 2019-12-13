@@ -2127,7 +2127,7 @@
                                                    <dt>Présentation de l’entreprise  </dt>
                                                    <dd><?= $projet->teaser?$projet->teaser->entreprise:'' ?></dd>
         				                       </li>
-        				                       @if($projet->youtubeUri)
+        				                       @if($projet->teaser->youtubeUri)
                                                    <li>
                                                        <dd><a href="<?= $projet->teaser?$projet->teaser->youtubeUri:'' ?>">Suivre la vidéo du projet sur Youtube</a></dd>
                                                    </li>
