@@ -126,30 +126,30 @@
              <div class="page-break"></div>
              <h3>TABLE DE MATIERE 2</h3>
             <div class="sommaire2">
-                I/ RESUME EXECUTIF <span>P.</span> <br/>
-                II/ DIAGNOSTIC EXTERNE <span>P.</span> <br/>
-                	2.1. Analyse de l’environnement  <span>P.</span> <br/>
-                	2.2. Analyse de la demande  <span>P.</span> <br/>
-                	2.3. Analyse de l’offre  <span>P.</span> <br/>
-                	2.4. Résumé du diagnostic externe  <span>P.</span> <br/>
-                III/ DIAGNOSTIC INTERNE <span>P.</span> <br/>
-                	3.1. Présentation du modèle économique <span>P.</span> <br/>
-                	3.2. Présentation de la cartographie des risques <span>P.</span> <br/>
-                	3.3. Présentation des états financiers <span>P.</span> <br/>
-                	3.4. Résumé du diagnostic interne <span>P.</span> <br/>
-                IV/ DIAGNOSTIC STRATEGIQUE <span>P.</span> <br/>
-                	4.1. Présentation du SWOT <span>P.</span> <br/>
-                	4.2. Objectifs stratégiques <span>P.</span> <br/>
-                	4.3. Organisation du travail <span>P.</span> <br/>
-                	4.4. Actions de maitrise des risques <span>P.</span> <br/>
-                	4.5. Plan d’actions stratégiques <span>P.</span> <br/>
-                	4.6. Etudes de faisabilité <span>P.</span> <br/>
-                V/ PLAN FINANCIER <span>P.</span> <br/>
-                	5.1. Compte d’exploitation prévisionnel <span>P.</span> <br/>
-                	5.2. Bilan prévisionnel <span>P.</span> <br/>
-                	5.3. Flux de trésorerie <span>P.</span> <br/>
-                	5.4. Montage financier <span>P.</span> <br/>
-                	5.5. Rentabilité du projet et/ou tableau d’amortissement du prêt <span>P.</span> <br/>
+                I/ RESUME EXECUTIF<span>P.</span><br/>
+                II/ DIAGNOSTIC EXTERNE<span>P.</span> <br/>
+                	2.1. Analyse de l’environnement<span>P.</span> <br/>
+                	2.2. Analyse de la demande<span>P.</span> <br/>
+                	2.3. Analyse de l’offre<span>P.</span> <br/>
+                	2.4. Résumé du diagnostic externe<span>P.</span> <br/>
+                III/ DIAGNOSTIC INTERNE<span>P.</span> <br/>
+                	3.1. Présentation du modèle économique<span>P.</span> <br/>
+                	3.2. Présentation de la cartographie des risques<span>P.</span> <br/>
+                	3.3. Présentation des états financiers<span>P.</span> <br/>
+                	3.4. Résumé du diagnostic interne<span>P.</span> <br/>
+                IV/ DIAGNOSTIC STRATEGIQUE<span>P.</span> <br/>
+                	4.1. Présentation du SWOT<span>P.</span> <br/>
+                	4.2. Objectifs stratégiques<span>P.</span> <br/>
+                	4.3. Organisation du travail<span>P.</span> <br/>
+                	4.4. Actions de maitrise des risques<span>P.</span> <br/>
+                	4.5. Plan d’actions stratégiques<span>P.</span> <br/>
+                	4.6. Etudes de faisabilité<span>P.</span> <br/>
+                V/ PLAN FINANCIER<span>P.</span> <br/>
+                	5.1. Compte d’exploitation prévisionnel<span>P.</span> <br/>
+                	5.2. Bilan prévisionnel<span>P.</span> <br/>
+                	5.3. Flux de trésorerie<span>P.</span> <br/>
+                	5.4. Montage financier<span>P.</span> <br/>
+                	5.5. Rentabilité du projet et/ou tableau d’amortissement du prêt<span>P.</span> <br/>
             </div>
         </div>
     </main>
