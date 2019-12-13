@@ -55,6 +55,10 @@
          .page-break {
              page-break-after: always;
          }
+         .sommaire2 span {
+            float: right;
+            margin-right: 30px;
+         }
 
      </style>
 </head>
@@ -118,30 +122,30 @@
              <div class="page-break"></div>
              <h3>TABLE DE MATIERE 2</h3>
             <div class="sommaire2">
-                I/ RESUME EXECUTIF…………………………………………………………………………………………………………p. <br/>
-                II/ DIAGNOSTIC EXTERNE………………………………………………………………………………………………….p. <br/>
-                	2.1. Analyse de l’environnement……………………………………………………………………………p. <br/>
-                	2.2. Analyse de la demande……………………………………………………………………………………p. <br/>
-                	2.3. Analyse de l’offre……………………………………………………………………………………………p. <br/>
-                	2.4. Résumé du diagnostic externe…………………………………………………………………………p. <br/>
-                III/ DIAGNOSTIC INTERNE…………………………………………………………………………………………………p. <br/>
-                	3.1. Présentation du modèle économique………………………………………………………………p. <br/>
-                	3.2. Présentation de la cartographie des risques…………………………………………………….p. <br/>
-                	3.3. Présentation des états financiers…………………………………………………………………….p. <br/>
-                	3.4. Résumé du diagnostic interne…………………………………………………………………………p. <br/>
-                IV/ DIAGNOSTIC STRATEGIQUE…………………………………………………………………………………………p. <br/>
-                	4.1. Présentation du SWOT……………………………………………………………………………………p. <br/>
-                	4.2. Objectifs stratégiques……………………………………………………………………………………..p. <br/>
-                	4.3. Organisation du travail……………………………………………………………………………………p. <br/>
-                	4.4. Actions de maitrise des risques……………………………………………………………………….p. <br/>
-                	4.5. Plan d’actions stratégiques……………………………………………………………………………..p. <br/>
-                	4.6. Etudes de faisabilité………………………………………………………………………………………..p. <br/>
-                V/ PLAN FINANCIER………………………………………………………………………………………………………….p. <br/>
-                	5.1. Compte d’exploitation prévisionnel………………………………………………………………..p. <br/>
-                	5.2. Bilan prévisionnel……………………………………………………………………………………………p. <br/>
-                	5.3. Flux de trésorerie……………………………………………………………………………………………p. <br/>
-                	5.4. Montage financier…………………………………………………………………………………………..p. <br/>
-                	5.5. Rentabilité du projet et/ou tableau d’amortissement du prêt………………………….p. <br/>
+                I/ RESUME EXECUTIF <span>P.</span> <br/>
+                II/ DIAGNOSTIC EXTERNE <span>P.</span> <br/>
+                	2.1. Analyse de l’environnement  <span>P.</span> <br/>
+                	2.2. Analyse de la demande  <span>P.</span> <br/>
+                	2.3. Analyse de l’offre  <span>P.</span> <br/>
+                	2.4. Résumé du diagnostic externe  <span>P.</span> <br/>
+                III/ DIAGNOSTIC INTERNE <span>P.</span> <br/>
+                	3.1. Présentation du modèle économique <span>P.</span> <br/>
+                	3.2. Présentation de la cartographie des risques <span>P.</span> <br/>
+                	3.3. Présentation des états financiers <span>P.</span> <br/>
+                	3.4. Résumé du diagnostic interne <span>P.</span> <br/>
+                IV/ DIAGNOSTIC STRATEGIQUE <span>P.</span> <br/>
+                	4.1. Présentation du SWOT <span>P.</span> <br/>
+                	4.2. Objectifs stratégiques <span>P.</span> <br/>
+                	4.3. Organisation du travail <span>P.</span> <br/>
+                	4.4. Actions de maitrise des risques <span>P.</span> <br/>
+                	4.5. Plan d’actions stratégiques <span>P.</span> <br/>
+                	4.6. Etudes de faisabilité <span>P.</span> <br/>
+                V/ PLAN FINANCIER <span>P.</span> <br/>
+                	5.1. Compte d’exploitation prévisionnel <span>P.</span> <br/>
+                	5.2. Bilan prévisionnel <span>P.</span> <br/>
+                	5.3. Flux de trésorerie <span>P.</span> <br/>
+                	5.4. Montage financier <span>P.</span> <br/>
+                	5.5. Rentabilité du projet et/ou tableau d’amortissement du prêt <span>P.</span> <br/>
             </div>
         </div>
     </main>
