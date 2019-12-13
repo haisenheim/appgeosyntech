@@ -92,7 +92,7 @@
             <div style="float: right; margin-top: 30px; margin-right: 100px; border: 1px solid rgba(5, 11, 41, 0.89); padding: 10px; width: 200px; height: auto; text-align: center">
                 Direction du Pôle  Structuration de projets & Levée de fonds
             </div>
-            <?php $pad_length1=100; $pad_length2=100 ?>
+            <?php $pad_length1=100; $pad_length2=100; $projet = $dossier; ?>
             <div class="page-break"></div>
             <div class="sommaire">
                 <h3 style="text-align: center;">TABLE DES MATIERES</h3>
@@ -151,6 +151,62 @@
                 	5.4. Montage financier<span>P.</span> <br/>
                 	5.5. Rentabilité du projet et/ou tableau d’amortissement du prêt<span>P.</span> <br/>
             </div>
+        </div>
+        <div class="page-break"></div>
+        <div class="teaser">
+             <ol style="list-style: upper-roman;">
+        	    <li>
+        	        <dt>Présentation de l’entreprise et du porteur de projet</dt>
+        	        <ul>
+        	           <li>
+                            <dt>Présentation de l’entreprise  </dt>
+                            <dd><?= $projet->teaser?$projet->teaser->entreprise:'' ?></dd>
+        	           </li>
+        	           @if($projet->teaser->youtubeUri)
+                            <li>
+                                <dd><a href="<?= $projet->teaser?$projet->teaser->youtubeUri:'' ?>">Suivre la vidéo du projet sur Youtube</a></dd>
+                            </li>
+                        @endif
+                        <li>
+                            <dt>Présentation du porteur de projet  </dt>
+                            <dd><?= $projet->teaser?$projet->teaser->porteur:'' ?></dd>
+        	           </li>
+        	        </ul>
+
+        	     </li>
+        	     <li>
+        	        <dt>Présentation de la problématique à résoudre </dt>
+        	        <dd><?= $projet->teaser?$projet->teaser->problematique:'' ?></dd>
+        	     </li>
+        	     <li>
+        	        <dt>Présentation de la solution proposée </dt>
+        	        <dd><?= $projet->teaser?$projet->teaser->solution:'' ?></dd>
+        	     </li>
+        	     <li>
+        	        <dt>Présentation de la concurrence</dt>
+        	        <dd><?= $projet->teaser?$projet->teaser->concurrence:'' ?></dd>
+        	     </li>
+        	     <li>
+        	        <dt>Présentation de la valeur ajoutée apportée par rapport aux concurrents </dt>
+        	        <dd><?= $projet->teaser?$projet->teaser->va:'' ?></dd>
+        	     </li>
+        	     <li>
+        	        <dt>Présentation de ce qui a déjà été fait </dt>
+        	        <dd><?= $projet->teaser?$projet->teaser->realisations:'' ?></dd>
+        	     </li>
+        	     <li>
+        	        <dt>Présentation des objectifs  </dt>
+        	        <dd><?= $projet->teaser?$projet->teaser->objectifs:'' ?></dd>
+        	     </li>
+        	     <li>
+        	        <dt>Présentation des besoins financiers  </dt>
+        	        <dd><?= $projet->teaser?$projet->teaser->besoins:'' ?></dd>
+        	     </li>
+        	     <li>
+        	        <dt>Quelques chiffres prévisionnels  </dt>
+        	        <dd><?= $projet->teaser?$projet->teaser->chiffres:'' ?></dd>
+        	     </li>
+        	</ol>
         </div>
     </main>
 
