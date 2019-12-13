@@ -84,7 +84,7 @@
             <div style="float: right; margin-top: 30px; margin-right: 100px; border: 1px solid rgba(5, 11, 41, 0.89); padding: 10px; width: 200px; height: auto; text-align: center">
                 Direction du Pôle  Structuration de projets & Levée de fonds
             </div>
-            <?php $pad_length1=150; $pad_length2=120 ?>
+            <?php $pad_length1=100; $pad_length2=100 ?>
             <div class="page-break"></div>
             <div class="sommaire">
                 <h3 style="text-align: center;">TABLE DES MATIERES</h3>
