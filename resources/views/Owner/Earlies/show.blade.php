@@ -1611,11 +1611,27 @@
      </style>
 
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
     <script>
         $(document).ready(function(){
            // $('#side2').height($('#side1').height());
            //$('#side2').height(890);
+           $('textarea').summernote({
+             height: 125,
+             tabsize: 2,
+             followingToolbar: true,
+             lang:'fr-FR'
+           });
+
+           var tsr = $('#has_teaser').val();
+           if(tsr){
+              setTimeout(function() {
+                          $('#popup').show();
+                        },9000);
+           }
             getPlan($('#plan_id').val());
 
             $.ajax({
@@ -1926,9 +1942,7 @@
         </div>
         @endif
 
-<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-  <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
 
 <style>
          div.note-editor.note-frame{
@@ -1985,28 +1999,7 @@
        @else
            <input type="hidden" id="has_teaser" value="0"/>
        @endif
-        		<script type="text/javascript">
-                    $(document).ready(function() {
-                    $('textarea').summernote({
-                      height: 125,
-                      tabsize: 2,
-                      followingToolbar: true,
-                      lang:'fr-FR'
-                    });
 
-                    var tsr = $('#has_teaser').val();
-                    if(tsr){
-                       setTimeout(function() {
-                                   $('#popup').show();
-                                 },9000);
-                    }
-
-                    });
-
-
-
-
-                  </script>
 
 @endsection
 
