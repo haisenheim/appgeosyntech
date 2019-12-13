@@ -51,19 +51,19 @@
                             <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
 
-                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-warning btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
 
 
                             @if($projet->etape>=2)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-outline-info btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
                             @endif
 
                             @if($projet->etape>=3)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn btn-outline-primary btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
                             @endif
 
                              @if($projet->etape>=4)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> EDITER LE TEASER</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-outline-success btn-block btn-xs"><i class="fa fa-pencil"></i> EDITER LE TEASER</button>
                             @endif
 
 
@@ -72,7 +72,7 @@
                                 <ul class="list-group">
                                     <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
 
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span></li>
+                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite * 4 ,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span></li>
                                 </ul>
                             @else
                                 <div>
@@ -2124,7 +2124,7 @@
                         </div>
         				<div class="modal-body">
                             <fieldset>
-                                <legend style="text-transform: capitalize">Présentation de l’entreprise et du porteur de projet </legend>
+                                <legend style="">Présentation de l’entreprise et du porteur de projet </legend>
                                 <div class="form-group">
                                     <label for="contexte">PRESENTATION DE L'ENTREPRISE</label>
                                     <textarea class="form-control" name="entreprise" rows="3" id="contexte"></textarea>
@@ -2282,6 +2282,10 @@
         font-size: x-small;
         line-height: 0.5;
    }
+
+   #teaserModal label, #teaserModal legend {
+    font-size: 1rem;
+   }
    .card.maximized-card {
 
                overflow-y: scroll;
@@ -2428,14 +2432,9 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $('textarea').summernote({
-      height: 300,
-      tabsize: 2,
-      followingToolbar: true,
-      lang:'fr-FR'
-    });
 
-     $('#bm textarea').summernote({
+
+     $('textarea').summernote({
       height: 125,
       tabsize: 2,
       followingToolbar: true,
