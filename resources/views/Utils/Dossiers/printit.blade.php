@@ -88,14 +88,14 @@
             <div class="sommaire">
                 <h3 style="text-align: center;">TABLE DES MATIERES</h3>
                 <ol style="list-style: upper-roman">
-                    <li>RESUME EXECUTIF……………………………………………………………………………………p.</li>
+                    <li>RESUME EXECUTIF ................ p.</li>
                     <li>
-                        DIAGNOSTIC EXTERNE……………………………………………………………………………p.
+                        DIAGNOSTIC EXTERNE ................p.
                         <ul style="list-style: none">
-                            <li>2.1. Analyse de l’environnement……………………p.</li>
-                            <li>2.2. Analyse de la demande…………………………………p.</li>
-                            <li>2.3. Analyse de l’offre…………………………………………p.</li>
-                            <li>2.4. Résumé du diagnostic externe………………p.</li>
+                            <li>2.1. Analyse de l’environnement ..........p.</li>
+                            <li>2.2. Analyse de la demande................p.</li>
+                            <li>2.3. Analyse de l’offre ..................p.</li>
+                            <li>2.4. Résumé du diagnostic externe ........p.</li>
                         </ul>
 
                     </li>
