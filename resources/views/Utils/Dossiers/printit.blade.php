@@ -73,6 +73,8 @@
             <div style="margin-top: 20px; width: 600px; height: 400px; background: url('{{ $dossier->imageUri?asset('img/'.$dossier->imageUri):asset('img/logo.png') }}');  background-size: cover">
 
             </div>
+            
+            <img src="{{ $dossier->imageUri?asset('img/'.$dossier->imageUri):asset('img/logo.png') }}" alt=""/>
 
         </div>
     </main>
