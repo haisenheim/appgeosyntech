@@ -60,6 +60,10 @@
             margin-right: 30px;
          }
 
+         .sommaire2{
+         width: 800px;
+         }
+
      </style>
 </head>
 <body>
