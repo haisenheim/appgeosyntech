@@ -104,19 +104,19 @@
                             @endif
 
 
-                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-warning btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
 
 
                             @if($projet->etape>=2)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-outline-info btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
                             @endif
 
                             @if($projet->etape>=3)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn btn-outline-primary btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
                             @endif
 
                              @if($projet->etape>=4)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i>TEASER</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-outline-success btn-block btn-xs"><i class="fa fa-pencil"></i>TEASER</button>
                             @endif
 
 
@@ -125,7 +125,7 @@
                                 <ul class="list-group">
                                     <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
 
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->traite }}</span></li>
+                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite * 4 ,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span></li>
                                 </ul>
 
                             @endif
@@ -1892,7 +1892,9 @@
          @if($projet->modepaiement_id>0)
           <input type="hidden" id="tokpay" value="<?= $projet->token ?>"/>
          @endif
-
+    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+          <!-- Bootstrap 4 -->
+        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>

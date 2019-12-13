@@ -103,19 +103,19 @@
                             @endif
 
 
-                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-warning btn-outline-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
 
 
                             @if($projet->etape>=2)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-outline-info btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
                             @endif
 
                             @if($projet->etape>=3)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn btn-outline-primary btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
                             @endif
 
                              @if($projet->etape>=4)
-                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i>TEASER</button>
+                                <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-outline-success btn-block btn-xs"><i class="fa fa-pencil"></i>TEASER</button>
                             @endif
 
 
@@ -1875,7 +1875,7 @@
 
         </div>
 
-
+        @if($projet->modele)
         <div class="modal fade" id="bm" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
         		<div class="modal-dialog modal-xl" role="document">
         			<div class="modal-content">
@@ -1937,7 +1937,7 @@
 
         		</div>
         </div>
-
+        @endif
         <!-- Edition du teaser-->
 
 
