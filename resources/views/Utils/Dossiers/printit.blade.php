@@ -102,13 +102,13 @@
 
                     </li>
                     <li>
-                        <?= str_pad('DIAGNOSTIC INTERNE',$pad_length1,'.',STR_PAD_RIGHT).'.p.' ?>
+                        <?= str_pad('DIAGNOSTIC INTERNE',$pad_length1,'_',STR_PAD_RIGHT).'.p.' ?>
 
                         <ul style="list-style: none;">
-                            <li><?= str_pad('3.1. Présentation du modèle économique',$pad_length2,'.',STR_PAD_RIGHT).'.p.' ?></li>
+                            <li><?= str_pad('3.1. Présentation du modèle économique',$pad_length2,'_',STR_PAD_RIGHT).'.p.' ?></li>
 
                             <li>3.2. Présentation de la cartographie des risques..........p.</li>
-                            <li><?= str_pad('3.3. Présentation des états financiers',$pad_length2,'.',STR_PAD_RIGHT).'.p.' ?></li>
+                            <li><?= str_pad('3.3. Présentation des états financiers',$pad_length2,'_',STR_PAD_RIGHT).'.p.' ?></li>
 
                         </ul>
                     </li>
