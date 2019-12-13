@@ -30,8 +30,8 @@
              height: 2cm;
 
              /** Extra personal styles **/
-             background-color: #28a745;;
-             color: white;
+             background-color: #FFFFFF;
+             color: #28a745;
              text-align: center;
              line-height: 1.5cm;
          }
@@ -45,8 +45,8 @@
              height: 2cm;
 
              /** Extra personal styles **/
-             background-color: #28a745;;
-             color: white;
+             background-color: #FFFFFF;
+             color: #28a745;
              text-align: center;
              line-height: 1.5cm;
          }
@@ -64,7 +64,7 @@
 
     <main>
         <div style="padding-top: 30px" class="container">
-            <div style="margin-top: 200px; margin-right: auto; margin-left: auto; width: 400px; text-align: center">
+            <div style="margin-top: 200px; margin-right: auto; margin-left: auto; width: 600px; text-align: center">
                <h1>RAPPORT D’EVALUATION DU PROJET </h1>
             </div>
 
