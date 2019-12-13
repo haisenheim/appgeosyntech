@@ -61,7 +61,7 @@
          }
 
          .sommaire2{
-         max-width: 600px;
+         max-width: 580px;
          }
 
      </style>
