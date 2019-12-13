@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+use PDF;
+
 class DossierController extends Controller
 {
     /**
@@ -39,8 +41,9 @@ class DossierController extends Controller
 
 	public function printit($token){
 		$dossier = Projet::where('token',$token)->first();
-
-		return view('Utils/Dossiers/printit')->with(compact('dossier'));
+		$data =['dossier',$dossier];
+		$pdf = PDF::loadView('Utils/Dossiers/printit',$data);
+		return $pdf->stream($dossier->name.'.pdf');
 	}
 
 	public function getOwner(Request $request){

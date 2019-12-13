@@ -3,7 +3,7 @@
 <head lang="en">
 	<meta charset="UTF-8">
 
-	<title>{{ $title }}</title>
+	<title> Titre du document</title>
 	 <style>
          /**
              Set the margins of the page to 0, so the footer and the header
@@ -64,7 +64,9 @@
 
     <main>
         <div style="padding-top: 30px" class="container">
-
+            <div style="position: absolute; top:0; bottom: 0;right: 0; left: 0 ">
+                <h4>Contenu du document</h4>
+            </div>
         </div>
     </main>
 
