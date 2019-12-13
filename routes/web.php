@@ -54,6 +54,11 @@ Route::post('/contact','EmailController@contact');
 Route::get('/roles/',
     'RoleController@index'
 );*/
+Route::name('utils.')
+		->namespace('Utlis')
+		->group(function(){
+			Route::get('dossier/print/{token}','DossierController@printit');
+		});
 
 Route::prefix('admin')
     ->namespace('Admin')

@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
+
 	<title>{{ $title }}</title>
 </head>
 <body>

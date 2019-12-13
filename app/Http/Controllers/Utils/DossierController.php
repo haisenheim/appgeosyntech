@@ -37,6 +37,12 @@ class DossierController extends Controller
         //
     }
 
+	public function printit($token){
+		$dossier = Projet::where('token',$token)->first();
+
+		return view('Utils/Dossiers/printit')->with(compact('dossier'));
+	}
+
 	public function getOwner(Request $request){
 		$user = Auth::user();
 
