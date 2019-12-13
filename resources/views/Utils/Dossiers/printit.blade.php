@@ -59,7 +59,7 @@
     </header>
 
     <footer>
-       Pied de page OBAC ALERT Copyright &copy; <?php echo date("Y");?>
+      OBAC Sarl – Congo – Rapport d’évaluation du projet <b><?= $dossier->name ?></b>
     </footer>
 
     <main>
@@ -73,6 +73,10 @@
             <div style="margin-top: 20px; margin-right: auto; margin-left: auto; width: 600px; text-align: center; height: 400px;">
                 <?php $image_path = '/img/'.$dossier->imageUri; ?>
                 <img src="{{ public_path() . $image_path }}" style="width: 480px; height: 240px;">
+            </div>
+
+            <div style="float: right; margin-top: 30px; margin-right: 30px; border: 1px solid #1e90ff; padding: 10px; width: 200px; height: auto; text-align: center">
+                Direction du Pôle  Structuration de projets & Levée de fonds
             </div>
 
 
