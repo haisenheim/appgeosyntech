@@ -46,10 +46,16 @@
 
              /** Extra personal styles **/
              background-color: #FFFFFF;
-             color: #28a745;
+             color: #000;
              text-align: center;
              line-height: 1.5cm;
          }
+
+
+         .page-break {
+             page-break-after: always;
+         }
+
      </style>
 </head>
 <body>
@@ -75,11 +81,13 @@
                 <img src="{{ public_path() . $image_path }}" style="width: 480px; height: 240px;">
             </div>
 
-            <div style="float: right; margin-top: 30px; margin-right: 30px; border: 1px solid #1e90ff; padding: 10px; width: 200px; height: auto; text-align: center">
+            <div style="float: right; margin-top: 30px; margin-right: 100px; border: 1px solid rgba(5, 11, 41, 0.89); padding: 10px; width: 200px; height: auto; text-align: center">
                 Direction du Pôle  Structuration de projets & Levée de fonds
             </div>
-
-
+            <div class="page-break"></div>
+            <div class="sommaire">
+                <h3>TABLE DES MATIERES</h3>
+            </div>
         </div>
     </main>
 
