@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php" afterPath="$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +48,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.84" vertical-offset="1694" max-vertical-offset="6560">
-              <caret line="2031" column="59" selection-start-line="2031" selection-start-column="59" selection-end-line="2031" selection-end-column="59" />
+            <state vertical-scroll-proportion="-6.2" vertical-offset="101" max-vertical-offset="6560">
+              <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="166" />
               <folding>
                 <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0" expanded="false" />
@@ -116,10 +117,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5092025" vertical-offset="439" max-vertical-offset="3104">
+            <state vertical-scroll-proportion="-9.96" vertical-offset="439" max-vertical-offset="3104">
               <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
               <folding>
                 <element signature="e#46#82#0#PHP" expanded="true" />
@@ -138,15 +139,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="printit.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="printit.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.6" vertical-offset="759" max-vertical-offset="1376">
-              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.82563025" vertical-offset="759" max-vertical-offset="1376">
+              <caret line="72" column="169" selection-start-line="72" selection-start-column="169" selection-end-line="72" selection-end-column="169" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -246,8 +246,8 @@
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pdf_view.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php" />
       </list>
     </option>
   </component>
@@ -499,32 +499,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1093,10 +1067,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.64" vertical-offset="2384" max-vertical-offset="4672">
+          <caret line="268" column="24" selection-start-line="268" selection-start-column="24" selection-end-line="268" selection-end-column="24" />
+          <folding>
+            <element signature="e#2162#4221#0#PHP" expanded="false" />
+            <element signature="e#4903#6014#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProjetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.12" vertical-offset="1396" max-vertical-offset="5360">
+          <caret line="164" column="39" selection-start-line="164" selection-start-column="39" selection-end-line="164" selection-end-column="39" />
+          <folding>
+            <element signature="e#1096#3286#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.96" vertical-offset="439" max-vertical-offset="3104">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.84" vertical-offset="1694" max-vertical-offset="6560">
-          <caret line="2031" column="59" selection-start-line="2031" selection-start-column="59" selection-end-line="2031" selection-end-column="59" />
+        <state vertical-scroll-proportion="-6.2" vertical-offset="101" max-vertical-offset="6560">
+          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="166" />
           <folding>
             <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0" expanded="false" />
@@ -1125,45 +1130,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64" vertical-offset="2384" max-vertical-offset="4672">
-          <caret line="268" column="24" selection-start-line="268" selection-start-column="24" selection-end-line="268" selection-end-column="24" />
-          <folding>
-            <element signature="e#2162#4221#0#PHP" expanded="false" />
-            <element signature="e#4903#6014#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProjetController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.12" vertical-offset="1396" max-vertical-offset="5360">
-          <caret line="164" column="39" selection-start-line="164" selection-start-column="39" selection-end-line="164" selection-end-column="39" />
-          <folding>
-            <element signature="e#1096#3286#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.6" vertical-offset="759" max-vertical-offset="1376">
-          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.82563025" vertical-offset="759" max-vertical-offset="1376">
+          <caret line="72" column="169" selection-start-line="72" selection-start-column="169" selection-end-line="72" selection-end-column="169" />
           <folding>
             <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5092025" vertical-offset="439" max-vertical-offset="3104">
-          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <element signature="e#46#82#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
