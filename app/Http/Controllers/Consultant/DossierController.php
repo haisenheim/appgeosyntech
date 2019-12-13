@@ -219,7 +219,7 @@ class DossierController extends Controller
 
 	public function saveTeaser(Request $request){
 		$projet = Projet::where('token',$request->projet_token)->first();
-		$data = $request->except('projet_token');
+		$data = $request->except('projet_token','files','toto');
 		$data['token'] = sha1(Auth::user()->id . date('mdHYis') . $projet->id);
 		$data['projet_id']=$projet->id;
 		$data['user_id'] = Auth::user()->id;
