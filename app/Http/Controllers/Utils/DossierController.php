@@ -41,7 +41,7 @@ class DossierController extends Controller
 
 	public function printit($token){
 		$dossier = Projet::where('token',$token)->first();
-		$data =['dossier',$dossier];
+		$data =['dossier'=>$dossier];
 		$pdf = PDF::loadView('Utils/Dossiers/printit',$data);
 		return $pdf->stream($dossier->name.'.pdf');
 	}
