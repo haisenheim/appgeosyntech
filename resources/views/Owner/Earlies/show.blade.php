@@ -103,7 +103,7 @@
                             @endif
 
 
-                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-warning btn-outline-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+                            <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-block btn-outline-warning btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
 
 
                             @if($projet->etape>=2)
@@ -1857,20 +1857,6 @@
         			</div>
         		</div>
 
-
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('textarea').summernote({
-                        height: 300,
-                        tabsize: 2,
-                        followingToolbar: true,
-                        lang:'fr-FR'
-                      });
-
-                    });
-
-
-                  </script>
 
 
         </div>
