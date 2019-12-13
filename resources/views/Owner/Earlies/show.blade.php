@@ -1821,6 +1821,62 @@
 
         </div>
 
+
+
+        <div class="modal fade" id="teaserModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        		<div class="modal-dialog modal-lg" role="document">
+        			<div class="modal-content">
+        				<div class="modal-header bg-success">
+        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>TEASER</span></h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+        				</div>
+        				<div class="modal-body">
+        				    <div class="card">
+        				        <div class="card-header">
+        				            <small class=""><?= $projet->teaser?date_format($projet->teaser->created_at,'d/m/Y'):'-' ?> - <span class="text-primary"><?= $projet->teaser?$projet->teaser->user->name:'-' ?></span></small>
+        				        </div>
+        				        <div class="card-body">
+                                    <dl>
+                                      <dt>CONTEXTE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->contexte:'-' ?></dd>
+                                      <dt>PROBLEMATIQUE</dt>
+                                     <dd><?= $projet->teaser?$projet->teaser->problematique:'-' ?></dd>
+                                      <dt>MARCHE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->marche:'-' ?></dd>
+                                      <dt>STRATEGIE</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->strategie:'-' ?></dd>
+                                      <dt>CHIFFRES CLEFS</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->chiffres:'-' ?></dd>
+                                      <dt>FOCUS REALISATION</dt>
+                                      <dd><?= $projet->teaser?$projet->teaser->focus_realisations:'-' ?></dd>
+                                    </dl>
+        				        </div>
+        				    </div>
+
+        				</div>
+        			</div>
+        		</div>
+
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                      $('textarea').summernote({
+                        height: 300,
+                        tabsize: 2,
+                        followingToolbar: true,
+                        lang:'fr-FR'
+                      });
+
+                    });
+
+
+                  </script>
+
+
+        </div>
+
         @if($projet->modele)
         <div class="modal fade" id="bm" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
         		<div class="modal-dialog modal-xl" role="document">
@@ -1885,62 +1941,6 @@
         </div>
         @endif
         <!-- Edition du teaser-->
-        @if($projet->teaser)
-        <div class="modal fade" id="teaserModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-        		<div class="modal-dialog modal-lg" role="document">
-        			<div class="modal-content">
-        				<div class="modal-header bg-success">
-        					<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>TEASER</span></h5>
-        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-        				</div>
-        				<div class="modal-body">
-        				    <div class="card">
-        				        <div class="card-header">
-        				            <small class=""><?= $projet->teaser?date_format($projet->teaser->created_at,'d/m/Y'):'-' ?> - <span class="text-primary"><?= $projet->teaser?$projet->teaser->user->name:'-' ?></span></small>
-        				        </div>
-        				        <div class="card-body">
-                                    <dl>
-                                      <dt>CONTEXTE</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->contexte:'-' ?></dd>
-                                      <dt>PROBLEMATIQUE</dt>
-                                     <dd><?= $projet->teaser?$projet->teaser->problematique:'-' ?></dd>
-                                      <dt>MARCHE</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->marche:'-' ?></dd>
-                                      <dt>STRATEGIE</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->strategie:'-' ?></dd>
-                                      <dt>CHIFFRES CLEFS</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->chiffres:'-' ?></dd>
-                                      <dt>FOCUS REALISATION</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->focus_realisations:'-' ?></dd>
-                                    </dl>
-        				        </div>
-        				    </div>
-
-        				</div>
-        			</div>
-        		</div>
-
-
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('textarea').summernote({
-                        height: 300,
-                        tabsize: 2,
-                        followingToolbar: true,
-                        lang:'fr-FR'
-                      });
-
-                    });
-
-
-                  </script>
-
-
-        </div>
-        @endif
-
 
 
 
