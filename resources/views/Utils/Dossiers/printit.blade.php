@@ -70,7 +70,7 @@
 
             <div></div>
 
-            <div style="margin-top: 20px; width: 600px; height: 400px;">
+            <div style="margin-top: 20px; margin-right: auto; margin-left: auto; width: 600px; text-align: center; height: 400px;">
                 <?php $image_path = '/img/'.$dossier->imageUri; ?>
                 <img src="{{ public_path() . $image_path }}" style="width: 300px; height: 240px;">
             </div>
