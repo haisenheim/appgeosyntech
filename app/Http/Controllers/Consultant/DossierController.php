@@ -220,19 +220,10 @@ class DossierController extends Controller
 	public function saveTeaser(Request $request){
 		$projet = Projet::where('token',$request->projet_token)->first();
 		$data = $request->all();
-
-		$teaser = new Teaser();
-		$teaser->problematique = $data['problematique'];
-		$teaser->chiffres = $data['chiffres'];
-		$teaser->contexte = $data['contexte'];
-		$teaser->focus_realisations=$data['focus_realisations'];
-		$teaser->strategie = $data['strategie'];
-		$teaser->marche = $data['marche'];
-		$teaser->projet_id = $projet->id;
-		$teaser->user_id = Auth::user()->id;
-		$teaser->save();
-		//dd($request->all());
-		//Teaser::create($data);
+		$data['token'] = sha1(Auth::user()->id . date('mdHYis') . $projet->id);
+		$data['projet_id']=$projet->id;
+		$data['user_id'] = Auth::user()->id;
+		$teaser = Teaser::updateOrCreate(['projet_id'=>$projet->id],$data);
 		return redirect()->back();
 	}
 
