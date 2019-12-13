@@ -70,13 +70,11 @@
 
             <div></div>
 
-            <div style="margin-top: 20px; width: 600px; height: 400px; background: url('{{ $dossier->imageUri?asset('/img/'.$dossier->imageUri):asset('/img/logo.png') }}');  background-size: cover">
-
+            <div style="margin-top: 20px; width: 600px; height: 400px;">
+                <?php $image_path = '/img/'.$dossier->imageUri; ?>
+                <img src="{{ public_path() . $image_path }}" style="width: 300px; height: 240px;">
             </div>
-            <?php $image_path = '/img/logo.png'; ?>
-            <img src="{{ public_path() . $image_path }}" style="width: 300px; height: 240px;">
-            
-            <img  src="{{ url('img/projets/01f926254e281c2493eab56da0e093a3b5ab6b72.jpg') }}"  alt=""/>
+
 
         </div>
     </main>
