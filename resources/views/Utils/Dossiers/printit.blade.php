@@ -86,7 +86,27 @@
             </div>
             <div class="page-break"></div>
             <div class="sommaire">
-                <h3>TABLE DES MATIERES</h3>
+                <h3 style="text-align: center;">TABLE DES MATIERES</h3>
+                <ol style="list-style: upper-roman">
+                    <li>RESUME EXECUTIF…………………………………………………………………………………………………………p.</li>
+                    <li>
+                        DIAGNOSTIC EXTERNE…………………………………………………………………………………………………p.
+                        <ul style="list-style: none">
+                            <li>2.1. Analyse de l’environnement………………………………………p.</li>
+                            <li>2.2. Analyse de la demande……………………………………………………p.</li>
+                            <li>2.3. Analyse de l’offre……………………………………………………………p.</li>
+                            <li>2.4. Résumé du diagnostic externe…………………………………p.</li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        DIAGNOSTIC INTERNE…………………………………………………………………………………………………p.
+                        <ul style="list-style: none;">
+                            <li>3.1. Présentation du modèle économique……………………p.</li>
+                        </ul>
+                    </li>
+
+                </ol>
             </div>
         </div>
     </main>
