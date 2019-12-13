@@ -1926,7 +1926,9 @@
         </div>
         @endif
 
-
+<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+  <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
 <style>
          div.note-editor.note-frame{
@@ -1985,6 +1987,12 @@
        @endif
         		<script type="text/javascript">
                     $(document).ready(function() {
+                    $('textarea').summernote({
+                      height: 125,
+                      tabsize: 2,
+                      followingToolbar: true,
+                      lang:'fr-FR'
+                    });
 
                     var tsr = $('#has_teaser').val();
                     if(tsr){
