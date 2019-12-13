@@ -2119,20 +2119,60 @@
         				            <small class=""><?= $projet->teaser?date_format($projet->teaser->created_at,'d/m/Y'):'-' ?> - <span class="text-primary"><?= $projet->teaser?$projet->teaser->user->name:'-' ?></span></small>
         				        </div>
         				        <div class="card-body">
-                                    <dl>
-                                      <dt>CONTEXTE</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->contexte:'-' ?></dd>
-                                      <dt>PROBLEMATIQUE</dt>
-                                     <dd><?= $projet->teaser?$projet->teaser->problematique:'-' ?></dd>
-                                      <dt>MARCHE</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->marche:'-' ?></dd>
-                                      <dt>STRATEGIE</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->strategie:'-' ?></dd>
-                                      <dt>CHIFFRES CLEFS</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->chiffres:'-' ?></dd>
-                                      <dt>FOCUS REALISATION</dt>
-                                      <dd><?= $projet->teaser?$projet->teaser->focus_realisations:'-' ?></dd>
-                                    </dl>
+        				            <ol style="list-style: upper-roman;">
+        				                <li>
+        				                    <dt>Présentation de l’entreprise et du porteur de projet</dt>
+        				                    <ul>
+        				                       <li>
+                                                   <dt>Présentation de l’entreprise  </dt>
+                                                   <dd><?= $projet->teaser?$projet->teaser->entreprise:'' ?></dd>
+        				                       </li>
+        				                       @if($projet->youtubeUri)
+                                                   <li>
+                                                       <dd><a href="<?= $projet->teaser?$projet->teaser->youtubeUri:'' ?>">Suivre la vidéo du projet sur Youtube</a></dd>
+                                                   </li>
+                                               @endif
+                                               <li>
+                                                   <dt>Présentation du porteur de projet  </dt>
+                                                   <dd><?= $projet->teaser?$projet->teaser->porteur:'' ?></dd>
+        				                       </li>
+        				                    </ul>
+
+        				                 </li>
+        				                 <li>
+        				                    <dt>Présentation de la problématique à résoudre </dt>
+        				                    <dd><?= $projet->teaser?$projet->teaser->problematique:'' ?></dd>
+        				                 </li>
+        				                 <li>
+        				                    <dt>Présentation de la solution proposée </dt>
+        				                    <dd><?= $projet->teaser?$projet->teaser->solution:'' ?></dd>
+        				                 </li>
+        				                 <li>
+        				                    <dt>Présentation de la concurrence</dt>
+        				                    <dd><?= $projet->teaser?$projet->teaser->concurrence:'' ?></dd>
+        				                 </li>
+        				                 <li>
+        				                    <dt>Présentation de la valeur ajoutée apportée par rapport aux concurrents </dt>
+        				                    <dd><?= $projet->teaser?$projet->teaser->va:'' ?></dd>
+        				                 </li>
+        				                 <li>
+        				                    <dt>Présentation de ce qui a déjà été fait </dt>
+        				                    <dd><?= $projet->teaser?$projet->teaser->realisations:'' ?></dd>
+        				                 </li>
+        				                 <li>
+        				                    <dt>Présentation des objectifs  </dt>
+        				                    <dd><?= $projet->teaser?$projet->teaser->objectifs:'' ?></dd>
+        				                 </li>
+        				                 <li>
+        				                    <dt>Présentation des besoins financiers  </dt>
+        				                    <dd><?= $projet->teaser?$projet->teaser->besoins:'' ?></dd>
+        				                 </li>
+        				                 <li>
+        				                    <dt>Quelques chiffres prévisionnels  </dt>
+        				                    <dd><?= $projet->teaser?$projet->teaser->chiffres:'' ?></dd>
+        				                 </li>
+        				            </ol>
+
         				        </div>
         				    </div>
 
