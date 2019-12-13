@@ -74,7 +74,7 @@
 
             </div>
             
-            <img src="http://alert.test/img/projets/01f926254e281c2493eab56da0e093a3b5ab6b72.jpg" alt=""/>
+            <img  src="{{ url('/img/projets/01f926254e281c2493eab56da0e093a3b5ab6b72.jpg') }}"  alt=""/>
 
         </div>
     </main>
