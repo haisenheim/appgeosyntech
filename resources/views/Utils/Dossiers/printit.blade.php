@@ -84,13 +84,15 @@
             <div style="float: right; margin-top: 30px; margin-right: 100px; border: 1px solid rgba(5, 11, 41, 0.89); padding: 10px; width: 200px; height: auto; text-align: center">
                 Direction du Pôle  Structuration de projets & Levée de fonds
             </div>
+            <?php $pad_length1=150; $pad_length2=120 ?>
             <div class="page-break"></div>
             <div class="sommaire">
                 <h3 style="text-align: center;">TABLE DES MATIERES</h3>
                 <ol style="list-style: upper-roman">
-                    <li>RESUME EXECUTIF ................................... p.</li>
+                    <li><?= str_pad('RESUME EXECUTIF',$pad_length1,'.',STR_PAD_RIGHT).'.p.' ?></li>
                     <li>
-                        DIAGNOSTIC EXTERNE ................................p.
+                    <?= str_pad('DIAGNOSTIC EXTERNE',$pad_length1,'.',STR_PAD_RIGHT).'.p.' ?>
+
                         <ul style="list-style: none">
                             <li>2.1. Analyse de l’environnement .....................p.</li>
                             <li>2.2. Analyse de la demande............................p.</li>
@@ -100,11 +102,14 @@
 
                     </li>
                     <li>
-                        DIAGNOSTIC INTERNE .............................................p.
+                        <?= str_pad('DIAGNOSTIC INTERNE',$pad_length1,'.',STR_PAD_RIGHT).'.p.' ?>
+
                         <ul style="list-style: none;">
-                            <li>3.1. Présentation du modèle économique ..................p.</li>
+                            <li><?= str_pad('3.1. Présentation du modèle économique',$pad_length2,'.',STR_PAD_RIGHT).'.p.' ?></li>
+
                             <li>3.2. Présentation de la cartographie des risques..........p.</li>
-                            <li><?= str_pad('3.3. Présentation des états financiers',50,'.',STR_PAD_RIGHT).'.p.' ?></li>
+                            <li><?= str_pad('3.3. Présentation des états financiers',$pad_length2,'.',STR_PAD_RIGHT).'.p.' ?></li>
+
                         </ul>
                     </li>
 
