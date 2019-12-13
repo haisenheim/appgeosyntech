@@ -1604,11 +1604,7 @@
                   </div>
 
               </div>
-     <style>
-        #concurrents table th{
-            max-width:50%;
-        }
-     </style>
+
 
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
     <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>

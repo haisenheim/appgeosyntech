@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,8 +100,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93697476" vertical-offset="578" max-vertical-offset="1952">
-              <caret line="1942" column="33" selection-start-line="1942" selection-start-column="33" selection-end-line="1942" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.9033613" vertical-offset="578" max-vertical-offset="1952">
+              <caret line="1941" column="0" selection-start-line="1941" selection-start-column="0" selection-end-line="1941" selection-end-column="0" />
               <folding>
                 <element signature="tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0" expanded="false" />
@@ -149,14 +150,14 @@
                 <element signature="tag#div#3" expanded="false" />
                 <element signature="tag#div#4" expanded="false" />
                 <element signature="tag#div#5" expanded="false" />
-                <element signature="e#144419#144483#0#HTML" expanded="true" />
+                <element signature="e#144391#144455#0#HTML" expanded="true" />
                 <element signature="tag#style#1" expanded="false" />
-                <element signature="e#0#193276#0#Blade" expanded="false" />
-                <marker date="1576199735116" expanded="false" signature="133907:133946" placeholder="..." />
-                <marker date="1576199735116" expanded="false" signature="138039:138049" placeholder="..." />
-                <marker date="1576199735116" expanded="false" signature="138107:138117" placeholder="..." />
-                <marker date="1576199735116" expanded="false" signature="138176:138186" placeholder="..." />
-                <marker date="1576199735116" expanded="false" signature="138260:138270" placeholder="..." />
+                <element signature="e#0#193234#0#Blade" expanded="false" />
+                <marker date="1576199867432" expanded="false" signature="133907:133946" placeholder="..." />
+                <marker date="1576199867432" expanded="false" signature="138039:138049" placeholder="..." />
+                <marker date="1576199867432" expanded="false" signature="138107:138117" placeholder="..." />
+                <marker date="1576199867432" expanded="false" signature="138176:138186" placeholder="..." />
+                <marker date="1576199867432" expanded="false" signature="138260:138270" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1438,8 +1439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93697476" vertical-offset="578" max-vertical-offset="1952">
-          <caret line="1942" column="33" selection-start-line="1942" selection-start-column="33" selection-end-line="1942" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.9033613" vertical-offset="578" max-vertical-offset="1952">
+          <caret line="1941" column="0" selection-start-line="1941" selection-start-column="0" selection-end-line="1941" selection-end-column="0" />
           <folding>
             <element signature="tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0" expanded="false" />
@@ -1488,14 +1489,14 @@
             <element signature="tag#div#3" expanded="false" />
             <element signature="tag#div#4" expanded="false" />
             <element signature="tag#div#5" expanded="false" />
-            <element signature="e#144419#144483#0#HTML" expanded="true" />
+            <element signature="e#144391#144455#0#HTML" expanded="true" />
             <element signature="tag#style#1" expanded="false" />
-            <element signature="e#0#193276#0#Blade" expanded="false" />
-            <marker date="1576199735116" expanded="false" signature="133907:133946" placeholder="..." />
-            <marker date="1576199735116" expanded="false" signature="138039:138049" placeholder="..." />
-            <marker date="1576199735116" expanded="false" signature="138107:138117" placeholder="..." />
-            <marker date="1576199735116" expanded="false" signature="138176:138186" placeholder="..." />
-            <marker date="1576199735116" expanded="false" signature="138260:138270" placeholder="..." />
+            <element signature="e#0#193234#0#Blade" expanded="false" />
+            <marker date="1576199867432" expanded="false" signature="133907:133946" placeholder="..." />
+            <marker date="1576199867432" expanded="false" signature="138039:138049" placeholder="..." />
+            <marker date="1576199867432" expanded="false" signature="138107:138117" placeholder="..." />
+            <marker date="1576199867432" expanded="false" signature="138176:138186" placeholder="..." />
+            <marker date="1576199867432" expanded="false" signature="138260:138270" placeholder="..." />
           </folding>
         </state>
       </provider>
