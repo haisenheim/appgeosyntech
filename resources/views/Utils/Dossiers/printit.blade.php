@@ -70,6 +70,10 @@
 
             <div></div>
 
+            <div style="margin-top: 20px; width: 600px; height: 400px; background: url('<?= asset('img/'.$dossier->imageUri) ?>'); background-size: cover">
+
+            </div>
+
         </div>
     </main>
 
