@@ -1886,7 +1886,7 @@
                              </tbody>
                      </table>
                 </div>
-                <h4>5-4. Montage financie</h4>
+                <h4>5-4. Montage financier</h4>
                 <div>
                     <div class="row">
                              <div class="col-md-4 col-sm-12">
@@ -1921,7 +1921,8 @@
                          </div>
 
                          @if($projet->financements->count() >=1)
-                             <table class="table">
+                            <h5>MOYENS DE FINANCEMENTS</h5>
+                             <table class="table table-bordered">
                                  <tbody>
                                      @foreach($projet->financements as $fin)
                                          <tr>
