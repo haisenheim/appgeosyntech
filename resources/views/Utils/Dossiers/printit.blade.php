@@ -76,7 +76,8 @@
             max-width: 300px;
          }
          .table td, .table th {
-             padding: 9px;
+             padding: 5px;
+             font-size: 10px;
              vertical-align: top;
              border-top: 1px solid
             rgba(41, 41, 41, 0.88);
