@@ -64,6 +64,10 @@
          max-width: 580px;
          }
 
+         .diag-body th{
+         max-width: 50%;
+         }
+
      </style>
 </head>
 <body>
@@ -361,7 +365,7 @@
                      </div>
                  <?php endif; ?>
                  <h4>2-4. RESUME DU DIAGNOSTIC EXTERNE</h4>
-                    <P><?= $projet->synthese_diagnostic_externe  ?>></P>
+                    <P><?= $projet->synthese_diagnostic_externe  ?></P>
              </div>
         </div>
     </main>

@@ -95,8 +95,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.64" vertical-offset="2532" max-vertical-offset="16736">
-              <caret line="534" column="40" selection-start-line="534" selection-start-column="40" selection-end-line="582" selection-end-column="55" />
+            <state vertical-scroll-proportion="-12.56" vertical-offset="3910" max-vertical-offset="17088">
+              <caret line="2070" column="43" selection-start-line="2070" selection-start-column="43" selection-end-line="2070" selection-end-column="80" />
               <folding>
                 <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#table#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
@@ -106,7 +106,6 @@
                 <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#script#5" expanded="false" />
                 <element signature="e#156229#160778#0#HTML" expanded="false" />
-                <element signature="tag#div#2" expanded="false" />
                 <element signature="tag#div#3" expanded="false" />
                 <element signature="e#166333#166365#0#HTML" expanded="true" />
                 <element signature="tag#ol#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#4" expanded="false" />
@@ -146,7 +145,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.78504676" vertical-offset="3984" max-vertical-offset="4512">
-              <caret line="363" column="57" selection-start-line="363" selection-start-column="57" selection-end-line="363" selection-end-column="57" />
+              <caret line="363" column="64" selection-start-line="363" selection-start-column="64" selection-end-line="363" selection-end-column="64" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1133,8 +1132,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.64" vertical-offset="2532" max-vertical-offset="16736">
-          <caret line="534" column="40" selection-start-line="534" selection-start-column="40" selection-end-line="582" selection-end-column="55" />
+        <state vertical-scroll-proportion="-12.56" vertical-offset="3910" max-vertical-offset="17088">
+          <caret line="2070" column="43" selection-start-line="2070" selection-start-column="43" selection-end-line="2070" selection-end-column="80" />
           <folding>
             <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#table#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
@@ -1144,7 +1143,6 @@
             <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#script#5" expanded="false" />
             <element signature="e#156229#160778#0#HTML" expanded="false" />
-            <element signature="tag#div#2" expanded="false" />
             <element signature="tag#div#3" expanded="false" />
             <element signature="e#166333#166365#0#HTML" expanded="true" />
             <element signature="tag#ol#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#4" expanded="false" />
@@ -1160,7 +1158,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/Utils/Dossiers/printit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.78504676" vertical-offset="3984" max-vertical-offset="4512">
-          <caret line="363" column="57" selection-start-line="363" selection-start-column="57" selection-end-line="363" selection-end-column="57" />
+          <caret line="363" column="64" selection-start-line="363" selection-start-column="64" selection-end-line="363" selection-end-column="64" />
           <folding>
             <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
