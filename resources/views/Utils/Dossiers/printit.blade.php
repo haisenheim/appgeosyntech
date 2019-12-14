@@ -79,7 +79,7 @@
              padding: 9px;
              vertical-align: top;
              border-top: 1px solid
-             #dee2e6;
+            rgba(41, 41, 41, 0.88);
          }
          .table {
              width: 100%;
@@ -99,6 +99,10 @@
          .table-bordered {
              border: 1px solid
              rgba(41, 41, 41, 0.88);
+         }
+         .table-bordered td, .table-bordered th {
+             border: 1px solid
+            rgba(41, 41, 41, 0.88);
          }
 
      </style>
