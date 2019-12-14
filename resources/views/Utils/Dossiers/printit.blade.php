@@ -416,7 +416,7 @@
         		    <div class="col-md-2 col-sm-12">
         		        <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">PARTENAIRES</h3>
+        		                <h5 class="card-title">PARTENAIRES</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->partenaires:'-' ?>
@@ -426,7 +426,7 @@
         		    <div class="col-md-3 col-sm-12">
         		        <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">ACTIVITES</h3>
+        		                <h5 class="card-title">ACTIVITES</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->activites:'' ?>
@@ -434,7 +434,7 @@
         		        </div>
         		        <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">RESSOURCES</h3>
+        		                <h5 class="card-title">RESSOURCES</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->ressources:'' ?>
@@ -444,7 +444,7 @@
         		    <div class="col-md-2 col-sm-12">
         		        <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">OFFRE</h3>
+        		                <h5 class="card-title">OFFRE</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->offre:'' ?>
@@ -454,7 +454,7 @@
         		    <div class="col-md-3 col-sm-12">
         		        <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">RELATION CLIENT</h3>
+        		                <h5 class="card-title">RELATION CLIENT</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->relation:'' ?>
@@ -462,7 +462,7 @@
         		        </div>
         		        <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">CANAUX DE DISTRIBUTION</h3>
+        		                <h5 class="card-title">CANAUX DE DISTRIBUTION</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->canaux:'' ?>
@@ -472,7 +472,7 @@
         		    <div class="col-md-2 col-sm-12">
         		        <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">SEGMENTS CLIENT</h3>
+        		                <h5 class="card-title">SEGMENTS CLIENT</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->segment:'' ?>
@@ -484,7 +484,7 @@
                      <div class="col-md-6 col-sm-12">
                          <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">STRUCTURE DES COUTS</h3>
+        		                <h5 class="card-title">STRUCTURE DES COUTS</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->couts:'' ?>
@@ -494,7 +494,7 @@
                      <div class="col-md-6 col-sm-12">
                          <div class="card">
         		            <div class="card-header">
-        		                <h3 class="card-title">SOURCES DE REVENUS</h3>
+        		                <h5 class="card-title">SOURCES DE REVENUS</h5>
         		            </div>
         		            <div class="card-body">
         		                <?= $projet->modele?$projet->modele->revenus:'' ?>
