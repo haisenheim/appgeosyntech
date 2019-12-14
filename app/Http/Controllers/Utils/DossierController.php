@@ -41,6 +41,24 @@ class DossierController extends Controller
 
 	public function printit($token){
 		$dossier = Projet::where('token',$token)->first();
+		$choices = $dossier->choices;
+
+		$choix = [];
+		foreach($choices as $choice){
+			$choix[] = $choice->choice_id;
+		}
+		$orm = 'http://orm.test/api/';
+		$ch = curl_init();
+		curl_setopt($ch,CURLOPT_URL,$orm.'carto');
+		curl_setopt($ch,CURLOPT_POST,1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $choix);
+		$results = curl_exec($ch);
+
+		debug($results);
+		curl_close($ch);
+
+		die();
+
 		$data =['dossier'=>$dossier];
 		$pdf = PDF::loadView('Utils/Dossiers/printit',$data);
 		return $pdf->stream($dossier->name.'.pdf');
