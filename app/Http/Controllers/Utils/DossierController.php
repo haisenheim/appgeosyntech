@@ -58,6 +58,7 @@ class DossierController extends Controller
 
 
 				$payload = json_encode($choix);
+		var_dump($payload);
 
 		// Prepare new cURL resource
 				$ch = curl_init('http://orm.test/api/carto');
