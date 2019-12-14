@@ -18,7 +18,7 @@
 
          body {
              font-family: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-             font-size: 11px;
+             font-size: 12px;
              font-weight: 400;
              line-height: 1.5;
              color: #212529;
@@ -930,6 +930,238 @@
             <div class="diag-body diagFin-body">
                 <h4>5-1. Compte d’exploitation prévisionnel</h4>
                 <div>
+                <?php $nbsim = count($projet->prevresultats) ?>
+                    <table class="table table-bordered table-hover table-condensed">
+                    <thead>
+                        <tr>
+                                <th></th>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->annee ?></th>
+                                @if(!$loop->last)
+                                <th>VARIATION</th>
+                                @endif
+                            @endforeach
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>CHIFFRE D'AFFAIRE</th>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+
+                                <th><?= $prevr->ca ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['ca'][$i] }}%</th>
+                                <?php $i++ ?>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>PRODUCTION IMMOBILISEE</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->pi ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>PRODUCTION STOCKEE</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->ps ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>SUBVENTION D'AEXPLOITATION</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->sp ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>AUTRES PRODUITS D'EXPLOITATION</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->ape ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>CHARGE VARIABLE</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->cv ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>MARGE BRUTE</td>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->mb ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['mb'][$i] }}%</th>
+                                <?php $i++ ?>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <th>CHARGE FIXE</th>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->cf ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <th>VALEUR AJOUTEE</th>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->va ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['va'][$i] }}%</th>
+                                <?php $i++ ?>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>SALAIRES</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->salaires ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <th>EXCEDENT BRUT D'EXPLOITATION</th>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->ebe ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['ebe'][$i++] }}%</th>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>DOTATATION AUX AMORTISSEMENTS ET AUX PROVISIONS</td>
+
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->dap ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <th>RESULTAT D'EXPLOITATION</th>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->re ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['re'][$i++] }}%</th>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>PRODUIT FINANCIER</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->pf ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>CHARGES FINANCIERES</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->cfi ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <th>RESULTAT FINANCIER</th>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->rf ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['rf'][$i++] }}%</th>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>PRODUIT EXCEPTIONNEL</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->pe ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>CHARGES EXCEPTIONNELLES</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->ce ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <th>RESULTAT EXCEPTIONNEL</th>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->rex ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['rex'][$i++] }}%</th>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <th>RESULTAT COURANT AVANT IMPOT</th>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->rcai ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['rcai'][$i++] }}%</th>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td>IMPOTS</td>
+                            @foreach($projet->prevresultats as $prevr)
+                                <td><?= $prevr->impots ?></td>
+                                @if(!$loop->last)
+                                <td>-</td>
+                                @endif
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <th>RESULTAT NET</th>
+                            <?php $i=0; ?>
+                            @foreach($projet->prevresultats as $prevr)
+                                <th><?= $prevr->rn ?></th>
+                                @if(!$loop->last)
+                                <th>{{ $projet->variations['rn'][$i++] }}%</th>
+                                @endif
+                            @endforeach
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <h4>5-2. Bilan prévisionnel</h4>
+                <div>
                     <table class="table table-bordered table-hover table-condensed">
                             <thead>
                                 <tr>
@@ -1401,6 +1633,258 @@
 
                             </tbody>
                     </table>
+                </div>
+                <h4 class="">5-3. Flux de trésorerie</h4>
+                <div>
+                     <table class="table table-bordered table-hover table-condensed">
+                         <thead>
+                             <tr>
+                                 <th colspan="3"></th>
+
+                                 @foreach($projet->prevtresoreries as $prevr)
+                                     <th><?= $prevr->annee ?></th>
+                                     @if(!$loop->last)
+                                     <th>VARIATION</th>
+                                     @endif
+                                 @endforeach
+                             </tr>
+                         </thead>
+                             <tbody>
+                                 <tr>
+                                 <th colspan="1" style="writing-mode: vertical-rl;" rowspan="8">Trésorerie provenant des act. opér.</th>
+                                 </tr>
+                                 <tr>
+
+                                     <td colspan="2">CAPACITE D'AUTOFINANCEMENT</td>
+                                     <?php $i=0; ?>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->capacite_autofinancement  ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+
+                                     <td colspan="2">ACTIF CIRCULANT HAO</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->actif_circulant_hao ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+
+                                     <td colspan="2">VARIATION DES STOCKS</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->variation_stocks ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+
+                                     <td colspan="2">VARIATION DES CREANCES ET EMPLOIS ASSIMILES</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->variation_creances ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+                                     <td colspan="2">VARIATION DU PASSIF CIRCULANT</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->variation_passif_circulant ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+                                     <td colspan="2">VARIATION DU BF LIE AUX ACT. OP.</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td>-</td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+                                     <th colspan="2">TOTAL</th>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <th></th>
+                                         @if(!$loop->last)
+                                         <th>-</th>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+
+
+                                 <tr><th colspan="1" style="writing-mode: vertical-rl" rowspan="7">Trésorerie issue des activités d'invest.</th></tr>
+
+                                 <tr>
+
+                                     <td colspan="2">Décaissements liés aux acquisitions d'immobilisations incorporelles</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->decaissements_acquisitions_incorporelles ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+
+                                     <td colspan="2">Décaissements liés aux acquisitions d'immobilisations corporelles</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->decaissements_acquisitions_corporelles ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+
+                                     <td colspan="2">Décaissements liés aux acquisitions d'immobilisations financières</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->decaissements_acquisitions_financieres ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+                                 <tr>
+                                     <td colspan="2">Cessions d'immobilisations incorporelles et corporelles</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->cessions_immo_incoporelles_corporelles  ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                  <tr>
+                                     <td colspan="2">Cessions d'immobilisations financières</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->cessions_immo_financieres ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                 <tr>
+                                     <td colspan="2">TOTAL</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td>-</td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                 <tr><th colspan="1" style="writing-mode: vertical-rl" rowspan="6">Trésorerie provenant  des cap. propres </th></tr>
+
+                                 <tr>
+                                     <td colspan="2">Augmentation de capital par apports de capitaux nouveaux</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->augmentation_capital_apports_nouveaux  ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                  <tr>
+                                     <td colspan="2">Subventions d'investissements reçues</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->subventions_investissement_recues ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                 <tr>
+                                     <td colspan="2">Prélèvements sur le capital</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->prelevements_capital ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                 <tr>
+                                     <td colspan="2">Distribution de dividendes</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->distribution_dividendes ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                 <tr>
+                                     <td colspan="2">TOTAL</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+
+
+                                 <tr><th colspan="1" style="padding:5px; writing-mode: vertical-rl" rowspan="5">Trésorerie issue des cap. étrangers </th></tr>
+
+                                 <tr>
+                                     <td colspan="2">Emprunts</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->emprunts  ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                  <tr>
+                                     <td colspan="2">Autres dettes financières</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->autres_dettes_financieres ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                 <tr>
+                                     <td colspan="2">Remboursements des emprunts et autres dettes financières</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td><?= $prevr->remboursement_emprunts ?></td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+                                 <tr>
+                                     <td colspan="2">TOTAL</td>
+                                     @foreach($projet->prevtresoreries as $prevr)
+                                         <td>-</td>
+                                         @if(!$loop->last)
+                                         <td>-</td>
+                                         @endif
+                                     @endforeach
+                                 </tr>
+
+
+                             </tbody>
+                     </table>
                 </div>
             </div>
         </div>
