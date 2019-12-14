@@ -841,6 +841,567 @@
                         </div>
                     </div>
                 </div>
+                <h4>4.2- Objectifs stratégiques</h4>
+                 <div class="row">
+                     <div class="col-md-4 col-sm-12">
+                         <div class="well">
+                             <fieldset>
+                                 <legend>OBJECTIFS A COURT TERME</legend>
+                                 <p><?= $projet->objectifs_courts ?></p>
+                             </fieldset>
+                         </div>
+                     </div>
+                     <div class="col-md-4 col-sm-12">
+                         <div class="well">
+                             <fieldset>
+                                 <legend>OBJECTIFS A MOYEN TERME</legend>
+                                 <p><?= $projet->objectifs_moyens ?></p>
+                             </fieldset>
+                         </div>
+                     </div>
+                     <div class="col-md-4 col-sm-12">
+                         <div class="well">
+                             <fieldset>
+                                 <legend>OBJECTIFS A LONG TERME</legend>
+                                 <p><?= $projet->objectifs_longs ?></p>
+                             </fieldset>
+                         </div>
+                     </div>
+                 </div>
+                 <h4>4.3- Organisation du travail</h4>
+                 <div>
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th>NOM</th>
+                                <th>FONCTION</th>
+                                <th>RESPONSABILITES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($projet->ressources as $ressource)
+                                <tr>
+                                    <td><?= $ressource->name ?></td>
+                                    <td><?= $ressource->fonction ?></td>
+                                    <td><?= $ressource->responsabilite ?></td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                 </div>
+                 <h4>4-4. Actions de maitrise des risques</h4>
+                  <table class="table table-bordered table-condensed table-hover" id="example">
+                      <thead>
+                      <tr>
+                          <th>TYPE DE RISQUE</th>
+                          <th>PRODUIT</th>
+                          <th>DEFAILLANCE</th>
+                          <th>ACTION</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+
+                      </tbody>
+                  </table>
+                  <h4>4-5. Plan d’actions stratégiques</h4>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>ETAPE</th>
+                                <th>ACTION STRATEGIQUE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($projet->etapes as $etape)
+                                <tr>
+                                    <td>{{ $etape->name }}</td>
+                                    <td>{{ $etape->action }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                  <h4>4-6. 4.6. Etudes de faisabilité</h4>
+                  <p><?= $projet->etude_faisabilite ?></p>
+            </div>
+        </div>
+        <div class="page-break"></div>
+        <div class="diag diagFin">
+            <h3>PLAN FINANCIER</h3>
+            <div class="diag-body diagFin-body">
+                <h4>5-1. Compte d’exploitation prévisionnel</h4>
+                <div>
+                    <table class="table table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th colspan="3"></th>
+
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <th><?= $prevr->annee ?></th>
+                                        @if(!$loop->last)
+                                        <th>VARIATION</th>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th style="text-orientation: upright; writing-mode: vertical-rl;" rowspan="14">RESOURCES STABLES</th>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">CAPITAL</td>
+                                    <?php $i=0; ?>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->capital ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">APPORTEURS DE CAPITAL NON APPELE</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->apporteurs_acpital_non_appele ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">PRIMES D'APPORT D'EMISSION</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->primes_apport ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">ECARTS DE REEVALUTATION</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->ecarts_reevaluation ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Réserves indisponibles</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->eserves_indisponibles ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Réserves libres</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->reserves_libres ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Report à nouveau</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->report_a_nouveau ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Résultat net de l'exercice</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->resultat_net_exercice ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Subventions d'investissement</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->subventions_investissement ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Provisions réglementés</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->provisions_reglementees ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">EMPRUNTS</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->emprunts ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Dettes de location acquisition</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->dettes_location_acquisition ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Provisions financières pour risques et charges</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->provisions_financieres_risques_ ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+
+                                <tr><th style="writing-mode: vertical-rl" rowspan="16">ACTIF IMMOBILISE</th></tr>
+                                <tr><th style="writing-mode: vertical-rl" rowspan="5">Immos incorporelles</th></tr>
+                                <tr>
+
+                                    <td>Frais de développement et de prospection</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->frais_developpement ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+
+                                    <td>Brevets, licences, logiciels, et droits assimilaires</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->brevets ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+
+                                    <td>Fonds commercial et droit au bail</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->fonds_commercial ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>Autres immobilisations incorporelles</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->autres_immobilisations_incorporelles ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+
+
+                                <tr><td style="writing-mode: vertical-rl" rowspan="7">Immos corporelles</td></tr>
+
+                                <tr>
+                                    <td>Terrains</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->terrains ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>Bâtiments</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->batiments ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+                                <tr>
+                                    <td>Aménagements, agencements et installations</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->amenagements ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>Matériel, mobilier et actifs biologiques</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->materiel_mobilier ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>Matériel de transport</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->materiel_transport ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>Avances et acomptes versés sur immobilisations</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->avances_acomptes ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+
+                                <tr><td style="writing-mode: vertical-rl" rowspan="3">Immos fin.</td></tr>
+
+                                <tr>
+                                    <td>Titres de participation</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td class="td-modif" data-model="Prevbilan" data-name="titres_participation" data-id="<?= $prevr->id ?>" ><?= $prevr->titres_participation ?><span style="display: none; cursor: pointer;" class="fa fa-pencil fa-modif"></span></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>Autres immobilisations financieres</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->autres_immobilisations_financieres ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center" colspan="3">FONDS DE ROULEMENT</th>
+                                    <?php $i=0; ?>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <th><?= $prevr->fr ?></th>
+                                        @if(!$loop->last)
+                                        <th>{{ $projet->variations['fr'][$i++] }}%</th>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+                                <tr><td style="writing-mode: vertical-rl" rowspan="7">ACTIF CIRCULANT</td></tr>
+
+                                <tr>
+                                    <td colspan="2">Actif circulant HAO</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->actif_circulant_hao ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Stocks et encours</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->stocks_encours ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">CRÉANCES ET EMPLOIS ASSIMILÉS</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->creances_emplois ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Fournisseurs avances versées</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->avances_fournisseurs ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Clients</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->clients ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Autres créances</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->autres_creances ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+
+                                <tr><td style="writing-mode: vertical-rl" rowspan="6">PASSIF CIRCULANT</td></tr>
+
+                                <tr>
+                                    <td colspan="2">Dettes circulants HAO</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->dettes_circulantes_hao ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Clients avances reçues</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->clients_avances_recues ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">Fournisseurs d'exploitation</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->fournisseurs_exploitation ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Dettes fiscales et sociales</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->dettes_fiscales ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Autres dettes</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td><?= $prevr->autres_dettes ?></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center" colspan="3">BESOIN EN FONDS DE ROULEMENT</th>
+                                    <?php $i=0; ?>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <th><?= $prevr->bfr ?></th>
+                                        @if(!$loop->last)
+                                        <th>{{ $projet->variations['bfr'][$i++] }}%</th>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr><td style="writing-mode: vertical-rl" rowspan="4">Tresorerie Active</td></tr>
+
+                                <tr>
+                                    <td colspan="2">Titres de placement</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td class="td-modif" data-name="titres_placement" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->titres_placement ?><span class="fa fa-pencil fa-modif"></span></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Valeurs à encaisser</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td class="td-modif" data-name="valeur_encaisser" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->valeur_encaisser ?><span class="fa fa-pencil fa-modif"></span></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Banques, chèques postaux, caisse et assimilés</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td class="td-modif" data-name="banques_cheques_" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->banques_cheques_ ?><span class="fa fa-pencil fa-modif"></span></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr><td style="writing-mode: vertical-rl" rowspan="3">Tresorerie Passive</td></tr>
+                                <tr>
+                                    <td colspan="2">Banques, crédits d'escomptes et de trésorerie</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td class="td-modif" data-name="banques_credit_escompte" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->banques_credit_escompte ?><span class="fa fa-pencil fa-modif"></span></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Banques, crédits de trésorerie</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td class="td-modif" data-name="banques_credit_tresorerie" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->banques_credit_tresorerie ?><span class="fa fa-pencil fa-modif"></span></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center" colspan="3">TRESORERIE NETTE</th>
+                                    <?php $i=0; ?>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <th><?= $prevr->tn ?></th>
+                                        @if(!$loop->last)
+                                        <th>{{ $projet->variations['tn'][$i++] }}</th>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: center">Ecart de conversion - actif</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td class="td-modif" data-name="ecart_conversion_actif" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->ecart_conversion_actif ?><span class="fa fa-pencil fa-modif"></span></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: center">Ecart de conversion - passif</td>
+                                    @foreach($projet->prevbilans as $prevr)
+                                        <td class="td-modif" data-name="ecart_conversion_passif" data-id="<?= $prevr->id ?>" data-model="Prevbilan"><?= $prevr->ecart_conversion_passif ?><span class="fa fa-pencil fa-modif"></span></td>
+                                        @if(!$loop->last)
+                                        <td>-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+
+                            </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <input type="hidden" id="id" value="<?= $projet->token ?>"/>
