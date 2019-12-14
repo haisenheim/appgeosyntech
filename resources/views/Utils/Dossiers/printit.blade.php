@@ -14,7 +14,15 @@
          }
 
          /** Define now the real margins of every page in the PDF **/
+
+
          body {
+             font-family: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+             font-size: 1rem;
+             font-weight: 400;
+             line-height: 1.5;
+             color: #212529;
+             text-align: left;
              margin-top: 2cm;
              margin-left: 2cm;
              margin-right: 2cm;
@@ -66,6 +74,31 @@
 
          .diagExt-body .table th{
             max-width: 300px;
+         }
+         .table td, .table th {
+             padding: .75rem;
+             vertical-align: top;
+             border-top: 1px solid
+             #dee2e6;
+         }
+         .table {
+             width: 100%;
+             margin-bottom: 1rem;
+             color: #212529;
+             background-color:
+             transparent;
+         }
+
+         .table thead th {
+             vertical-align: bottom;
+             border-bottom: 2px solid
+             #dee2e6;
+                 border-bottom-width: 2px;
+         }
+
+         .table-bordered {
+             border: 1px solid
+             #dee2e6;
          }
 
      </style>
