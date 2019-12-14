@@ -253,7 +253,7 @@
         </div>
         <div class="page-break"></div>
         <div class="diagExt">
-             <h3>DIAGNOSTIC INTERNE</h3>
+             <h3>II- DIAGNOSTIC INTERNE</h3>
              <div class="diag diag-body diagExt-body">
                 <h4>2-1. ANALYSE DE L'ENVIRONNEMENT</h4>
                   <?php if($projet->environnement): ?>
@@ -405,6 +405,104 @@
                  <h4>2-4. RESUME DU DIAGNOSTIC EXTERNE</h4>
                     <P><?= $projet->synthese_diagnostic_externe  ?></P>
              </div>
+
+        </div>
+        <div class="page-break"></div>
+        <div class="diag diagInt">
+           <h3>III- DIAGNOSTIC INTERNE</h3>
+           <div class="diag diag-body diagIxt-body">
+                <h4>3-1. Présentation du modèle économique</h4>
+                 <div class="row">
+        		    <div class="col-md-2 col-sm-12">
+        		        <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">PARTENAIRES</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->partenaires ?>
+        		            </div>
+        		        </div>
+        		    </div>
+        		    <div class="col-md-3 col-sm-12">
+        		        <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">ACTIVITES</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->activites ?>
+        		            </div>
+        		        </div>
+        		        <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">RESSOURCES</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->ressources ?>
+        		            </div>
+        		        </div>
+        		    </div>
+        		    <div class="col-md-2 col-sm-12">
+        		        <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">OFFRE</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->offre ?>
+        		            </div>
+        		        </div>
+        		    </div>
+        		    <div class="col-md-3 col-sm-12">
+        		        <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">RELATION CLIENT</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->relation ?>
+        		            </div>
+        		        </div>
+        		        <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">CANAUX DE DISTRIBUTION</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->canaux ?>
+        		            </div>
+        		        </div>
+        		    </div>
+        		    <div class="col-md-2 col-sm-12">
+        		        <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">SEGMENTS CLIENT</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->segment ?>
+        		            </div>
+        		        </div>
+        		    </div>
+        		</div>
+        		<div class="row">
+                     <div class="col-md-6 col-sm-12">
+                         <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">STRUCTURE DES COUTS</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->couts ?>
+        		            </div>
+        		        </div>
+                     </div>
+                     <div class="col-md-6 col-sm-12">
+                         <div class="card">
+        		            <div class="card-header">
+        		                <h3 class="card-title">SOURCES DE REVENUS</h3>
+        		            </div>
+        		            <div class="card-body">
+        		                <?= $projet->modele->revenus ?>
+        		            </div>
+        		        </div>
+                     </div>
+        		</div>
+           </div>
         </div>
     </main>
 

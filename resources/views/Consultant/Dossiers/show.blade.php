@@ -2430,7 +2430,6 @@
         		</div>
 
         </div>
-
      @endif
 
 <script type="text/javascript">
