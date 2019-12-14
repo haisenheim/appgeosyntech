@@ -140,63 +140,34 @@
                 Direction du Pôle  Structuration de projets & Levée de fonds
             </div>
             <?php $pad_length1=100; $pad_length2=100; $projet = $dossier; ?>
-            <div class="page-break"></div>
-            <div class="sommaire">
-                <h3 style="text-align: center;">TABLE DES MATIERES</h3>
-                <ol style="list-style: upper-roman">
-                    <li><?= str_pad('RESUME EXECUTIF',$pad_length1,'.',STR_PAD_RIGHT).'.p.' ?></li>
-                    <li>
-                    <?= str_pad('DIAGNOSTIC EXTERNE',$pad_length1,'.',STR_PAD_RIGHT).'.p.' ?>
 
-                        <ul style="list-style: none">
-                            <li>2.1. Analyse de l’environnement .....................p.</li>
-                            <li>2.2. Analyse de la demande............................p.</li>
-                            <li>2.3. Analyse de l’offre ..............................p.</li>
-                            <li>2.4. Résumé du diagnostic externe .....................p.</li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <?= str_pad('DIAGNOSTIC INTERNE',$pad_length1,'.',STR_PAD_RIGHT).'.p.' ?>
-
-                        <ul style="list-style: none;">
-                            <li><?= str_pad('3.1. Présentation du modèle économique',$pad_length2,'.',STR_PAD_RIGHT).'.p.' ?></li>
-
-                            <li>3.2. Présentation de la cartographie des risques..........p.</li>
-                            <li><?= str_pad('3.3. Présentation des états financiers',$pad_length2,'.',STR_PAD_RIGHT).'.p.' ?></li>
-
-                        </ul>
-                    </li>
-
-                </ol>
-            </div>
              <div class="page-break"></div>
-             <h3>TABLE DE MATIERE 2</h3>
+             <h3>TABLE DE MATIERE </h3>
             <div class="sommaire2">
-                I/ RESUME EXECUTIF<span>P.</span><br/>
-                II/ DIAGNOSTIC EXTERNE<span>P.</span> <br/>
-                	2.1. Analyse de l’environnement<span>P.</span> <br/>
-                	2.2. Analyse de la demande<span>P.</span> <br/>
-                	2.3. Analyse de l’offre<span>P.</span> <br/>
-                	2.4. Résumé du diagnostic externe<span>P.</span> <br/>
-                III/ DIAGNOSTIC INTERNE<span>P.</span> <br/>
-                	3.1. Présentation du modèle économique<span>P.</span> <br/>
-                	3.2. Présentation de la cartographie des risques<span>P.</span> <br/>
-                	3.3. Présentation des états financiers<span>P.</span> <br/>
-                	3.4. Résumé du diagnostic interne<span>P.</span> <br/>
-                IV/ DIAGNOSTIC STRATEGIQUE<span>P.</span> <br/>
-                	4.1. Présentation du SWOT<span>P.</span> <br/>
-                	4.2. Objectifs stratégiques<span>P.</span> <br/>
-                	4.3. Organisation du travail<span>P.</span> <br/>
-                	4.4. Actions de maitrise des risques<span>P.</span> <br/>
-                	4.5. Plan d’actions stratégiques<span>P.</span> <br/>
-                	4.6. Etudes de faisabilité<span>P.</span> <br/>
-                V/ PLAN FINANCIER<span>P.</span> <br/>
-                	5.1. Compte d’exploitation prévisionnel<span>P.</span> <br/>
-                	5.2. Bilan prévisionnel<span>P.</span> <br/>
-                	5.3. Flux de trésorerie<span>P.</span> <br/>
-                	5.4. Montage financier<span>P.</span> <br/>
-                	5.5. Rentabilité du projet et/ou tableau d’amortissement du prêt<span>P.</span> <br/>
+                I/ RESUME EXECUTIF<br/>
+                II/ DIAGNOSTIC EXTERNE <br/>
+                	2.1. Analyse de l’environnement <br/>
+                	2.2. Analyse de la demande <br/>
+                	2.3. Analyse de l’offre <br/>
+                	2.4. Résumé du diagnostic externe <br/>
+                III/ DIAGNOSTIC INTERNE <br/>
+                	3.1. Présentation du modèle économique <br/>
+                	3.2. Présentation de la cartographie des risques <br/>
+                	3.3. Présentation des états financiers <br/>
+                	3.4. Résumé du diagnostic interne <br/>
+                IV/ DIAGNOSTIC STRATEGIQUE <br/>
+                	4.1. Présentation du SWOT <br/>
+                	4.2. Objectifs stratégiques <br/>
+                	4.3. Organisation du travail <br/>
+                	4.4. Actions de maitrise des risques <br/>
+                	4.5. Plan d’actions stratégiques <br/>
+                	4.6. Etudes de faisabilité <br/>
+                V/ PLAN FINANCIER <br/>
+                	5.1. Compte d’exploitation prévisionnel <br/>
+                	5.2. Bilan prévisionnel <br/>
+                	5.3. Flux de trésorerie <br/>
+                	5.4. Montage financier <br/>
+                	5.5. Rentabilité du projet et/ou tableau d’amortissement du prêt <br/>
             </div>
         </div>
         <div class="page-break"></div>
