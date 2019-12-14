@@ -76,7 +76,7 @@
             max-width: 300px;
          }
          .table td, .table th {
-             padding: .75rem;
+             padding: 11px;
              vertical-align: top;
              border-top: 1px solid
              #dee2e6;
@@ -92,13 +92,13 @@
          .table thead th {
              vertical-align: bottom;
              border-bottom: 2px solid
-             #dee2e6;
+             rgba(41, 41, 41, 0.88);
                  border-bottom-width: 2px;
          }
 
          .table-bordered {
              border: 1px solid
-             #dee2e6;
+             rgba(41, 41, 41, 0.88);
          }
 
      </style>
