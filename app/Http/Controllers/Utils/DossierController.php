@@ -76,8 +76,8 @@ class DossierController extends Controller
 		// Close cURL session handle
 				curl_close($ch);
 
-		var_dump($result);
-		die();
+		//var_dump($result);
+		//die();
 
 
 

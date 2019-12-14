@@ -321,7 +321,7 @@ CREATION DU DIAGNOSTIC EXTERNE
                                                                     <thead>
                                                                     <tr >
                                                                         <th style="width: 25%"></th>
-                                                                        <th>OPPORTUNUITES</th>
+                                                                        <th>OPPORTUNITES</th>
                                                                         <th>MENACES</th>
                                                                     </tr>
                                                                     </thead>
