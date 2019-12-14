@@ -1885,7 +1885,7 @@
                                                         @endforeach
                                                     </tbody>
                                                 </table>
-                                            @else
+
 
                                             @endif
                                         </div>

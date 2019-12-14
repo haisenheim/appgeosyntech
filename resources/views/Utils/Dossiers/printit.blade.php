@@ -1886,6 +1886,55 @@
                              </tbody>
                      </table>
                 </div>
+                <h4>5-4. Montage financie</h4>
+                <div>
+                    <div class="row">
+                             <div class="col-md-4 col-sm-12">
+
+                                 <div class="info-box">
+                                   <span class="info-box-icon bg-info"><i class="fa fa-coins"></i></span>
+                                   <div class="info-box-content">
+                                     <span class="info-box-text">MONTANT DES INVESTISSEMENTS</span>
+                                     <span class="info-box-number">{{ $projet->montant_investissement }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                   </div>
+                                 </div>
+                             </div>
+                             <div class="col-md-4 col-sm-12">
+
+                                 <div class="info-box">
+                                   <span class="info-box-icon bg-warning"><i class="fa fa-coins"></i></span>
+                                   <div class="info-box-content">
+                                     <span class="info-box-text">BESOIN EN FONDS DE ROULEMENT</span>
+                                     <span class="info-box-number">{{ $projet->bfr }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                   </div>
+                                 </div>
+                             </div>
+                             <div class="col-md-4 col-sm-12">
+                                 <div class="info-box">
+                                   <span class="info-box-icon bg-success"><i class="fa fa-coins"></i></span>
+                                   <div class="info-box-content">
+                                     <span class="info-box-text">COUT GLOBAL DU PROJET</span>
+                                     <span class="info-box-number">{{ $projet->coutglobal }} <sup>{{ $projet->devise->abb }}</sup></span>
+                                   </div>
+                                 </div>
+                             </div>
+                         </div>
+
+                         @if($projet->financements->count() >=1)
+                             <table class="table">
+                                 <tbody>
+                                     @foreach($projet->financements as $fin)
+                                         <tr>
+                                             <td>{{ $fin->moyen->name }}</td>
+                                             <th>{{ $fin->montant }} <sup>{{ $projet->devise->abb }}</sup> </th>
+                                         </tr>
+                                     @endforeach
+                                 </tbody>
+                             </table>
+
+
+                         @endif
+                </div>
             </div>
         </div>
         <input type="hidden" id="id" value="<?= $projet->token ?>"/>
