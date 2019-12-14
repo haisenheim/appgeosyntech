@@ -156,55 +156,55 @@
         <div class="teaser">
              <ol style="list-style: upper-roman;">
         	    <li>
-        	        <dt>Présentation de l’entreprise et du porteur de projet</dt>
+        	        <b>Présentation de l’entreprise et du porteur de projet</b>
         	        <ul>
         	           <li>
-                            <dt>Présentation de l’entreprise  </dt>
-                            <dd><?= $projet->teaser?$projet->teaser->entreprise:'' ?></dd>
+                            <b>Présentation de l’entreprise  </b>
+                            <span><?= $projet->teaser?$projet->teaser->entreprise:'' ?></span>
         	           </li>
         	           @if($projet->teaser->youtubeUri)
                             <li>
-                                <dd><a href="<?= $projet->teaser?$projet->teaser->youtubeUri:'' ?>">Suivre la vidéo du projet sur Youtube</a></dd>
+                                <span><a href="<?= $projet->teaser?$projet->teaser->youtubeUri:'' ?>">Suivre la vidéo du projet sur Youtube</a></span>
                             </li>
                         @endif
                         <li>
-                            <dt>Présentation du porteur de projet  </dt>
-                            <dd><?= $projet->teaser?$projet->teaser->porteur:'' ?></dd>
+                            <b>Présentation du porteur de projet  </b>
+                            <span><?= $projet->teaser?$projet->teaser->porteur:'' ?></span>
         	           </li>
         	        </ul>
 
         	     </li>
         	     <li>
-        	        <dt>Présentation de la problématique à résoudre </dt>
-        	        <dd><?= $projet->teaser?$projet->teaser->problematique:'' ?></dd>
+        	        <b>Présentation de la problématique à résoudre </b>
+        	        <span><?= $projet->teaser?$projet->teaser->problematique:'' ?></span>
         	     </li>
         	     <li>
-        	        <dt>Présentation de la solution proposée </dt>
-        	        <dd><?= $projet->teaser?$projet->teaser->solution:'' ?></dd>
+        	        <b>Présentation de la solution proposée </b>
+        	        <span><?= $projet->teaser?$projet->teaser->solution:'' ?></span>
         	     </li>
         	     <li>
-        	        <dt>Présentation de la concurrence</dt>
-        	        <dd><?= $projet->teaser?$projet->teaser->concurrence:'' ?></dd>
+        	        <b>Présentation de la concurrence</b>
+        	        <span><?= $projet->teaser?$projet->teaser->concurrence:'' ?></span>
         	     </li>
         	     <li>
-        	        <dt>Présentation de la valeur ajoutée apportée par rapport aux concurrents </dt>
-        	        <dd><?= $projet->teaser?$projet->teaser->va:'' ?></dd>
+        	        <b>Présentation de la valeur ajoutée apportée par rapport aux concurrents </b>
+        	        <span><?= $projet->teaser?$projet->teaser->va:'' ?></span>
         	     </li>
         	     <li>
-        	        <dt>Présentation de ce qui a déjà été fait </dt>
-        	        <dd><?= $projet->teaser?$projet->teaser->realisations:'' ?></dd>
+        	        <b>Présentation de ce qui a déjà été fait </b>
+        	        <span><?= $projet->teaser?$projet->teaser->realisations:'' ?></span>
         	     </li>
         	     <li>
-        	        <dt>Présentation des objectifs  </dt>
-        	        <dd><?= $projet->teaser?$projet->teaser->objectifs:'' ?></dd>
+        	        <b>Présentation des objectifs  </b>
+        	        <span><?= $projet->teaser?$projet->teaser->objectifs:'' ?></span>
         	     </li>
         	     <li>
-        	        <dt>Présentation des besoins financiers  </dt>
-        	        <dd><?= $projet->teaser?$projet->teaser->besoins:'' ?></dd>
+        	        <b>Présentation des besoins financiers  </b>
+        	        <span><?= $projet->teaser?$projet->teaser->besoins:'' ?></span>
         	     </li>
         	     <li>
-        	        <dt>Quelques chiffres prévisionnels  </dt>
-        	        <dd><?= $projet->teaser?$projet->teaser->chiffres:'' ?></dd>
+        	        <b>Quelques chiffres prévisionnels  </b>
+        	        <span><?= $projet->teaser?$projet->teaser->chiffres:'' ?></span>
         	     </li>
         	</ol>
         </div>
