@@ -53,8 +53,8 @@ class DossierController extends Controller
 		curl_setopt($ch,CURLOPT_POST,1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $choix);
 		$results = curl_exec($ch);
-
-		debug($results);
+		var_dump($results);
+		//debug($results);
 		curl_close($ch);
 
 		die();
