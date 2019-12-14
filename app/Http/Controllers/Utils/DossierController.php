@@ -68,10 +68,7 @@ class DossierController extends Controller
 				curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
 
 		// Set HTTP Header for POST request
-				curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-						'Content-Type: application/json',
-						'Content-Length: ' . strlen($payload))
-				);
+
 
 		// Submit the POST request
 				$result = curl_exec($ch);
