@@ -50,18 +50,18 @@ class DossierController extends Controller
 
 		$choix = json_encode($choix);
 
-		var_dump($choix);
+		//var_dump($choix);
 		$orm = 'http://orm.test/api/';
 		$ch = curl_init();
 		curl_setopt($ch,CURLOPT_URL,'http://orm.test/api/carto');
 		curl_setopt($ch,CURLOPT_POST,1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $choix);
 		$results = curl_exec($ch);
-		var_dump($ch);
+		//var_dump($ch);
 		//debug($results);
 		curl_close($ch);
 
-		die();
+		//die();
 
 		$data =['dossier'=>$dossier];
 		$pdf = PDF::loadView('Utils/Dossiers/printit',$data);
