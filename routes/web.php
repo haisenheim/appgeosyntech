@@ -58,6 +58,7 @@ Route::name('utils.')
 		->namespace('Utils')
 		->group(function(){
 			Route::get('dossier/print/{token}','DossierController@printit');
+			Route::get('dossier/getchoices','DossierController@getChoicesJson');
 		});
 
 Route::prefix('admin')

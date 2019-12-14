@@ -524,6 +524,7 @@
                 </div>
            </div>
         </div>
+        <input type="hidden" id="id" value="<?= $projet->token ?>"/>
     </main>
     <script>
         $(document).ready(function(){
@@ -532,7 +533,7 @@
             getPlan($('#pl_id').val());
 
             $.ajax({
-                url: "/consultant/dossier/getchoices",
+                url: "/dossier/getchoices",
                 type:'Get',
                 dataType:'json',
                 data:{id:$('#id').val()},
@@ -544,7 +545,6 @@
                             dataType:'json',
                             data:{choix:data},
                             success:function(rep){
-                                $('#risks-loader').hide();
 
                                 var html = '';
                                 //console.log(Object.entries(rep));
@@ -599,7 +599,7 @@
                                 $('#risques-tab').find('tbody').html(html);
                             },
                             Error:function(){
-                                $('#risks-loader').hide();
+
                             }
                         });
                     }

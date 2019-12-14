@@ -51,6 +51,29 @@ class DossierController extends Controller
 
 	}
 
+	public function getChoicesJson(Request $request){
+		$projet = Projet::where('token',$request->id)->first();
+		$choices = $projet->choices;
+
+		$choix = [];
+		foreach($choices as $choice){
+			$choix[] = $choice->choice_id;
+		}
+		return response()->json($choix);
+	}
+
+
+	public function getProduitsJson(Request $request){
+		$projet = Projet::where('token',$request->id)->first();
+		$choices = $projet->produits;
+
+		$produits = [];
+		foreach($choices as $choice){
+			$produits[] = $choice->produit_id;
+		}
+		return response()->json($produits);
+	}
+
 	public function getInvestissementOwner(){}
 
 	public function getInvestissementsProjets(Request $request){
