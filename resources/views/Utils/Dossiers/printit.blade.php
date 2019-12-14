@@ -76,7 +76,7 @@
             max-width: 300px;
          }
          .table td, .table th {
-             padding: 11px;
+             padding: 9px;
              vertical-align: top;
              border-top: 1px solid
              #dee2e6;
