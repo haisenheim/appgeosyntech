@@ -47,6 +47,9 @@ class DossierController extends Controller
 		foreach($choices as $choice){
 			$choix[] = $choice->choice_id;
 		}
+
+		$choix = json_encode($choix);
+
 		var_dump($choix);
 		$orm = 'http://orm.test/api/';
 		$ch = curl_init();
