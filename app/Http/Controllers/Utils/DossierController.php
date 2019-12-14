@@ -57,7 +57,7 @@ class DossierController extends Controller
 
 				$data = ['choix'=>$choix];
 
-				$payload = json_encode($data);
+				$payload = $data;
 		//var_dump($payload);
 
 		// Prepare new cURL resource
