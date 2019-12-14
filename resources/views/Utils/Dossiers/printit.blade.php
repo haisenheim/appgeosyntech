@@ -18,7 +18,7 @@
 
          body {
              font-family: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-             font-size: 1rem;
+             font-size: 11px;
              font-weight: 400;
              line-height: 1.5;
              color: #212529;
@@ -104,6 +104,30 @@
          .table-bordered td, .table-bordered th {
              border: 1px solid
             rgba(41, 41, 41, 0.88);
+         }
+         .row {
+             display: -ms-flexbox;
+             display: flex;
+             -ms-flex-wrap: wrap;
+             flex-wrap: wrap;
+             margin-right: -7.5px;
+             margin-left: -7.5px;
+         }
+         .col-md-6 {
+             -ms-flex: 0 0 50%;
+             flex: 0 0 50%;
+             max-width: 50%;
+         }
+
+         .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+             position: relative;
+             width: 100%;
+             padding-right: 7.5px;
+             padding-left: 7.5px;
+         }
+
+         *, ::after, ::before {
+             box-sizing: border-box;
          }
 
      </style>
@@ -798,7 +822,45 @@
 
                     </div>
                 </div>
+                <div class="page-break"></div>
+                <h4>3-4. Résumé du diagnostic interne</h4>
+                <P><?= $projet->synthese_diagnostic_interne  ?></P>
            </div>
+        </div>
+        <div class="page-break"></div>
+        <div class="diag diagStrat">
+            <h3>DIAGNOSTIC STRATEGIQUE</h3>
+            <div class="diag-body diagStrat-body">
+                <h4>4-1. Présentation du SWOT</h4>
+                <div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                                <legend>SYNTHESE DES OPPORTUNITES</legend>
+                                <?= $projet->swot->synt_op ?>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                                <legend>SYNTHESE DES MENACES</legend>
+                                    <?= $projet->swot->synt_men ?>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                                <legend>SYNTHESE DES FORCES</legend>
+                                <?= $projet->swot->synt_forces ?>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                                <legend>SYNTHESE DES FAIBLESSES</legend>
+                                    <?= $projet->swot->synt_faiblesses ?>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <input type="hidden" id="id" value="<?= $projet->token ?>"/>
     </main>
