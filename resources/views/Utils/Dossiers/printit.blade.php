@@ -527,9 +527,9 @@
                 <h4>3-3. Présentation des états financiers</h4>
                 <div>
                     <div>
-                       <fieldset>
-                               <legend>SANTE FINANCIERE</legend>
-                               <table class="table table-condensed table-hover">
+
+                               <h6>SANTE FINANCIERE</h6>
+                               <table class="table table-condensed table-bordered">
                                    <thead>
                                    <tr>
                                        <th></th>
@@ -607,9 +607,8 @@
                                    </tr>
                                    </tbody>
                                </table>
-                            </fieldset>
-                            <fieldset>
-                               <legend>PERFORMANCE FINANCIERE</legend>
+
+                               <h6>PERFORMANCE FINANCIERE</h6>
                                <table class="table table-bordered table-condensed">
                                    <thead>
                                    <tr>
@@ -796,7 +795,7 @@
                                    </tr>
                                    </tbody>
                                </table>
-                            </fieldset>
+
                     </div>
                 </div>
            </div>
