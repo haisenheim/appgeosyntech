@@ -51,7 +51,39 @@ class DossierController extends Controller
 		$choix = json_encode($choix);
 
 		//var_dump($choix);
-		$orm = 'http://orm.test/api/';
+
+
+
+
+
+
+				$payload = json_encode($choix);
+
+		// Prepare new cURL resource
+				$ch = curl_init('http://orm.test/api/carto');
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+				curl_setopt($ch, CURLOPT_POST, true);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
+		// Set HTTP Header for POST request
+				curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+						'Content-Type: application/json',
+						'Content-Length: ' . strlen($payload))
+				);
+
+		// Submit the POST request
+				$result = curl_exec($ch);
+
+		// Close cURL session handle
+				curl_close($ch);
+
+		var_dump($result);
+		die();
+
+
+
+	/*	$orm = 'http://orm.test/api/';
 		$ch = curl_init();
 		curl_setopt($ch,CURLOPT_URL,'http://orm.test/api/carto');
 		curl_setopt($ch,CURLOPT_POST,1);
@@ -59,7 +91,7 @@ class DossierController extends Controller
 		$results = curl_exec($ch);
 		//var_dump($ch);
 		//debug($results);
-		curl_close($ch);
+		curl_close($ch);*/
 
 		//die();
 

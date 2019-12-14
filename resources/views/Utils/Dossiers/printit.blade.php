@@ -181,11 +181,7 @@
                             <b>Présentation de l’entreprise  </b>
                             <span><?= $projet->teaser?$projet->teaser->entreprise:'' ?></span>
         	           </li>
-        	           @if($projet->teaser->youtubeUri)
-                            <li>
-                                <span><a href="<?= $projet->teaser?$projet->teaser->youtubeUri:'' ?>">Suivre la vidéo du projet sur Youtube</a></span>
-                            </li>
-                        @endif
+
                         <li>
                             <b>Présentation du porteur de projet  </b>
                             <span><?= $projet->teaser?$projet->teaser->porteur:'' ?></span>
@@ -1389,7 +1385,7 @@
                                     @endforeach
                                 </tr>
                                 <tr>
-                                    <td>Autres immobilisations financieres</td>
+                                    <td >Autres immobilisations financieres</td>
                                     @foreach($projet->prevbilans as $prevr)
                                         <td><?= $prevr->autres_immobilisations_financieres ?></td>
                                         @if(!$loop->last)
