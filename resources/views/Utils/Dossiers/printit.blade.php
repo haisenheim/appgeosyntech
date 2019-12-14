@@ -64,8 +64,8 @@
          max-width: 580px;
          }
 
-         .diag-body th{
-         max-width: 50%;
+         .diagExt-body .table th{
+            max-width: 300px;
          }
 
      </style>
