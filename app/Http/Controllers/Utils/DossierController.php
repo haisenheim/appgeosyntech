@@ -47,9 +47,10 @@ class DossierController extends Controller
 		foreach($choices as $choice){
 			$choix[] = $choice->choice_id;
 		}
+		var_dump($choix);
 		$orm = 'http://orm.test/api/';
 		$ch = curl_init();
-		curl_setopt($ch,CURLOPT_URL,$orm.'carto');
+		curl_setopt($ch,CURLOPT_URL,'http://orm.test/api/carto');
 		curl_setopt($ch,CURLOPT_POST,1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $choix);
 		$results = curl_exec($ch);
