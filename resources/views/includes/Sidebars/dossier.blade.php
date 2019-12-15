@@ -13,7 +13,7 @@
     <?php endif; ?>
 
 
-        <a href="#" data-toggle="modal" data-target="#bm" class="btn btn-outline-success btn-block">MODELE ECONOMIQUE</a>
+        <a href="#" data-toggle="modal" data-target="#meModal" class="btn btn-outline-success btn-block">MODELE ECONOMIQUE</a>
 
     @if($projet->etape>=4)
         <ul class="list-group">
