@@ -39,9 +39,9 @@
     <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
     <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
-
-    <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-warning btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
-
+    @if($projet->synthese_diagnostic_interne)
+        <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-warning btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+    @endif
 
     @if($projet->etape>=2)
         <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-outline-info btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>

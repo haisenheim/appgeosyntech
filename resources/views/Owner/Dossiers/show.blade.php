@@ -179,14 +179,14 @@
     </script>
 
     <!-- Edition de la synthese du diagnostic interne  -->
-    @include('includes.Edit.synthese1')
+    @include('includes.Show.synthese1')
 
 
     <!-- Edition de la synthese du diagnostic externe-->
-    @include('includes.Edit.synthese2')
+    @include('includes.Show.synthese2')
 
         <!-- Edition de la synthese du diagnostic Strategique -->
-    @include('includes.Edit.synthese3')
+    @include('includes.Show.synthese3')
 
 
         <!-- Edition du teaser-->
