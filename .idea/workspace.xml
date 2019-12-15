@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/business_model.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/business_model.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Edit/synthese1.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Edit/synthese1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/synthese1.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/synthese1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Edit/synthese2.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Edit/synthese2.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/synthese2.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/synthese2.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Edit/synthese3.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Edit/synthese3.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/synthese3.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/synthese3.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Edit/teaser.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Edit/teaser.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -47,8 +38,8 @@
       <file leaf-file-name="synthese1.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/synthese1.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2" vertical-offset="0" max-vertical-offset="496">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="496">
+              <caret line="15" column="121" selection-start-line="15" selection-start-column="121" selection-end-line="15" selection-end-column="148" />
               <folding />
             </state>
           </provider>
@@ -64,16 +55,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="synthese2.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/synthese2.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="416">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="synthese3.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/synthese3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,23 +65,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="synthese3.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/synthese3.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.16" vertical-offset="0" max-vertical-offset="400">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="teaser.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/teaser.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.16" vertical-offset="144" max-vertical-offset="1344">
               <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.64" vertical-offset="0" max-vertical-offset="3856">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#2303#6852#0#HTML" expanded="false" />
+                <element signature="e#6884#8364#0#HTML" expanded="false" />
+                <marker date="1576411047982" expanded="false" signature="3696:3735" placeholder="..." />
+                <marker date="1576411047982" expanded="false" signature="7828:7838" placeholder="..." />
+                <marker date="1576411047982" expanded="false" signature="7896:7906" placeholder="..." />
+                <marker date="1576411047982" expanded="false" signature="7965:7975" placeholder="..." />
+                <marker date="1576411047982" expanded="false" signature="8049:8059" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dossier.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.697479" vertical-offset="676" max-vertical-offset="1792">
+              <caret line="63" column="183" selection-start-line="63" selection-start-column="183" selection-end-line="63" selection-end-column="183" />
               <folding />
             </state>
           </provider>
@@ -116,30 +113,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7647059" vertical-offset="1764" max-vertical-offset="2624">
-              <caret line="2166" column="17" selection-start-line="2166" selection-start-column="17" selection-end-line="2166" selection-end-column="17" />
+            <state vertical-scroll-proportion="-22.8" vertical-offset="1270" max-vertical-offset="1936">
+              <caret line="418" column="0" selection-start-line="418" selection-start-column="0" selection-end-line="418" selection-end-column="0" />
               <folding>
-                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#ul#0;tag#fieldset#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#script#0" expanded="false" />
                 <element signature="tag#style#1" expanded="false" />
                 <element signature="tag#script#5" expanded="false" />
-                <marker date="1576413113905" expanded="false" signature="152928:152967" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="157060:157070" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="157128:157138" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="157197:157207" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="157281:157291" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="160291:160330" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="164423:164433" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="164491:164501" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="164560:164570" placeholder="..." />
-                <marker date="1576413113905" expanded="false" signature="164644:164654" placeholder="..." />
+                <element signature="tag#ul#0;tag#nav#0;tag#main#0" expanded="false" />
+                <element signature="e#16383#16924#0#HTML" expanded="true" />
+                <marker date="1576414563400" expanded="false" signature="2275:2314" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="6407:6417" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="6475:6485" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="6544:6554" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="6628:6638" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="9791:9830" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="13923:13933" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="13991:14001" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="14060:14070" placeholder="..." />
+                <marker date="1576414563400" expanded="false" signature="14144:14154" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -218,7 +212,6 @@
         <option value="$PROJECT_DIR$/resources/views/includes/Show/diagnostic3.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/diagnostic1.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/rapport_mensuel.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/teaser.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
@@ -231,6 +224,7 @@
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/teaser.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/business_model.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" />
       </list>
     </option>
   </component>
@@ -435,7 +429,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Show" />
+              <option name="myItemId" value="Sidebars" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1264,38 +1258,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="1792">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/rapport_mensuel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.32" vertical-offset="0" max-vertical-offset="7504">
           <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.96" vertical-offset="736" max-vertical-offset="1792">
-          <caret line="188" column="27" selection-start-line="188" selection-start-column="27" selection-end-line="188" selection-end-column="27" />
-          <folding>
-            <element signature="tag#script#5" expanded="false" />
-            <element signature="tag#style#1" expanded="false" />
-            <element signature="tag#div#1" expanded="false" />
-            <element signature="tag#main#0" expanded="false" />
-            <element signature="tag#div#2" expanded="false" />
-            <marker date="1576411047982" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1576411047982" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1576411047982" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1576411047982" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1576411047982" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1325,14 +1292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/synthese1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2" vertical-offset="0" max-vertical-offset="496">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/synthese2.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.04" vertical-offset="0" max-vertical-offset="496">
@@ -1357,14 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/teaser.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.24" vertical-offset="0" max-vertical-offset="1312">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/business_model.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.64" vertical-offset="784" max-vertical-offset="2144">
@@ -1383,30 +1334,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/teaser.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.24" vertical-offset="0" max-vertical-offset="1312">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7647059" vertical-offset="1764" max-vertical-offset="2624">
-          <caret line="2166" column="17" selection-start-line="2166" selection-start-column="17" selection-end-line="2166" selection-end-column="17" />
+        <state vertical-scroll-proportion="-22.8" vertical-offset="1270" max-vertical-offset="1936">
+          <caret line="418" column="0" selection-start-line="418" selection-start-column="0" selection-end-line="418" selection-end-column="0" />
           <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#ul#0;tag#fieldset#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="tag#fieldset#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#script#0" expanded="false" />
             <element signature="tag#style#1" expanded="false" />
             <element signature="tag#script#5" expanded="false" />
-            <marker date="1576413113905" expanded="false" signature="152928:152967" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="157060:157070" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="157128:157138" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="157197:157207" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="157281:157291" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="160291:160330" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="164423:164433" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="164491:164501" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="164560:164570" placeholder="..." />
-            <marker date="1576413113905" expanded="false" signature="164644:164654" placeholder="..." />
+            <element signature="tag#ul#0;tag#nav#0;tag#main#0" expanded="false" />
+            <element signature="e#16383#16924#0#HTML" expanded="true" />
+            <marker date="1576414563400" expanded="false" signature="2275:2314" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="6407:6417" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="6475:6485" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="6544:6554" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="6628:6638" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="9791:9830" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="13923:13933" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="13991:14001" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="14060:14070" placeholder="..." />
+            <marker date="1576414563400" expanded="false" signature="14144:14154" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.64" vertical-offset="0" max-vertical-offset="3856">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#2303#6852#0#HTML" expanded="false" />
+            <element signature="e#6884#8364#0#HTML" expanded="false" />
+            <marker date="1576411047982" expanded="false" signature="3696:3735" placeholder="..." />
+            <marker date="1576411047982" expanded="false" signature="7828:7838" placeholder="..." />
+            <marker date="1576411047982" expanded="false" signature="7896:7906" placeholder="..." />
+            <marker date="1576411047982" expanded="false" signature="7965:7975" placeholder="..." />
+            <marker date="1576411047982" expanded="false" signature="8049:8059" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/synthese1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="496">
+          <caret line="15" column="121" selection-start-line="15" selection-start-column="121" selection-end-line="15" selection-end-column="148" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.697479" vertical-offset="676" max-vertical-offset="1792">
+          <caret line="63" column="183" selection-start-line="63" selection-start-column="183" selection-end-line="63" selection-end-column="183" />
+          <folding />
         </state>
       </provider>
     </entry>

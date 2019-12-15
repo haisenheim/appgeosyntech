@@ -61,7 +61,7 @@
         <ul class="list-group">
             <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
 
-            <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite * 4 ,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span>({{ number_format($projet->traite ,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup>/ETAPE)</li>
+            <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite * 4 ,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span> ( <b>{{ number_format($projet->traite ,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></b> /ETAPE)</li>
         </ul>
     @endif
 
