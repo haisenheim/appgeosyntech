@@ -2,14 +2,13 @@
  <div class="card">
     <div class="card-body">
 
-
     <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
 
     </div>
 
     <p>CODE : {{ $projet->code }}</p>
     <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
-    <?php if(Auth::user()->role_id==2): ?>
+    <?php if(Auth::user()->role_id==!3): ?>
         <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
     <?php endif; ?>
 

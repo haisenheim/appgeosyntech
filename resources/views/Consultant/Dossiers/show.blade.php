@@ -11,8 +11,6 @@
                 <div class="row">
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
                        @include('includes.Sidebars.dossier')
-
-
                     </div>
                     <div style="overflow-y: scroll; max-height: 860px" id="side2" class="col-md-8 col-sm-12">
                         <div class="card">
