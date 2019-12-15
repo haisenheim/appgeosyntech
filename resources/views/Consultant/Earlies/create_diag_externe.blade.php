@@ -6,37 +6,7 @@ CREATION DU DIAGNOSTIC EXTERNE
     <div style="padding-top: 30px" class="container-fluid">
                 <div class="row">
                     <div class="col-md-3 col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-
-                            </div>
-
-                        <div class="card-body">
-
-                            <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
-                            <p>CODE : {{ $projet->code }}</p>
-                            <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
-                            <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-                            <p>AUTEUR : {{ $projet->auteur->name }}</p>
-                            <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
-                            <p>TYPE DE FINANCEMENT : {{ $projet->type?$projet->type->name:'-' }}</p>
-                            <p>MONTANT : {{ $projet->montant }}</p>
-                            <input type="hidden" id="id" value="<?= $projet->token ?>"/>
-                            <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-                            <hr/>
-
-                            @if($projet->modepaiement_id>0)
-                                <h6 class="page-header" style="background-color: inherit">FORMULE DE PAIEMENT</h6>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
-
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ number_format($projet->traite * 4 ,0,',','.') }} <sup>{{ $projet->devise->abb }}</sup></span></li>
-                                </ul>
-
-                            @endif
-                        </div>
-                        </div>
-
+                       @include('includes.Sidebars.dossier')
                     </div>
                     <div class="col-md-9 col-sm-12">
                         <div class="">

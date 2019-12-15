@@ -6,61 +6,7 @@ CREATION DU DIAGNOSTIC EXTERNE
     <div style="padding-top: 30px" class="container-fluid">
                 <div class="row">
                     <div class="col-md-3 col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-
-                            </div>
-
-                        <div class="card-body">
-
-                            <h4 style="background-color: inherit">{{ $projet->name  }}</h4>
-                            <p>CODE : {{ $projet->code }}</p>
-                            <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
-                            <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-                            <p>AUTEUR : {{ $projet->auteur->name }}</p>
-                            <p class="text-danger" style="font-weight: 700" > {{ $projet->capital?'DOSSIER D\'AUGMENTATION DE CAPITAL':'' }}</p>
-                            <p>TYPE DE FINANCEMENT : {{ $projet->type?$projet->type->name:'-' }}</p>
-                            <p>MONTANT : {{ $projet->montant }}</p>
-                            <input type="hidden" id="id" value="<?= $projet->token ?>"/>
-                            <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
-
-
-                            @if($projet->modepaiement_id>0)
-                                <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><span style="font-weight: 700">{{ $projet->modepaiement->name }}</span></li>
-                                    <li class="list-group-item" >PRIX HT : <span style="font-weight: 700">{{ $projet->modepaiement->prix }}</span></li>
-                                    <li class="list-group-item">PRIX TTC : <span style="font-weight: 700">{{ $projet->modepaiement->prixttc }}</span></li>
-                                </ul>
-                            @else
-                                <div>
-                                    <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
-
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><span id="mode_name" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item" >PRIX HT : <span id="mode_prix" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">PRIX TTC : <span id="mode_prixttc" style="font-weight: 700"></span></li>
-                                        <li class="list-group-item">
-                                        <p id="mode_description"></p>
-                                        </li>
-                                    </ul>
-                                    <hr/>
-                                    <form action="/consultant/dossier/add-mode" method="get" class="form-inline">
-                                        <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
-                                        <select style="background-color: #FFFFFF" class="form-control" name="mode_id" id="mode_id">
-                                            <option value="0">Choix d'une offre de service</option>
-                                            @foreach($modes as $mode)
-                                                <option value="{{ $mode->id }}">{{ $mode->name }}</option>
-                                            @endforeach
-                                        </select>
-                                        <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-check"></i> ENREGISTRER</button>
-
-                                    </form>
-                                </div>
-                            @endif
-                        </div>
-                        </div>
-
+                      @include('includes.Sidebars.dossier')
                     </div>
                     <div class="col-md-9 col-sm-12">
                         <div class="">
