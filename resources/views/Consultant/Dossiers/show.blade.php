@@ -10,7 +10,7 @@
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
-                       @include('Sidebars.dossier')
+                       @include('Sidebars/dossier')
 
 
                     </div>
