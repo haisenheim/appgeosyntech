@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -38,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3364486" vertical-offset="48" max-vertical-offset="6352">
-              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
@@ -73,16 +74,16 @@
                 <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#6" expanded="false" />
                 <element signature="e#177954#182040#0#HTML" expanded="false" />
                 <element signature="e#182083#183563#0#HTML" expanded="false" />
-                <marker date="1576402935561" expanded="false" signature="152921:152960" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="157053:157063" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="157121:157131" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="157190:157200" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="157274:157284" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="178895:178934" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="183027:183037" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="183095:183105" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="183164:183174" placeholder="..." />
-                <marker date="1576402935561" expanded="false" signature="183248:183258" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="152921:152960" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="157053:157063" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="157121:157131" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="157190:157200" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="157274:157284" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="178895:178934" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="183027:183037" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="183095:183105" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="183164:183174" placeholder="..." />
+                <marker date="1576403034808" expanded="false" signature="183248:183258" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -840,13 +841,13 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14993565" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1969112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1969112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26944444" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1409,7 +1410,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3364486" vertical-offset="48" max-vertical-offset="6352">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding>
             <element signature="tag#div#0;tag#div#0;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#fieldset#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
@@ -1444,16 +1445,16 @@
             <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#6" expanded="false" />
             <element signature="e#177954#182040#0#HTML" expanded="false" />
             <element signature="e#182083#183563#0#HTML" expanded="false" />
-            <marker date="1576402935561" expanded="false" signature="152921:152960" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="157053:157063" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="157121:157131" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="157190:157200" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="157274:157284" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="178895:178934" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="183027:183037" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="183095:183105" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="183164:183174" placeholder="..." />
-            <marker date="1576402935561" expanded="false" signature="183248:183258" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="152921:152960" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="157053:157063" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="157121:157131" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="157190:157200" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="157274:157284" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="178895:178934" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="183027:183037" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="183095:183105" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="183164:183174" placeholder="..." />
+            <marker date="1576403034808" expanded="false" signature="183248:183258" placeholder="..." />
           </folding>
         </state>
       </provider>
