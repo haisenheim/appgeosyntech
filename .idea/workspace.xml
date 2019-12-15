@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,12 +102,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dossier.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dossier.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10084034" vertical-offset="176" max-vertical-offset="1792">
+            <state vertical-scroll-proportion="-1.92" vertical-offset="176" max-vertical-offset="1792">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.10714286" vertical-offset="3341" max-vertical-offset="3840">
+              <caret line="212" column="7" selection-start-line="212" selection-start-column="7" selection-end-line="212" selection-end-column="7" />
+              <folding>
+                <element signature="tag#script#4" expanded="false" />
+                <element signature="tag#script#5" expanded="false" />
+                <element signature="tag#main#0" expanded="false" />
+                <marker date="1576419098578" expanded="false" signature="2275:2314" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="6407:6417" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="6475:6485" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="6544:6554" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="6628:6638" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="9756:9795" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="13888:13898" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="13956:13966" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="14025:14035" placeholder="..." />
+                <marker date="1576419098578" expanded="false" signature="14109:14119" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,16 +161,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="9888">
               <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_plan_financier.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/create_plan_financier.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="44720">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -215,7 +228,6 @@
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/synthese3.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/teaser.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/business_model.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_externe.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_plan_financier.blade.php" />
@@ -227,6 +239,7 @@
         <option value="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php" />
       </list>
     </option>
   </component>
@@ -432,6 +445,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Earlies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Consultant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dossiers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1012,13 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.8" vertical-offset="1270" max-vertical-offset="1936">
-          <caret line="418" column="0" selection-start-line="418" selection-start-column="0" selection-end-line="418" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/synthese1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="496">
@@ -1170,9 +1202,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10084034" vertical-offset="176" max-vertical-offset="1792">
+        <state vertical-scroll-proportion="-1.92" vertical-offset="176" max-vertical-offset="1792">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10714286" vertical-offset="3341" max-vertical-offset="3840">
+          <caret line="212" column="7" selection-start-line="212" selection-start-column="7" selection-end-line="212" selection-end-column="7" />
+          <folding>
+            <element signature="tag#script#4" expanded="false" />
+            <element signature="tag#script#5" expanded="false" />
+            <element signature="tag#main#0" expanded="false" />
+            <marker date="1576419098578" expanded="false" signature="2275:2314" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="6407:6417" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="6475:6485" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="6544:6554" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="6628:6638" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="9756:9795" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="13888:13898" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="13956:13966" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="14025:14035" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="14109:14119" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

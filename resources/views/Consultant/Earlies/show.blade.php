@@ -13,27 +13,30 @@
                         @include('includes.Sidebars.dossier')
                     </div>
                     <div style="overflow-y: scroll; max-height: 860px" id="side2" class="col-md-8 col-sm-12">
-                                <div class="card-body">
-                                                    <div class="table-responsive">
-                                                         <table id="risques-tab" class="table table-condensed table-hover table-bordered">
-                                                           <thead>
-                                                            <tr>
-                                                                <th></th>
-                                                                <th>Defaillances possibles</th>
-                                                                <th>Causes</th>
-                                                                <th>Consequences</th>
-                                                                <th>Frequence</th>
-                                                                <th>Gravite</th>
-                                                                <th>Criticite brut</th>
+                        <div class="card">
+                             <div class="card-body">
+                                 <div class="table-responsive">
+                                      <table id="risques-tab" class="table table-condensed table-hover table-bordered">
+                                        <thead>
+                                         <tr>
+                                             <th></th>
+                                             <th>Defaillances possibles</th>
+                                             <th>Causes</th>
+                                             <th>Consequences</th>
+                                             <th>Frequence</th>
+                                             <th>Gravite</th>
+                                             <th>Criticite brut</th>
 
-                                                                <th>Criticite nette</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            </tbody>
-                                                         </table>
-                                                    </div>
-                                                </div>
+                                             <th>Criticite nette</th>
+                                         </tr>
+                                         </thead>
+                                         <tbody>
+                                         </tbody>
+                                      </table>
+                                 </div>
+                             </div>
+                        </div>
+
                                             
                     </div>
                 </div>
