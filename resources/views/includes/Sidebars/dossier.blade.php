@@ -12,9 +12,9 @@
         <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
     <?php endif; ?>
 
-    @if($projet->modele)
+
         <a href="#" data-toggle="modal" data-target="#bm" class="btn btn-outline-success btn-block">MODELE ECONOMIQUE</a>
-    @endif
+
     @if($projet->etape>=4)
         <ul class="list-group">
             <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
