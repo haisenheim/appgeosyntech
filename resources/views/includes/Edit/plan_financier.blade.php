@@ -16,6 +16,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
 </style>
 
 <div class="card">
+    <input type="hidden" id="projet_token" value="<?= $projet->token ?>"/>
     <div class="card-header">
 
          <div class="stepwizard">

@@ -169,7 +169,7 @@ class EarlyController extends Controller
 	 */
 
 	public function savePlanFinancier(Request $request){
-		//dd($request);
+		dd($request);
 		$projet = Earlie::where('token',$request->token)->first();
 		$projet->montant_investissement = $request->montage['montant'];
 		$projet->bfr= $request->montage['bfr'];
