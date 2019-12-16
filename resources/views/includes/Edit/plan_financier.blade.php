@@ -1857,10 +1857,10 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                                                     <th style="width: 50%;">ESCOMPTE BANCAIRE</th> <td data-id="7" style="text-align: right" class="cell" contenteditable="true"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th style="width: 50%;">AFFACTURAGE</th> <td data-id="8" style="text-align: right" class="cell" contenteditable="true"></td>
+                                                    <th style="width: 50%;">AFFACTURAGE</th> <td data-id="9" style="text-align: right" class="cell" contenteditable="true"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th style="width: 50%;">BILLETS DE TRESORERIE</th> <td data-id="8" style="text-align: right" class="cell" contenteditable="true"></td>
+                                                    <th style="width: 50%;">BILLETS DE TRESORERIE</th> <td data-id="10" style="text-align: right" class="cell" contenteditable="true"></td>
                                                 </tr>
 
                                                 <tr style="background-color: #EEEEEE; font-weight: 900;">
@@ -1881,12 +1881,12 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                          </div>
                     </div>
                     <div class="setup-content" id="step-5">
-                    <div class="">
-                    <div class="">
+                    <div class="card">
+                    <div class="card-header">
                         <h4 class="page-header">RENTABILITE ESPEREE</h4>
                     </div>
                     <div class="card-body">
-                    <div class="mfinancement section" id="capital">
+                    <div class="mfinancement section" id="capital" style="display: block">
                         <h4>FINANCEMENT POUR L'AUGMENTATION DU CAPITAL</h4>
                         <div>
                             <div class="" id="analyse_invest">
@@ -3377,6 +3377,8 @@ $('.cell').keyup(function(e){
               }
         });
 
+        console.log(ids);
+
 
 
 
@@ -3463,33 +3465,9 @@ $('.cell').keyup(function(e){
             $('#step-5').hide();
         }
 
-
-        $('#cel-total').text(val);
     });
 
-$('#bfr, #montant_investissement').keyup(function(){
-        var invest = 0;
-        if($.isNumeric($('#montant_investissement').val())){
-            invest = parseFloat($('#montant_investissement').val());
-        }else{
-            invest = 0;
-        }
 
-        var bfr = 0;
-        if($.isNumeric($('#bfr').val())){
-            bfr = parseFloat($('#bfr').val());
-        }else{
-            bfr = 0;
-        }
-
-        var cout = invest + bfr;
-
-        $('#cout_projet').val(cout).css({
-            background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-        });
-
-
-    });
 
 
 </script>
