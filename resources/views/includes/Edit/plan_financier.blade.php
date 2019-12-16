@@ -2680,7 +2680,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                        +'</li>';
 
 
-        html_repart_body = html_repart_body + '<div class="tab-pane" role="tabpanel" id="n5'+k+'" data-id="'+an+'" aria-labelledby="tab5'+k+'">'
+        html_repart_body = html_repart_body + '<div class="tab-pane ' + cl1 +'" role="tabpanel" id="n5'+k+'" data-id="'+an+'" aria-labelledby="tab5'+k+'">'
                                                                                                + '<div id="repart3" class="row">'
                                                                                                   + '<div class="col-md-6 col-sm-12">'
                                                                                                      +  '<div class="form-group">'
