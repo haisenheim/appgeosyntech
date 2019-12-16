@@ -2627,131 +2627,6 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
 
 
 
-  $('#mfinancements input').click(function(){
-
-      var checked_input = $('#mfinancements input:checked');
-      var found = false;
-          checked_input.each(function() {
-
-              var id = $(this).data('id');
-              //var ids = [1,3,4,5,7,9,10];
-              if (id == 1 || id == 3 || id == 4 || id == 5 || id == 7 || id == 9 || id == 10) {
-                  found = true;
-              }
-          });
-      if(found){
-          $('#head_step-5').show();
-         // $('#head_step-7').text('7');
-          $('#step-5').show()
-                  .css({
-                      'display':'none'
-                  });
-
-
-      }else{
-          $('#head_step-6').hide();
-          $('#step-6').hide();
-          $('#head_step-7').text('6')
-      }
-
-      if($(this).data('id')==1){
-              if($(this).is(":checked")){
-                  $('#capital').show();
-                  $('#cel-1').prop('contenteditable',true).css({
-                      background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-                  });
-              }else{
-
-                  $('#capital').hide();
-
-                  $('#capital input').val('');
-              }
-      }
-
-      if($(this).data('id')==2){
-          if($(this).is(":checked")){
-
-              $('#cel-2').prop('contenteditable',true).css({
-                  background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-              });
-          }else{
-
-          }
-      }
-
-      if($(this).data('id')==3){
-          if($(this).is(":checked")){
-              $('#emp_oblig').show();
-              $('#cel-3').prop('contenteditable',true).css({
-                  background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-              });
-          }else{
-              $('#emp_oblig').hide();
-              $('.ob').val('')
-          }
-      }
-
-      if($(this).data('id')==4){
-          if($(this).is(":checked")){
-              $('#mlt').show();
-              $('#cel-4').prop('contenteditable',true).css({
-                  background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-              });
-          }else{
-              $('#mlt').hide();
-              $('.mlt').val('');
-          }
-      }
-      if($(this).data('id')==5){
-          if($(this).is(":checked")){
-              $('#credbail').show();
-              $('#cel-5').prop('contenteditable',true).css({
-                  background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-              });
-          }else{
-              $('#credbail').hide();
-              $('#credbail input').val();
-          }
-      }
-      if($(this).data('id')==7){
-          if($(this).is(":checked")){
-              $('#escompte').show();
-              $('#cel-7').prop('contenteditable',true).css({
-                  background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-              });
-          }else{
-              $('#escompte').hide();
-              $('#escompte input').val('');
-          }
-      }
-
-      if($(this).data('id')==9){
-          if($(this).is(":checked")){
-              $('#affacturage').show();
-              $('#cel-9').prop('contenteditable',true).css({
-                  background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-              });
-          }else{
-              $('#affacturage').hide();
-          }
-      }
-
-      if($(this).data('id')==10){
-          if($(this).is(":checked")){
-              $('#billet_treso').show();
-              $('#cel-10').prop('contenteditable',true).css({
-                  background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
-              });
-          }else{
-              $('#billet_treso').hide();
-          }
-      }
-
-
-
-
-  });
-
 
 </script>
 <script>
@@ -3385,67 +3260,78 @@ $('.cell').keyup(function(e){
                   if($.inArray(1,ids)){
 
                       $('#capital').show();
+                      console.log(1);
 
                   }else{
 
                       $('#capital').hide();
 
                       $('#capital input').val('');
+                      console.log(-1);
                   }
 
 
                 if($.inArray(3,ids)){
 
                     $('#emp_oblig').show();
+                    console.log(3);
 
                 }else{
                     $('#emp_oblig').hide();
-                    $('.ob').val('')
+                    $('.ob').val('');
+                    console.log(-3);
                 }
 
 
                 if($.inArray(4,ids)){
 
                     $('#mlt').show();
+                    console.log(4);
 
                 }else{
                     $('#mlt').hide();
                     $('.mlt').val('');
+                    console.log(-4);
                 }
 
                 if($.inArray(5,ids)){
 
                     $('#credbail').show();
+                    console.log(5);
 
                 }else{
                     $('#credbail').hide();
                     $('#credbail input').val();
+                    console.log(-5);
                 }
 
                 if($.inArray(7,ids)){
 
                     $('#escompte').show();
-
+                    console.log(7);
                 }else{
                     $('#escompte').hide();
                     $('#escompte input').val('');
+                    console.log(-7);
                 }
 
 
                 if($.inArray(9,ids)){
                     $('#affacturage').show();
-
+                    console.log(9);
                 }else{
                     $('#affacturage').hide();
+                    console.log(-9);
                 }
 
 
                 if($.inArray(10,ids)){
 
                     $('#billet_treso').show();
-
+                    console.log(10);
                 }else{
                     $('#billet_treso').hide();
+                    console.log(-10);
                 }
 
 
