@@ -1882,7 +1882,8 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                               <div class="card-footer">
                                   <div class="btn-div text-center">
                                       <button class="btn btn-default prevBtn btn-sm btn-rounded" type="button"><i class="fa fa-arrow-left"></i> PRECEDENT</button>
-                                      <button id="btn-save" class="btn btn-success  btn-rounded" type="button"><i class="fa fa-save"></i> ENREGISTRER</button>                                                          </div>
+                                       <button id="next1" style="display: none" class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
+                                      <button id="btn-save1" class="btn btn-success btn-save btn-rounded" type="button"><i class="fa fa-save"></i> ENREGISTRER</button>                                                          </div>
                               </div>
                          </div>
                     </div>
@@ -1896,118 +1897,120 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                         <h4>FINANCEMENT POUR L'AUGMENTATION DU CAPITAL</h4>
                         <div>
                             <div class="" id="analyse_invest">
+                               <div id="fincapitalsocial">
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">MONTANT DE LA LEVEE</label>
+                                                <input type="number" class="form-control" id="mt_levee"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">VALEUR NOMINALE D'UNE ACTION</label>
+                                                <input type="number" class="form-control" id="vna"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">NOMBRE D'ACTION AVANT OUVERTURE DU CAPITAL</label>
+                                                <input type="number" class="form-control" id="nba_aoc"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">RESERVES</label>
+                                                <input type="number" class="form-control" id="reserves"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">REPORT A NOUVEAU</label>
+                                                <input type="number" class="form-control" id="report"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">RESULTAT NET</label>
+                                                <input type="number" class="form-control" id="resultat_net"/>
+                                            </div>
+                                        </div>
+                                        </div>
+                                     <div class="row">
 
-                                <div class="row">
-                                    <div class="col-md-5 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">MONTANT DE LA LEVEE</label>
-                                            <input type="number" class="form-control" id="mt_levee"/>
+                                          <div class="col-md-3 col-sm-12">
+                                              <div class="form-group">
+                                                  <label for="">PRIX D'EMISSION</label>
+                                                  <input type="number" class="form-control" id="prix_emi"/>
+                                              </div>
+                                          </div>
+
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">TAUX D'IMPOSITION</label>
+                                                <input style="text-align: right; padding-right: 5px" type="text" class="form-control pc" id="taux_imposition"/>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">VALEUR NOMINALE D'UNE ACTION</label>
-                                            <input type="number" class="form-control" id="vna"/>
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">TAUX RENT. EXIGE PAR LES ACTIONNAIRES</label>
+                                                <input style="text-align: right; padding-right: 5px" type="text" class="form-control pc" id="taux_rent_exige_act"/>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">NOMBRE D'ACTION AVANT OUVERTURE DU CAPITAL</label>
-                                            <input type="number" class="form-control" id="nba_aoc"/>
+
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">MONTANT DES DETTES FINANCIERES</label>
+                                                <input type="number" class="form-control" id="mt_dettes_fin"/>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">RESERVES</label>
-                                            <input type="number" class="form-control" id="reserves"/>
+                                        <div class="col-md-2 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">COUT DE L'ENDETTEMENT</label>
+                                                <input style="text-align: right; padding-right: 5px" type="text" class="form-control" id="cout_endettement"/>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">REPORT A NOUVEAU</label>
-                                            <input type="number" class="form-control" id="report"/>
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group" title="Taux de croissance a l'infini des flux de tresorerie disponibles non actualises">
+                                                <label for="">TCI DES FLUX DE TRESO. DISPO. NON ACTU.</label>
+                                                <input style="text-align: right; padding-right: 5px" type="text" class="form-control pc" id="tci_flux_treso_dispo"/>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">RESULTAT NET</label>
-                                            <input type="number" class="form-control" id="resultat_net"/>
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group" title="Taux de croissance a l'infini des flux de dividendes non actualises">
+                                                <label for="">TCI DES DIVIDENDES NON ACTU.</label>
+                                                <input style="text-align: right; padding-right: 5px" type="text" class="form-control pc" id="tci_flux_dvd_non_actu"/>
+                                            </div>
                                         </div>
-                                    </div>
                                     </div>
                                     <div class="row">
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">POURCENTAGE DU CAPITAL APPELE</label>
+                                                <input type="text" class="form-control" id="taux_capital_appele"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">MONTANT DU DERNIER DIVIDENDE BRUT PAR ACTION DISTRIBUEE</label>
+                                                <input type="number" class="form-control" id="mt_dernier_dvd_brut_action"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">BETA ACTIF</label>
+                                                <input type="text" class="form-control" id="beta_actif"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">TAUX D'INTERET SANS RISQUE</label>
+                                                <input type="text" class="form-control" id="taux_interet_sans_risque"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                               </div>
 
-                                      <div class="col-md-3 col-sm-12">
-                                          <div class="form-group">
-                                              <label for="">PRIX D'EMISSION</label>
-                                              <input type="number" class="form-control" id="prix_emi"/>
-                                          </div>
-                                      </div>
-
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">TAUX D'IMPOSITION</label>
-                                            <input style="text-align: right; padding-right: 5px" type="text" class="form-control pc" id="taux_imposition"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">TAUX RENT. EXIGE PAR LES ACTIONNAIRES</label>
-                                            <input style="text-align: right; padding-right: 5px" type="text" class="form-control pc" id="taux_rent_exige_act"/>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">MONTANT DES DETTES FINANCIERES</label>
-                                            <input type="number" class="form-control" id="mt_dettes_fin"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">COUT DE L'ENDETTEMENT</label>
-                                            <input style="text-align: right; padding-right: 5px" type="text" class="form-control" id="cout_endettement"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="form-group" title="Taux de croissance a l'infini des flux de tresorerie disponibles non actualises">
-                                            <label for="">TCI DES FLUX DE TRESO. DISPO. NON ACTU.</label>
-                                            <input style="text-align: right; padding-right: 5px" type="text" class="form-control pc" id="tci_flux_treso_dispo"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="form-group" title="Taux de croissance a l'infini des flux de dividendes non actualises">
-                                            <label for="">TCI DES DIVIDENDES NON ACTU.</label>
-                                            <input style="text-align: right; padding-right: 5px" type="text" class="form-control pc" id="tci_flux_dvd_non_actu"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">POURCENTAGE DU CAPITAL APPELE</label>
-                                            <input type="text" class="form-control" id="taux_capital_appele"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">MONTANT DU DERNIER DIVIDENDE BRUT PAR ACTION DISTRIBUEE</label>
-                                            <input type="number" class="form-control" id="mt_dernier_dvd_brut_action"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">BETA ACTIF</label>
-                                            <input type="text" class="form-control" id="beta_actif"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="">TAUX D'INTERET SANS RISQUE</label>
-                                            <input type="text" class="form-control" id="taux_interet_sans_risque"/>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="row">
@@ -2502,7 +2505,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                     </div>
                         <div class="btn-div card-footer text-center">
                             <button class="btn btn-primary prevBtn btn-sm  btn-rounded" type="button"> <i class="fa fa-arrow-left"></i> PRECEDENT</button>
-                            <button class="btn btn-primary nextBtn btn-sm  btn-rounded" type="button"> SUIVANT <i class="fa fa-arrow-right"></i></button>
+                            <button id="btn-save" class="btn btn-success btn-save btn-rounded" type="button"><i class="fa fa-save"></i> ENREGISTRER</button>
                         </div>
                     </div>
                     </div>
@@ -2542,16 +2545,18 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
 
 
 
-  $('#btn-save').click(function(e){
+  $('.btn-save').click(function(e){
     e.preventDefault();
 
 
     var tab1=$('#step-1 #myTabContent');
     var tab2=$('#step-2 #myTabContent');
     var tab3=$('#step-3 #myTabContent');
+    var tab5=$('#step-5 #myTabContent');
     var resultats = [];
     var bilans = [];
     var tresoreries = [];
+    var reparts =[];
 
     tab1.find('.tab-pane').each(function(){
         var an = $(this).data('id');
@@ -2593,6 +2598,25 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
         tresoreries.push(values);
     });
 
+     tab5.find('.tab-pane').each(function(){
+            var an = $(this).data('id');
+            var nid = $(this).prop('id');
+            var inputs = $(this).find('input');
+            var values = {};
+            for (var i=0; i < inputs.length; i++) {
+                var id = inputs[i].getAttribute('id');
+                values[id] = $('#step-5 #'+nid+ ' #' + id).val();
+            }
+            values['annee'] =an;
+            reparts.push(values);
+        });
+
+     var fincapitalsocial ={};
+    var inputs= $('#fincapitalsocial').find('input');
+    for(var i=0;i<inputs.length; i++){
+        var id = inputs[i].getAttribute('id');
+        fincapitalsocial[id]=$('#step-5 #' + id).val();
+    }
     var montage = {};
     montage.montant = $('#montant_investissement').val();
     montage.bfr = $('#bfr').val();
@@ -2613,7 +2637,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
         url:saveUrl,
         dataType:'json',
         type:'post',
-        data:{_csrf:$('input[name="_token"]').val(),montage:montage, resultats:resultats,bilans:bilans,tresoreries:tresoreries, moyens:moyens,token:$('#projet_token').val()},
+        data:{_csrf:$('input[name="_token"]').val(),montage:montage, resultats:resultats,bilans:bilans,tresoreries:tresoreries,reparts:reparts,fincapitalsocial:fincapitalsocial, moyens:moyens,token:$('#projet_token').val()},
         beforeSend:function(xhr){
              xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
 
@@ -3298,6 +3322,8 @@ $('.cell').keyup(function(e){
         }
 
         if(ids.length>0){
+                $('#next1').show();
+                $('#btn-save1').hide();
               if(inArray(1,ids)){
 
                     $('#acapital').show().css({
@@ -3387,6 +3413,8 @@ $('.cell').keyup(function(e){
 
         }else{
             $('#head_step-5').hide();
+            $('#next1').hide();
+            $('#btn-save1').show();
         }
 
 
