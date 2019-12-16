@@ -3380,7 +3380,7 @@ $('.cell').keyup(function(e){
 
 
 
-                  if(in_array(1,$ids)){
+                  if($.inArray(1,ids)){
 
                       $('#capital').show();
 
@@ -3392,7 +3392,7 @@ $('.cell').keyup(function(e){
                   }
 
 
-                if(in_array(3,$ids)){
+                if($.inArray(3,ids)){
 
                     $('#emp_oblig').show();
 
@@ -3402,7 +3402,7 @@ $('.cell').keyup(function(e){
                 }
 
 
-                if(in_array(4,$ids)){
+                if($.inArray(4,ids)){
 
                     $('#mlt').show();
 
@@ -3411,7 +3411,7 @@ $('.cell').keyup(function(e){
                     $('.mlt').val('');
                 }
 
-                if(in_array(5,$ids)){
+                if($.inArray(5,ids)){
 
                     $('#credbail').show();
 
@@ -3420,7 +3420,7 @@ $('.cell').keyup(function(e){
                     $('#credbail input').val();
                 }
 
-                if(in_array(7,$ids)){
+                if($.inArray(7,ids)){
 
                     $('#escompte').show();
 
@@ -3430,7 +3430,7 @@ $('.cell').keyup(function(e){
                 }
 
 
-                if(in_array(9,$ids)){
+                if($.inArray(9,ids)){
                     $('#affacturage').show();
 
                 }else{
@@ -3438,7 +3438,7 @@ $('.cell').keyup(function(e){
                 }
 
 
-                if(in_array(10,$ids)){
+                if($.inArray(10,ids)){
 
                     $('#billet_treso').show();
 
