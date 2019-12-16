@@ -2030,7 +2030,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
 
                                         <div class="tab-content" id="myTabContent">
                                             <div class="tab-pane active" role="tabpanel" id="n51" data-id="<?= date('Y') +1 ?>" aria-labelledby="tab51">
-                                                <div class="row">
+                                                <div id="repart1" class="row">
                                                     <div class="col-md-6 col-sm-12">
                                                         <div class="form-group">
                                                             <label for="investissement">MONTANT INVESTI</label>
@@ -2047,7 +2047,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                                             </div>
 
                                             <div class="tab-pane" role="tabpanel" id="n52" data-id="<?= date('Y') +2 ?>" aria-labelledby="tab52">
-                                                <div class="row">
+                                                <div id="repart2" class="row">
                                                     <div class="col-md-6 col-sm-12">
                                                         <div class="form-group">
                                                             <label for="investissement">MONTANT INVESTI</label>
@@ -2064,7 +2064,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                                             </div>
 
                                             <div class="tab-pane" role="tabpanel" id="n53" data-id="<?= date('Y') +3 ?>" aria-labelledby="tab53">
-                                                 <div class="row">
+                                                 <div id="repart3" class="row">
                                                     <div class="col-md-6 col-sm-12">
                                                         <div class="form-group">
                                                             <label for="investissement">MONTANT INVESTI</label>
@@ -2671,11 +2671,31 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                             '<a class="'+ cl +'" href="#n3'+ k +'" role="tab" id="tab3'+ k +'" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span>'+ an +' </a>'
                             +'</li>';
 
+       html_repart_header = html_repart_header + ' <li role="presentation" class="nav-item">'+
+                            '<a class="'+ cl +'" href="#n5'+ k +'" role="tab" id="tab5'+ k +'" data-toggle="tab" aria-controls="n5" aria-expanded="false"><span class=""></span>'+ an +' </a>'
+                            +'</li>';
+
         html = html + ' <li role="presentation" class="nav-item">'+
                               '<a class="'+ cl +'" href="#n'+ k +'" role="tab" id="tab'+ k +'" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span>'+ an +' </a>'
                        +'</li>';
 
 
+        html_repart_body = html_repart_body + '<div class="tab-pane" role="tabpanel" id="n5'+k+'" data-id="'+an+'" aria-labelledby="tab5'+k+'">'
+                                                                                               + '<div id="repart3" class="row">'
+                                                                                                  + '<div class="col-md-6 col-sm-12">'
+                                                                                                     +  '<div class="form-group">'
+                                                                                                          + '<label for="investissement">MONTANT INVESTI</label>'
+                                                                                                          + '<input class="form-control" type="number" id="investissement"/>'
+                                                                                                      +'</div>'
+                                                                                                   +'</div>'
+                                                                                                   +'<div class="col-md-6 col-sm-12">'
+                                                                                                     +  '<div class="form-group">'
+                                                                                                       +    '<label for="cession">CESSION D\'ACTIF</label>'
+                                                                                                           +'<input class="form-control" type="number" id="cession"/>'
+                                                                                                      + '</div>'
+                                                                                                   +'</div>'
+                                                                                               +'</div>'
+                                                                                           +'</div>';
 
         html1 = html1 + '<div class="tab-pane ' + cl1 +'" role="tabpanel" id="n'+ k +'" aria-labelledby="tab'+ k +'" data-id="'+ an +'">'
 
@@ -3233,9 +3253,11 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
              $('#step-1').find('ul.nav-header').html(html);
              $('#step-2').find('ul.nav-header').html(html_bilan_header);
              $('#step-3').find('ul.nav-header').html(html_flux_header);
+             $('#step-5').find('ul.nav-header').html(html_repart_header);
              $('#step-1 #myTabContent').html(html1);
              $('#step-2 #myTabContent').html(html_bilan_body);
              $('#step-3 #myTabContent').html(html_flux_body);
+             $('#step-5 #myTabContent').html(html_repart_body);
     }
 
 
