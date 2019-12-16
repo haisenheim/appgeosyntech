@@ -3363,6 +3363,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
 $('.cell').keyup(function(e){
         var val =0;
         var found = false;
+        var ids = [];
         $('.cell').each(function(){
             if($.isNumeric($(this).text().trim())){
                 val= val + parseInt($(this).text());
@@ -3371,11 +3372,15 @@ $('.cell').keyup(function(e){
               //var ids = [1,3,4,5,7,9,10];
                   if (id == 1 || id == 3 || id == 4 || id == 5 || id == 7 || id == 9 || id == 10) {
                       found = true;
+                      ids.push(id);
                   }
+              }
+        });
 
 
 
-                  if($(this).data('id')==1){
+
+                  if(ids.include(1)){
 
                       $('#capital').show();
 
@@ -3387,7 +3392,7 @@ $('.cell').keyup(function(e){
                   }
 
 
-                if($(this).data('id')==3){
+                if(ids.include(3)){
 
                     $('#emp_oblig').show();
 
@@ -3397,7 +3402,7 @@ $('.cell').keyup(function(e){
                 }
 
 
-                if($(this).data('id')==4){
+                if(ids.include(4)){
 
                     $('#mlt').show();
 
@@ -3406,7 +3411,7 @@ $('.cell').keyup(function(e){
                     $('.mlt').val('');
                 }
 
-                if($(this).data('id')==5){
+                if(ids.include(5)){
 
                     $('#credbail').show();
 
@@ -3415,7 +3420,7 @@ $('.cell').keyup(function(e){
                     $('#credbail input').val();
                 }
 
-                if($(this).data('id')==7){
+                if(ids.include(7)){
 
                     $('#escompte').show();
 
@@ -3425,7 +3430,7 @@ $('.cell').keyup(function(e){
                 }
 
 
-                if($(this).data('id')==9){
+                if(ids.include(9)){
                     $('#affacturage').show();
 
                 }else{
@@ -3433,7 +3438,7 @@ $('.cell').keyup(function(e){
                 }
 
 
-                if($(this).data('id')==10){
+                if(ids.include(10)){
 
                     $('#billet_treso').show();
 
@@ -3441,8 +3446,8 @@ $('.cell').keyup(function(e){
                     $('#billet_treso').hide();
                 }
 
-            }
-        });
+
+
 
         if(found){
             $('#head_step-5').show();

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" />
-    </list>
+    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="" />
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -64,8 +62,8 @@
       <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5777311" vertical-offset="53773" max-vertical-offset="56880">
-              <caret line="3481" column="32" selection-start-line="3481" selection-start-column="32" selection-end-line="3481" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.033613447" vertical-offset="55152" max-vertical-offset="57792">
+              <caret line="3448" column="27" selection-start-line="3448" selection-start-column="27" selection-end-line="3448" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -109,7 +107,7 @@
                 <element signature="n#style#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#3;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#260565#264244#0#HTML" expanded="false" />
+                <element signature="e#262799#263335#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1230,8 +1228,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5777311" vertical-offset="53773" max-vertical-offset="56880">
-          <caret line="3481" column="32" selection-start-line="3481" selection-start-column="32" selection-end-line="3481" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.033613447" vertical-offset="55152" max-vertical-offset="57792">
+          <caret line="3448" column="27" selection-start-line="3448" selection-start-column="27" selection-end-line="3448" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -1275,7 +1273,7 @@
             <element signature="n#style#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#3;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#260565#264244#0#HTML" expanded="false" />
+            <element signature="e#262799#263335#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
