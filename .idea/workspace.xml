@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Fincapitalsocial.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Repartcapitalsocial.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Earlie.php" afterPath="$PROJECT_DIR$/app/Models/Earlie.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Infrastructure.php" afterPath="$PROJECT_DIR$/app/Models/Infrastructure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Projet.php" afterPath="$PROJECT_DIR$/app/Models/Projet.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,8 +38,8 @@
       <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92523366" vertical-offset="10644" max-vertical-offset="24560">
-              <caret line="2073" column="54" selection-start-line="2073" selection-start-column="54" selection-end-line="2073" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.5607477" vertical-offset="0" max-vertical-offset="24240">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -94,6 +89,9 @@
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="tag#div#1;tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
@@ -111,11 +109,11 @@
                 <element signature="tag#div#4;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#5;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#6;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="e#197482#200234#0#HTML" expanded="false" />
-                <element signature="e#197747#198130#0#HTML" expanded="false" />
-                <element signature="e#198176#198556#0#HTML" expanded="false" />
-                <element signature="e#198629#199014#0#HTML" expanded="false" />
-                <element signature="tag#style#0" expanded="false" />
+                <element signature="e#197542#200294#0#HTML" expanded="false" />
+                <element signature="e#197807#198190#0#HTML" expanded="false" />
+                <element signature="e#198236#198616#0#HTML" expanded="false" />
+                <element signature="e#198689#199074#0#HTML" expanded="false" />
+                <element signature="tag#style#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -751,10 +749,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1252,8 +1250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92523366" vertical-offset="10644" max-vertical-offset="24560">
-          <caret line="2073" column="54" selection-start-line="2073" selection-start-column="54" selection-end-line="2073" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.5607477" vertical-offset="0" max-vertical-offset="24240">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -1303,6 +1301,9 @@
             <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="tag#div#1;tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
@@ -1320,11 +1321,11 @@
             <element signature="tag#div#4;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#5;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#6;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="e#197482#200234#0#HTML" expanded="false" />
-            <element signature="e#197747#198130#0#HTML" expanded="false" />
-            <element signature="e#198176#198556#0#HTML" expanded="false" />
-            <element signature="e#198629#199014#0#HTML" expanded="false" />
-            <element signature="tag#style#0" expanded="false" />
+            <element signature="e#197542#200294#0#HTML" expanded="false" />
+            <element signature="e#197807#198190#0#HTML" expanded="false" />
+            <element signature="e#198236#198616#0#HTML" expanded="false" />
+            <element signature="e#198689#199074#0#HTML" expanded="false" />
+            <element signature="tag#style#1" expanded="false" />
           </folding>
         </state>
       </provider>
