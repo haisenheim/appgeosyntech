@@ -1,3 +1,14 @@
+<?php
+
+use \App\Models\Tremboursement;
+
+$tr_oblig = Tremboursement::all()->where('emp_oblig',1);
+$tr_mlt = Tremboursement::all()->where('mlt',1);
+$tr_credbail = Tremboursement::all()->where('credbail',1);
+
+
+?>
+
 <div class="card">
     <div class="card-header">
 
