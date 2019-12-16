@@ -761,10 +761,11 @@
                         <h4>FLUX DE TRESORERIE PREVISIONNELS</h4>
                      </div>
                     <div class="card-body">
-                        <table class="table table-bordered table-hover table-condensed">
+                        <div class="table-reponsive">
+                            <table class="table table-bordered table-hover table-condensed">
                                                 <thead>
                                                     <tr>
-                                                        <th colspan="3"></th>
+                                                        <th colspan="2"></th>
 
                                                         @foreach($projet->prevtresoreries as $prevr)
                                                             <th><?= $prevr->annee ?></th>
@@ -956,7 +957,7 @@
                                                     <tr>
                                                         <td>TOTAL</td>
                                                         @foreach($projet->prevtresoreries as $prevr)
-                                                            <td><-</td>
+                                                            <td>-</td>
                                                             @if(!$loop->last)
                                                             <td>-</td>
                                                             @endif
@@ -1000,7 +1001,7 @@
                                                     <tr>
                                                         <td>TOTAL</td>
                                                         @foreach($projet->prevtresoreries as $prevr)
-                                                            <td><-</td>
+                                                            <td>-</td>
                                                             @if(!$loop->last)
                                                             <td>-</td>
                                                             @endif
@@ -1010,6 +1011,8 @@
 
                                                 </tbody>
                                         </table>
+                        </div>
+
                     </div>
                 </div>
 
