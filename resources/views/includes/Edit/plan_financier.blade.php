@@ -3269,7 +3269,9 @@ $('.cell').keyup(function(e){
         if(ids.length>0){
               if(inArray(1,ids)){
 
-                    $('#capital').show();
+                    $('#capital').show().css({
+                    'display':'block'
+                    });
                     console.log(1);
 
                 }else{
