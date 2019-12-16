@@ -3362,6 +3362,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
 
 $('.cell').keyup(function(e){
         var val =0;
+        var found = false;
         $('.cell').each(function(){
             if($.isNumeric($(this).text().trim())){
                 val= val + parseInt($(this).text());
@@ -3371,25 +3372,93 @@ $('.cell').keyup(function(e){
                   if (id == 1 || id == 3 || id == 4 || id == 5 || id == 7 || id == 9 || id == 10) {
                       found = true;
                   }
-                if(found){
-                      $('#head_step-5').show();
-                     // $('#head_step-7').text('7');
-                      $('#step-5').show()
-                              .css({
-                                  'display':'none'
-                              });
 
+
+
+                  if($(this).data('id')==1){
+
+                      $('#capital').show();
 
                   }else{
-                      $('#head_step-5').hide();
-                      $('#step-5').hide();
-                     // $('#head_step-7').text('6')
+
+                      $('#capital').hide();
+
+                      $('#capital input').val('');
                   }
 
 
+                if($(this).data('id')==3){
+
+                    $('#emp_oblig').show();
+
+                }else{
+                    $('#emp_oblig').hide();
+                    $('.ob').val('')
+                }
+
+
+                if($(this).data('id')==4){
+
+                    $('#mlt').show();
+
+                }else{
+                    $('#mlt').hide();
+                    $('.mlt').val('');
+                }
+
+                if($(this).data('id')==5){
+
+                    $('#credbail').show();
+
+                }else{
+                    $('#credbail').hide();
+                    $('#credbail input').val();
+                }
+
+                if($(this).data('id')==7){
+
+                    $('#escompte').show();
+
+                }else{
+                    $('#escompte').hide();
+                    $('#escompte input').val('');
+                }
+
+
+                if($(this).data('id')==9){
+                    $('#affacturage').show();
+
+                }else{
+                    $('#affacturage').hide();
+                }
+
+
+                if($(this).data('id')==10){
+
+                    $('#billet_treso').show();
+
+                }else{
+                    $('#billet_treso').hide();
+                }
 
             }
         });
+
+        if(found){
+            $('#head_step-5').show();
+           // $('#head_step-7').text('7');
+            $('#step-5').show()
+            .css({
+                'display':'none'
+            });
+
+
+        }else{
+            $('#head_step-5').hide();
+            $('#step-5').hide();
+        }
+
+
         $('#cel-total').text(val);
     });
 
