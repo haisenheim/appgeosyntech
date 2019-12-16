@@ -3258,6 +3258,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
              $('#step-2 #myTabContent').html(html_bilan_body);
              $('#step-3 #myTabContent').html(html_flux_body);
              $('#step-5 #myTabContent').html(html_repart_body);
+              $('input[type="Number"]').val(0);
     }
 
 
