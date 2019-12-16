@@ -1886,7 +1886,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                         <h4 class="page-header">RENTABILITE ESPEREE</h4>
                     </div>
                     <div class="card-body">
-                    <div class="mfinancement section" id="capital" style="display: block">
+                    <div class="mfinancement section" id="acapital" style="display: block">
                         <h4>FINANCEMENT POUR L'AUGMENTATION DU CAPITAL</h4>
                         <div>
                             <div class="" id="analyse_invest">
@@ -3269,7 +3269,7 @@ $('.cell').keyup(function(e){
         if(ids.length>0){
               if(inArray(1,ids)){
 
-                    $('#capital').show().css({
+                    $('#acapital').show().css({
                     'display':'block'
                     });
                     console.log(1);
