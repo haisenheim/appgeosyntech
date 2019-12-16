@@ -9,6 +9,7 @@ use App\Models\EarliesMoyen;
 use App\Models\Environnement;
 use App\Models\Environnment;
 use App\Models\Etape;
+use App\Models\Fincapitalsocial;
 use App\Models\Modepaiement;
 use App\Models\Moyen;
 use App\Models\Moyens_projet;
@@ -16,6 +17,7 @@ use App\Models\Prevbilan;
 use App\Models\Prevresultat;
 use App\Models\Prevtresorerie;
 use App\Models\Projet;
+use App\Models\Repartcapitalsocial;
 use App\Models\Ressource;
 use App\Models\Segment;
 use App\Models\Swot;
@@ -169,7 +171,7 @@ class EarlyController extends Controller
 	 */
 
 	public function savePlanFinancier(Request $request){
-		dd($request);
+		//dd($request);
 		$projet = Earlie::where('token',$request->token)->first();
 		$projet->montant_investissement = $request->montage['montant'];
 		$projet->bfr= $request->montage['bfr'];
@@ -207,6 +209,16 @@ class EarlyController extends Controller
 			$m->moyen_id = $moyen['moyen_id'];
 			$m->montant = $moyen['montant'];
 			$m->save();
+			if($moyen['moyen_id']==1){
+				$fcs = $request->fincapitalsocial;
+				$fcs['earlie']=$projet->id;
+				$fcs = Fincapitalsocial::create($fcs);
+				foreach($request->reparts as $repart){
+					$repart['fincapitalsocial_id']=$fcs->id;
+					Repartcapitalsocial::create($repart);
+				}
+
+			}
 		}
 
 		return response()->json($projet);
