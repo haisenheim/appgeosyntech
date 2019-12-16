@@ -211,7 +211,7 @@ class EarlyController extends Controller
 			$m->save();
 			if($moyen['moyen_id']==1){
 				$fcs = $request->fincapitalsocial;
-				$fcs['earlie']=$projet->id;
+				$fcs['earlie_id']=$projet->id;
 				$fcs = Fincapitalsocial::create($fcs);
 				foreach($request->reparts as $repart){
 					$repart['fincapitalsocial_id']=$fcs->id;
