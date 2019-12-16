@@ -3244,19 +3244,26 @@ var inArray = function(needle, haystack){
 var ids = [];
  var found = false;
  var val =0;
+ var id = 20;
 $('.cell').keyup(function(e){
 
         if($.isNumeric($(this).text().trim())){
           val= val + parseInt($(this).text());
 
-          var id = $(this).data('id');
+         id = $(this).data('id');
         //var ids = [1,3,4,5,7,9,10];
             if (id == 1 || id == 3 || id == 4 || id == 5 || id == 7 || id == 9 || id == 10) {
                 found = true;
-                ids.push(id);
+                if(!(ids.indexOf(id)>-1)){
+                    ids.push(id);
+                }
             }
         }else{
-            ids.splice(indexOf(id),1);
+            var index = ids.indexOf(id);
+            if(index>-1){
+                ids.splice(ids.indexOf(id),1);
+            }
+
         }
 
         if(ids.length>0){
