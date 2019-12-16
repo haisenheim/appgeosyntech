@@ -29,11 +29,12 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>COMPTE DE RESULTAT</h4>
+                                    <h4 class="card-title">COMPTE DE RESULTAT</h4>
                                  </div>
                                  <div class="card-body">
                                     <?php $nbsim = count($projet->prevresultats) ?>
-                                    <table class="table table-bordered table-hover table-condensed">
+                                    <div class="table-responsive">
+                                         <table class="table table-bordered table-hover table-condensed">
                                     <thead>
                                         <tr>
                                                 <th></th>
@@ -260,6 +261,8 @@
                                         </tr>
                                     </tbody>
                                     </table>
+                                    </div>
+
                                  </div>
                             </div>
 
@@ -272,12 +275,12 @@
              </div>
 
                      <div class="tab-pane fade" role="tabpanel" id="prevbilans" aria-labelledby="">
-                        <p></p>
-                        <br/>
-                        <hr/>
-                        <h3>BILAN</h3>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
+
+
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">BILAN</h3></div>
+                            <div class="card-body">
+                                <div class="table-responsive">
                                      <table class="table table-bordered table-hover table-condensed">
                                                 <thead>
                                                     <tr>
@@ -749,6 +752,8 @@
 
                                                 </tbody>
                                         </table>
+                                </div>
+
                             </div>
 
                         </div>
