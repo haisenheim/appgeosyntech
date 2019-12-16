@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Fincapitalsocial.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Repartcapitalsocial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Earlie.php" afterPath="$PROJECT_DIR$/app/Models/Earlie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Infrastructure.php" afterPath="$PROJECT_DIR$/app/Models/Infrastructure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Projet.php" afterPath="$PROJECT_DIR$/app/Models/Projet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,38 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.8" vertical-offset="804" max-vertical-offset="2096">
-              <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-              <folding>
-                <element signature="tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#1907#1931#0#HTML" expanded="true" />
-                <element signature="tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#script#0" expanded="false" />
-                <element signature="tag#style#1" expanded="false" />
-                <element signature="tag#script#5" expanded="false" />
-                <marker date="1576419916152" expanded="false" signature="3540:3579" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="7672:7682" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="7740:7750" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="7809:7819" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="7893:7903" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="11010:11049" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="15142:15152" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="15210:15220" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="15279:15289" placeholder="..." />
-                <marker date="1576419916152" expanded="false" signature="15363:15373" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.697479" vertical-offset="28068" max-vertical-offset="30560">
-              <caret line="3272" column="36" selection-start-line="3272" selection-start-column="36" selection-end-line="3272" selection-end-column="36" />
+            <state vertical-scroll-proportion="-2.1643836" vertical-offset="32322" max-vertical-offset="39632">
+              <caret line="2960" column="97" selection-start-line="2960" selection-start-column="97" selection-end-line="2960" selection-end-column="97" />
               <folding>
                 <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -81,7 +59,6 @@
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="tag#table#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#3;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -104,12 +81,12 @@
                 <element signature="n#style#0;n#th#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -123,13 +100,62 @@
                 <element signature="tag#div#4;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#5;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#6;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="e#196641#199393#0#HTML" expanded="false" />
-                <element signature="e#196906#197289#0#HTML" expanded="false" />
-                <element signature="e#197335#197715#0#HTML" expanded="false" />
-                <element signature="e#197788#198173#0#HTML" expanded="false" />
-                <element signature="e#199455#256806#0#HTML" expanded="false" />
+                <element signature="e#196642#199394#0#HTML" expanded="false" />
+                <element signature="e#196907#197290#0#HTML" expanded="false" />
+                <element signature="e#197336#197716#0#HTML" expanded="false" />
+                <element signature="e#197789#198174#0#HTML" expanded="false" />
                 <element signature="tag#style#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fincapitalsocial.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Fincapitalsocial.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="528">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Projet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.64" vertical-offset="2807" max-vertical-offset="6288">
+              <caret line="204" column="5" selection-start-line="202" selection-start-column="4" selection-end-line="204" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Infrastructure.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Infrastructure.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="5600">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Earlie.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Models/Earlie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5562372" vertical-offset="0" max-vertical-offset="6512">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repartcapitalsocial.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Repartcapitalsocial.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="304">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,63 +206,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dossier.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.92" vertical-offset="176" max-vertical-offset="1792">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Dossiers/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.08" vertical-offset="95" max-vertical-offset="1904">
-              <caret line="30" column="24" selection-start-line="17" selection-start-column="16" selection-end-line="30" selection-end-column="24" />
-              <folding>
-                <element signature="tag#div#1;tag#div#0" expanded="false" />
-                <element signature="e#1330#5431#0#HTML" expanded="false" />
-                <element signature="e#5463#6943#0#HTML" expanded="false" />
-                <element signature="tag#script#4" expanded="false" />
-                <element signature="tag#script#5" expanded="false" />
-                <element signature="tag#main#0" expanded="false" />
-                <marker date="1576419098578" expanded="false" signature="2275:2314" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="6407:6417" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="6475:6485" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="6544:6554" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="6628:6638" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="9756:9795" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="13888:13898" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="13956:13966" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="14025:14035" placeholder="..." />
-                <marker date="1576419098578" expanded="false" signature="14109:14119" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="business_model.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/business_model.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2144">
-              <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_plan_financier.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Earlies/create_plan_financier.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.32" vertical-offset="0" max-vertical-offset="464">
-              <caret line="13" column="70" selection-start-line="12" selection-start-column="28" selection-end-line="13" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -250,10 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/Angel/Dossiers/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Angel/Earlies/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Angel/Infrastructures/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Projets/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/EarlyController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
@@ -262,7 +227,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjetController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/EarlyController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Earlie.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
         <option value="$PROJECT_DIR$/resources/views/pdf_view.blade.php" />
@@ -301,6 +265,11 @@
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Tremboursement.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Repartcapitalsocial.php" />
+        <option value="$PROJECT_DIR$/app/Models/Fincapitalsocial.php" />
+        <option value="$PROJECT_DIR$/app/Models/Projet.php" />
+        <option value="$PROJECT_DIR$/app/Models/Infrastructure.php" />
+        <option value="$PROJECT_DIR$/app/Models/Earlie.php" />
       </list>
     </option>
   </component>
@@ -557,6 +526,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -753,10 +740,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -822,41 +809,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Projets/recu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="432">
-          <caret line="15" column="134" selection-start-line="15" selection-start-column="134" selection-end-line="15" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/EarlyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2596" max-vertical-offset="6112">
-          <caret line="201" column="40" selection-start-line="201" selection-start-column="40" selection-end-line="201" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Earlies/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="25520" max-vertical-offset="28416">
-          <caret line="1595" column="93" selection-start-line="1595" selection-start-column="93" selection-end-line="1595" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Earlie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1927" max-vertical-offset="5728">
-          <caret line="150" column="32" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7764" max-vertical-offset="12320">
-          <caret line="510" column="13" selection-start-line="505" selection-start-column="10" selection-end-line="510" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.12" vertical-offset="55" max-vertical-offset="736">
@@ -1162,16 +1114,16 @@
             <element signature="tag#script#4" expanded="false" />
             <element signature="tag#script#5" expanded="false" />
             <element signature="tag#main#0" expanded="false" />
-            <marker date="1576419098578" expanded="false" signature="2275:2314" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="6407:6417" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="6475:6485" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="6544:6554" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="6628:6638" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="9756:9795" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="13888:13898" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="13956:13966" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="14025:14035" placeholder="..." />
-            <marker date="1576419098578" expanded="false" signature="14109:14119" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419098578" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1187,16 +1139,16 @@
             <element signature="tag#script#0" expanded="false" />
             <element signature="tag#style#1" expanded="false" />
             <element signature="tag#script#5" expanded="false" />
-            <marker date="1576419916152" expanded="false" signature="3540:3579" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="7672:7682" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="7740:7750" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="7809:7819" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="7893:7903" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="11010:11049" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="15142:15152" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="15210:15220" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="15279:15289" placeholder="..." />
-            <marker date="1576419916152" expanded="false" signature="15363:15373" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1576419916152" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1249,8 +1201,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.697479" vertical-offset="28068" max-vertical-offset="30560">
-          <caret line="3272" column="36" selection-start-line="3272" selection-start-column="36" selection-end-line="3272" selection-end-column="36" />
+        <state vertical-scroll-proportion="-2.1643836" vertical-offset="32322" max-vertical-offset="39632">
+          <caret line="2960" column="97" selection-start-line="2960" selection-start-column="97" selection-end-line="2960" selection-end-column="97" />
           <folding>
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -1266,7 +1218,6 @@
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="tag#table#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#3;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -1289,12 +1240,12 @@
             <element signature="n#style#0;n#th#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#fieldset#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -1308,13 +1259,52 @@
             <element signature="tag#div#4;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#5;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#6;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="e#196641#199393#0#HTML" expanded="false" />
-            <element signature="e#196906#197289#0#HTML" expanded="false" />
-            <element signature="e#197335#197715#0#HTML" expanded="false" />
-            <element signature="e#197788#198173#0#HTML" expanded="false" />
-            <element signature="e#199455#256806#0#HTML" expanded="false" />
+            <element signature="e#196642#199394#0#HTML" expanded="false" />
+            <element signature="e#196907#197290#0#HTML" expanded="false" />
+            <element signature="e#197336#197716#0#HTML" expanded="false" />
+            <element signature="e#197789#198174#0#HTML" expanded="false" />
             <element signature="tag#style#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Repartcapitalsocial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="304">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Fincapitalsocial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="528">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.64" vertical-offset="2807" max-vertical-offset="6288">
+          <caret line="204" column="5" selection-start-line="202" selection-start-column="4" selection-end-line="204" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Infrastructure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="5600">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Earlie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5562372" vertical-offset="0" max-vertical-offset="6512">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

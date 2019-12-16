@@ -14,7 +14,9 @@ class Earlie extends Model
 		return $this->belongsTo('App\Models\Moi', 'moi_id');
 	}
 
-
+	public function fincapitalsocial(){
+		return $this->hasOne('App\Models\Fincapitalsocial');
+	}
 
 	public function auteur(){
 		return $this->belongsTo('App\User','author_id');

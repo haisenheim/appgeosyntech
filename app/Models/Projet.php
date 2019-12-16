@@ -200,6 +200,10 @@ class Projet extends Model
 		return $this->hasMany('App\Models\Investissement');
 	}
 
+	public function fincapitalsocial(){
+		return $this->hasOne('App\Models\Fincapitalsocial');
+	}
+
 
     public function consultant(){
         return $this->belongsTo('App\User','expert_id');
