@@ -761,7 +761,7 @@
                         <h4>FLUX DE TRESORERIE PREVISIONNELS</h4>
                      </div>
                     <div class="card-body">
-                        <div class="table-reponsive">
+                        <div class="table-responsive">
                             <table class="table table-bordered table-hover table-condensed">
                                                 <thead>
                                                     <tr>
