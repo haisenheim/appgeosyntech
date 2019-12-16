@@ -10,7 +10,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
 ?>
 
 <style>
-    card{
+    .card{
         font-size: 11px;
     }
 </style>
