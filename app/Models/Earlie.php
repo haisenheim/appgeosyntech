@@ -178,7 +178,7 @@ class Earlie extends Model
 			if($prv->position==0){
 				$data[$prv->position]=$prv->ftda;
 			}else{
-				$data[$prv->position]=$prv->ftda+$data[$prv-1];
+				$data[$prv->position]=$prv->ftda+$data[$prv->position-1];
 			}
 
 		}
