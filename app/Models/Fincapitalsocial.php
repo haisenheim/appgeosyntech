@@ -108,13 +108,13 @@ class Fincapitalsocial extends Model
 		$earlie = Earlie::find($this->earlie_id);
 		$inf = Infrastructure::find($this->infrastructure_id);
 		if($projet){
-			return $projet->prevresultats?round($projet->bfr * 360 /$projet->prevresultats->first()->ca1,2):0;
+			return $projet->prevresultats->first()->ca?round($projet->bfr * 360 /$projet->prevresultats->first()->ca,2):0;
 		}
 		if($earlie){
-			return $earlie->prevresultats?round($earlie->bfr * 360 /$earlie->prevresultats->first()->ca1,2):0;
+			return $earlie->prevresultats->first()->ca?round($earlie->bfr * 360 /$earlie->prevresultats->first()->ca,2):0;
 		}
 		if($inf){
-			return $inf->prevresultats?round($inf->bfr * 360 /$inf->prevresultats->first()->ca1,2):0;
+			return $inf->prevresultats->first()->ca?round($inf->bfr * 360 /$inf->prevresultats->first()->ca,2):0;
 		}
 
 		return 0;
