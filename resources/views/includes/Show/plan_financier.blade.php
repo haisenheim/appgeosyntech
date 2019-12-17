@@ -1302,7 +1302,7 @@
                                                     <tr>
                                                         <th>Flux de trésorerie disponible actualisée cumulé</th>
                                                         @foreach($projet->prevresultats as $prevr)
-                                                            <td>{{ number_format($prevr->ftdac,0,',','.') }}</td>
+                                                            <td> --->{{ number_format($projet->ftdac[$prevr->position],0,',','.') }}</td>
                                                             @if(!$loop->last)
                                                             <td>-</td>
                                                             @endif
@@ -1335,22 +1335,22 @@
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
                                         <div class="section"  style="background-color: #dff0d8;padding: 25px" >
-                                            <p style="font-weight: 900; color: #4caf50;">VALEUR ACTUELLE NETTE : <span class="value"><?= number_format($projet->fincapitalsocial->van,0,',','.') ?></span></p>
+                                            <p style="font-weight: 900; color: #4caf50;">VALEUR ACTUELLE NETTE : <span class="value"><?= number_format($projet->van,0,',','.') ?></span></p>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12">
                                         <div class="section" style="background-color: #dff0d8;padding: 25px" >
-                                            <p style="font-weight: 900; color: #008000">TAUX DE RENTABILITE INTERNE : <span class="value"><?= $projet->fincapitalsocial->tir ?></span></p>
+                                            <p style="font-weight: 900; color: #008000">TAUX DE RENTABILITE INTERNE : <span class="value"><?= $projet->tir ?></span></p>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12">
                                         <div class="section"  style="background-color: #dff0d8;padding: 25px" >
-                                            <p style="font-weight: 900; color: #4caf50;">DELAI DE RECUPERATION DES CAPITAUX INVESTIS : <span class="value"><?= $projet->fincapitalsocial->pbp ?></span></p>
+                                            <p style="font-weight: 900; color: #4caf50;">DELAI DE RECUPERATION DES CAPITAUX INVESTIS : <span class="value"><?= $projet->pbp ?></span></p>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12">
                                         <div class="section"  style="background-color: #dff0d8;padding: 25px" >
-                                            <p style="font-weight: 900; color: #4caf50;">Indice de profitabilité : <span class="value"><?= $projet->fincapitalsocial->indiceprofit ?></span></p>
+                                            <p style="font-weight: 900; color: #4caf50;">Indice de profitabilité : <span class="value"><?= $projet->indiceprofit ?></span></p>
                                         </div>
                                     </div>
                                 </div>

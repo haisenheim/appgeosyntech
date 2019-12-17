@@ -173,13 +173,16 @@ class Earlie extends Model
 
 		$data =[];
 
-		for($i=0;$i< count($prvrs); $i++){
-			if($i==0){
-				$data[$i]=$prvrs[$i]->ftda;
+
+		foreach($prvrs as $prv){
+			if($prv->position==0){
+				$data[$prv->position]=$prv->ftda;
 			}else{
-				$data[$i] = $data[$i-1]+$prvrs[$i]->ftda;
+				$data[$prv->position]=$prv->ftda+$data[$prv-1];
 			}
+
 		}
+
 		return $data ;
 	}
 
@@ -305,6 +308,8 @@ class Earlie extends Model
 		}
 		return $s / count($projet->prevresultats);
 	}
+
+
 
 
 

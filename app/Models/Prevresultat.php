@@ -18,11 +18,13 @@ class Prevresultat extends Model
 		if($this->projet_id){
 			$ps = Prevresultat::all()->where('projet_id',$this->projet_id)->sortBy('annee');
 			$position=0;
-			for($i=0;$i<$ps->count();$i++){
-				if($ps[$i]->id==$this->id){
-					$position = $i;
+			$i=0;
+			foreach($ps as $p){
+				if($p->id==$this->id){
+					$position=$i;
 					break;
 				}
+				$i++;
 			}
 
 			return $position;
@@ -31,12 +33,15 @@ class Prevresultat extends Model
 		if($this->earlie_id){
 			$ps = Prevresultat::all()->where('earlie_id',$this->earlie_id)->sortBy('annee');
 			$position=0;
-			for($i=0;$i<$ps->count();$i++){
-				if($ps[$i]->id==$this->id){
-					$position = $i;
+			$i=0;
+			foreach($ps as $p){
+				if($p->id==$this->id){
+					$position=$i;
 					break;
 				}
+				$i++;
 			}
+
 
 			return $position;
 		}
@@ -44,11 +49,13 @@ class Prevresultat extends Model
 		if($this->infrastructure_id){
 			$ps = Prevresultat::all()->where('infrastructure_id',$this->infrastructure_id)->sortBy('annee');
 			$position=0;
-			for($i=0;$i<$ps->count();$i++){
-				if($ps[$i]->id==$this->id){
-					$position = $i;
+			$i=0;
+			foreach($ps as $p){
+				if($p->id==$this->id){
+					$position=$i;
 					break;
 				}
+				$i++;
 			}
 
 			return $position;
