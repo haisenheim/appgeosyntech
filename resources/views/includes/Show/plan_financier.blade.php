@@ -1247,7 +1247,7 @@
 
                                                     <tr>
                                                         <th>Cessions d’actifs (Désinvestissements)</th>
-                                                        @foreach($projet->fincapitalsocial->repatcapitalsocials as $prevr)
+                                                        @foreach($projet->fincapitalsocial->repartcapitalsocials as $prevr)
                                                             <td>{{ number_format($prevr->cession,0,',','.') }}</td>
                                                             @if(!$loop->last)
                                                             <td>-</td>

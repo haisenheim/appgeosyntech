@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Fincapitalsocial.php" afterPath="$PROJECT_DIR$/app/Models/Fincapitalsocial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -114,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.64" vertical-offset="7072" max-vertical-offset="11152">
-              <caret line="1217" column="42" selection-start-line="1217" selection-start-column="42" selection-end-line="1217" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.77310926" vertical-offset="7072" max-vertical-offset="11152">
+              <caret line="1239" column="97" selection-start-line="1239" selection-start-column="97" selection-end-line="1239" selection-end-column="97" />
               <folding>
                 <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -159,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fincapitalsocial.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Fincapitalsocial.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Fincapitalsocial.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92523366" vertical-offset="1476" max-vertical-offset="3984">
-              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.7945206" vertical-offset="1476" max-vertical-offset="3984">
+              <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
               <folding>
                 <element signature="e#2247#2406#0#PHP" expanded="false" />
                 <element signature="e#2523#2675#0#PHP" expanded="false" />
@@ -316,8 +316,8 @@
         <option value="$PROJECT_DIR$/app/Models/Projet.php" />
         <option value="$PROJECT_DIR$/app/Models/Infrastructure.php" />
         <option value="$PROJECT_DIR$/app/Models/Prevresultat.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Fincapitalsocial.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" />
       </list>
     </option>
   </component>
@@ -1300,10 +1300,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Fincapitalsocial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7945206" vertical-offset="1476" max-vertical-offset="3984">
+          <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+          <folding>
+            <element signature="e#2247#2406#0#PHP" expanded="false" />
+            <element signature="e#2523#2675#0#PHP" expanded="false" />
+            <element signature="e#2792#2899#0#PHP" expanded="false" />
+            <element signature="e#3020#3129#0#PHP" expanded="false" />
+            <element signature="e#4876#4967#0#PHP" expanded="false" />
+            <element signature="e#5262#5379#0#PHP" expanded="false" />
+            <element signature="e#5496#5579#0#PHP" expanded="false" />
+            <element signature="e#5582#6276#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64" vertical-offset="7072" max-vertical-offset="11152">
-          <caret line="1217" column="42" selection-start-line="1217" selection-start-column="42" selection-end-line="1217" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.77310926" vertical-offset="7072" max-vertical-offset="11152">
+          <caret line="1239" column="97" selection-start-line="1239" selection-start-column="97" selection-end-line="1239" selection-end-column="97" />
           <folding>
             <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1339,23 +1356,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Fincapitalsocial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92523366" vertical-offset="1476" max-vertical-offset="3984">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding>
-            <element signature="e#2247#2406#0#PHP" expanded="false" />
-            <element signature="e#2523#2675#0#PHP" expanded="false" />
-            <element signature="e#2792#2899#0#PHP" expanded="false" />
-            <element signature="e#3020#3129#0#PHP" expanded="false" />
-            <element signature="e#4876#4967#0#PHP" expanded="false" />
-            <element signature="e#5262#5379#0#PHP" expanded="false" />
-            <element signature="e#5496#5579#0#PHP" expanded="false" />
-            <element signature="e#5582#6276#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
