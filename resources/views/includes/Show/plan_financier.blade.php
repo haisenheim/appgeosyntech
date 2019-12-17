@@ -19,6 +19,9 @@
                     <li role="presentation" class="nav-item">
                          <a class="nav-link" href="#montage" role="tab" id="tab4" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> MONTAGE FINANCIER </a>
                     </li>
+                    <li role="presentation" class="nav-item">
+                         <a class="nav-link" href="#rentabilite" role="tab" id="tab5" data-toggle="tab" aria-controls="n2" aria-selected="false"><span class=""></span> RENTABILITE ESPEREE </a>
+                    </li>
                </ul>
             </div>
             <div class="card-body">
@@ -760,7 +763,7 @@
 
              </div>
 
-             <div class="tab-pane fade" role="tabpanel" id="prevtresoreries" aria-labelledby="">
+                    <div class="tab-pane fade" role="tabpanel" id="prevtresoreries" aria-labelledby="">
                 <div class="card">
                     <div class="card-header">
                         <h4>FLUX DE TRESORERIE PREVISIONNELS</h4>
@@ -1020,13 +1023,9 @@
 
                     </div>
                 </div>
-
-
-
-
              </div>
 
-              <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
+                    <div class="tab-pane fade" role="tabpanel" id="montage" aria-labelledby="">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">MONTAGE FINANCIER</h4>
@@ -1079,6 +1078,381 @@
 
 
                         @endif
+                    </div>
+                </div>
+             </div>
+                    <div class="tab-pane fade" role="tabpanel" id="rentabilite" aria-labelledby="">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">RENTABILITE ESPEREE</h4>
+                        <div>
+                            <ul class="nav nav-tabs" id="myTabs" role="tablist">
+                                <?php if($projet->fincapitalsocial): ?>
+                                    <li role="presentation" class="active">
+                                        <a href="#fincapitalsocial" role="tab" id="fincapitalsocial-tab" data-toggle="tab" aria-controls="fincapitalsocial" aria-expanded="false"><span><img
+                                                     class="fa-icon" alt=""/></span> FINANCEMENT DU CAPITAL SOCIAL</a>
+                                    </li>
+                                <?php endif; ?>
+                            
+                                <?php if($projet->finempobligataire): ?>
+                                    <li role="presentation" class="<?= $projet->fincapitalsocial?'':'active' ?>">
+                                        <a href="#finempobligataire" role="tab" id="finempobligataire-tab" data-toggle="tab" aria-controls="finempobligataire" aria-expanded="false"><span class="fa fa-chart-pie"></span> EMPRUNT OBLIGATAIRE</a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if($projet->finmlt): ?>
+                                    <li role="presentation" class="<?= !($projet->fincapitalsocial || $projet->finempobligataire)?'active':'' ?>">
+                                        <a href="#finmlt" role="tab" id="finmlt-tab" data-toggle="tab" aria-controls="finmlt" aria-expanded="false"><span class="fa fa-chart-pie"></span> PRETS MLT</a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if($projet->fincredbail): ?>
+                                    <li role="presentation" class="<?= !($projet->fincapitalsocial || $projet->finempobligataire || $projet->finmlt)?'active':'' ?>">
+                                        <a href="#fincredbail" role="tab" id="fincredbail-tab" data-toggle="tab" aria-controls="fincredbail" aria-expanded="false"><span class="fa fa-chart-pie"></span> CREDIT BAIL</a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if($projet->finescompte): ?>
+                                    <li role="presentation" class="">
+                                        <a href="#finescompte" role="tab" id="finescompte-tab" data-toggle="tab" aria-controls="finescompte" aria-expanded="false"><span class="fa fa-chart-pie"></span> ESCOMPTE</a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if($projet->finaffacturage): ?>
+                                    <li role="presentation" class="">
+                                        <a href="#finaffacturage" role="tab" id="finaffacturage-tab" data-toggle="tab" aria-controls="finaffacturage" aria-expanded="false"><span class="fa fa-chart-pie"></span> AFFACTURAGE</a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if($projet->fincredsignature): ?>
+                                    <li role="presentation" class="">
+                                        <a href="#fincredsignature" role="tab" id="fincredsignature-tab" data-toggle="tab" aria-controls="fincredsignature" aria-expanded="false"><span class="fa fa-chart-pie"></span> CREDIT PAR SIGNATURE</a>
+                                    </li>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <?php if($projet->fincapitalsocial): ?>
+                                <div class="tab-pane fade active in" role="tabpanel" id="fincapitalsocial" aria-labelledby="fincapitalsocial-tab">
+                                <h5>AUGMENTATION DU CAPITAL SOCIAL</h5>
+                                <div style="margin-left: -30px; margin-right: -30px" class="section">
+                                <h6>A/ Analyse de l’investissement en capital (Est-ce un projet rentable ?)</h6>
+
+                                <div style="">
+
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">Montant de la levée de fonds : <span class="value"><?= number_format($projet->fincapitalsocial->mt_levee,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">Valeur nominale d'une action : <span class="value"><?= number_format($projet->fincapitalsocial->vna,0,',','.') ?></span></li>
+                                    <li class="list-inline-item"> Nombre d’actions avant ouverture du capital  : <span class="value"><?= $projet->fincapitalsocial->nba_aoc ?></span></li>
+                                    <li class="list-inline-item">  Montant du capital   : <span class="value"><?= number_format($projet->fincapitalsocial->mtcapital,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">Reserves : <span class="value"><?= number_format($projet->fincapitalsocial->reserves,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">Report : <span class="value"><?= number_format($projet->fincapitalsocial->report,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">Resultat net : <span class="value"><?= number_format($projet->fincapitalsocial->resultat_net,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">Montant des capitaux propres : <span class="value"><?= number_format($projet->fincapitalsocial->capitaux_propres,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">Valeur de l'action avant ouverture du capital : <span class="value"><?= number_format($projet->fincapitalsocial->va_aoc,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">Prix d'emission : <span class="value"><?= number_format($projet->fincapitalsocial->prix_emi,0,',','.') ?></span></li>
+                                    <li class="list-inline-item"> Prime d’émission :   <span class="value"><?= number_format($projet->fincapitalsocial->prime_emi,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">  Nombre d’actions nouvellement émises :    <span class="value"><?= $projet->fincapitalsocial->nba_ne ?></span></li>
+                                    <li class="list-inline-item"> Prime d’émission totale :   <span class="value"><?= number_format($projet->fincapitalsocial->prime_emi_totale,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">   Nombre d’action disponible après émission de nouvelles actions  :    <span class="value"><?= $projet->fincapitalsocial->nba_ae ?></span></li>
+                                    <li class="list-inline-item"> Taux d'imposition :    <span class="value"><?= $projet->fincapitalsocial->taux_imposition * 100 .'%' ?></span></li>
+                                    <li class="list-inline-item"> Nouveau montant du capital social:   <span class="value"><?= number_format($projet->fincapitalsocial->new_mt_capital,0,',','.') ?></span></li>
+                                    <li class="list-inline-item"> Nouveau montant des capitaux propres :   <span class="value"><?= number_format($projet->fincapitalsocial->new_mt_capitaux_propres,0,',','.') ?></span></li>
+                                    <li class="list-inline-item"> Valeur de l'action apres emission :   <span class="value"><?= number_format($projet->fincapitalsocial->va_ae,0,',','.') ?></span></li>
+                                    <li class="list-inline-item"> Valeur du droit preferentiel de souscription :   <span class="value"><?= round($projet->fincapitalsocial->va_dps,1) ?></span></li>
+                                    <li class="list-inline-item"> Nombre de droit de soucription pour obtenir une action:   <span class="value"><?= round($projet->fincapitalsocial->nb_ds,2) ?></span></li>
+                                    <li class="list-inline-item"> Pourcentage du capital appelé à libérer immédiatement:   <span class="value"><?= $projet->fincapitalsocial->taux_capital_appele * 100 .'%' ?></span></li>
+                                    <li class="list-inline-item"> Capital appelé non versé :   <span class="value"><?= number_format($projet->fincapitalsocial->capital_appele,0,',','.') ?></span></li>
+                                    <li class="list-inline-item"> Capital non appelé :   <span class="value"><?= number_format($projet->fincapitalsocial->capital_non_appele,0,',','.') ?></span></li>
+
+                                    <li class="list-inline-item">  Taux de rentabilité exigé par les actionnaires   :    <span class="value"><?= $projet->fincapitalsocial->taux_rent_exige_act *100 .'%' ?></span></li>
+
+                                    <li class="list-inline-item">  Montant des dettes financière   :    <span class="value"><?= number_format($projet->fincapitalsocial->mt_dettes_fin,0,',','.') ?></span></li>
+                                    <li class="list-inline-item">  Cout de l'endettement   :    <span class="value"><?= $projet->fincapitalsocial->cout_endettement*100 .'%' ?></span></li>
+                                    <li class="list-inline-item">   Coût Moyen pondéré du Capital ou CMPC   :    <span class="value"><?= $projet->fincapitalsocial->cmpc ?></span></li>
+                                    <li class="list-inline-item">  Taux de croissance à l’infini des flux de tréso. disponibles non actualisés:     <span class="value"><?= $projet->fincapitalsocial->tci_flux_treso_dispo*100 . "%" ?></span></li>
+
+                                    <li class="list-inline-item">    Taux de croissance à l’infini des flux de dividendes non actualisés :     <span class="value"><?= $projet->fincapitalsocial->tci_flux_dvd_non_actu *100 ."%" ?></span></li>
+                                    <li class="list-inline-item">   Besoin en fonds de roulement en jours du Chiffre d’affaires :     <span class="value"><?= $projet->fincapitalsocial->bfrjca ?></span></li>
+                                    <li class="list-inline-item">   Besoin en fonds de roulement en pourcentage du CA :     <span class="value"><?= $projet->fincapitalsocial->bfrpca * 100 . '%' ?></span></li>
+
+                                </ul>
+
+
+
+
+                                <hr/>
+                                <h5>Tableau des flux de trésorerie actualisé</h5>
+
+
+                                        <table class="table table-bordered table-hover table-condensed">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="1"></th>
+
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <th><?= $prevr->annee ?></th>
+                                                            @if(!$loop->last)
+                                                            <th>VARIATION</th>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+
+                                                    <tr>
+                                                        <th>EBE</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ number_format($prevr->ebe,0,',','.') }} <span>{{ $projet->devise->abb }}</span></td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th>IMPOT THEORIQUE</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ number_format($prevr->it,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Résultat d’exploitation après impôts</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ number_format($prevr->reapi,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Dotations aux amortissements</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ number_format($prevr->dap,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Montant des investissements</th>
+                                                        @foreach($projet->fincapitalsocial->repatcapitalsocials as $prevr)
+                                                            <td>{{ number_format($prevr->investissement,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th>Cessions d’actifs (Désinvestissements)</th>
+                                                        @foreach($projet->fincapitalsocial->repatcapitalsocials as $prevr)
+                                                            <td>{{ number_format($prevr->cession,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Variation du besoin en fonds de roulement</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>-->>{{ number_format($prevr->varbfr,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Flux de trésorerie Disponible</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ number_format($prevr->fluxtresodispo,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Coût moyen pondéré du capital en % (CMPC) ou taux d’actualisation</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ round(($projet->fincapitalsocial->cmpc * 100) ,3) . '%' }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Facteur d’actualisation</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ number_format($prevr->factactu,3,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Flux de trésorerie disponible actualisée</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ number_format($prevr->ftda,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Flux de trésorerie disponible actualisée cumulé</th>
+                                                        @foreach($projet->prevresultats as $prevr)
+                                                            <td>{{ number_format($prevr->ftdac,0,',','.') }}</td>
+                                                            @if(!$loop->last)
+                                                            <td>-</td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
+
+                                                </tbody>
+                                        </table>
+
+
+
+
+
+
+                                <hr/>
+
+
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-12">
+                                        Flux normatif de trésorerie  : <span class="value"><?= number_format($projet->fincapitalsocial->fluxnormatiftreso,0,',','.') ?></span>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        Flux normatif actualisé de trésorerie   : <span class="value"><?= number_format($projet->fincapitalsocial->fluxnormatifactutreso,0,',','.') ?></span>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        Valeur terminale des flux de trésorerie : <span class="value"><?= number_format($projet->fincapitalsocial->mtcapital,0,',','.') ?></span>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="section"  style="background-color: #dff0d8;padding: 25px" >
+                                            <p style="font-weight: 900; color: #4caf50;">VALEUR ACTUELLE NETTE : <span class="value"><?= number_format($projet->fincapitalsocial->van,0,',','.') ?></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="section" style="background-color: #dff0d8;padding: 25px" >
+                                            <p style="font-weight: 900; color: #008000">TAUX DE RENTABILITE INTERNE : <span class="value"><?= $projet->fincapitalsocial->tir ?></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="section"  style="background-color: #dff0d8;padding: 25px" >
+                                            <p style="font-weight: 900; color: #4caf50;">DELAI DE RECUPERATION DES CAPITAUX INVESTIS : <span class="value"><?= $projet->fincapitalsocial->pbp ?></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="section"  style="background-color: #dff0d8;padding: 25px" >
+                                            <p style="font-weight: 900; color: #4caf50;">Indice de profitabilité : <span class="value"><?= $projet->fincapitalsocial->indiceprofit ?></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-8 col-sm-12">
+                                        <div class="section" style="background-color: #dff0d8;padding: 25px" >
+                                            <p style="font-weight: 900; color: #4caf50;">Valeur de l’entreprise à titre indicatif selon la méthode DCF : <span class="value"><?= number_format($projet->fincapitalsocial->vedcf,0,',','.') ?></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                </div>
+                                </div>
+
+                                <div style="margin-right: -30px; margin-left: -30px" class="section">
+                                    <h6>B/ Rendement et rentabilité espérée de l’action  </h6>
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-12">
+                                            Bénéfice par action N-1 : <span class="value">-->></span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            Montant du dernier dividende par action distribué : <span class="value"><?= $projet->fincapitalsocial->mt_dernier_dvd_brut_action ?></span>
+                                        </div>
+                                        <div class="col-md-2 col-sm-12">
+                                            Taux de distribution : <span class="value"><?= $projet->tauxdistrib ?></span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            Nombre de droit de souscription : <span class="value"><?= $projet->fincapitalsocial->nbds ?></span>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            Prix préférentiel d’émission des nouvelles actions pour les anciens  : <span class="value"><?= $projet->fincapitalsocial->prix_pref_emis_na ?></span>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            Valeur des droits préférentiels de souscription   : <span class="value"><?= $projet->fincapitalsocial->valdps ?></span>
+                                        </div>
+                                        <div class="col-md-2 col-sm-12">
+                                            Valeur comptable de l'action : <span class="value"><?= $projet->fincapitalsocial->valca ?></span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            Taux de rendement de l'action : <span class="value"><?= $projet->fincapitalsocial->tauxra ?></span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            Rentabilité espérée du marché : <span class="value"><?= $projet->fincapitalsocial->taux_rent_exige_act ?></span>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            Beta actif ou le taux d’intérêt propre à l’actif: <span class="value"><?= $projet->fincapitalsocial->beta_actif ?></span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12">
+                                            Taux d’intérêt sans risque : <span class="value"><?= $projet->fincapitalsocial->taux_interet_sans_risque ?></span>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            Taux de Rentabilité attendue de l'action : <span class="value"><?= $projet->fincapitalsocial->tauxraa ?></span>
+                                        </div>
+
+                                    </div>
+                                    <hr/>
+                                    <h6>TABLEAU DES FLUX DE DIVIDENDES ACTUALISES</h6>
+                                    <div class="table-responsive">
+                                         <table class="table table-bordered table-hover table-condensed">
+                                             <thead>
+                                                 <tr>
+                                                     <th colspan="1"></th>
+
+                                                     @foreach($projet->prevresultats as $prevr)
+                                                         <th><?= $prevr->annee ?></th>
+
+                                                     @endforeach
+                                                 </tr>
+                                             </thead>
+                                             <tbody>
+
+
+                                                 <tr>
+                                                     <th>Montant prévisionnel des dividendes</th>
+                                                     @foreach($projet->prevresultats as $prevr)
+                                                         <td>{{ number_format($prevr->mt_prev_dvd,0,',','.') }}</td>
+                                                     @endforeach
+                                                 </tr>
+                                                 <tr>
+                                                     <th>Coût moyen pondéré du capital en % (CMPC) ou taux d’actualisation</th>
+                                                     @foreach($projet->prevresultats as $prevr)
+                                                         <td>{{ round(($projet->fincapitalsocial->cmpc * 100) ,3) . '%' }}</td>
+                                                     @endforeach
+                                                 </tr>
+                                                  <tr>
+                                                     <th>Montant des dividendes Actualisés</th>
+                                                     @foreach($projet->prevresultats as $prevr)
+                                                         <td>{{ number_format($prevr->mt_dvd_actu,0,',','.') }}</td>
+                                                     @endforeach
+                                                 </tr>
+                                             </tbody>
+                                         </table>
+                                    </div>
+                                    <hr/>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12"></div>
+                                    </div>
+                                </div>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
              </div>

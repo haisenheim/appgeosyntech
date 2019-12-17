@@ -135,6 +135,151 @@ class Projet extends Model
 		return $s;
 	}
 
+
+
+	public  function getFtdacAttribute(){
+
+		$projet = Projet::find($this->id);
+		$prvrs = $projet->prevresultats->sortBy('annee');
+
+		$data =[];
+
+		for($i=0;$i< count($prvrs); $i++){
+			if($i==0){
+				$data[$i]=$prvrs[$i]->ftda;
+			}else{
+				$data[$i] = $data[$i-1]+$prvrs[$i]->ftda;
+			}
+		}
+		return $data ;
+	}
+
+	public function getVanAttribute(){
+
+		$projet= Projet::find($this->id);
+		$prvs = $projet->prevresultats;
+
+		$s=0;
+		foreach($prvs as $prv){
+			$s=$s+$prv->ftda;
+		}
+		return $s - $this->montant_investissement;
+	}
+
+
+	//--------------------------Calcul du taux interne de rentabilite -----------------------------------------------------------------------
+
+	public function getTirAttribute(){
+		$LOW_RATE = 0.01;
+		$HIGH_RATE=1;
+		$MAX_ITERATION=1000;
+		$PRECISION_REQ=0.0001;
+
+
+
+		$rate = 0.01;
+
+		$flux = [];
+
+		$projet = Projet::find($this->id);
+
+		$prvs = $projet->prevresultats;
+		foreach($prvs as $pr){
+			$flux[$pr->position] = $pr->getfluxtresodispo;
+		}
+
+
+		$nb= count($prvs) +1;
+
+
+		$plus = 1;
+		$moins = 0.01;
+
+		// $cumul = 0.00;
+		for($i=0; $i<$MAX_ITERATION; $i++)
+		{
+
+			$cumul = 0.00;
+			for($j=1; $j<$nb; $j++)
+			{
+				$denom = pow((1 + $rate),$j);
+				$cumul = $cumul + ($flux[$j] /$denom);
+			}
+			$cumul = $cumul - $this->montant_investissement;
+			//debug($cumul); die();
+			$oldvan=$cumul;
+			if($cumul>0){
+
+				$moins = $rate;
+				$rate = ($plus + $moins)/2;
+
+			}else{
+				$plus = $rate;
+				$rate = ($plus + $moins)/2;
+
+			}
+			if(($cumul > 0) && ($cumul < $PRECISION_REQ)){
+				break;
+			}
+
+
+		}
+		return round($rate*100 ,3) . '%';
+	}
+
+
+
+	//--------------------------Calcul du delai de recuperation des capitaux investis -------------------------------------------------------
+	protected function _getPbp(){
+
+		$flux = [];
+
+		$projet = Projet::find($this->id);
+
+		$prvs = $projet->prevresultats;
+		foreach($prvs as $pr){
+			$flux[$pr->position] = $pr->getfluxtresodispo;
+		}
+
+
+		$nb= count($prvs) +1;
+
+		$p=-1;
+		$cumul = 0.00;
+		for($i=1; $i<$nb; $i++)
+		{
+
+			$cumul = $cumul + $flux[$i];
+			$p=$i;
+
+			if($cumul >= $this->montant_investissement){
+
+				break;
+			}
+
+
+		}
+		return $p;
+	}
+
+
+
+	//-------------------------Calcul de l'indice de profitabilite --------------------------------------------------------------------
+	protected function _getIndiceprofit(){
+		return $this->montant_investissement?round($this->getVanAttribute()/$this->montant_investissement,2):0;
+	}
+
+
+	public function getTaux_distrib_moyenAttribute(){
+		$projet = Projet::find($this->id);
+
+		$s=0;
+		foreach($projet->prevresultats as $prv){
+			$s = $s+$prv->tauxdistrib;
+		}
+		return $s / count($projet->prevresultats);
+	}
+
 	public function getVariationsAttribute(){
 		$prevrls = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
 		$prevbils = Prevbilan::all()->where('projet_id',$this->id)->sortBy('annee');
@@ -175,6 +320,7 @@ class Projet extends Model
 		//dd($data);
 		return $data;
 	}
+
 
     public function ville(){
         return $this->belongsTo('App\Models\Ville');
