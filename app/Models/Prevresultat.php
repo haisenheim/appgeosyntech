@@ -167,19 +167,19 @@ class Prevresultat extends Model
 		if($this->projet_id){
 			$projet = Projet::find($this->projet_id);
 			$rp = Repartcapitalsocial::where('fincapitalsocial_id',$projet->fincapitalsocial->id)->where('annee',$this->annee)->first();
-			return $this->getReapiAttribute() + $this->dap + $rp->cession - $projet->variations['bfr'][$this->getPositionAttribute()];
+			return $this->getReapiAttribute() + $this->dap + $rp?$rp->cession:0 - $projet->variations['bfr'][$this->getPositionAttribute()];
 		}
 
 		if($this->earlie_id){
 			$projet = Earlie::find($this->earlie_id);
 			$rp = Repartcapitalsocial::where('fincapitalsocial_id',$projet->fincapitalsocial->id)->where('annee',$this->annee)->first();
-			return $this->getReapiAttribute() + $this->dap + $rp->cession - $projet->variations['bfr'][$this->getPositionAttribute()];
+			return $this->getReapiAttribute() + $this->dap + $rp?$rp->cession:0 - $projet->variations['bfr'][$this->getPositionAttribute()];
 		}
 
 		if($this->infrastructure_id){
 			$projet = Infrastructure::find($this->infrastructure_id);
 			$rp = Repartcapitalsocial::where('fincapitalsocial_id',$projet->fincapitalsocial->id)->where('annee',$this->annee)->first();
-			return $this->getReapiAttribute() + $this->dap + $rp->cession - $projet->variations['bfr'][$this->getPositionAttribute()];
+			return $this->getReapiAttribute() + $this->dap + $rp?$rp->cession:0 - $projet->variations['bfr'][$this->getPositionAttribute()];
 		}
 
 
