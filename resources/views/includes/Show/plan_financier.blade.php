@@ -1237,7 +1237,7 @@
                                                     </tr>
                                                     <tr>
                                                         <th>Montant des investissements</th>
-                                                        @foreach($projet->fincapitalsocial->repatcapitalsocials as $prevr)
+                                                        @foreach($projet->fincapitalsocial->repartcapitalsocials as $prevr)
                                                             <td>{{ number_format($prevr->investissement,0,',','.') }}</td>
                                                             @if(!$loop->last)
                                                             <td>-</td>
