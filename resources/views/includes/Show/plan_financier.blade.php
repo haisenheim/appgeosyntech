@@ -1181,17 +1181,15 @@
                                 <hr/>
                                 <h5>Tableau des flux de trésorerie actualisé</h5>
 
-
-                                        <table class="table table-bordered table-hover table-condensed">
+                                <div class="table-responsive">
+                                     <table class="table table-bordered table-hover table-condensed">
                                                 <thead>
                                                     <tr>
                                                         <th colspan="1"></th>
 
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <th><?= $prevr->annee ?></th>
-                                                            @if(!$loop->last)
-                                                            <th>VARIATION</th>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                 </thead>
@@ -1202,9 +1200,7 @@
                                                         <th>EBE</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>{{ number_format($prevr->ebe,0,',','.') }} <span>{{ $projet->devise->abb }}</span></td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
 
@@ -1212,36 +1208,28 @@
                                                         <th>IMPOT THEORIQUE</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>{{ number_format($prevr->it,0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Résultat d’exploitation après impôts</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>{{ number_format($prevr->reapi,0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Dotations aux amortissements</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>{{ number_format($prevr->dap,0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Montant des investissements</th>
                                                         @foreach($projet->fincapitalsocial->repartcapitalsocials as $prevr)
                                                             <td>{{ number_format($prevr->investissement,0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
 
@@ -1249,68 +1237,56 @@
                                                         <th>Cessions d’actifs (Désinvestissements)</th>
                                                         @foreach($projet->fincapitalsocial->repartcapitalsocials as $prevr)
                                                             <td>{{ number_format($prevr->cession,0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Variation du besoin en fonds de roulement</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>-->>{{ number_format($prevr->varbfr,0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Flux de trésorerie Disponible</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>{{ number_format($prevr->fluxtresodispo,0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Coût moyen pondéré du capital en % (CMPC) ou taux d’actualisation</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>{{ round(($projet->fincapitalsocial->cmpc * 100) ,3) . '%' }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Facteur d’actualisation</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>{{ number_format($prevr->factactu,3,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Flux de trésorerie disponible actualisée</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td>{{ number_format($prevr->ftda,0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
                                                     <tr>
                                                         <th>Flux de trésorerie disponible actualisée cumulé</th>
                                                         @foreach($projet->prevresultats as $prevr)
                                                             <td> --->{{ number_format($projet->ftdac[$prevr->position],0,',','.') }}</td>
-                                                            @if(!$loop->last)
-                                                            <td>-</td>
-                                                            @endif
+
                                                         @endforeach
                                                     </tr>
 
                                                 </tbody>
                                         </table>
+                                </div>
+
 
 
 
