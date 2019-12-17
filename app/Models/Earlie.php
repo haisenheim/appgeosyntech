@@ -221,7 +221,7 @@ class Earlie extends Model
 		}
 
 
-		$nb= count($prvs) +1;
+		$nb= count($prvs);
 
 
 		$plus = 1;
