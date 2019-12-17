@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Prevresultat.php" afterPath="$PROJECT_DIR$/app/Models/Prevresultat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -179,8 +180,8 @@
       <file leaf-file-name="Prevresultat.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Models/Prevresultat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8185941" vertical-offset="1527" max-vertical-offset="2960">
-              <caret line="181" column="99" selection-start-line="181" selection-start-column="99" selection-end-line="181" selection-end-column="99" />
+            <state vertical-scroll-proportion="0.38321996" vertical-offset="1527" max-vertical-offset="2960">
+              <caret line="169" column="79" selection-start-line="169" selection-start-column="79" selection-end-line="169" selection-end-column="79" />
               <folding>
                 <element signature="e#172#248#0#PHP" expanded="false" />
                 <element signature="e#1121#1191#0#PHP" expanded="false" />
@@ -197,7 +198,7 @@
                 <element signature="e#2275#2840#0#PHP" expanded="false" />
                 <element signature="e#2843#2943#0#PHP" expanded="false" />
                 <element signature="e#3225#3840#0#PHP" expanded="false" />
-                <element signature="e#5900#6532#0#PHP" expanded="false" />
+                <element signature="e#5918#6550#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1340,8 +1341,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Prevresultat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8185941" vertical-offset="1527" max-vertical-offset="2960">
-          <caret line="181" column="99" selection-start-line="181" selection-start-column="99" selection-end-line="181" selection-end-column="99" />
+        <state vertical-scroll-proportion="0.38321996" vertical-offset="1527" max-vertical-offset="2960">
+          <caret line="169" column="79" selection-start-line="169" selection-start-column="79" selection-end-line="169" selection-end-column="79" />
           <folding>
             <element signature="e#172#248#0#PHP" expanded="false" />
             <element signature="e#1121#1191#0#PHP" expanded="false" />
@@ -1358,7 +1359,7 @@
             <element signature="e#2275#2840#0#PHP" expanded="false" />
             <element signature="e#2843#2943#0#PHP" expanded="false" />
             <element signature="e#3225#3840#0#PHP" expanded="false" />
-            <element signature="e#5900#6532#0#PHP" expanded="false" />
+            <element signature="e#5918#6550#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
