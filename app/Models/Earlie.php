@@ -265,7 +265,7 @@ class Earlie extends Model
 
 
 	//--------------------------Calcul du delai de recuperation des capitaux investis -------------------------------------------------------
-	protected function _getPbp(){
+	public function getPbpAttribute(){
 
 		$flux = [];
 
@@ -298,12 +298,13 @@ class Earlie extends Model
 	}
 
 	//-------------------------Calcul de l'indice de profitabilite --------------------------------------------------------------------
-	protected function _getIndiceprofit(){
+	public function getIndiceprofitAttribute(){
+
 		return $this->montant_investissement?round($this->getVanAttribute()/$this->montant_investissement,2):0;
 	}
 
 
-	public function getTaux_distrib_moyenAttribute(){
+	public function getTauxDistribMoyenAttribute(){
 		$projet = Earlie::find($this->id);
 
 		$s=0;

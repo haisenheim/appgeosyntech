@@ -1288,11 +1288,6 @@
 								</div>
 
 
-
-
-
-
-
 								<hr/>
 
 
@@ -1308,35 +1303,92 @@
 									</div>
 
 								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="section"  style="background-color: #dff0d8;padding: 25px" >
-											<p style="font-weight: 900; color: #4caf50;">VALEUR ACTUELLE NETTE : <span class="value"><?= number_format($projet->van,0,',','.') ?></span></p>
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12">
-										<div class="section" style="background-color: #dff0d8;padding: 25px" >
-											<p style="font-weight: 900; color: #008000">TAUX DE RENTABILITE INTERNE : <span class="value"><?= $projet->tir ?></span></p>
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12">
-										<div class="alert alert-success"  style="background-color: #dff0d8;padding: 25px" >
-											<p style="font-weight: 900; color: #4caf50;">DELAI DE RECUPERATION DES CAPITAUX INVESTIS : <span class="value"><?= $projet->pbp ?></span></p>
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12">
-										<div class="alert alert-success"  style="background-color: #dff0d8;padding: 25px" >
-											<p style="font-weight: 900; color: #4caf50;">Indice de profitabilité : <span class="value"><?= $projet->indiceprofit ?></span></p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
 
-									<div class="col-md-8 col-sm-12">
-										<div class="alert alert-success">
-											<h6>Valeur de l’entreprise à titre indicatif selon la méthode DCF</h6>
-											<p> <b><?= number_format($projet->fincapitalsocial->vedcf,0,',','.') ?></b></p>
-										</div>
+								<div class="row">
+								    <div class="col-md-4 col-sm-12">
+                                        <!-- small card -->
+                                        <div class="small-box bg-success">
+                                          <div class="inner">
+                                            <h3><b><?= number_format($projet->van,0,',','.') ?></b></h3>
+
+                                            <p>VALEUR ACTUELLE NETTE</p>
+                                          </div>
+                                          <div class="icon">
+                                            <i class="ion ion-stats-bars"></i>
+                                          </div>
+                                          <a href="#" class="small-box-footer">
+
+                                          </a>
+                                        </div>
+									</div>
+
+								    <div class="col-md-4 col-sm-12">
+                                        <!-- small card -->
+                                        <div class="small-box bg-primary">
+                                          <div class="inner">
+                                            <h3><b><?= $projet->tir ?></b></h3>
+
+                                            <p>TAUX DE RENTABILITE INTERNE</p>
+                                          </div>
+                                          <div class="icon">
+                                            <i class="ion ion-stats-bars"></i>
+                                          </div>
+                                          <a href="#" class="small-box-footer">
+
+                                          </a>
+                                        </div>
+									</div>
+
+								    <div class="col-md-4 col-sm-12">
+                                        <!-- small card -->
+                                        <div class="small-box bg-danger">
+                                          <div class="inner">
+                                            <h3><b><?= $projet->pbp ?></b></h3>
+
+                                            <p>DELAI DE RECUPERATION DES CAPITAUX INVESTIS</p>
+                                          </div>
+                                          <div class="icon">
+                                            <i class="far fa-calendar-alt"></i>
+                                          </div>
+                                          <a href="#" class="small-box-footer">
+
+                                          </a>
+                                        </div>
+									</div>
+
+								    <div class="col-md-4 col-sm-12">
+                                    <!-- small card -->
+                                    <div class="small-box bg-warning">
+                                      <div class="inner">
+                                        <h3><b><?= $projet->indiceprofit ?></b></h3>
+
+                                        <p>Indice de profitabilité</p>
+                                      </div>
+                                      <div class="icon">
+                                        <i class="far fa-thumbs-up"></i>
+                                      </div>
+                                      <a href="#" class="small-box-footer">
+
+                                      </a>
+                                    </div>
+									</div>
+
+
+									<div class="col-md-4 col-sm-12">
+                                    <!-- small card -->
+                                    <div class="small-box bg-info">
+                                      <div class="inner">
+                                        <h3><b><?= number_format($projet->fincapitalsocial->vedcf,0,',','.') ?></b></h3>
+
+                                        <p>Valeur de l’entreprise (indicative) selon DCF</p>
+                                      </div>
+                                      <div class="icon">
+                                        <i class="fas fa-coins"></i>
+                                      </div>
+                                      <a href="#" class="small-box-footer">
+
+                                      </a>
+                                    </div>
 									</div>
 								</div>
 
