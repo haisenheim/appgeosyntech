@@ -2630,9 +2630,6 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
             moyens.push(elt);
         }
     });
-
-
-
     var spinHandle_firstProcess = loadingOverlay.activate();
     $.ajax({
         url:saveUrl,
@@ -2652,18 +2649,10 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
              alert('Une erreur est survenue lors de l\'enregistrement du dossier. Verifiez que toutes les informations sont saisies correctement !!!');
         }
     });
-
-
   });
-
-
-
-
 
 </script>
 <script>
-
-
     $('#nbsim').change(function(){
     var html ='';
     var html1 ='';
@@ -3453,6 +3442,31 @@ $('.cell').keyup(function(e){
 
     });
 
+$('.oblig_choice').click(function(){
+
+
+        $('.oblig-section').hide();
+        $('#oblig_section_'+$(this).data('id')).show();
+
+});
+
+    $('.mlt_choice').click(function(){
+
+
+        $('.mlt-section').hide();
+        $('.mlt').val('');
+        $('#mlt_section_'+$(this).data('id')).show();
+
+    });
+
+    $('.credbail_choice').click(function(){
+
+
+        $('.credbail-section').hide();
+        $('.credbail').val('');
+        $('#credbail_section_'+$(this).data('id')).show();
+
+    });
 
 
 
