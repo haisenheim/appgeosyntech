@@ -181,8 +181,9 @@ class Prevresultat extends Model
 			if($rp){
 				$cession = $rp->cession;
 			}
-			return 0;
-			//return $this->getReapiAttribute() + $this->dap + $cession - $projet->variations['bfr'][$this->getPositionAttribute()];
+			//return 0;
+			dd($projet->variations);
+			return $this->getReapiAttribute() + $this->dap + $cession - $projet->variations['bfr'][$this->getPositionAttribute()];
 		}
 
 		if($this->infrastructure_id){
