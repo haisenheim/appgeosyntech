@@ -357,7 +357,7 @@ class Earlie extends Model
 			$data['tn'][$i]=$prevbls[$i]->tn?round((($prevbls[$i+1]->tn-$prevbls[$i]->tn)/$prevbls[$i]->tn)*100,2):0;
 
 		}
-		//dd($data);
+		dd($data);
 		return $data;
 	}
 
