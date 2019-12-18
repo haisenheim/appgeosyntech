@@ -2612,7 +2612,54 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
             reparts.push(values);
         });
 
-     var fincapitalsocial ={};
+
+      //-------------------- Traitement de l'emprunt obligataire ------------------------------------------------------------
+    var oblig_section = document.getElementById('emp_oblig');
+    var inpts =oblig_section.getElementsByTagName('input');
+    var oblig = {};
+
+
+    for (var j=0; j < inpts.length; j++) {
+        var jd_ = inpts[j].getAttribute('id');
+        if(jd_){
+            oblig[jd_] = $('#' + jd_).val();
+        }
+            oblig['tremboursement_id']=$('#emp_oblig .oblig_choice:checked').data('id');
+    }
+
+    //!-----------------------------------------------------------------------------------------!!!!!!!!!!!------------------
+
+    //-------------------- Traitement des prets mlts des etablissements financiers ------------------------------------------------------------
+ /*   var mlt_section = document.getElementById('mlt');
+    var ints =mlt_section.getElementsByTagName('input');
+    var mlt = {};
+
+
+    for (var p=0; p < ints.length; p++) {
+        var jp_ = ints[p].getAttribute('id');
+        if(jp_){
+            mlt[jp_] = $('#' + jp_).val();
+        }
+        mlt['tremboursement_id']=$('#mlt .mlt_choice:checked').data('id');
+    }
+*/
+     //-------------------- Traitement du credit bail ------------------------------------------------------------
+   /* var credbail_section = document.getElementById('credbail');
+    var its =credbail_section.getElementsByTagName('input');
+    var credbail = {};
+
+
+    for (var t=0; t < its.length; t++) {
+        var d_ = its[t].getAttribute('id');
+        if(d_){
+            credbail[d_] = $('#' + d_).val();
+        }
+        credbail['tremboursement_id']=$('#credbail .credbail_choice:checked').data('id');
+        credbail['rlc_periode'] = $('#credbail #rlc_periode').val();
+        credbail['rac_periode'] = $('#credbail #rac_periode').val();
+    }  */
+
+    var fincapitalsocial ={};
     var inputs= $('#fincapitalsocial').find('input');
     for(var i=0;i<inputs.length; i++){
         var id = inputs[i].getAttribute('id');
@@ -2635,7 +2682,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
         url:saveUrl,
         dataType:'json',
         type:'post',
-        data:{_csrf:$('input[name="_token"]').val(),montage:montage, resultats:resultats,bilans:bilans,tresoreries:tresoreries,reparts:reparts,fincapitalsocial:fincapitalsocial, moyens:moyens,token:$('#projet_token').val()},
+        data:{_csrf:$('input[name="_token"]').val(),montage:montage, oblig:oblig ,resultats:resultats,bilans:bilans,tresoreries:tresoreries,reparts:reparts,fincapitalsocial:fincapitalsocial, moyens:moyens,token:$('#projet_token').val()},
         beforeSend:function(xhr){
              xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
 

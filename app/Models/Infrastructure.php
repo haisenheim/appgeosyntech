@@ -19,6 +19,10 @@ class Infrastructure extends Model
 		return $this->hasOne('App\Models\Fincapitalsocial');
 	}
 
+	public function finempobligataire(){
+		return $this->hasOne('App\Models\Finempobligataire');
+	}
+
 
 	public function selector(){
 		return $this->belongsTo('App\User','selector_id');

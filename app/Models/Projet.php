@@ -350,6 +350,9 @@ class Projet extends Model
 		return $this->hasOne('App\Models\Fincapitalsocial');
 	}
 
+	public function finempobligataire(){
+		return $this->hasOne('App\Models\Finempobligataire');
+	}
 
     public function consultant(){
         return $this->belongsTo('App\User','expert_id');

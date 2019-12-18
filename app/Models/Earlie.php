@@ -18,6 +18,10 @@ class Earlie extends Model
 		return $this->hasOne('App\Models\Fincapitalsocial');
 	}
 
+	public function finempobligataire(){
+		return $this->hasOne('App\Models\Finempobligataire');
+	}
+
 	public function auteur(){
 		return $this->belongsTo('App\User','author_id');
 	}

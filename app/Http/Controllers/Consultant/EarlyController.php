@@ -10,6 +10,7 @@ use App\Models\Environnement;
 use App\Models\Environnment;
 use App\Models\Etape;
 use App\Models\Fincapitalsocial;
+use App\Models\Finempobligataire;
 use App\Models\Modepaiement;
 use App\Models\Moyen;
 use App\Models\Moyens_projet;
@@ -178,6 +179,9 @@ class EarlyController extends Controller
 		$projet->etape =4;
 		$projet->save();
 		$bilans = $request->bilans;
+		if($projet->prevbilans){
+			Prevbilan::where('earlie_id',$projet->id)->delete();
+		}
 		foreach($bilans as $bilan){
 			$bilan['earlie_id']=$projet->id;
 			$bilan['user_id'] = Auth::user()->id;
@@ -185,6 +189,9 @@ class EarlyController extends Controller
 		}
 
 		$tresos = $request->tresoreries;
+		if($projet->prevtresoreries){
+			Prevtresorerie::where('earlie_id',$projet->id)->delete();
+		}
 		foreach($tresos as $tr){
 			$tr['earlie_id']=$projet->id;
 			$tr['prelevements_capital']=$tr['prevelements_capital'];
@@ -194,6 +201,9 @@ class EarlyController extends Controller
 		}
 
 		$resultats = $request->resultats;
+		if($projet->prevresultats){
+			Prevresultat::where('earlie_id',$projet->id)->delete();
+		}
 		foreach($resultats as $res) {
 			$res['earlie_id'] = $projet->id;
 			$res['token']=$request->_csrf;
@@ -209,9 +219,22 @@ class EarlyController extends Controller
 			$m->moyen_id = $moyen['moyen_id'];
 			$m->montant = $moyen['montant'];
 			$m->save();
+			if($moyen['moyen_id']==3){
+				if($projet->finempobligataire){
+					Finempobligataire::where('earlie_id',$projet->id)->delete();
+				}
+				$fcs = $request->finempobligataire;
+				$fcs['earlie_id']=$projet->id;
+				$fcs = Finempobligataire::create($fcs);
+			}
+
 			if($moyen['moyen_id']==1){
 				$fcs = $request->fincapitalsocial;
 				$fcs['earlie_id']=$projet->id;
+				if($projet->fincapitalsocial){
+					Repartcapitalsocial::where('fincapitalsocial_id',$projet->fincapitalsocial->id)->delete();
+					Fincapitalsocial::where('earlie_id',$projet->id)->delete();
+				}
 				$fcs = Fincapitalsocial::create($fcs);
 				foreach($request->reparts as $repart){
 					$repart['fincapitalsocial_id']=$fcs->id;
