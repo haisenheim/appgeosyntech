@@ -1441,3 +1441,14 @@
 	 </div>
 </div>
 </div>
+<style>
+.value{
+
+
+        font-weight: bold;
+        color: #28a745;
+        font-family: cursive;
+
+
+}
+</style>
