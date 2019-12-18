@@ -354,7 +354,7 @@ class Earlie extends Model
 		$data['bfr'][0]=$prevbls[0]->bfr;
 		$data['fr'][0]=$prevbls[0]->fr;
 		$data['tn'][0]=$prevbls[0]->tn;
-		for($i=0;$i<$bc;$i++){
+		for($i=1;$i<$bc;$i++){
 			$data['fr'][$i]=$prevbls[$i-1]->fr?round((($prevbls[$i]->fr-$prevbls[$i-1]->fr)/$prevbls[$i-1]->fr)*100,2):0;
 			//$data['bfr']
 			$data['bfr'][$i]=$prevbls[$i-1]->bfr?round((($prevbls[$i]->bfr-$prevbls[$i-1]->bfr)/$prevbls[$i-1]->bfr)*100,2):0;
