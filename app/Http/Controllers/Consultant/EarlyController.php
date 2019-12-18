@@ -213,6 +213,9 @@ class EarlyController extends Controller
 
 
 		$moyens = $request->moyens;
+		if($projet->moyens){
+			EarliesMoyen::where('earlie_id',$projet->id)->delete();
+		}
 		foreach($moyens as $moyen){
 			$m = new EarliesMoyen();
 			$m->earlie_id=$projet->id;
@@ -223,7 +226,7 @@ class EarlyController extends Controller
 				if($projet->finempobligataire){
 					Finempobligataire::where('earlie_id',$projet->id)->delete();
 				}
-				$fcs = $request->finempobligataire;
+				$fcs = $request->oblig;
 				$fcs['earlie_id']=$projet->id;
 				$fcs = Finempobligataire::create($fcs);
 			}

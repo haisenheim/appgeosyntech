@@ -89,7 +89,7 @@ class Fincapitalsocial extends Model
 
 	//-------------------------Capital appele non verse ----------------------------------------------------------------
 	public function getCapitalAppeleAttribute(){
-		return $this->taux_capital_appele * $this->getNbaNeAttribute() * $this->vna;
+		return $this->taux_capital_appele * $this->getNbaNeAttribute() * $this->vna/100;
 	}
 
 	//---------------------Capital non appele --------------------------------------------------------------------------
@@ -99,7 +99,7 @@ class Fincapitalsocial extends Model
 
 	//----------------------Cout moyen pondere du capital --------------------------------------------------------------
 	public function getCmpcAttribute(){
-		return $this->taux_rent_exige_act * ($this->getCapitauxPropresAttribute()/($this->getCapitauxPropresAttribute()+$this->mt_dettes_fin)) + ($this->cout_endettement*(1-$this->taux_imposition)) * ($this->mt_dettes_fin/($this->mt_dettes_fin+$this->getCapitauxPropresAttribute()));
+		return $this->taux_rent_exige_act/100 * ($this->getCapitauxPropresAttribute()/($this->getCapitauxPropresAttribute()+$this->mt_dettes_fin)) + (($this->cout_endettement/100)*(1-($this->taux_imposition/100))) * ($this->mt_dettes_fin/($this->mt_dettes_fin+$this->getCapitauxPropresAttribute()));
 	}
 
 	//----------------Calcul du besoin en fond de roulement en jour du chiffre d'affaires----------------d
@@ -270,7 +270,7 @@ class Fincapitalsocial extends Model
 
 	//------------------------------------- Taux de Rentabilité attendue de l'action --------------------------------------------------
 	public function getTauxraaAttribute(){
-		return $this->taux_interet_sans_risque + ($this->beta_actif * ($this->taux_rent_exige_act - $this->taux_interet_sans_risque));
+		return $this->taux_interet_sans_risque + ($this->beta_actif * (($this->taux_rent_exige_act/100) - $this->taux_interet_sans_risque));
 	}
 
 

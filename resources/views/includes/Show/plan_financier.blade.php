@@ -1152,24 +1152,24 @@
 									<li class="list-inline-item">  Nombre d’actions nouvellement émises :    <span class="value"><?= $projet->fincapitalsocial->nba_ne ?></span></li>
 									<li class="list-inline-item"> Prime d’émission totale :   <span class="value"><?= number_format($projet->fincapitalsocial->prime_emi_totale,0,',','.') ?></span></li>
 									<li class="list-inline-item">   Nombre d’action disponible après émission de nouvelles actions  :    <span class="value"><?= $projet->fincapitalsocial->nba_ae ?></span></li>
-									<li class="list-inline-item"> Taux d'imposition :    <span class="value"><?= $projet->fincapitalsocial->taux_imposition * 100 .'%' ?></span></li>
+									<li class="list-inline-item"> Taux d'imposition :    <span class="value"><?= $projet->fincapitalsocial->taux_imposition .'%' ?></span></li>
 									<li class="list-inline-item"> Nouveau montant du capital social:   <span class="value"><?= number_format($projet->fincapitalsocial->new_mt_capital,0,',','.') ?></span></li>
 									<li class="list-inline-item"> Nouveau montant des capitaux propres :   <span class="value"><?= number_format($projet->fincapitalsocial->new_mt_capitaux_propres,0,',','.') ?></span></li>
 									<li class="list-inline-item"> Valeur de l'action apres emission :   <span class="value"><?= number_format($projet->fincapitalsocial->va_ae,0,',','.') ?></span></li>
 									<li class="list-inline-item"> Valeur du droit preferentiel de souscription :   <span class="value"><?= round($projet->fincapitalsocial->va_dps,1) ?></span></li>
 									<li class="list-inline-item"> Nombre de droit de soucription pour obtenir une action:   <span class="value"><?= round($projet->fincapitalsocial->nb_ds,2) ?></span></li>
-									<li class="list-inline-item"> Pourcentage du capital appelé à libérer immédiatement:   <span class="value"><?= $projet->fincapitalsocial->taux_capital_appele * 100 .'%' ?></span></li>
+									<li class="list-inline-item"> Pourcentage du capital appelé à libérer immédiatement:   <span class="value"><?= $projet->fincapitalsocial->taux_capital_appele .'%' ?></span></li>
 									<li class="list-inline-item"> Capital appelé non versé :   <span class="value"><?= number_format($projet->fincapitalsocial->capital_appele,0,',','.') ?></span></li>
 									<li class="list-inline-item"> Capital non appelé :   <span class="value"><?= number_format($projet->fincapitalsocial->capital_non_appele,0,',','.') ?></span></li>
 
-									<li class="list-inline-item">  Taux de rentabilité exigé par les actionnaires   :    <span class="value"><?= $projet->fincapitalsocial->taux_rent_exige_act *100 .'%' ?></span></li>
+									<li class="list-inline-item">  Taux de rentabilité exigé par les actionnaires   :    <span class="value"><?= $projet->fincapitalsocial->taux_rent_exige_act .'%' ?></span></li>
 
 									<li class="list-inline-item">  Montant des dettes financière   :    <span class="value"><?= number_format($projet->fincapitalsocial->mt_dettes_fin,0,',','.') ?></span></li>
-									<li class="list-inline-item">  Cout de l'endettement   :    <span class="value"><?= $projet->fincapitalsocial->cout_endettement*100 .'%' ?></span></li>
+									<li class="list-inline-item">  Cout de l'endettement   :    <span class="value"><?= $projet->fincapitalsocial->cout_endettement .'%' ?></span></li>
 									<li class="list-inline-item">   Coût Moyen pondéré du Capital ou CMPC   :    <span class="value"><?= $projet->fincapitalsocial->cmpc ?></span></li>
-									<li class="list-inline-item">  Taux de croissance à l’infini des flux de tréso. disponibles non actualisés:     <span class="value"><?= $projet->fincapitalsocial->tci_flux_treso_dispo*100 . "%" ?></span></li>
+									<li class="list-inline-item">  Taux de croissance à l’infini des flux de tréso. disponibles non actualisés:     <span class="value"><?= $projet->fincapitalsocial->tci_flux_treso_dispo . "%" ?></span></li>
 
-									<li class="list-inline-item">    Taux de croissance à l’infini des flux de dividendes non actualisés :     <span class="value"><?= $projet->fincapitalsocial->tci_flux_dvd_non_actu *100 ."%" ?></span></li>
+									<li class="list-inline-item">    Taux de croissance à l’infini des flux de dividendes non actualisés :     <span class="value"><?= $projet->fincapitalsocial->tci_flux_dvd_non_actu ."%" ?></span></li>
 									<li class="list-inline-item">   Besoin en fonds de roulement en jours du Chiffre d’affaires :     <span class="value"><?= $projet->fincapitalsocial->bfrjca ?></span></li>
 									<li class="list-inline-item">   Besoin en fonds de roulement en pourcentage du CA :     <span class="value"><?= $projet->fincapitalsocial->bfrpca * 100 . '%' ?></span></li>
 
