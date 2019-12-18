@@ -1085,18 +1085,18 @@
 				<div class="card">
 					<div class="card-header">
 						<h4 class="card-title">RENTABILITE ESPEREE</h4>
-						<div>
-							<ul class="nav nav-tabs" id="myTabs" role="tablist">
+						<div style="float: right">
+							<ul class="nav nav-pills ml-auto p-2 pull-right"  role="tablist">
 								<?php if($projet->fincapitalsocial): ?>
-									<li role="presentation" class="active">
-										<a href="#fincapitalsocial" role="tab" id="fincapitalsocial-tab" data-toggle="tab" aria-controls="fincapitalsocial" aria-expanded="false"><span><img
+									<li role="presentation" class="nav-item">
+										<a class="nav-link active" href="#fincapitalsocial" role="tab" id="fincapitalsocial-tab" data-toggle="tab" aria-controls="fincapitalsocial" aria-expanded="false"><span><img
 													 class="fa-icon" alt=""/></span> FINANCEMENT DU CAPITAL SOCIAL</a>
 									</li>
 								<?php endif; ?>
 
 								<?php if($projet->finempobligataire): ?>
-									<li role="presentation" class="<?= $projet->fincapitalsocial?'':'active' ?>">
-										<a href="#finempobligataire" role="tab" id="finempobligataire-tab" data-toggle="tab" aria-controls="finempobligataire" aria-expanded="false"><span class="fa fa-chart-pie"></span> EMPRUNT OBLIGATAIRE</a>
+									<li role="presentation" class="nav-item">
+										<a class="nav-link <?= $projet->fincapitalsocial?'':'active' ?>" href="#finempobligataire" role="tab" id="finempobligataire-tab" data-toggle="tab" aria-controls="finempobligataire" aria-expanded="false"><span class="fa fa-chart-pie"></span> EMPRUNT OBLIGATAIRE</a>
 									</li>
 								<?php endif; ?>
 								<?php if($projet->finmlt): ?>
@@ -1132,7 +1132,7 @@
 							<?php if($projet->fincapitalsocial): ?>
 								<div class="tab-pane fade active in" role="tabpanel" id="fincapitalsocial" aria-labelledby="fincapitalsocial-tab">
 								<h5>AUGMENTATION DU CAPITAL SOCIAL</h5>
-								<div style="margin-left: -30px; margin-right: -30px" class="section">
+								<div>
 								<h6>A/ Analyse de l’investissement en capital (Est-ce un projet rentable ?)</h6>
 
 								<div style="">
@@ -1305,7 +1305,7 @@
 								</div>
 
 								<div class="row">
-								    <div class="col-md-4 col-sm-12">
+								    <div class="col-md-3 col-sm-12">
                                         <!-- small card -->
                                         <div class="small-box bg-success">
                                           <div class="inner">
@@ -1314,7 +1314,7 @@
                                             <p>VALEUR ACTUELLE NETTE</p>
                                           </div>
                                           <div class="icon">
-                                            <i class="ion ion-stats-bars"></i>
+                                            <i class="fas fa-coins"></i>
                                           </div>
                                           <a href="#" class="small-box-footer">
 
@@ -1322,7 +1322,7 @@
                                         </div>
 									</div>
 
-								    <div class="col-md-4 col-sm-12">
+								    <div class="col-md-3 col-sm-12">
                                         <!-- small card -->
                                         <div class="small-box bg-primary">
                                           <div class="inner">
@@ -1331,7 +1331,7 @@
                                             <p>TAUX DE RENTABILITE INTERNE</p>
                                           </div>
                                           <div class="icon">
-                                            <i class="ion ion-stats-bars"></i>
+                                            <i class="fas fa-chart-pie"></i>
                                           </div>
                                           <a href="#" class="small-box-footer">
 
@@ -1339,7 +1339,7 @@
                                         </div>
 									</div>
 
-								    <div class="col-md-4 col-sm-12">
+								    <div class="col-md-3 col-sm-12">
                                         <!-- small card -->
                                         <div class="small-box bg-danger">
                                           <div class="inner">
@@ -1356,7 +1356,7 @@
                                         </div>
 									</div>
 
-								    <div class="col-md-4 col-sm-12">
+								    <div class="col-md-3 col-sm-12">
                                     <!-- small card -->
                                     <div class="small-box bg-warning">
                                       <div class="inner">
@@ -1374,7 +1374,7 @@
 									</div>
 
 
-									<div class="col-md-4 col-sm-12">
+									<div class="col-md-3 col-sm-12">
                                     <!-- small card -->
                                     <div class="small-box bg-info">
                                       <div class="inner">
@@ -1394,8 +1394,8 @@
 
 								</div>
 								</div>
-
-								<div style="margin-right: -30px; margin-left: -30px" class="section">
+                                <hr/>
+								<div >
 									<h6>B/ Rendement et rentabilité espérée de l’action  </h6>
 									<div class="row">
 										<div class="col-md-3 col-sm-12">
