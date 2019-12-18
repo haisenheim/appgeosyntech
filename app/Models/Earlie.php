@@ -340,7 +340,7 @@ class Earlie extends Model
 		$bc = count($prevbls);
 		$nb = count($prevrs);
 		$data=[];
-		for($i=0;$i<$nb;$i++){
+		for($i=0;$i<$nb-1;$i++){
 			$data['ca'][$i]=$prevrs[$i]->ca?round((($prevrs[$i+1]->ca-$prevrs[$i]->ca)/$prevrs[$i]->ca)*100,2):0;
 			$data['mb'][$i]=$prevrs[$i]->mb?round((($prevrs[$i+1]->mb-$prevrs[$i]->mb)/$prevrs[$i]->mb)*100,2):0;
 			$data['va'][$i]=$prevrs[$i]->va?round((($prevrs[$i+1]->va - $prevrs[$i]->va)/$prevrs[$i]->va)*100,2):0;
@@ -351,13 +351,17 @@ class Earlie extends Model
 			$data['rcai'][$i]=$prevrs[$i]->rcai?round((($prevrs[$i+1]->rcai -$prevrs[$i]->rcai)/$prevrs[$i]->rcai)*100,2):0;
 			$data['rn'][$i]=$prevrs[$i]->rn?round((($prevrs[$i+1]->rn -$prevrs[$i]->rn)/$prevrs[$i]->rn)*100,2):0;
 		}
+		$data['bfr'][0]=$prevbls[0]->bfr;
+		$data['fr'][0]=$prevbls[0]->fr;
+		$data['tn'][0]=$prevbls[0]->tn;
 		for($i=0;$i<$bc;$i++){
-			$data['fr'][$i]=$prevbls[$i]->fr?round((($prevbls[$i+1]->fr-$prevbls[$i]->fr)/$prevbls[$i]->fr)*100,2):0;
-			$data['bfr'][$i]=$prevbls[$i]->bfr?round((($prevbls[$i+1]->bfr-$prevbls[$i]->bfr)/$prevbls[$i]->bfr)*100,2):0;
-			$data['tn'][$i]=$prevbls[$i]->tn?round((($prevbls[$i+1]->tn-$prevbls[$i]->tn)/$prevbls[$i]->tn)*100,2):0;
+			$data['fr'][$i]=$prevbls[$i-1]->fr?round((($prevbls[$i]->fr-$prevbls[$i-1]->fr)/$prevbls[$i-1]->fr)*100,2):0;
+			//$data['bfr']
+			$data['bfr'][$i]=$prevbls[$i-1]->bfr?round((($prevbls[$i]->bfr-$prevbls[$i-1]->bfr)/$prevbls[$i-1]->bfr)*100,2):0;
+			$data['tn'][$i]=$prevbls[$i-1]->tn?round((($prevbls[$i]->tn-$prevbls[$i-1]->tn)/$prevbls[$i-1]->tn)*100,2):0;
 
 		}
-		dd($data);
+		//dd($data);
 		return $data;
 	}
 

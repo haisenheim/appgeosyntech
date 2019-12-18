@@ -550,7 +550,7 @@
 													</tr>
 													<tr>
 														<th style="text-align: center" colspan="3">FONDS DE ROULEMENT</th>
-														<?php $i=0; ?>
+														<?php $i=1; ?>
 														@foreach($projet->prevbilans as $prevr)
 															<th><?= $prevr->fr ?></th>
 															@if(!$loop->last)
@@ -668,7 +668,7 @@
 													</tr>
 													<tr>
 														<th style="text-align: center" colspan="3">BESOIN EN FONDS DE ROULEMENT</th>
-														<?php $i=0; ?>
+														<?php $i=1; ?>
 														@foreach($projet->prevbilans as $prevr)
 															<th><?= $prevr->bfr ?></th>
 															@if(!$loop->last)
@@ -726,7 +726,7 @@
 													</tr>
 													<tr>
 														<th style="text-align: center" colspan="3">TRESORERIE NETTE</th>
-														<?php $i=0; ?>
+														<?php $i=1; ?>
 														@foreach($projet->prevbilans as $prevr)
 															<th><?= $prevr->tn ?></th>
 															@if(!$loop->last)

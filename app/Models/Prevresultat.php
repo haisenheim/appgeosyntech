@@ -182,7 +182,7 @@ class Prevresultat extends Model
 				$cession = $rp->cession;
 			}
 			//return 0;
-			dd($projet->variations);
+			//dd($projet->variations);
 			return $this->getReapiAttribute() + $this->dap + $cession - $projet->variations['bfr'][$this->getPositionAttribute()];
 		}
 
