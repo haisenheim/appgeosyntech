@@ -1130,7 +1130,7 @@
 					<div class="card-body">
 						<div class="tab-content">
 							<?php if($projet->fincapitalsocial): ?>
-								<div class="tab-pane fade active in" role="tabpanel" id="fincapitalsocial" aria-labelledby="fincapitalsocial-tab">
+								<div class="tab-pane active" role="tabpanel" id="fincapitalsocial" aria-labelledby="fincapitalsocial-tab">
 								<h5>AUGMENTATION DU CAPITAL SOCIAL</h5>
 								<div>
 								<h6>A/ Analyse de l’investissement en capital (Est-ce un projet rentable ?)</h6>
