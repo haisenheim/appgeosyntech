@@ -33,73 +33,73 @@ class Fincapitalsocial extends Model
 
 
 	//---------------------------Montant des capitaux propores --------------------------------------
-	public function getCapitaux_propresAttribute(){
+	public function getCapitauxPropresAttribute(){
 		return $this->resultat_net + $this->report + $this->reserves + $this->getMtcapitalAttribute();
 	}
 
 	//------------------------------- Valeur de l'action avant emission ------------------------------
-	public function getVa_aocAttribute(){
-		return $this->nba_aoc?$this->getCapitaux_propresAttribute()/$this->nba_aoc:0;
+	public function getVaAocAttribute(){
+		return $this->nba_aoc?$this->getCapitauxPropresAttribute()/$this->nba_aoc:0;
 	}
 
 	//------------------------------Prime d'emission -----------------------------------------------------
-	public function getPrime_emiAttribute(){
+	public function getPrimeEmiAttribute(){
 		return $this->prix_emi - $this->vna;
 	}
 
 	//------------------------------Nombre d'actions nouvellement emises ------------------------------
-	public function getNba_neAttribute(){
+	public function getNbaNeAttribute(){
 		return $this->vna? $this->mt_levee/$this->vna:0;
 	}
 
 	//--------------------------Prime d'emission totale --------------------------------------------
-	public function getPrime_emi_totaleAttribute(){
-		return $this->getPrime_emiAttribute() * $this->getNba_neAttribute();
+	public function getPrimeEmi_totaleAttribute(){
+		return $this->getPrimeEmiAttribute() * $this->getNbaNeAttribute();
 	}
 
 	//----------------------------Nombre d'action disponible apres emission -------------------------
-	public function getNba_aeAttribute(){
-		return $this->nba_aoc + $this->getNba_neAttribute();
+	public function getNbaAeAttribute(){
+		return $this->nba_aoc + $this->getNbaNeAttribute();
 	}
 
 	//----------------------------Nouveau montant du capital -----------------------------------------
-	public function getNew_mt_capitalAttribute(){
-		return $this->vna * $this->getNba_aeAttribute(); // Est-ce que la valeur nominale n'a pas evolue entre temps????
+	public function getNewMtCapitalAttribute(){
+		return $this->vna * $this->getNbaAeAttribute(); // Est-ce que la valeur nominale n'a pas evolue entre temps????
 	}
 
 	//--------------------------Nouveau montant des capitaux propres -------------------------------------------------
-	public function getNew_mt_capitaux_propresAttribute(){
-		return $this->getNew_mt_capitalAttribute() + $this->resultat_net + $this->reserves + $this->report;
+	public function getNewMtCapitauxPropresAttribute(){
+		return $this->getNewMtCapitalAttribute() + $this->resultat_net + $this->reserves + $this->report;
 	}
 
 	//-------------------------Valeur de l'action apres emission ---------------------------------------------------
-	public function getVa_aeAttribute(){
-		return $this->getNba_aeAttribute()?$this->getNew_mt_capitaux_propresAttribute()/$this->getNba_aeAttribute():0;
+	public function getVaAeAttribute(){
+		return $this->getNbaAeAttribute()?$this->getNewMtCapitauxPropresAttribute()/$this->getNbaAeAttribute():0;
 	}
 
 	//---------------------------Valeur du droit preferentiel de souscription --------------------------------------
 	public function getVa_dpsAttribute(){
-		return $this->getVa_aocAttribute() - $this->getVa_aeAttribute();
+		return $this->getVaAocAttribute() - $this->getVaAeAttribute();
 	}
 
 	// ------------------------- Nombre de Droit de souscription pour obtenir une nouvelle action-----------------------
 	public function getNb_dsAttribute(){
-		return $this->nba_aoc?$this->getNba_neAttribute()/$this->nba_aoc:0;
+		return $this->nba_aoc?$this->getNbaNeAttribute()/$this->nba_aoc:0;
 	}
 
 	//-------------------------Capital appele non verse ----------------------------------------------------------------
-	public function getCapital_appeleAttribute(){
-		return $this->taux_capital_appele * $this->getNba_neAttribute() * $this->vna;
+	public function getCapitalAppeleAttribute(){
+		return $this->taux_capital_appele * $this->getNbaNeAttribute() * $this->vna;
 	}
 
 	//---------------------Capital non appele --------------------------------------------------------------------------
-	public function getCapital_non_appeleAttribute(){
-		return $this->vna * $this->getNba_neAttribute() - $this->getCapital_appeleAttribute();
+	public function getCapitalNonAppeleAttribute(){
+		return $this->vna * $this->getNbaNeAttribute() - $this->getCapitalAppeleAttribute();
 	}
 
 	//----------------------Cout moyen pondere du capital --------------------------------------------------------------
 	public function getCmpcAttribute(){
-		return $this->taux_rent_exige_act * ($this->getCapitaux_propresAttribute()/($this->getCapitaux_propresAttribute()+$this->mt_dettes_fin)) + ($this->cout_endettement*(1-$this->taux_imposition)) * ($this->mt_dettes_fin/($this->mt_dettes_fin+$this->getCapitaux_propresAttribute()));
+		return $this->taux_rent_exige_act * ($this->getCapitauxPropresAttribute()/($this->getCapitauxPropresAttribute()+$this->mt_dettes_fin)) + ($this->cout_endettement*(1-$this->taux_imposition)) * ($this->mt_dettes_fin/($this->mt_dettes_fin+$this->getCapitauxPropresAttribute()));
 	}
 
 	//----------------Calcul du besoin en fond de roulement en jour du chiffre d'affaires----------------d
@@ -138,9 +138,9 @@ class Fincapitalsocial extends Model
 
 	//--------------------------------Calcul de la valeur de l'action apres emission ------------------
 
-	public function getVaaeAttribute(){
-		return  $this->nba_aoc?round($this->mt_capitaux_propres/$this->nba_aoc,2):0;
-	}
+	/*public function getVaaeAttribute(){
+		return  $this->nba_aoc?round($this->mt_capitauxPropres/$this->nba_aoc,2):0;
+	}*/
 
 	//----------------------------Calcul du nombre d'actions disponibles apres emission de nouvelles actions--------
 	public function getNbadaenaAttribute(){
@@ -207,7 +207,7 @@ class Fincapitalsocial extends Model
 
 
 	//-----------------------------Calcul de la valeur de l'entreprise selon la methode DCF -----------------------------
-	public function _getVedcf(){
+	public function getVedcfAttribute(){
 		if($this->projet_id){
 			$projet = Projet::find($this->projet_id);
 			$s=0;
