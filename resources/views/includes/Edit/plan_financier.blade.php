@@ -2248,7 +2248,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                                         <div class="col-md-3 col-sm-12">
                                             <div class="form-group">
                                                 <label for="">TAUX D'INTERET</label>
-                                                <input type="text" class="form-control mlt" id="rif_i"/>
+                                                <input type="text" class="form-control mlt" id="rif_ti"/>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-12">
@@ -2284,7 +2284,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                                         <div class="col-md-2 col-sm-12">
                                             <div class="form-group">
                                                 <label for="">TAUX D'INTERET</label>
-                                                <input type="text" class="form-control mlt" id="ras_i"/>
+                                                <input type="text" class="form-control mlt" id="ras_ti"/>
                                             </div>
                                         </div>
 
@@ -2353,7 +2353,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                                         <div class="col-md-3 col-sm-12">
                                             <div class="form-group">
                                                 <label for="">TAUX D'INTERET</label>
-                                                <input type="text" class="form-control credbail" id="rac_i"/>
+                                                <input type="text" class="form-control credbail" id="rac_ti"/>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-sm-12">
