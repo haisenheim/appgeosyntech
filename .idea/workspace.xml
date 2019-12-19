@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.09243698" vertical-offset="23796" max-vertical-offset="28064">
-              <caret line="1841" column="75" selection-start-line="1841" selection-start-column="75" selection-end-line="1841" selection-end-column="75" />
+              <caret line="1841" column="69" selection-start-line="1841" selection-start-column="69" selection-end-line="1841" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#14;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1519,7 +1520,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09243698" vertical-offset="23796" max-vertical-offset="28064">
-          <caret line="1841" column="75" selection-start-line="1841" selection-start-column="75" selection-end-line="1841" selection-end-column="75" />
+          <caret line="1841" column="69" selection-start-line="1841" selection-start-column="69" selection-end-line="1841" selection-end-column="69" />
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#14;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />

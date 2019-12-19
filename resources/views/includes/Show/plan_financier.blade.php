@@ -1839,7 +1839,7 @@
                                 <div class="tab-pane fade <?= !($projet->fincapitalsocial || $projet->finempobligataire || $projet->finmlt)?'active in':'' ?>" role="tabpanel" id="fincredbail" aria-labelledby="fincredbail-tab">
                                     <h5>CREDIT BAIL</h5>
                                     <?php if($projet->fincredbail->tremboursement_id == 4): ?>
-                                        <?php dd($projet->fincredbail) ?>
+
                                         <div class="section">
                                             <h6 class="page-header">REMBOURSEMENT PAR AMORTISSEMENTS CONSTANTS DU CAPITAL</h6>
                                             <ul class="list-inline">

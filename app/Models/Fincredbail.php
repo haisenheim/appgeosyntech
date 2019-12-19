@@ -162,7 +162,7 @@ class Fincredbail extends Model
 
 	//------------------------- Calcul des amortissements -------------------------------------------------------------
 
-	public function getTab1(){
+	public function getTab1Attribute(){
 		$tab=[];
 		$am =[]; //Amortissement
 		$ly = []; //loyer
@@ -208,7 +208,7 @@ class Fincredbail extends Model
 
 
 
-	public function getTab2(){
+	public function getTab2Attribute(){
 		$tab=[];
 		$am =[]; //Amortissement
 		$ly = []; //loyer
