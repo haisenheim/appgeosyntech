@@ -26,7 +26,7 @@ class Earlie extends Model
 		return $this->hasOne('App\Models\Finmlt');
 	}
 
-	public function fincrebail(){
+	public function fincredbail(){
 		return $this->hasOne('App\Models\Fincredbail');
 	}
 
