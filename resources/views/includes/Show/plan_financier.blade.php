@@ -1839,11 +1839,12 @@
                                 <div class="tab-pane fade <?= !($projet->fincapitalsocial || $projet->finempobligataire || $projet->finmlt)?'active in':'' ?>" role="tabpanel" id="fincredbail" aria-labelledby="fincredbail-tab">
                                     <h5>CREDIT BAIL</h5>
                                     <?php if($projet->fincredbail->tremboursement_id == 4): ?>
+                                        <?php dd($projet->fincredbail->tab1) ?>
                                         <div class="section">
                                             <h6 class="page-header">REMBOURSEMENT PAR AMORTISSEMENTS CONSTANTS DU CAPITAL</h6>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->fincredbail->rac_se) ?></span> </li>
-                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->fincredbail->rac_ti*100 .'%'  ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->fincredbail->rac_ti .'%'  ?></span> </li>
                                                 <li class="list-inline-item">PERIODICITE DE REMBOURSEMENT: <span class="value"><?= $projet->fincredbail->rac_periode?"ANNUELLE":"MENSUELLE" ?></span> </li>
                                                 <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->fincredbail->rac_de . ' ANS' ?></span> </li>
                                             </ul>
