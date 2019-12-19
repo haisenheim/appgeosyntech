@@ -285,11 +285,11 @@ class Earlie extends Model
 		}
 
 
-		$nb= count($prvs) +1;
+		$nb= count($prvs);
 
 		$p=-1;
 		$cumul = 0.00;
-		for($i=1; $i<$nb; $i++)
+		for($i=0; $i<$nb; $i++)
 		{
 
 			$cumul = $cumul + $flux[$i];
