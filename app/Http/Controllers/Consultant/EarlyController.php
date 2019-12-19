@@ -10,7 +10,9 @@ use App\Models\Environnement;
 use App\Models\Environnment;
 use App\Models\Etape;
 use App\Models\Fincapitalsocial;
+use App\Models\Fincredbail;
 use App\Models\Finempobligataire;
+use App\Models\Finmlt;
 use App\Models\Modepaiement;
 use App\Models\Moyen;
 use App\Models\Moyens_projet;
@@ -244,6 +246,26 @@ class EarlyController extends Controller
 					Repartcapitalsocial::create($repart);
 				}
 
+			}
+
+			if($moyen['moyen_id']==4){
+				$fcs = $request->mlt;
+				$fcs['earlie_id']=$projet->id;
+				if($projet->mlt){
+
+					Finmlt::where('earlie_id',$projet->id)->delete();
+				}
+				$fcs = Finmlt::create($fcs);
+			}
+
+			if($moyen['moyen_id']==5){
+				$fcs = $request->credbail;
+				$fcs['earlie_id']=$projet->id;
+				if($projet->credbail){
+
+					Fincredbail::where('earlie_id',$projet->id)->delete();
+				}
+				$fcs = Fincredbail::create($fcs);
 			}
 		}
 

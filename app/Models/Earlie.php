@@ -22,6 +22,14 @@ class Earlie extends Model
 		return $this->hasOne('App\Models\Finempobligataire');
 	}
 
+	public function finmlt(){
+		return $this->hasOne('App\Models\Finmlt');
+	}
+
+	public function fincrebail(){
+		return $this->hasOne('App\Models\Fincredbail');
+	}
+
 	public function auteur(){
 		return $this->belongsTo('App\User','author_id');
 	}
@@ -313,12 +321,6 @@ class Earlie extends Model
 		}
 		return $s / count($projet->prevresultats);
 	}
-
-
-
-
-
-
 
 
 	public function getVariationsAttribute(){

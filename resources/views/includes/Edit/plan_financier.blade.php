@@ -2630,7 +2630,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
     //!-----------------------------------------------------------------------------------------!!!!!!!!!!!------------------
 
     //-------------------- Traitement des prets mlts des etablissements financiers ------------------------------------------------------------
- /*   var mlt_section = document.getElementById('mlt');
+    var mlt_section = document.getElementById('mlt');
     var ints =mlt_section.getElementsByTagName('input');
     var mlt = {};
 
@@ -2642,9 +2642,9 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
         }
         mlt['tremboursement_id']=$('#mlt .mlt_choice:checked').data('id');
     }
-*/
+
      //-------------------- Traitement du credit bail ------------------------------------------------------------
-   /* var credbail_section = document.getElementById('credbail');
+    var credbail_section = document.getElementById('credbail');
     var its =credbail_section.getElementsByTagName('input');
     var credbail = {};
 
@@ -2657,7 +2657,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
         credbail['tremboursement_id']=$('#credbail .credbail_choice:checked').data('id');
         credbail['rlc_periode'] = $('#credbail #rlc_periode').val();
         credbail['rac_periode'] = $('#credbail #rac_periode').val();
-    }  */
+    }
 
     var fincapitalsocial ={};
     var inputs= $('#fincapitalsocial').find('input');
@@ -2682,7 +2682,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
         url:saveUrl,
         dataType:'json',
         type:'post',
-        data:{_csrf:$('input[name="_token"]').val(),montage:montage, oblig:oblig ,resultats:resultats,bilans:bilans,tresoreries:tresoreries,reparts:reparts,fincapitalsocial:fincapitalsocial, moyens:moyens,token:$('#projet_token').val()},
+        data:{_csrf:$('input[name="_token"]').val(),montage:montage,credbail:credbail,mlt:mlt, oblig:oblig ,resultats:resultats,bilans:bilans,tresoreries:tresoreries,reparts:reparts,fincapitalsocial:fincapitalsocial, moyens:moyens,token:$('#projet_token').val()},
         beforeSend:function(xhr){
              xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
 

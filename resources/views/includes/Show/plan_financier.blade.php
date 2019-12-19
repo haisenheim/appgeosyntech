@@ -1100,28 +1100,28 @@
 									</li>
 								<?php endif; ?>
 								<?php if($projet->finmlt): ?>
-									<li role="presentation" class="<?= !($projet->fincapitalsocial || $projet->finempobligataire)?'active':'' ?>">
-										<a href="#finmlt" role="tab" id="finmlt-tab" data-toggle="tab" aria-controls="finmlt" aria-expanded="false"><span class="fa fa-chart-pie"></span> PRETS MLT</a>
+									<li role="presentation" class="nav-item">
+										<a class="nav-link <?= !($projet->fincapitalsocial || $projet->finempobligataire)?'active':'' ?>" href="#finmlt" role="tab" id="finmlt-tab" data-toggle="tab" aria-controls="finmlt" aria-expanded="false"><span class="fa fa-chart-pie"></span> PRETS MLT</a>
 									</li>
 								<?php endif; ?>
 								<?php if($projet->fincredbail): ?>
-									<li role="presentation" class="<?= !($projet->fincapitalsocial || $projet->finempobligataire || $projet->finmlt)?'active':'' ?>">
-										<a href="#fincredbail" role="tab" id="fincredbail-tab" data-toggle="tab" aria-controls="fincredbail" aria-expanded="false"><span class="fa fa-chart-pie"></span> CREDIT BAIL</a>
+									<li role="presentation" class="nav-item">
+										<a class="nav-link <?= !($projet->fincapitalsocial || $projet->finempobligataire || $projet->finmlt)?'active':'' ?>" href="#fincredbail" role="tab" id="fincredbail-tab" data-toggle="tab" aria-controls="fincredbail" aria-expanded="false"><span class="fa fa-chart-pie"></span> CREDIT BAIL</a>
 									</li>
 								<?php endif; ?>
 								<?php if($projet->finescompte): ?>
-									<li role="presentation" class="">
-										<a href="#finescompte" role="tab" id="finescompte-tab" data-toggle="tab" aria-controls="finescompte" aria-expanded="false"><span class="fa fa-chart-pie"></span> ESCOMPTE</a>
+									<li role="presentation" class="nav-item">
+										<a class="nav-link" href="#finescompte" role="tab" id="finescompte-tab" data-toggle="tab" aria-controls="finescompte" aria-expanded="false"><span class="fa fa-chart-pie"></span> ESCOMPTE</a>
 									</li>
 								<?php endif; ?>
 								<?php if($projet->finaffacturage): ?>
-									<li role="presentation" class="">
-										<a href="#finaffacturage" role="tab" id="finaffacturage-tab" data-toggle="tab" aria-controls="finaffacturage" aria-expanded="false"><span class="fa fa-chart-pie"></span> AFFACTURAGE</a>
+									<li role="presentation" class="nav-item">
+										<a class="nav-link" href="#finaffacturage" role="tab" id="finaffacturage-tab" data-toggle="tab" aria-controls="finaffacturage" aria-expanded="false"><span class="fa fa-chart-pie"></span> AFFACTURAGE</a>
 									</li>
 								<?php endif; ?>
 								<?php if($projet->fincredsignature): ?>
-									<li role="presentation" class="">
-										<a href="#fincredsignature" role="tab" id="fincredsignature-tab" data-toggle="tab" aria-controls="fincredsignature" aria-expanded="false"><span class="fa fa-chart-pie"></span> CREDIT PAR SIGNATURE</a>
+									<li role="presentation" class="nav-item">
+										<a class="nav-link" href="#fincredsignature" role="tab" id="fincredsignature-tab" data-toggle="tab" aria-controls="fincredsignature" aria-expanded="false"><span class="fa fa-chart-pie"></span> CREDIT PAR SIGNATURE</a>
 									</li>
 								<?php endif; ?>
 							</ul>
@@ -1481,6 +1481,599 @@
 								</div>
 								</div>
 							<?php endif; ?>
+
+
+							<?php if($projet->finempobligataire): ?>
+                <div class="tab-pane <?= !($projet->fincapitalsocial)?'active':'' ?>" role="tabpanel" id="finempobligataire" aria-labelledby="finempobligataire-tab">
+                <h5>EMPRUNT OBLIGATAIRE</h5>
+                <?php if($projet->finempobligataire->tremboursement_id == 1): ?>
+                    <div class="section">
+                        <h6 class="page-header">Remboursement in fine</h6>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">Nombre de titre à acheter : <span class="value"><?= $projet->finempobligataire->rif_nbta ?></span> </li>
+                            <li class="list-inline-item">Valeur faciale : <span class="value"><?= number_format($projet->finempobligataire->rif_vf) ?></span> </li>
+                            <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->rif_ti * 100 . '%'; ?></span> </li>
+                            <li class="list-inline-item">Durée du prêt : <span class="value"><?= $projet->finempobligataire->rif_dp . ' ANS' ?></span> </li>
+                            <li class="list-inline-item">Prix de remboursement : <span class="value"><?= number_format($projet->finempobligataire->rif_pr) ?></span> </li>
+                            <li class="list-inline-item">Prime de remboursement : <span class="value"><?= number_format($projet->finempobligataire->primeremb_rif) ?></span> </li>
+                        </ul>
+                        <hr/>
+                        <table id="tabobrss" class="table table-bordered table-striped table-hover table-condensed">
+                            <thead>
+                            <tr>
+                                <th>Montant du coupon par obligation </th>
+                                <th>Montant de l’investissement </th>
+                                <th>Intérêts à percevoir sur le prêt </th>
+                                <th>Remboursement du capital en tenant compte de la prime de remboursement </th>
+                                <th>Montant total à recevoir à la fin de la durée du prêt </th>
+                            </tr>
+                            </thead>
+            
+                            <tbody>
+                            <tr>
+                                <th><?= number_format($projet->finempobligataire->mtcouponobligrif) ?></th>
+                                <th><?= number_format($projet->finempobligataire->mtinvestrif) ?></th>
+                                <th><?= number_format($projet->finempobligataire->interetsrif) ?></th>
+                                <th><?= number_format($projet->finempobligataire->rembcprrif) ?></th>
+                                <th><?= number_format($projet->finempobligataire->mttfdprif) ?></th>
+                            </tr>
+                            </tbody>
+            
+                        </table>
+                    </div>
+                <?php endif; ?>
+            
+                <?php if($projet->finempobligataire->tremboursement_id == 2): ?>
+                    <div class="section">
+                        <h6 class="page-header">Remboursement par séries sensiblement égales </h6>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">Nombre de titre à acheter : <span class="value"><?= $projet->finempobligataire->rss_nbta ?></span> </li>
+                            <li class="list-inline-item">Valeur faciale : <span class="value"><?= number_format($projet->finempobligataire->rss_vf) ?></span> </li>
+                            <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->rss_ti * 100 . '%' ?></span> </li>
+                            <li class="list-inline-item">Durée du prêt : <span class="value"><?= $projet->finempobligataire->rss_dp . ' ANS' ?></span> </li>
+                            <li class="list-inline-item">Prix de remboursement : <span class="value"><?= number_format($projet->finempobligataire->rss_pr) ?></span> </li>
+                            <li class="list-inline-item">Prime de remboursement : <span class="value"><?= number_format($projet->finempobligataire->primerembrss) ?></span> </li>
+                            <li class="list-inline-item">Nombre théorique d’obligations à rembourser à année : <span class="value"><?= $projet->finempobligataire->nbtremb_rss ?></span> </li>
+                        </ul>
+                        <hr/>
+                        <table class="table table-bordered table-striped table-hover table-condensed">
+                            <thead>
+                            <tr>
+                                <th>Année </th>
+                                <th>Nombre de titres à rembourser </th>
+                                <th>Nombre d’obligation restant à rembourser </th>
+                                <th>Amortissement </th>
+                                <th>Intérêts </th>
+                                <th>Annuités (Montant à recevoir chaque année)</th>
+                            </tr>
+                            </thead>
+            
+                            <tbody>
+            
+                            <?php for($i=1; $i<=$projet->finempobligataire->rss_dp;$i++): ?>
+                                <tr>
+                                    <th><?= $i ?></th>
+                                    <th><?= $projet->finempobligataire->array_nbtrembrss[$i] ?></th>
+                                    <th><?= $projet->finempobligataire->array_nborrss[$i] ?></th>
+                                    <th><?= number_format($projet->finempobligataire->array_amortissementrss[$i]) ?></th>
+                                    <th><?= number_format($projet->finempobligataire->array_interetrss[$i]) ?></th>
+                                    <th><?= number_format($projet->finempobligataire->array_annuiterss[$i]) ?></th>
+                                </tr>
+                            <?php endfor; ?>
+                            <tr>
+                                <th>TOTAL</th>
+                                <th><?= $projet->finempobligataire->array_nbtrembrss[0] ?></th>
+                                <th>-</th>
+                                <th><?= number_format($projet->finempobligataire->array_amortissementrss[0]) ?></th>
+                                <th><?= number_format($projet->finempobligataire->array_interetrss[0]) ?></th>
+                                <th><?= number_format($projet->finempobligataire->array_annuiterss[0]) ?></th>
+                            </tr>
+            
+                            </tbody>
+            
+                        </table>
+                    </div>
+                <?php endif; ?>
+            
+                                            <?php if($projet->finempobligataire->tremboursement_id == 3): ?>
+                                                <div class="section">
+                                                    <h6 class="page-header">Remboursement par annuités sensiblement constantes </h6>
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item">Nombre de titre à acheter : <span class="value"><?= $projet->finempobligataire->ras_nbta ?></span> </li>
+                                                        <li class="list-inline-item">Valeur faciale : <span class="value"><?= number_format($projet->finempobligataire->ras_vf) ?></span> </li>
+                                                        <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->ras_ti *100 .'%' ?></span> </li>
+                                                        <li class="list-inline-item">Durée du prêt : <span class="value"><?= $projet->finempobligataire->ras_dp .' ANS' ?></span> </li>
+                                                        <li class="list-inline-item">Prix de remboursement : <span class="value"><?= number_format($projet->finempobligataire->ras_pr) ?></span> </li>
+                                                        <li class="list-inline-item">Prime de remboursement : <span class="value"><?= number_format($projet->finempobligataire->primerembrasc) ?></span> </li>
+                                                        <li class="list-inline-item">Nombre théorique d’obligations à rembourser à année : <span class="value"><?= $projet->finempobligataire->nbtoras ?></span> </li>
+                                                    </ul>
+                                                    <hr/>
+            
+                                                    <?php if($projet->finempobligataire->primerembrasc == 0): ?>
+                                                        <h6>Annuité constante : <span class="value"><?= $projet->finempobligataire->annuite_constante_ras ?></span> </h6>
+                                                        <table class="table table-bordered table-striped table-hover table-condensed">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>Année </th>
+                                                                <th>Nombre de titres remboursé </th>
+                                                                <th>Nombre d’obligations vivantes </th>
+                                                                <th>Montant des Intérêts </th>
+                                                                <th>Montant de l’amortissement </th>
+                                                                <th>Annuités</th>
+                                                            </tr>
+                                                            </thead>
+            
+                                                            <tbody>
+                                                            <tr>
+                                                                <th>1</th>
+                                                                <th><?= $projet->finempobligataire->nbtr1_a ?></th>
+                                                                <th><?= $projet->finempobligataire->nbov1_a?></th>
+                                                                <th><?= $projet->finempobligataire->interets1_a ?></th>
+                                                                <th><?= $projet->finempobligataire->amortissement1_a ?></th>
+                                                                <th><?= $projet->finempobligataire->annuite1_a ?></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>2</th>
+                                                                <th><?= $projet->finempobligataire->nbtr2_a ?></th>
+                                                                <th><?= $projet->finempobligataire->nbov2_a?></th>
+                                                                <th><?= $projet->finempobligataire->interets2_a ?></th>
+                                                                <th><?= $projet->finempobligataire->amortissement2_a ?></th>
+                                                                <th><?= $projet->finempobligataire->annuite2_a ?></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>3</th>
+                                                                <th><?= $projet->finempobligataire->nbtr3_a ?></th>
+                                                                <th><?= $projet->finempobligataire->nbov3_a?></th>
+                                                                <th><?= $projet->finempobligataire->interets3_a ?></th>
+                                                                <th><?= $projet->finempobligataire->amortissement3_a ?></th>
+                                                                <th><?= $projet->finempobligataire->annuite3_a ?></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>n</th>
+                                                                <th><?= $projet->finempobligataire->nbtrn_a ?></th>
+                                                                <th><?= $projet->finempobligataire->nbovn_a?></th>
+                                                                <th><?= $projet->finempobligataire->interetsn_a ?></th>
+                                                                <th><?= $projet->finempobligataire->amortissementn_a ?></th>
+                                                                <th><?= $projet->finempobligataire->annuiten_a ?></th>
+                                                            </tr>
+                                                            </tbody>
+            
+                                                        </table>
+            
+                                                    <?php else: ?>
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">Annuité  théorique : <span class="value"><?= $projet->finempobligataire->annuite_theorique_ras ?></span> </li>
+                                                            <li class="list-inline-item">Le nombre de titre théorique  remboursé pour l’année 1 : <span class="value"> <?= $projet->finempobligataire->nbt_theorique_an1_ras ?></span></li>
+                                                        </ul>
+            
+                                                        <table class="table table-bordered table-striped table-hover table-condensed">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>Année </th>
+                                                                <th>Nombre de titres théorique remboursé</th>
+                                                                <th>Nombre réel de titres remboursé </th>
+                                                                <th>Nombre d’obligations vivantes </th>
+                                                                <th>Montant des Intérêts </th>
+                                                                <th>Montant de l’amortissement </th>
+                                                                <th>Annuités</th>
+                                                            </tr>
+                                                            </thead>
+            
+                                                            <tbody>
+                                                            <?php  for($i=1;$i<=$projet->finempobligataire->ras_dp;$i++): ?>
+                                                                <tr class="tr-number">
+                                                                    <th><?= $i ?></th>
+                                                                    <td><?= $projet->finempobligataire->tab_ras[$i]['nttr'] ?></td>
+                                                                    <td><?= $projet->finempobligataire->tab_ras[$i]['nrtr'] ?></td>
+                                                                    <td><?= $projet->finempobligataire->tab_ras[$i]['ov'] ?></td>
+                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['interets']) ?></td>
+                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['amortissement']) ?></td>
+                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['annuite']) ?></td>
+                                                                </tr>
+                                                            <?php endfor; ?>
+            
+            
+                                                            <tr class="tr-number">
+                                                                <th colspan="">TOTAL</th>
+                                                                <td><?= $projet->finempobligataire->tab_ras[0]['nttr'] ?></td>
+                                                                <td><?= $projet->finempobligataire->tab_ras[0]['nrtr'] ?></td>
+                                                                <td></td>
+                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['interets']) ?></td>
+                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['amortissement']) ?></td>
+                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['annuite']) ?></td>
+                                                            </tr>
+            
+                                                            </tbody>
+            
+                                                        </table>
+            
+                                                    <?php endif; ?>
+                                                </div>
+                                            <?php endif; ?>
+            
+                                            </div>
+                            <?php endif; ?>
+
+                            <?php if($projet->finmlt): ?>
+                                <div class="tab-pane fade <?= !($projet->fincapitalsocial || $projet->finempobligataire)?'active in':'' ?>" role="tabpanel" id="finmlt" aria-labelledby="finmlt-tab">
+                                    <h5>PRETS A MLT DES ETABLISSEMENTS DE CREDITS</h5>
+                                    <?php if($projet->finmlt->tremboursement_id == 1): ?>
+                                        <div class="section">
+                                            <h6 class="page-header">Remboursement in fine</h6>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->finmlt->rif_se) ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->rif_ti *100 .'%' ?></span> </li>
+                                                <li class="list-inline-item">PERIODICITE DE REMBOURSEMENT: <span class="value"><?= $projet->finmlt->rif_periode?"ANNUELLE":"MENSUELLE" ?></span> </li>
+                                                <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->finmlt->rif_de . ' ANS'; ?></span> </li>
+                                            </ul>
+                                            <hr/>
+                                            <table class="table table-bordered table-striped table-hover table-condensed">
+                                                <thead>
+                                                <tr>
+                                                    <th>PERIODE n</th>
+                                                    <th>Capital du en début de période</th>
+                                                    <th>Intérêt (i)</th>
+                                                    <th>Amortissements</th>
+                                                    <th>Annuités ou mensualités</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                <?php for($i=1;$i<=$projet->finmlt->rif_de;$i++): ?>
+                                                    <tr class="tr-number">
+                                                        <td><?= $i ?></td>
+                                                        <td><?= number_format($projet->finmlt->array_capital_rif[$i]) ?></td>
+                                                        <td><?= number_format($projet->finmlt->array_interet_rif[$i]) ?></td>
+                                                        <td><?= number_format($projet->finmlt->array_amortissement_rif[$i]) ?></td>
+
+                                                        <td><?= number_format($projet->finmlt->array_annuite_rif[$i]) ?></td>
+                                                    </tr>
+                                                <?php endfor; ?>
+
+                                                <tr>
+                                                    <th colspan="2">TOTAL</th>
+
+                                                    <th><?= number_format($projet->finmlt->array_interet_rif[0]) ?></th>
+                                                    <td><?= number_format($projet->finmlt->array_amortissement_rif[0]) ?></td>
+
+                                                    <td><?= number_format($projet->finmlt->array_annuite_rif[0]) ?></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <?php if($projet->finmlt->tremboursement_id == 4): ?>
+                                        <div class="section">
+                                            <h6 class="page-header">Remboursement avec amortissement constant du capital </h6>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->finmlt->racc_se) ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->racc_ti *100 .'%' ?></span> </li>
+                                                <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->finmlt->racc_de. ' ANS' ?></span> </li>
+                                            </ul>
+                                            <hr/>
+                                            <table class="table table-bordered table-striped table-hover table-condensed">
+                                                <thead>
+                                                <tr>
+                                                    <th>PERIODE n</th>
+                                                    <th>Capital du en début de période</th>
+                                                    <th>Intérêt (i)</th>
+                                                    <th>Amortissements</th>
+                                                    <th>Annuités</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php for($i=1; $i<=$projet->finmlt->racc_de;$i++): ?>
+                                                    <tr class="tr-number">
+                                                        <td><?= $i ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab2['capital'][$i]); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab2['interets'][$i]); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab2['amortissement'][$i]); ?></td>
+
+                                                        <td><?= number_format($projet->finmlt->tab2['annuite'][$i]) ?></td>
+                                                    </tr>
+                                                <?php endfor; ?>
+
+
+                                                <tr class="tr-number">
+                                                    <th style="text-align: center" colspan="2">TOTAL</th>
+
+                                                    <th><?= number_format($projet->finmlt->tab2['interets'][0]) ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab2['amortissement'][0]) ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab2['annuite'][0]) ?></th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <?php if($projet->finmlt->tremboursement_id == 3): ?>
+                                        <div class="section">
+                                            <h6 class="page-header">Remboursement par annuités constantes* </h6>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->finmlt->ras_se) ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->ras_ti*100 .'%' ?></span> </li>
+                                                <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->finmlt->ras_de.' ANS' ?></span> </li>
+                                                <li class="list-inline-item">TAUX FICTIF: <span class="value"><?= $projet->finmlt->tf_ras  .'%'; ?></span> </li>
+                                                <li class="list-inline-item">ANNUITE CONSTANTE: <span class="value"><?= number_format($projet->finmlt->annuite_const_ras); ?></span> </li>
+                                            </ul>
+                                            <hr/>
+                                            <table class="table table-bordered table-striped table-hover table-condensed">
+                                                <thead>
+                                                <tr>
+                                                    <th>PERIODE n</th>
+                                                    <th>Capital du en début de période</th>
+                                                    <th>Intérêt (i)</th>
+                                                    <th>Amortissements</th>
+                                                    <th>Annuités</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                <?php for($i=1; $i<=$projet->finmlt->ras_de;$i++): ?>
+                                                    <tr class="tr-number">
+                                                        <td><?= $i ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab['capital'][$i]); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab['interets'][$i]); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab['amortissement'][$i]); ?></td>
+
+                                                        <td><?= number_format($projet->finmlt->tab['annuite'][$i]) ?></td>
+                                                    </tr>
+                                                <?php endfor; ?>
+
+
+                                                <tr class="tr-number">
+                                                    <th style="text-align: center" colspan="2">TOTAL</th>
+
+                                                    <th><?= number_format($projet->finmlt->tab['interets'][0]) ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab['amortissement'][0]) ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab['annuite'][0]) ?></th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if($projet->fincredbail): ?>
+                                <div class="tab-pane fade <?= !($projet->fincapitalsocial || $projet->finempobligataire || $projet->finmlt)?'active in':'' ?>" role="tabpanel" id="fincredbail" aria-labelledby="fincredbail-tab">
+                                    <h5>CREDIT BAIL</h5>
+                                    <?php if($projet->fincredbail->tremboursement_id == 4): ?>
+                                        <div class="section">
+                                            <h6 class="page-header">REMBOURSEMENT PAR AMORTISSEMENTS CONSTANTS DU CAPITAL</h6>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->fincredbail->rac_se) ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->fincredbail->rac_ti*100 .'%'  ?></span> </li>
+                                                <li class="list-inline-item">PERIODICITE DE REMBOURSEMENT: <span class="value"><?= $projet->fincredbail->rac_periode?"ANNUELLE":"MENSUELLE" ?></span> </li>
+                                                <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->fincredbail->rac_de . ' ANS' ?></span> </li>
+                                            </ul>
+                                            <hr/>
+                                            <table class="table table-bordered table-striped table-hover table-condensed">
+                                                <thead>
+                                                <tr>
+                                                    <th>PERIODE n</th>
+                                                    <th>Capital du en début de période</th>
+                                                    <th>Intérêt (i)</th>
+                                                    <th>Amortissements</th>
+                                                    <th>Assurance</th>
+                                                    <th>Loyer</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php for($i=1; $i<=$projet->fincredbail->rac_de;$i++): ?>
+                                                    <tr class="tr-number">
+                                                        <td><?= $i ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["capital"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["interets"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["amortissement"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["assurance"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["loyer"][$i]) ?></td>
+                                                    </tr>
+                                                <?php endfor; ?>
+                                                <tr class="tr-number">
+                                                    <th style="text-align: center" colspan="2">TOTAL</th>
+
+                                                    <th><?= number_format($projet->fincredbail->tab1["interets"][0]) ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab1["amortissement"][0]) ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab1["assurance"][0]) ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab1["loyer"][0]) ?></th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if($projet->fincredbail->tremboursement_id == 5): ?>
+                                        <div class="section">
+                                            <h6 class="page-header">REMBOURSEMENT PAR LOYER CONSTANT:</h6>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->fincredbail->rlc_se) ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->fincredbail->rlc_ti*100 . '%'; ?></span> </li>
+                                                <li class="list-inline-item">PERIODICITE DE REMBOURSEMENT: <span class="value"><?= $projet->fincredbail->rlc_periode?"ANNUELLE":"MENSUELLE" ?></span> </li>
+                                                <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->fincredbail->rlc_de .' ANS' ?></span> </li>
+                                                <li class="list-inline-item">TAUX FICTIF: <span class="value"><?= $projet->fincredbail->rlc_tf . "%" ?></span> </li>
+                                                <li class="list-inline-item">ANNUITE CONSTANTE: <span class="value"><?= number_format($projet->fincredbail->annuite_const_rlc) ?></span> </li>
+                                            </ul>
+
+                                            <hr/>
+
+                                            <table class="table table-bordered table-striped table-hover table-condensed">
+                                                <thead>
+                                                <tr>
+                                                    <th>PERIODE n</th>
+                                                    <th>Capital du en début de période</th>
+                                                    <th>Intérêt (i)</th>
+                                                    <th>Amortissements</th>
+                                                    <th>Assurance</th>
+                                                    <th>Loyer constant</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php for($i=1; $i<=$projet->fincredbail->rlc_de;$i++): ?>
+                                                    <tr class="tr-number">
+                                                        <td><?= $i ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["capital"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["interets"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["amortissement"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["assurance"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["loyer"][$i]) ?></td>
+                                                    </tr>
+                                                <?php endfor; ?>
+                                                <tr class="tr-number">
+                                                    <th style="text-align: center" colspan="2">TOTAL</th>
+
+                                                    <th><?= number_format($projet->fincredbail->tab2["interets"][0]) ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab2["amortissement"][0]) ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab2["assurance"][0]) ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab2["loyer"][0]) ?></th>
+                                                </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if($projet->finescompte): ?>
+                                <div class="tab-pane fade" role="tabpanel" id="finescompte" aria-labelledby="finescompte-tab">
+                                    <h5>ESCOMPTE</h5>
+
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="well">
+                                                <ul class="list" style="list-style-type: none">
+                                                    <li>
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">Montant à escompter : <span class="value"><?= number_format($projet->finescompte->mt_to_escompte) ?></span></li>
+                                                            <li class="list-inline-item">Nombre d’effets de commerce  : <span class="value"><?= $projet->finescompte->nb_effets ?></span></li>
+                                                            <li class="list-inline-item">Taux d’escompte  : <span class="value"><?= $projet->finescompte->taux_escompte * 100 . '%' ?></span></li>
+                                                            <li class="list-inline-item">Nombre de jours entre la date de négociation et le jour d’échéance : <span class="value"><?= $projet->finescompte->nb_jours ?></span></li>
+                                                            <li class="list-inline-item">Taux TVA : <span class="value"><?= $projet->finescompte->taux_tva *100 .'%' ?></span></li>
+                                                            <li class="list-inline-item">Taux centime additionnel : <span class="value"><?= $projet->finescompte->taux_centime *100 . '%' ?></span></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li style="font-weight: 900" class="list-group-item list-group-item-success">Montant de l’Escompte  : <span class="value"><?= number_format($projet->finescompte->mt_escompte) ?></span></li>
+
+                                                    <li>
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">Taux de commission d’endos : <span class="value"><?= $projet->finescompte->taux_com_endos *100 .'%' ?></span></li>
+                                                            <li style="font-weight: 900" class="">Commissions d’endossement : <span class="value"><?= number_format($projet->finescompte->com_endossement) ?></span></li>
+                                                            <li class="list-inline-item">Frais de manipulation ou commission de service par effet : <span class="value"><?= number_format($projet->finescompte->frais_manipulation) ?></span></li>
+                                                            <li style="font-weight: 900" class="">Frais de manipulation : <span class="value"><?= number_format($projet->finescompte->total_frais_manip) ?></span></li>
+                                                            <li class="list-inline-item">Commission d’acceptation par effet  : <span class="value"><?= number_format($projet->finescompte->com_acception) ?></span></li>
+                                                            <li style="font-weight: 900" class="list-inline-item">Commission d’acceptation : <span class="value"><?= number_format($projet->finescompte->total_com_acceptation) ?></span></li>
+                                                            <li class="list-inline-item">Commission d’avis de sort par effet  : <span class="value"><?= number_format($projet->finescompte->com_avis) ?></span></li>
+                                                            <li style="font-weight: 700" class="list-inline-item">Commission d’avis de sort  : <span class="value"><?= number_format($projet->finescompte->total_com_avis) ?></span></li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li style="font-weight: 900" class="list-group-item list-group-item-success">SOMME DES COMMISSIONS : <span class="value"><?= number_format($projet->finescompte->somme_com) ?></span></li>
+                                                    <li>
+                                                        <ul class="list-inline">
+                                                            <li style="font-weight: 700" class="list-inline-item">Montant de la Taxe sur la valeur ajoutée : <span class="value"><?= number_format( $projet->finescompte->mt_tva) ?></span></li>
+                                                            <li style="font-weight: 700" class="list-inline-item">Montant Centime additionnel : <span class="value"><?= number_format($projet->finescompte->mt_cent_add) ?></span></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li style="font-weight: 900" class="list-group-item list-group-item-success">Montant ajusté de la TVA : <span class="value"><?= number_format($projet->finescompte->mt_ajust_tva) ?></span></li>
+                                                </ul>
+                                                <ul class="list-group">
+                                                    <li style="font-weight: 900; font-size: larger" class="list-group-item list-group-item-success">Montant des agios: <span class="value"><?= number_format($projet->finescompte->mt_agios) ?></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            <?php endif; ?>
+                            <?php if($projet->finaffacturage): ?>
+                                <div class="tab-pane fade" role="tabpanel" id="finaffacturage" aria-labelledby="finaffacturage-tab">
+                                    <h5>AFFACTURAGE</h5>
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="well">
+                                                <ul class="list" style="list-style-type: none">
+                                                    <li>
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">Montant à escompter : <span class="value"><?= number_format($projet->finaffacturage->mt_to_escompte) ?></span></li>
+                                                            <li class="list-inline-item">Nombre d’effets de commerce  : <span class="value"><?= $projet->finaffacturage->nb_effets ?></span></li>
+                                                            <li class="list-inline-item">Taux d’escompte  : <span class="value"><?= $projet->finaffacturage->taux_escompte * 100 . '%' ?></span></li>
+                                                            <li class="list-inline-item">Nombre de jours entre la date de négociation et le jour d’échéance : <span class="value"><?= $projet->finaffacturage->nb_jours ?></span></li>
+                                                            <li class="list-inline-item">Taux TVA : <span class="value"><?= $projet->finaffacturage->taux_tva *100 .'%' ?></span></li>
+                                                            <li class="list-inline-item">Taux centime additionnel : <span class="value"><?= $projet->finaffacturage->taux_centime *100 . '%' ?></span></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li style="font-weight: 900" class="list-group-item list-group-item-success">Montant de l’Escompte  : <span class="value"><?= number_format($projet->finaffacturage->mt_escompte) ?></span></li>
+
+                                                    <li>
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">Taux de commission d’endos : <span class="value"><?= $projet->finaffacturage->taux_com_endos *100 .'%' ?></span></li>
+                                                            <li style="font-weight: 900" class="">Commissions d’endossement : <span class="value"><?= number_format($projet->finaffacturage->com_endossement) ?></span></li>
+                                                            <li class="list-inline-item">Frais de manipulation ou commission de service par effet : <span class="value"><?= number_format($projet->finaffacturage->frais_manipulation) ?></span></li>
+                                                            <li style="font-weight: 900" class="">Frais de manipulation : <span class="value"><?= number_format($projet->finaffacturage->total_frais_manip) ?></span></li>
+                                                            <li class="list-inline-item">Commission d’acceptation par effet  : <span class="value"><?= number_format($projet->finaffacturage->com_acceptation) ?></span></li>
+                                                            <li style="font-weight: 900" class="list-inline-item">Commission d’acceptation : <span class="value"><?= number_format($projet->finaffacturage->total_com_acceptation) ?></span></li>
+                                                            <li class="list-inline-item">Commission d’avis de sort par effet  : <span class="value"><?= number_format($projet->finaffacturage->com_avis) ?></span></li>
+                                                            <li style="font-weight: 700" class="list-inline-item">Commission d’avis de sort  : <span class="value"><?= number_format($projet->finaffacturage->total_com_avis) ?></span></li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li style="font-weight: 900" class="list-group-item list-group-item-success">SOMME DES COMMISSIONS : <span class="value"><?= number_format($projet->finaffacturage->somme_com) ?></span></li>
+                                                    <li>
+                                                        <ul class="list-inline">
+                                                            <li style="font-weight: 700" class="list-inline-item">Montant de la Taxe sur la valeur ajoutée : <span class="value"><?= number_format( $projet->finaffacturage->mt_tva) ?></span></li>
+                                                            <li style="font-weight: 700" class="list-inline-item">Montant Centime additionnel : <span class="value"><?= number_format($projet->finaffacturage->mt_cent_add) ?></span></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li style="font-weight: 900" class="list-group-item list-group-item-success">Montant ajusté de la TVA : <span class="value"><?= number_format($projet->finaffacturage->mt_ajust_tva) ?></span></li>
+                                                </ul>
+                                                <ul class="list-group">
+                                                    <li style="font-weight: 900; font-size: larger" class="list-group-item list-group-item-success">Montant des agios: <span class="value"><?= number_format($projet->finaffacturage->mt_agios) ?></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            <?php endif; ?>
+                            <?php if($projet->fincredsignature): ?>
+                                <div class="tab-pane fade" role="tabpanel" id="fincredsignature" aria-labelledby="fincredsignature-tab">
+                                    <h5>CREDIT PAR SIGNATURE</h5>
+                                    <?php if($projet->fincredsignature->creditype_id==1): ?>
+                                        <h6>TYPE DE CREDIT: <span class="value">CAUTIONS</span></h6>
+                                        <ul class="list-group">
+                                            <?php if($projet->fincredsignature->d_p_caution): ?>
+                                                <li class="list-group-item"><?= $projet->fincredsignature->d_p_caution->name ?></li>
+                                            <?php endif; ?>
+                                            <?php if($projet->fincredsignature->a_r_caution): ?>
+                                                <li class="list-group-item"><?= $projet->fincredsignature->a_r_caution->name ?></li>
+                                            <?php endif; ?>
+                                            <?php if($projet->fincredsignature->e_d_caution): ?>
+                                                <li class="list-group-item"><?= $projet->fincredsignature->e_d_caution->name ?></li>
+                                            <?php endif; ?>
+                                        </ul>
+                                    <?php endif; ?>
+
+                                    <?php if($projet->fincredsignature->aval): ?>
+                                        <h6>TYPE DE CREDIT: <span class="value">ACCEPTATIONS ET AVALS -  <?= $projet->fincredsignature->aval->name  ?></span></h6>
+                                    <?php endif; ?>
+                                    <?php if($projet->fincredsignature->lettrecredit): ?>
+                                        <h6>TYPE DE CREDIT: <span class="value">Crédit documentaire ou lettre de crédit -  <?= $projet->fincredsignature->lettrecredit->name  ?></span></h6>
+                                    <?php endif; ?>
+                                    <hr/>
+                                    <ul style="list-style-type: none;">
+                                        <li>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">Le montant du crédit par signature : <span class="value"><?=  number_format($projet->fincredsignature->mt_credit)  ?></span></li>
+                                                <li class="list-inline-item">Taux des commissions :  <span class="value"><?= ($projet->fincredsignature->taux_com * 100) . '%'   ?></span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item list-group-item-success">MONTANT DES COMMISSIONS : <span class="value"><?= $projet->fincredsignature->mt_com;  ?></span></li>
+                                    </ul>
+
+                                </div>
+                            <?php endif; ?>
 						</div>
 					</div>
 				</div>
