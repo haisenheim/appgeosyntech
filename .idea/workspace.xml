@@ -38,8 +38,8 @@
       <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39915967" vertical-offset="32594" max-vertical-offset="38752">
-              <caret line="2355" column="108" selection-start-line="2355" selection-start-column="104" selection-end-line="2355" selection-end-column="108" />
+            <state vertical-scroll-proportion="0.39915967" vertical-offset="32050" max-vertical-offset="38752">
+              <caret line="2321" column="106" selection-start-line="2321" selection-start-column="102" selection-end-line="2321" selection-end-column="106" />
               <folding>
                 <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
@@ -1546,8 +1546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39915967" vertical-offset="32594" max-vertical-offset="38752">
-          <caret line="2355" column="108" selection-start-line="2355" selection-start-column="104" selection-end-line="2355" selection-end-column="108" />
+        <state vertical-scroll-proportion="0.39915967" vertical-offset="32050" max-vertical-offset="38752">
+          <caret line="2321" column="106" selection-start-line="2321" selection-start-column="102" selection-end-line="2321" selection-end-column="106" />
           <folding>
             <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#fieldset#0;tag#div#1;tag#div#0" expanded="false" />

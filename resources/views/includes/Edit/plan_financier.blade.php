@@ -2291,7 +2291,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                                         <div class="col-md-5 col-sm-12">
                                             <div class="form-group">
                                                 <label for="">DUREE DU PRET</label>
-                                                <input type="number" class="form-control mlt" id="ras_du"/>
+                                                <input type="number" class="form-control mlt" id="ras_de"/>
                                             </div>
                                         </div>
 
@@ -2319,7 +2319,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                                         <div class="col-md-5 col-sm-12">
                                             <div class="form-group">
                                                 <label for="">DUREE DU PRET</label>
-                                                <input type="number" class="form-control mlt" id="racc_du"/>
+                                                <input type="number" class="form-control mlt" id="racc_de"/>
                                             </div>
                                         </div>
 
