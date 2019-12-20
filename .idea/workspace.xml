@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="" />
+    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Projet.php" afterPath="$PROJECT_DIR$/app/Models/Projet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -100,8 +103,8 @@
       <file leaf-file-name="Finescompte.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Finescompte.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6" vertical-offset="262" max-vertical-offset="1488">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state vertical-scroll-proportion="-8.96" vertical-offset="944" max-vertical-offset="1488">
+              <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -110,8 +113,8 @@
       <file leaf-file-name="Finaffacturage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Finaffacturage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.76" vertical-offset="948" max-vertical-offset="1488">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.04" vertical-offset="432" max-vertical-offset="1488">
+              <caret line="38" column="66" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -129,21 +132,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fincredbail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Fincredbail.php">
+      <file leaf-file-name="Projet.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.76" vertical-offset="5060" max-vertical-offset="5600">
-              <caret line="344" column="0" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.7137014" vertical-offset="1011" max-vertical-offset="4592">
+              <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+              <folding>
+                <element signature="e#978#1057#0#PHP" expanded="false" />
+                <element signature="e#1061#1147#0#PHP" expanded="false" />
+                <element signature="e#1150#1584#0#PHP" expanded="false" />
+                <element signature="e#1587#2045#0#PHP" expanded="false" />
+                <element signature="e#2048#2563#0#PHP" expanded="false" />
+                <element signature="e#2566#2780#0#PHP" expanded="false" />
+                <element signature="e#2785#3122#0#PHP" expanded="false" />
+                <element signature="e#3125#3338#0#PHP" expanded="false" />
+                <element signature="e#3482#4383#0#PHP" expanded="false" />
+                <element signature="e#4526#4938#0#PHP" expanded="false" />
+                <element signature="e#5231#5449#0#PHP" expanded="false" />
+                <element signature="e#5456#5539#0#PHP" expanded="false" />
+                <element signature="e#5545#5627#0#PHP" expanded="false" />
+                <element signature="e#5630#5706#0#PHP" expanded="false" />
+                <element signature="e#5711#5798#0#PHP" expanded="false" />
+                <element signature="e#5804#5939#0#PHP" expanded="false" />
+                <element signature="e#5943#6034#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69957983" vertical-offset="17459" max-vertical-offset="18912">
-              <caret line="1999" column="180" selection-start-line="1999" selection-start-column="180" selection-end-line="1999" selection-end-column="180" />
+            <state vertical-scroll-proportion="-17.76" vertical-offset="23492" max-vertical-offset="25344">
+              <caret line="1981" column="50" selection-start-line="1981" selection-start-column="50" selection-end-line="1981" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#14;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -167,7 +188,6 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
                 <element signature="e#37617#38013#0#PHP" expanded="false" />
-                <element signature="e#40005#58053#0#PHP" expanded="false" />
                 <element signature="e#58071#76187#0#PHP" expanded="false" />
                 <element signature="e#76226#87571#0#PHP" expanded="false" />
                 <element signature="n#style#0;n#th#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -175,7 +195,6 @@
                 <element signature="e#87609#96536#0#PHP" expanded="false" />
                 <element signature="n#style#0;n#th#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#96574#102671#0#PHP" expanded="false" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -199,7 +218,7 @@
                 <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="tag#div#6;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#109186#110366#0#PHP" expanded="false" />
+                <element signature="e#109161#110341#0#PHP" expanded="false" />
                 <element signature="n#style#0;n#ul#1;n#div#6;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -209,12 +228,18 @@
       <file leaf-file-name="Earlie.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Earlie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0410957" vertical-offset="240" max-vertical-offset="2576">
-              <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+            <state vertical-scroll-proportion="-5.60274" vertical-offset="1879" max-vertical-offset="2384">
+              <caret line="580" column="0" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
               <folding>
                 <element signature="e#175#256#0#PHP" expanded="false" />
                 <element signature="e#259#352#0#PHP" expanded="false" />
                 <element signature="e#355#450#0#PHP" expanded="false" />
+                <element signature="e#453#526#0#PHP" expanded="false" />
+                <element signature="e#529#612#0#PHP" expanded="false" />
+                <element signature="e#615#698#0#PHP" expanded="false" />
+                <element signature="e#701#790#0#PHP" expanded="false" />
+                <element signature="e#793#886#0#PHP" expanded="false" />
+                <element signature="e#889#974#0#PHP" expanded="false" />
                 <element signature="e#977#1056#0#PHP" expanded="false" />
                 <element signature="e#1060#1146#0#PHP" expanded="false" />
                 <element signature="e#1149#1633#0#PHP" expanded="false" />
@@ -325,13 +350,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
         <option value="$PROJECT_DIR$/app/Models/Repartcapitalsocial.php" />
         <option value="$PROJECT_DIR$/app/Models/Infrastructure.php" />
-        <option value="$PROJECT_DIR$/app/Models/Projet.php" />
         <option value="$PROJECT_DIR$/app/Models/Prevresultat.php" />
         <option value="$PROJECT_DIR$/app/Models/Fincapitalsocial.php" />
         <option value="$PROJECT_DIR$/app/Models/Finempobligataire.php" />
         <option value="$PROJECT_DIR$/app/Models/Finmlt.php" />
         <option value="$PROJECT_DIR$/app/Models/Fincredbail.php" />
-        <option value="$PROJECT_DIR$/app/Models/Finescompte.php" />
         <option value="$PROJECT_DIR$/app/Models/Findecouvert.php" />
         <option value="$PROJECT_DIR$/app/Models/Fincredsignature.php" />
         <option value="$PROJECT_DIR$/app/Models/Earlie.php" />
@@ -340,6 +363,8 @@
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Finaffacturage.php" />
+        <option value="$PROJECT_DIR$/app/Models/Finescompte.php" />
+        <option value="$PROJECT_DIR$/app/Models/Projet.php" />
       </list>
     </option>
   </component>
@@ -521,6 +546,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1316,36 +1359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.76" vertical-offset="788" max-vertical-offset="4256">
-          <caret line="354" column="5" selection-start-line="354" selection-start-column="5" selection-end-line="354" selection-end-column="5" />
-          <folding>
-            <element signature="e#363#452#0#PHP" expanded="false" />
-            <element signature="e#455#534#0#PHP" expanded="false" />
-            <element signature="e#538#624#0#PHP" expanded="false" />
-            <element signature="e#627#1061#0#PHP" expanded="false" />
-            <element signature="e#1064#1522#0#PHP" expanded="false" />
-            <element signature="e#1525#2040#0#PHP" expanded="false" />
-            <element signature="e#2043#2257#0#PHP" expanded="false" />
-            <element signature="e#2262#2572#0#PHP" expanded="false" />
-            <element signature="e#2575#2788#0#PHP" expanded="false" />
-            <element signature="e#2932#3836#0#PHP" expanded="false" />
-            <element signature="e#3980#4390#0#PHP" expanded="false" />
-            <element signature="e#4528#4675#0#PHP" expanded="false" />
-            <element signature="e#4679#4899#0#PHP" expanded="false" />
-            <element signature="e#4902#6770#0#PHP" expanded="false" />
-            <element signature="e#6777#6860#0#PHP" expanded="false" />
-            <element signature="e#6866#6948#0#PHP" expanded="false" />
-            <element signature="e#6951#7027#0#PHP" expanded="false" />
-            <element signature="e#7032#7119#0#PHP" expanded="false" />
-            <element signature="e#7125#7260#0#PHP" expanded="false" />
-            <element signature="e#7264#7355#0#PHP" expanded="false" />
-            <element signature="e#7358#7451#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Fincapitalsocial.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9452055" vertical-offset="3746" max-vertical-offset="4560">
@@ -1402,14 +1415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Finescompte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6" vertical-offset="262" max-vertical-offset="1488">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Findecouvert.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.8" vertical-offset="39" max-vertical-offset="560">
@@ -1433,64 +1438,6 @@
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1824">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Earlie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0410957" vertical-offset="240" max-vertical-offset="2576">
-          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-          <folding>
-            <element signature="e#175#256#0#PHP" expanded="false" />
-            <element signature="e#259#352#0#PHP" expanded="false" />
-            <element signature="e#355#450#0#PHP" expanded="false" />
-            <element signature="e#977#1056#0#PHP" expanded="false" />
-            <element signature="e#1060#1146#0#PHP" expanded="false" />
-            <element signature="e#1149#1633#0#PHP" expanded="false" />
-            <element signature="e#1636#2094#0#PHP" expanded="false" />
-            <element signature="e#2097#2612#0#PHP" expanded="false" />
-            <element signature="e#2615#2829#0#PHP" expanded="false" />
-            <element signature="e#2834#4537#0#PHP" expanded="false" />
-            <element signature="e#4541#4878#0#PHP" expanded="false" />
-            <element signature="e#4881#5094#0#PHP" expanded="false" />
-            <element signature="e#5238#6139#0#PHP" expanded="false" />
-            <element signature="e#6282#6694#0#PHP" expanded="false" />
-            <element signature="e#6830#6983#0#PHP" expanded="false" />
-            <element signature="e#6987#7205#0#PHP" expanded="false" />
-            <element signature="e#7209#9209#0#PHP" expanded="false" />
-            <element signature="e#9215#9298#0#PHP" expanded="false" />
-            <element signature="e#9304#9386#0#PHP" expanded="false" />
-            <element signature="e#9389#9465#0#PHP" expanded="false" />
-            <element signature="e#9470#9557#0#PHP" expanded="false" />
-            <element signature="e#9561#9652#0#PHP" expanded="false" />
-            <element signature="e#9659#9751#0#PHP" expanded="false" />
-            <element signature="e#9758#9843#0#PHP" expanded="false" />
-            <element signature="e#9846#9937#0#PHP" expanded="false" />
-            <element signature="e#9944#10034#0#PHP" expanded="false" />
-            <element signature="e#10040#10136#0#PHP" expanded="false" />
-            <element signature="e#10142#10234#0#PHP" expanded="false" />
-            <element signature="e#10240#10326#0#PHP" expanded="false" />
-            <element signature="e#10329#10416#0#PHP" expanded="false" />
-            <element signature="e#10419#10492#0#PHP" expanded="false" />
-            <element signature="e#10497#10575#0#PHP" expanded="false" />
-            <element signature="e#10578#10660#0#PHP" expanded="false" />
-            <element signature="e#10663#10775#0#PHP" expanded="false" />
-            <element signature="e#10778#10862#0#PHP" expanded="false" />
-            <element signature="e#10865#10946#0#PHP" expanded="false" />
-            <element signature="e#10948#11021#0#PHP" expanded="false" />
-            <element signature="e#11026#11114#0#PHP" expanded="false" />
-            <element signature="e#11119#11215#0#PHP" expanded="false" />
-            <element signature="e#11218#11304#0#PHP" expanded="false" />
-            <element signature="e#11309#11400#0#PHP" expanded="false" />
-            <element signature="e#11403#11519#0#PHP" expanded="false" />
-            <element signature="e#11522#11679#0#PHP" expanded="false" />
-            <element signature="e#11682#11827#0#PHP" expanded="false" />
-            <element signature="e#11830#12126#0#PHP" expanded="false" />
-            <element signature="e#12129#12292#0#PHP" expanded="false" />
-            <element signature="e#12295#12635#0#PHP" expanded="false" />
-            <element signature="e#12638#13343#0#PHP" expanded="false" />
-            <element signature="e#13346#13614#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1545,18 +1492,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Finaffacturage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.76" vertical-offset="948" max-vertical-offset="1488">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69957983" vertical-offset="17459" max-vertical-offset="18912">
-          <caret line="1999" column="180" selection-start-line="1999" selection-start-column="180" selection-end-line="1999" selection-end-column="180" />
+        <state vertical-scroll-proportion="-17.76" vertical-offset="23492" max-vertical-offset="25344">
+          <caret line="1981" column="50" selection-start-line="1981" selection-start-column="50" selection-end-line="1981" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#14;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1580,7 +1519,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="e#37617#38013#0#PHP" expanded="false" />
-            <element signature="e#40005#58053#0#PHP" expanded="false" />
             <element signature="e#58071#76187#0#PHP" expanded="false" />
             <element signature="e#76226#87571#0#PHP" expanded="false" />
             <element signature="n#style#0;n#th#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1588,7 +1526,6 @@
             <element signature="e#87609#96536#0#PHP" expanded="false" />
             <element signature="n#style#0;n#th#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#96574#102671#0#PHP" expanded="false" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1612,8 +1549,114 @@
             <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="tag#div#6;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#109186#110366#0#PHP" expanded="false" />
+            <element signature="e#109161#110341#0#PHP" expanded="false" />
             <element signature="n#style#0;n#ul#1;n#div#6;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Finaffacturage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.04" vertical-offset="432" max-vertical-offset="1488">
+          <caret line="38" column="66" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Finescompte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.96" vertical-offset="944" max-vertical-offset="1488">
+          <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Earlie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.60274" vertical-offset="1879" max-vertical-offset="2384">
+          <caret line="580" column="0" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
+          <folding>
+            <element signature="e#175#256#0#PHP" expanded="false" />
+            <element signature="e#259#352#0#PHP" expanded="false" />
+            <element signature="e#355#450#0#PHP" expanded="false" />
+            <element signature="e#453#526#0#PHP" expanded="false" />
+            <element signature="e#529#612#0#PHP" expanded="false" />
+            <element signature="e#615#698#0#PHP" expanded="false" />
+            <element signature="e#701#790#0#PHP" expanded="false" />
+            <element signature="e#793#886#0#PHP" expanded="false" />
+            <element signature="e#889#974#0#PHP" expanded="false" />
+            <element signature="e#977#1056#0#PHP" expanded="false" />
+            <element signature="e#1060#1146#0#PHP" expanded="false" />
+            <element signature="e#1149#1633#0#PHP" expanded="false" />
+            <element signature="e#1636#2094#0#PHP" expanded="false" />
+            <element signature="e#2097#2612#0#PHP" expanded="false" />
+            <element signature="e#2615#2829#0#PHP" expanded="false" />
+            <element signature="e#2834#4537#0#PHP" expanded="false" />
+            <element signature="e#4541#4878#0#PHP" expanded="false" />
+            <element signature="e#4881#5094#0#PHP" expanded="false" />
+            <element signature="e#5238#6139#0#PHP" expanded="false" />
+            <element signature="e#6282#6694#0#PHP" expanded="false" />
+            <element signature="e#6830#6983#0#PHP" expanded="false" />
+            <element signature="e#6987#7205#0#PHP" expanded="false" />
+            <element signature="e#7209#9209#0#PHP" expanded="false" />
+            <element signature="e#9215#9298#0#PHP" expanded="false" />
+            <element signature="e#9304#9386#0#PHP" expanded="false" />
+            <element signature="e#9389#9465#0#PHP" expanded="false" />
+            <element signature="e#9470#9557#0#PHP" expanded="false" />
+            <element signature="e#9561#9652#0#PHP" expanded="false" />
+            <element signature="e#9659#9751#0#PHP" expanded="false" />
+            <element signature="e#9758#9843#0#PHP" expanded="false" />
+            <element signature="e#9846#9937#0#PHP" expanded="false" />
+            <element signature="e#9944#10034#0#PHP" expanded="false" />
+            <element signature="e#10040#10136#0#PHP" expanded="false" />
+            <element signature="e#10142#10234#0#PHP" expanded="false" />
+            <element signature="e#10240#10326#0#PHP" expanded="false" />
+            <element signature="e#10329#10416#0#PHP" expanded="false" />
+            <element signature="e#10419#10492#0#PHP" expanded="false" />
+            <element signature="e#10497#10575#0#PHP" expanded="false" />
+            <element signature="e#10578#10660#0#PHP" expanded="false" />
+            <element signature="e#10663#10775#0#PHP" expanded="false" />
+            <element signature="e#10778#10862#0#PHP" expanded="false" />
+            <element signature="e#10865#10946#0#PHP" expanded="false" />
+            <element signature="e#10948#11021#0#PHP" expanded="false" />
+            <element signature="e#11026#11114#0#PHP" expanded="false" />
+            <element signature="e#11119#11215#0#PHP" expanded="false" />
+            <element signature="e#11218#11304#0#PHP" expanded="false" />
+            <element signature="e#11309#11400#0#PHP" expanded="false" />
+            <element signature="e#11403#11519#0#PHP" expanded="false" />
+            <element signature="e#11522#11679#0#PHP" expanded="false" />
+            <element signature="e#11682#11827#0#PHP" expanded="false" />
+            <element signature="e#11830#12126#0#PHP" expanded="false" />
+            <element signature="e#12129#12292#0#PHP" expanded="false" />
+            <element signature="e#12295#12635#0#PHP" expanded="false" />
+            <element signature="e#12638#13343#0#PHP" expanded="false" />
+            <element signature="e#13346#13614#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7137014" vertical-offset="1011" max-vertical-offset="4592">
+          <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding>
+            <element signature="e#978#1057#0#PHP" expanded="false" />
+            <element signature="e#1061#1147#0#PHP" expanded="false" />
+            <element signature="e#1150#1584#0#PHP" expanded="false" />
+            <element signature="e#1587#2045#0#PHP" expanded="false" />
+            <element signature="e#2048#2563#0#PHP" expanded="false" />
+            <element signature="e#2566#2780#0#PHP" expanded="false" />
+            <element signature="e#2785#3122#0#PHP" expanded="false" />
+            <element signature="e#3125#3338#0#PHP" expanded="false" />
+            <element signature="e#3482#4383#0#PHP" expanded="false" />
+            <element signature="e#4526#4938#0#PHP" expanded="false" />
+            <element signature="e#5231#5449#0#PHP" expanded="false" />
+            <element signature="e#5456#5539#0#PHP" expanded="false" />
+            <element signature="e#5545#5627#0#PHP" expanded="false" />
+            <element signature="e#5630#5706#0#PHP" expanded="false" />
+            <element signature="e#5711#5798#0#PHP" expanded="false" />
+            <element signature="e#5804#5939#0#PHP" expanded="false" />
+            <element signature="e#5943#6034#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

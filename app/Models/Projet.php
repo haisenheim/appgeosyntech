@@ -14,13 +14,39 @@ class Projet extends Model
 		return $this->belongsTo('App\Models\Moi', 'moi_id');
 	}
 
-    public function type(){
-        return $this->belongsTo('App\Models\Tprojet', 'type_id');
-    }
 
-    public function variante(){
-        return $this->belongsTo('App\Models\Variante');
-    }
+	public function fincapitalsocial(){
+		return $this->hasOne('App\Models\Fincapitalsocial');
+	}
+
+	public function finempobligataire(){
+		return $this->hasOne('App\Models\Finempobligataire');
+	}
+
+	public function finmlt(){
+		return $this->hasOne('App\Models\Finmlt');
+	}
+
+	public function fincredbail(){
+		return $this->hasOne('App\Models\Fincredbail');
+	}
+
+	public function finescompte(){
+		return $this->hasOne('App\Models\Finescompte');
+	}
+
+	public function finaffacturage(){
+		return $this->hasOne('App\Models\Finaffacturage');
+	}
+
+	public function fincredsignature(){
+		return $this->hasOne('App\Models\Fincredsignature');
+	}
+
+	public function findecouvert(){
+		return $this->hasOne('App\Models\Findecouvert');
+	}
+
 
 	public function auteur(){
 		return $this->belongsTo('App\User','author_id');
@@ -144,13 +170,16 @@ class Projet extends Model
 
 		$data =[];
 
-		for($i=0;$i< count($prvrs); $i++){
-			if($i==0){
-				$data[$i]=$prvrs[$i]->ftda;
+
+		foreach($prvrs as $prv){
+			if($prv->position==0){
+				$data[$prv->position]=$prv->ftda;
 			}else{
-				$data[$i] = $data[$i-1]+$prvrs[$i]->ftda;
+				$data[$prv->position]=$prv->ftda+$data[$prv->position-1];
 			}
+
 		}
+
 		return $data ;
 	}
 
@@ -189,7 +218,7 @@ class Projet extends Model
 		}
 
 
-		$nb= count($prvs) +1;
+		$nb= count($prvs);
 
 
 		$plus = 1;
@@ -228,9 +257,8 @@ class Projet extends Model
 	}
 
 
-
 	//--------------------------Calcul du delai de recuperation des capitaux investis -------------------------------------------------------
-	protected function _getPbp(){
+	public function getPbpAttribute(){
 
 		$flux = [];
 
@@ -242,11 +270,11 @@ class Projet extends Model
 		}
 
 
-		$nb= count($prvs) +1;
+		$nb= count($prvs);
 
 		$p=-1;
 		$cumul = 0.00;
-		for($i=1; $i<$nb; $i++)
+		for($i=0; $i<$nb; $i++)
 		{
 
 			$cumul = $cumul + $flux[$i];
@@ -262,15 +290,14 @@ class Projet extends Model
 		return $p;
 	}
 
-
-
 	//-------------------------Calcul de l'indice de profitabilite --------------------------------------------------------------------
-	protected function _getIndiceprofit(){
+	public function getIndiceprofitAttribute(){
+
 		return $this->montant_investissement?round($this->getVanAttribute()/$this->montant_investissement,2):0;
 	}
 
 
-	public function getTaux_distrib_moyenAttribute(){
+	public function getTauxDistribMoyenAttribute(){
 		$projet = Projet::find($this->id);
 
 		$s=0;
@@ -279,6 +306,7 @@ class Projet extends Model
 		}
 		return $s / count($projet->prevresultats);
 	}
+
 
 	public function getVariationsAttribute(){
 		$prevrls = Prevresultat::all()->where('projet_id',$this->id)->sortBy('annee');
@@ -311,10 +339,14 @@ class Projet extends Model
 			$data['rcai'][$i]=$prevrs[$i]->rcai?round((($prevrs[$i+1]->rcai -$prevrs[$i]->rcai)/$prevrs[$i]->rcai)*100,2):0;
 			$data['rn'][$i]=$prevrs[$i]->rn?round((($prevrs[$i+1]->rn -$prevrs[$i]->rn)/$prevrs[$i]->rn)*100,2):0;
 		}
-		for($i=0;$i<$bc-1;$i++){
-			$data['fr'][$i]=$prevbls[$i]->fr?round((($prevbls[$i+1]->fr-$prevbls[$i]->fr)/$prevbls[$i]->fr)*100,2):0;
-			$data['bfr'][$i]=$prevbls[$i]->bfr?round((($prevbls[$i+1]->bfr-$prevbls[$i]->bfr)/$prevbls[$i]->bfr)*100,2):0;
-			$data['tn'][$i]=$prevbls[$i]->tn?round((($prevbls[$i+1]->tn-$prevbls[$i]->tn)/$prevbls[$i]->tn)*100,2):0;
+		$data['bfr'][0]=$prevbls[0]->bfr;
+		$data['fr'][0]=$prevbls[0]->fr;
+		$data['tn'][0]=$prevbls[0]->tn;
+		for($i=1;$i<$bc;$i++){
+			$data['fr'][$i]=$prevbls[$i-1]->fr?round((($prevbls[$i]->fr-$prevbls[$i-1]->fr)/$prevbls[$i-1]->fr)*100,2):0;
+			//$data['bfr']
+			$data['bfr'][$i]=$prevbls[$i-1]->bfr?round((($prevbls[$i]->bfr-$prevbls[$i-1]->bfr)/$prevbls[$i-1]->bfr)*100,2):0;
+			$data['tn'][$i]=$prevbls[$i-1]->tn?round((($prevbls[$i]->tn-$prevbls[$i-1]->tn)/$prevbls[$i-1]->tn)*100,2):0;
 
 		}
 		//dd($data);
@@ -346,13 +378,6 @@ class Projet extends Model
 		return $this->hasMany('App\Models\Investissement');
 	}
 
-	public function fincapitalsocial(){
-		return $this->hasOne('App\Models\Fincapitalsocial');
-	}
-
-	public function finempobligataire(){
-		return $this->hasOne('App\Models\Finempobligataire');
-	}
 
     public function consultant(){
         return $this->belongsTo('App\User','expert_id');
