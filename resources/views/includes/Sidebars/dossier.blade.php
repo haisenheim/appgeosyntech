@@ -17,8 +17,8 @@
 
     @if($projet->etape>=4)
         <ul class="list-group">
-            <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= $projet->montant_investissement ?></span></li>
-            <li class="list-group-item">BESOIN EN FONDS DE ROULEMENT : <span class="value"><?= $projet->bfr ?></span></li>
+            <li class="list-group-item">MONTANT DES INVESTISSEMENT : <span class="value"><?= number_format($projet->montant_investissement,0,',','.') ?></span></li>
+            <li class="list-group-item">BESOIN EN FONDS DE ROULEMENT : <span class="value"><?= number_format($projet->bfr,0,',','.') ?></span></li>
             <li style="font-weight: bold;" class="list-group-item">COUT GLOBAL DU PROJET : <span class="value"><?= number_format(($projet->montant_investissement + $projet->bfr),0,',','.') ?> <sup><?= $projet->devise->abb ?></sup></span></li>
         </ul>
 
@@ -28,7 +28,7 @@
                 @if($projet->moyens)
                     @foreach($projet->financements as $moyen)
 
-                        <li class="list-group-item"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class="value"><?= $moyen->montant ?></span></li>
+                        <li class="list-group-item"><?= $moyen->moyen? $moyen->moyen->name:'-' ?> : <span class=""> <?= number_format($moyen->montant,0,',','.') ?></span></li>
                     @endforeach
                 @endif
             </ul>
