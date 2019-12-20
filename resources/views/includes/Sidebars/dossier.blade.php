@@ -1,3 +1,9 @@
+<style>
+    .btn-synt, .btn-me{
+        display: none;
+    }
+</style>
+
 <?php use \Illuminate\Support\Facades\Auth; ?>
  <div class="card">
     <div class="card-body">
@@ -13,7 +19,7 @@
     <?php endif; ?>
 
 
-        <a href="#" data-toggle="modal" data-target="#meModal" class="btn btn-outline-success btn-block">MODELE ECONOMIQUE</a>
+        <a href="#" data-toggle="modal" data-target="#meModal" class="btn btn-me btn-outline-success btn-block">MODELE ECONOMIQUE</a>
 
     @if($projet->etape>=4)
         <ul class="list-group">
@@ -40,19 +46,19 @@
     <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
     @if($projet->synthese_diagnostic_interne)
-        <button data-toggle="modal" data-target="#synDiagIntModal" class="btn btn-outline-warning btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
+        <button data-toggle="modal" data-target="#synDiagIntModal" class="btn-synt btn btn-outline-warning btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
     @endif
 
     @if($projet->etape>=2)
-        <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn btn-outline-info btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
+        <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagExtModal" class="btn-synt btn btn-outline-info btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC EXTERNE</button>
     @endif
 
     @if($projet->etape>=3)
-        <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn btn-outline-primary btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
+        <button style="margin-top: 7px" data-toggle="modal" data-target="#synDiagStratModal" class="btn-synt btn btn-outline-primary btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC STRATEGIQUE</button>
     @endif
 
      @if($projet->etape>=4)
-        <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn btn-outline-success btn-block btn-xs"><i class="fa fa-pencil"></i> EDITER LE TEASER</button>
+        <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn-synt btn btn-outline-success btn-block btn-xs"><i class="fa fa-pencil"></i> EDITER LE TEASER</button>
     @endif
 
 
