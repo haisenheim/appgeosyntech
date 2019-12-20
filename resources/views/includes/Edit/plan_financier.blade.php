@@ -2750,6 +2750,52 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
         credbail['rac_periode'] = $('#credbail #rac_periode').val();
     }
 
+
+    //--------------------------------- Traitement de l'escompte -----------------------------------------------------------
+            var escompte_section = document.getElementById('escompte');
+            var lts =escompte_section.getElementsByTagName('input');
+            var escompte = {};
+
+
+            for (var n=0; n < lts.length; n++) {
+                var n_ = lts[n].getAttribute('id');
+                if(n_){
+                    escompte[n_] = $('#' + n_).val();
+                }
+
+            }
+
+            //-------------------------------- Traitement du decouvert ------------------------------------------------------
+           /* var decouvert_section = document.getElementById('decouvert');
+            var dms =decouvert_section.getElementsByTagName('input');
+            var decouvert = {};
+
+
+            for (var r=0; r < dms.length; r++) {
+                var r_ = dms[r].getAttribute('id');
+                if(r_){
+                    decouvert[r_] = $('#' + r_).val();
+                }
+
+            }*/
+
+
+            //-------------------------------- Traitement de l'affacturage ------------------------------------------------------
+            var affacturage_section = document.getElementById('affacturage');
+            var lms =affacturage_section.getElementsByTagName('input');
+            var affacturage = {};
+
+
+            for (var y=0; y < lms.length; y++) {
+                var y_ = lms[y].getAttribute('id');
+                if(y_){
+                    affacturage[y_] = $('#' + y_).val();
+                }
+
+            }
+
+
+    //----------------------------Traitement capital social ---------------------------------------------------
     var fincapitalsocial ={};
     var inputs= $('#fincapitalsocial').find('input');
     for(var i=0;i<inputs.length; i++){
@@ -2773,7 +2819,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
         url:saveUrl,
         dataType:'json',
         type:'post',
-        data:{_csrf:$('input[name="_token"]').val(),montage:montage,credbail:credbail,mlt:mlt, oblig:oblig ,resultats:resultats,bilans:bilans,tresoreries:tresoreries,reparts:reparts,fincapitalsocial:fincapitalsocial, moyens:moyens,token:$('#projet_token').val()},
+        data:{_csrf:$('input[name="_token"]').val(),montage:montage,credbail:credbail,escompte:escompte,affacturage:affacturage,mlt:mlt, oblig:oblig ,resultats:resultats,bilans:bilans,tresoreries:tresoreries,reparts:reparts,fincapitalsocial:fincapitalsocial, moyens:moyens,token:$('#projet_token').val()},
         beforeSend:function(xhr){
              xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
 
@@ -3518,6 +3564,7 @@ $('.cell').keyup(function(e){
                  // console.log(9);
               }else{
                   $('#affacturage').hide();
+                   $('#affacturage input').val('');
                  // console.log(-9);
               }
 
@@ -3533,11 +3580,7 @@ $('.cell').keyup(function(e){
 
               $('#head_step-5').show();
 
-           // $('#head_step-7').text('7');
-                /*$('#step-5').show()
-                .css({
-                    'display':'none'
-                });*/
+
 
         }else{
             $('#head_step-5').hide();
@@ -3547,36 +3590,6 @@ $('.cell').keyup(function(e){
 
 
 
-       /* $('.cell').each(function(){
-            if($.isNumeric($(this).text().trim())){
-                val= val + parseInt($(this).text());
-
-                var id = $(this).data('id');
-              //var ids = [1,3,4,5,7,9,10];
-                  if (id == 1 || id == 3 || id == 4 || id == 5 || id == 7 || id == 9 || id == 10) {
-                      found = true;
-                      ids.push(id);
-                  }
-              }
-        });*/
-
-        console.log(ids);
-
-
-
-
-
-
-
-
-        /*if(found){
-
-
-
-        }else{
-            $('#head_step-5').hide();
-            $('#step-5').hide();
-        }*/
 
     });
 
@@ -3612,6 +3625,11 @@ $('.oblig_choice').click(function(){
 
 
 <style>
+
+        .btn-synt, .btn-me{
+            display: none;
+        }
+
          div.note-editor.note-frame{
                     padding: 0;
                 }

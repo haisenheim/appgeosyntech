@@ -1,8 +1,4 @@
-<style>
-    .btn-synt, .btn-me{
-        display: none;
-    }
-</style>
+
 
 <?php use \Illuminate\Support\Facades\Auth; ?>
  <div class="card">

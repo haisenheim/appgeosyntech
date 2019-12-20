@@ -9,9 +9,11 @@ use App\Models\EarliesMoyen;
 use App\Models\Environnement;
 use App\Models\Environnment;
 use App\Models\Etape;
+use App\Models\Finaffacturage;
 use App\Models\Fincapitalsocial;
 use App\Models\Fincredbail;
 use App\Models\Finempobligataire;
+use App\Models\Finescompte;
 use App\Models\Finmlt;
 use App\Models\Modepaiement;
 use App\Models\Moyen;
@@ -251,7 +253,7 @@ class EarlyController extends Controller
 			if($moyen['moyen_id']==4){
 				$fcs = $request->mlt;
 				$fcs['earlie_id']=$projet->id;
-				if($projet->mlt){
+				if($projet->finmlt){
 
 					Finmlt::where('earlie_id',$projet->id)->delete();
 				}
@@ -261,11 +263,31 @@ class EarlyController extends Controller
 			if($moyen['moyen_id']==5){
 				$fcs = $request->credbail;
 				$fcs['earlie_id']=$projet->id;
-				if($projet->credbail){
+				if($projet->fincredbail){
 
 					Fincredbail::where('earlie_id',$projet->id)->delete();
 				}
 				$fcs = Fincredbail::create($fcs);
+			}
+
+			if($moyen['moyen_id']==7){
+				$fcs = $request->escompte;
+				$fcs['earlie_id']=$projet->id;
+				if($projet->finescompte){
+
+					Finescompte::where('earlie_id',$projet->id)->delete();
+				}
+				$fcs = Finescompte::create($fcs);
+			}
+
+			if($moyen['moyen_id']==9){
+				$fcs = $request->affacturage;
+				$fcs['earlie_id']=$projet->id;
+				if($projet->finaffacturage){
+
+					Finaffacturage::where('earlie_id',$projet->id)->delete();
+				}
+				$fcs = Finaffacturage::create($fcs);
 			}
 		}
 
