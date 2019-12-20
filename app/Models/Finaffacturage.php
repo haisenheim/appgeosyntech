@@ -36,12 +36,12 @@ class Finaffacturage extends Model
 
 	//------------------- Calcul du montant de l'escompte ---------------------------------------------------------------
 	public function getMtEscompteAttribute(){
-		return $this->mt_to_escompte * $this->taux_escompte * $this->nb_jours/360;
+		return $this->mt_affacturage * $this->taux_affacturage * $this->nb_jours/360;
 	}
 
 	//-------------------- Calcul de la commission d'endossement --------------------------------------------------------
 	public function getComEndossementAttribute(){
-		return $this->mt_to_escompte * $this->taux_com_endos * $this->nb_jours;
+		return $this->mt_affacturage * $this->taux_com_endos * $this->nb_jours;
 	}
 
 	//------------------- Calcul des frais de manipulation --------------------------------------------------------------

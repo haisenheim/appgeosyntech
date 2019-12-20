@@ -1482,7 +1482,6 @@
 								</div>
 							<?php endif; ?>
 
-
 							<?php if($projet->finempobligataire): ?>
                 <div class="tab-pane <?= !($projet->fincapitalsocial)?'active':'' ?>" role="tabpanel" id="finempobligataire" aria-labelledby="finempobligataire-tab">
                 <h5>EMPRUNT OBLIGATAIRE</h5>
@@ -1492,7 +1491,7 @@
                         <ul class="list-inline">
                             <li class="list-inline-item">Nombre de titre à acheter : <span class="value"><?= $projet->finempobligataire->rif_nbta ?></span> </li>
                             <li class="list-inline-item">Valeur faciale : <span class="value"><?= number_format($projet->finempobligataire->rif_vf) ?></span> </li>
-                            <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->rif_ti * 100 . '%'; ?></span> </li>
+                            <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->rif_ti . '%'; ?></span> </li>
                             <li class="list-inline-item">Durée du prêt : <span class="value"><?= $projet->finempobligataire->rif_dp . ' ANS' ?></span> </li>
                             <li class="list-inline-item">Prix de remboursement : <span class="value"><?= number_format($projet->finempobligataire->rif_pr) ?></span> </li>
                             <li class="list-inline-item">Prime de remboursement : <span class="value"><?= number_format($projet->finempobligataire->primeremb_rif) ?></span> </li>
@@ -1529,7 +1528,7 @@
                         <ul class="list-inline">
                             <li class="list-inline-item">Nombre de titre à acheter : <span class="value"><?= $projet->finempobligataire->rss_nbta ?></span> </li>
                             <li class="list-inline-item">Valeur faciale : <span class="value"><?= number_format($projet->finempobligataire->rss_vf) ?></span> </li>
-                            <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->rss_ti * 100 . '%' ?></span> </li>
+                            <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->rss_ti . '%' ?></span> </li>
                             <li class="list-inline-item">Durée du prêt : <span class="value"><?= $projet->finempobligataire->rss_dp . ' ANS' ?></span> </li>
                             <li class="list-inline-item">Prix de remboursement : <span class="value"><?= number_format($projet->finempobligataire->rss_pr) ?></span> </li>
                             <li class="list-inline-item">Prime de remboursement : <span class="value"><?= number_format($projet->finempobligataire->primerembrss) ?></span> </li>
@@ -1581,7 +1580,7 @@
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item">Nombre de titre à acheter : <span class="value"><?= $projet->finempobligataire->ras_nbta ?></span> </li>
                                                         <li class="list-inline-item">Valeur faciale : <span class="value"><?= number_format($projet->finempobligataire->ras_vf) ?></span> </li>
-                                                        <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->ras_ti *100 .'%' ?></span> </li>
+                                                        <li class="list-inline-item">Taux d’intérêt: <span class="value"><?= $projet->finempobligataire->ras_ti .'%' ?></span> </li>
                                                         <li class="list-inline-item">Durée du prêt : <span class="value"><?= $projet->finempobligataire->ras_dp .' ANS' ?></span> </li>
                                                         <li class="list-inline-item">Prix de remboursement : <span class="value"><?= number_format($projet->finempobligataire->ras_pr) ?></span> </li>
                                                         <li class="list-inline-item">Prime de remboursement : <span class="value"><?= number_format($projet->finempobligataire->primerembrasc) ?></span> </li>
@@ -1702,7 +1701,7 @@
                                             <h6 class="page-header">Remboursement in fine</h6>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->finmlt->rif_se) ?></span> </li>
-                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->rif_ti *100 .'%' ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->rif_ti .'%' ?></span> </li>
                                                 <li class="list-inline-item">PERIODICITE DE REMBOURSEMENT: <span class="value"><?= $projet->finmlt->rif_periode?"ANNUELLE":"MENSUELLE" ?></span> </li>
                                                 <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->finmlt->rif_de . ' ANS'; ?></span> </li>
                                             </ul>
@@ -1748,7 +1747,7 @@
                                             <h6 class="page-header">Remboursement avec amortissement constant du capital </h6>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->finmlt->racc_se) ?></span> </li>
-                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->racc_ti *100 .'%' ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->racc_ti .'%' ?></span> </li>
                                                 <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->finmlt->racc_de. ' ANS' ?></span> </li>
                                             </ul>
                                             <hr/>
@@ -1792,7 +1791,7 @@
                                             <h6 class="page-header">Remboursement par annuités constantes* </h6>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->finmlt->ras_se) ?></span> </li>
-                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->ras_ti*100 .'%' ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->finmlt->ras_ti .'%' ?></span> </li>
                                                 <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->finmlt->ras_de.' ANS' ?></span> </li>
                                                 <li class="list-inline-item">TAUX FICTIF: <span class="value"><?= $projet->finmlt->tf_ras  .'%'; ?></span> </li>
                                                 <li class="list-inline-item">ANNUITE CONSTANTE: <span class="value"><?= number_format($projet->finmlt->annuite_const_ras); ?></span> </li>
@@ -1888,7 +1887,7 @@
                                             <h6 class="page-header">REMBOURSEMENT PAR LOYER CONSTANT:</h6>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">SOMME EMPRUNTEE: <span class="value"><?= number_format($projet->fincredbail->rlc_se) ?></span> </li>
-                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->fincredbail->rlc_ti*100 . '%'; ?></span> </li>
+                                                <li class="list-inline-item">TAUX D'INTERET: <span class="value"><?= $projet->fincredbail->rlc_ti . '%'; ?></span> </li>
                                                 <li class="list-inline-item">PERIODICITE DE REMBOURSEMENT: <span class="value"><?= $projet->fincredbail->rlc_periode?"ANNUELLE":"MENSUELLE" ?></span> </li>
                                                 <li class="list-inline-item">DUREE DE L'EMPRUNT: <span class="value"><?= $projet->fincredbail->rlc_de .' ANS' ?></span> </li>
                                                 <li class="list-inline-item">TAUX FICTIF: <span class="value"><?= $projet->fincredbail->rlc_tf . "%" ?></span> </li>
@@ -1995,15 +1994,15 @@
                                                 <ul class="list" style="list-style-type: none">
                                                     <li>
                                                         <ul class="list-inline">
-                                                            <li class="list-inline-item">Montant à escompter : <span class="value"><?= number_format($projet->finaffacturage->mt_to_escompte) ?></span></li>
+                                                            <li class="list-inline-item">Montant à affacturer : <span class="value"><?= number_format($projet->finaffacturage->mt_affacturage) ?></span></li>
                                                             <li class="list-inline-item">Nombre d’effets de commerce  : <span class="value"><?= $projet->finaffacturage->nb_effets ?></span></li>
-                                                            <li class="list-inline-item">Taux d’escompte  : <span class="value"><?= $projet->finaffacturage->taux_escompte * 100 . '%' ?></span></li>
+                                                            <li class="list-inline-item">Taux d’escompte  : <span class="value"><?= $projet->finaffacturage->taux_affacturage. '%' ?></span></li>
                                                             <li class="list-inline-item">Nombre de jours entre la date de négociation et le jour d’échéance : <span class="value"><?= $projet->finaffacturage->nb_jours ?></span></li>
-                                                            <li class="list-inline-item">Taux TVA : <span class="value"><?= $projet->finaffacturage->taux_tva *100 .'%' ?></span></li>
-                                                            <li class="list-inline-item">Taux centime additionnel : <span class="value"><?= $projet->finaffacturage->taux_centime *100 . '%' ?></span></li>
+                                                            <li class="list-inline-item">Taux TVA : <span class="value"><?= $projet->finaffacturage->taux_tva .'%' ?></span></li>
+                                                            <li class="list-inline-item">Taux centime additionnel : <span class="value"><?= $projet->finaffacturage->taux_centime . '%' ?></span></li>
                                                         </ul>
                                                     </li>
-                                                    <li style="font-weight: 900" class="list-group-item list-group-item-success">Montant de l’Escompte  : <span class="value"><?= number_format($projet->finaffacturage->mt_escompte) ?></span></li>
+                                                    <li style="font-weight: 900" class="list-group-item list-group-item-success">Montant de l'affacturage  : <span class="value"><?= number_format($projet->finaffacturage->mt_escompte) ?></span></li>
 
                                                     <li>
                                                         <ul class="list-inline">
@@ -2066,7 +2065,7 @@
                                         <li>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">Le montant du crédit par signature : <span class="value"><?=  number_format($projet->fincredsignature->mt_credit)  ?></span></li>
-                                                <li class="list-inline-item">Taux des commissions :  <span class="value"><?= ($projet->fincredsignature->taux_com * 100) . '%'   ?></span></li>
+                                                <li class="list-inline-item">Taux des commissions :  <span class="value"><?= ($projet->fincredsignature->taux_com ) . '%'   ?></span></li>
                                             </ul>
                                         </li>
                                         <li class="list-group-item list-group-item-success">MONTANT DES COMMISSIONS : <span class="value"><?= $projet->fincredsignature->mt_com;  ?></span></li>
