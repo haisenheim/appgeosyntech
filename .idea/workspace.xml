@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Projet.php" afterPath="$PROJECT_DIR$/app/Models/Projet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,6 +70,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9345603" vertical-offset="4327" max-vertical-offset="7712">
+              <caret line="299" column="5" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="5" />
+              <folding>
+                <element signature="e#51#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dossier.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,18 +95,19 @@
       <file leaf-file-name="EarlyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.96" vertical-offset="3447" max-vertical-offset="5632">
-              <caret line="277" column="37" selection-start-line="277" selection-start-column="37" selection-end-line="277" selection-end-column="37" />
+            <state vertical-scroll-proportion="-14.08" vertical-offset="2720" max-vertical-offset="4832">
+              <caret line="218" column="8" selection-start-line="218" selection-start-column="8" selection-end-line="290" selection-end-column="9" />
               <folding>
-                <element signature="e#6597#6843#0#PHP" expanded="false" />
-                <element signature="e#6848#7337#0#PHP" expanded="false" />
-                <element signature="e#8325#9031#0#PHP" expanded="false" />
-                <element signature="e#9075#10650#0#PHP" expanded="false" />
-                <element signature="e#10655#10784#0#PHP" expanded="false" />
-                <element signature="e#10787#11027#0#PHP" expanded="false" />
-                <element signature="e#11030#11285#0#PHP" expanded="false" />
-                <element signature="e#11356#11611#0#PHP" expanded="false" />
-                <element signature="e#11684#11943#0#PHP" expanded="false" />
+                <element signature="e#6418#8280#0#PHP" expanded="false" />
+                <element signature="e#6596#6842#0#PHP" expanded="false" />
+                <element signature="e#6847#7336#0#PHP" expanded="false" />
+                <element signature="e#8324#9030#0#PHP" expanded="false" />
+                <element signature="e#9074#10649#0#PHP" expanded="false" />
+                <element signature="e#10654#10783#0#PHP" expanded="false" />
+                <element signature="e#10786#11026#0#PHP" expanded="false" />
+                <element signature="e#11029#11284#0#PHP" expanded="false" />
+                <element signature="e#11355#11610#0#PHP" expanded="false" />
+                <element signature="e#11683#11942#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -120,22 +133,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Findecouvert.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Findecouvert.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.8" vertical-offset="39" max-vertical-offset="560">
-              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-              <folding>
-                <element signature="e#394#673#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Projet.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Projet.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92743766" vertical-offset="1447" max-vertical-offset="5024">
+            <state vertical-scroll-proportion="-5.60274" vertical-offset="1447" max-vertical-offset="5024">
               <caret line="360" column="9" selection-start-line="360" selection-start-column="9" selection-end-line="360" selection-end-column="9" />
               <folding>
                 <element signature="e#260#353#0#PHP" expanded="false" />
@@ -356,7 +357,6 @@
         <option value="$PROJECT_DIR$/resources/views/Consultant/Earlies/create_plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Tremboursement.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
         <option value="$PROJECT_DIR$/app/Models/Repartcapitalsocial.php" />
         <option value="$PROJECT_DIR$/app/Models/Infrastructure.php" />
         <option value="$PROJECT_DIR$/app/Models/Prevresultat.php" />
@@ -368,12 +368,13 @@
         <option value="$PROJECT_DIR$/app/Models/Fincredsignature.php" />
         <option value="$PROJECT_DIR$/app/Models/Earlie.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Finaffacturage.php" />
         <option value="$PROJECT_DIR$/app/Models/Finescompte.php" />
         <option value="$PROJECT_DIR$/app/Models/Projet.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
       </list>
     </option>
   </component>
@@ -613,32 +614,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1339,16 +1314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1351" max-vertical-offset="5344">
-          <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
-          <folding>
-            <element signature="e#2162#4221#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Infrastructure.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.48" vertical-offset="224" max-vertical-offset="3888">
@@ -1447,24 +1412,6 @@
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1824">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.96" vertical-offset="3447" max-vertical-offset="5632">
-          <caret line="277" column="37" selection-start-line="277" selection-start-column="37" selection-end-line="277" selection-end-column="37" />
-          <folding>
-            <element signature="e#6597#6843#0#PHP" expanded="false" />
-            <element signature="e#6848#7337#0#PHP" expanded="false" />
-            <element signature="e#8325#9031#0#PHP" expanded="false" />
-            <element signature="e#9075#10650#0#PHP" expanded="false" />
-            <element signature="e#10655#10784#0#PHP" expanded="false" />
-            <element signature="e#10787#11027#0#PHP" expanded="false" />
-            <element signature="e#11030#11285#0#PHP" expanded="false" />
-            <element signature="e#11356#11611#0#PHP" expanded="false" />
-            <element signature="e#11684#11943#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1646,7 +1593,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Projet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92743766" vertical-offset="1447" max-vertical-offset="5024">
+        <state vertical-scroll-proportion="-5.60274" vertical-offset="1447" max-vertical-offset="5024">
           <caret line="360" column="9" selection-start-line="360" selection-start-column="9" selection-end-line="360" selection-end-column="9" />
           <folding>
             <element signature="e#260#353#0#PHP" expanded="false" />
@@ -1675,6 +1622,35 @@
             <element signature="e#7716#7803#0#PHP" expanded="false" />
             <element signature="e#7809#7944#0#PHP" expanded="false" />
             <element signature="e#7948#8039#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.08" vertical-offset="2720" max-vertical-offset="4832">
+          <caret line="218" column="8" selection-start-line="218" selection-start-column="8" selection-end-line="290" selection-end-column="9" />
+          <folding>
+            <element signature="e#6418#8280#0#PHP" expanded="false" />
+            <element signature="e#6596#6842#0#PHP" expanded="false" />
+            <element signature="e#6847#7336#0#PHP" expanded="false" />
+            <element signature="e#8324#9030#0#PHP" expanded="false" />
+            <element signature="e#9074#10649#0#PHP" expanded="false" />
+            <element signature="e#10654#10783#0#PHP" expanded="false" />
+            <element signature="e#10786#11026#0#PHP" expanded="false" />
+            <element signature="e#11029#11284#0#PHP" expanded="false" />
+            <element signature="e#11355#11610#0#PHP" expanded="false" />
+            <element signature="e#11683#11942#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9345603" vertical-offset="4327" max-vertical-offset="7712">
+          <caret line="299" column="5" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="5" />
+          <folding>
+            <element signature="e#51#87#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -179,7 +179,7 @@ class DossierController extends Controller
 	 */
 
 	public function savePlanFinancier(Request $request){
-		dd($request);
+		//dd($request);
 		$projet = Projet::where('token',$request->token)->first();
 		$projet->montant_investissement = $request->montage['montant'];
 		$projet->bfr= $request->montage['bfr'];
