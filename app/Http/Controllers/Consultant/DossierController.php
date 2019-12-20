@@ -212,10 +212,10 @@ class DossierController extends Controller
 
 		$moyens = $request->moyens;
 		if($projet->moyens){
-			EarliesMoyen::where('projet_id',$projet->id)->delete();
+			Moyens_projet::where('projet_id',$projet->id)->delete();
 		}
 		foreach($moyens as $moyen){
-			$m = new EarliesMoyen();
+			$m = new Moyens_projet();
 			$m->projet_id=$projet->id;
 			$m->moyen_id = $moyen['moyen_id'];
 			$m->montant = $moyen['montant'];

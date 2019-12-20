@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/EarlyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,10 +73,12 @@
       <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9345603" vertical-offset="4327" max-vertical-offset="7712">
-              <caret line="299" column="5" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.3783231" vertical-offset="1495" max-vertical-offset="6496">
+              <caret line="181" column="10" selection-start-line="181" selection-start-column="10" selection-end-line="181" selection-end-column="10" />
               <folding>
                 <element signature="e#51#87#0#PHP" expanded="true" />
+                <element signature="e#2124#4466#0#PHP" expanded="false" />
+                <element signature="e#4741#4962#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1647,10 +1649,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9345603" vertical-offset="4327" max-vertical-offset="7712">
-          <caret line="299" column="5" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.3783231" vertical-offset="1495" max-vertical-offset="6496">
+          <caret line="181" column="10" selection-start-line="181" selection-start-column="10" selection-end-line="181" selection-end-column="10" />
           <folding>
             <element signature="e#51#87#0#PHP" expanded="true" />
+            <element signature="e#2124#4466#0#PHP" expanded="false" />
+            <element signature="e#4741#4962#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
