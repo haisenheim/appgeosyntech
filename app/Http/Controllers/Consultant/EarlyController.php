@@ -215,7 +215,6 @@ class EarlyController extends Controller
 		}
 
 
-
 		$moyens = $request->moyens;
 		if($projet->moyens){
 			EarliesMoyen::where('earlie_id',$projet->id)->delete();

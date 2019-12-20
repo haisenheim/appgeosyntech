@@ -7,6 +7,11 @@ use App\Models\Concurrent;
 use App\Models\Environnement;
 use App\Models\Environnment;
 use App\Models\Etape;
+use App\Models\Finaffacturage;
+use App\Models\Fincapitalsocial;
+use App\Models\Fincredbail;
+use App\Models\Finescompte;
+use App\Models\Finmlt;
 use App\Models\Modepaiement;
 use App\Models\Moyen;
 use App\Models\Moyens_projet;
@@ -14,6 +19,7 @@ use App\Models\Prevbilan;
 use App\Models\Prevresultat;
 use App\Models\Prevtresorerie;
 use App\Models\Projet;
+use App\Models\Repartcapitalsocial;
 use App\Models\Ressource;
 use App\Models\Segment;
 use App\Models\Swot;
@@ -205,12 +211,78 @@ class DossierController extends Controller
 
 
 		$moyens = $request->moyens;
+		if($projet->moyens){
+			EarliesMoyen::where('projet_id',$projet->id)->delete();
+		}
 		foreach($moyens as $moyen){
-			$m = new Moyens_projet();
+			$m = new EarliesMoyen();
 			$m->projet_id=$projet->id;
 			$m->moyen_id = $moyen['moyen_id'];
 			$m->montant = $moyen['montant'];
 			$m->save();
+			if($moyen['moyen_id']==3){
+				if($projet->finempobligataire){
+					Finempobligataire::where('projet_id',$projet->id)->delete();
+				}
+				$fcs = $request->oblig;
+				$fcs['projet_id']=$projet->id;
+				$fcs = Finempobligataire::create($fcs);
+			}
+
+			if($moyen['moyen_id']==1){
+				$fcs = $request->fincapitalsocial;
+				$fcs['projet_id']=$projet->id;
+				if($projet->fincapitalsocial){
+					Repartcapitalsocial::where('fincapitalsocial_id',$projet->fincapitalsocial->id)->delete();
+					Fincapitalsocial::where('projet_id',$projet->id)->delete();
+				}
+				$fcs = Fincapitalsocial::create($fcs);
+				foreach($request->reparts as $repart){
+					$repart['fincapitalsocial_id']=$fcs->id;
+					Repartcapitalsocial::create($repart);
+				}
+
+			}
+
+			if($moyen['moyen_id']==4){
+				$fcs = $request->mlt;
+				$fcs['projet_id']=$projet->id;
+				if($projet->finmlt){
+
+					Finmlt::where('projet_id',$projet->id)->delete();
+				}
+				$fcs = Finmlt::create($fcs);
+			}
+
+			if($moyen['moyen_id']==5){
+				$fcs = $request->credbail;
+				$fcs['projet_id']=$projet->id;
+				if($projet->fincredbail){
+
+					Fincredbail::where('projet_id',$projet->id)->delete();
+				}
+				$fcs = Fincredbail::create($fcs);
+			}
+
+			if($moyen['moyen_id']==7){
+				$fcs = $request->escompte;
+				$fcs['projet_id']=$projet->id;
+				if($projet->finescompte){
+
+					Finescompte::where('projet_id',$projet->id)->delete();
+				}
+				$fcs = Finescompte::create($fcs);
+			}
+
+			if($moyen['moyen_id']==9){
+				$fcs = $request->affacturage;
+				$fcs['projet_id']=$projet->id;
+				if($projet->finaffacturage){
+
+					Finaffacturage::where('projet_id',$projet->id)->delete();
+				}
+				$fcs = Finaffacturage::create($fcs);
+			}
 		}
 
 		return response()->json($projet);
