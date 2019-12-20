@@ -1555,18 +1555,18 @@
                                     <th><?= $i ?></th>
                                     <th><?= $projet->finempobligataire->array_nbtrembrss[$i] ?></th>
                                     <th><?= $projet->finempobligataire->array_nborrss[$i] ?></th>
-                                    <th><?= number_format($projet->finempobligataire->array_amortissementrss[$i]) ?></th>
-                                    <th><?= number_format($projet->finempobligataire->array_interetrss[$i]) ?></th>
-                                    <th><?= number_format($projet->finempobligataire->array_annuiterss[$i]) ?></th>
+                                    <th><?= number_format($projet->finempobligataire->array_amortissementrss[$i],0,',','.') ?></th>
+                                    <th><?= number_format($projet->finempobligataire->array_interetrss[$i],0,',','.') ?></th>
+                                    <th><?= number_format($projet->finempobligataire->array_annuiterss[$i],0,',','.') ?></th>
                                 </tr>
                             <?php endfor; ?>
                             <tr>
                                 <th>TOTAL</th>
                                 <th><?= $projet->finempobligataire->array_nbtrembrss[0] ?></th>
                                 <th>-</th>
-                                <th><?= number_format($projet->finempobligataire->array_amortissementrss[0]) ?></th>
-                                <th><?= number_format($projet->finempobligataire->array_interetrss[0]) ?></th>
-                                <th><?= number_format($projet->finempobligataire->array_annuiterss[0]) ?></th>
+                                <th><?= number_format($projet->finempobligataire->array_amortissementrss[0],0,',','.') ?></th>
+                                <th><?= number_format($projet->finempobligataire->array_interetrss[0],0,',','.') ?></th>
+                                <th><?= number_format($projet->finempobligataire->array_annuiterss[0],0,',','.') ?></th>
                             </tr>
             
                             </tbody>
@@ -1666,9 +1666,9 @@
                                                                     <td><?= $projet->finempobligataire->tab_ras[$i]['nttr'] ?></td>
                                                                     <td><?= $projet->finempobligataire->tab_ras[$i]['nrtr'] ?></td>
                                                                     <td><?= $projet->finempobligataire->tab_ras[$i]['ov'] ?></td>
-                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['interets']) ?></td>
-                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['amortissement']) ?></td>
-                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['annuite']) ?></td>
+                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['interets'],0,',','.') ?></td>
+                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['amortissement'],0,',','.') ?></td>
+                                                                    <td><?= number_format($projet->finempobligataire->tab_ras[$i]['annuite'],0,',','.') ?></td>
                                                                 </tr>
                                                             <?php endfor; ?>
             
@@ -1678,9 +1678,9 @@
                                                                 <td><?= $projet->finempobligataire->tab_ras[0]['nttr'] ?></td>
                                                                 <td><?= $projet->finempobligataire->tab_ras[0]['nrtr'] ?></td>
                                                                 <td></td>
-                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['interets']) ?></td>
-                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['amortissement']) ?></td>
-                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['annuite']) ?></td>
+                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['interets'],0,',','.') ?></td>
+                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['amortissement'],0,',','.') ?></td>
+                                                                <td><?= number_format($projet->finempobligataire->tab_ras[0]['annuite'],0,',','.') ?></td>
                                                             </tr>
             
                                                             </tbody>
@@ -1722,21 +1722,21 @@
                                                 <?php for($i=1;$i<=$projet->finmlt->rif_de;$i++): ?>
                                                     <tr class="tr-number">
                                                         <td><?= $i ?></td>
-                                                        <td><?= number_format($projet->finmlt->array_capital_rif[$i]) ?></td>
-                                                        <td><?= number_format($projet->finmlt->array_interet_rif[$i]) ?></td>
-                                                        <td><?= number_format($projet->finmlt->array_amortissement_rif[$i]) ?></td>
+                                                        <td><?= number_format($projet->finmlt->array_capital_rif[$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->finmlt->array_interet_rif[$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->finmlt->array_amortissement_rif[$i],0,',','.') ?></td>
 
-                                                        <td><?= number_format($projet->finmlt->array_annuite_rif[$i]) ?></td>
+                                                        <td><?= number_format($projet->finmlt->array_annuite_rif[$i],0,',','.') ?></td>
                                                     </tr>
                                                 <?php endfor; ?>
 
                                                 <tr>
                                                     <th colspan="2">TOTAL</th>
 
-                                                    <th><?= number_format($projet->finmlt->array_interet_rif[0]) ?></th>
-                                                    <td><?= number_format($projet->finmlt->array_amortissement_rif[0]) ?></td>
+                                                    <th><?= number_format($projet->finmlt->array_interet_rif[0],0,',','.') ?></th>
+                                                    <td><?= number_format($projet->finmlt->array_amortissement_rif[0],0,',','.') ?></td>
 
-                                                    <td><?= number_format($projet->finmlt->array_annuite_rif[0]) ?></td>
+                                                    <td><?= number_format($projet->finmlt->array_annuite_rif[0],0,',','.') ?></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -1766,11 +1766,11 @@
                                                 <?php for($i=1; $i<=$projet->finmlt->racc_de;$i++): ?>
                                                     <tr class="tr-number">
                                                         <td><?= $i ?></td>
-                                                        <td><?= number_format($projet->finmlt->tab2['capital'][$i]); ?></td>
-                                                        <td><?= number_format($projet->finmlt->tab2['interets'][$i]); ?></td>
-                                                        <td><?= number_format($projet->finmlt->tab2['amortissement'][$i]); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab2['capital'][$i],0,',','.'); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab2['interets'][$i],0,',','.'); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab2['amortissement'][$i],0,',','.'); ?></td>
 
-                                                        <td><?= number_format($projet->finmlt->tab2['annuite'][$i]) ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab2['annuite'][$i],0,',','.') ?></td>
                                                     </tr>
                                                 <?php endfor; ?>
 
@@ -1778,9 +1778,9 @@
                                                 <tr class="tr-number">
                                                     <th style="text-align: center" colspan="2">TOTAL</th>
 
-                                                    <th><?= number_format($projet->finmlt->tab2['interets'][0]) ?></th>
-                                                    <th><?= number_format($projet->finmlt->tab2['amortissement'][0]) ?></th>
-                                                    <th><?= number_format($projet->finmlt->tab2['annuite'][0]) ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab2['interets'][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab2['amortissement'][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab2['annuite'][0],0,',','.') ?></th>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -1813,11 +1813,11 @@
                                                 <?php for($i=1; $i<=$projet->finmlt->ras_de;$i++): ?>
                                                     <tr class="tr-number">
                                                         <td><?= $i ?></td>
-                                                        <td><?= number_format($projet->finmlt->tab['capital'][$i]); ?></td>
-                                                        <td><?= number_format($projet->finmlt->tab['interets'][$i]); ?></td>
-                                                        <td><?= number_format($projet->finmlt->tab['amortissement'][$i]); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab['capital'][$i],0,',','.'); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab['interets'][$i],0,',','.'); ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab['amortissement'][$i],0,',','.'); ?></td>
 
-                                                        <td><?= number_format($projet->finmlt->tab['annuite'][$i]) ?></td>
+                                                        <td><?= number_format($projet->finmlt->tab['annuite'][$i],0,',','.') ?></td>
                                                     </tr>
                                                 <?php endfor; ?>
 
@@ -1825,9 +1825,9 @@
                                                 <tr class="tr-number">
                                                     <th style="text-align: center" colspan="2">TOTAL</th>
 
-                                                    <th><?= number_format($projet->finmlt->tab['interets'][0]) ?></th>
-                                                    <th><?= number_format($projet->finmlt->tab['amortissement'][0]) ?></th>
-                                                    <th><?= number_format($projet->finmlt->tab['annuite'][0]) ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab['interets'][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab['amortissement'][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->finmlt->tab['annuite'][0],0,',','.') ?></th>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -1864,20 +1864,20 @@
                                                 <?php for($i=1; $i<=$projet->fincredbail->rac_de;$i++): ?>
                                                     <tr class="tr-number">
                                                         <td><?= $i ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab1["capital"][$i]) ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab1["interets"][$i]) ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab1["amortissement"][$i]) ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab1["assurance"][$i]) ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab1["loyer"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["capital"][$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["interets"][$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["amortissement"][$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["assurance"][$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab1["loyer"][$i],0,',','.') ?></td>
                                                     </tr>
                                                 <?php endfor; ?>
                                                 <tr class="tr-number">
                                                     <th style="text-align: center" colspan="2">TOTAL</th>
 
-                                                    <th><?= number_format($projet->fincredbail->tab1["interets"][0]) ?></th>
-                                                    <th><?= number_format($projet->fincredbail->tab1["amortissement"][0]) ?></th>
-                                                    <th><?= number_format($projet->fincredbail->tab1["assurance"][0]) ?></th>
-                                                    <th><?= number_format($projet->fincredbail->tab1["loyer"][0]) ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab1["interets"][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab1["amortissement"][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab1["assurance"][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab1["loyer"][0],0,',','.') ?></th>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -1912,22 +1912,21 @@
                                                 <?php for($i=1; $i<=$projet->fincredbail->rlc_de;$i++): ?>
                                                     <tr class="tr-number">
                                                         <td><?= $i ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab2["capital"][$i]) ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab2["interets"][$i]) ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab2["amortissement"][$i]) ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab2["assurance"][$i]) ?></td>
-                                                        <td><?= number_format($projet->fincredbail->tab2["loyer"][$i]) ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["capital"][$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["interets"][$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["amortissement"][$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["assurance"][$i],0,',','.') ?></td>
+                                                        <td><?= number_format($projet->fincredbail->tab2["loyer"][$i],0,',','.') ?></td>
                                                     </tr>
                                                 <?php endfor; ?>
                                                 <tr class="tr-number">
                                                     <th style="text-align: center" colspan="2">TOTAL</th>
 
-                                                    <th><?= number_format($projet->fincredbail->tab2["interets"][0]) ?></th>
-                                                    <th><?= number_format($projet->fincredbail->tab2["amortissement"][0]) ?></th>
-                                                    <th><?= number_format($projet->fincredbail->tab2["assurance"][0]) ?></th>
-                                                    <th><?= number_format($projet->fincredbail->tab2["loyer"][0]) ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab2["interets"][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab2["amortissement"][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab2["assurance"][0],0,',','.') ?></th>
+                                                    <th><?= number_format($projet->fincredbail->tab2["loyer"][0],0,',','.') ?></th>
                                                 </tr>
-
 
                                                 </tbody>
                                             </table>
