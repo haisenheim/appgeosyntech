@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Finescompte extends Model
+class Finaffacturage extends Model
 {
     //
 	protected  $guarded = [];

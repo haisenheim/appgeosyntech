@@ -30,6 +30,22 @@ class Earlie extends Model
 		return $this->hasOne('App\Models\Fincredbail');
 	}
 
+	public function finescompte(){
+		return $this->hasOne('App\Models\Finescompte');
+	}
+
+	public function finaffacturage(){
+		return $this->hasOne('App\Models\Finaffacturage');
+	}
+
+	public function fincredsignature(){
+		return $this->hasOne('App\Models\Fincredsignature');
+	}
+
+	public function findecouvert(){
+		return $this->hasOne('App\Models\Findecouvert');
+	}
+
 	public function auteur(){
 		return $this->belongsTo('App\User','author_id');
 	}

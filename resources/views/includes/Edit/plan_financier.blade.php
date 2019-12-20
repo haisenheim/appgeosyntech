@@ -2495,12 +2495,103 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                             </div>
 
                         </div>
-                        <div class="mfinancement" id="billet_treso">
-                            <h4>FINANCEMENT PAR BILLET DE TRESORERIE</h4>
-
+                        <div class="mfinancement" id="decouvert">
+                            <h4>FINANCEMENT PAR LIGNE DE DECOUVERT</h4>
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="montant">MONTANT DE LA LIGNE DE DECOUVERT</label>
+                                            <input type="number" id="montant" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="frais">FRAIS DE DOSSIER</label>
+                                            <input type="number" id="frais" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="taux">TAUX D'INTERET DEBITEUR</label>
+                                            <input type="number" id="taux" class="form-control"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="mfinancement" id="affacturage">
                             <h4>FINANCEMENT PAR AFFACTURAGE</h4>
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">MONTANT A ESCOMPTER</label>
+                                            <input required type="number" class="form-control affacturage" id="mt_affacturage"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">NOMBRE D'EFFETS</label>
+                                            <input type="number" class="form-control affacturage" id="nb_effets"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">TAUX D'ESCOMPTE</label>
+                                            <input type="text" class="form-control affacturage" id="taux_affacturage"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">NOMBRE DE JOURS</label>
+                                            <input type="number" class="form-control affacturage" id="nb_jours"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">TAUX TVA</label>
+                                            <input type="text" class="form-control affacturage" id="taux_tva"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">TAUX CENT. ADD.</label>
+                                            <input type="text" class="form-control affacturage" id="taux_centime"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">TAUX DE COM. D'ENDOS</label>
+                                            <input type="text" class="form-control affacturage" id="taux_com_endos"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">FRAIS DE MANIPULATION PAR EFFET</label>
+                                            <input type="number" class="form-control affacturage" id="frais_manipulation"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">COMMISSION D'ACCEPTION PAR EFFET</label>
+                                            <input type="number" class="form-control affacturage" id="com_acception"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="">COMMISION D'AVIS DE SORT</label>
+                                            <input type="number" class="form-control affacturage" id="com_avis"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mfinancement" id="billet_treso">
+                            <h4>FINANCEMENT PAR BILLET DE TRESORERIE</h4>
 
                         </div>
                     </div>
@@ -3366,78 +3457,78 @@ $('.cell').keyup(function(e){
                     $('#acapital').show().css({
                     'display':'block'
                     });
-                    console.log(1);
+                   // console.log(1);
 
                 }else{
 
                     $('#capital').hide();
 
                     $('#capital input').val('');
-                    console.log(-1);
+                   // console.log(-1);
                 }
 
 
               if(inArray(3,ids)){
 
                   $('#emp_oblig').show();
-                  console.log(3);
+                  //console.log(3);
 
               }else{
                   $('#emp_oblig').hide();
                   $('.ob').val('');
-                  console.log(-3);
+                  //console.log(-3);
               }
 
 
               if(inArray(4,ids)){
 
                   $('#mlt').show();
-                  console.log(4);
+                  //console.log(4);
 
               }else{
                   $('#mlt').hide();
                   $('.mlt').val('');
-                  console.log(-4);
+                  //console.log(-4);
               }
 
               if(inArray(5,ids)){
 
                   $('#credbail').show();
-                  console.log(5);
+                  //console.log(5);
 
               }else{
                   $('#credbail').hide();
                   $('#credbail input').val();
-                  console.log(-5);
+                  //console.log(-5);
               }
 
               if(inArray(7,ids)){
 
                   $('#escompte').show();
-                  console.log(7);
+                 // console.log(7);
               }else{
                   $('#escompte').hide();
                   $('#escompte input').val('');
-                  console.log(-7);
+                  //console.log(-7);
               }
 
 
               if(inArray(9,ids)){
                   $('#affacturage').show();
-                  console.log(9);
+                 // console.log(9);
               }else{
                   $('#affacturage').hide();
-                  console.log(-9);
+                 // console.log(-9);
               }
 
 
               if(inArray(10,ids)){
 
                   $('#billet_treso').show();
-                  console.log(10);
+                 /// console.log(10);
               }else{
                   $('#billet_treso').hide();
-                  console.log(-10);
+                  //console.log(-10);
               }
 
               $('#head_step-5').show();
