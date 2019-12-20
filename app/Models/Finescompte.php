@@ -36,12 +36,12 @@ class Finescompte extends Model
 
 	//------------------- Calcul du montant de l'escompte ---------------------------------------------------------------
 	public function getMtEscompteAttribute(){
-		return $this->mt_to_escompte * $this->taux_escompte * $this->nb_jours/360;
+		return $this->mt_to_escompte * $this->taux_escompte/100 * $this->nb_jours/360;
 	}
 
 	//-------------------- Calcul de la commission d'endossement --------------------------------------------------------
 	public function getComEndossementAttribute(){
-		return $this->mt_to_escompte * $this->taux_com_endos * $this->nb_jours;
+		return $this->mt_to_escompte * $this->taux_com_endos/100 * $this->nb_jours;
 	}
 
 	//------------------- Calcul des frais de manipulation --------------------------------------------------------------
@@ -66,12 +66,12 @@ class Finescompte extends Model
 
 	//---------------------- Calcul du montant de la taxe sur la valeur ajoutee -----------------------------------------------------
 	public function getMtTvaAttribute(){
-		return ($this->getTotalComAvisAttribute() + $this->getTotalComAcceptationAttribute()+$this->getTotalFraisManipAttribute())* $this->tauxTva;
+		return ($this->getTotalComAvisAttribute() + $this->getTotalComAcceptationAttribute()+$this->getTotalFraisManipAttribute())* $this->taux_tva/100;
 	}
 
 	//---------------------------- Calcul du montant du centime additionnel --------------------------------------------------------
 	public function getMtCentAddAttribute(){
-		return $this->getMtTvaAttribute() * $this->taux_centime;
+		return $this->getMtTvaAttribute() * $this->taux_centime/100;
 	}
 
 	//---------------------- Calcul du montant ajuste de la tva --------------------------------------------------------------------

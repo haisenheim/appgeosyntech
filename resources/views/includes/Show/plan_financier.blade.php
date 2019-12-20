@@ -1945,17 +1945,17 @@
                                                         <ul class="list-inline">
                                                             <li class="list-inline-item">Montant à escompter : <span class="value"><?= number_format($projet->finescompte->mt_to_escompte) ?></span></li>
                                                             <li class="list-inline-item">Nombre d’effets de commerce  : <span class="value"><?= $projet->finescompte->nb_effets ?></span></li>
-                                                            <li class="list-inline-item">Taux d’escompte  : <span class="value"><?= $projet->finescompte->taux_escompte * 100 . '%' ?></span></li>
+                                                            <li class="list-inline-item">Taux d’escompte  : <span class="value"><?= $projet->finescompte->taux_escompte  . '%' ?></span></li>
                                                             <li class="list-inline-item">Nombre de jours entre la date de négociation et le jour d’échéance : <span class="value"><?= $projet->finescompte->nb_jours ?></span></li>
-                                                            <li class="list-inline-item">Taux TVA : <span class="value"><?= $projet->finescompte->taux_tva *100 .'%' ?></span></li>
-                                                            <li class="list-inline-item">Taux centime additionnel : <span class="value"><?= $projet->finescompte->taux_centime *100 . '%' ?></span></li>
+                                                            <li class="list-inline-item">Taux TVA : <span class="value"><?= $projet->finescompte->taux_tva .'%' ?></span></li>
+                                                            <li class="list-inline-item">Taux centime additionnel : <span class="value"><?= $projet->finescompte->taux_centime . '%' ?></span></li>
                                                         </ul>
                                                     </li>
                                                     <li style="font-weight: 900" class="list-group-item list-group-item-success">Montant de l’Escompte  : <span class="value"><?= number_format($projet->finescompte->mt_escompte) ?></span></li>
 
                                                     <li>
                                                         <ul class="list-inline">
-                                                            <li class="list-inline-item">Taux de commission d’endos : <span class="value"><?= $projet->finescompte->taux_com_endos *100 .'%' ?></span></li>
+                                                            <li class="list-inline-item">Taux de commission d’endos : <span class="value"><?= $projet->finescompte->taux_com_endos .'%' ?></span></li>
                                                             <li style="font-weight: 900" class="">Commissions d’endossement : <span class="value"><?= number_format($projet->finescompte->com_endossement) ?></span></li>
                                                             <li class="list-inline-item">Frais de manipulation ou commission de service par effet : <span class="value"><?= number_format($projet->finescompte->frais_manipulation) ?></span></li>
                                                             <li style="font-weight: 900" class="">Frais de manipulation : <span class="value"><?= number_format($projet->finescompte->total_frais_manip) ?></span></li>
@@ -2006,7 +2006,7 @@
 
                                                     <li>
                                                         <ul class="list-inline">
-                                                            <li class="list-inline-item">Taux de commission d’endos : <span class="value"><?= $projet->finaffacturage->taux_com_endos *100 .'%' ?></span></li>
+                                                            <li class="list-inline-item">Taux de commission d’endos : <span class="value"><?= $projet->finaffacturage->taux_com_endos .'%' ?></span></li>
                                                             <li style="font-weight: 900" class="">Commissions d’endossement : <span class="value"><?= number_format($projet->finaffacturage->com_endossement) ?></span></li>
                                                             <li class="list-inline-item">Frais de manipulation ou commission de service par effet : <span class="value"><?= number_format($projet->finaffacturage->frais_manipulation) ?></span></li>
                                                             <li style="font-weight: 900" class="">Frais de manipulation : <span class="value"><?= number_format($projet->finaffacturage->total_frais_manip) ?></span></li>
