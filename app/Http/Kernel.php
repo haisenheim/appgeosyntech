@@ -64,5 +64,7 @@ class Kernel extends HttpKernel
 	    'apporteur' => \App\Http\Middleware\Apporteur::class,
 	    'adminentr' => \App\Http\Middleware\Adminentr::class,
 	    'adminorg' => \App\Http\Middleware\Adminorg::class,
+	    'national' => \App\Http\Middleware\National::class,
+	    'adminag' => \App\Http\Middleware\Adminag::class,
     ];
 }

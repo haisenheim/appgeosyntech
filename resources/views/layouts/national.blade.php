@@ -13,7 +13,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/admin/dashboard" class="nav-link">Accueil</a>
+        <a href="/national/dashboard" class="nav-link">Accueil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -125,7 +125,7 @@
 
 
           <li class="nav-item">
-            <a href="/admin/dashboard" class="nav-link active">
+            <a href="/national/dashboard" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 TABLEAU DE BORD
@@ -144,13 +144,13 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/dossiers" class="nav-link">
+                  <a href="/national/dossiers" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
                     <p>PME</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/admin/projets" class="nav-link">
+                <a href="/national/projets" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>EARLY STAGE</p>
                 </a>
@@ -168,13 +168,13 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/actifs" class="nav-link">
+                  <a href="/national/actifs" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
                     <p>CESSIONS D'ACTIFS</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/admin/creances" class="nav-link">
+                <a href="/national/creances" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>CESSIONS DE CREANCES</p>
                 </a>
@@ -192,13 +192,13 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/partenariats" class="nav-link">
+                  <a href="/national/partenariats" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
                     <p>PPP</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/admin/ressources" class="nav-link">
+                <a href="/national/ressources" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>RES. NATURELLES</p>
                 </a>
@@ -207,7 +207,7 @@
           </li>
 
             <li class="nav-item">
-            <a href="/admin/experts" class="nav-link">
+            <a href="/national/experts" class="nav-link">
               <i class="nav-icon fas fa-user-friends"></i>
               <p>
                 CONSULTANTS
@@ -216,7 +216,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="/admin/angels" class="nav-link">
+            <a href="/national/angels" class="nav-link">
               <i class="nav-icon fas fa-coins"></i>
               <p>
                 INVESTISSEURS
@@ -225,7 +225,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="/admin/apporteurs" class="nav-link">
+            <a href="/national/apporteurs" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
               <p>
                 APPORTEURS D'AFFAIRES
@@ -234,37 +234,12 @@
           </li>
 
           <li class="nav-item">
-            <a href="/admin/porteurs" class="nav-link">
+            <a href="/national/porteurs" class="nav-link">
               <i class="nav-icon fas fa-male"></i>
               <p>
                 ENTREPRENEURS
               </p>
             </a>
-          </li>
-
-
-          <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-code"></i>
-              <p>
-                 ALLIAGES TECHNOLOGIES
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/admin/alliages/creances" class="nav-link">
-                    <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>IMPAYEES</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                <a href="/admin/alliages/payees" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>PAYEES</p>
-                </a>
-                </li>
-            </ul>
           </li>
 
           <li  class="nav-item has-treeview">
@@ -277,25 +252,25 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/finances/performance" class="nav-link">
+                  <a href="/national/finances/performance" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
                     <p>PERFORMANCE</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/finances/creances-client" class="nav-link">
+                    <a href="/national/finances/creances-client" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>CREANCES CLIENT</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/finances/factures/non-payees" class="nav-link">
+                    <a href="/national/finances/factures/non-payees" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>FACTURES A PAYER</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/finances/factures/payees" class="nav-link">
+                    <a href="/national/finances/factures/payees" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>FACTURES PAYEES</p>
                     </a>
@@ -312,66 +287,37 @@
               </p>
             </a>
             <ul style="overflow-y: scroll;" class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/admin/events" class="nav-link">
-                    <i class="far fa-circle text-success nav-icon"></i>
-                    <p>EVENEMENTS</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/admin/agences" class="nav-link">
-                    <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>AGENCES OBAC</p>
-                  </a>
-                </li>
 
 
                 <li class="nav-item">
-                <a href="/admin/entreprises" class="nav-link">
+                <a href="/national/entreprises" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ENTREPRISES</p>
                 </a>
                 </li>
 
                 <li class="nav-item">
-                <a href="/admin/organismes" class="nav-link">
+                <a href="/national/organismes" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ORGANISMES FINANCIERS</p>
                 </a>
                </li>
 
-                <li class="nav-item">
-                  <a href="/admin/tags" class="nav-link">
-                    <i class="far fa-circle text-info nav-icon"></i>
-                    <p>Mots Clefs</p>
-                  </a>
-                </li>
+
               <li class="nav-item">
-                <a href="/admin/villes" class="nav-link">
+                <a href="/national/villes" class="nav-link">
                   <i class="far fa-circle text-success nav-icon"></i>
                   <p>Villes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/admin/users" class="nav-link">
+                <a href="/national/users" class="nav-link">
                   <i class="far fa-circle text-primary nav-icon"></i>
                   <p>Utilisateurs</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="/admin/pays" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pays</p>
-                </a>
-              </li>
 
-              <li class="nav-item">
-                <a href="/admin/params" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Parametres systeme</p>
-                </a>
-              </li>
-              
+
             </ul>
           </li>
 
