@@ -8,6 +8,7 @@ use App\Models\Creance;
 use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CreanceController extends Controller
 {
@@ -19,7 +20,7 @@ class CreanceController extends Controller
     public function index()
     {
         //
-	    $dossiers = Creance::orderBy('created_at','desc')->paginate(10);
+	    $dossiers = Creance::orderBy('created_at','desc')->where('agence_id',Auth::user()->agence_id)->paginate(10);
 
 	    return view('/Adminag/Creances/index')->with(compact('dossiers'));
     }

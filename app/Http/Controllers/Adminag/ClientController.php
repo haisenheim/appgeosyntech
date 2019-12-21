@@ -22,7 +22,7 @@ class ClientController extends Controller
     public function index()
     {
         //
-        $users = User::all()->where('role_id',3);
+        $users = User::all()->where('role_id',3)->where('agence_id',Auth::user()->agence_id);
         // dd($villes);
         // echo "Bonjour tout le monde!!";
 	    $pays = Pay::all();

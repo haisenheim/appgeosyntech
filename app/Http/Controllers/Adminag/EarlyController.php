@@ -25,7 +25,7 @@ class EarlyController extends Controller
     public function index()
     {
         //
-	    $projets = Earlie::orderBy('created_at','desc')->paginate(20);
+	    $projets = Earlie::orderBy('created_at','desc')->where('agence_id',Auth::user()->agence_id)->paginate(20);
 	    return view('/Adminag/Earlies/index')->with(compact('projets'));
     }
 
@@ -52,155 +52,7 @@ class EarlyController extends Controller
 
 
 
-	private function facturer($step, $projet_id){
 
-		$projet = Earlie::find($projet_id);
-		$num =str_pad(Numero::facture(),8,0,STR_PAD_LEFT);
-		$facture_consultant = Facture::where('consultant',1)->where('moi_id',date('m'))->where('annee',date('Y'))->where('owner_id',$projet->expert_id)->first();
-		if(!$facture_consultant){
-			$facture_consultant = Facture::updateOrCreate(['name'=>$num.'EXP-'.date('Y'), 'moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->expert_id, 'consultant'=>1,'token'=>sha1(Auth::user()->id.date('HsmdYi').'CONSULTANT')]);
-		}
-
-		$fapp_id =0;
-		if($projet->owner){
-			if($projet->owner->creator_id){
-				if($projet->owner->creator->role_id==7) {
-					$facture_apporteur = Facture::where('apporteur', 1)->where('moi_id', date('m'))->where('annee', date('Y'))->where('owner_id', $projet->owner->creator_id)->first();
-					if (!$facture_apporteur) {
-						$facture_apporteur = Facture::updateOrCreate(['name' => $num . 'APP-' . date('Y'), 'moi_id' => date('m'), 'annee' => date('Y'), 'owner_id' => $projet->owner->creator_id, 'apporteur' => 1, 'token' => sha1(Auth::user()->id . date('HsmdYi') . 'Apporteur')]);
-
-					}
-					$fapp_id = $facture_apporteur->id;
-				}
-
-			}
-		}
-
-		$facture_alliages = Facture::where('alliages',1)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
-		if(!$facture_alliages){
-			$facture_alliages = Facture::updateOrCreate(['name'=>$num.'ALT-'.date('Y'), 'moi_id'=>date('m'), 'annee'=>date('Y'),  'alliages'=>1,'token'=>sha1(Auth::user()->id.date('HsmdYi').'ALLIAGES')]);
-		}
-
-
-		$paiement = Paiement::updateOrCreate(['moi_id'=>date('m'), 'annee'=>date('Y'), 'owner_id'=>$projet->owner_id,'earlie_id'=>$projet->id,'step'=>$step,
-			'montant'=>$projet->traite,'status'=>1,'facture_consultant_id'=>$facture_consultant->id,'facture_apporteur_id'=>$fapp_id,'facture_alliages_id'=>$facture_alliages->id, 'name'=>'Premier paiement dans le projet '.$projet->name,
-			'montant_consultant'=>$projet->comexpert,'montant_apporteur'=>$projet->commission, 'montant_alliages'=>$projet->comalliages,
-			'user_id'=>Auth::user()->id,'token'=>sha1(Auth::user()->id.date('HsmdYi').'Early_etape1'.$projet->id)]);
-
-
-		//dd($paiement);
-		return $paiement;
-	}
-
-
-	/**
-	 * Validation du premier paiement
-	 */
-
-	public function validateDiagInterne(Request $request, $token){
-		$projet = Earlie::where('token',$token)->first();
-		if($projet->validated_step >= 1){
-			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
-			return back();
-		}
-		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>1]);
-		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		//dd($projet);
-
-		$paiement = $this->facturer(1,$projet->id);
-		//dd($paiement);
-		$data = [
-			'title' => 'Paiement Premiere etape',
-			'heading' => 'Paiement ETAPE 1 - '.$projet->name,
-
-			'paiement'=>$paiement
-		];
-
-		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
-		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		return $pdf->stream('recu-etape1-'. $projet->name.'.pdf');
-	}
-
-	/**
-	 * Validation du deuxieme paiement
-	 */
-
-	public function validateDiagExterne(Request $request, $token){
-		$projet = Earlie::where('token',$token)->first();
-		if($projet->validated_step >= 2){
-			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
-			return back();
-		}
-		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>2]);
-		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		//dd($projet);
-
-		$paiement = $this->facturer(2,$projet->id);
-		//dd($paiement);
-		$data = [
-			'title' => 'Paiement Premiere etape',
-			'heading' => 'Paiement ETAPE 2 - '.$projet->name,
-
-			'paiement'=>$paiement
-		];
-
-		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
-		return $pdf->stream('recu-etape2-'. $projet->name.'.pdf');
-	}
-
-	/**
-	 * Validation du troisieme paiement
-	 */
-
-	public function validateDiagStrategique(Request $request, $token){
-		$projet = Earlie::where('token',$token)->first();
-		if($projet->validated_step >= 3){
-			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
-			return back();
-		}
-		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>3]);
-
-		$paiement = $this->facturer(3,$projet->id);
-		$data = [
-			'title' => 'Paiement Premiere etape',
-			'heading' => 'Paiement ETAPE 3 - '.$projet->name,
-
-			'paiement'=>$paiement
-		];
-
-		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
-		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		return $pdf->stream('recu-etape3-'. $projet->name.'.pdf');
-	}
-
-
-	/**
-	 * Validation du quatrieme paiement
-	 */
-
-	public function validateMontageFinancier(Request $request, $token){
-		$projet = Earlie::where('token',$token)->first();
-		if($projet->validated_step >= 4){
-			$request->session()->flash('danger','Impossible de payer doublement pour la même étape!!!');
-			return back();
-		}
-		$projet= Earlie::updateOrCreate(['token'=>$token],['validated_step'=>4]);
-		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		//dd($projet);
-
-		$paiement = $this->facturer(4,$projet->id);
-		//dd($paiement);
-		$data = [
-			'title' => 'Paiement Premiere etape',
-			'heading' => 'Paiement ETAPE 4 - '.$projet->name,
-
-			'paiement'=>$paiement
-		];
-
-		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
-		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
-		return $pdf->stream('recu-etape4-'. $projet->name.'.pdf');
-	}
 
 	/*
 	 * Bloquer le dossier
@@ -220,101 +72,9 @@ class EarlyController extends Controller
 		return redirect()->back();
 	}
 
-	/*
-	 *
-	 */
-	public function closeDoc(Request $request, $token){
-		Investissement::updateOrCreate(['token'=>$token],['doc_juridique'=>0]);
-		$request->session()->flash('success',' Fermeture de la documentation juridique!!!');
-		return redirect()->back();
-	}
-
-	public function openDoc(Request $request, $token){
-		Investissement::updateOrCreate(['token'=>$token],['doc_juridique'=>1]);
-		$request->session()->flash('success',' Ouverture de la documentation juridique!!!');
-		return redirect()->back();
-	}
-
-	/*
-	 * Valider l'ordre de virement
-	 */
-	public function validateOrdre(Request $request, $token){
-		Earlie::updateOrCreate(['token'=>$token],['ordrevirement_validated'=>1]);
-		$request->session()->flash('success',' Ordre de virement validé!!!');
-		return redirect()->back();
-	}
-
-	/*
-	 * Valider l'ordre de virement
-	 */
-	public function unvalidateOrdre(Request $request, $token){
-		Earlie::updateOrCreate(['token'=>$token],['ordrevirement_validated'=>0]);
-		$request->session()->flash('warning',' Ordre de virement rejeté!!!');
-		return redirect()->back();
-	}
-
-	public function createLetter($token){
-		$invest = Investissement::where('token',$token)->first();
-		$letter = $invest->lettre;
-		if($letter){
-			// Creating the new document...
-			$phpWord = new \PhpOffice\PhpWord\PhpWord();
-
-			/* Note: any element you append to a document must reside inside of a Section. */
-
-// Adding an empty Section to the document...
-			$section = $phpWord->addSection();
-// Adding Text element to the Section having font styled by default...
-
-			$section->addText(
-				'La présente lettre d’intention décrit les principales conditions et '
-				.'modalités selon lesquelles l’investissement envisagé dans le projet  '. $invest->projet->name .'  pourrait être réalisé. '
-			);
-
-			$section->addText(
-				'Elle ne constitue en aucun cas un engagement ferme et irrévocable des parties de procéder à cet investissement. '
-			);
-
-			$section->addText(
-				'Cette lettre d’intention a été préparée sur la base et en l’état des informations reçues de la Société à ce jour, et particulièrement du business plan qui ont été préparés par les Fondateurs.'
-			);
-
-			$choix = '';
-			if($invest->lettre->personnel){
-				$choix = 'Mon compte personnel';
-			}else{
-				if($invest->angel->entreprise){
-					$choix= $invest->angel->entreprise->name;
-				}else{
-					if($invest->angel->organisme){
-						$choix = $invest->angel->organisme->name;
-					}
-				}
-			}
-
-			$section->addText(
-				'Le montant total de l’investissement étant estimé à '. $invest->projet->montant .' ' . $invest->projet->devise->name.', je, soussigné, '. $invest->angel?$invest->angel->name:' Inconnu' .', agissant pour'. $invest->lettre->personnel?' Mon propre compte':' le compte de '.$choix.', manifeste le souhait de participer à cette opération sous forme de '. $invest->lettre->type->name .'  à hauteur de '.$invest->lettre->montant .' ' . $invest->lettre->devise->name
-			);
 
 
 
-			// Saving the document as OOXML file...
-			$objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-			try{
-				$objWriter->save(public_path('files/docs').'/Lettre_intention.docx');
-			}catch (Exception $e){
-
-			}
-
-			return response()->download(public_path('files/docs').'/Lettre_intention.docx');
-
-
-
-		}else{
-			return back();
-		}
-
-	}
 
     /**
      * Display the specified resource.
@@ -326,7 +86,7 @@ class EarlyController extends Controller
     {
 	    $projet = Earlie::where('token',$token)->first();
 
-	    $experts = User::all()->where('role_id',2);
+	    $experts = User::all()->where('role_id',2)->where('agence_id',Auth::user()->agence_id);
 	    return view('/Admin/Earlies/show')->with(compact('projet','experts'));
     }
 
