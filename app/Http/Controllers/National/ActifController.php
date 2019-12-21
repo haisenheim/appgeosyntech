@@ -19,7 +19,7 @@ class ActifController extends Controller
     public function index()
     {
         //
-	    $projets = Actif::whereHas('user', function($q){
+	    $projets = Actif::whereHas('owner', function($q){
 		    $q->where('condition', '=', Auth::user()->agence_id);
 	    });
 
