@@ -1,4 +1,4 @@
-@extends('......layouts.consultant')
+@extends('......layouts.adminag')
 
 @section('page-title')
 DOSSIERS DE PARTENARIATS PUBLIC - PRIVE
