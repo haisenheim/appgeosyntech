@@ -146,9 +146,6 @@
                             <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
 
                           </div>
-
-
-
                           </div>
                           <!-- /.card-body -->
 

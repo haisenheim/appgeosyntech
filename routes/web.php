@@ -182,8 +182,6 @@ Route::prefix('national')
 	->group(function(){
 		Route::resource('organismes','OrganismeController');
 		Route::resource('entreprises','EntrepriseController');
-
-
 		//Finances
 		Route::get('apporteur/creances/{token}','FinanceController@getCreancesApporteur');
 		Route::get('apporteur/payees/{token}','FinanceController@getPayeesApporteur');

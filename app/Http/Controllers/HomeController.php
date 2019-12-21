@@ -55,7 +55,7 @@ class HomeController extends Controller
 		        return redirect('apporteur/clients');
 	        }
 	        if(Auth::user()->role_id==8){
-		        return redirect('national/cashboard');
+		        return redirect('national/dashboard');
 	        }
 	        if(Auth::user()->role_id==9){
 		        return redirect('adminag/dashboard');
