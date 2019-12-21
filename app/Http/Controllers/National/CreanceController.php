@@ -8,6 +8,7 @@ use App\Models\Creance;
 use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CreanceController extends Controller
 {
