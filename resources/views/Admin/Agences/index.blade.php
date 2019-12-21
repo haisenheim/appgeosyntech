@@ -193,18 +193,19 @@
   });
 
   $('#pay_id').change(function() {
+  $('#ville_id').html('');
     $.ajax({
         url:'/get-villes-pay',
         type:'get',
         dataType:'json',
         data:{pay_id:$('#pay_id').val()},
         success:function(data) {
-          $('#ville_id').html('');
+
           var html ='';
           for(var i=0;i<data.length;i++){
           html= html + '<option value="'+ data[i].id +'">'+ data[i].name +'</option>';
           }
-
+          console.log(html);
           $('#ville_id').html(html);
         }
 
