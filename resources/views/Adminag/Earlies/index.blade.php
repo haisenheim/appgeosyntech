@@ -56,7 +56,7 @@
 
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/admin/projets/{{ $projet->token  }}">
+                          <a class="btn btn-primary btn-xs" href="/adminag/projets/{{ $projet->token  }}">
                               <i class="fas fa-folder">
                               </i>
                               Afficher

@@ -1305,7 +1305,7 @@
                        <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
                    </p>
                    @else
-                                <form class="form-inline"  action="/admin/projet/expert">
+                                <form class="form-inline"  action="/adminag/projet/expert">
                                 {{csrf_field()}}
                                 <input type="hidden" name="id" value="{{ $projet->id }}"/>
                                     <div class="form-group">
@@ -1469,7 +1469,7 @@
         $(document).ready(function(){
            // var orm = 'http://localhost/ormsys/api/';
             $.ajax({
-                url: "/admin/projet/getchoices",
+                url: "/adminag/projet/getchoices",
                 type:'Get',
                 dataType:'json',
                 data:{id:$('#token').val()},
@@ -1595,51 +1595,46 @@
             @endif
             @if($projet->etape==1 && $projet->validated_step==0 && $projet->modepaiement_id>0)
                    <li>
-                        <a  title="Valider le premier paiement" class="ripple" href="/admin/projet/validate-diag-interne/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
+                        <a  title="Valider le premier paiement" class="ripple" href="/adminag/projet/validate-diag-interne/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
                    </li>
             @endif
             @if($projet->etape==2 && $projet->validated_step<2 )
                    <li>
-                        <a  title="Valider le deuxieme paiement" class="ripple" href="/admin/projet/validate-diag-externe/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
+                        <a  title="Valider le deuxieme paiement" class="ripple" href="/adminag/projet/validate-diag-externe/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
                    </li>
             @endif
             @if($projet->etape==3 && $projet->validated_step<3 )
                    <li>
-                        <a  title="Valider le troisieme paiement" class="ripple" href="/admin/projet/validate-plan-strategique/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
+                        <a  title="Valider le troisieme paiement" class="ripple" href="/adminag/projet/validate-plan-strategique/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
                    </li>
             @endif
             @if($projet->etape==4 && $projet->validated_step<4 )
                    <li>
-                        <a  title="Valider le quatrieme paiement" class="ripple" href="/admin/projet/validate-plan-financier/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
+                        <a  title="Valider le quatrieme paiement" class="ripple" href="/adminag/projet/validate-plan-financier/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
                    </li>
             @endif
 
              @if($projet->etape==4 && $projet->validated_step>=4 )
                 @if($projet->ordrevirement_validated)
                    <li>
-                        <a  title="Rejeter l'ordre de virement" class="ripple" href="/admin/projet/disvalidate-ordre-virement/{{ $projet->token }}"><i class="fa fa-trash"></i></a>
+                        <a  title="Rejeter l'ordre de virement" class="ripple" href="/adminag/projet/disvalidate-ordre-virement/{{ $projet->token }}"><i class="fa fa-trash"></i></a>
                    </li>
                  @else
                    <li>
-                        <a  title="Valider l'ordre de virement" class="ripple" href="/admin/projet/validate-ordre-virement/{{ $projet->token }}"><i class="fa fa-check"></i></a>
+                        <a  title="Valider l'ordre de virement" class="ripple" href="/adminag/projet/validate-ordre-virement/{{ $projet->token }}"><i class="fa fa-check"></i></a>
                    </li>
                  @endif
             @endif
 
             @if($projet->active )
                    <li>
-                        <a  title="Bloquer le dossier" class="ripple" href="/admin/projet/disable/{{ $projet->token }}"><i class="fa fa-lock"></i></a>
+                        <a  title="Bloquer le dossier" class="ripple" href="/adminag/projet/disable/{{ $projet->token }}"><i class="fa fa-lock"></i></a>
                    </li>
              @else
                     <li>
-                        <a  title="debloquer le dossier" class="ripple" href="/admin/projet/enable/{{ $projet->token }}"><i class="fa fa-unlock"></i></a>
+                        <a  title="debloquer le dossier" class="ripple" href="/adminag/projet/enable/{{ $projet->token }}"><i class="fa fa-unlock"></i></a>
                    </li>
             @endif
-
-
-
-
-
         </ul>
         <div class="menu-bg"></div>
     </nav>
@@ -1714,7 +1709,7 @@
                                                 </button>
                                                 <div class="dropdown-menu" role="menu">
                                                  <?php if($invest->lettre): ?>
-                                                    <a class="dropdown-item" href="/admin/letter/create/{{ $invest->token }}">Lettre d'intention</a>
+                                                    <a class="dropdown-item" href="/adminag/letter/create/{{ $invest->token }}">Lettre d'intention</a>
                                                   <?php endif; ?>
                                                   <?php if(!$invest->doc_juridique): ?>
                                                     <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/projet/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
@@ -1722,9 +1717,9 @@
                                                     <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/admin/projet/docs/close/{{ $invest->token }}">Fermer la documentation</a>
                                                   <?php endif; ?>
                                                   <?php if($invest->validated): ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
+                                                    <a class="dropdown-item" href="/adminag/investissements/close/{{ $invest->token }}">Fermer la data room</a>
                                                   <?php else: ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
+                                                    <a class="dropdown-item" href="/adminag/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
                                                   <?php endif; ?>
 
                                                 </div>
