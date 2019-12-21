@@ -21,7 +21,7 @@ class ActifController extends Controller
         //
 	    $projets = Actif::whereHas('owner', function($q){
 		    $q->where('pay_id','=' ,Auth::user()->pay_id);
-	    })->all();
+	    })->get();
 
 	    return view('/National/Actifs/index')->with(compact('projets'));
     }
