@@ -77,7 +77,7 @@ class User extends Authenticatable
 
 	public function getRangAttribute(){
 		$rang = 'toto';
-
+		return $rang;
 	}
 
 }
