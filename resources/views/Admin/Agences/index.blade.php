@@ -202,7 +202,8 @@
         data:{pay_id:$('#pay_id').val()},
         success:function(data) {
 
-          console.log(data);
+          console.log(Object.entries(data));
+          data = Object.entries(data);
           for(var i=0;i<data.length;i++){
           html= html + '<option value="'+ data[i].id +'">'+ data[i].name +'</option>';
           console.log(html);
