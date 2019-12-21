@@ -202,13 +202,13 @@
         data:{pay_id:$('#pay_id').val()},
         success:function(data) {
 
-          console.log(Object.entries(data));
+         // console.log(Object.entries(data));
           data = Object.entries(data);
           for(var i=0;i<data.length;i++){
           html= html + '<option value="'+ data[i][1].id +'">'+ data[i][1].name +'</option>';
-          console.log(html);
+          //console.log(html);
           }
-          console.log(html);
+          //console.log(html);
           $('#ville_id').html(html);
         }
 
