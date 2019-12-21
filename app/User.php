@@ -76,19 +76,8 @@ class User extends Authenticatable
 	}
 
 	public function getRangAttribute(){
-		if($this->role_id==2){
-			if($this->senior){
-				return 'senior';
-			}
-			if($this->confirmed){
-				return 'confirmé';
-			}
+		$rang = 'toto';
 
-			return 'junior';
-
-		}
-
-		return '';
 	}
 
 }
