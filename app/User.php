@@ -76,8 +76,20 @@ class User extends Authenticatable
 	}
 
 	public function getRangAttribute(){
-		$rang = 'toto';
-		return $rang;
+		$rang = '';
+		if($this->role_id==2){
+			if($this->senior){
+				$rang= 'senior';
+			}
+			if($this->confirmed){
+				$rang= 'confirmé';
+			}
+
+			$rang= 'junior';
+
+		}
+
+		return '';
 	}
 
 }

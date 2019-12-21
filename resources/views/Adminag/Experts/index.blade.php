@@ -42,13 +42,25 @@
                     </thead>
                     <tbody>
                         @foreach($users as $user)
+
+                            <?php
+                                 $rang= 'junior';
+                                if($user->senior){
+                                    $rang= 'senior';
+                                }
+                                if($user->confirmed){
+                                    $rang= 'confirmé';
+                                }
+
+
+                            ?>
                             <tr>
                                 <td>{!! $user->last_name !!} </td>
                                 <td>{!! $user->first_name !!} </td>
                                 <td>{!! $user->address !!} </td>
                                 <td>{!! $user->phone !!} </td>
                                 <td>{!! $user->email !!} </td>
-                                <td><?= $user->rang ?> </td>
+                                <td><?= $rang ?> </td>
                                 <td>
 
                                 </td>
