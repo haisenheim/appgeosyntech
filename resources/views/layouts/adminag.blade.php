@@ -215,15 +215,6 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/adminag/angels" class="nav-link">
-              <i class="nav-icon fas fa-coins"></i>
-              <p>
-                INVESTISSEURS
-              </p>
-            </a>
-          </li>
-
 
           <li class="nav-item">
             <a href="/adminag/porteurs" class="nav-link">
