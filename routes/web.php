@@ -175,10 +175,10 @@ Route::prefix('admin')
     });
 
 
-Route::prefix('admin')
-	->namespace('Admin')
-	->middleware(['auth','admin'])
-	->name('admin.')
+Route::prefix('national')
+	->namespace('National')
+	->middleware(['auth','national'])
+	->name('national.')
 	->group(function(){
 		Route::resource('organismes','OrganismeController');
 		Route::resource('entreprises','EntrepriseController');
@@ -194,7 +194,7 @@ Route::prefix('admin')
 		Route::get('consultant/facture/{token}','FinanceController@showFactureConsultant');
 
 
-		Route::get('test','FinanceController@test');
+
 
 		// Actifs
 		Route::resource('actifs','ActifController');
@@ -263,6 +263,94 @@ Route::prefix('admin')
 		Route::post('villes/save','VilleController@save');
 		Route::get('params/','ParametresController@index');
 		Route::post('params/','ParametresController@store');
+		Route::get('dossier/docs/open/{token}','ProjetController@openDoc');
+		Route::get('dossier/docs/close/{token}','ProjetController@closeDoc');
+		Route::get('dossier/enable/{token}','ProjetController@enable');
+		Route::get('dossier/disable/{token}','ProjetController@disable');
+		Route::get('dossier/validate-ordre-virement/{token}','ProjetController@validateOrdre');
+		Route::get('dossier/disvalidate-ordre-virement/{token}','ProjetController@unvalidateOrdre');
+		Route::get('/letter/create/{token}','ProjetController@createLetter');
+		Route::get('investissement/doc/validate/{token}','InvestissementController@validateDoc');
+		Route::get('investissement/doc/reject/{token}','InvestissementController@rejectDoc');
+		Route::get('investissement/doc/display/{token}','InvestissementController@displayDoc');
+		Route::get('investissement/justificatif/validate/{token}','InvestissementController@validateJustificatif');
+		Route::get('investissement/justificatif/reject/{token}','InvestissementController@rejectJustificatif');
+		Route::get('investissement/justificatif/display/{token}','InvestissementController@displayJustificatif');
+	});
+
+Route::prefix('adminag')
+	->namespace('Adminag')
+	->middleware(['auth','adminag'])
+	->name('adminag.')
+	->group(function(){
+
+
+		// Actifs
+		Route::resource('actifs','ActifController');
+		Route::get('actif/expert','ActifController@addExpert');
+		Route::get('actif/close/{token}','ActifController@close');
+
+
+		Route::resource('dossiers','ProjetController');
+
+		//  Pojets Early stage
+		Route::resource('projets','EarlyController');
+		Route::get('projet/expert','EarlyController@addExpert');
+		Route::get('projet/getchoices','EarlyController@getChoicesJson');
+		Route::get('projet/validate-diag-interne/{token}','EarlyController@validateDiagInterne');
+		Route::get('projet/validate-diag-externe/{token}','EarlyController@validateDiagExterne');
+		Route::get('projet/validate-plan-strategique/{token}','EarlyController@validateDiagStrategique');
+		Route::get('projet/validate-plan-financier/{token}','EarlyController@validateMontageFinancier');
+
+
+		//  Pojets de Partenariats public-prive
+		Route::resource('partenariats','InfrastructureController');
+		Route::get('partenariat/expert','InfrastructureController@addExpert');
+		Route::get('partenariat/getchoices','InfrastructureController@getChoicesJson');
+		Route::get('partenariat/validate-diag-interne/{token}','InfrastructureController@validateDiagInterne');
+		Route::get('partenariat/validate-diag-externe/{token}','InfrastructureController@validateDiagExterne');
+		Route::get('partenariat/validate-plan-strategique/{token}','InfrastructureController@validateDiagStrategique');
+		Route::get('partenariat/validate-plan-financier/{token}','InfrastructureController@validateMontageFinancier');
+		Route::get('partenariat/disable/{token}','InfrastructureController@disable')->name('disable.infrastructure');
+		Route::get('partenariat/enable/{token}','InfrastructureController@enable')->name('enable.infrastructure');
+
+		Route::post('partenariat/publish','InfrastructureController@publish')->name('publish.infrastructure');
+		Route::get('partenariat/receive/{token}','InfrastructureController@receive')->name('receive.infrastructure');
+		Route::get('partenariat/select-consortia','InfrastructureController@selectConsortia');
+		Route::get('partenariat/remise-first/{token}','InfrastructureController@remiseFirst');
+		Route::get('partenariat/select-bidders/{token}','InfrastructureController@selectBidders');
+		Route::get('partenariat/remise-final-offer/{token}','InfrastructureController@remiseFinal');
+		Route::get('partenariat/select-concessionnaire','InfrastructureController@selectConcessionnaire');
+		Route::get('partenariat/signature/{token}','InfrastructureController@signature');
+
+		// Creances
+		Route::resource('creances','CreanceController');
+		Route::get('creance/disable/{token}','CreanceController@disable')->name('disable.creance');
+		Route::get('creances/enable/{token}','CreanceController@enable')->name('enable.creance');
+		Route::get('creance/expert','CreanceController@addExpert');
+		Route::get('creance/close/{token}','CreanceController@close');
+		Route::get('creance/pay/{token}','CreanceController@pay');
+
+		Route::resource('users','UserController');
+
+		Route::resource('porteurs','ClientController');
+		Route::resource('experts','ExpertController');
+
+
+		Route::resource('dossiers','ProjetController');
+		Route::get('dashboard','DashboardController');
+
+		Route::get('dossier/expert','ProjetController@addExpert');
+		Route::get('dossier/getchoices','ProjetController@getChoicesJson');
+		Route::get('dossier/validate-diag-interne/{token}','ProjetController@validateDiagInterne');
+		Route::get('dossier/validate-diag-externe/{token}','ProjetController@validateDiagExterne');
+		Route::get('dossier/validate-plan-strategique/{token}','ProjetController@validateDiagStrategique');
+		Route::get('dossier/validate-plan-financier/{token}','ProjetController@validateMontageFinancier');
+		Route::get('actif/disable/{token}','ActifController@disable')->name('disable.actif');
+		Route::get('actif/enable/{token}','ActifController@enable')->name('enable.actif');
+		//Route::resource('variantesfinancements','VfinancementController');
+
+
 		Route::get('dossier/docs/open/{token}','ProjetController@openDoc');
 		Route::get('dossier/docs/close/{token}','ProjetController@closeDoc');
 		Route::get('dossier/enable/{token}','ProjetController@enable');
