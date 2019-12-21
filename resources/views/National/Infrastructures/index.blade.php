@@ -1,4 +1,4 @@
-@extends('......layouts.consultant')
+@extends('......layouts.national')
 
 @section('page-title')
 DOSSIERS DE PARTENARIATS PUBLIC - PRIVE
@@ -62,7 +62,7 @@ DOSSIERS DE PARTENARIATS PUBLIC - PRIVE
 
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/admin/partenariats/{{ $projet->token  }}">
+                          <a class="btn btn-primary btn-xs" href="/national/partenariats/{{ $projet->token  }}">
                               <i class="fas fa-folder">
                               </i>
                               Afficher

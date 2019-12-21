@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.national')
 
 @section('content-header')
     <div class="container-fluid">
@@ -8,7 +8,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/national/dashboard">ACCUEIL</a></li>
               <li class="breadcrumb-item">PARAMETRES</li>
               <li class="breadcrumb-item active">Organismes Financiers</li>
             </ol>
@@ -23,7 +23,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES ORGANISMES FINANCIERS</h3>
+                  <h3 class="card-title">BASE DE DONNEES NATIONALE DES ORGANISMES FINANCIERS</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -91,16 +91,13 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.organismes.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('national.organismes.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">
                               <label for="name">NOM</label>
                               <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom de l'organisme">
                             </div>
-
-
-
                             <div class="form-group">
                               <label for="type_id">TYPE</label>
                               <select name="type_id" class="form-control" id="type_id">

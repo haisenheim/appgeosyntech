@@ -39,7 +39,7 @@
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
                       <th>ROLE</th>
-                      <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -51,11 +51,7 @@
                                <td>{!! $ville->phone !!} </td>
                                 <td>{!! $ville->email !!} </td>
                               <td>{!! $ville->role?$ville->role->name:'-' !!}</td>
-                              <td>
-                              <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('admin.users.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
-                              </ul>
-                              </td>
+
                           </tr>
                       @endforeach
 
@@ -68,7 +64,7 @@
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
                       <th>ROLE</th>
-                      <th></th>
+
                     </tr>
                     </tfoot>
                   </table>

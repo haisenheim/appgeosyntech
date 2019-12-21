@@ -1,7 +1,7 @@
 
 
 
-@extends('......layouts.admin')
+@extends('......layouts.national')
 
 @section('content-header')
     <div class="container-fluid">
@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/national/dashboard">ACCUEIL</a></li>
 
               <li class="breadcrumb-item active">Investisseurs</li>
             </ol>
@@ -53,7 +53,7 @@
                                 <td>{!! $user->pays?$user->pays->name :'-' !!} </td>
                                 <td>
                                 <ul class="list-inline">
-                                  <li class="list-inline-item"><a class="btn btn-primary btn-xs" href="{{route('admin.angels.show',[$user->id])}}"><i class="fa fa-search"></i></a></li>
+                                  <li class="list-inline-item"><a class="btn btn-primary btn-xs" href="{{route('national.angels.show',[$user->id])}}"><i class="fa fa-search"></i></a></li>
                                 </ul>
                                 </td>
                             </tr>
@@ -90,7 +90,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.angels.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('national.angels.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">

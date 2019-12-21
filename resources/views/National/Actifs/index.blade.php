@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.national')
 @section('content')
 
  <div class="card">
@@ -56,7 +56,7 @@
 
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/admin/actifs/{{ $projet->token  }}">
+                          <a class="btn btn-primary btn-xs" href="/national/actifs/{{ $projet->token  }}">
                               <i class="fas fa-folder">
                               </i>
                               Afficher
@@ -64,13 +64,13 @@
 
                           @if($projet->active)
 
-                          <a class="btn btn-danger btn-xs" href="{{route('admin.disable.actif',$projet->id)}}">
+                          <a class="btn btn-danger btn-xs" href="{{route('national.disable.actif',$projet->id)}}">
                               <i class="fas fa-lock">
                               </i>
                               Désactiver
                           </a>
                           @else
-                          <a class="btn btn-success btn-xs" href="{{route('admin.enable.actif',$projet->id)}}">
+                          <a class="btn btn-success btn-xs" href="{{route('national.enable.actif',$projet->id)}}">
                               <i class="fas fa-unlock">
                               </i>
                               Activer

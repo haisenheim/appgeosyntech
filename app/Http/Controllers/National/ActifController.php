@@ -7,6 +7,7 @@ use App\Models\Actif;
 use App\Models\Projet;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ActifController extends Controller
 {
@@ -18,7 +19,9 @@ class ActifController extends Controller
     public function index()
     {
         //
-	    $projets = Actif::all();
+	    $projets = Actif::all()->whereHas('user', function($q){
+		    $q->where('condition', '=', Auth::user()->agence_id);
+	    });
 
 	    return view('/National/Actifs/index')->with(compact('projets'));
     }

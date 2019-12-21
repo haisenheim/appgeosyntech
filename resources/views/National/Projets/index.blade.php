@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.national')
 @section('content')
 
  <div class="card">
@@ -63,7 +63,7 @@
 
 
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-xs" href="/admin/dossiers/{{ $projet->token  }}">
+                          <a class="btn btn-primary btn-xs" href="/national/dossiers/{{ $projet->token  }}">
                               <i class="fas fa-folder">
                               </i>
                               Afficher

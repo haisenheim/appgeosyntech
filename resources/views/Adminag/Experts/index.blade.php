@@ -51,8 +51,6 @@
                                 if($user->confirmed){
                                     $rang= 'confirmé';
                                 }
-
-
                             ?>
                             <tr>
                                 <td>{!! $user->last_name !!} </td>

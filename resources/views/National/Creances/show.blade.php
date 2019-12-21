@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.national')
 
 @section('page-title')
 CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->devise->abb }}</sup>
@@ -74,7 +74,7 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
                        <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
 
                    @else
-                                <form class="form-inline"  action="/admin/creance/expert">
+                                <form class="form-inline"  action="/national/creance/expert">
                                 {{csrf_field()}}
                                 <input type="hidden" name="id" value="{{ $projet->id }}"/>
                                     <div class="form-group">
@@ -107,24 +107,24 @@ CESSION DE {{ number_format($projet->montant, 0,',','.') }} <sup>{{ $projet->dev
 
             @if(!$projet->pay)
                    <li>
-                        <a  title="Enregister le paiement" class="ripple" href="/admin/creance/pay/{{$projet->token}}"><i class="fa fa-coins fa-lg text-success"></i></a>
+                        <a  title="Enregister le paiement" class="ripple" href="/national/creance/pay/{{$projet->token}}"><i class="fa fa-coins fa-lg text-success"></i></a>
                    </li>
             @endif
 
             @if($projet->active)
                    <li>
-                        <a  title="Verrouiller" class="ripple" href="/admin/creance/disable/{{$projet->token}}"><i class="fa fa-lock fa-lg text-danger"></i></a>
+                        <a  title="Verrouiller" class="ripple" href="/national/creance/disable/{{$projet->token}}"><i class="fa fa-lock fa-lg text-danger"></i></a>
                    </li>
              @else
                    <li>
-                        <a  title="Deverrouiller" class="ripple" href="/admin/creance/enable/{{$projet->token}}"><i class="fa fa-unlock fa-lg text-success"></i></a>
+                        <a  title="Deverrouiller" class="ripple" href="/national/creance/enable/{{$projet->token}}"><i class="fa fa-unlock fa-lg text-success"></i></a>
                    </li>
             @endif
 
 
             @if(!$projet->clos)
                    <li>
-                        <a  title="Clore la transaction" class="ripple" href="/admin/creance/close/{{$projet->token}}"><i class="fa fa-gift fa-lg primary"></i></a>
+                        <a  title="Clore la transaction" class="ripple" href="/national/creance/close/{{$projet->token}}"><i class="fa fa-gift fa-lg primary"></i></a>
                    </li>
             @endif
 

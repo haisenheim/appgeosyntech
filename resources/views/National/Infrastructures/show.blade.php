@@ -1,4 +1,4 @@
-@extends('......layouts.consultant')
+@extends('......layouts.national')
 
 @section('content-header')
  <h3 style="font-weight: 800; margin-top: 50px; color: #FFFFFF; padding-bottom: 15px; border-bottom: solid #FFFFFF 1px;" class="page-header">{{$projet->name}}</h3>
@@ -35,14 +35,14 @@
                             <input type="hidden" id="id" value="<?= $projet->id ?>"/>
                             <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
                             <span class="text-sm">Consultant </span>
-                               @if($projet->consultant)
+                               @if($projet->national)
 
                                <p class="text-sm">
-                               <b class="d-block">{{$projet->consultant->name}}</b>
-                                   <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
+                               <b class="d-block">{{$projet->national->name}}</b>
+                                   <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->national->email}}</b>
                                </p>
                                @else
-                                            <form class="form-inline"  action="/admin/partenariat/expert">
+                                            <form class="form-inline"  action="/national/partenariat/expert">
                                             {{csrf_field()}}
                                             <input type="hidden" name="id" value="{{ $projet->id }}"/>
                                                 <div class="form-group">
@@ -1846,7 +1846,7 @@
                 <div class="modal-body">
                 <div class="card card-danger">
                     <div class="card-body">
-                        <form action="/admin/partenariat/publish" method="post" enctype="multipart/form-data">
+                        <form action="/national/partenariat/publish" method="post" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="token" value="{{ $projet->token }}"/>
                             <div class="form-group">
@@ -1938,7 +1938,7 @@
             getPlan($('#plan_id').val());
 
             $.ajax({
-                url: "/consultant/dossier/getchoices",
+                url: "/national/dossier/getchoices",
                 type:'Get',
                 dataType:'json',
                 data:{id:$('#id').val()},
@@ -2213,7 +2213,7 @@
 
             @if($projet->active)
                    <li>
-                        <a title="Verrouiller le dossier" class="ripple" href="/admin/partenariat/disable/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
+                        <a title="Verrouiller le dossier" class="ripple" href="/national/partenariat/disable/{{ $projet->token}}"><i class="fa fa-lock text-danger"></i></a>
                    </li>
              @if(!$projet->published)
                    <li>
@@ -2222,7 +2222,7 @@
              @else
                 @if(!$projet->received)
                     <li>
-                        <a title="Boucler la remise des dossiers de prequalification" class="ripple" href="/admin/partenariat/receive/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
+                        <a title="Boucler la remise des dossiers de prequalification" class="ripple" href="/national/partenariat/receive/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                    </li>
                 @else
                    @if(!$projet->consortia_selected)
@@ -2232,17 +2232,17 @@
                    @else
                         @if(!$projet->first_rendered)
                             <li>
-                                <a title="Boucler la remise de la première offre" class="ripple" href="/admin/partenariat/remise-first/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
+                                <a title="Boucler la remise de la première offre" class="ripple" href="/national/partenariat/remise-first/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                             </li>
                         @else
                             @if(!$projet->bidders_selected)
                                 <li>
-                                    <a title="Boucler la sélection des Preffered bidders " class="ripple" href="/admin/partenariat/select-bidders/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
+                                    <a title="Boucler la sélection des Preffered bidders " class="ripple" href="/national/partenariat/select-bidders/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                                 </li>
                             @else
                                 @if(!$projet->final_rendered)
                                     <li>
-                                        <a title="Boucler la remise de la Best And Final Offer" class="ripple" href="/admin/partenariat/remise-final-offer/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
+                                        <a title="Boucler la remise de la Best And Final Offer" class="ripple" href="/national/partenariat/remise-final-offer/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                                     </li>
                                  @else
                                     @if(!$projet->concessionnaire_selected)
@@ -2252,7 +2252,7 @@
                                      @else
                                         @if(!$projet->signed)
                                            <li>
-                                                <a title="Marquer la signature de contrat" class="ripple" href="/admin/partenariat/signature/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
+                                                <a title="Marquer la signature de contrat" class="ripple" href="/national/partenariat/signature/{{ $projet->token}}"><i class="fa fa-edit text-danger"></i></a>
                                             </li>
                                         @endif
                                     @endif
@@ -2264,7 +2264,7 @@
              @endif
             @else
                    <li>
-                         <a title="deverrouiller le dossier" class="ripple" href="/admin/partenariat/enable/{{ $projet->token}}"><i class="fa fa-unlock text-success"></i></a>
+                         <a title="deverrouiller le dossier" class="ripple" href="/national/partenariat/enable/{{ $projet->token}}"><i class="fa fa-unlock text-success"></i></a>
                    </li>
             @endif
 

@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.national')
 @section('content')
 
 
@@ -152,7 +152,7 @@
                        <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
                    </p>
                    @else
-                                <form class="form-inline"  action="/admin/actif/expert">
+                                <form class="form-inline"  action="/national/actif/expert">
                                 {{csrf_field()}}
                                 <input type="hidden" name="id" value="{{ $projet->id }}"/>
                                     <div class="form-group">
