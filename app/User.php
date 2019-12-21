@@ -75,7 +75,7 @@ class User extends Authenticatable
 		return $this->belongsTo('App\User','creator_id');
 	}
 
-	public function getQualiteAttribute(){
+	public function getRangAttribute(){
 		if($this->role_id==2){
 			if($this->senior){
 				return 'senior';
@@ -88,7 +88,7 @@ class User extends Authenticatable
 
 		}
 
-		return 'toto';
+		return '';
 	}
 
 }

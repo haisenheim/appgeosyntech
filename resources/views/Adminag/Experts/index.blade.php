@@ -48,7 +48,7 @@
                                 <td>{!! $user->address !!} </td>
                                 <td>{!! $user->phone !!} </td>
                                 <td>{!! $user->email !!} </td>
-                                <td><?= $user->qualite ?> </td>
+                                <td><?= $user->rang ?> </td>
                                 <td>
 
                                 </td>
