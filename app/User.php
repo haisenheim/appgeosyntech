@@ -75,7 +75,7 @@ class User extends Authenticatable
 		return $this->belongsTo('App\User','creator_id');
 	}
 
-	public function qualite(){
+	public function getQualiteAttribute(){
 		if($this->role_id==2){
 			if($this->senior){
 				return 'senior';
