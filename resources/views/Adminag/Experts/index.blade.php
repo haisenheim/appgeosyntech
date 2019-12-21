@@ -9,7 +9,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/adminag/dashboard">ACCUEIL</a></li>
 
               <li class="breadcrumb-item active">Consultants</li>
             </ol>
@@ -37,7 +37,7 @@
                             <th>TELEPHONE</th>
                             <th>EMAIL</th>
                             <th>TYPE DE COMPTE</th>
-                            <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+
                      </tr>
                     </thead>
                     <tbody>
@@ -48,13 +48,9 @@
                                 <td>{!! $user->address !!} </td>
                                 <td>{!! $user->phone !!} </td>
                                 <td>{!! $user->email !!} </td>
-                                <td>{!! $user->senior?'CONSULTANT SENIOR' :'CONSULTANT JUNIOR' !!} </td>
+                                <td>{!! $user->qualite} </td>
                                 <td>
-                                    <ul class="list-inline">
-                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/consultant/creances/{{ $user->token }}"><i class="fa fa-coins"></i></a></li>
-                                        <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/admin/consultant/payees/{{ $user->token }}"><i class="fa fa-search"></i></a></li>
 
-                                    </ul>
                                 </td>
                             </tr>
                         @endforeach
@@ -67,7 +63,7 @@
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
                       <th>TYPE DE COMPTE</th>
-                      <th></th>
+
                     </tr>
                     </tfoot>
                   </table>
@@ -80,77 +76,7 @@
             <!-- /.col -->
           </div>
 
-           <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Nouveau compte de consultant</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.experts.store')}}" method="post">
-                        {{csrf_field()}}
-                          <div class="card-body">
-                            <div class="form-group">
-                              <label for="name">NOM</label>
-                              <input type="text" class="form-control" id="name" name="last_name" placeholder="Saisir le nom ">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">PRENOM</label>
-                              <input type="text" class="form-control" id="name" name="first_name" placeholder="Saisir le prenom">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">ADRESSE</label>
-                              <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
-                            </div>
 
-                            <div class="form-group">
-                              <label for="phone">TELEPHONE</label>
-                              <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
-                            </div>
-
-                            <div class="form-group">
-                              <label for="pay_id">PAYS</label>
-                              <select name="pay_id" class="form-control" id="pay_id">
-                                @foreach($pays as $p)
-                                    <option value="{{ $p->id }}">{{ $p->name }}</option>
-                                @endforeach
-                              </select>
-
-                            </div>
-
-                            <fieldset>
-                                <legend>Infos. de connexion</legend>
-                                <div class="form-group">
-                                  <label for="email">EMAIL</label>
-                                  <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
-                                </div>
-                                <div class="form-group">
-                                  <label for="name">MOT DE PASSE</label>
-                                  <input type="password" class="form-control" id="name" name="password" placeholder="">
-                                </div>
-                            </fieldset>
-
-
-                            <div class="form-group">
-                            <label for="exampleInputFile">PHOTO</label>
-                            <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
-                          </div>
-                          </div>
-
-                          <div class="card-footer">
-                            <button type="submit" class="btn btn-success"><i class="fa fa-w fa-save"></i> Enregistrer</button>
-                          </div>
-                        </form>
-                      </div>
-
-                    </div>
-                    <!-- /.modal-content -->
-                  </div>
-                  <!-- /.modal-dialog -->
-           </div>
 
 
 <style>
