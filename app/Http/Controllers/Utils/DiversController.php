@@ -32,7 +32,7 @@ class DiversController extends Controller
 
 
 	public function getVillesByPay(Request $request){
-		$villes = Ville::all()->where('pay_id',$request->pay_id);
+		$villes = Ville::all()->where('pay_id',$request->pay_id)->toArray();
 		//dd($villes);
 		return response()->json($villes);
 	}
