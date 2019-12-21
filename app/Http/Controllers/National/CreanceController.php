@@ -23,7 +23,7 @@ class CreanceController extends Controller
 	    $dossiers = Creance::whereHas('owner', function($q){
 		    $q->where('pay_id','=' ,Auth::user()->pay_id);
 	    })->get();
-	    $dossiers = $dossiers->orderBy('created_at','desc')->paginate(10);
+	    $dossiers = $dossiers->sortBy('created_at',true)->paginate(10);
 	   // $dossiers = Creance::orderBy('created_at','desc')->paginate(10);
 
 	    return view('/National/Creances/index')->with(compact('dossiers'));
