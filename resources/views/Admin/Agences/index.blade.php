@@ -205,7 +205,7 @@
           console.log(Object.entries(data));
           data = Object.entries(data);
           for(var i=0;i<data.length;i++){
-          html= html + '<option value="'+ data[i].id +'">'+ data[i].name +'</option>';
+          html= html + '<option value="'+ data[i][1].id +'">'+ data[i][1].name +'</option>';
           console.log(html);
           }
           console.log(html);
