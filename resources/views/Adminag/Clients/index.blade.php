@@ -1,7 +1,7 @@
 
 
 
-@extends('......layouts.admin')
+@extends('......layouts.adminag')
 
 @section('content-header')
     <div class="container-fluid">
@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/adminag/dashboard">ACCUEIL</a></li>
               <li class="breadcrumb-item">PARAMETRES</li>
               <li class="breadcrumb-item active">Porteurs de projets</li>
             </ol>
@@ -53,7 +53,7 @@
                               <td>{!! $ville->pays?$ville->pays->name:'-' !!}</td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('admin.porteurs.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('adminag.porteurs.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
                               </ul>
                               </td>
                           </tr>
@@ -91,7 +91,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.porteurs.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('adminag.porteurs.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">
