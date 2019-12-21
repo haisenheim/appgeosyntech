@@ -25,10 +25,11 @@ class UserController extends Controller
     {
         //
 	    $users= \App\User::all();
+	    $pays = Pay::all();
         //$users = User::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('Admin/Users/index')->with(compact('users'));
+        return view('Admin/Users/index')->with(compact('users','pays'));
 
     }
 
@@ -61,10 +62,10 @@ class UserController extends Controller
         $user->phone = $request['phone'];
         $user->address = $request['address'];
         $user->email = $request['email'];
-        $user->pay_id = 1;
+        $user->pay_id = $request->pay_id;
        // $user->role_id = $request['role_id'];
         $user->password= Hash::make(($request['password']));
-        $user->role_id =1;
+        $user->role_id = $request->role_id;
         $user->moi_id=date('m');
         $user->annee=date('Y');
         $user->male = $request['male']=='on'?1:0;
