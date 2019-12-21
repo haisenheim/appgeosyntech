@@ -24,7 +24,7 @@ class CommercialController extends Controller
     public function index()
     {
         //
-        $users = \App\User::all()->where('role_id',7);
+        $users = \App\User::all()->where('role_id',7)->where('pay_id',Auth::user()->id);
        // dd($villes);
        // echo "Bonjour tout le monde!!";
 	    $pays = Pay::all();

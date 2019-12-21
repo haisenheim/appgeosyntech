@@ -24,7 +24,7 @@ class AngelController extends Controller
     public function index()
     {
         //
-        $users = \App\User::all()->where('role_id',4);
+        $users = \App\User::all()->where('role_id',4)->where('pay_id',Auth::user()->pay_id);
        // dd($villes);
        // echo "Bonjour tout le monde!!";
         return view('National/Angels/index')->with(compact('users'));
