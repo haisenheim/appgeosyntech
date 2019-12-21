@@ -19,7 +19,7 @@ class ActifController extends Controller
     public function index()
     {
         //
-	    $projets = Actif::whereHas('owner', function($q){
+	    $projets = Actif::whereHas('owner.pay_id', function($q){
 		    $q->where('condition', '=', Auth::user()->pay_id);
 	    });
 
