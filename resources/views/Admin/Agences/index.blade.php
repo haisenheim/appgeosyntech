@@ -201,8 +201,8 @@
         success:function(data) {
           $('#ville_id').html('');
           var html ='';
-          for(var i=0;i<data.villes.length;i++){
-          html= html + '<option value="'+ data.villes[i].id +'">'+ data.villes[i].name +'</option>';
+          for(var i=0;i<data.length;i++){
+          html= html + '<option value="'+ data[i].id +'">'+ data[i].name +'</option>';
           }
 
           $('#ville_id').html(html);
