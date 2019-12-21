@@ -194,6 +194,7 @@
 
   $('#pay_id').change(function() {
   $('#ville_id').html('');
+  var html='';
     $.ajax({
         url:'/get-villes-pay',
         type:'get',
@@ -201,9 +202,10 @@
         data:{pay_id:$('#pay_id').val()},
         success:function(data) {
 
-          var html ='';
+          console.log(data);
           for(var i=0;i<data.length;i++){
           html= html + '<option value="'+ data[i].id +'">'+ data[i].name +'</option>';
+          console.log(html);
           }
           console.log(html);
           $('#ville_id').html(html);
