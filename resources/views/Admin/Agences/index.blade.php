@@ -111,7 +111,7 @@
                              </select>
                             </div>
                             <div class="form-group">
-                              <label for="ville_id">Abbreviation</label>
+                              <label for="ville_id">VILLE</label>
                               <select name="ville_id" id="ville_id" class="form-control">
 
                               </select>
