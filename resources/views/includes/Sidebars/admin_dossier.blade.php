@@ -1,4 +1,4 @@
-<div class="card">
+<div id="" class="card">
     <div class="card-body">
         <div style="max-height: 95%; max-width: 360px">
     @if($projet->imageUri)

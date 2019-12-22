@@ -63,6 +63,10 @@ class User extends Authenticatable
 		return $this->belongsTo('App\Models\Organisme');
 	}
 
+	public function agence(){
+		return $this->belongsTo('App\Models\Agence');
+	}
+
 	public function tags(){
 		return $this->belongsToMany('App\Models\Tags', 'angels_tags', 'user_id','tag_id');
 	}

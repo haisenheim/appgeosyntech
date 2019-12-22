@@ -13,7 +13,7 @@
         <hr/>
         <div class="">
           <div class="row">
-            <div class="col-md-8 col-lg-9 col-sm-12">
+            <div id="side1" class="col-md-8 col-lg-9 col-sm-12">
                 @if($projet->etape==4)
                      <div class="row">
                 <div class="col-12 col-sm-4">
@@ -44,7 +44,7 @@
                 @endif
                 @include('includes.Show.diagnostic1')
             </div>
-            <div class="col-md-4 col-lg-3 col-sm-12">
+            <div id="side2" class="col-md-4 col-lg-3 col-sm-12">
                 @include('includes.Sidebars.admin_dossier')
             </div>
           </div>
