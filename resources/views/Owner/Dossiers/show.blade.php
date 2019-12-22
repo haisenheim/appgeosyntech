@@ -129,13 +129,6 @@
                             },9000);
                }
 
-               $('textarea').summernote({
-                height: 125,
-                tabsize: 2,
-                followingToolbar: true,
-                lang:'fr-FR'
-              });
-
         $.ajax({
             url: "/owner/dossier/getchoices",
             type:'Get',
@@ -211,6 +204,13 @@
 
             }
         })
+
+      $('textarea').summernote({
+        height: 125,
+        tabsize: 2,
+        followingToolbar: true,
+        lang:'fr-FR'
+      });
     });
 
     function getPlan(id){
