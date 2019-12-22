@@ -16,7 +16,7 @@
 @endif
 
 @if($projet->investissements->count()>=1)
-    <button data-target="#angelsModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-danger">Potentiels investisseurs</button>
+    <button data-target="#angelsModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-danger"><i class="fa fa-users"></i> Potentiels investisseurs</button>
 @endif
 
 @if($projet->synthese_diagnostic_interne)

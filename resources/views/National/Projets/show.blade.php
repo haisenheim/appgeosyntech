@@ -86,7 +86,7 @@
         @include('includes.Show.business_model')
      @endif
 
-     @if( $projet->investissements->count()>1))
+     @if($projet->investissements->count()>1)
          @include('includes.Show.angels')
      @endif
 
