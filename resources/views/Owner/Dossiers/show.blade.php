@@ -12,13 +12,13 @@
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
                     <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
-                       @include('includes.Sidebars.dossier')
+                       @include('includes.Sidebars.dossier_owner')
                     </div>
                     <div style="overflow-y: scroll; max-height: 860px" id="side2" class="col-md-8 col-sm-12">
                          @include('includes.Show.diagnostic1')
                     </div>
                 </div>
-                <div style="margin-top: 30px" class="row">
+                <div style="margin-top: 30px" class="">
                    @if($projet->etape>=2)
                       @include('includes.Show.diagnostic2')
                    @endif
@@ -33,11 +33,7 @@
                   </div>
 
               </div>
-           <style>
-            #concurrents table th{
-                max-width:50%;
-            }
-         </style>
+
          @if($projet->modepaiement_id>0)
           <input type="hidden" id="tokpay" value="<?= $projet->token ?>"/>
          @endif
@@ -192,161 +188,40 @@
         <!-- Edition du teaser-->
         @include('includes.Show.teaser')
 
+        @include('includes.Show.angels')
+
         @if($projet->modele)
         @include('includes.Edit.business_model')
         @endif
-<style>
-         div.note-editor.note-frame{
-                    padding: 0;
-                }
-              .note-frame .btn-default {
-                    color: #222;
-                    background-color: #FFF;
-                    border-color: none;
-                }
 
-                label{
-                color: #000000;
-                margin-top: 10px;
-                }
-    </style>
+
 
    @if($projet->teaser)
            <input type="hidden" id="has_teaser" value="1"/>
-           <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-               <div class="modal-dialog modal-lg" role="document">
-                   <div class="modal-content">
-                        <div class="modal-header">
-
-                           <button onclick="$('#popup').hide();" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                             <span aria-hidden="true">&times;</span>
-                           </button>
-                         </div>
-                       <div class="modal-body">
-                           <div class="row">
-
-                               <div style="overflow-y: scroll" class="col-md-11 col-sm-12">
-                                       <p><b>Félicitations, votre teaser a été enregistré et Il a été envoyé à notre réseau d’investisseurs.</b> </p>
-
-                                          <p> Vous pouvez dès lors :</p>
-                                          <ul style="list-style: decimal">
-                                               <li>Discuter avec les investisseurs en allant sur l’onglet « messagerie »</li>
-                                               <li>Les rencontrer en étant accompagné d’un consultant du cabinet OBAC</li>
-                                               <li>Leur donner accès à la « Data Room » en allant sur l’onglet « Liste des investisseurs » puis sur « Actions » et enfin  en cliquant sur « ouvrir la data room »</li>
-                                               <li>Consulter les lettres d’intention dès lors qu’elles seront envoyées en cliquant sur « Liste des investisseurs » puis sur « Actions » et enfin sur « Lettre d’intention »</li>
-                                               <li>Proposer aux investisseurs un contrat en se basant sur la documentation juridique présente dans l’onglet « MODELE DE DOCUMENT »</li>
-                                               <li>Procéder à la signature de la documentation juridique et à la mise en ligne du document juridique. Après validation de ce document juridique par OBAC, l’investisseur procédera au versement des fonds sur un numéro de compte qui lui sera indiqué. </li>
-                                               <li>Recevoir les fonds levés, déduits de la commission de succès de 5% du cabinet OBAC, des frais annuels d’abonnement à OBAC RISK MANAGEMENT pour la maitrise des risques de votre projet et d’une commission de gestion de x% sur le montant non décaissé. Le décaissement se fera par tranche en tenant compte de chaque étape de votre projet. </li>
-                                               <li>Rédiger des rapports de gestion mensuels à destination des investisseurs</li>
-                                          </ul>
-
-                               </div>
-                           </div>
-                       </div>
-
-                   </div>
-               </div>
-           </div>
+        @include('includes.Show.after_teaser_popup')
    @else
            <input type="hidden" id="has_teaser" value="0"/>
    @endif
 
-@endsection
+    @include('includes.Edit.rapport_mensuel')
+    @include('includes.Edit.uploadDocs')
 
+ <style>
 
+    div.note-editor.note-frame{
+          padding: 0;
+      }
+    .note-frame .btn-default {
+          color: #222;
+          background-color: #FFF;
+          border-color: none;
+      }
 
-@section('nav_actions')
-<main>
-    <nav style="top:30%" class="floating-menu">
-        <ul class="main-menu">
+      label{
+      color: #000000;
+      margin-top: 10px;
+      }
 
-            @if($projet->modepaiement_id==1)
-                @if($projet->validated_step==1)
-                   <li>
-                        <a title="Editer le diagnostic externe" class="ripple" href="/owner/dossier/create-diag-externe/{{ $projet->token }}"><i class="fa fa-pencil-alt text-warning"></i></a>
-                   </li>
-                @endif
-            @endif
-            @if(count($projet->investissements)>=1)
-                   <li>
-                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
-                   </li>
-            @endif
-            <li>
-                <a title=Modifier" href="#" class="ripple">
-                    <i class="fa fa-edit fa-lg"></i>
-                </a>
-            </li>
-
-
-            <li>
-                <a data-toggle="modal" data-target="#upDocsModal" title="Charger les documents du projet" href="#" class="ripple">
-                    <i class="fa fa-book fa-lg"></i>
-                </a>
-            </li>
-
-            <li>
-                <a data-toggle="modal" data-target="#reportEditModal" title="Editer le rapport mensuel de gestion" href="#" class="ripple">
-                    <i class="fa fa-pencil-alt fa-lg"></i>
-                </a>
-            </li>
-
-
-        </ul>
-        <div
-         style="
-          background-image:-webkit-linear-gradient(top,#28a745 0,#167699 100%);
-          background-image:-o-linear-gradient(top,#28a745 0,#167699 100%);
-          background-image:-webkit-gradient(linear,left top,left bottom,from(#28a745),to(#167699));
-          background-image:linear-gradient(to bottom,#efffff 0,tranparent 100%);
-          background-repeat:repeat-x;position:absolute;width:100%;height:100%;border-radius:50px;z-index:-1;top:0;left:0;
-          -webkit-transition:.1s;-o-transition:.1s;transition:.1s
-        "
-        class="menu-bg"></div>
-    </nav>
-</main>
-
-@include('includes.Show.list_ba')
-<div class="modal fade" id="upDocsModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h6  class="modal-title text-center">CHARGEMENT DES DOCUMENTS</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <div class="modal-body">
-            <div class="card card-danger">
-                <div class="card-body">
-                    <form action="/owner/dossier/docs/" method="post" enctype="multipart/form-data">
-                        {{csrf_field()}}
-                        <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
-                        <div class="form-group">
-                            <label for="ordre">ORDRE DE VIREMENT</label>
-                            <input type="file" class="form-control" id="ordre" name="ordre"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="pacte">PACTE DES ACTIONNNAIRES</label>
-                            <input type="file" class="form-control" id="pacte" name="pacte"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="pret">CONTRAT DE PRET</label>
-                            <input type="file" class="form-control" id="pret" name="pret"/>
-                        </div>
-
-                        <button type="submit" class="btn btn-outline-success btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
-                    </form>
-
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@include('includes.Edit.rapport_mensuel')
-<style>
    .modal .card-title{
         color: #000000;
         font-weight: bold;
@@ -358,9 +233,16 @@
    }
    .card.maximized-card {
 
-               overflow-y: scroll;
-           }
+      overflow-y: scroll;
+   }
+
+    #concurrents table th{
+       max-width:50%;
+    }
+
 </style>
-
-
 @endsection
+
+
+
+
