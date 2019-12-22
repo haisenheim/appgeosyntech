@@ -68,7 +68,7 @@
                                                  <?php if($invest->lettre): ?>
                                                     <a class="dropdown-item" href="/national/letter/create/{{ $invest->token }}">Lettre d'intention</a>
                                                   <?php endif; ?>
-                                                  @if($invest->dossier->owner_id)
+                                                  @if($invest->dossier->owner_id== \Illuminate\Support\Facades\Auth::user()->id)
                                                       <?php if(!$invest->doc_juridique): ?>
                                                         <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/national/projet/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
                                                       <?php else: ?>
