@@ -113,6 +113,9 @@
 @endsection
 
 @section('scripts')
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+  <!-- Bootstrap 4 -->
+<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
 
