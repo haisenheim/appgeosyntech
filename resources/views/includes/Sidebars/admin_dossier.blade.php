@@ -1,4 +1,4 @@
-<div style="max-height: 240px; max-width: 300px">
+<div style="max-height: 95%; max-width: 360px">
     @if($projet->imageUri)
         <img class="img-thumbnail" src="{{asset('img/'.$projet->imageUri)}}" alt=""/>
         <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
@@ -7,7 +7,7 @@
          <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
     @endif
 </div>
-<h3 class="text-primary"> {{$projet->name}}</h3>
+<h3 class="text-bold text-success" style="text-transform: capitalize;"> {{$projet->name}}</h3>
 @if($projet->modele)
   <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
 @endif
