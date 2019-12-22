@@ -31,6 +31,12 @@ class DiversController extends Controller
     }
 
 
+	public function getLettre($token){
+		$investissement = Investissement::where('token',$token)->first();
+		return view('Utils/lettre_intention')->with(compact($investissement));
+	}
+
+
 	public function getVillesByPay(Request $request){
 		$villes = Ville::all()->where('pay_id',$request->pay_id)->toArray();
 		//dd($villes);
