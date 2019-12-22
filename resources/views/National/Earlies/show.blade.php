@@ -1277,7 +1277,7 @@
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-3 order-1 order-md-2">
-              @include('includes.Sidebars.admin_dossier')
+              @include('includes.Sidebars.admin_dossi')
             </div>
           </div>
         </div>
