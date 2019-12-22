@@ -68,7 +68,7 @@
                   @endif
 
                   @if($projet->etape>=4)
-                    @include('icludes.show.plan_financier')
+                    @include('includes.Show.plan_financier')
                   @endif
 
                 </div>
