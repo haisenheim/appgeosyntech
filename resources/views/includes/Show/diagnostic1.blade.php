@@ -1,7 +1,8 @@
 <div class="card">
     <div class="card-body">
        <fieldset>
-            <legend>Diagnostic interne</legend>
+            <legend>DIAGNOSTIC INTERNE</legend>
+            @if($projet->bilans)
             <ul class="nav nav-pills ml-auto p-2" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
                  <li role="presentation" class="nav-item">
                      <a class="nav-link active" href="#etats" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ETATS FINANCIERS </a>
@@ -323,6 +324,29 @@
 
                 </div>
              </div>
+             @else
+                 <div class="table-responsive">
+                       <h3>CARTOGRAPHIE DES RISQUES</h3>
+                      <table id="risques-tab" class="table table-condensed table-hover table-bordered">
+                        <thead>
+                         <tr>
+                             <th></th>
+                             <th>Defaillances possibles</th>
+                             <th>Causes</th>
+                             <th>Consequences</th>
+                             <th>Frequence</th>
+                             <th>Gravite</th>
+                             <th>Criticite brut</th>
+
+                             <th>Criticite nette</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         </tbody>
+                      </table>
+                 </div>
+
+             @endif
        </fieldset>
     </div>
 </div>
