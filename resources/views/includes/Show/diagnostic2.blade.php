@@ -3,7 +3,7 @@
         <div class="card-body">
             <fieldset>
                 <legend>Diagnostic Externe</legend>
-                <ul class="nav nav-tabs " style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
+                <ul class="nav nav-pills" style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
                       <li role="presentation" class="nav-item">
                           <a class="nav-link active" href="#segments" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ANALYSE DE LA DEMANDE </a>
                       </li>
