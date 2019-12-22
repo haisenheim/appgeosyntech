@@ -7,7 +7,7 @@
                 <div class="col-12">
                   <h4>
                     {{ $investissement->dossier->name }}
-                    <small class="float-right">Date: {{ date_format($invest->lettre->created_at,'d/m/Y') }}</small>
+                    <small class="float-right">Date: {{ date_format($investissement->lettre->created_at,'d/m/Y') }}</small>
                   </h4>
                 </div>
                 <!-- /.col -->
