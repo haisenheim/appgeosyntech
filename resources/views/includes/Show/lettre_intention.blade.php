@@ -61,7 +61,7 @@
                  </span>
                  ,
                  manifeste le souhait de participer à cette opération sous forme de
-                 <span style="font-weight: bold; width:300px"> {{ $investissement->lettre->type->name }}</span>
+                 <span style="font-weight: bold; width:300px"> {{ $investissement->lettre->type?$investissement->lettre->type->name:'-' }}</span>
                  (prise de participation ou/et Prêts et/ou Engagements par signature)
                  à hauteur de <span style="font-weight: bold; width:300px"> {{ number_format($investissement->lettre->montant,0,',','.') }} </span>. </p>
                 @if($investissement->lettre->forme_id==1)
