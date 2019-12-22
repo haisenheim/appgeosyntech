@@ -7,15 +7,15 @@
  ?>
  <input type="hidden" value="<?= $projet->token ?>" id="token"/>
 
-        <div class="">
+        <div class="bg-success p-20">
           <h3 class="">{{$projet->name}} - {{$projet->code}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
         </div>
         <hr/>
         <div class="">
           <div class="row">
-            <div class="col-12 col-md-12 col-lg-9 order-2 order-md-1">
-            @if($projet->etape==4)
-              <div class="row">
+            <div class="col-md-8 col-lg-9 col-sm-12">
+                @if($projet->etape==4)
+                     <div class="row">
                 <div class="col-12 col-sm-4">
                   <div class="info-box bg-light">
                     <div class="info-box-content">
@@ -41,12 +41,15 @@
                   </div>
                 </div>
               </div>
-            @endif
-
-              <div class="row">
-                    @include('includes.Show.diagnostic1')
-
-                  @if($projet->etape>=2)
+                @endif
+                @include('includes.Show.diagnostic1')
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-12">
+                @include('includes.Sidebars.admin_dossier')
+            </div>
+          </div>
+          <div class="">
+                @if($projet->etape>=2)
                    @include('includes.Show.diagnostic2')
 
                   @endif
@@ -55,11 +58,10 @@
                   @if($projet->etape>=3)
                     @include('includes.Show.diagnostic3')
                         <script>
-                $(document).ready(function(){
-                    getPlan($('#plan_id').val());
-                });
-            </script>
-
+                            $(document).ready(function(){
+                                getPlan($('#plan_id').val());
+                            });
+                        </script>
                   @endif
 
                   @if($projet->etape>=4)
@@ -69,11 +71,8 @@
                 </div>
               </div>
 
-            <div class="col-12 col-md-12 col-lg-3 order-1 order-md-2">
-              @include('includes.Sidebars.admin_dossier')
-            </div>
-          </div>
-        </div>
+
+
         <!-- /.card-body -->
 
 

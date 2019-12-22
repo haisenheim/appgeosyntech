@@ -1,36 +1,50 @@
-<div style="max-height: 95%; max-width: 360px">
+<div class="card">
+    <div class="card-body">
+        <div style="max-height: 95%; max-width: 360px">
     @if($projet->imageUri)
-        <img class="img-thumbnail" src="{{asset('img/'.$projet->imageUri)}}" alt=""/>
+        <img style="height: 340px; width: 99%" class="img-thumbnail" src="{{asset('img/'.$projet->imageUri)}}" alt=""/>
         <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
     @else
-         <img class="img-thumbnail" src="{{asset('img/logo-obac.png')}}" alt=""/>
+         <img style="height: 340px; width: 100%" class="img-thumbnail" src="{{asset('img/logo-obac.png')}}" alt=""/>
          <a data-toggle="modal" data-target="#uploadImgModal" href="" title="modifier l'image"><i class="fa fa-pencil"></i></a>
     @endif
 </div>
 <h3 class="text-bold text-success" style="text-transform: capitalize;"> {{$projet->name}}</h3>
+<hr/>
 @if($projet->modele)
   <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
 @endif
-<br>
-<div class="text-muted">
-  <p class="text-sm">Porteur de projet:
-    <b class="d-block">{{$projet->owner->name}}</b>
-    <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->owner->email}}</b>
-    <b class="d-block"><i class="far fa-fw fa-telegram"></i> {{$projet->owner->phone}}</b>
-  </p>
-  <p class="text-sm">Consultant
+    <fieldset>
+        <legend>PROMOTEUR</legend>
+            <ul>
+                <li style="font-size: larger"><b>{{$projet->owner->name}}</b></li>
+                <li><i class="far fa-fw fa-envelope"></i> {{$projet->owner->email}}</li>
+                <li><i class="fas fa-fw fa-mobile"></i> {{$projet->owner->phone}}</li>
+
+            </ul>
+    </fieldset>
+
+
      @if($projet->consultant)
-     </p>
-     <p class="text-sm">
-     <b class="d-block">{{$projet->consultant->name}}</b>
-         <b class="d-block"><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</b>
-     </p>
+     <fieldset>
+        <legend>CONSULTANT</legend>
+        <ul>
+                <li style="font-size: larger"><b>{{$projet->consultant->name}}</b></li>
+                <li><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</li>
+                <li><i class="fas fa-fw fa-mobile"></i> {{$projet->consultant->phone}}</li>
+                <li><i class="fas fa-fw fa-home"></i> {{$projet->consultant->agence?$projet->consultant->agence->phone:'-'}}</li>
+
+         </ul>
+    </fieldset>
+
      @else
+        @if(\Illuminate\Support\Facades\Auth::user()->role_id==9)
                   <form class="form-inline"  action="/national/projet/expert">
                   {{csrf_field()}}
                   <input type="hidden" name="id" value="{{ $projet->id }}"/>
                       <div class="form-group">
-                          <select class="form-control" name="expert_id" id="id">
+                           <label for="expert_id">AFFECTER A UN CONSULTANT</label>
+                          <select class="form-control" name="expert_id" id="expert_id">
                               @foreach($experts as $expert)
                                   <option value="{{ $expert->id }}">{{ $expert->name }}</option>
                               @endforeach
@@ -40,6 +54,9 @@
                           <button type="submit" class="btn btn-danger"><i class="fa fa-link"></i> LIER</button>
                       </div>
                   </form>
-
-       @endif
+        @endif
+     @endif
+    </div>
 </div>
+
+

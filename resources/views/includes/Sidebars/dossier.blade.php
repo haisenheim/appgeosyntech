@@ -8,11 +8,11 @@
 
     </div>
 
-    <p>CODE : {{ $projet->code }}</p>
-    <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
-    <?php if(Auth::user()->role_id==!3): ?>
-        <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
-    <?php endif; ?>
+        <p>CODE : {{ $projet->code }}</p>
+        <p>DATE DE CREATION : <span class="value"> {{ date_format($projet->created_at,'d/m/Y') }}</span></p>
+        <?php if(Auth::user()->role_id==!3): ?>
+            <p>PROMOTEUR : <span class="value">{{ $projet->owner->name }}</span></p>
+        <?php endif; ?>
 
 
         <a href="#" data-toggle="modal" data-target="#meModal" class="btn btn-me btn-outline-success btn-block">MODELE ECONOMIQUE</a>
