@@ -73,9 +73,6 @@
 
                 </div>
               </div>
-
-
-
         <!-- /.card-body -->
 
 
@@ -89,12 +86,34 @@
         @include('includes.Show.business_model')
      @endif
 
+     @if( $projet->investissements->count()>1))
+         @include('includes.Show.angels')
+     @endif
 
+     @if($projet->synthese_diagnostic_interne)
+        @include('includes.Show.synthese1')
+     @endif
 
-     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+     @if($projet->synthese_diagnostic_externe)
+        @include('includes.Show.synthese2')
+     @endif
+
+     @if($projet->synthese_diagnostic_strategique)
+        @include('includes.Show.synthese3')
+     @endif
+
+     @if($projet->teaser)
+        @include('includes.Show.teaser')
+     @endif
+
+    <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+
     <script>
         $(document).ready(function(){
            // var orm = 'http://localhost/ormsys/api/';
+           var h2 = $('#side2 .card').height();
+            $('#side1 .card').height(h2).css({'overflow-y':'scroll'});
+
             $.ajax({
                 url: "/national/projet/getchoices",
                 type:'Get',
@@ -208,167 +227,11 @@
                     }
     </script>
 
+
 @endsection
 
 @section('nav_actions')
-<main>
-    <nav class="floating-menu">
-        <ul class="main-menu">
-
-            @if($projet->investissements->count()>=1)
-                   <li>
-                        <a data-target="#angelsModal" data-toggle="modal" title="Liste des investisseurs potentiels" class="ripple" href="#"><i class="fa fa-users"></i></a>
-                   </li>
-            @endif
-            @if($projet->etape==1 && $projet->validated_step==0 && $projet->modepaiement_id>0)
-                   <li>
-                        <a  title="Valider le premier paiement" class="ripple" href="/national/projet/validate-diag-interne/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
-                   </li>
-            @endif
-            @if($projet->etape==2 && $projet->validated_step<2 )
-                   <li>
-                        <a  title="Valider le deuxieme paiement" class="ripple" href="/national/projet/validate-diag-externe/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
-                   </li>
-            @endif
-            @if($projet->etape==3 && $projet->validated_step<3 )
-                   <li>
-                        <a  title="Valider le troisieme paiement" class="ripple" href="/national/projet/validate-plan-strategique/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
-                   </li>
-            @endif
-            @if($projet->etape==4 && $projet->validated_step<4 )
-                   <li>
-                        <a  title="Valider le quatrieme paiement" class="ripple" href="/national/projet/validate-plan-financier/{{ $projet->token }}"><i class="fa fa-coins"></i></a>
-                   </li>
-            @endif
-
-             @if($projet->etape==4 && $projet->validated_step>=4 )
-                @if($projet->ordrevirement_validated)
-                   <li>
-                        <a  title="Rejeter l'ordre de virement" class="ripple" href="/national/projet/disvalidate-ordre-virement/{{ $projet->token }}"><i class="fa fa-trash"></i></a>
-                   </li>
-                 @else
-                   <li>
-                        <a  title="Valider l'ordre de virement" class="ripple" href="/national/projet/validate-ordre-virement/{{ $projet->token }}"><i class="fa fa-check"></i></a>
-                   </li>
-                 @endif
-            @endif
-
-            @if($projet->active )
-                   <li>
-                        <a  title="Bloquer le dossier" class="ripple" href="/national/projet/disable/{{ $projet->token }}"><i class="fa fa-lock"></i></a>
-                   </li>
-             @else
-                    <li>
-                        <a  title="debloquer le dossier" class="ripple" href="/national/projet/enable/{{ $projet->token }}"><i class="fa fa-unlock"></i></a>
-                   </li>
-            @endif
-
-
-
-
-
-        </ul>
-        <div class="menu-bg"></div>
-    </nav>
-</main>
-
-<div class="modal fade" id="angelsModal">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <div class="modal-body">
-            <div class="card card-danger">
-                <div class="card-body">
-                     @if(count($projet->investissements)>=1)
-                        <table style="color: #000" id="table-invest" class="table table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th style="width: 5%;"></th>
-                              <th>#</th>
-                              <th>Entreprise</th>
-                              <th>Organisme Fin.</th>
-                              <th>Depuis le</th>
-                              <th>RDV</th>
-
-                              <th style="width: 10%;"></th>
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($projet->investissements as $invest)
-                                    <tr>
-                                         <td style="width: 5%;"></td>
-                                        <td>
-                                            <a href="#" data-toggle="modal" data-target="#angelMoal">
-                                                <img style="border-radius: 50%;float: left;height: 40px;width: 40px;"
-                                                    src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" /> <br/>
-                                               <p>{{ $invest->angel->name }}  </p>
-                                        </a>
-                                        </td>
-                                        <td>
-                                            <?php if($invest->angel->entreprise): ?>
-                                                    <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->entreprise->imageUri?asset('img/'.$invest->angel->entreprise->imageUri):asset('img/logo-obac.png') }}" /> <br/>
-                                                    <p>{{ $invest->angel->entreprise->name }}</p>
-
-                                             <?php else: ?>
-                                                -
-                                             <?php endif; ?>
-                                        </td>
-                                         <td>
-                                            <?php if($invest->angel->organisme): ?>
-                                                    <img  style="border-radius: 50%;float: left;height: 40px;width: 40px;" src="{{ $invest->angel->organisme->imageUri?asset('img/'.$invest->angel->organisme->imageUri):asset('img/logo-obac.png') }}" /> <br/>
-                                                    <p>{{ $invest->angel->organisme->name }}</p>
-
-                                             <?php else: ?>
-                                                -
-                                             <?php endif; ?>
-                                        </td>
-                                        <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y'):'-' ?></td>
-                                        <td><?= \Illuminate\Support\Carbon::createFromTimeString($invest->rencontre)->format('d/m/Y'); ?></td>
-
-                                        <td style="width: 10%;">
-
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-default btn-flat">Actions</button>
-                                                <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
-                                                  <span class="caret"></span>
-
-                                                </button>
-                                                <div class="dropdown-menu" role="menu">
-                                                 <?php if($invest->lettre): ?>
-                                                    <a class="dropdown-item" href="/national/letter/create/{{ $invest->token }}">Lettre d'intention</a>
-                                                  <?php endif; ?>
-                                                  <?php if(!$invest->doc_juridique): ?>
-                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/national/projet/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
-                                                  <?php else: ?>
-                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/national/projet/docs/close/{{ $invest->token }}">Fermer la documentation</a>
-                                                  <?php endif; ?>
-                                                  <?php if($invest->validated): ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
-                                                  <?php else: ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
-                                                  <?php endif; ?>
-
-                                                </div>
-                                              </div>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-
-                @endif
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('includes.Actions.admin_dossier')
 
 <style>
     td p {
@@ -381,21 +244,6 @@
        font-size: smaller;
     }
 </style>
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('plugins/datatables/jquery.dataTables.js') }}"></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-<script>
-    $(document).ready(function(){
-        var h2 = $('#side2 .card').height();
-        $('#side1 .card').height(h2).css({'overflow-y':'scroll'});
-    });
-  $(function () {
-    $("#table-invest").DataTable({
-        "lengthChange":true
 
-    });
-
-  });
-</script>
 
 @endsection

@@ -14,6 +14,26 @@
 @if($projet->modele)
   <button data-target="#meModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">Modèle économique</button>
 @endif
+
+@if($projet->investissements->count()>=1)
+    <button data-target="#angelsModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-danger">Potentiels investisseurs</button>
+@endif
+
+@if($projet->synthese_diagnostic_interne)
+    <button data-target="#synDiagIntModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-warning">SYNTHESE DIAGNOSTIC INTERNE</button>
+@endif
+
+@if($projet->synthese_diagnostic_externe)
+    <button data-target="#synDiagExtModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-info"> SYNTHESE DIAGNOSTIC EXTERNE</button>
+@endif
+
+@if($projet->synthese_diagnostic_strategique)
+    <button data-target="#synDiagStratModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-primary">SYNTHESE DIAGNOSTIC STRATEGIQUE</button>
+@endif
+
+@if($projet->teaser)
+    <button data-target="#teaserModal" data-toggle="modal" class="btn btn-sm btn-block btn-outline-success">TEASER</button>
+@endif
     <fieldset>
         <legend>PROMOTEUR</legend>
             <ul>
@@ -23,8 +43,6 @@
 
             </ul>
     </fieldset>
-
-
      @if($projet->consultant)
      <fieldset>
         <legend>CONSULTANT</legend>
