@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
             <fieldset>
-                <h5>Diagnostic Externe</h5>
+                <legend>Diagnostic Externe</legend>
                 <ul class="nav nav-tabs " style="margin: 2px 10px 20px 0" id="objTabs" role="tablist">
                       <li role="presentation" class="nav-item">
                           <a class="nav-link active" href="#segments" role="tab" id="tab1" data-toggle="tab" aria-controls="n1" aria-expanded="false"><span class=""></span> ANALYSE DE LA DEMANDE </a>
@@ -18,7 +18,7 @@
                  </ul>
 
                  <div class="tab-content" id="myTabContent">
-                     <div class="tab-pane fade active show" role="tabpanel" id="segments" aria-labelledby="tab1">
+                     <div class="tab-pane active" role="tabpanel" id="segments" aria-labelledby="tab1">
                           <div>
                                   <div class="table-responsive">
                                          <?php if($projet->segments): ?>
@@ -60,7 +60,7 @@
 
                      </div>
 
-                     <div class="tab-pane fade" role="tabpanel" id="concurrents" aria-labelledby="">
+                     <div class="tab-pane " role="tabpanel" id="concurrents" aria-labelledby="">
                      <?php if($projet->concurrents): ?>
                          <div class="table-responsive">
                              <table class="table table-bordered">
@@ -113,7 +113,7 @@
 
                      </div>
 
-                     <div class="tab-pane fade" role="tabpanel" id="environnement" aria-labelledby="">
+                     <div class="tab-pane" role="tabpanel" id="environnement" aria-labelledby="">
                            <?php if($projet->environnement): ?>
                                  <table class="table table-bordered table-condensed">
                                      <thead>

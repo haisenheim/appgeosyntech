@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/diagnostic1.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/diagnostic1.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/diagnostic2.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/diagnostic2.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/diagnostic3.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/diagnostic3.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.64" vertical-offset="256" max-vertical-offset="1568">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.29447854" vertical-offset="0" max-vertical-offset="1616">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#div#1" expanded="false" />
@@ -48,11 +49,11 @@
                 <element signature="tag#main#0" expanded="false" />
                 <element signature="tag#div#2" expanded="false" />
                 <element signature="tag#style#1" expanded="false" />
-                <marker date="1577012011549" expanded="false" signature="4325:4364" placeholder="..." />
-                <marker date="1577012011549" expanded="false" signature="8622:8632" placeholder="..." />
-                <marker date="1577012011549" expanded="false" signature="8690:8700" placeholder="..." />
-                <marker date="1577012011549" expanded="false" signature="8759:8769" placeholder="..." />
-                <marker date="1577012011549" expanded="false" signature="8843:8853" placeholder="..." />
+                <marker date="1577012694904" expanded="false" signature="4391:4430" placeholder="..." />
+                <marker date="1577012694904" expanded="false" signature="8688:8698" placeholder="..." />
+                <marker date="1577012694904" expanded="false" signature="8756:8766" placeholder="..." />
+                <marker date="1577012694904" expanded="false" signature="8825:8835" placeholder="..." />
+                <marker date="1577012694904" expanded="false" signature="8909:8919" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -94,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plan_financier.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.048319" vertical-offset="8451" max-vertical-offset="33648">
+            <state vertical-scroll-proportion="324.6" vertical-offset="8451" max-vertical-offset="33648">
               <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
               <folding />
             </state>
@@ -230,10 +231,10 @@
         <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/diagnostic1.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/diagnostic2.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/diagnostic3.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php" />
       </list>
     </option>
   </component>
@@ -809,10 +810,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1239,26 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64" vertical-offset="256" max-vertical-offset="1568">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#1" expanded="false" />
-            <element signature="tag#script#1" expanded="false" />
-            <element signature="tag#main#0" expanded="false" />
-            <element signature="tag#div#2" expanded="false" />
-            <element signature="tag#style#1" expanded="false" />
-            <marker date="1577012011549" expanded="false" signature="4325:4364" placeholder="..." />
-            <marker date="1577012011549" expanded="false" signature="8622:8632" placeholder="..." />
-            <marker date="1577012011549" expanded="false" signature="8690:8700" placeholder="..." />
-            <marker date="1577012011549" expanded="false" signature="8759:8769" placeholder="..." />
-            <marker date="1577012011549" expanded="false" signature="8843:8853" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/diagnostic1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.36" vertical-offset="308" max-vertical-offset="1056">
@@ -1291,9 +1272,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/plan_financier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.048319" vertical-offset="8451" max-vertical-offset="33648">
+        <state vertical-scroll-proportion="324.6" vertical-offset="8451" max-vertical-offset="33648">
           <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29447854" vertical-offset="0" max-vertical-offset="1616">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#1" expanded="false" />
+            <element signature="tag#script#1" expanded="false" />
+            <element signature="tag#main#0" expanded="false" />
+            <element signature="tag#div#2" expanded="false" />
+            <element signature="tag#style#1" expanded="false" />
+            <marker date="1577012694904" expanded="false" signature="4391:4430" placeholder="..." />
+            <marker date="1577012694904" expanded="false" signature="8688:8698" placeholder="..." />
+            <marker date="1577012694904" expanded="false" signature="8756:8766" placeholder="..." />
+            <marker date="1577012694904" expanded="false" signature="8825:8835" placeholder="..." />
+            <marker date="1577012694904" expanded="false" signature="8909:8919" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
