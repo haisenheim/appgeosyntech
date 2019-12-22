@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,47 +35,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.52" vertical-offset="1104" max-vertical-offset="4080">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.21472393" vertical-offset="1383" max-vertical-offset="2144">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
-                <marker date="1577033592353" expanded="false" signature="5007:5046" placeholder="..." />
-                <marker date="1577033592353" expanded="false" signature="9304:9314" placeholder="..." />
-                <marker date="1577033592353" expanded="false" signature="9372:9382" placeholder="..." />
-                <marker date="1577033592353" expanded="false" signature="9441:9451" placeholder="..." />
-                <marker date="1577033592353" expanded="false" signature="9525:9535" placeholder="..." />
+                <element signature="tag#div#0" expanded="false" />
+                <element signature="e#3726#7497#0#HTML" expanded="false" />
+                <element signature="e#7670#9034#0#HTML" expanded="false" />
+                <marker date="1577038617969" expanded="true" signature="4536:4575" placeholder="..." />
+                <marker date="1577038617969" expanded="true" signature="8530:8540" placeholder="..." />
+                <marker date="1577038617969" expanded="true" signature="8598:8608" placeholder="..." />
+                <marker date="1577038617969" expanded="true" signature="8667:8677" placeholder="..." />
+                <marker date="1577038617969" expanded="true" signature="8751:8761" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/footer.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.28" vertical-offset="3447" max-vertical-offset="9200">
-              <caret line="254" column="30" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="176">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
+      <file leaf-file-name="head-tl3.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86912066" vertical-offset="1383" max-vertical-offset="2112">
-              <caret line="210" column="25" selection-start-line="210" selection-start-column="25" selection-end-line="210" selection-end-column="25" />
-              <folding>
-                <element signature="tag#div#0" expanded="false" />
-                <element signature="e#3659#7430#0#HTML" expanded="false" />
-                <element signature="e#7603#8967#0#HTML" expanded="false" />
-                <marker date="1577038375941" expanded="true" signature="4469:4508" placeholder="..." />
-                <marker date="1577038375941" expanded="true" signature="8463:8473" placeholder="..." />
-                <marker date="1577038375941" expanded="true" signature="8531:8541" placeholder="..." />
-                <marker date="1577038375941" expanded="true" signature="8600:8610" placeholder="..." />
-                <marker date="1577038375941" expanded="true" signature="8684:8694" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-8.32" vertical-offset="0" max-vertical-offset="736">
+              <caret line="13" column="83" selection-start-line="11" selection-start-column="2" selection-end-line="13" selection-end-column="83" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -978,10 +973,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1048,21 +1043,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Infrastructures/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="31040" max-vertical-offset="36960">
-          <caret line="1940" column="33" selection-start-line="1940" selection-start-column="33" selection-end-line="1940" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Organismes/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1287" max-vertical-offset="3600">
-          <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/National/Projets/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="898" max-vertical-offset="2176">
@@ -1508,11 +1488,11 @@
         <state vertical-scroll-proportion="-11.52" vertical-offset="1104" max-vertical-offset="4080">
           <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <marker date="1577033592353" expanded="false" signature="5007:5046" placeholder="..." />
-            <marker date="1577033592353" expanded="false" signature="9304:9314" placeholder="..." />
-            <marker date="1577033592353" expanded="false" signature="9372:9382" placeholder="..." />
-            <marker date="1577033592353" expanded="false" signature="9441:9451" placeholder="..." />
-            <marker date="1577033592353" expanded="false" signature="9525:9535" placeholder="..." />
+            <marker date="1577033592353" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1577033592353" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1577033592353" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1577033592353" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1577033592353" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1587,19 +1567,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.32" vertical-offset="0" max-vertical-offset="736">
+          <caret line="13" column="83" selection-start-line="11" selection-start-column="2" selection-end-line="13" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="514">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86912066" vertical-offset="1383" max-vertical-offset="2112">
-          <caret line="210" column="25" selection-start-line="210" selection-start-column="25" selection-end-line="210" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.21472393" vertical-offset="1383" max-vertical-offset="2144">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding>
             <element signature="tag#div#0" expanded="false" />
-            <element signature="e#3659#7430#0#HTML" expanded="false" />
-            <element signature="e#7603#8967#0#HTML" expanded="false" />
-            <marker date="1577038375941" expanded="true" signature="4469:4508" placeholder="..." />
-            <marker date="1577038375941" expanded="true" signature="8463:8473" placeholder="..." />
-            <marker date="1577038375941" expanded="true" signature="8531:8541" placeholder="..." />
-            <marker date="1577038375941" expanded="true" signature="8600:8610" placeholder="..." />
-            <marker date="1577038375941" expanded="true" signature="8684:8694" placeholder="..." />
+            <element signature="e#3726#7497#0#HTML" expanded="false" />
+            <element signature="e#7670#9034#0#HTML" expanded="false" />
+            <marker date="1577038617969" expanded="true" signature="4536:4575" placeholder="..." />
+            <marker date="1577038617969" expanded="true" signature="8530:8540" placeholder="..." />
+            <marker date="1577038617969" expanded="true" signature="8598:8608" placeholder="..." />
+            <marker date="1577038617969" expanded="true" signature="8667:8677" placeholder="..." />
+            <marker date="1577038617969" expanded="true" signature="8751:8761" placeholder="..." />
           </folding>
         </state>
       </provider>
