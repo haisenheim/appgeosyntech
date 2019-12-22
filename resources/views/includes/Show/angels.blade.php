@@ -55,8 +55,7 @@
                                              <?php endif; ?>
                                         </td>
                                         <td><?= $invest->created_at?date_format($invest->created_at, 'd/m/Y'):'-' ?></td>
-                                        <td><?= \Illuminate\Support\Carbon::createFromTimeString($invest->rencontre)->format('d/m/Y'); ?></td>
-
+                                        <td><?= $invest->rencontre?date_format($invest->rencontre,'d/m/Y'):'-'; ?></td>
                                         <td style="width: 10%;">
 
                                             <div class="btn-group">
