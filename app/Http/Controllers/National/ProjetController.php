@@ -247,7 +247,7 @@ class ProjetController extends Controller
 
 	public function createLetter($token){
 		$investissement = Investissement::where('token',$token)->first();
-		dd($investissement);
+		//dd($investissement);
 		return view('National/lettre_intention')->with(compact($investissement));
 	}
 
