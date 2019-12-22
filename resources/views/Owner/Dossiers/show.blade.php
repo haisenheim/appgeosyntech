@@ -37,13 +37,9 @@
          @if($projet->modepaiement_id>0)
           <input type="hidden" id="tokpay" value="<?= $projet->token ?>"/>
          @endif
-    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-          <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
     <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
     <script>
         $(document).ready(function(){
             getPlan($('#plan_id').val());

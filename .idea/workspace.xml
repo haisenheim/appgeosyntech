@@ -114,29 +114,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.52" vertical-offset="944" max-vertical-offset="2096">
-              <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.39263803" vertical-offset="528" max-vertical-offset="2096">
+              <caret line="45" column="81" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
               <folding>
                 <element signature="e#2190#6739#0#HTML" expanded="false" />
                 <element signature="e#2701#6728#0#HTML" expanded="false" />
                 <element signature="e#6771#8251#0#HTML" expanded="false" />
-                <marker date="1577036660142" expanded="false" signature="3583:3622" placeholder="..." />
-                <marker date="1577036660142" expanded="false" signature="7715:7725" placeholder="..." />
-                <marker date="1577036660142" expanded="false" signature="7783:7793" placeholder="..." />
-                <marker date="1577036660142" expanded="false" signature="7852:7862" placeholder="..." />
-                <marker date="1577036660142" expanded="false" signature="7936:7946" placeholder="..." />
+                <marker date="1577036817779" expanded="false" signature="3583:3622" placeholder="..." />
+                <marker date="1577036817779" expanded="false" signature="7715:7725" placeholder="..." />
+                <marker date="1577036817779" expanded="false" signature="7783:7793" placeholder="..." />
+                <marker date="1577036817779" expanded="false" signature="7852:7862" placeholder="..." />
+                <marker date="1577036817779" expanded="false" signature="7936:7946" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="after_teaser_popup.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="after_teaser_popup.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/after_teaser_popup.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9327731" vertical-offset="36" max-vertical-offset="576">
+            <state vertical-scroll-proportion="-17.76" vertical-offset="36" max-vertical-offset="576">
               <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -248,8 +248,8 @@
         <option value="$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/uploadDocs.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/after_teaser_popup.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       </list>
     </option>
   </component>
@@ -987,10 +987,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1580,30 +1580,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.52" vertical-offset="944" max-vertical-offset="2096">
-          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
-          <folding>
-            <element signature="e#2190#6739#0#HTML" expanded="false" />
-            <element signature="e#2701#6728#0#HTML" expanded="false" />
-            <element signature="e#6771#8251#0#HTML" expanded="false" />
-            <marker date="1577036660142" expanded="false" signature="3583:3622" placeholder="..." />
-            <marker date="1577036660142" expanded="false" signature="7715:7725" placeholder="..." />
-            <marker date="1577036660142" expanded="false" signature="7783:7793" placeholder="..." />
-            <marker date="1577036660142" expanded="false" signature="7852:7862" placeholder="..." />
-            <marker date="1577036660142" expanded="false" signature="7936:7946" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/after_teaser_popup.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9327731" vertical-offset="36" max-vertical-offset="576">
+        <state vertical-scroll-proportion="-17.76" vertical-offset="36" max-vertical-offset="576">
           <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39263803" vertical-offset="528" max-vertical-offset="2096">
+          <caret line="45" column="81" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
+          <folding>
+            <element signature="e#2190#6739#0#HTML" expanded="false" />
+            <element signature="e#2701#6728#0#HTML" expanded="false" />
+            <element signature="e#6771#8251#0#HTML" expanded="false" />
+            <marker date="1577036817779" expanded="false" signature="3583:3622" placeholder="..." />
+            <marker date="1577036817779" expanded="false" signature="7715:7725" placeholder="..." />
+            <marker date="1577036817779" expanded="false" signature="7783:7793" placeholder="..." />
+            <marker date="1577036817779" expanded="false" signature="7852:7862" placeholder="..." />
+            <marker date="1577036817779" expanded="false" signature="7936:7946" placeholder="..." />
           </folding>
         </state>
       </provider>
