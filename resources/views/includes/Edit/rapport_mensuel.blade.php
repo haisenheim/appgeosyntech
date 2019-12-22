@@ -464,7 +464,3 @@
         </div>
     </div>
 </div>
-
-    <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>

@@ -277,5 +277,6 @@
 <!-- ./wrapper -->
 
 @include('includes.footer')
+ @yield('scripts')
 </body>
 </html>

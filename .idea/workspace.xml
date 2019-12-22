@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="" />
+    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php" />
+    </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -115,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angels.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="angels.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.64" vertical-offset="768" max-vertical-offset="2176">
-              <caret line="49" column="147" selection-start-line="49" selection-start-column="147" selection-end-line="49" selection-end-column="147" />
+            <state vertical-scroll-proportion="0.8319328" vertical-offset="1028" max-vertical-offset="2176">
+              <caret line="89" column="97" selection-start-line="89" selection-start-column="97" selection-end-line="89" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -135,11 +137,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rapport_mensuel.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rapport_mensuel.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/rapport_mensuel.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9327731" vertical-offset="7060" max-vertical-offset="7600">
-              <caret line="469" column="81" selection-start-line="469" selection-start-column="81" selection-end-line="469" selection-end-column="81" />
+            <state vertical-scroll-proportion="-6.88" vertical-offset="7060" max-vertical-offset="7600">
+              <caret line="452" column="31" selection-start-line="452" selection-start-column="31" selection-end-line="452" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -212,13 +214,13 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/ProjetController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/lettre_intention.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/uploadDocs.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/after_teaser_popup.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/business_model.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/rapport_mensuel.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php" />
       </list>
     </option>
   </component>
@@ -1510,14 +1512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64" vertical-offset="768" max-vertical-offset="2176">
-          <caret line="49" column="147" selection-start-line="49" selection-start-column="147" selection-end-line="49" selection-end-column="147" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.32" vertical-offset="208" max-vertical-offset="1904">
@@ -1571,8 +1565,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/rapport_mensuel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9327731" vertical-offset="7060" max-vertical-offset="7600">
-          <caret line="469" column="81" selection-start-line="469" selection-start-column="81" selection-end-line="469" selection-end-column="81" />
+        <state vertical-scroll-proportion="-6.88" vertical-offset="7060" max-vertical-offset="7600">
+          <caret line="452" column="31" selection-start-line="452" selection-start-column="31" selection-end-line="452" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8319328" vertical-offset="1028" max-vertical-offset="2176">
+          <caret line="89" column="97" selection-start-line="89" selection-start-column="97" selection-end-line="89" selection-end-column="97" />
           <folding />
         </state>
       </provider>

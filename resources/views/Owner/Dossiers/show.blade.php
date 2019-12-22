@@ -38,137 +38,7 @@
           <input type="hidden" id="tokpay" value="<?= $projet->token ?>"/>
          @endif
 
-    <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
 
-    <script>
-        $(document).ready(function(){
-            getPlan($('#plan_id').val());
-            var tsr = $('#has_teaser').val();
-                   if(tsr){
-                      setTimeout(function() {
-                                  $('#popup').show();
-                                },9000);
-                   }
-
-                   $('textarea').summernote({
-                    height: 125,
-                    tabsize: 2,
-                    followingToolbar: true,
-                    lang:'fr-FR'
-                  });
-
-            $.ajax({
-                url: "/owner/dossier/getchoices",
-                type:'Get',
-                dataType:'json',
-                data:{id:$('#tokpay').val()},
-                success:function(data){
-                    if(data!=null){
-                        $.ajax({
-                            url:orm+'carto',
-                            type:'Post',
-                            dataType:'json',
-                            data:{choix:data},
-                            success:function(rep){
-
-
-                                var html = '';
-                                //console.log(Object.entries(rep));
-                                var risks=Object.entries(rep);
-                                for(var i=0; i<risks.length;i++){
-
-                                    var rs= parseInt(risks[i][1].length) + 1;
-                                    var tr= '<tr><th style="align-content: center; margin-top: auto" align="center" rowspan='+ rs  +'>'+ risks[i][0] +'</th></tr>';
-                                    html=html+tr;
-                                    for(var k=0; k<risks[i][1].length; k++){
-                                        $value = risks[i][1][k];
-                                        $cb= parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite);
-                                        $cn=parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite) * parseFloat($value.taux);
-
-                                        if(parseFloat($cb) >= 13){
-                                            $clrb='red';
-                                        }else{
-                                            if( parseFloat($cb) >=4 && parseFloat($cb) <= 12){
-                                                $clrb='yellow';
-                                            }else{
-                                                $clrb = '#0ac60a';
-                                            }
-                                        }
-
-                                        if( parseFloat($cn) >= 13){
-                                            $clr='red';
-                                        }else{
-                                            if( parseFloat($cn) >=4 &&  parseFloat($cn) <= 12){
-                                                $clr='yellow';
-                                            }else{
-                                                $clr = '#0ac60a';
-                                            }
-                                        }
-
-                                        var trr = '<tr>'+
-                                            '<td>'+ $value.question.produits_risque.name +'</td>'+
-                                            '<td>'+$value.question.produits_risque.causes +'</td>'+
-                                            '<td>'+ $value.question.produits_risque.consequences +'</td>'+
-                                            '<td>'+ $value.question.produits_risque.frequence +'</td>'+
-                                            '<td>'+ $value.question.produits_risque.gravite+'</td>'+
-                                            '<td style="background-color:'+ $clrb +'; font-weight: 900; text-align: right">'+ $cb  +'</td>'+
-                                            '<td style="background-color:'+ $clr +'">'+ $cn +'</td>'+
-                                        '</tr>';
-
-                                        html=html+trr;
-
-                                        //console.log(risks[i][1][k]);
-                                    }
-                                   // console.log(risks[i][1]);
-                                }
-
-                                $('#risques-tab').find('tbody').html(html);
-                            },
-                            Error:function(){
-                                $('#risks-loader').hide();
-                            }
-                        });
-                    }
-
-                }
-            })
-        });
-
-        function getPlan(id){
-
-                 $.ajax({
-                   url:orm+'get-plan',
-                   type:'Get',
-                   dataType:'json',
-                   data:{id:id},
-                       success:function(data){
-                           //console.log(data);
-                           if(data!=null){
-                                $.ajax({
-                                  url:orm+'get-plan',
-                                  type:'Get',
-                                  dataType:'json',
-                                  data:{id:id},
-                                success:function(){
-                                }
-                                });
-                           }
-                           var html = '';
-                           var pls = data.plignes;
-                           for(var i = 0; i<data.plignes.length; i++){
-
-                                var tr ='<tr data-id="'+ pls[i].id +'"><td style="width: 13%">'+ pls[i].produits_risque.risque.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.produit.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.name +'</td><td contenteditable="true" style="width: 37%">'+ pls[i].amelioration +'</td></tr>';
-                                html = html + tr;
-                           }
-                           $('#example').find('tbody').html(html);
-                       },
-                   Error:function(){
-
-                   }
-                 });
-            }
-
-    </script>
 
     <!-- Edition de la synthese du diagnostic interne  -->
     @include('includes.Show.synthese1')
@@ -237,6 +107,147 @@
     }
 
 </style>
+
+ <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
+@endsection
+
+@section('scripts')
+<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+
+
+ <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+
+<script>
+    $(document).ready(function(){
+        getPlan($('#plan_id').val());
+        var tsr = $('#has_teaser').val();
+               if(tsr){
+                  setTimeout(function() {
+                              $('#popup').show();
+                            },9000);
+               }
+
+               $('textarea').summernote({
+                height: 125,
+                tabsize: 2,
+                followingToolbar: true,
+                lang:'fr-FR'
+              });
+
+        $.ajax({
+            url: "/owner/dossier/getchoices",
+            type:'Get',
+            dataType:'json',
+            data:{id:$('#tokpay').val()},
+            success:function(data){
+                if(data!=null){
+                    $.ajax({
+                        url:orm+'carto',
+                        type:'Post',
+                        dataType:'json',
+                        data:{choix:data},
+                        success:function(rep){
+
+
+                            var html = '';
+                            //console.log(Object.entries(rep));
+                            var risks=Object.entries(rep);
+                            for(var i=0; i<risks.length;i++){
+
+                                var rs= parseInt(risks[i][1].length) + 1;
+                                var tr= '<tr><th style="align-content: center; margin-top: auto" align="center" rowspan='+ rs  +'>'+ risks[i][0] +'</th></tr>';
+                                html=html+tr;
+                                for(var k=0; k<risks[i][1].length; k++){
+                                    $value = risks[i][1][k];
+                                    $cb= parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite);
+                                    $cn=parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite) * parseFloat($value.taux);
+
+                                    if(parseFloat($cb) >= 13){
+                                        $clrb='red';
+                                    }else{
+                                        if( parseFloat($cb) >=4 && parseFloat($cb) <= 12){
+                                            $clrb='yellow';
+                                        }else{
+                                            $clrb = '#0ac60a';
+                                        }
+                                    }
+
+                                    if( parseFloat($cn) >= 13){
+                                        $clr='red';
+                                    }else{
+                                        if( parseFloat($cn) >=4 &&  parseFloat($cn) <= 12){
+                                            $clr='yellow';
+                                        }else{
+                                            $clr = '#0ac60a';
+                                        }
+                                    }
+
+                                    var trr = '<tr>'+
+                                        '<td>'+ $value.question.produits_risque.name +'</td>'+
+                                        '<td>'+$value.question.produits_risque.causes +'</td>'+
+                                        '<td>'+ $value.question.produits_risque.consequences +'</td>'+
+                                        '<td>'+ $value.question.produits_risque.frequence +'</td>'+
+                                        '<td>'+ $value.question.produits_risque.gravite+'</td>'+
+                                        '<td style="background-color:'+ $clrb +'; font-weight: 900; text-align: right">'+ $cb  +'</td>'+
+                                        '<td style="background-color:'+ $clr +'">'+ $cn +'</td>'+
+                                    '</tr>';
+
+                                    html=html+trr;
+
+                                    //console.log(risks[i][1][k]);
+                                }
+                               // console.log(risks[i][1]);
+                            }
+
+                            $('#risques-tab').find('tbody').html(html);
+                        },
+                        Error:function(){
+                            $('#risks-loader').hide();
+                        }
+                    });
+                }
+
+            }
+        })
+    });
+
+    function getPlan(id){
+
+             $.ajax({
+               url:orm+'get-plan',
+               type:'Get',
+               dataType:'json',
+               data:{id:id},
+                   success:function(data){
+                       //console.log(data);
+                       if(data!=null){
+                            $.ajax({
+                              url:orm+'get-plan',
+                              type:'Get',
+                              dataType:'json',
+                              data:{id:id},
+                            success:function(){
+                            }
+                            });
+                       }
+                       var html = '';
+                       var pls = data.plignes;
+                       for(var i = 0; i<data.plignes.length; i++){
+
+                            var tr ='<tr data-id="'+ pls[i].id +'"><td style="width: 13%">'+ pls[i].produits_risque.risque.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.produit.name +'</td><td style="width: 20%">'+ pls[i].produits_risque.name +'</td><td contenteditable="true" style="width: 37%">'+ pls[i].amelioration +'</td></tr>';
+                            html = html + tr;
+                       }
+                       $('#example').find('tbody').html(html);
+                   },
+               Error:function(){
+
+               }
+             });
+        }
+
+</script>
 @endsection
 
 
