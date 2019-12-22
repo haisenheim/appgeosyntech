@@ -42,7 +42,7 @@ class CommercialController extends Controller
         //
         //$roles = Role::all();
         $pays = Pay::all();
-        return view('admin/Commercials/create')->with(compact('pays'));
+        return view('National/Commercials/create')->with(compact('pays'));
     }
 
     /**
@@ -92,7 +92,7 @@ class CommercialController extends Controller
 
         $user->save();
             session('message','L\'apporteur d\'affaires a été correctement enregistré !!!');
-            return redirect('/admin/apporteurs');
+            return redirect('/national/apporteurs');
 
 
     }
@@ -107,7 +107,7 @@ class CommercialController extends Controller
     {
         //
         $user = User::find($user)->first();
-        return view('admin/apporteurs/show')->with(compact('user'));
+        return view('National/apporteurs/show')->with(compact('user'));
     }
 
     /**

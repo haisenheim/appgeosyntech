@@ -116,7 +116,7 @@ class EarlyController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
+		$pdf = PDF::loadView('National/Earlies/recu',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 		return $pdf->stream('recu-etape1-'. $projet->name.'.pdf');
 	}
@@ -144,7 +144,7 @@ class EarlyController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
+		$pdf = PDF::loadView('National/Earlies/recu',$data);
 		return $pdf->stream('recu-etape2-'. $projet->name.'.pdf');
 	}
 
@@ -168,7 +168,7 @@ class EarlyController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
+		$pdf = PDF::loadView('National/Earlies/recu',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 		return $pdf->stream('recu-etape3-'. $projet->name.'.pdf');
 	}
@@ -197,7 +197,7 @@ class EarlyController extends Controller
 			'paiement'=>$paiement
 		];
 
-		$pdf = PDF::loadView('Admin/Earlies/recu',$data);
+		$pdf = PDF::loadView('National/Earlies/recu',$data);
 		//$request->session()->flash('success','Premier paiement enregistré avec succès!!!');
 		return $pdf->stream('recu-etape4-'. $projet->name.'.pdf');
 	}
@@ -327,7 +327,7 @@ class EarlyController extends Controller
 	    $projet = Earlie::where('token',$token)->first();
 
 	    $experts = User::all()->where('role_id',2);
-	    return view('/Admin/Earlies/show')->with(compact('projet','experts'));
+	    return view('/National/Earlies/show')->with(compact('projet','experts'));
     }
 
 	public function addExpert(Request $request){

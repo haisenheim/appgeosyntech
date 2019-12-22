@@ -24,11 +24,11 @@ class ExpertController extends Controller
     public function index()
     {
         //
-        $users = User::all()->where('role_id','=',2);
-	    $pays = Pay::all();
+        $users = User::all()->where('role_id','=',2)->where('pay_id',Auth::user()->pay_id);
+	    //$pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('National/Experts/index')->with(compact('users','pays'));
+        return view('National/Experts/index')->with(compact('users'));
 
     }
 
