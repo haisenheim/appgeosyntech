@@ -7,8 +7,11 @@
  ?>
  <input type="hidden" value="<?= $projet->token ?>" id="token"/>
 
-        <div class="bg-success p-20">
-          <h3 class="">{{$projet->name}} - {{$projet->code}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
+        <div class="card card-success">
+            <div class="card-header">
+                <h3 class="">{{$projet->name}} - {{$projet->code}} - <small><?= date_format($projet->created_at,'d/m/Y') ?></small></h3>
+            </div>
+
         </div>
         <hr/>
         <div class="">

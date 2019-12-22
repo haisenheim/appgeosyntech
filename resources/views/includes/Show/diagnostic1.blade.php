@@ -327,6 +327,7 @@
              @else
                  <div class="table-responsive">
                        <h3>CARTOGRAPHIE DES RISQUES</h3>
+                       <hr/>
                       <table id="risques-tab" class="table table-condensed table-hover table-bordered">
                         <thead>
                          <tr>

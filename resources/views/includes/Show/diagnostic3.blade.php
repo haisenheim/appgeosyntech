@@ -1,4 +1,4 @@
-<div class="col-md-12 col-sm-12">
+<div class="">
        <div class="card">
         <div class="card-body">
                <fieldset>
