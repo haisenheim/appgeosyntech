@@ -1,8 +1,8 @@
 <div class="modal fade" id="angelsModal">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h6  class="modal-title text-center">INVESTISSEURS POTENTIELS</h6>
+            <div class="modal-header bg-danger">
+                <h6  class="modal-title" style="text-align: center"><i class="fa fa-w-11 fa-users"></i> INVESTISSEURS POTENTIELS</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
