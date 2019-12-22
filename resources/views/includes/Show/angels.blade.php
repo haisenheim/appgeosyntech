@@ -29,11 +29,11 @@
                                 @foreach($projet->investissements as $invest)
                                     <tr>
                                          <td style="width: 5%;"></td>
-                                        <td>
+                                        <td style="padding: 0;">
                                             <a href="#" data-toggle="modal" data-target="#angelMoal">
                                                 <img style="border-radius: 50%;float: left;height: 40px;width: 40px;"
                                                     src="{{ $invest->angel->imageUri?asset('img/'.$invest->angel->imageUri):asset('img/avatar.png') }}" /> <br/>
-                                               <p>{{ $invest->angel->name }}  </p>
+                                               <p style="margin-bottom:0; ">{{ $invest->angel->name }}  </p>
                                         </a>
                                         </td>
                                         <td>
@@ -68,16 +68,18 @@
                                                  <?php if($invest->lettre): ?>
                                                     <a class="dropdown-item" href="/national/letter/create/{{ $invest->token }}">Lettre d'intention</a>
                                                   <?php endif; ?>
-                                                  <?php if(!$invest->doc_juridique): ?>
-                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/national/projet/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
-                                                  <?php else: ?>
-                                                    <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/national/projet/docs/close/{{ $invest->token }}">Fermer la documentation</a>
-                                                  <?php endif; ?>
-                                                  <?php if($invest->validated): ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
-                                                  <?php else: ?>
-                                                    <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
-                                                  <?php endif; ?>
+                                                  @if($invest->dossier->owner_id)
+                                                      <?php if(!$invest->doc_juridique): ?>
+                                                        <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/national/projet/docs/open/{{ $invest->token }}">Ouvrir la documentation</a>
+                                                      <?php else: ?>
+                                                        <a title="Autoriser l'accès à la documentation juridique" class="dropdown-item" href="/national/projet/docs/close/{{ $invest->token }}">Fermer la documentation</a>
+                                                      <?php endif; ?>
+                                                      <?php if($invest->validated): ?>
+                                                        <a class="dropdown-item" href="/owner/investissements/close/{{ $invest->token }}">Fermer la data room</a>
+                                                      <?php else: ?>
+                                                        <a class="dropdown-item" href="/owner/investissements/open/{{ $invest->token }}">Ouvrir la data room</a>
+                                                      <?php endif; ?>
+                                                  @endif
                                                 </div>
                                               </div>
                                         </td>

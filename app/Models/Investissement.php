@@ -32,4 +32,17 @@ class Investissement extends Model
 	public function lettre(){
 		return $this->hasOne('App\Models\Lettre','investissement_id');
 	}
+
+	public function getDossierAttribute(){
+		if($this->earlie_id){
+			return Earlie::find($this->earlie_id);
+		}
+
+		if($this->projet_id){
+			return Projet::find($this->projet_id);
+		}
+
+		return null;
+
+	}
 }
