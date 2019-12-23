@@ -116,7 +116,7 @@
 
 <script>
     var h1 = $('#side1 .card').height();
-    $('#side1 .card').height(h1).css({'overflow-y':'scroll'});
+    $('#side2 .card').height(h1).css({'overflow-y':'scroll'});
 
     $('#btn-print').click(function(e){
         e.preventDefault();
