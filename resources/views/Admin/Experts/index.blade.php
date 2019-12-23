@@ -48,7 +48,9 @@
                                 <td>{!! $user->address !!} </td>
                                 <td>{!! $user->phone !!} </td>
                                 <td>{!! $user->email !!} </td>
-                                <td>{!! $user->senior?'CONSULTANT SENIOR' :'CONSULTANT JUNIOR' !!} </td>
+                                <td>{!! $user->pays?$user->pays->name:'-' !!} </td>
+                                <td>{!! $user->agence?$user->agence->name:'-' !!} </td>
+                                <td>{!! $user->rang !!} </td>
                                 <td>
                                     <ul class="list-inline">
                                         <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/consultant/creances/{{ $user->token }}"><i class="fa fa-coins"></i></a></li>
