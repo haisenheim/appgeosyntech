@@ -93,7 +93,7 @@ class User extends Authenticatable
 
 		}
 
-		return '';
+		return $rang;
 	}
 
 }

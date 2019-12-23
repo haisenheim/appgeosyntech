@@ -38,7 +38,7 @@
                             <th>EMAIL</th>
                             <th>PAYS</th>
                             <th>AGENCE</th>
-                            <th>TYPE DE COMPTE</th>
+                            <th>GRADE</th>
 
                             <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
                      </tr>
@@ -79,7 +79,7 @@
                       <th>EMAIL</th>
                       <th>PAYS</th>
                       <th>AGENCE</th>
-                      <th>TYPE DE COMPTE</th>
+                      <th>GRADE</th>
                       <th></th>
                     </tr>
                     </tfoot>
