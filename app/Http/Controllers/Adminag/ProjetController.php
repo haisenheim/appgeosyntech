@@ -26,7 +26,7 @@ class ProjetController extends Controller
     {
         //
 	    $projets = Projet::whereHas('owner',function($q){
-		    $q->where('owner.agence_id','=',Auth::user()->agence_id);
+		    $q->where('agence_id','=',Auth::user()->agence_id);
 	    })->get();
 
 	    $projets = $projets->sortByDesc('created_at')->paginate(20);
