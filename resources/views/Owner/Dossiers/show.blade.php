@@ -127,7 +127,7 @@
 
          $('#btn-print').click(function(e){
              e.preventDefault();
-             var link='/print/earlie/'+$('#token_val').val();
+             var link='/print/projet/'+$('#token_val').val();
 
              window.location.replace(link);
          });
