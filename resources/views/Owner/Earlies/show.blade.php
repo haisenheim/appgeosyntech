@@ -137,7 +137,7 @@
             url: "/owner/projet/getchoices",
             type:'Get',
             dataType:'json',
-            data:{id:$('#tokpay').val()},
+            data:{id:$('#id').val()},
             success:function(data){
                 if(data!=null){
                     $.ajax({
