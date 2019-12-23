@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
     <div style="padding-top: 30px; padding-bottom: 80px;" class="container-fluid">
                 <div class="row">
-                    <div id="side1" class="col-md-4 col-sm-12" style="max-height:860px; overflow-y: scroll ">
+                    <div id="side1" class="col-md-4 col-sm-12" >
                        @include('includes.Sidebars.dossier_owner')
                     </div>
-                    <div style="overflow-y: scroll; max-height: 860px" id="side2" class="col-md-8 col-sm-12">
+                    <div id="side2" class="col-md-8 col-sm-12">
                          @include('includes.Show.diagnostic1')
                     </div>
                 </div>
@@ -115,8 +115,8 @@
  <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
 
 <script>
-    var h2 = $('#side2 .card').height();
-    $('#side1 .card').height(h2).css({'overflow-y':'scroll'});
+    var h1 = $('#side1 .card').height();
+    $('#side1 .card').height(h1).css({'overflow-y':'scroll'});
 
     $('#btn-print').click(function(e){
         e.preventDefault();
