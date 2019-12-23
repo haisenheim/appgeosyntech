@@ -84,8 +84,8 @@ Route::prefix('admin')
 	    Route::get('apporteur/facture/{token}','FinanceController@showFactureApporteur');
 	    Route::get('facture/fill/{token}','FinanceController@fillFacture');
 	    Route::get('consultant/creances/{token}','FinanceController@getCreancesConsultant');
-	    Route::get('consultant/set-confirm/{token}','FinanceController@confirm');
-	    Route::get('consultant/set-senior/{token}','FinanceController@senior');
+	    Route::get('consultant/set-confirm/{token}','ExpertController@confirm');
+	    Route::get('consultant/set-senior/{token}','ExpertController@senior');
 	    Route::get('consultant/payees/{token}','FinanceController@getPayeesConsultant');
 	    Route::get('consultant/facture/{token}','FinanceController@showFactureConsultant');
 	    Route::get('alliages/creances','FinanceController@getCreancesAlliages');
