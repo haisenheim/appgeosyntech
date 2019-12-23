@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Utils;
 
 use App\Http\Controllers\Controller;
 use App\Models\Actif;
+use App\Models\Agence;
 use App\Models\Comment;
 use App\Models\Devise;
 use App\Models\Earlie;
@@ -42,6 +43,12 @@ class DiversController extends Controller
 		$villes = Ville::all()->where('pay_id',$request->pay_id)->toArray();
 		//dd($villes);
 		return response()->json($villes);
+	}
+
+	public function getAgencesByVille(Request $request){
+		$agences = Agence::all()->where('ville_id',$request->ville_id)->toArray();
+		//dd($villes);
+		return response()->json($agences);
 	}
     /**
      * Show the form for creating a new resource.

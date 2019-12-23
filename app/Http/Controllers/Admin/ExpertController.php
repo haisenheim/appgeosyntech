@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Agence;
 use App\Models\Pay;
 use App\Models\Role;
 use App\Models\Ville;
@@ -26,11 +27,25 @@ class ExpertController extends Controller
         //
         $users = User::all()->where('role_id','=',2);
 	    $pays = Pay::all();
+	    //$agences = Agence::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
         return view('Admin/Experts/index')->with(compact('users','pays'));
 
     }
+
+
+	public function confirm($token){
+		$user = \App\User::updateOrCreate(['token'=>$token],['confirmed'=>1]);
+
+		return back();
+	}
+
+	public function senior($token){
+		$user = \App\User::updateOrCreate(['token'=>$token],['senior'=>1]);
+
+		return back();
+	}
 
     /**
      * Show the form for creating a new resource.
@@ -72,6 +87,7 @@ class ExpertController extends Controller
 	    $user->active = 1;
 	    $user->token = sha1(Auth::user()->id . date('Yhmdhis'));
 	    $user->creator_id=Auth::user()->id;
+	    $user->agence_id = $request['agence_id'];
 	    if($request->imageUri){
 		    $file = $request->imageUri;
 		    $ext = $file->getClientOriginalExtension();
