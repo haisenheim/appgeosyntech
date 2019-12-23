@@ -25,7 +25,13 @@ class ProjetController extends Controller
     public function index()
     {
         //
-	    $projets = Projet::orderBy('created_at','desc')->where('agence_id',Auth::user()->agence_id)->paginate(20);
+	    $projets = Projet::whereHas('owner',function($q){
+		    $q->where('owner.agence_id','=',Auth::user()->agence_id);
+	    })->get();
+
+	    $projets = $projets->sortByDesc('created_at')->paginate(20);
+	    //$projets = Projet::orderBy('created_at','desc')->where('agence_id',Auth::user()->agence_id)->paginate(20);
+
 	    return view('/Adminag/Projets/index')->with(compact('projets'));
     }
 

@@ -360,6 +360,7 @@ class DossierController extends Controller
 		$token = sha1(date('ymdhs').$dossier['owner_id']);
 		$dossier['token'] = $token;
 
+
 		$file = $request->imageUri;
 		if($file){
 			$ext = $file->getClientOriginalExtension();
