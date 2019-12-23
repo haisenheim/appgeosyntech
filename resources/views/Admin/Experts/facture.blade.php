@@ -57,7 +57,7 @@
                                 <th>Paiement</th>
                                 <th>MONTANT</th>
                                 <th>CLIENT</th>
-                                <th>DOSSIER</th>
+
                                 <th>DATE DU PAIEMENT</th>
                             </tr>
                         </thead>
@@ -71,7 +71,7 @@
                                         <td>{{ $ligne->name }}</td>
                                         <td>{{ $ligne->montant_consultant }}</td>
                                         <td>{{ $ligne->owner->name }}</td>
-                                        <td>{{ $ligne->projet->name }}</td>
+
                                         <td>{{ date_format($ligne->created_at, 'd/m/Y') }}</td>
                                     </tr>
                                 @endforeach
@@ -87,25 +87,9 @@
 
         </div>
     </div>
+    </div>
 @endsection
 
 
-@section('nav_actions')
-<main>
-    <nav style="top:30%" class="floating-menu">
-        <ul class="main-menu">
 
-
-                @if(!$facture->filled)
-                   <li>
-                        <a  title="Payer Cette Facture" class="ripple" href="/admin/facture/fill/{{ $facture->token }}"><i class="fa fa-coins fa-lg text-warning"></i></a>
-                   </li>
-                @endif
-
-        </ul>
-        <div style="background: transparent" class="menu-bg"></div>
-    </nav>
-</main>
-
-@endsection
 
