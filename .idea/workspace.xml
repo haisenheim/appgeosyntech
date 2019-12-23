@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="" />
+    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -32,72 +34,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProjetController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Adminag/ProjetController.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.8" vertical-offset="0" max-vertical-offset="2512">
-              <caret line="31" column="68" selection-start-line="27" selection-start-column="27" selection-end-line="31" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjetController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/ProjetController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-46.72" vertical-offset="0" max-vertical-offset="2464">
-              <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="251" selection-end-column="5" />
+            <state vertical-scroll-proportion="-18.28" vertical-offset="23" max-vertical-offset="656">
+              <caret line="270" column="11" selection-start-line="270" selection-start-column="11" selection-end-line="270" selection-end-column="11" />
               <folding>
-                <element signature="e#819#866#0#PHP" expanded="false" />
-                <element signature="e#872#1031#0#PHP" expanded="false" />
-                <element signature="e#1036#1098#0#PHP" expanded="false" />
-                <element signature="e#1102#3292#0#PHP" expanded="false" />
-                <element signature="e#3295#3338#0#PHP" expanded="false" />
-                <element signature="e#3341#4081#0#PHP" expanded="false" />
-                <element signature="e#4084#4128#0#PHP" expanded="false" />
-                <element signature="e#4131#4938#0#PHP" expanded="false" />
-                <element signature="e#4941#4986#0#PHP" expanded="false" />
-                <element signature="e#4989#5800#0#PHP" expanded="false" />
-                <element signature="e#5852#6665#0#PHP" expanded="false" />
-                <element signature="e#6668#6698#0#PHP" expanded="false" />
-                <element signature="e#6700#6914#0#PHP" expanded="false" />
-                <element signature="e#6917#6949#0#PHP" expanded="false" />
-                <element signature="e#6951#7166#0#PHP" expanded="false" />
-                <element signature="e#7169#7180#0#PHP" expanded="false" />
-                <element signature="e#7182#7426#0#PHP" expanded="false" />
-                <element signature="e#7429#7672#0#PHP" expanded="false" />
-                <element signature="e#7716#7952#0#PHP" expanded="false" />
-                <element signature="e#7996#8234#0#PHP" expanded="false" />
+                <element signature="e#0#9322#0#Blade" expanded="false" />
+                <element signature="tag#script#3" expanded="false" />
+                <marker date="1577124718711" expanded="false" signature="4615:4654" placeholder="..." />
+                <marker date="1577124718711" expanded="false" signature="8532:8542" placeholder="..." />
+                <marker date="1577124718711" expanded="false" signature="8600:8610" placeholder="..." />
+                <marker date="1577124718711" expanded="false" signature="8669:8679" placeholder="..." />
+                <marker date="1577124718711" expanded="false" signature="8753:8763" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EarlyController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/EarlyController.php">
+      <file leaf-file-name="ProjetController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Adminag/ProjetController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="6112">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActifController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Adminag/ActifController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2048">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AngelController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Adminag/AngelController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1968">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.8" vertical-offset="0" max-vertical-offset="2512">
+              <caret line="31" column="68" selection-start-line="27" selection-start-column="27" selection-end-line="31" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -130,15 +89,26 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Adminag/Projets/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.16" vertical-offset="1682" max-vertical-offset="4080">
-              <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+            <state vertical-scroll-proportion="-0.64" vertical-offset="1328" max-vertical-offset="2208">
+              <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
               <folding>
+                <element signature="tag#script#1" expanded="false" />
                 <marker date="1577110797935" expanded="true" signature="5004:5043" placeholder="..." />
                 <marker date="1577110797935" expanded="true" signature="9301:9311" placeholder="..." />
                 <marker date="1577110797935" expanded="true" signature="9369:9379" placeholder="..." />
                 <marker date="1577110797935" expanded="true" signature="9438:9448" placeholder="..." />
                 <marker date="1577110797935" expanded="true" signature="9522:9532" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_dossier.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6827731" vertical-offset="875" max-vertical-offset="1376">
+              <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,12 +129,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15564202" vertical-offset="0" max-vertical-offset="514">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dossier_owner.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.72" vertical-offset="612" max-vertical-offset="1648">
+              <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show__.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show__.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="288">
+              <caret line="1774" column="0" selection-start-line="1774" selection-start-column="0" selection-end-line="1783" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#127612#0#Blade" expanded="false" />
+                <marker date="1577124718635" expanded="false" signature="120553:120592" placeholder="..." />
+                <marker date="1577124718635" expanded="false" signature="124853:124863" placeholder="..." />
+                <marker date="1577124718635" expanded="false" signature="124921:124931" placeholder="..." />
+                <marker date="1577124718635" expanded="false" signature="124990:125000" placeholder="..." />
+                <marker date="1577124718635" expanded="false" signature="125074:125084" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,7 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/National/ActifController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/AngelController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/ClientController.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
@@ -195,7 +191,6 @@
         <option value="$PROJECT_DIR$/resources/views/includes/Show/diagnostic3.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/diagnostic2.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Actions/admin_dossier.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Investissement.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/report.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php" />
@@ -212,11 +207,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/lettre_intention.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/lettre_intention.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Projets/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Utils/DiversController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php" />
@@ -233,6 +226,10 @@
         <option value="$PROJECT_DIR$/resources/views/Adminag/Projets/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Adminag/Earlies/show.blade.php" />
         <option value="$PROJECT_DIR$/public/js/api.js" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show__.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php" />
       </list>
     </option>
   </component>
@@ -337,6 +334,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sidebars" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Adminag" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -354,6 +399,18 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adminag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -365,25 +422,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -872,14 +911,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Lettre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.8" vertical-offset="0" max-vertical-offset="560">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Angel/Investissements/Projets/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.64" vertical-offset="8400" max-vertical-offset="14864">
@@ -1060,26 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64" vertical-offset="64" max-vertical-offset="1632">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#button#4;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#6;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="36.0" vertical-offset="900" max-vertical-offset="1376">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5753424" vertical-offset="1213" max-vertical-offset="3152">
@@ -1093,23 +1104,6 @@
             <marker date="1577100927043" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1577100927043" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1577100927043" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.76" vertical-offset="1316" max-vertical-offset="3200">
-          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding>
-            <element signature="tag#style#0" expanded="false" />
-            <element signature="e#3641#3788#0#HTML" expanded="false" />
-            <element signature="e#7672#9036#0#HTML" expanded="false" />
-            <marker date="1577101440696" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1577101440696" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1577101440696" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1577101440696" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1577101440696" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1356,20 +1350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Adminag/Projets/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.16" vertical-offset="1682" max-vertical-offset="4080">
-          <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
-          <folding>
-            <marker date="1577110797935" expanded="true" signature="5004:5043" placeholder="..." />
-            <marker date="1577110797935" expanded="true" signature="9301:9311" placeholder="..." />
-            <marker date="1577110797935" expanded="true" signature="9369:9379" placeholder="..." />
-            <marker date="1577110797935" expanded="true" signature="9438:9448" placeholder="..." />
-            <marker date="1577110797935" expanded="true" signature="9522:9532" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Adminag/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.643835" vertical-offset="0" max-vertical-offset="4080">
@@ -1386,8 +1366,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15564202" vertical-offset="0" max-vertical-offset="514">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show__.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="288">
+          <caret line="1774" column="0" selection-start-line="1774" selection-start-column="0" selection-end-line="1783" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#127612#0#Blade" expanded="false" />
+            <marker date="1577124718635" expanded="false" signature="120553:120592" placeholder="..." />
+            <marker date="1577124718635" expanded="false" signature="124853:124863" placeholder="..." />
+            <marker date="1577124718635" expanded="false" signature="124921:124931" placeholder="..." />
+            <marker date="1577124718635" expanded="false" signature="124990:125000" placeholder="..." />
+            <marker date="1577124718635" expanded="false" signature="125074:125084" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.28" vertical-offset="23" max-vertical-offset="656">
+          <caret line="270" column="11" selection-start-line="270" selection-start-column="11" selection-end-line="270" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#9322#0#Blade" expanded="false" />
+            <element signature="tag#script#3" expanded="false" />
+            <marker date="1577124718711" expanded="false" signature="4615:4654" placeholder="..." />
+            <marker date="1577124718711" expanded="false" signature="8532:8542" placeholder="..." />
+            <marker date="1577124718711" expanded="false" signature="8600:8610" placeholder="..." />
+            <marker date="1577124718711" expanded="false" signature="8669:8679" placeholder="..." />
+            <marker date="1577124718711" expanded="false" signature="8753:8763" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.72" vertical-offset="612" max-vertical-offset="1648">
+          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Adminag/Projets/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.64" vertical-offset="1328" max-vertical-offset="2208">
+          <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+          <folding>
+            <element signature="tag#script#1" expanded="false" />
+            <marker date="1577110797935" expanded="true" signature="5004:5043" placeholder="..." />
+            <marker date="1577110797935" expanded="true" signature="9301:9311" placeholder="..." />
+            <marker date="1577110797935" expanded="true" signature="9369:9379" placeholder="..." />
+            <marker date="1577110797935" expanded="true" signature="9438:9448" placeholder="..." />
+            <marker date="1577110797935" expanded="true" signature="9522:9532" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6827731" vertical-offset="875" max-vertical-offset="1376">
+          <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
           <folding />
         </state>
       </provider>
