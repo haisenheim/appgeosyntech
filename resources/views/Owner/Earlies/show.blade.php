@@ -115,7 +115,8 @@
  <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
 
 <script>
-
+    var h2 = $('#side2 .card').height();
+    $('#side1 .card').height(h2).css({'overflow-y':'scroll'});
 
     $('#btn-print').click(function(e){
         e.preventDefault();

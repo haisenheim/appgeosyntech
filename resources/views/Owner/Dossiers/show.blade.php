@@ -121,6 +121,15 @@
 
 <script>
     $(document).ready(function(){
+
+        var h2 = $('#side2 .card').height();
+        $('#side1 .card').height(h2).css({'overflow-y':'scroll'});
+
+        $('#btn-print').click(function(e){
+            e.preventDefault();
+            var link='/print/earlie/'+$('#token_val').val();
+            window.location.replace(link);
+        });
         getPlan($('#plan_id').val());
         var tsr = $('#has_teaser').val();
                if(tsr){
