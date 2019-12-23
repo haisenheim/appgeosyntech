@@ -46,6 +46,7 @@
     <p><i class="fa fa-map-marker"></i> {{ $projet->ville->name }}</p>
     <input type="hidden" id="pl_id" value="{{ $projet->plan_id }}"/>
 
+
     @if($projet->synthese_diagnostic_interne)
         <button data-toggle="modal" data-target="#synDiagIntModal" class="btn-synt btn btn-outline-warning btn-block btn-xs"><i class="fa fa-pencil"></i>SYNTHESE DU DIAGNOSTIC INTERNE</button>
     @endif

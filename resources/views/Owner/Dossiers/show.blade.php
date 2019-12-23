@@ -259,6 +259,17 @@
 </script>
 @endsection
 
+@section('action')
+
+@if($projet->modepaiement_id==1)
+    @if($projet->validated_step==1)
+        <a class="btn btn-xs btn-success" href="/owner/dossiers/add-step"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
+    @endif
+@endif
+
+
+@endsection
+
 
 
 
