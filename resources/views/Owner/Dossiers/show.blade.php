@@ -127,7 +127,7 @@
 
          $('#btn-print').click(function(e){
              e.preventDefault();
-             var link='/print/projet/'+$('#token_val').val();
+             var link='/print/projet/'+$('#tokpay').val();
 
              window.location.replace(link);
          });
