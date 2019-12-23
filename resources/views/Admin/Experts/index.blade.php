@@ -136,7 +136,7 @@
                             </div>
 
                             <div class="form-group">
-                              <label for="agence_id">PAYS</label>
+                              <label for="agence_id">AGENCE</label>
                               <select name="agence_id" class="form-control" id="agence_id">
 
                               </select>
@@ -219,10 +219,10 @@ $('#pay_id').change(function() {
     $('#agence_id').html('');
     var html='';
       $.ajax({
-          url:'/get-agence-ville',
+          url:'/get-agences-ville',
           type:'get',
           dataType:'json',
-          data:{pay_id:$('#ville_id').val()},
+          data:{ville_id:$('#ville_id').val()},
           success:function(data) {
 
            // console.log(Object.entries(data));
