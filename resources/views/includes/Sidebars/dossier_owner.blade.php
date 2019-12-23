@@ -62,6 +62,11 @@
         <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn-synt btn btn-outline-success btn-block btn-xs"><i class="fa fa-pencil"></i> TEASER</button>
     @endif
 
+    @if($projet->teaser)
+        <button style="margin-top: 7px" id="btn-print" class="btn btn-outline-danger btn-block btn-xs"><i class="fa fa-print"></i> IMPRIMER</button>
+    @endif
+
+
 
     @if($projet->modepaiement_id>0)
         <h6 class="page-header" style="background-color: inherit">MODALITE DE PAIEMENT</h6>
@@ -74,25 +79,6 @@
 
     @if($projet->modepaiement_id==0)
 
-       <?php if(Auth::user()->role_id==2): ?>
-            <div>
-                <h6 class="page-header" style="background-color: inherit">FORMULE DE PAIEMENT</h6>
-
-                <hr/>
-                <form action="/consultant/dossier/add-mode" method="get" class="form-inline">
-                    <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
-                    <select style="background-color: #FFFFFF" class="form-control" name="mode_id" id="mode_id">
-                        <option value="0">Choix d'une offre de service</option>
-                        @foreach($modes as $mode)
-                            <option value="{{ $mode->id }}">{{ $mode->name }}</option>
-                        @endforeach
-                    </select>
-                    <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-check"></i> ENREGISTRER</button>
-
-                </form>
-            </div>
-        <?php endif; ?>
-
         <?php if(Auth::user()->role_id==3): ?>
             <div>
                 <h6 class="page-header" style="background-color: inherit">FORMULE DE PAIEMENT</h6>
@@ -104,11 +90,8 @@
                         <li>SILVER (SANS ETUDE DE MARCHE)</li>
                     </ul>
                     <b>Contactez votre expert OBAC pour en savoir davantage</b>
-
             </div>
         <?php endif; ?>
-
     @endif
-
 </div>
 </div>

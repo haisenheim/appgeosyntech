@@ -57,7 +57,8 @@ Route::get('/roles/',
 Route::name('utils.')
 		->namespace('Utils')
 		->group(function(){
-			Route::get('dossier/print/{token}','DossierController@printit');
+			Route::get('/print/earlie/{token}','DiversController@printEarlie');
+			Route::get('/print/projet/{token}','DiversController@printProjet');
 			Route::get('dossier/getchoices','DossierController@getChoicesJson');
 			Route::get('get-villes-pay','DiversController@getVillesByPay');
 		});

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Actif;
 use App\Models\Comment;
 use App\Models\Devise;
+use App\Models\Earlie;
 use App\Models\Flettre;
 use App\Models\Investissement;
 use App\Models\Lettre;
@@ -51,6 +52,23 @@ class DiversController extends Controller
     {
         //
     }
+
+
+	public function printEarlie($token){
+		$dossier = Earlie::where('token',$token)->first();
+
+		$data =['dossier'=>$dossier];
+		$pdf = PDF::loadView('Utils/Dossiers/printit',$data);
+		return $pdf->stream($dossier->name.'.pdf');
+	}
+
+	public function printProjet($token){
+		$dossier = Projet::where('token',$token)->first();
+
+		$data =['dossier'=>$dossier];
+		$pdf = PDF::loadView('Utils/Dossiers/printit',$data);
+		return $pdf->stream($dossier->name.'.pdf');
+	}
 
 
     /**
