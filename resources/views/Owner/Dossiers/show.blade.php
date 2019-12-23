@@ -108,17 +108,15 @@
 
 </style>
 
- <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
 
 @endsection
 
 @section('scripts')
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-
-<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
 
 
+<script type="text/javascript" src="{{ asset('js/tinymce/jquery.tinymce.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
  <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
 
 <script>
@@ -207,12 +205,16 @@
             }
         })
 
-      $('textarea').summernote({
+      /*$('textarea').summernote({
         height: 125,
         tabsize: 2,
         followingToolbar: true,
         lang:'fr-FR'
-      });
+      });*/
+
+      tinymce.init({
+        selector:'textarea'
+      })
     });
 
     function getPlan(id){
