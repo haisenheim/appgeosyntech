@@ -12,6 +12,7 @@ use App\Models\Fincapitalsocial;
 use App\Models\Fincredbail;
 use App\Models\Finescompte;
 use App\Models\Finmlt;
+use App\Models\Investissement;
 use App\Models\Modepaiement;
 use App\Models\Moyen;
 use App\Models\Moyens_projet;
@@ -159,9 +160,6 @@ class DossierController extends Controller
 		$projet = Projet::where('token',$token)->first();
 		return view('/Consultant/Dossiers/create_diag_strategique')->with(compact('projet'));
 	}
-
-
-
 
 	//Creation du diagnostic strategique
 	public function createPlanFinancier($token){
@@ -414,6 +412,13 @@ class DossierController extends Controller
     {
         //
     }
+
+
+	public function createLetter($token){
+		$investissement = Investissement::where('token',$token)->first();
+		//dd($investissement);
+		return view('Consultant/lettre_intention')->with(compact('investissement'));
+	}
 
     /**
      * Store a newly created resource in storage.

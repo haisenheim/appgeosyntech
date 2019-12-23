@@ -205,12 +205,7 @@
             }
         })
 
-      /*$('textarea').summernote({
-        height: 125,
-        tabsize: 2,
-        followingToolbar: true,
-        lang:'fr-FR'
-      });*/
+
 
       tinymce.init({
         selector:'textarea'

@@ -146,54 +146,9 @@ class DossierController extends Controller
 	}
 
 	public function createLetter($token){
-		$invest = Investissement::where('token',$token)->first();
-		$letter = $invest->lettre;
-		if($letter){
-			// Creating the new document...
-			$phpWord = new \PhpOffice\PhpWord\PhpWord();
-
-			/* Note: any element you append to a document must reside inside of a Section. */
-
-// Adding an empty Section to the document...
-			$section = $phpWord->addSection();
-// Adding Text element to the Section having font styled by default...
-
-			$section->addText(
-				'La présente lettre d’intention décrit les principales conditions et '
-				.'modalités selon lesquelles l’investissement envisagé dans le projet'. $invest->projet->name .'pourrait être réalisé. '
-			);
-
-			$section->addText(
-				'Elle ne constitue en aucun cas un engagement ferme et irrévocable des parties de procéder à cet investissement. '
-			);
-
-			$section->addText(
-				'Cette lettre d’intention a été préparée sur la base et en l’état des informations reçues de la Société à ce jour, et particulièrement du business plan qui ont été préparés par les Fondateurs.'
-			);
-
-			$section->addText(
-				'Le montant total de l’investissement étant estimé à '. $invest->projet->montant .' ' . $invest->projet->devise->name.','
-				.'je, soussigné, '. $invest->angel->name .', agissant pour'. $invest->lettre->personnel?' Mon propre compte':' le compte de '.$invest->angel->entreprise?$invest->angel->entreprise->name:$invest->angel->organisme->name .', manifeste le souhait de participer à cette opération
-				sous forme de '. $invest->lettre->type->name .'  à hauteur de '.$invest->lettre->montant .' ' . $invest->lettre->devise->name
-			);
-
-
-
-			// Saving the document as OOXML file...
-			$objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-			try{
-				$objWriter->save(public_path('files/docs').'/Lettre_intention.docx');
-			}catch (Exception $e){
-
-			}
-
-			return response()->download(public_path('files/docs').'/Lettre_intention.docx');
-
-
-		}else{
-			return back();
-		}
-
+		$investissement = Investissement::where('token',$token)->first();
+		//dd($investissement);
+		return view('Owner/lettre_intention')->with(compact('investissement'));
 	}
 
     /**

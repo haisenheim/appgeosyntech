@@ -2,74 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide/content.inline.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide-dark/content.inline.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/content/dark/content.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/content/default/content.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/content/document/content.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/content/writer/content.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide/content.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide-dark/content.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide/content.mobile.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide-dark/content.mobile.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/emoticons/js/emojis.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/emoticons/js/emojis.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/jquery.tinymce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/advlist/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/anchor/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/autolink/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/autoresize/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/autosave/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/bbcode/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/charmap/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/code/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/codesample/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/colorpicker/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/contextmenu/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/directionality/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/emoticons/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/fullpage/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/fullscreen/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/help/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/hr/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/image/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/imagetools/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/importcss/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/insertdatetime/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/legacyoutput/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/link/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/lists/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/media/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/nonbreaking/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/noneditable/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/pagebreak/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/paste/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/preview/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/print/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/quickbars/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/save/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/searchreplace/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/spellchecker/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/tabfocus/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/table/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/template/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/textcolor/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/textpattern/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/toc/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/visualblocks/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/visualchars/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/plugins/wordcount/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/langs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide/skin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide-dark/skin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide/skin.mobile.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/skins/ui/oxide-dark/skin.mobile.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/themes/mobile/theme.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/themes/silver/theme.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tinymce/tinymce.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -103,19 +37,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24744377" vertical-offset="2055" max-vertical-offset="2544">
-              <caret line="210" column="8" selection-start-line="210" selection-start-column="8" selection-end-line="210" selection-end-column="8" />
+            <state vertical-scroll-proportion="-6.12" vertical-offset="1975" max-vertical-offset="2464">
+              <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
               <folding>
                 <element signature="e#3570#7341#0#HTML" expanded="false" />
-                <element signature="e#7577#8941#0#HTML" expanded="false" />
-                <marker date="1577095725550" expanded="true" signature="4380:4419" placeholder="..." />
-                <marker date="1577095725550" expanded="true" signature="8437:8447" placeholder="..." />
-                <marker date="1577095725550" expanded="true" signature="8505:8515" placeholder="..." />
-                <marker date="1577095725550" expanded="true" signature="8574:8584" placeholder="..." />
-                <marker date="1577095725550" expanded="true" signature="8658:8668" placeholder="..." />
+                <element signature="e#7437#8801#0#HTML" expanded="false" />
+                <marker date="1577096314075" expanded="true" signature="4380:4419" placeholder="..." />
+                <marker date="1577096314075" expanded="true" signature="8297:8307" placeholder="..." />
+                <marker date="1577096314075" expanded="true" signature="8365:8375" placeholder="..." />
+                <marker date="1577096314075" expanded="true" signature="8434:8444" placeholder="..." />
+                <marker date="1577096314075" expanded="true" signature="8518:8528" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjetController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/ProjetController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.88" vertical-offset="871" max-vertical-offset="2464">
+              <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="251" selection-end-column="5" />
+              <folding>
+                <element signature="e#819#866#0#PHP" expanded="false" />
+                <element signature="e#872#1031#0#PHP" expanded="false" />
+                <element signature="e#1036#1098#0#PHP" expanded="false" />
+                <element signature="e#1102#3292#0#PHP" expanded="false" />
+                <element signature="e#3295#3338#0#PHP" expanded="false" />
+                <element signature="e#3341#4081#0#PHP" expanded="false" />
+                <element signature="e#4084#4128#0#PHP" expanded="false" />
+                <element signature="e#4131#4938#0#PHP" expanded="false" />
+                <element signature="e#4941#4986#0#PHP" expanded="false" />
+                <element signature="e#4989#5800#0#PHP" expanded="false" />
+                <element signature="e#5852#6665#0#PHP" expanded="false" />
+                <element signature="e#6668#6698#0#PHP" expanded="false" />
+                <element signature="e#6700#6914#0#PHP" expanded="false" />
+                <element signature="e#6917#6949#0#PHP" expanded="false" />
+                <element signature="e#6951#7166#0#PHP" expanded="false" />
+                <element signature="e#7169#7180#0#PHP" expanded="false" />
+                <element signature="e#7182#7426#0#PHP" expanded="false" />
+                <element signature="e#7429#7672#0#PHP" expanded="false" />
+                <element signature="e#7716#7952#0#PHP" expanded="false" />
+                <element signature="e#7996#8234#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.28" vertical-offset="148" max-vertical-offset="6992">
+              <caret line="150" column="26" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
+              <folding>
+                <element signature="e#943#1170#0#PHP" expanded="false" />
+                <element signature="e#1173#1435#0#PHP" expanded="false" />
+                <element signature="e#1438#1575#0#PHP" expanded="false" />
+                <element signature="e#1578#1716#0#PHP" expanded="false" />
+                <element signature="e#1753#1929#0#PHP" expanded="false" />
+                <element signature="e#1968#4304#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9345603" vertical-offset="1639" max-vertical-offset="2192">
+              <caret line="481" column="0" selection-start-line="481" selection-start-column="0" selection-end-line="481" selection-end-column="0" />
+              <folding>
+                <element signature="e#1148#1410#0#PHP" expanded="false" />
+                <element signature="e#1414#1688#0#PHP" expanded="false" />
+                <element signature="e#1691#1897#0#PHP" expanded="false" />
+                <element signature="e#1935#2116#0#PHP" expanded="false" />
+                <element signature="e#2155#4497#0#PHP" expanded="false" />
+                <element signature="e#4539#4728#0#PHP" expanded="false" />
+                <element signature="e#4769#4990#0#PHP" expanded="false" />
+                <element signature="e#4994#5107#0#PHP" expanded="false" />
+                <element signature="e#5110#7992#0#PHP" expanded="false" />
+                <element signature="e#7996#8417#0#PHP" expanded="false" />
+                <element signature="e#8461#9905#0#PHP" expanded="false" />
+                <element signature="e#9910#10039#0#PHP" expanded="false" />
+                <element signature="e#10042#10282#0#PHP" expanded="false" />
+                <element signature="e#10285#10540#0#PHP" expanded="false" />
+                <element signature="e#10544#10608#0#PHP" expanded="false" />
+                <element signature="e#10611#10866#0#PHP" expanded="false" />
+                <element signature="e#10939#11198#0#PHP" expanded="false" />
+                <element signature="e#11204#11313#0#PHP" expanded="false" />
+                <element signature="e#11318#11365#0#PHP" expanded="false" />
+                <element signature="e#11751#11813#0#PHP" expanded="false" />
+                <element signature="e#11962#12177#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -161,36 +175,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="after_teaser_popup.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/after_teaser_popup.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="576">
-              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uploadDocs.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/uploadDocs.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="672">
-              <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angels.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/angels.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1028" max-vertical-offset="2176">
-              <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="business_model.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Edit/business_model.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -224,8 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/National/Commercials/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/National/Commercials/payees.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Creances/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Creances/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Earlies/index.blade.php" />
@@ -275,6 +257,8 @@
         <option value="$PROJECT_DIR$/resources/views/includes/Edit/rapport_mensuel.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/owner.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php" />
       </list>
     </option>
   </component>
@@ -353,99 +337,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tinymce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tinymce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tinymce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skins" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,6 +352,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -894,20 +790,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Users/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="775" max-vertical-offset="2784">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Villes/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1668" max-vertical-offset="3568">
-          <caret line="113" column="85" selection-start-line="113" selection-start-column="85" selection-end-line="113" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/National/Villes/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="352">
@@ -1101,6 +983,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.6" vertical-offset="247" max-vertical-offset="864">
           <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1136,13 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="272">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/ProjetController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.04" vertical-offset="1159" max-vertical-offset="2464">
-          <caret line="259" column="32" selection-start-line="259" selection-start-column="32" selection-end-line="259" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1255,16 +1131,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24744377" vertical-offset="2055" max-vertical-offset="2544">
-          <caret line="210" column="8" selection-start-line="210" selection-start-column="8" selection-end-line="210" selection-end-column="8" />
+        <state vertical-scroll-proportion="-6.12" vertical-offset="1975" max-vertical-offset="2464">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
           <folding>
             <element signature="e#3570#7341#0#HTML" expanded="false" />
-            <element signature="e#7577#8941#0#HTML" expanded="false" />
-            <marker date="1577095725550" expanded="true" signature="4380:4419" placeholder="..." />
-            <marker date="1577095725550" expanded="true" signature="8437:8447" placeholder="..." />
-            <marker date="1577095725550" expanded="true" signature="8505:8515" placeholder="..." />
-            <marker date="1577095725550" expanded="true" signature="8574:8584" placeholder="..." />
-            <marker date="1577095725550" expanded="true" signature="8658:8668" placeholder="..." />
+            <element signature="e#7437#8801#0#HTML" expanded="false" />
+            <marker date="1577096314075" expanded="true" signature="4380:4419" placeholder="..." />
+            <marker date="1577096314075" expanded="true" signature="8297:8307" placeholder="..." />
+            <marker date="1577096314075" expanded="true" signature="8365:8375" placeholder="..." />
+            <marker date="1577096314075" expanded="true" signature="8434:8444" placeholder="..." />
+            <marker date="1577096314075" expanded="true" signature="8518:8528" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/ProjetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.88" vertical-offset="871" max-vertical-offset="2464">
+          <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="251" selection-end-column="5" />
+          <folding>
+            <element signature="e#819#866#0#PHP" expanded="false" />
+            <element signature="e#872#1031#0#PHP" expanded="false" />
+            <element signature="e#1036#1098#0#PHP" expanded="false" />
+            <element signature="e#1102#3292#0#PHP" expanded="false" />
+            <element signature="e#3295#3338#0#PHP" expanded="false" />
+            <element signature="e#3341#4081#0#PHP" expanded="false" />
+            <element signature="e#4084#4128#0#PHP" expanded="false" />
+            <element signature="e#4131#4938#0#PHP" expanded="false" />
+            <element signature="e#4941#4986#0#PHP" expanded="false" />
+            <element signature="e#4989#5800#0#PHP" expanded="false" />
+            <element signature="e#5852#6665#0#PHP" expanded="false" />
+            <element signature="e#6668#6698#0#PHP" expanded="false" />
+            <element signature="e#6700#6914#0#PHP" expanded="false" />
+            <element signature="e#6917#6949#0#PHP" expanded="false" />
+            <element signature="e#6951#7166#0#PHP" expanded="false" />
+            <element signature="e#7169#7180#0#PHP" expanded="false" />
+            <element signature="e#7182#7426#0#PHP" expanded="false" />
+            <element signature="e#7429#7672#0#PHP" expanded="false" />
+            <element signature="e#7716#7952#0#PHP" expanded="false" />
+            <element signature="e#7996#8234#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.28" vertical-offset="148" max-vertical-offset="6992">
+          <caret line="150" column="26" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
+          <folding>
+            <element signature="e#943#1170#0#PHP" expanded="false" />
+            <element signature="e#1173#1435#0#PHP" expanded="false" />
+            <element signature="e#1438#1575#0#PHP" expanded="false" />
+            <element signature="e#1578#1716#0#PHP" expanded="false" />
+            <element signature="e#1753#1929#0#PHP" expanded="false" />
+            <element signature="e#1968#4304#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/DossierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9345603" vertical-offset="1639" max-vertical-offset="2192">
+          <caret line="481" column="0" selection-start-line="481" selection-start-column="0" selection-end-line="481" selection-end-column="0" />
+          <folding>
+            <element signature="e#1148#1410#0#PHP" expanded="false" />
+            <element signature="e#1414#1688#0#PHP" expanded="false" />
+            <element signature="e#1691#1897#0#PHP" expanded="false" />
+            <element signature="e#1935#2116#0#PHP" expanded="false" />
+            <element signature="e#2155#4497#0#PHP" expanded="false" />
+            <element signature="e#4539#4728#0#PHP" expanded="false" />
+            <element signature="e#4769#4990#0#PHP" expanded="false" />
+            <element signature="e#4994#5107#0#PHP" expanded="false" />
+            <element signature="e#5110#7992#0#PHP" expanded="false" />
+            <element signature="e#7996#8417#0#PHP" expanded="false" />
+            <element signature="e#8461#9905#0#PHP" expanded="false" />
+            <element signature="e#9910#10039#0#PHP" expanded="false" />
+            <element signature="e#10042#10282#0#PHP" expanded="false" />
+            <element signature="e#10285#10540#0#PHP" expanded="false" />
+            <element signature="e#10544#10608#0#PHP" expanded="false" />
+            <element signature="e#10611#10866#0#PHP" expanded="false" />
+            <element signature="e#10939#11198#0#PHP" expanded="false" />
+            <element signature="e#11204#11313#0#PHP" expanded="false" />
+            <element signature="e#11318#11365#0#PHP" expanded="false" />
+            <element signature="e#11751#11813#0#PHP" expanded="false" />
+            <element signature="e#11962#12177#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
