@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Owner/Earlies/show_old.blade.php" />
-      <change type="DELETED" beforePath="C:\xampp\alert\resources\views\Owner\Earlies\create.blade__.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\resources\views\Owner\Earlies\index__.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\alert\resources\views\Owner\Earlies\show__.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Utils/DiversController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Utils/DiversController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Utils/DossierController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier_owner.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -43,37 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProjetController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/ProjetController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.88" vertical-offset="871" max-vertical-offset="2464">
-              <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="251" selection-end-column="5" />
-              <folding>
-                <element signature="e#819#866#0#PHP" expanded="false" />
-                <element signature="e#872#1031#0#PHP" expanded="false" />
-                <element signature="e#1036#1098#0#PHP" expanded="false" />
-                <element signature="e#1102#3292#0#PHP" expanded="false" />
-                <element signature="e#3295#3338#0#PHP" expanded="false" />
-                <element signature="e#3341#4081#0#PHP" expanded="false" />
-                <element signature="e#4084#4128#0#PHP" expanded="false" />
-                <element signature="e#4131#4938#0#PHP" expanded="false" />
-                <element signature="e#4941#4986#0#PHP" expanded="false" />
-                <element signature="e#4989#5800#0#PHP" expanded="false" />
-                <element signature="e#5852#6665#0#PHP" expanded="false" />
-                <element signature="e#6668#6698#0#PHP" expanded="false" />
-                <element signature="e#6700#6914#0#PHP" expanded="false" />
-                <element signature="e#6917#6949#0#PHP" expanded="false" />
-                <element signature="e#6951#7166#0#PHP" expanded="false" />
-                <element signature="e#7169#7180#0#PHP" expanded="false" />
-                <element signature="e#7182#7426#0#PHP" expanded="false" />
-                <element signature="e#7429#7672#0#PHP" expanded="false" />
-                <element signature="e#7716#7952#0#PHP" expanded="false" />
-                <element signature="e#7996#8234#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DossierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Owner/DossierController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -146,8 +106,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.033613447" vertical-offset="144" max-vertical-offset="3136">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.9327731" vertical-offset="1572" max-vertical-offset="3136">
+              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
               <folding>
                 <element signature="tag#style#0" expanded="false" />
                 <element signature="e#7550#8914#0#HTML" expanded="false" />
@@ -156,6 +116,32 @@
                 <marker date="1577098798955" expanded="false" signature="8478:8488" placeholder="..." />
                 <marker date="1577098798955" expanded="false" signature="8547:8557" placeholder="..." />
                 <marker date="1577098798955" expanded="false" signature="8631:8641" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_old.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show_old.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.52" vertical-offset="1332" max-vertical-offset="5072">
+              <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="46" />
+              <folding>
+                <element signature="tag#div#1" expanded="false" />
+                <element signature="tag#div#2" expanded="false" />
+                <element signature="tag#div#3" expanded="false" />
+                <element signature="tag#div#0;tag#div#4" expanded="false" />
+                <element signature="tag#div#5" expanded="false" />
+                <element signature="tag#div#6" expanded="false" />
+                <element signature="tag#main#0" expanded="false" />
+                <element signature="tag#div#7" expanded="false" />
+                <element signature="tag#div#8" expanded="false" />
+                <element signature="tag#div#0;tag#div#9" expanded="false" />
+                <marker date="1576416113585" expanded="false" signature="5066:5105" placeholder="..." />
+                <marker date="1576416113585" expanded="false" signature="9198:9208" placeholder="..." />
+                <marker date="1576416113585" expanded="false" signature="9266:9276" placeholder="..." />
+                <marker date="1576416113585" expanded="false" signature="9335:9345" placeholder="..." />
+                <marker date="1576416113585" expanded="false" signature="9419:9429" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -356,6 +342,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Owner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Owner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Earlies" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -954,13 +988,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="992">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CreanceController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="2368">
@@ -1392,10 +1419,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show_old.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.52" vertical-offset="1332" max-vertical-offset="5072">
+          <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="46" />
+          <folding>
+            <element signature="tag#div#1" expanded="false" />
+            <element signature="tag#div#2" expanded="false" />
+            <element signature="tag#div#3" expanded="false" />
+            <element signature="tag#div#0;tag#div#4" expanded="false" />
+            <element signature="tag#div#5" expanded="false" />
+            <element signature="tag#div#6" expanded="false" />
+            <element signature="tag#main#0" expanded="false" />
+            <element signature="tag#div#7" expanded="false" />
+            <element signature="tag#div#8" expanded="false" />
+            <element signature="tag#div#0;tag#div#9" expanded="false" />
+            <marker date="1576416113585" expanded="false" signature="5066:5105" placeholder="..." />
+            <marker date="1576416113585" expanded="false" signature="9198:9208" placeholder="..." />
+            <marker date="1576416113585" expanded="false" signature="9266:9276" placeholder="..." />
+            <marker date="1576416113585" expanded="false" signature="9335:9345" placeholder="..." />
+            <marker date="1576416113585" expanded="false" signature="9419:9429" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Owner/Earlies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033613447" vertical-offset="144" max-vertical-offset="3136">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.9327731" vertical-offset="1572" max-vertical-offset="3136">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding>
             <element signature="tag#style#0" expanded="false" />
             <element signature="e#7550#8914#0#HTML" expanded="false" />

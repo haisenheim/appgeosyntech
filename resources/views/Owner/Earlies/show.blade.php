@@ -55,7 +55,7 @@
         @include('includes.Edit.business_model')
         @endif
 
-
+   <input type="hidden" value="<?= $projet->token ?>" id="token_val"/>
 
    @if($projet->teaser)
            <input type="hidden" id="has_teaser" value="1"/>
