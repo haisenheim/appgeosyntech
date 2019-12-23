@@ -61,6 +61,7 @@ Route::name('utils.')
 			Route::get('/print/projet/{token}','DiversController@printProjet');
 			Route::get('dossier/getchoices','DossierController@getChoicesJson');
 			Route::get('get-villes-pay','DiversController@getVillesByPay');
+			Route::get('get-agences-ville','DiversController@getAgencesByVille');
 		});
 
 Route::prefix('admin')

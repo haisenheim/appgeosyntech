@@ -55,9 +55,9 @@
                                         <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/admin/consultant/payees/{{ $user->token }}"><i class="fa fa-search"></i></a></li>
                                         @if(!$user->senior)
                                             @if(!$user->confirmed)
-                                                <li title="Promouvoir le consultant en confirmé" class="list-inline-item"><a class="btn btn-info btn-xs" href="/admin/consultant/set-confirm/{{ $user->token }}"><i class="fa fa-hand-up"></i></a></li>
+                                                <li title="Promouvoir le consultant en confirmé" class="list-inline-item"><a class="btn btn-info btn-xs" href="/admin/consultant/set-confirm/{{ $user->token }}"><i class="fa fa-thumbs-up"></i></a></li>
                                             @else
-                                                <li title="Promouvoir le consultant en senior" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/consultant/set-senior/{{ $user->token }}"><i class="fa fa-hand-up"></i></a></li>
+                                                <li title="Promouvoir le consultant en senior" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/consultant/set-senior/{{ $user->token }}"><i class="fa fa-thumbs-up"></i></a></li>
                                             @endif
                                         @endif
                                     </ul>
@@ -127,6 +127,22 @@
 
                             </div>
 
+                            <div class="form-group">
+                              <label for="ville_id">VILLE</label>
+                              <select name="ville_id" class="form-control" id="ville_id">
+
+                              </select>
+
+                            </div>
+
+                            <div class="form-group">
+                              <label for="agence_id">PAYS</label>
+                              <select name="agence_id" class="form-control" id="agence_id">
+
+                              </select>
+
+                            </div>
+
                             <fieldset>
                                 <legend>Infos. de connexion</legend>
                                 <div class="form-group">
@@ -175,6 +191,53 @@
 <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 
 <script>
+
+$('#pay_id').change(function() {
+  $('#ville_id').html('');
+  var html='';
+    $.ajax({
+        url:'/get-villes-pay',
+        type:'get',
+        dataType:'json',
+        data:{pay_id:$('#pay_id').val()},
+        success:function(data) {
+
+         // console.log(Object.entries(data));
+          data = Object.entries(data);
+          for(var i=0;i<data.length;i++){
+          html= html + '<option value="'+ data[i][1].id +'">'+ data[i][1].name +'</option>';
+          //console.log(html);
+          }
+          //console.log(html);
+          $('#ville_id').html(html);
+        }
+
+    });
+  });
+
+  $('#ville_id').change(function() {
+    $('#agence_id').html('');
+    var html='';
+      $.ajax({
+          url:'/get-agence-ville',
+          type:'get',
+          dataType:'json',
+          data:{pay_id:$('#ville_id').val()},
+          success:function(data) {
+
+           // console.log(Object.entries(data));
+            data = Object.entries(data);
+            for(var i=0;i<data.length;i++){
+            html= html + '<option value="'+ data[i][1].id +'">'+ data[i][1].name +'</option>';
+            //console.log(html);
+            }
+            //console.log(html);
+            $('#agence_id').html(html);
+          }
+
+      });
+    })
+
   $(function () {
     $("#example1").DataTable();
 
