@@ -25,7 +25,10 @@ class EarlyController extends Controller
     public function index()
     {
         //
-	    $projets = Earlie::orderBy('created_at','desc')->where('agence_id',Auth::user()->agence_id)->paginate(20);
+	    $projets = Earlie::whereHas('owner',function($q){
+	    $q->where('agence_id','=',Auth::user()->agence_id);})->get();
+
+	    $projets = $projets->sortByDesc('created_at')->paginate(20);
 	    return view('/Adminag/Earlies/index')->with(compact('projets'));
     }
 
