@@ -260,15 +260,22 @@
 @endsection
 
 @section('nav_actions')
-
-@if($projet->modepaiement_id==1)
-    @if($projet->validated_step==1)
-        <a class="btn btn-xs btn-success" href="/owner/dossiers/add-step"><i class="fa fa-pencil"></i> Editer le diagnostic externe</a>
-    @endif
-@endif
-
+<main>
+    <nav class="floating-menu">
+        <ul class="main-menu">
+            <li>
+                <a title="Editer le diagnostic externe" href="/owner/dossiers/add-step/{{ $projet->token }}" class="ripple text-warning">
+                    <i class="fa fa-pencil"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="menu-bg"></div>
+    </nav>
+</main>
 
 @endsection
+
+
 
 
 
