@@ -43,23 +43,8 @@
 
             </ul>
     </fieldset>
-     @if($projet->consultant)
-     <fieldset>
-        <legend>CONSULTANT</legend>
-        <ul>
-                <li style="font-size: larger"><b>{{$projet->consultant->name}}</b></li>
-                <li><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</li>
-                <li><i class="fas fa-fw fa-mobile"></i> {{$projet->consultant->phone}}</li>
-                <li><i class="fas fa-fw fa-home"></i> {{$projet->consultant->agence?$projet->consultant->agence->phone:'-'}}</li>
+    @yield('consultant_choice')
 
-         </ul>
-    </fieldset>
-
-     @else
-
-        @yield('consultant_choice')
-
-     @endif
     </div>
 </div>
 
