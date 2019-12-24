@@ -228,6 +228,8 @@
     </script>
 
 
+
+
 @endsection
 
 @section('nav_actions')
@@ -247,3 +249,20 @@
 
 
 @endsection
+@section('consultant_choice')
+         <form class="form-inline"  action="/adminag/dossier/expert">
+         {{csrf_field()}}
+         <input type="hidden" name="id" value="{{ $projet->id }}"/>
+             <div class="form-group">
+                  <label for="expert_id">AFFECTER A UN CONSULTANT</label>
+                 <select class="form-control" name="expert_id" id="expert_id">
+                     @foreach($experts as $expert)
+                         <option value="{{ $expert->id }}">{{ $expert->name }}</option>
+                     @endforeach
+                 </select>
+             </div>
+             <div class="form-group">
+                 <button type="submit" class="btn btn-danger btn-block"><i class="fa fa-link"></i> LIER</button>
+             </div>
+         </form>
+    @endsection
