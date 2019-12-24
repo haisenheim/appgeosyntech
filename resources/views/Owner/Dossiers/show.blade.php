@@ -259,7 +259,7 @@
 </script>
 @endsection
 
-@section('action')
+@section('nav_actions')
 
 @if($projet->modepaiement_id==1)
     @if($projet->validated_step==1)
