@@ -54,7 +54,13 @@
                  </ul>
              @else
                 @if(\Illuminate\Support\Facades\Auth::user()->role_id==9)
-                    <form class=""  action="/adminag/projet/expert">
+                    @if($projet->bilans)
+
+                        <?php $link= "/adminag/dossier/expert" ?>
+                    @else
+                        <?php $link= "/adminag/projet/expert" ?>
+                    @endif
+                    <form class=""  action="<?= $link ?>">
                      {{csrf_field()}}
                      <input type="hidden" name="id" value="{{ $projet->id }}"/>
                          <div class="form-group">
