@@ -252,8 +252,9 @@
 
 @section('consultant_choice')
 
-
-        <fieldset>
+<div class="card">
+    <div class="card-body">
+         <fieldset>
             <legend>CONSULTANT</legend>
              @if($projet->expert_id>0)
                 <ul>
@@ -282,4 +283,7 @@
                 @endif
              @endif
         </fieldset>
+    </div>
+</div>
+
 @endsection

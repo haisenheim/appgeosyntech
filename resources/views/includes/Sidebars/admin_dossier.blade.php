@@ -43,7 +43,7 @@
 
             </ul>
     </fieldset>
-    @yield('consultant_choice')
+
 
     </div>
 </div>

@@ -346,8 +346,10 @@
        <div class="">
             <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
             @yield('content')
-
+            @yield('consultant_choice')
        </div>
+
+
 
     </section>
     <!-- /.content -->
