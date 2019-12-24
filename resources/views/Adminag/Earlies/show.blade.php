@@ -251,35 +251,7 @@
 @section('consultant_choice')
     <div class="card">
         <div class="card-body">
-             <fieldset>
-            <legend>CONSULTANT</legend>
-             @if($projet->expert_id>0)
-                <ul>
-                        <li style="font-size: larger"><b>{{$projet->consultant->name}}</b></li>
-                        <li><i class="far fa-fw fa-envelope"></i> {{$projet->consultant->email}}</li>
-                        <li><i class="fas fa-fw fa-mobile"></i> {{$projet->consultant->phone}}</li>
-                        <li><i class="fas fa-fw fa-home"></i> {{$projet->consultant->agence?$projet->consultant->agence->name:'-'}}</li>
-                 </ul>
-             @else
-                @if(\Illuminate\Support\Facades\Auth::user()->role_id==9)
-                    <form class=""  action="/adminag/projet/expert">
-                     {{csrf_field()}}
-                     <input type="hidden" name="id" value="{{ $projet->id }}"/>
-                         <div class="form-group">
-                              <label for="expert_id">AFFECTER A UN CONSULTANT</label>
-                             <select class="form-control" name="expert_id" id="expert_id">
-                                 @foreach($experts as $expert)
-                                     <option value="{{ $expert->id }}">{{ $expert->name }}</option>
-                                 @endforeach
-                             </select>
-                         </div>
-                         <div class="form-group">
-                             <button type="submit" class="btn btn-danger btn-block"><i class="fa fa-link"></i> LIER</button>
-                         </div>
-                     </form>
-                @endif
-             @endif
-        </fieldset>
+
         </div>
     </div>
 

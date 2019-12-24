@@ -4,8 +4,6 @@
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/national.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/national.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Adminag/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Adminag/Earlies/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Adminag/Projets/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Adminag/Projets/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -90,21 +88,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_dossier.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin_dossier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.36" vertical-offset="436" max-vertical-offset="912">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5966387" vertical-offset="436" max-vertical-offset="912">
+              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="national.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="national.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/national.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8655462" vertical-offset="5156" max-vertical-offset="6016">
-              <caret line="348" column="39" selection-start-line="348" selection-start-column="39" selection-end-line="348" selection-end-column="39" />
+            <state vertical-scroll-proportion="-16.48" vertical-offset="5156" max-vertical-offset="6016">
+              <caret line="348" column="0" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -240,8 +238,8 @@
         <option value="$PROJECT_DIR$/resources/views/Owner/Dossiers/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Adminag/Projets/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Adminag/Earlies/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/national.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php" />
       </list>
     </option>
   </component>
@@ -1487,18 +1485,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/national.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.36" vertical-offset="436" max-vertical-offset="912">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state vertical-scroll-proportion="-16.48" vertical-offset="5156" max-vertical-offset="6016">
+          <caret line="348" column="0" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/national.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Sidebars/admin_dossier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8655462" vertical-offset="5156" max-vertical-offset="6016">
-          <caret line="348" column="39" selection-start-line="348" selection-start-column="39" selection-end-line="348" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.5966387" vertical-offset="436" max-vertical-offset="912">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding />
         </state>
       </provider>
