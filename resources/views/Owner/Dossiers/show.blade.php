@@ -263,7 +263,7 @@
 <main>
     <nav class="floating-menu">
         <ul class="main-menu">
-            @if($projet->modepaiement==1)
+            @if($projet->modepaiement_id==1)
                 @if($projet->validated_step>1)
                     <li>
                         <a title="Editer le diagnostic externe" href="/owner/dossier/create-diag-externe/{{ $projet->token }}" class="ripple text-warning">
