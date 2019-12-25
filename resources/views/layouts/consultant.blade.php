@@ -16,7 +16,7 @@
         <a href="/consultant/dashboard" class="nav-link">Accueil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link nav-contact-obac-link">Contact</a>
       </li>
     </ul>
 
@@ -51,12 +51,12 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <small style="font-size: 0.7rem" class="dropdown-item dropdown-header"><?= Auth::user()->name ?> - <?= Auth::user()->email ?></small>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item nav-profil-link">
             <i class="fas fa-pencil-alt mr-2"></i> Mon Profil
 
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item nav-contact-obac-link">
             <i class="fas fa-envelope mr-2"></i> Contacter OBAC
 
           </a>
@@ -159,7 +159,7 @@
                 </li>
             </ul>
           </li>
-
+          @if(\Illuminate\Support\Facades\Auth::user()->senior)
           <li  class="nav-item has-treeview">
             <a href="#" class="nav-link {{ $active==4?'active':'' }}">
               <i class="nav-icon fas fa-coins text-warning"></i>
@@ -183,6 +183,7 @@
                 </li>
             </ul>
           </li>
+          @endif
 
           <li class="nav-item">
             <a href="/consultant/porteurs" class="nav-link {{ $active==5?'active':'' }}">

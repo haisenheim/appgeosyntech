@@ -1,3 +1,8 @@
+@if($projet->bilans)
+    <?php $link='dossier' ?>
+@else
+    <?php $link='projet' ?>
+@endif
 <div class="modal fade" id="bm" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
     <div class="modal-dialog modal-xl" role="document">
     	<div class="modal-content">

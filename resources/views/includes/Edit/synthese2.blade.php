@@ -1,5 +1,10 @@
+@if($projet->bilans)
+    <?php $link='dossier' ?>
+@else
+    <?php $link='projet' ?>
+@endif
  <div class="modal fade" id="synDiagExtModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-	<form method="post" action="/consultant/dossier/synthese2">
+	<form method="post" action="/consultant/{{ $link }}/synthese2">
 		<input type="hidden" id="" name="projet_token" value="<?= $projet->token ?>" />
 		{{csrf_field()}}
 		<div class="modal-dialog modal-lg" role="document">

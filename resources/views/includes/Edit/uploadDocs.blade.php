@@ -1,3 +1,8 @@
+@if($projet->bilans)
+    <?php $link='dossier' ?>
+@else
+    <?php $link='projet' ?>
+@endif
 <div class="modal fade" id="upDocsModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -10,7 +15,7 @@
             <div class="modal-body">
             <div class="card card-danger">
                 <div class="card-body">
-                    <form action="/owner/dossier/docs/" method="post" enctype="multipart/form-data">
+                    <form action="/owner/{{ $link }}/docs/" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
                         <div class="form-group">

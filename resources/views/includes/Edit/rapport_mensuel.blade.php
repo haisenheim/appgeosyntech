@@ -1,4 +1,8 @@
-
+@if($projet->bilans)
+    <?php $link='dossier' ?>
+@else
+    <?php $link='projet' ?>
+@endif
 
 <div class="modal fade" id="reportEditModal">
     <div class="modal-dialog modal-xl">
@@ -12,7 +16,7 @@
             <div class="modal-body">
             <div class="card card-danger">
                 <div class="card-body">
-                    <form method="post" action="/owner/dossier/edit-report">
+                    <form method="post" action="/owner/{{ $link }}/edit-report">
                         {{csrf_field()}}
                         <input type="hidden" name="projet_token" value="{{ $projet->token }}"/>
                         <div class="form-group">

@@ -13,10 +13,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/apporteur/dashboard" class="nav-link">Accueil</a>
+        <a href="#" class="nav-link">Accueil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link nav-contact-obac-link">Contact</a>
       </li>
     </ul>
 
@@ -41,12 +41,12 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <small style="font-size: 0.7rem" class="dropdown-item dropdown-header"><?= Auth::user()->name ?> - <?= Auth::user()->email ?></small>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item nav-profil-link">
             <i class="fas fa-pencil-alt mr-2"></i> Mon Profil
 
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item nav-contact-obac-link">
             <i class="fas fa-envelope mr-2"></i> Contacter OBAC
 
           </a>
