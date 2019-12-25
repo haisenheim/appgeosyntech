@@ -93,8 +93,8 @@
         $('#obac-contact-form').show();
     })
 
-    $('.nav-profil-link').click(function(e) {
+    /*$('.nav-profil-link').click(function(e) {
         e.preventDefault();
         $('#user-form').show();
-    })
+    })*/
 </script>
