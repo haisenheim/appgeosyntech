@@ -41,12 +41,12 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <small style="font-size: 0.7rem" class="dropdown-item dropdown-header"><?= Auth::user()->name ?> - <?= Auth::user()->email ?></small>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item nav-profil-link">
+          <a href="#" class="dropdown-item nav-profil-link" data-toggle="modal" data-target="#user-profil-form">
             <i class="fas fa-pencil-alt mr-2"></i> Mon Profil
 
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item nav-contact-obac-link">
+          <a href="#" class="dropdown-item nav-contact-obac-link" data-toggle="modal" data-target="#obac-contact-form">
             <i class="fas fa-envelope mr-2"></i> Contacter OBAC
 
           </a>

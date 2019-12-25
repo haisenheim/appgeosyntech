@@ -16,7 +16,7 @@
         <a href="/consultant/dashboard" class="nav-link">Accueil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link nav-contact-obac-link">Contact</a>
+        <a href="#" data-toggle="modal" data-target="#obac-contact-form" class="nav-link nav-contact-obac-link">Contact</a>
       </li>
     </ul>
 
@@ -56,7 +56,7 @@
 
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item nav-contact-obac-link">
+          <a href="#" class="dropdown-item nav-contact-obac-link" data-toggle="modal" data-target="#obac-contact-form">
             <i class="fas fa-envelope mr-2"></i> Contacter OBAC
 
           </a>

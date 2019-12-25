@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Ville;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -27,6 +29,37 @@ class UserController extends Controller
     {
         //
     }
+
+	public function profil(Request $request){
+		$user = User::where('token',$request->token)->first();
+
+		$data = $request->except('_csrf','imageUri');
+		if($request->password){
+			$data['password'] = Hash::make($request->password);
+		}else{
+			$data['password'] = $user->password;
+		}
+
+		if($request->imageUri){
+			$file = $request->imageUri;
+			$ext = $file->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif');
+			if(in_array($ext,$arr_ext)) {
+				if (!file_exists(public_path('img') . '/users')) {
+					mkdir(public_path('img') . '/users');
+				}
+				$token = sha1(Auth::user()->id. date('ydmhis'));
+				if (file_exists(public_path('img') . '/users/' . $token . '.' . $ext)) {
+					unlink(public_path('img') . '/users/' . $token . '.' . $ext);
+				}
+				$name = $token . '.' . $ext;
+				$file->move(public_path('img/users'), $name);
+				$data['imageUri'] = 'users/' . $name;
+			}
+		}
+
+		return back();
+	}
 
 
     /**

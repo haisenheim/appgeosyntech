@@ -49,11 +49,18 @@ Route::get('/print-pdf','FrontController@makePdf');
 
 Route::post('/contact','EmailController@contact');
 
+Route::post('/contact-obac','EmailController@contactObac');
+
+Route::post('/profil','UserController@profil');
+
 /*
 
 Route::get('/roles/',
     'RoleController@index'
 );*/
+
+
+
 Route::name('utils.')
 		->namespace('Utils')
 		->group(function(){
@@ -351,7 +358,6 @@ Route::prefix('adminag')
 		Route::get('actif/disable/{token}','ActifController@disable')->name('disable.actif');
 		Route::get('actif/enable/{token}','ActifController@enable')->name('enable.actif');
 		//Route::resource('variantesfinancements','VfinancementController');
-
 
 		Route::get('dossier/docs/open/{token}','ProjetController@openDoc');
 		Route::get('dossier/docs/close/{token}','ProjetController@closeDoc');
