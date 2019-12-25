@@ -61,49 +61,53 @@
     		    <div class="card">
     		        <div class="card-body">
     		             @csrf
+
+    		             <div style="text-align: center; padding: 15px auto">
+                            <div style='background: url("<?= Auth::user()->imageUri?asset('img/'.Auth::user()->imageUri):asset('img/avatar.png') ?>");width: 200px; height: 200px;border-radius: 50%; background-size: cover'>
+
+                            </div>
+                        </div>
+
                          <div class="row">
 
-                    <div class="col-sm-4 col-sm-12 form-group">
+                    <div class="col-md-12 col-sm-12 form-group">
+
                         <label for="name" class="control-label">NOM</label>
                         <input type="text" name="last_name" id="name" value="<?= Auth::user()->last_name ?>" class="form-control"/>
                     </div>
-                    <div class="form-group col-sm-12 col-md-5">
+                    <div class="form-group col-sm-12 col-md-12">
                        <label for="name" class="control-label">PRENOM</label>
                        <input type="text" name="first_name" value="<?= Auth::user()->first_name ?>" id="name" class="form-control"/>
                      </div>
 
                     </div>
                     <div class="row">
-                     <div class="form-group col-sm-12 col-md-4">
+                     <div class="form-group col-sm-12 col-md-12">
                          <label for="name" class="control-label">ADRESSE</label>
                          <input type="text" name="address" id="name" value="<?= Auth::user()->address ?>" class="form-control"/>
                      </div>
-                     <div class="form-group col-sm-12 col-md-4">
+                     <div class="form-group col-sm-12 col-md-12">
                        <label for="name" class="control-label">TELEPHONE</label>
                        <input type="text" name="phone" id="name" value="<?= Auth::user()->phone ?>" class="form-control"/>
                      </div>
 
                      </div>
                      <div class="row">
-                     <div class="col-md-3 col-sm-12 form-group">
+                     <div class="col-md-12 col-sm-12 form-group">
                          <label for="name" class="control-label">EMAIL</label>
                          <input type="text" name="email" value="<?= Auth::user()->email ?>" id="name" class="form-control"/>
                      </div>
-                     <div class="col-md-3">
+                     <div class="col-md-12">
                      <label for="password">MOT DE PASSE</label>
                      <input type="password" id="password" name="password" class="form-control"/>
                      </div>
-                     <div class="col-md-3 col-sm-12">
+                     <div class="col-md-12 col-sm-12">
                         <label for="cpassword">CONFIRMATION</label>
                         <input type="password" name="cpassword" class="form-control" id="cpassword"/>
                      </div>
 
-                    <div class="col-sm-12 col-md-3">
-                        <div style="text-align: center; padding: 15px auto">
-                            <div style='background: url("<?= Auth::user()->imageUri?asset('img/'.Auth::user()->imageUri):asset('img/avatar.png') ?>"); background-size: cover'>
+                    <div class="col-sm-12 col-md-12">
 
-                            </div>
-                        </div>
                         <label for="imageUri">CHANGER VOTRE PHOTO DE PROFIL</label>
                         <input type="file" class="form-control" name="imageUri"/>
                      </div>
