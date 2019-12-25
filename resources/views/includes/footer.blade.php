@@ -63,7 +63,7 @@
     		             @csrf
 
     		             <div style="text-align: center; padding: 15px auto">
-                            <div style='background: url("<?= Auth::user()->imageUri?asset('img/'.Auth::user()->imageUri):asset('img/avatar.png') ?>");width: 200px; height: 200px;border-radius: 50%; background-size: cover'>
+    		                <img style="width: 125px; height:125px; margin: 5px auto; border-radius: 50%" src="<?= Auth::user()->imageUri?asset('img/'.Auth::user()->imageUri):asset('img/avatar.png') ?>" alt=""/>
 
                             </div>
                         </div>
