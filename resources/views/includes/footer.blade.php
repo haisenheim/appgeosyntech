@@ -5,6 +5,7 @@
 
 <?php use Illuminate\Support\Facades\Auth; ?>
 
+
 <div class="modal fade" id="obac-contact-form" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
     <div class="modal-dialog modal-xl" role="document">
     	<div class="modal-content">
@@ -45,8 +46,9 @@
     </div>
 </div>
 
+<?php if(Auth::user()): ?>
 <div class="modal fade" id="user-profil-form" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-    <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-dialog modal-lg" role="document">
     	<div class="modal-content">
     		<div class="modal-header bg-info">
     			<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>VOTRE PROFIL UTLISATEUR</span></h5>
@@ -61,23 +63,54 @@
     		             @csrf
                          <div class="row">
 
-                             <div class="col-md-12">
-                                 <div class="form-group">
-                                        <label for="last-name">VOTRE NOM</label>
-                                     <input required="required" type="text" name="objet" class="form-control" placeholder="<?= Auth::user()->last_name ?>"/>
-                                 </div>
-                             </div>
-                             <div class="col-md-12">
-                                 <div class="form-group">
+                    <div class="col-sm-4 col-sm-12 form-group">
+                        <label for="name" class="control-label">NOM</label>
+                        <input type="text" name="last_name" id="name" value="<?= Auth::user()->last_name ?>" class="form-control"/>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-5">
+                       <label for="name" class="control-label">PRENOM</label>
+                       <input type="text" name="first_name" value="<?= Auth::user()->first_name ?>" id="name" class="form-control"/>
+                     </div>
 
-                                     <textarea required="required" name="message" id="" cols="30" rows="4" class="form-control" placeholder="Votre message ..."></textarea>
-                                 </div>
-                             </div>
+                    </div>
+                    <div class="row">
+                     <div class="form-group col-sm-12 col-md-4">
+                         <label for="name" class="control-label">ADRESSE</label>
+                         <input type="text" name="address" id="name" value="<?= Auth::user()->address ?>" class="form-control"/>
+                     </div>
+                     <div class="form-group col-sm-12 col-md-4">
+                       <label for="name" class="control-label">TELEPHONE</label>
+                       <input type="text" name="phone" id="name" value="<?= Auth::user()->phone ?>" class="form-control"/>
+                     </div>
 
-                         </div>
+                     </div>
+                     <div class="row">
+                     <div class="col-md-3 col-sm-12 form-group">
+                         <label for="name" class="control-label">EMAIL</label>
+                         <input type="text" name="email" value="<?= Auth::user()->email ?>" id="name" class="form-control"/>
+                     </div>
+                     <div class="col-md-3">
+                     <label for="password">MOT DE PASSE</label>
+                     <input type="password" id="password" name="password" class="form-control"/>
+                     </div>
+                     <div class="col-md-3 col-sm-12">
+                        <label for="cpassword">CONFIRMATION</label>
+                        <input type="password" name="cpassword" class="form-control" id="cpassword"/>
+                     </div>
+
+                    <div class="col-sm-12 col-md-3">
+                        <div style="text-align: center; padding: 15px auto">
+                            <div style='background: url("<?= Auth::user()->imageUri?asset('img/'.Auth::user()->imageUri):asset('img/avatar.png') ?>"); background-size: cover'>
+
+                            </div>
+                        </div>
+                        <label for="imageUri">CHANGER VOTRE PHOTO DE PROFIL</label>
+                        <input type="file" class="form-control" name="imageUri"/>
+                     </div>
+                    </div>
     		        </div>
     		        <div class="card-footer">
-    		           <button class="btn btn-warning btn-block btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
+    		           <button class="btn btn-info btn-block btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
     		        </div>
     		    </div>
     		    </form>
@@ -85,15 +118,4 @@
     	</div>
     </div>
 </div>
-
-<script>
-    $('.nav-contact-obac-link').click(function(e) {
-        e.preventDefault();
-        $('#obac-contact-form').show();
-    })
-
-    /*$('.nav-profil-link').click(function(e) {
-        e.preventDefault();
-        $('#user-form').show();
-    })*/
-</script>
+<?php endif; ?>
