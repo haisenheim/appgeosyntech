@@ -68,7 +68,9 @@ class UserController extends Controller
 			}
 		}
 
-		return back();
+		$user = User::updateOrCreate(['token'=>$user->token],$data);
+
+		return redirect('logout');
 	}
 
 
