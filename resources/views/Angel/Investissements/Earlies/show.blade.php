@@ -170,11 +170,105 @@ use \Illuminate\Support\Facades\Auth;
 
 </style>
 
+
+ <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+            		<div class="modal-dialog modal-lg" role="document">
+            			<div class="modal-content">
+            				<div class="modal-body">
+            					<div class="row">
+            					    <div class="col-md-5 col-sm-12">
+            					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                         </div>
+            					    </div>
+            					    <div class="col-md-7 col-sm-12">
+                                            <p>Félicitations ! Votre lettre d’intention a été envoyée au porteur de projet.</p>
+
+                                               <p>Dès que la somme des intentions d’investissement atteindra le montant sollicité par le porteur de projet,
+                                               vous aurez la possibilité d’accéder à la documentation juridique à savoir le contrat qui encadre votre relation d’affaires.
+                                                Celle-ci pourra faire l’objet d’une discussion avec le porteur de projet dans l’onglet « Messagerie ».</p>
+
+                                               <p>Une fois un accord trouvé, la documentation juridique devra être signée par les deux parties puis mis en ligne pour
+                                               être validée par OBAC</p>
+                                            <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+            					    </div>
+            					</div>
+            				</div>
+
+
+            			</div>
+            		</div>
+
+            </div>
+     <div class="modal" id="popup2" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+            		<div class="modal-dialog modal-lg" role="document">
+            			<div class="modal-content">
+            				<div class="modal-body">
+            					<div class="row">
+            					    <div class="col-md-5 col-sm-12">
+            					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                         </div>
+            					    </div>
+            					    <div class="col-md-7 col-sm-12">
+                                            <p>Félicitations ! Vous venez de mettre en ligne votre contrat d’affaires. </p>
+
+                                            <p> L’équipe juridique d’OBAC prendra le temps de l’analyser dans un délai de 48 heures avant de procéder à sa validation. </p>
+
+                                            <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+            					    </div>
+            					</div>
+            				</div>
+
+
+            			</div>
+            		</div>
+
+            </div>
+
+     <div class="modal" id="popup3" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+     	<div class="modal-dialog modal-lg" role="document">
+     		<div class="modal-content">
+     			<div class="modal-body">
+     				<div class="row">
+     				    <div class="col-md-5 col-sm-12">
+     				         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                               </div>
+     				    </div>
+     				    <div class="col-md-7 col-sm-12">
+                                <p>Félicitations ! vous venez d’envoyer le justificatif de versement des fonds. L’équipe juridique d’OBAC procèdera
+                                 à son authentification et sa validation dans un délai de 72h.</p>
+
+                                <p>A la suite de la validation de ce justificatif, votre opération sera validée et vous pourrez dès lors suivre l’évolution
+                                de votre investissement en souscrivant à l’offre « Rapport d’activité mensuel » à hauteur de 145 000 FCFA HT / trimestre</p>
+
+
+                                  <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+     				    </div>
+     				</div>
+     			</div>
+
+
+     		</div>
+     	</div>
+
+     </div>
+
 <script type="text/javascript" src="{{ asset('js/tinymce/jquery.tinymce.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
  <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
-
+ <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
+                <!-- SweetAlert2 -->
+ <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+                <!-- Toastr -->
+ <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 <script>
+
+
     $(document).ready(function(){
 
          var h1 = $('#side1 .card').height();
@@ -302,6 +396,160 @@ use \Illuminate\Support\Facades\Auth;
                }
              });
         }
+
+
+
+   $('#btn-save').click(function(e){
+           e.preventDefault();
+           var spinHandle_firstProcess = loadingOverlay.activate();
+           const Toast = Swal.mixin({
+                                  toast: true,
+                                  position: 'top-end',
+                                  showConfirmButton: false,
+                                  timer: 5000
+                                });
+
+           var letter = $('#letter');
+           var inputs = letter.find('input');
+           var selects = letter.find('select');
+           //var donnees = [];
+
+                   var values = {};
+                   for (var i=0; i < inputs.length; i++) {
+                       var id = inputs[i].getAttribute('name');
+                       values[id] = $('input[name="'+id+'"]').val();
+                   }
+                   for (var i=0; i < selects.length; i++) {
+                                          var id = selects[i].getAttribute('name');
+                                          values[id] = $('select[name="'+id+'"]').val();
+                                      }
+
+                   //values.type_remboursement_id = $('')
+
+           $.ajax({
+               url:'/angel/letter',
+               dataType:'json',
+               type:'post',
+               data:values,
+               beforeSend:function(xhr){
+                            xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                        },
+               success:function(data){
+
+                   $('#IpM').hide();
+                               Toast.fire({
+                                       type: 'success',
+                                       title: 'Demande initialisée succès!!!'
+                                     });
+                                     setTimeout(function() {
+                                        loadingOverlay.cancel(spinHandle_firstProcess);
+                                       $('#popup').show();
+                                     },2000);
+               }
+           });
+        });
+
+         $('#btn-save2').click(function(e){
+
+                   e.preventDefault();
+                   const Toast = Swal.mixin({
+                                          toast: true,
+                                          position: 'top-end',
+                                          showConfirmButton: false,
+                                          timer: 5000
+                                        });
+
+                   if($('#docUri').val().length<1){
+                        alert('Aucun document n\'a été soumis');
+                   }else{
+                         var spinHandle_firstProcess = loadingOverlay.activate();
+                         var fd = new FormData();
+                         fd.append('doc_juridiqueUri',$('#docUri')[0].files[0]);
+                         fd.append('token',$('#token').val())
+
+
+                   $.ajax({
+                       url:'/angel/investissement/projet/doc',
+                       dataType:'json',
+                       type:'post',
+                        enctype:'multipart/form-data',
+                        processData:false,
+                        contentType:false,
+                        data:fd,
+                       beforeSend:function(xhr){
+                                    xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                                },
+                       success:function(data){
+
+                           $('#IpM').hide();
+                                       Toast.fire({
+                                               type: 'success',
+                                               title: 'Demande initialisée succès!!!'
+                                             });
+                                             setTimeout(function() {
+                                                loadingOverlay.cancel(spinHandle_firstProcess);
+                                               $('#popup2').show();
+                                             },2000);
+                       }
+                   });
+                   }
+
+                });
+
+          $('#btn-save3').click(function(e){
+
+                   e.preventDefault();
+                   const Toast = Swal.mixin({
+                                          toast: true,
+                                          position: 'top-end',
+                                          showConfirmButton: false,
+                                          timer: 5000
+                                        });
+
+                   if($('#justificatifUri').val().length<1){
+                        alert('Aucun document n\'a été soumis');
+                   }else{
+                         var spinHandle_firstProcess = loadingOverlay.activate();
+                         var fd = new FormData();
+                         fd.append('justificatifUri',$('#justificatifUri')[0].files[0]);
+                         fd.append('token',$('#token').val())
+
+
+                   $.ajax({
+                       url:'/angel/investissement/projet/justificatif',
+                       dataType:'json',
+                       type:'post',
+                        enctype:'multipart/form-data',
+                        processData:false,
+                        contentType:false,
+                        data:fd,
+                       beforeSend:function(xhr){
+                                    xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                                },
+                       success:function(data){
+
+                           $('#IpM').hide();
+                                       Toast.fire({
+                                               type: 'success',
+                                               title: 'Demande initialisée succès!!!'
+                                             });
+                                             setTimeout(function() {
+                                                loadingOverlay.cancel(spinHandle_firstProcess);
+                                               $('#popup3').show();
+                                             },2000);
+                       }
+                   });
+                   }
+
+                });
+
+     $('#closemsg').click(function(e){$('#msg').hide()})
+        $('#forme_id').change(function(e){
+            $('.blocx').hide();
+            var id = $('#forme_id').val();
+            $('#block-'+id).show();
+        });
+
 </script>
 
 @endsection
