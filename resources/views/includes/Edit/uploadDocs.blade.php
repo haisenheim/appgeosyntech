@@ -6,7 +6,7 @@
 <div class="modal fade" id="upDocsModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header bg-success">
+            <div class="modal-header bg-danger">
                 <h6  class="modal-title text-center">CHARGEMENT DES DOCUMENTS</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -31,7 +31,7 @@
                             <input type="file" class="form-control" id="pret" name="pret"/>
                         </div>
 
-                        <button type="submit" class="btn btn-outline-success btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
+                        <button type="submit" class="btn btn-outline-danger btn-block"> <i class="fa fa-save fa-lg"></i> ENREGISTRER</button>
                     </form>
 
                 </div>

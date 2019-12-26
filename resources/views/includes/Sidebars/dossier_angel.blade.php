@@ -53,7 +53,7 @@
     @endif
 
      @if($projet->etape>=4)
-        <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn-synt btn btn-outline-success btn-block btn-xs"><i class="fa fa-pencil"></i> EDITER LE TEASER</button>
+        <button style="margin-top: 7px" data-toggle="modal" data-target="#teaserModal" class="btn-synt btn btn-outline-success btn-block btn-xs"><i class="fa fa-pencil"></i>RESUME EXECUTIF</button>
     @endif
 
 

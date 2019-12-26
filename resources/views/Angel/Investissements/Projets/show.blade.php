@@ -110,7 +110,7 @@ use \Illuminate\Support\Facades\Auth;
        <div  class="modal fade" id="DocModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-              <div class="modal-header bg-success">
+              <div class="modal-header bg-danger">
                 <h4  class="modal-title text-center">CHARGEMENT DE VOTRE {{ $investissement->lettre->forme_id==1?'CONTRAT D\'ASSOCIES':$investissement->lettre->forme_id==2?'CONTRAT DE PRET':'CONTRAT D\'ENGAGEMENT' }}</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -122,7 +122,7 @@ use \Illuminate\Support\Facades\Auth;
                     <input type="hidden" name="token" value="{{ $investissement->token }}"/>
                     <input type="file" name="docUri" id="docUri" class="form-control"/>
 
-                    <button id="btn-save2" type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
+                    <button id="btn-save2" type="submit" class="btn btn-danger btn-block"> ENREGISTRER </button>
                 </form>
               </div>
 
