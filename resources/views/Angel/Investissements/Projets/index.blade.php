@@ -1,19 +1,11 @@
 @extends('......layouts.angel')
 @section('page-title')
-MES INVESTISSEMENTS
+MES INVESTISSEMENTS - DOSSIERS PME
 @endsection
 
 @section('content')
     <div style="padding-top: 30px" class="container-fluid">
-
-
-
-
-
         <div class="card">
-        <div class="card-header">
-            <h3>INVESTISSEMENTS SUR LES LEVEES DE FONDS </h3>
-        </div>
 
         <div class="card-body p-0">
           <table class="table table-striped projects" id="table-projets">
