@@ -3625,6 +3625,29 @@ $('.oblig_choice').click(function(){
 
     });
 
+$('#bfr, #montant_investissement').keyup(function(){
+        var invest = 0;
+        if($.isNumeric($('#montant_investissement').val())){
+            invest = parseFloat($('#montant_investissement').val());
+        }else{
+            invest = 0;
+        }
+
+        var bfr = 0;
+        if($.isNumeric($('#bfr').val())){
+            bfr = parseFloat($('#bfr').val());
+        }else{
+            bfr = 0;
+        }
+
+        var cout = invest + bfr;
+
+        $('#cout_projet').val(cout).css({
+            background:'#c4ffc4', 'text-align':'right', 'padding-right':'5px'
+        });
+
+
+    });
 
 
 </script>
