@@ -170,9 +170,137 @@ use \Illuminate\Support\Facades\Auth;
 
 </style>
 
+<div class="modal" id="msg" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+         	<div class="modal-dialog modal-lg" role="document">
+         		<div class="modal-content">
+         		    <div class="modal-header bg-success">
+                    <h4></h4>
+                    <button id="closemsg" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+         			<div class="modal-body">
+         				<div class="row">
+         				    <div class="col-md-5 col-sm-12">
+         				         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                   </div>
+         				    </div>
+         				    <div class="col-md-7 col-sm-12">
+                                 <p> Félicitations ! Vous êtes sur le point de clôturer votre opération. </p>
+                                 <p>  Afin de procéder à votre investissement, nous vous invitons à effectuer un virement ou un dépôt sur le numéro de compte suivant : </p>
+                                 <ul>
+                                    <li>Code Banque : 30014</li>
+                                    <li>Code Guichet : 00001</li>
+                                    <li> Numéro de compte : 01206971401</li>
+                                    <li>Clé RIB : 80</li>
+                                 </ul>
+
+         				    </div>
+         				</div>
+         			</div>
+
+
+         		</div>
+         	</div>
+
+         </div>
+ <div class="modal" id="popup" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+            		<div class="modal-dialog modal-lg" role="document">
+            			<div class="modal-content">
+            				<div class="modal-body">
+            					<div class="row">
+            					    <div class="col-md-5 col-sm-12">
+            					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                         </div>
+            					    </div>
+            					    <div class="col-md-7 col-sm-12">
+                                            <p>Félicitations ! Votre lettre d’intention a été envoyée au porteur de projet.</p>
+
+                                               <p>Dès que la somme des intentions d’investissement atteindra le montant sollicité par le porteur de projet,
+                                               vous aurez la possibilité d’accéder à la documentation juridique à savoir le contrat qui encadre votre relation d’affaires.
+                                                Celle-ci pourra faire l’objet d’une discussion avec le porteur de projet dans l’onglet « Messagerie ».</p>
+
+                                               <p>Une fois un accord trouvé, la documentation juridique devra être signée par les deux parties puis mis en ligne pour
+                                               être validée par OBAC</p>
+                                            <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+            					    </div>
+            					</div>
+            				</div>
+
+
+            			</div>
+            		</div>
+
+            </div>
+     <div class="modal" id="popup2" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+            		<div class="modal-dialog modal-lg" role="document">
+            			<div class="modal-content">
+            				<div class="modal-body">
+            					<div class="row">
+            					    <div class="col-md-5 col-sm-12">
+            					         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                                         </div>
+            					    </div>
+            					    <div class="col-md-7 col-sm-12">
+                                            <p>Félicitations ! Vous venez de mettre en ligne votre contrat d’affaires. </p>
+
+                                            <p> L’équipe juridique d’OBAC prendra le temps de l’analyser dans un délai de 48 heures avant de procéder à sa validation. </p>
+
+                                            <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+            					    </div>
+            					</div>
+            				</div>
+
+
+            			</div>
+            		</div>
+
+            </div>
+
+<div class="modal" id="popup3" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+
+     	<div class="modal-dialog modal-lg" role="document">
+     		<div class="modal-content">
+     			<div class="modal-body">
+     				<div class="row">
+     				    <div class="col-md-5 col-sm-12">
+     				         <div style="height: 300px; width: 100%; background: url('{{ $projet->imageUri?asset('img/'.$projet->imageUri):asset('img/logo.png') }}'); background-size: cover ">
+
+                               </div>
+     				    </div>
+     				    <div class="col-md-7 col-sm-12">
+                                <p>Félicitations ! vous venez d’envoyer le justificatif de versement des fonds. L’équipe juridique d’OBAC procèdera
+                                 à son authentification et sa validation dans un délai de 72h.</p>
+
+                                <p>A la suite de la validation de ce justificatif, votre opération sera validée et vous pourrez dès lors suivre l’évolution
+                                de votre investissement en souscrivant à l’offre « Rapport d’activité mensuel » à hauteur de 145 000 FCFA HT / trimestre</p>
+
+
+                                  <a class="btn btn-success btn-block" href="/angel/investissements/dossiers">CONTINUER <i class="fa fa-arrow-right fa-lg"></i></a>
+     				    </div>
+     				</div>
+     			</div>
+
+
+     		</div>
+     	</div>
+
+     </div>
+
 <script type="text/javascript" src="{{ asset('js/tinymce/jquery.tinymce.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
  <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+ <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
+                <!-- SweetAlert2 -->
+ <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+                <!-- Toastr -->
+ <script type="text/javascript" src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
 
 <script>
     $(document).ready(function(){
@@ -189,80 +317,89 @@ use \Illuminate\Support\Facades\Auth;
         getPlan($('#plan_id').val());
 
 
-        $.ajax({
-            url: "/owner/dossier/getchoices",
-            type:'Get',
-            dataType:'json',
-            data:{id:$('#tokpay').val()},
-            success:function(data){
-                if(data!=null){
-                    $.ajax({
-                        url:orm+'carto',
-                        type:'Post',
-                        dataType:'json',
-                        data:{choix:data},
-                        success:function(rep){
-                            var html = '';
-                            //console.log(Object.entries(rep));
-                            var risks=Object.entries(rep);
-                            for(var i=0; i<risks.length;i++){
-
-                                var rs= parseInt(risks[i][1].length) + 1;
-                                var tr= '<tr><th style="align-content: center; margin-top: auto" align="center" rowspan='+ rs  +'>'+ risks[i][0] +'</th></tr>';
-                                html=html+tr;
-                                for(var k=0; k<risks[i][1].length; k++){
-                                    $value = risks[i][1][k];
-                                    $cb= parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite);
-                                    $cn=parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite) * parseFloat($value.taux);
-
-                                    if(parseFloat($cb) >= 13){
-                                        $clrb='red';
-                                    }else{
-                                        if( parseFloat($cb) >=4 && parseFloat($cb) <= 12){
-                                            $clrb='yellow';
-                                        }else{
-                                            $clrb = '#0ac60a';
-                                        }
-                                    }
-
-                                    if( parseFloat($cn) >= 13){
-                                        $clr='red';
-                                    }else{
-                                        if( parseFloat($cn) >=4 &&  parseFloat($cn) <= 12){
-                                            $clr='yellow';
-                                        }else{
-                                            $clr = '#0ac60a';
-                                        }
-                                    }
-
-                                    var trr = '<tr>'+
-                                        '<td>'+ $value.question.produits_risque.name +'</td>'+
-                                        '<td>'+$value.question.produits_risque.causes +'</td>'+
-                                        '<td>'+ $value.question.produits_risque.consequences +'</td>'+
-                                        '<td>'+ $value.question.produits_risque.frequence +'</td>'+
-                                        '<td>'+ $value.question.produits_risque.gravite+'</td>'+
-                                        '<td style="background-color:'+ $clrb +'; font-weight: 900; text-align: right">'+ $cb  +'</td>'+
-                                        '<td style="background-color:'+ $clr +'">'+ $cn +'</td>'+
-                                    '</tr>';
-
-                                    html=html+trr;
-
-                                    //console.log(risks[i][1][k]);
-                                }
-                               // console.log(risks[i][1]);
-                            }
-
-                            $('#risques-tab').find('tbody').html(html);
-                        },
-                        Error:function(){
-                            $('#risks-loader').hide();
-                        }
-                    });
+       setTimeout(function() {
+             if($('#doc').val()==1){
+                if($('#doc_validated').val()==1){
+                    $('#msg').show();
                 }
+             }
+           },2000);
 
-            }
-        })
+            $.ajax({
+                url: "/angel/opportunites/projet/getchoices",
+                type:'Get',
+                dataType:'json',
+                data:{id:$('#id').val()},
+                success:function(data){
+                    if(data!=null){
+                        $.ajax({
+                            url:orm+'carto',
+                            type:'Post',
+                            dataType:'json',
+                            data:{choix:data},
+                            success:function(rep){
 
+                                var html = '';
+                                //console.log(Object.entries(rep));
+                                var risks=Object.entries(rep);
+                                for(var i=0; i<risks.length;i++){
+
+                                    var rs= parseInt(risks[i][1].length) + 1;
+                                    var tr= '<tr><th style="align-content: center; margin-top: auto" align="center" rowspan='+ rs  +'>'+ risks[i][0] +'</th></tr>';
+                                    html=html+tr;
+                                    for(var k=0; k<risks[i][1].length; k++){
+                                        $value = risks[i][1][k];
+                                        $cb= parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite);
+                                        $cn=parseInt($value.question.produits_risque.frequence) * parseInt($value.question.produits_risque.gravite) * parseFloat($value.taux);
+
+                                        if(parseFloat($cb) >= 13){
+                                            $clrb='red';
+                                        }else{
+                                            if( parseFloat($cb) >=4 && parseFloat($cb) <= 12){
+                                                $clrb='yellow';
+                                            }else{
+                                                $clrb = '#0ac60a';
+                                            }
+                                        }
+
+                                        if( parseFloat($cn) >= 13){
+                                            $clr='red';
+                                        }else{
+                                            if( parseFloat($cn) >=4 &&  parseFloat($cn) <= 12){
+                                                $clr='yellow';
+                                            }else{
+                                                $clr = '#0ac60a';
+                                            }
+                                        }
+
+                                        var trr = '<tr>'+
+                                            '<td>'+ $value.question.produits_risque.name +'</td>'+
+                                            '<td>'+$value.question.produits_risque.causes +'</td>'+
+                                            '<td>'+ $value.question.produits_risque.consequences +'</td>'+
+                                            '<td>'+ $value.question.produits_risque.frequence +'</td>'+
+                                            '<td>'+ $value.question.produits_risque.gravite+'</td>'+
+                                            '<td style="background-color:'+ $clrb +'; font-weight: 900; text-align: right">'+ $cb  +'</td>'+
+                                            '<td style="background-color:'+ $clr +'">'+ $cn +'</td>'+
+                                        '</tr>';
+
+                                        html=html+trr;
+
+                                        console.log(risks[i][1][k]);
+                                    }
+                                    console.log(risks[i][1]);
+
+                                }
+
+                                $('#risques-tab').find('tbody').html(html);
+                            },
+                            Error:function(){
+                                $('#risks-loader').hide();
+                            }
+                        });
+                    }
+
+                }
+            })
 
       tinymce.init({
         selector:'textarea'
@@ -302,6 +439,157 @@ use \Illuminate\Support\Facades\Auth;
                }
              });
         }
+
+    $('#btn-save').click(function(e){
+           e.preventDefault();
+           var spinHandle_firstProcess = loadingOverlay.activate();
+           const Toast = Swal.mixin({
+                                  toast: true,
+                                  position: 'top-end',
+                                  showConfirmButton: false,
+                                  timer: 5000
+                                });
+
+           var letter = $('#letter');
+           var inputs = letter.find('input');
+           var selects = letter.find('select');
+           //var donnees = [];
+
+                   var values = {};
+                   for (var i=0; i < inputs.length; i++) {
+                       var id = inputs[i].getAttribute('name');
+                       values[id] = $('input[name="'+id+'"]').val();
+                   }
+                   for (var i=0; i < selects.length; i++) {
+                                          var id = selects[i].getAttribute('name');
+                                          values[id] = $('select[name="'+id+'"]').val();
+                                      }
+
+                   //values.type_remboursement_id = $('')
+
+           $.ajax({
+               url:'/angel/letter',
+               dataType:'json',
+               type:'post',
+               data:values,
+               beforeSend:function(xhr){
+                            xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                        },
+               success:function(data){
+
+                   $('#IpM').hide();
+                               Toast.fire({
+                                       type: 'success',
+                                       title: 'Demande initialisée succès!!!'
+                                     });
+                                     setTimeout(function() {
+                                        loadingOverlay.cancel(spinHandle_firstProcess);
+                                       $('#popup').show();
+                                     },2000);
+               }
+           });
+        });
+
+         $('#btn-save2').click(function(e){
+
+                   e.preventDefault();
+                   const Toast = Swal.mixin({
+                                          toast: true,
+                                          position: 'top-end',
+                                          showConfirmButton: false,
+                                          timer: 5000
+                                        });
+
+                   if($('#docUri').val().length<1){
+                        alert('Aucun document n\'a été soumis');
+                   }else{
+                         var spinHandle_firstProcess = loadingOverlay.activate();
+                         var fd = new FormData();
+                         fd.append('doc_juridiqueUri',$('#docUri')[0].files[0]);
+                         fd.append('token',$('#token').val())
+
+
+                   $.ajax({
+                       url:'/angel/investissement/projet/doc',
+                       dataType:'json',
+                       type:'post',
+                        enctype:'multipart/form-data',
+                        processData:false,
+                        contentType:false,
+                        data:fd,
+                       beforeSend:function(xhr){
+                                    xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                                },
+                       success:function(data){
+
+                           $('#IpM').hide();
+                                       Toast.fire({
+                                               type: 'success',
+                                               title: 'Demande initialisée succès!!!'
+                                             });
+                                             setTimeout(function() {
+                                                loadingOverlay.cancel(spinHandle_firstProcess);
+                                               $('#popup2').show();
+                                             },2000);
+                       }
+                   });
+                   }
+
+                });
+
+          $('#btn-save3').click(function(e){
+
+                   e.preventDefault();
+                   const Toast = Swal.mixin({
+                                          toast: true,
+                                          position: 'top-end',
+                                          showConfirmButton: false,
+                                          timer: 5000
+                                        });
+
+                   if($('#justificatifUri').val().length<1){
+                        alert('Aucun document n\'a été soumis');
+                   }else{
+                         var spinHandle_firstProcess = loadingOverlay.activate();
+                         var fd = new FormData();
+                         fd.append('justificatifUri',$('#justificatifUri')[0].files[0]);
+                         fd.append('token',$('#token').val())
+
+
+                   $.ajax({
+                       url:'/angel/investissement/projet/justificatif',
+                       dataType:'json',
+                       type:'post',
+                        enctype:'multipart/form-data',
+                        processData:false,
+                        contentType:false,
+                        data:fd,
+                       beforeSend:function(xhr){
+                                    xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+                                },
+                       success:function(data){
+
+                           $('#IpM').hide();
+                                       Toast.fire({
+                                               type: 'success',
+                                               title: 'Demande initialisée succès!!!'
+                                             });
+                                             setTimeout(function() {
+                                                loadingOverlay.cancel(spinHandle_firstProcess);
+                                               $('#popup3').show();
+                                             },2000);
+                       }
+                   });
+                   }
+
+                });
+
+     $('#closemsg').click(function(e){$('#msg').hide()})
+        $('#forme_id').change(function(e){
+            $('.blocx').hide();
+            var id = $('#forme_id').val();
+            $('#block-'+id).show();
+        });
 </script>
 
 @endsection

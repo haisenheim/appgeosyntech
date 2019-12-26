@@ -55,8 +55,8 @@ class ParametresController extends Controller
 					mkdir(public_path('files/docs'));
 				}
 
-				if (file_exists(public_path('files/docs/pacte_associes') . '.' . $ext)) {
-					unlink(public_path('files/docs/pacte_associes') .  '.' . $ext);
+				if (file_exists(public_path('files/docs') . '/pacte_associes.' . $ext)) {
+					unlink(public_path('files/docs') .  '/pacte_associes.' . $ext);
 				}
 				$name =  'pacte_associes.' . $ext;
 				$pacte->move(public_path('files/docs'), $name);
@@ -77,8 +77,8 @@ class ParametresController extends Controller
 					mkdir(public_path('files/docs'));
 				}
 
-				if (file_exists(public_path('files/docs/contrat_pret') . '.' . $ext)) {
-					unlink(public_path('files/docs/contrat_pret') .  '.' . $ext);
+				if (file_exists(public_path('files/docs') . '/contrat_pret.' . $ext)) {
+					unlink(public_path('files/docs') .  '/contrat_pret.' . $ext);
 				}
 				$name =  'contrat_pret.' . $ext;
 				$pacte->move(public_path('files/docs'), $name);
@@ -99,8 +99,8 @@ class ParametresController extends Controller
 					mkdir(public_path('files/docs'));
 				}
 
-				if (file_exists(public_path('files/docs/contrat_cession_actifs') . '.' . $ext)) {
-					unlink(public_path('files/docs/contrat_cession_actifs') .  '.' . $ext);
+				if (file_exists(public_path('files/docs') . '/contrat_cession_actifs.' . $ext)) {
+					unlink(public_path('files/docs') .  '/contrat_cession_actifs.' . $ext);
 				}
 				$name =  'contrat_cession_actifs.' . $ext;
 				$pacte->move(public_path('files/docs'), $name);
@@ -121,8 +121,8 @@ class ParametresController extends Controller
 					mkdir(public_path('files/docs'));
 				}
 
-				if (file_exists(public_path('files/docs/contrat_cession_creances') . '.' . $ext)) {
-					unlink(public_path('files/docs/contrat_cession_creances') .  '.' . $ext);
+				if (file_exists(public_path('files/docs') . '/contrat_cession_creances.' . $ext)) {
+					unlink(public_path('files/docs') .  '/contrat_cession_creances.' . $ext);
 				}
 				$name =  'contrat_cession_creances.' . $ext;
 				$pacte->move(public_path('files/docs'), $name);
@@ -143,8 +143,8 @@ class ParametresController extends Controller
 					mkdir(public_path('files/docs'));
 				}
 
-				if (file_exists(public_path('files/docs/contrat_concession') . '.' . $ext)) {
-					unlink(public_path('files/docs/contrat_concession') .  '.' . $ext);
+				if (file_exists(public_path('files/docs') . '/contrat_concession.' . $ext)) {
+					unlink(public_path('files/docs') .  '/contrat_concession.' . $ext);
 				}
 				$name =  'contrat_concession.' . $ext;
 				$pacte->move(public_path('files/docs'), $name);

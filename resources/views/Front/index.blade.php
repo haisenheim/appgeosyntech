@@ -287,7 +287,7 @@
             			                <a class="nav-link" href="/"><i class="fa fa-home -fa-lg"></i></a>
             			            </li>
             			             <li class="nav-item">
-            			                <a class="nav-link" href="/projets">TOUS LES PROJETS</a>
+            			                <a class="nav-link" href="#projets">TOUS LES PROJETS</a>
             			            </li>
             			            <li class="nav-item">
             			                <a class="nav-link" href="#about">COMMENT CA MARCHE?</a>
@@ -319,7 +319,7 @@
           </div>
 
         <!-- Top content -->
-        <div class="section-1-container section-container section-reverse" style="">
+        <div id="projets" class="section-1-container section-container section-reverse" style="">
              <h1>Découvrez les projets que nous avons structurés</h1>
              <div class="divider-1 wow fadeInUp"><span></span></div>
         	<div class="container-fluid">
