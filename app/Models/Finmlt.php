@@ -63,7 +63,7 @@ class Finmlt extends Model
 
 		$som=0;
 		for($i = 1; $i<=$n; $i++){
-			$tab[$i] = $this->rif_se * $this->rif_ti;
+			$tab[$i] = $this->rif_se * $this->rif_ti/100;
 			$som = $som + $tab[$i];
 		}
 		$tab[0]=$som;
@@ -114,7 +114,7 @@ class Finmlt extends Model
 
 	//---------------------- Calcul du taux fictif --------------------------------------------------------------------
 	public  function getTfRasAttribute(){
-		return $this->ras_ti?round((1- pow((1+ $this->ras_ti),-$this->ras_de)) / $this->ras_ti,2):0;
+		return $this->ras_ti?round((1- pow((1+ $this->ras_ti/100),-$this->ras_de)) / $this->ras_ti/100,2):0;
 	}
 
 	//---------------------- Calcul de l'annuite constante --------------------------------------------------------------------
@@ -132,11 +132,11 @@ class Finmlt extends Model
 		$cap = []; //Capital
 
 		$cap[1]= $this->ras_se;
-		$in[1] = $cap[1] * $this->ras_ti;
+		$in[1] = $cap[1] * $this->ras_ti/100;
 		$an[1] = $this->getTfRasAttribute()?$this->ras_se/$this->getTfRasAttribute():0;
 		$am[1] = $an[1] - $in[1];
 
-		$in[0] = $cap[1] * $this->ras_ti;
+		$in[0] = $cap[1] * $this->ras_ti/100;
 		$an[0] = $this->getTfRasAttribute()?$this->ras_se/$this->getTfRasAttribute():0;
 		$am[0] = $an[1] - $in[1];
 		for($i=2;$i<=$this->ras_de;$i++){
@@ -144,7 +144,7 @@ class Finmlt extends Model
 			$cap[$i]= $cap[$j]-$am[$j];
 
 
-			$in[$i] = $cap[$i] * $this->ras_ti;
+			$in[$i] = $cap[$i] * $this->ras_ti/100;
 			$in[0] = $in[0] + $in[$i];
 
 			$an[$i] = $this->getTfRasAttribute()?$this->ras_se/$this->getTfRasAttribute():0;
@@ -169,7 +169,7 @@ class Finmlt extends Model
 
 	//---------------------- Calcul du taux fictif --------------------------------------------------------------------
 	public  function getTfRaccAttribute(){
-		return $this->racc_ti?round((1- pow((1+ $this->ras_ti),-$this->racc_de)) / $this->racc_ti,2):0;
+		return $this->racc_ti?round((1- pow((1+ $this->ras_ti/100),-$this->racc_de)) / $this->racc_ti/100,2):0;
 	}
 
 	//---------------------- Calcul de l'annuite constante --------------------------------------------------------------------
@@ -187,11 +187,11 @@ class Finmlt extends Model
 		$cap = []; //Capital
 
 		$cap[1]= $this->racc_se;
-		$in[1] = $cap[1] * $this->racc_ti;
+		$in[1] = $cap[1] * $this->racc_ti/100;
 		$am[1] = $this->racc_de?$this->racc_se/$this->racc_de:0;
 		$an[1] = $in[1] + $am[1];
 
-		$in[0] = $cap[1] * $this->racc_ti;
+		$in[0] = $cap[1] * $this->racc_ti/100;
 		$am[0] = $this->racc_de?$this->racc_se/$this->racc_de:0;
 		$an[0] = $in[1] + $am[1];
 
@@ -199,7 +199,7 @@ class Finmlt extends Model
 			$j=$i-1;
 			$cap[$i]= $cap[$j]-$am[$j];
 
-			$in[$i] = $cap[$i] * $this->racc_ti;
+			$in[$i] = $cap[$i] * $this->racc_ti/100;
 			$in[0] = $in[0] + $in[$i];
 
 			$am[$i] = $this->racc_de?$this->racc_se/$this->racc_de:0;

@@ -2272,7 +2272,8 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                             </div>
 
                             <div class="mlt-section section" id="mlt_section_3" style="display: none">
-                                <h5>Remboursement avec amortissement constant du capital </h5>
+
+                                <h5>Remboursement par annuités constantes* </h5>
                                 <div>
                                     <div class="row">
                                         <div class="col-md-5 col-sm-12">
@@ -2300,7 +2301,7 @@ $tr_credbail = Tremboursement::all()->where('credbail',1);
                             </div>
 
                             <div class="mlt-section section" id="mlt_section_4" style="display: none">
-                                <h5>Remboursement par annuités constantes* </h5>
+                               <h5>Remboursement avec amortissement constant du capital </h5>
                                 <div>
                                     <div class="row">
                                         <div class="col-md-5 col-sm-12">
