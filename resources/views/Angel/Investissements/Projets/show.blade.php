@@ -62,15 +62,11 @@ use \Illuminate\Support\Facades\Auth;
     <div class="card card-success collapsed-card">
         <div class="card-header">
             <h5 class="card-title">Rapports mensuels de gestion</h5>
-
               <div class="card-tools">
-
                   <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
                   </button>
                   <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
                   </button>
-
-
               </div>
         </div>
         <div class="card-body">
@@ -88,7 +84,7 @@ use \Illuminate\Support\Facades\Auth;
     <div  class="modal fade" id="JustificatifModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-              <div class="modal-header bg-success">
+              <div class="modal-header bg-info">
                 <h4  class="modal-title text-center">CHARGEMENT Du JUSTIFICATIF DE VOTRE PAIEMENT</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -100,7 +96,7 @@ use \Illuminate\Support\Facades\Auth;
                     <input type="hidden" name="token" value="{{ $investissement->token }}"/>
                     <input type="file" name="justificatifUri" id="justificatifUri" class="form-control"/>
 
-                    <button id="btn-save3" type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
+                    <button id="btn-save3" type="submit" class="btn btn-info btn-block"> ENREGISTRER </button>
                 </form>
               </div>
 
@@ -188,7 +184,7 @@ use \Illuminate\Support\Facades\Auth;
 <script>
     $(document).ready(function(){
 
-        var h1 = $('#side1 .card').height();
+         var h1 = $('#side1 .card').height();
          $('#side2 .card').height(h1).css({'overflow-y':'scroll'});
 
          $('#btn-print').click(function(e){
