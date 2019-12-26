@@ -170,13 +170,6 @@ use \Illuminate\Support\Facades\Auth;
 
 </style>
 
-
-
-@endsection
-
-@section('scripts')
-
-
 <script type="text/javascript" src="{{ asset('js/tinymce/jquery.tinymce.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
  <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
@@ -310,7 +303,9 @@ use \Illuminate\Support\Facades\Auth;
              });
         }
 </script>
+
 @endsection
+
 
 
 
