@@ -59,8 +59,84 @@ use \Illuminate\Support\Facades\Auth;
         @include('includes.Show.business_model')
         @endif
 
-    @include('includes.Show.report')
+    <div class="card card-success collapsed-card">
+        <div class="card-header">
+            <h5 class="card-title">Rapports mensuels de gestion</h5>
 
+              <div class="card-tools">
+
+                  <button title="dérouler" data-toggle="tooltip" type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize" data-toggle="tooltip" title="Agrandir"><i class="fas fa-expand"></i>
+                  </button>
+
+
+              </div>
+        </div>
+        <div class="card-body">
+            @if($investissement->report)
+                @include('includes.Show.report')
+            @else
+                <div class="alert alert-danger">
+                  <h5><i class="icon fas fa-ban"></i> Alert!</h5>
+                    <p>VOUS N'ETES PAS AUTORISE A ACCEDER A CES INFORMATIONS. VEUILLEZ CONTACTER LE CABINET OBAC.</p>
+                </div>
+            @endif
+
+         </div>
+    </div>
+    <div  class="modal fade" id="JustificatifModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-success">
+                <h4  class="modal-title text-center">CHARGEMENT Du JUSTIFICATIF DE VOTRE PAIEMENT</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div style="padding: 20px 20px 40px 20px; font-family: 'Gill Sans MT', Calibri, sans-serif" class="modal-body">
+                 <form id="letter" enctype="multipart/form-data" class="form" action="/angel/investissement/doc/" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="token" value="{{ $investissement->token }}"/>
+                    <input type="file" name="justificatifUri" id="justificatifUri" class="form-control"/>
+
+                    <button id="btn-save3" type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
+                </form>
+              </div>
+
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+    </div>
+
+        @if($investissement->lettre)
+       <div  class="modal fade" id="DocModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-success">
+                <h4  class="modal-title text-center">CHARGEMENT DE VOTRE {{ $investissement->lettre->forme_id==1?'CONTRAT D\'ASSOCIES':$investissement->lettre->forme_id==2?'CONTRAT DE PRET':'CONTRAT D\'ENGAGEMENT' }}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div style="padding: 20px 20px 40px 20px; font-family: 'Gill Sans MT', Calibri, sans-serif" class="modal-body">
+                 <form id="letter" enctype="multipart/form-data" class="form" action="/angel/investissement/doc/" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="token" value="{{ $investissement->token }}"/>
+                    <input type="file" name="docUri" id="docUri" class="form-control"/>
+
+                    <button id="btn-save2" type="submit" class="btn btn-success btn-block"> ENREGISTRER </button>
+                </form>
+              </div>
+
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+    </div>
+        @endif
+      @include('includes.Edit.lettre_intention')
 
  <style>
 
