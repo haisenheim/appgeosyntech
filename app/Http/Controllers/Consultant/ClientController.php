@@ -79,6 +79,7 @@ class ClientController extends Controller
 				    mkdir(public_path('img') . '/users');
 			    }
 			    $token = sha1(Auth::user()->id. date('ydmhis'));
+
 			    if (file_exists(public_path('img') . '/users/' . $token . '.' . $ext)) {
 				    unlink(public_path('img') . '/users/' . $token . '.' . $ext);
 			    }

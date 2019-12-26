@@ -33,7 +33,12 @@ class UserController extends Controller
 	public function profil(Request $request){
 		$user = User::where('token',$request->token)->first();
 
-		$data = $request->except('_csrf','imageUri');
+		if($request->password != $request->cpassword){
+			$request->session()->flash('danger','La confirmation du mot de passe n\'est pas correcte !!!');
+			return back();
+		}
+
+		$data = $request->except('_csrf','imageUri','cpassword');
 		if($request->password){
 			$data['password'] = Hash::make($request->password);
 		}else{
@@ -49,6 +54,11 @@ class UserController extends Controller
 					mkdir(public_path('img') . '/users');
 				}
 				$token = sha1(Auth::user()->id. date('ydmhis'));
+				if($user->imageUri){
+					if(file_exists(public_path('img') . $user->imageUri)){
+						unlink(public_path('img') . $user->imageUri);
+					}
+				}
 				if (file_exists(public_path('img') . '/users/' . $token . '.' . $ext)) {
 					unlink(public_path('img') . '/users/' . $token . '.' . $ext);
 				}

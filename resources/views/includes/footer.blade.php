@@ -58,8 +58,8 @@
     		</div>
     		<div class="modal-body">
     		    <form method="post" action="/profil">
-    		    <div class="card">
-    		        <div class="card-body">
+    		    <div class="">
+    		        <div class="">
     		             @csrf
 
     		             <div style="text-align: center; padding: 15px auto">
@@ -70,23 +70,23 @@
 
                          <div class="row">
 
-                    <div class="col-md-12 col-sm-12 form-group">
+                    <div class="col-md-6 col-sm-12 form-group">
 
                         <label for="name" class="control-label">NOM</label>
                         <input type="text" name="last_name" id="name" value="<?= Auth::user()->last_name ?>" class="form-control"/>
                     </div>
-                    <div class="form-group col-sm-12 col-md-12">
+                    <div class="form-group col-sm-12 col-md-6">
                        <label for="name" class="control-label">PRENOM</label>
                        <input type="text" name="first_name" value="<?= Auth::user()->first_name ?>" id="name" class="form-control"/>
                      </div>
 
                     </div>
                     <div class="row">
-                     <div class="form-group col-sm-12 col-md-12">
+                     <div class="form-group col-sm-12 col-md-8">
                          <label for="name" class="control-label">ADRESSE</label>
                          <input type="text" name="address" id="name" value="<?= Auth::user()->address ?>" class="form-control"/>
                      </div>
-                     <div class="form-group col-sm-12 col-md-12">
+                     <div class="form-group col-sm-12 col-md-4">
                        <label for="name" class="control-label">TELEPHONE</label>
                        <input type="text" name="phone" id="name" value="<?= Auth::user()->phone ?>" class="form-control"/>
                      </div>
