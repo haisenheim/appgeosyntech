@@ -6,8 +6,12 @@
 <?php use Illuminate\Support\Facades\Auth; ?>
 
 
+
+
+<?php if(Auth::user()): ?>
+
 <div class="modal fade" id="obac-contact-form" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
-    <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-dialog modal-lg" role="document">
     	<div class="modal-content">
     		<div class="modal-header bg-success">
     			<h5 style="text-transform: uppercase; background-color: transparent" class="modal-title" id="myModalLabel"><span>CONTACTER OBAC</span></h5>
@@ -21,15 +25,20 @@
     		        <div class="card-body">
     		             @csrf
                          <div class="row">
-                             <div class="col-md-12">
+                             <div class="col-md-12 col-sm-12">
                                  <div class="form-group">
-
                                      <input required="required" type="text" name="objet" class="form-control" placeholder="Objet"/>
                                  </div>
                              </div>
+
+                              <div class="col-md-12 col-sm-12">
+                                 <div class="form-group">
+                                     <input type="text" name="phone" class="form-control" placeholder="telephone - exple:+242 04 439 29 98"/>
+                                 </div>
+                             </div>
+
                              <div class="col-md-12">
                                  <div class="form-group">
-
                                      <textarea required="required" name="message" id="" cols="30" rows="4" class="form-control" placeholder="Votre message ..."></textarea>
                                  </div>
                              </div>
@@ -37,7 +46,7 @@
                          </div>
     		        </div>
     		        <div class="card-footer">
-    		           <button class="btn btn-warning btn-block btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
+    		           <button class="btn btn-success btn-block btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
     		        </div>
     		    </div>
     		    </form>
@@ -46,7 +55,7 @@
     </div>
 </div>
 
-<?php if(Auth::user()): ?>
+
 <div class="modal fade" id="user-profil-form" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
     <div class="modal-dialog modal-lg" role="document">
     	<div class="modal-content">
@@ -115,9 +124,9 @@
                     </div>
     		        </div>
     		        <div class="card-footer">
-    		           <button class="btn btn-info btn-block btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
+    		           <button class="btn btn-info btn-block btn-sm"><i class="fa fa-save"></i> ENREGISTRER</button>
     		        </div>
-    		    </div>
+
     		    </form>
     		</div>
     	</div>
