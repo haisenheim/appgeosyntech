@@ -1,6 +1,18 @@
 
 
-<?php use \Illuminate\Support\Facades\Auth; ?>
+<?php use \Illuminate\Support\Facades\Auth;
+
+ if($projet->bilans){
+    $link ='dossier'
+ }
+
+ else{
+    $link = 'projet'
+ }
+
+
+
+?>
  <div class="card">
     <div class="card-body">
 
@@ -74,7 +86,7 @@
                 <h6 class="page-header" style="background-color: inherit">FORMULE DE PAIEMENT</h6>
 
                 <hr/>
-                <form action="/consultant/dossier/add-mode" method="get" class="form-inline">
+                <form action="/consultant/{{ $link }}/add-mode" method="get" class="form-inline">
                     <input type="hidden" id="projet_token" value="<?= $projet->token ?>" name="projet_token"/>
                     <select style="background-color: #FFFFFF" class="form-control" name="mode_id" id="mode_id">
                         <option value="0">Choix d'une offre de service</option>
