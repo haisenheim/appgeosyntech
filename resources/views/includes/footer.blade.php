@@ -58,6 +58,7 @@
     		</div>
     		<div class="modal-body">
     		    <form method="post" action="/profil">
+    		    <input type="hidden" value="<?= Auth::user()->token ?>" name="token"/>
     		    <div class="">
     		        <div class="">
     		             @csrf
