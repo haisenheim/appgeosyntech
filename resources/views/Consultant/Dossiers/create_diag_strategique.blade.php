@@ -7,6 +7,7 @@ CREATION DU DIAGNOSTIC STRATEGIQUE
                 <div class="row">
                     <div class="col-md-3 col-sm-12">
                        @include('includes.Sidebars.dossier')
+                       <input type="hidden" id="projet_token" value="<?= $projet->token ?>"/>
                     </div>
                     <div class="col-md-9 col-sm-12">
                         <div class="widget">
