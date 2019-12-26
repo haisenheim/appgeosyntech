@@ -3589,7 +3589,13 @@ $('.cell').keyup(function(e){
         }
 
 
-
+        var valeur =0;
+        $('.cell').each(function(){
+            if($.isNumeric($(this).text().trim())){
+                valeur= valeur + parseInt($(this).text());
+            }
+        });
+        $('#cel-total').text(valeur);
 
     });
 
