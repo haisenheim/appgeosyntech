@@ -3,11 +3,11 @@
 <?php use \Illuminate\Support\Facades\Auth;
 
  if($projet->bilans){
-    $link ='dossier'
+    $link ='dossier';
  }
 
  else{
-    $link = 'projet'
+    $link = 'projet';
  }
 
 
