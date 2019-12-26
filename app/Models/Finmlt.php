@@ -169,12 +169,12 @@ class Finmlt extends Model
 
 	//---------------------- Calcul du taux fictif --------------------------------------------------------------------
 	public  function getTfRaccAttribute(){
-		return $this->racc_ti?round((1- pow((1+ $this->ras_ti/100),-$this->racc_de)) / $this->racc_ti/100,2):0;
+		return $this->racc_ti?round((1- pow((1+ $this->racc_ti/100),-$this->racc_de)) / $this->racc_ti/100,2):0;
 	}
 
 	//---------------------- Calcul de l'annuite constante --------------------------------------------------------------------
 	public  function getAnnuiteConstRaccAttribute(){
-		return $this->getTfRasAttribute()? round($this->racc_se/$this->getTfRasAttribute(),2) :0;
+		return $this->getTfRaccAttribute()? round($this->racc_se/$this->getTfRaccAttribute(),2) :0;
 	}
 
 	// Tableau des flux de tresorerie
