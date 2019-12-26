@@ -1694,7 +1694,7 @@
                             <?php endif; ?>
 
                             <?php if($projet->finmlt): ?>
-                                <div class="tab-pane fade <?= !($projet->fincapitalsocial || $projet->finempobligataire)?'active in':'' ?>" role="tabpanel" id="finmlt" aria-labelledby="finmlt-tab">
+                                <div class="tab-pane <?= !($projet->fincapitalsocial || $projet->finempobligataire)?'active':'' ?>" role="tabpanel" id="finmlt" aria-labelledby="finmlt-tab">
                                     <h5>PRETS A MLT DES ETABLISSEMENTS DE CREDITS</h5>
                                     <?php if($projet->finmlt->tremboursement_id == 1): ?>
                                         <div class="section">
@@ -1835,7 +1835,7 @@
                                 </div>
                             <?php endif; ?>
                             <?php if($projet->fincredbail): ?>
-                                <div class="tab-pane fade <?= !($projet->fincapitalsocial || $projet->finempobligataire || $projet->finmlt)?'active in':'' ?>" role="tabpanel" id="fincredbail" aria-labelledby="fincredbail-tab">
+                                <div class="tab-pane <?= !($projet->fincapitalsocial || $projet->finempobligataire || $projet->finmlt)?'active':'' ?>" role="tabpanel" id="fincredbail" aria-labelledby="fincredbail-tab">
                                     <h5>CREDIT BAIL</h5>
                                     <?php if($projet->fincredbail->tremboursement_id == 4): ?>
 
@@ -1934,7 +1934,7 @@
                                 </div>
                             <?php endif; ?>
                             <?php if($projet->finescompte): ?>
-                                <div class="tab-pane fade" role="tabpanel" id="finescompte" aria-labelledby="finescompte-tab">
+                                <div class="tab-pane" role="tabpanel" id="finescompte" aria-labelledby="finescompte-tab">
                                     <h5>ESCOMPTE</h5>
 
                                     <div class="row">
