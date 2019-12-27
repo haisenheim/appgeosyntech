@@ -20,23 +20,5 @@ class Agence extends Model
 		return $this->hasMany('App\User','agence_id');
 	}
 
-	public function cessions(){
-		return $this->hasMany('App\Models\Cession');
-	}
 
-	public function actifs(){
-		return $this->hasMany('App\Models\Actif');
-	}
-
-	public function projets(){
-		return $this->hasMany('App\Models\Projet');
-	}
-
-	public function earlies(){
-		return $this->hasMany('App\Models\Earlie');
-	}
-
-	public function infrastructures(){
-		return $this->hasMany('App\Models\Infrastructure');
-	}
 }

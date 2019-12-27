@@ -37,33 +37,7 @@
 
 
 
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 nouveaux messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">Afficher Toutes Les Notifications</a>
-        </div>
-      </li>
+
 
       <!-- Profil Dropdown Menu -->
       <li class="nav-item dropdown">
@@ -78,11 +52,7 @@
             <i class="fas fa-pencil-alt mr-2"></i> Mon Profil
 
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> Contacter OBAC
 
-          </a>
           <div class="dropdown-divider"></div>
           <a href="/logout" class="dropdown-item">
             <i class="fas fa-switch-off mr-2"></i> Se Déconnecter
@@ -102,7 +72,7 @@
     <a href="#" class="brand-link navbar-success">
       <img src="{{asset('img/logo-obac.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">OBAC ALERT</span>
+      <span class="brand-text font-weight-light">OBAC TRAINING CENTER</span>
     </a>
 
     <!-- Sidebar -->
@@ -138,73 +108,27 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-file-invoice-dollar"></i>
               <p>
-                 LEVEES DE FONDS
+                 FORMATIONS
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/admin/dossiers" class="nav-link">
+                  <a href="/admin/formations" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>PME</p>
+                    <p>Formations simples</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/admin/projets" class="nav-link">
+                <a href="/admin/chaires" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>EARLY STAGE</p>
+                  <p>Formations Chaire OBAC</p>
                 </a>
                 </li>
             </ul>
           </li>
 
-          <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-gift"></i>
-              <p>
-                 CESSIONS
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/admin/actifs" class="nav-link">
-                    <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>CESSIONS D'ACTIFS</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                <a href="/admin/creances" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>CESSIONS DE CREANCES</p>
-                </a>
-                </li>
-            </ul>
-          </li>
 
-          <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-coins text-warning"></i>
-              <p>
-                 FIN. STRUCTURES
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/admin/partenariats" class="nav-link">
-                    <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>PPP</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                <a href="/admin/ressources" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>RES. NATURELLES</p>
-                </a>
-                </li>
-            </ul>
-          </li>
 
             <li class="nav-item">
             <a href="/admin/experts" class="nav-link">
@@ -216,56 +140,34 @@
           </li>
 
           <li class="nav-item">
-            <a href="/admin/angels" class="nav-link">
+            <a href="/admin/contributeurs" class="nav-link">
               <i class="nav-icon fas fa-coins"></i>
               <p>
-                INVESTISSEURS
+                CONTRIBUTEURS
               </p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="/admin/apporteurs" class="nav-link">
+            <a href="/admin/entreprises" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
               <p>
-                APPORTEURS D'AFFAIRES
+                ENTREPRISES
               </p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="/admin/porteurs" class="nav-link">
+            <a href="/admin/centres" class="nav-link">
               <i class="nav-icon fas fa-male"></i>
               <p>
-                ENTREPRENEURS
+                CENTRES DE FORMATIONS
               </p>
             </a>
           </li>
 
 
-          <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-code"></i>
-              <p>
-                 ALLIAGES TECHNOLOGIES
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/admin/alliages/creances" class="nav-link">
-                    <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>IMPAYEES</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                <a href="/admin/alliages/payees" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>PAYEES</p>
-                </a>
-                </li>
-            </ul>
-          </li>
+
 
           <li  class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -312,12 +214,7 @@
               </p>
             </a>
             <ul style="overflow-y: scroll;" class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/admin/events" class="nav-link">
-                    <i class="far fa-circle text-success nav-icon"></i>
-                    <p>EVENEMENTS</p>
-                  </a>
-                </li>
+
                 <li class="nav-item">
                   <a href="/admin/agences" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
@@ -326,42 +223,22 @@
                 </li>
 
 
-                <li class="nav-item">
-                <a href="/admin/entreprises" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ENTREPRISES</p>
-                </a>
-                </li>
-
-                <li class="nav-item">
-                <a href="/admin/organismes" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ORGANISMES FINANCIERS</p>
-                </a>
-               </li>
-
-                <li class="nav-item">
-                  <a href="/admin/tags" class="nav-link">
-                    <i class="far fa-circle text-info nav-icon"></i>
-                    <p>Mots Clefs</p>
-                  </a>
-                </li>
               <li class="nav-item">
                 <a href="/admin/villes" class="nav-link">
                   <i class="far fa-circle text-success nav-icon"></i>
-                  <p>Villes</p>
+                  <p>VILLES</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/admin/users" class="nav-link">
                   <i class="far fa-circle text-primary nav-icon"></i>
-                  <p>Utilisateurs</p>
+                  <p>BASE DES UTILISATEURS</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/admin/pays" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Pays</p>
+                  <p>PAYS</p>
                 </a>
               </li>
 

@@ -74,9 +74,9 @@
   <aside class="main-sidebar elevation-4 sidebar-light-success">
     <!-- Brand Logo -->
     <a href="#" class="brand-link navbar-success">
-      <img src="{{asset('img/logo-obac.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{asset('img/logo-obac.png')}}" alt="Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">OBAC ALERT</span>
+      <span class="brand-text font-weight-light">OBAC TRAINING CENTER</span>
     </a>
 
     <!-- Sidebar -->
@@ -108,77 +108,6 @@
             </a>
           </li>
 
-          <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-file-invoice-dollar"></i>
-              <p>
-                 LEVEES DE FONDS
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/national/dossiers" class="nav-link">
-                    <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>PME</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                <a href="/national/projets" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>EARLY STAGE</p>
-                </a>
-                </li>
-            </ul>
-          </li>
-
-          <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-gift"></i>
-              <p>
-                 CESSIONS
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/national/actifs" class="nav-link">
-                    <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>CESSIONS D'ACTIFS</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                <a href="/national/creances" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>CESSIONS DE CREANCES</p>
-                </a>
-                </li>
-            </ul>
-          </li>
-
-          <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-coins text-warning"></i>
-              <p>
-                 FIN. STRUCTURES
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/national/partenariats" class="nav-link">
-                    <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>PPP</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                <a href="/national/ressources" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>RES. NATURELLES</p>
-                </a>
-                </li>
-            </ul>
-          </li>
 
             <li class="nav-item">
             <a href="/national/experts" class="nav-link">

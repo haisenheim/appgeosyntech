@@ -4,8 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
-class Adminag
+class Chaire
 {
     /**
      * Handle an incoming request.
@@ -16,9 +17,19 @@ class Adminag
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->role_id != 3){
+        if(Auth::user()->role_id != 4){
             return redirect('/login');
         }
+
+	    /*$path = explode('/',$request->path());
+	    if(in_array('finances',$path)){
+		    Session::put('active', 2);
+	    }
+	    if(in_array('clients',$path)){
+		    Session::put('active', 3);
+	    }*/
+
+	    
 
         return $next($request);
     }

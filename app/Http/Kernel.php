@@ -58,13 +58,15 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'admin' => \App\Http\Middleware\Admin::class,
-        'owner' => \App\Http\Middleware\Owner::class,
+        'contributeur' => \App\Http\Middleware\Contributeur::class,
         'consultant' => \App\Http\Middleware\Consultant::class,
-        'angel' => \App\Http\Middleware\Angel::class,
-	    'apporteur' => \App\Http\Middleware\Apporteur::class,
-	    'adminentr' => \App\Http\Middleware\Adminentr::class,
-	    'adminorg' => \App\Http\Middleware\Adminorg::class,
+        'mchaire' => \App\Http\Middleware\Mchaire::class,
+	    'mcorporate' => \App\Http\Middleware\Mcorporate::class,
+	    'corporate' => \App\Http\Middleware\Corporate::class,
+	    'chaire' => \App\Http\Middleware\Chaire::class,
 	    'national' => \App\Http\Middleware\National::class,
 	    'adminag' => \App\Http\Middleware\Adminag::class,
+	    'membre' => \App\Http\Middleware\Membre::class,
+
     ];
 }

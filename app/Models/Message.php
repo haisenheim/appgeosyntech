@@ -11,12 +11,8 @@ class Message extends Model
 
 	protected $guarded = [];
 
-	public function projet(){
-		return $this->belongsTo('App\Models\Projet');
-	}
-	public function investissement(){
-		return $this->belongsTo('App\Models\Investissement');
-	}
+
+
 	public function parent(){
 		return $this->belongsTo('App\Models\Message', 'parent_id');
 	}

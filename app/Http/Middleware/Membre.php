@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-class Consultant
+class Membre
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class Consultant
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->role_id != 6){
+        if(Auth::user()->role_id != 10){
             return redirect('/login');
         }
 
