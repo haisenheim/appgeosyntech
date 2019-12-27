@@ -1,278 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/Mcorporate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/Membre.php" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminentr\FrontController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminentr\InvestissementController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminentr\ProfilController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\ActifController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\AlerteController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\AngelController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\DashboardController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\FrontController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\InvestissementController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\OpportuniteController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\ProfilController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminorg\TagController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\ActifController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\AlerteController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\CessionActifController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\CessionCreanceController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\CreanceController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\DashboardController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\DossierController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\EarlyController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\FrontController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\InfrastructureController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\InvestissementDossierController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\InvestissementEarlyController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\MessageController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\OpportuniteController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\ProfilController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Angel\TagController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Apporteur\ClientController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Apporteur\FactureController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\AboutController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\ActifController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\CreanceController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\EarlyController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\InfrastructureController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\MessageController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\ModeleController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\ProfilController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Middleware\Adminorg.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Middleware\Partenaire.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Actif.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Alert.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\AngelTag.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Annee.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Bilan.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Cession.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Choice.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\ChoicesEarlie.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\ChoicesInfrastructure.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\ChoicesProjet.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Comment.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Concession.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Concurrent.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Creance.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Devise.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Earlie.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\EarliesMoyen.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\EarliesProduit.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Environnement.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Etape.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Event.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Finaffacturage.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Fincapitalsocial.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Fincredbail.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Fincredsignature.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Findecouvert.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Finempobligataire.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Finescompte.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Finmlt.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Flettre.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Infrastructure.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\InfrastructuresMoyen.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\InfrastructuresProduit.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Investissement.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Lettre.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Modele.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Modepaiement.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Moyen.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Moyens_projet.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Organisme.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Post.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Prevbilan.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Prevresultat.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Prevtresorerie.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\ProduitsProjet.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Projet.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Repartcapitalsocial.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Reportbilan.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Reportresultat.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Ressource.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Resultat.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Secteur.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Segment.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Swot.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Tactif.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Tags.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\TagsProjet.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Tcontrat.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\TcontratsProjet.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Tdossier.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Teaser.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Tinvestissement.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Tlettre.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Torganisme.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Tprojet.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Tremboursement.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\Variante.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Models\projets_tinvestissements.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Adminentr\Investissements\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Adminentr\Investissements\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Adminorg\Angels\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Adminorg\Angels\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Adminorg\Angels\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Adminorg\Investissements\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Adminorg\Investissements\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Actifs\edit.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Actifs\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Actifs\index__.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Actifs\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Cessions\Articles\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Cessions\Creances\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Cessions\actifs\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Cessions\actifs\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Creances\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Creances\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Dossiers\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Dossiers\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Earlies\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Earlies\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Infrastructures\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Infrastructures\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Investissements\Earlies\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Investissements\Earlies\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Investissements\Earlies\show__old.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Investissements\Projets\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Investissements\Projets\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Investissements\Projets\show_old.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Messages\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Messages\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Opportunites\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\Tags\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\dashboard.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Angel\profile.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Apporteur\Clients\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Apporteur\Clients\finances.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Apporteur\Clients\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Apporteur\Clients\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Apporteur\Factures\creances.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Apporteur\Factures\payees.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Apporteur\Factures\print.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Apporteur\Factures\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Actifs\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Actifs\edit.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Actifs\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Actifs\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Creances\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Creances\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Dossiers\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Dossiers\create_diag_externe.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Dossiers\create_diag_strategique.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Dossiers\create_plan_financier.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Dossiers\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Dossiers\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Earlies\create_diag_externe.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Earlies\create_diag_strategique.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Earlies\create_plan_financier.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Earlies\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Earlies\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Earlies\show.blade__.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Factures\creances.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Factures\payees.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Factures\print.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Factures\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Infrastructures\create_diag_externe.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Infrastructures\create_diag_strategique.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Infrastructures\create_plan_financier.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Infrastructures\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\Infrastructures\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Consultant\lettre_intention.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Actions\admin_dossier.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\business_model.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\capital.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\lettre_intention.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\plan_financier.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\rapport_mensuel.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\synthese1.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\synthese2.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\synthese3.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\teaser.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Edit\uploadDocs.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\after_teaser_popup.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\angels.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\business_model.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\capital.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\diagnostic1.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\diagnostic2.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\diagnostic3.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\lettre_intention.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\list_ba.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\plan_financier.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\report.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\synthese1.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\synthese2.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\synthese3.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Show\teaser.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Sidebars\admin_dossier.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Sidebars\dossier.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Sidebars\dossier_angel.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\includes\Sidebars\dossier_owner.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\layouts\adminentr.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\layouts\adminorg.blade.php" afterPath="" />
-      <change type="MOVED" beforePath="C:\xampp\otc\.idea\alert.iml" afterPath="$PROJECT_DIR$/.idea/otc.iml" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminentr\AngelController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Corporate/MembreController.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Controllers\Adminentr\DashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mcorporate/DashboardController.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Controllers\Owner\DossierController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Contributeur/DossierController.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Middleware\Adminentr.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Corporate.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Middleware\Angel.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Mchaire.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Middleware\Apporteur.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Chaire.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Middleware\Owner.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Contributeur.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Models\Client.php" afterPath="$PROJECT_DIR$/app/Models/Membre.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Adminentr\Angels\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Corporate/Membres/create.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Adminentr\Angels\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Corporate/Membres/index.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Adminentr\Angels\show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Corporate/Membres/show.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Actifs\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Actifs/create.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Actifs\edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Actifs/edit.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Actifs\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Actifs/index.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Actifs\index__.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Actifs/index__.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Actifs\show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Actifs/show.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Actifs\show__.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Actifs/show__.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Creances\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Creances/create.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Creances\edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Creances/edit.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Creances\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Creances/index.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Creances\show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Creances/show.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Dossiers\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Dossiers/create.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Dossiers\create.blade__.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Dossiers/create.blade__.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Dossiers\create_diag_externe.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Dossiers/create_diag_externe.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Dossiers\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Dossiers/index.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Dossiers\index__.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Dossiers/index__.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Dossiers\show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Dossiers/show.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Dossiers\show__.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Dossiers/show__.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Earlies\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Earlies/create.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Earlies\create_diag_externe.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Earlies/create_diag_externe.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Earlies\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Earlies/index.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Earlies\show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Earlies/show.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Earlies\show_old.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Earlies/show_old.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Infrastructures\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Infrastructures/create.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Infrastructures\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Infrastructures/index.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Infrastructures\show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Infrastructures/show.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Infrastructures\show__.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Infrastructures/show__.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Messages\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Messages/index.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\Messages\show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\lettre_intention.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/lettre_intention.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Owner\profile.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/profile.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/Adminag.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Adminag.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Agence.php" afterPath="$PROJECT_DIR$/app/Models/Agence.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/Consultant.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Consultant.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Message.php" afterPath="$PROJECT_DIR$/app/Models/Message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/National.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/National.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Paiement.php" afterPath="$PROJECT_DIR$/app/Models/Paiement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/adminag.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/adminag.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/national.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/national.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="" />
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -389,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/national.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.49369746" vertical-offset="1525" max-vertical-offset="4464">
-              <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -934,10 +663,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2087447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1288,7 +1017,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/national.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49369746" vertical-offset="1525" max-vertical-offset="4464">
-          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding />
         </state>
       </provider>

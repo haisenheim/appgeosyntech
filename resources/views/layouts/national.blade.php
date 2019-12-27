@@ -127,23 +127,6 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/national/apporteurs" class="nav-link">
-              <i class="nav-icon fa fa-users"></i>
-              <p>
-                APPORTEURS D'AFFAIRES
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="/national/porteurs" class="nav-link">
-              <i class="nav-icon fas fa-male"></i>
-              <p>
-                ENTREPRENEURS
-              </p>
-            </a>
-          </li>
 
           <li  class="nav-item has-treeview">
             <a href="#" class="nav-link">
