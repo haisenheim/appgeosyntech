@@ -1,106 +1,93 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Log in</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
-    <link rel="stylesheet" href="{{asset('css/login.css')}}"/>
-    <link rel="stylesheet" href="{{asset('css/util.css')}}"/>
-    <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?= asset('/plugins/fontawesome-free/css/all.min.css') ?>">
 
-<div class="" style="background-color: #666666;">
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="<?= asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') ?>">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?= asset('dist/css/adminlte.min.css') ?>">
+  <!-- Google Font: Source Sans Pro -->
 
-                                            <span class="login100-form-title p-b-43" style="margin-bottom: 43px">Se connecter pour continuer</span>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../../index2.html"><b>Admin</b>LTE</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Sign in to start your session</p>
 
-                                                {{ csrf_field() }}
-                                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} wrap-input100 validate-input">
-
-                                                    <input id="email" type="email" class="input100" name="email" value="{{ old('email') }}" required autofocus>
-                                                    <span class="focus-input100"></span>
-                                                    <span class="label-input100">ADRESSE EMAIL</span>
-                                                        @if ($errors->has('email'))
-                                                            <span class="help-block">
-                                                                <strong>{{ $errors->first('email') }}</strong>
-                                                            </span>
-                                                        @endif
-                                                </div>
-
-                                                <div class="wrap-input100 validate-input form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-
-                                                        <input id="password" type="password" class="input100" name="password" required>
-                                                        <span class="focus-input100"></span>
-                                                         <span class="label-input100">MOT DE PASSE</span>
-                                                        @if ($errors->has('password'))
-                                                            <span class="help-block">
-                                                                <strong>{{ $errors->first('password') }}</strong>
-                                                            </span>
-                                                        @endif
-
-                                                </div>
-
-                                                <div class="flex-sb-m w-full p-t-3 p-b-32">
-                                                						<div class="contact100-form-checkbox">
-                                                							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
-                                                							<label class="label-checkbox100" for="ckb1">
-                                                								Se rappeler de moi
-                                                							</label>
-                                                						</div>
-
-                                                						<div>
-                                                							<a href="{{ route('password.request') }}" class="txt1">
-                                                								Mot de passe oublié?
-                                                							</a>
-                                                						</div>
-                                                					</div>
-
-                                                					<div class="container-login100-form-btn">
-                                                                    			<button class="login100-form-btn">
-                                                                    				Se connecter
-                                                                    			</button>
-                                                                    		</div>
-
-                                                                    		<div class="text-center p-t-46 p-b-20">
-                                                                    			<a href="{{ route('register') }}" class="txt2">
-                                                                    				ou alors créer un compte
-                                                                    			</a>
-                                                                    		</div>
-
-                                                                    		<div class="login100-form-social flex-c-m">
-                                                                    			<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-                                                                    				<i class="fa fa-facebook-f" aria-hidden="true"></i>
-                                                                    			</a>
-
-                                                                    			<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
-                                                                    				<i class="fa fa-twitter" aria-hidden="true"></i>
-                                                                    			</a>
-                                                                    </div>
-
-                 </form>
-                <div class="login100-more" style="background-image:  url('{{asset('img/logo-obac.png')}}');">
-                </div>
+      <form action="../../index3.html" method="post">
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Email">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
             </div>
+          </div>
         </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+              <label for="remember">
+                Remember Me
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center mb-3">
+        <p>- OR -</p>
+        <a href="#" class="btn btn-block btn-primary">
+          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+        </a>
+        <a href="#" class="btn btn-block btn-danger">
+          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+        </a>
+      </div>
+      <!-- /.social-auth-links -->
+
+      <p class="mb-1">
+        <a href="#">I forgot my password</a>
+      </p>
+      <p class="mb-0">
+        <a href="register.html" class="text-center">Register a new membership</a>
+      </p>
     </div>
-
+    <!-- /.login-card-body -->
+  </div>
 </div>
+<!-- /.login-box -->
 
+<!-- jQuery -->
+<script src="<?= asset('plugins/jquery/jquery.min.js') ?>"></script>
+<!-- Bootstrap 4 -->
+<script src="<?= asset('plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-<!--===============================================================================================-->
-	<script src="{{asset('js/login/jquery/jquery-3.2.1.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{asset('js/login/animsition/js/animsition.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{asset('js/login/bootstrap/js/popper.js')}}"></script>
-	<script src="{{asset('js/login/bootstrap/js/bootstrap.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{asset('js/login/select2/select2.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{asset('js/login/daterangepicker/moment.min.js')}}"></script>
-	<script src="{{asset('js/login/daterangepicker/daterangepicker.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{asset('js/login/countdowntime/countdowntime.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{asset('js/login/main.js')}}"></script>
-
-@endsection
+</body>
+</html>
