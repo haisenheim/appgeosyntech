@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -115,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.9815157" vertical-offset="915" max-vertical-offset="1456">
+            <state vertical-scroll-proportion="21.24" vertical-offset="915" max-vertical-offset="1456">
               <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -147,6 +146,16 @@
                 <marker date="1577540630974" expanded="true" signature="2512:2576" placeholder="..." />
                 <marker date="1577540630974" expanded="true" signature="2599:2685" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.08480565" vertical-offset="0" max-vertical-offset="656">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -224,7 +233,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ParametresController.php" />
         <option value="$PROJECT_DIR$/public/js/api.js" />
         <option value="$PROJECT_DIR$/resources/views/includes/Sidebars/dossier.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Mcorporate/MembreController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/MembreController.php" />
         <option value="$PROJECT_DIR$/app/Models/Membre.php" />
@@ -247,6 +255,7 @@
         <option value="$PROJECT_DIR$/resources/views/Front/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -381,24 +390,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -949,14 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="656">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/MembreController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2224">
@@ -1228,7 +1211,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9815157" vertical-offset="915" max-vertical-offset="1456">
+        <state vertical-scroll-proportion="21.24" vertical-offset="915" max-vertical-offset="1456">
           <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1257,6 +1240,14 @@
             <marker date="1577540630974" expanded="true" signature="2512:2576" placeholder="..." />
             <marker date="1577540630974" expanded="true" signature="2599:2685" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08480565" vertical-offset="0" max-vertical-offset="656">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

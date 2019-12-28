@@ -29,17 +29,23 @@
     <div style="border-radius: 5%;" class="card-body login-card-body">
       <p class="login-box-msg">ACCEDEZ A VOTRE ESPACE</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="{{ route('login') }}" method="post">
+       {{ csrf_field() }}
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" name="email" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
+          @if ($errors->has('email'))
+              <span class="help-block">
+                  <strong>Email introuvable</strong>
+              </span>
+          @endif
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Mot de passe">
+          <input type="password" name="password" class="form-control" placeholder="Mot de passe">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
