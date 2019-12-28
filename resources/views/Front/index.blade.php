@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-        <title>OBAC ALERT</title>
+        <title>OBAC TRAINING CENTER</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
@@ -52,7 +52,7 @@
               height:60px;
               font-size:20px;
               line-height:60px;
-              background:#28a745;
+              background:#007bff;
               color:#fff;
               position:relative;
               margin-bottom:-60px;
@@ -92,7 +92,7 @@
 
             #poles .col-md-4, #poles .col-sm-12{
                 border-radius: 50%;
-                background: #28a745;
+                background: #007bff;
                 height: 360px;
                 padding: 4%;
                 color:#fff;
@@ -105,10 +105,10 @@
              #howto .col-md-4, #howto .col-sm-12{
                 border-radius: 50%;
                 background: #ffff;
-                border: solid 1px #28a745;
+                border: solid 1px #007bff;
                 height: 360px;
                 padding: 4%;
-                color:#28a745;
+                color:#007bff;
                 box-sizing: border-box;
                 text-align: center;
             }
@@ -116,7 +116,7 @@
              #types .col-md-4, #types .col-sm-12{
                 border-radius: 50%;
                 background: #ffff;
-                border: solid 1px #28a745;
+                border: solid 1px #007bff;
                 height: 360px;
                 padding: 4%;
                 text-align: center;
@@ -127,7 +127,7 @@
             .divider-1 span {
                 display: inline-block;
                 width: 300px;
-                border-bottom: 1px solid  #28a745;
+                border-bottom: 1px solid  #007bff;
             }
 
            .section-reverse .divider-1 span {
@@ -183,7 +183,7 @@
                top: 50px;
                left: 10px;
                width: 260px;
-               color:#28a745
+               color:#007bff
              }
              .carousel-inner .carousel-item-right.active,
                 .carousel-inner .carousel-item-next {
@@ -204,7 +204,7 @@
          }
 
          .section-reverse{
-            background:#28a745 ;
+            background:#007bff ;
          }
 
          .section-reverse a{
@@ -225,7 +225,7 @@
           }
 
           .section-1-container h1 {
-            color:#28a745 ;
+            color:#007bff ;
             font-weight: 700;
           }
 
@@ -240,7 +240,7 @@
           #types h3{
           font-size: 1.1rem;
           font-weight: 900;
-          color:#28a745 ;
+          color:#007bff ;
           }
 
           #types p, #obac p {
@@ -252,7 +252,7 @@
           }
 
           #obac h1, #events h1, #about h1 {
-            color:#28a745 ;
+            color:#007bff ;
           }
         </style>
     </head>
@@ -556,7 +556,7 @@
 	            </div>
 	            
 	            <div id="poles" style="margin-bottom: 30px;" class="row">
-	                <div style="border-radius: 50%;background: #28a745;height: 360px; padding: 6%" class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
+	                <div style="border-radius: 50%;background: #007bff;height: 360px; padding: 6%" class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
 	                	<div class="">
 	                	    <div style="width: 150px; margin: 10px auto;" class="">
 			                	<img style="height: 90px; width:90px; border-radius: 50%" src="img/structuration-projet.jpg" alt=""/>
