@@ -628,7 +628,7 @@
 	        	<div class="row">
 	        		
                     <div class="col">
-                    	&copy; OBAC TRAINING CENTER - Cabinet Obac 2019 - Tous droits Reservés.
+                    	&copy; OBAC TRAINING CENTER - Cabinet Obac <?= date('Y') ?> - Tous droits Reservés.
                     </div>
                     
                 </div>
