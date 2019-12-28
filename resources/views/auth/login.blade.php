@@ -18,13 +18,16 @@
 
 </head>
 <body style="background: url('<?= asset('img/logo-obac.png') ?>'); background-size: cover" class="hold-transition login-page">
-<div class="login-box">
+<div class="login-box" style="background: #FFFFFF">
   <div class="login-logo">
+        <div style="width: 200px; margin: 15px auto;">
+            <img src="<?= asset('img/logo-obac.png') ?>" alt="" style="width: 150px; height: 150px; border-radius: 50%"/>
+        </div>
     <a style="color:#007bff" href=""><b>OBAC TRAINING CENTER</b></a>
   </div>
   <!-- /.login-logo -->
-  <div class="card" style="border-radius: 5%; border: 1px solid #007bff">
-    <div class="card-body login-card-body">
+  <div class="card" style="border: 1px solid #007bff">
+    <div style="border-radius: 5%;" class="card-body login-card-body">
       <p class="login-box-msg">ACCEDEZ A VOTRE ESPACE</p>
 
       <form action="../../index3.html" method="post">
@@ -37,7 +40,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Mot de passe">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -48,7 +51,7 @@
 
           <!-- /.col -->
           <div class="col-12">
-            <button type="submit" style="border-radius: 5%" class="btn btn-primary btn-block btn-flat">CONNEXION</button>
+            <button type="submit" style="border-radius: 5%" class="btn btn-outline-primary btn-block">CONNEXION</button>
           </div>
           <!-- /.col -->
         </div>
