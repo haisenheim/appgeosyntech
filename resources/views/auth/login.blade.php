@@ -17,7 +17,7 @@
   <!-- Google Font: Source Sans Pro -->
 
 </head>
-<body style="background: url('<?= asset('img/logo-obac.png') ?>')" class="hold-transition login-page">
+<body style="background: url('<?= asset('img/logo-obac.png') ?>'); background-size: cover" class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
     <a href=""><b>OBAC TRAINING CENTER</b></a>
