@@ -20,10 +20,10 @@
 <body style="background: url('<?= asset('img/logo-obac.png') ?>'); background-size: cover" class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href=""><b>OBAC TRAINING CENTER</b></a>
+    <a style="color:#007bff" href=""><b>OBAC TRAINING CENTER</b></a>
   </div>
   <!-- /.login-logo -->
-  <div class="card">
+  <div class="card" style="border-radius: 5%; border: 1px solid #007bff">
     <div class="card-body login-card-body">
       <p class="login-box-msg">ACCEDEZ A VOTRE ESPACE</p>
 
@@ -45,17 +45,10 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Se rappeler de moi
-              </label>
-            </div>
-          </div>
+
           <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">CONNEXION</button>
+          <div class="col-12">
+            <button type="submit" style="border-radius: 5%" class="btn btn-primary btn-block btn-flat">CONNEXION</button>
           </div>
           <!-- /.col -->
         </div>
