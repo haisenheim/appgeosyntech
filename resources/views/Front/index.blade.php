@@ -287,7 +287,7 @@
             			                <a class="nav-link" href="/"><i class="fa fa-home -fa-lg"></i></a>
             			            </li>
             			             <li class="nav-item">
-            			                <a class="nav-link" href="#projets">TOUS LES PROJETS</a>
+            			                <a class="nav-link" href="#projets">TOUS LES FORMATIONS</a>
             			            </li>
             			            <li class="nav-item">
             			                <a class="nav-link" href="#about">COMMENT CA MARCHE?</a>
@@ -300,15 +300,13 @@
             			    </div>
             		    </div>
 		</div>
-        <div style="height: 100%; overflow-y: scroll">
-            <div id="map"></div>
-        </div>
+
 
 		 <div class="section-1-container section-container">
         	        <div class="container">
         	                <div class="col section-1 section-description wow fadeIn">
 
-                                 <h1>BIENVENUE SUR OBAC ALERT</h1>
+                                 <h1>BIENVENUE SUR OBAC TRAINING CENTER</h1>
                                  <div class="divider-1 wow fadeInUp"><span></span></div>
           	                    <p>
           	                    	Obac alert est l’outil de mobilisation de capitaux du cabinet de conseils stratégiques et financiers et à vocation de banques d’affaires : OBAC Sarl. Cet outil nous permet de présenter à notre réseau de partenaires financiers locaux,
@@ -318,43 +316,7 @@
         	        </div>
           </div>
 
-        <!-- Top content -->
-        <div id="projets" class="section-1-container section-container section-reverse" style="">
-             <h1>Découvrez les projets que nous avons structurés</h1>
-             <div class="divider-1 wow fadeInUp"><span></span></div>
-        	<div class="container-fluid">
-        		<div id="carousel-example" class="carousel slide" data-ride="carousel">
-        			<div class="carousel-inner row w-100 mx-auto" role="listbox">
-        			    <?php $i=0; ?>
-        			    @foreach($projets as $projet)
 
-            			<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 <?= $i==0?'active':'' ?>">
-            			    <div class="carousel-item-inner">
-
-            			       <h3 style="position: relative; top: 120px; color: #FFFFFF; font-weight: 700">{{$projet->name}}</h3>
-							<img style="height: 240px;" src="{{asset($projet->imageUri?'img/'.$projet->imageUri:'front/img/backgrounds/1.jpg')}}" class="img-fluid mx-auto d-block" alt="img1">
-                            <div class="carousel-caption">
-
-                                 <a class="btn btn-sm btn-primary" href="/projet/{{ $projet->token }}">Consulter</a>
-                            </div>
-            			    </div>
-
-						</div>
-						<?php $i++ ?>
-						@endforeach
-
-        			</div>
-        			<a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Precedent</span>
-					</a>
-					<a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Suivant</span>
-					</a>
-        		</div>
-        	</div>
-        </div>
 
         <!-- Section 1 -->
         <div class="section-1-container section-container">
@@ -422,36 +384,6 @@
         </div>
 
 
-       <div class="section-1-container section-container section-reverse">
-             <h1>NOS PARTENAIRES FINANCIERS</h1>
-             <div class="divider-1 wow fadeInUp"><span></span></div>
-        	<div style="margin-top: 50px;" class="container-fluid">
-        		<div id="carousel-example" class="carousel slide" data-ride="carousel">
-        			<div class="carousel-inner row w-100 mx-auto" role="listbox">
-        			    <?php $i=0; ?>
-        			    @foreach($partenaires as $projet)
-                        @if($projet->imageUri)
-            			<div class="carousel-item col-12 col-sm-12 col-md-3 col-lg-3 <?= $i==0?'active':'' ?>">
-            			    <div class="carousel-item-inner">
-							    <img style="height: 120px; border-radius: 50%" src="{{asset('img/'.$projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
-            			    </div>
-						</div>
-						<?php $i++ ?>
-						@endif
-						@endforeach
-
-        			</div>
-        			<a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Precedent</span>
-					</a>
-					<a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Suivant</span>
-					</a>
-        		</div>
-        	</div>
-        </div>
 
         <!-- Section 2 -->
         <div id="about" class="section-2-container section-container">
@@ -607,43 +539,6 @@
 	            </div>
 	         </div>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
-                <div id="events" class="section-container">
-                    <div class="col section-3 section-description wow fadeIn">
-	                    <h2>DECOUVREZ EN IMAGES NOS EVENEMENTS  </h2>
-
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                    <div class="container-fluid">
-        		<div id="carousel-example" class="carousel slide" data-ride="carousel">
-        			<div class="carousel-inner row w-100 mx-auto" role="listbox">
-        			    <?php $i=0; ?>
-        			    @foreach($events as $projet)
-                        @if($projet->imageUri)
-            			<div class="carousel-item col-12 col-sm-12 col-md-3 col-lg-3 <?= $i==0?'active':'' ?>">
-            			    <div class="carousel-item-inner">
-							    <h3 style="position: relative; top: 120px; color: #000; font-weight: 700">{{$projet->name}}</h3>
-							     <h4 style="position: relative; top: 140px; color: #003; font-weight: 500">{{ date_format($projet->start,'d/m/Y') }} - {{ date_format($projet->end,'d/m/Y') }}</h4>
-                                <img style="height: 240px;" src="{{asset($projet->imageUri)}}" class="img-fluid mx-auto d-block" alt="img1">
-
-            			    </div>
-
-						</div>
-						<?php $i++ ?>
-						@endif
-						@endforeach
-
-        			</div>
-        			<a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Precedent</span>
-					</a>
-					<a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Suivant</span>
-					</a>
-        		</div>
-        	</div>
-                </div>
-	        </div>
 
 		<!-- Section 4 -->
         <div id="contact" class="section-4-container section-container section-reverse section-container-image-bg">
@@ -749,54 +644,11 @@
 		<script src="{{asset('front/js/jquery-migrate-3.0.0.min.js')}}"></script>
 		<script src="{{asset('front/js/popper.min.js')}}"></script>
 		<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
         <script src="{{asset('front/js/wow.min.js')}}"></script>
 
-            <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 
-        	<script type="text/javascript">
-        	// On initialise la latitude et la longitude de Paris (centre de la carte)
-                                                var lat = -2.300;
-                                                var lon = 14.800;
-                                                var macarte = null;
-                                                // Fonction d'initialisation de la carte
-                                                function initMap(villes) {
-                                                    // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
-                                                    macarte = L.map('map').setView([lat, lon], 7);
-                                                    // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
-                                                    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-                                                        // Il est toujours bien de laisser le lien vers la source des données
-                                                        attribution: '© <a href="#">OBAC ALERT</a>/Plateforme de collecte des financements',
-                                                        minZoom: 1,
-                                                        maxZoom: 20
-                                                    }).addTo(macarte);
 
-                                                   var marker = L.marker([-4.8441,11.7783]).addTo(macarte);
-                                                   marker.bindPopup("Pointe-noire");
-                                                    for (var i in villes) {
-                                                    		var marker = L.marker([villes[i].latitude, villes[i].longitude]).addTo(macarte);
-                                                    		marker.bindPopup(villes[i].name+"   <a style='cursor:pointer' class='badge badge-success' href='/villes/"+ villes[i].id +"'> Afficher  <i class='fa fa-search'></i></a>");
-
-                                                    	}
-                                                   }
-
-                                                window.onload = function(){
-                                    		// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
-                                    		    $.ajax({
-                                    		     url:'/getvilles',
-                                    		     type:'get',
-                                    		     dataType:'json',
-                                    		     success:function(data){
-                                    		        initMap(data);
-                                    		     }
-
-                                    		    });
-                                    		    var vils = {"Brazzaville":{latitude:-4.2695,longitude:15.2712},"Dolisie":{latitude:-4.2006,longitude:12.6792},"Nkayi":{latitude:-4.1841,longitude:13.2884}};
-
-                                                };
-
-                </script>
         <script>
             var yourNavigation = $(".nav");
                 stickyDiv = "sticky";
