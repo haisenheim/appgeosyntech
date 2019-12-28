@@ -28,7 +28,7 @@ class ExpertController extends Controller
 	    //$pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('National/Experts/index')->with(compact('users'));
+        return view('Admin/Experts/index')->with(compact('users'));
 
     }
 

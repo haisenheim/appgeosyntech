@@ -28,7 +28,7 @@ class ClientController extends Controller
 	    //$pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('National/Experts/index')->with(compact('users'));
+        return view('Admin/Clients/index')->with(compact('users'));
 
     }
 
