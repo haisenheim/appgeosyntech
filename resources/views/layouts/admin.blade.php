@@ -57,12 +57,12 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar elevation-4 sidebar-light-success">
+  <aside class="main-sidebar elevation-4 sidebar-light-primary">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link navbar-success">
+    <a href="#" class="brand-link navbar-primary">
       <img src="{{asset('img/logo-obac.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span style="font-weight: 800; font-size: 14px; color: #28a745" class="brand-text font-weight-light">OBAC TRAINING CENTER</span>
+      <span style="font-weight: 800; font-size: 14px; color: #FFFFFF" class="brand-text font-weight-light">OBAC TRAINING CENTER</span>
     </a>
 
     <!-- Sidebar -->
