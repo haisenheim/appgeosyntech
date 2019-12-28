@@ -23,7 +23,6 @@
         <div style="width: 200px; margin: 15px auto;">
             <img src="<?= asset('img/logo-obac.png') ?>" alt="" style="width: 150px; height: 150px; border-radius: 50%"/>
         </div>
-    <a style="color:#007bff" href=""><b>OBAC TRAINING CENTER</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card" style="border: 1px solid #007bff">
