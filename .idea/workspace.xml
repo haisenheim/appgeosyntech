@@ -2,45 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Centre.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CentreController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ChaireController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Cour.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Formation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Module.php" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\ActifController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\AngelController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\BilanController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\ClientController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\CommercialController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\ConcurrentController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\CreanceController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\DeviseController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\EarlyController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\EventController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\ExpertController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\InfrastructureController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\InvestissementController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\LettreController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\PartenaireController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\PrevbilanController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\PrevresultatController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\ProfilController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\ProjetController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\ResultatController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\RoleController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\SecteurController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\SessionController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\TagController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\TcontratController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\TcontratsProjetController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\TdossierController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\TeaserController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\TinvestissementController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\TprojetController.php" afterPath="" />
-      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Controllers\Admin\OrganismeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FormationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/EntrepriseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/EntrepriseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ClientController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -77,8 +40,28 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.32" vertical-offset="947" max-vertical-offset="3072">
-              <caret line="90" column="54" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+            <state vertical-scroll-proportion="-12.68" vertical-offset="947" max-vertical-offset="3072">
+              <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpertController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="2256">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ClientController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8168168" vertical-offset="0" max-vertical-offset="2256">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -127,21 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CentreController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CentreController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CentreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46153846" vertical-offset="0" max-vertical-offset="2816">
+            <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="2816">
               <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Formation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Formation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.64" vertical-offset="0" max-vertical-offset="544">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -167,16 +140,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cour.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Cour.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="432">
-              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -190,8 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/layouts/adminorg.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/adminentr.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/owner.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/ClientController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
@@ -236,11 +197,13 @@
         <option value="$PROJECT_DIR$/app/Models/Formation.php" />
         <option value="$PROJECT_DIR$/app/Models/Centre.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/FormationController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ChaireController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/EntrepriseController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CentreController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ClientController.php" />
       </list>
     </option>
   </component>
@@ -469,6 +432,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="National" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -840,10 +829,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16502115" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42877293" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1309,14 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.32" vertical-offset="947" max-vertical-offset="3072">
-          <caret line="90" column="54" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/FormationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.32" vertical-offset="738" max-vertical-offset="2960">
@@ -1343,8 +1324,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CentreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46153846" vertical-offset="0" max-vertical-offset="2816">
+        <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="2816">
           <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.68" vertical-offset="947" max-vertical-offset="3072">
+          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="2256">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8168168" vertical-offset="0" max-vertical-offset="2256">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
           <folding />
         </state>
       </provider>
