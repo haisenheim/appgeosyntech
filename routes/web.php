@@ -147,10 +147,6 @@ Route::prefix('adminag')
 
 
 
-		//  Pojets Early stage
-
-		Route::resource('users','UserController');
-
 
 		Route::get('dashboard','DashboardController');
 
