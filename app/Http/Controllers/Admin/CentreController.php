@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Centre;
 use App\Models\Entreprise;
 use App\User;
 use Illuminate\Support\Facades\Hash;
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
-class EntrepriseController extends Controller
+class CentreController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +25,7 @@ class EntrepriseController extends Controller
      */
     public function index()
     {
-	    $entreprises = Entreprise::all();
+	    $centres = Centre::all();
 	    $pays = Pay::all();
 	    return view('Admin/Entreprises/index')->with(compact('entreprises','pays'));
     }

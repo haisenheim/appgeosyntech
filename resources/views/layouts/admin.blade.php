@@ -110,7 +110,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/admin/chaires" class="nav-link">
+                <a href="/admin/chaire" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Formations Chaire OBAC</p>
                 </a>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Entreprise;
+use App\Models\Formation;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
-class OrganismeController extends Controller
+class FormationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,10 +25,9 @@ class OrganismeController extends Controller
      */
     public function index()
     {
-	    $organismes = Organisme::all();
-	    $types = Torganisme::all();
-	    $pays = Pay::all();
-	    return view('Admin/Organismes/index')->with(compact('organismes','types','pays'))->with('success');
+	    $formations = Formation::all();
+
+	    return view('Admin/Formations/index')->with(compact('formations'));
     }
 
     /**
@@ -53,12 +54,12 @@ class OrganismeController extends Controller
 	{
 		//
 		//dd($request->imageUri);
-		$ville = new Organisme();
+		//$ville = new Organisme();
 		$data = [
 			'name'=>$request['name'],
 			'address'=>$request['address'],
 			'phone'=>$request['phone'],
-			'type_id'=>$request['type_id'],
+
 			'pay_id'=>$request['pay_id'],
 			'description'=>$request['description'],
 			'email'=>$request['email'],
@@ -79,22 +80,22 @@ class OrganismeController extends Controller
 			$ext = $file->getClientOriginalExtension();
 			$arr_ext = array('jpg','png','jpeg','gif');
 			if(in_array($ext,$arr_ext)) {
-				if (!file_exists(public_path('img') . '/organismes')) {
-					mkdir(public_path('img') . '/organismes');
+				if (!file_exists(public_path('img') . '/entreprises')) {
+					mkdir(public_path('img') . '/entreprises');
 				}
 				$token = sha1(date('ydmhis'));
-				if (file_exists(public_path('img') . '/organismes/' . $token . '.' . $ext)) {
-					unlink(public_path('img') . '/organismes/' . $token . '.' . $ext);
+				if (file_exists(public_path('img') . '/entreprises/' . $token . '.' . $ext)) {
+					unlink(public_path('img') . '/entreprises/' . $token . '.' . $ext);
 				}
 				$name = $token . '.' . $ext;
-				$file->move(public_path('img/organismes'), $name);
-				$data['imageUri'] = 'organismes/' . $name;
+				$file->move(public_path('img/entreprises'), $name);
+				$data['imageUri'] = 'entreprises/' . $name;
 			}
 
 		}
 
-		$organisme = Organisme::create($data);
-		if($organisme){
+		$entreprise = Entreprise::create($data);
+		if($entreprise){
 			Validator::make($data, [
 				'email' => [
 					'required',
@@ -104,15 +105,15 @@ class OrganismeController extends Controller
 			$user_data = array(
 				'last_name' => $request->last_name,
 				'first_name' => $request->first_name,
-				'role_id' => 6,
+				'role_id' => 5,
 				'email' => $request->user_email,
 				'password' => Hash::make($request->password),
 				'male' => $request->gender,
 				'address' => $request->user_address,
 				'phone' => $request->user_phone,
 				'remember_token' => sha1(Auth::user()->id. date('Ymdhis')),
-				'organisme_id' => $organisme->id,
-				'pay_id'=>$organisme->pay_id,
+				'entreprise_id' => $entreprise->id,
+				'pay_id'=>$entreprise->pay_id,
 				'creator_id'=>Auth::user()->id,
 				'token'=> sha1(Auth::user()->id . date('YmHisd'))
 
@@ -139,7 +140,7 @@ class OrganismeController extends Controller
 
 			User::create($user_data);
 		}
-		$request->session()->flash('success','L\'organisme financier a été correctement enregistré !!!');
+		$request->session()->flash('success','L\'entreprise  a été correctement enregistré !!!');
 		return back();
 	}
 

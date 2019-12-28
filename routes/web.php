@@ -84,7 +84,11 @@ Route::prefix('admin')
 
 
         Route::resource('villes','VilleController');
-	    Route::resource('dossiers','ProjetController');
+	    Route::resource('formations','FormationController');
+	    Route::resource('chaire','ChaireController');
+	    Route::resource('centres','CentreController');
+	    Route::resource('corporate','EntrepriseController');
+	    Route::resource('clients','ClientController');
 
 
 
