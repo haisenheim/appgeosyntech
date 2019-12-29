@@ -20,28 +20,28 @@ class FinanceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getCreancesApporteur($token)
+    public function getCreancesContributeur($token)
     {
         //
 	    $apporteur = User::where('token',$token)->first();
-	    $factures = Facture::orderBy('created_at','desc')->where('apporteur',1)->where('owner_id',$apporteur->id)->where('filled',0)->paginate(12);
+	    $factures = Facture::orderBy('created_at','desc')->where('contributeur',1)->where('owner_id',$apporteur->id)->where('filled',0)->paginate(12);
 
-	    return view('Admin/Commercials/creances')->with(compact('factures','apporteur'));
+	    return view('Admin/Contributeurs/creances')->with(compact('factures','apporteur'));
     }
 
-	public function getPayeesApporteur($token)
+	public function getPayeesContributeur($token)
 	{
 		//
 		$apporteur = User::where('token',$token)->first();
-		$factures = Facture::orderBy('created_at','desc')->where('apporteur',1)->where('owner_id',$apporteur->id)->where('filled',1)->paginate(12);
+		$factures = Facture::orderBy('created_at','desc')->where('contributeur',1)->where('owner_id',$apporteur->id)->where('filled',1)->paginate(12);
 
-		return view('Admin/Commercials/payees')->with(compact('factures','apporteur'));
+		return view('Admin/Contributeurs/payees')->with(compact('factures','apporteur'));
 	}
 
-	public function showFactureApporteur( $token)
+	public function showFactureContributeur( $token)
 	{
 		$facture = Facture::where('token',$token)->first();
-		return view('Admin/Commercials/facture')->with(compact('facture'));
+		return view('Admin/Contributeurs/facture')->with(compact('facture'));
 		//
 	}
 

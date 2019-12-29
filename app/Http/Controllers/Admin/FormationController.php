@@ -30,6 +30,20 @@ class FormationController extends Controller
 	    return view('Admin/Formations/index')->with(compact('formations'));
     }
 
+
+	public function disable($token){
+		$user = Formation::updateOrCreate(['token'=>$token],['active'=>0]);
+
+		return back();
+	}
+
+	public function enable($token){
+		$user = Formation::updateOrCreate(['token'=>$token],['active'=>1]);
+
+		return back();
+	}
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -52,96 +66,8 @@ class FormationController extends Controller
 
 	public function store(Request $request)
 	{
-		//
-		//dd($request->imageUri);
-		//$ville = new Organisme();
-		$data = [
-			'name'=>$request['name'],
-			'address'=>$request['address'],
-			'phone'=>$request['phone'],
-
-			'pay_id'=>$request['pay_id'],
-			'description'=>$request['description'],
-			'email'=>$request['email'],
-			'token'=>sha1(Auth::user()->id. date('Ymdhis'))
-		];
-
-		/*$ville->name = $request['name'];
-
-		$ville->address = $request['address'];
-		$ville->phone = $request['phone'];
-		$ville->type_id = $request['type_id'];
-		$ville->email = $request['email'];
-		$ville->description = $request['description'];
-		$ville->token = sha1(Auth::user()->id. date('Ymdhis'));*/
-
-		if($request->imageUri){
-			$file = $request->imageUri;
-			$ext = $file->getClientOriginalExtension();
-			$arr_ext = array('jpg','png','jpeg','gif');
-			if(in_array($ext,$arr_ext)) {
-				if (!file_exists(public_path('img') . '/entreprises')) {
-					mkdir(public_path('img') . '/entreprises');
-				}
-				$token = sha1(date('ydmhis'));
-				if (file_exists(public_path('img') . '/entreprises/' . $token . '.' . $ext)) {
-					unlink(public_path('img') . '/entreprises/' . $token . '.' . $ext);
-				}
-				$name = $token . '.' . $ext;
-				$file->move(public_path('img/entreprises'), $name);
-				$data['imageUri'] = 'entreprises/' . $name;
-			}
-
-		}
-
-		$entreprise = Entreprise::create($data);
-		if($entreprise){
-			Validator::make($data, [
-				'email' => [
-					'required',
-					Rule::unique('users')
-				],
-			]);
-			$user_data = array(
-				'last_name' => $request->last_name,
-				'first_name' => $request->first_name,
-				'role_id' => 5,
-				'email' => $request->user_email,
-				'password' => Hash::make($request->password),
-				'male' => $request->gender,
-				'address' => $request->user_address,
-				'phone' => $request->user_phone,
-				'remember_token' => sha1(Auth::user()->id. date('Ymdhis')),
-				'entreprise_id' => $entreprise->id,
-				'pay_id'=>$entreprise->pay_id,
-				'creator_id'=>Auth::user()->id,
-				'token'=> sha1(Auth::user()->id . date('YmHisd'))
 
 
-			);
-
-			if($request->user_imageUri){
-				$file = $request->user_imageUri;
-				$ext = $file->getClientOriginalExtension();
-				$arr_ext = array('jpg','png','jpeg','gif');
-				if(in_array($ext,$arr_ext)) {
-					if (!file_exists(public_path('img') . '/users')) {
-						mkdir(public_path('img') . '/users');
-					}
-					$token = sha1(date('ydmhis'));
-					if (file_exists(public_path('img') . '/users/' . $token . '.' . $ext)) {
-						unlink(public_path('img') . '/users/' . $token . '.' . $ext);
-					}
-					$name = $token . '.' . $ext;
-					$file->move(public_path('img/users'), $name);
-					$user_data['imageUri'] = 'users/' . $name;
-				}
-			}
-
-			User::create($user_data);
-		}
-		$request->session()->flash('success','L\'entreprise  a été correctement enregistré !!!');
-		return back();
 	}
 
     /**

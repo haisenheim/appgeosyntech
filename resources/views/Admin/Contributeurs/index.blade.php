@@ -60,7 +60,7 @@
                                         <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/admin/consultant/payees/{{ $user->token }}"><i class="fa fa-search"></i></a></li>
 
                                             @if($user->active)
-                                                <li title="bloquer le compte" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/contributeur/disable/{{ $user->token }}"><i class="fa fa-thumbs-up"></i></a></li>
+                                                <li title="bloquer le compte" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/contributeur/disable/{{ $user->token }}"><i class="fa fa-lock"></i></a></li>
                                             @else
                                               <li title="débloquer le compte" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/contributeur/enable/{{ $user->token }}"><i class="fa fa-unlock"></i></a></li>
                                             @endif

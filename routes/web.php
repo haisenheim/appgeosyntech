@@ -75,6 +75,9 @@ Route::prefix('admin')
 	    Route::get('contributeur/facture/{token}','FinanceController@showFactureContributeur');
 	    Route::get('contributeur/disable/{token}','ContributeurController@disable');
 	    Route::get('contributeur/enable/{token}','ContributeurController@enable');
+
+	    Route::get('formation/disable/{token}','FormationController@disable');
+	    Route::get('formation/enable/{token}','FormationController@enable');
 	    //Finances
 
 
