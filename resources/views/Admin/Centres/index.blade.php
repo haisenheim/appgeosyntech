@@ -102,11 +102,7 @@
 
                             <div class="form-group">
                               <label for="type_id">PAYS</label>
-                              <select name="pay_id" class="form-control" id="type_id">
-                                @foreach($pays as $p)
-                                    <option value="{{ $p->id }}">{{$p->name}}</option>
-                                @endforeach
-                              </select>
+
                             </div>
 
                             <div class="form-group">
