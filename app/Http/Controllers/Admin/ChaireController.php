@@ -25,9 +25,9 @@ class ChaireController extends Controller
      */
     public function index()
     {
-	    $formations = Formation::all()->where('chaire_obac',1);
+	    $formations = Formation::all()->where('chaire_obac',1)->sortByDesc('created_at')->paginate(10);
 
-	    return view('Admin/Formations/index')->with(compact('formations'));
+	    return view('Admin/Chaire/index')->with(compact('formations'));
     }
 
     /**
