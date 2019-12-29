@@ -65,7 +65,7 @@ class ExpertController extends Controller
        // $user->password=bcrypt($request['password']);
        // $user->role_id =2;
 	    $user->password= Hash::make(($request['password']));
-	    $user->role_id =2;
+	    $user->role_id =6;
 	    $user->moi_id=date('m');
 	    $user->annee=date('Y');
 	    $user->male = $request['male']=='on'?1:0;
