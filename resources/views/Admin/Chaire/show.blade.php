@@ -17,14 +17,14 @@
     <div class="modal fade" id="moduleAdd">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header bg-primary">
+                      <div class="modal-header bg-info">
                         <h4 class="modal-title">NOUVEAU MODULE</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="formation/add-module/" method="post">
+                        <form enctype="multipart/form-data" role="form" action="/admin/formation/add-module/" method="post">
                         {{csrf_field()}}
                         <input type="hidden" name="token" value="{{ $formation->token }}"/>
 
@@ -75,7 +75,7 @@
                           </div>
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-block btn-outline-primary"><i class="fa fa-w fa-save"></i> ENREGISTRER</button>
+                            <button type="submit" class="btn btn-block btn-outline-info"><i class="fa fa-w fa-save"></i> ENREGISTRER</button>
                           </div>
                         </form>
                       </div>

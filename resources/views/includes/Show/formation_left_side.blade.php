@@ -13,6 +13,13 @@
             <li>PRIX EN LIGNE: <span class="text-info text-bold">{{ number_format($formation->prix_ligne,0,',','.') }}</span></li>
             <li>PRIX EN PRESENTIEL: <span class="text-info text-bold">{{ number_format($formation->prix_presentiel,0,',','.') }}</span></li>
         </ul>
+        <div class="divider"></div>
+        <fieldset>
+            <legend>Description</legend>
+                <div style="max-height: 200px; overflow-y: scroll">
+                    <p>{{ $formation->description }}</p>
+                </div>
+        </fieldset>
         <fieldset>
             <legend>CONTRIBUTEUR</legend>
             <ul>
