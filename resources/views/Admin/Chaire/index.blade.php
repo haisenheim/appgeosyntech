@@ -109,7 +109,7 @@
                                </div>
                                <div class="form-group">
                                     <div class="input-group">
-                                        <div class="costum-file">
+                                        <div class="custom-file">
                                             <label for="">IMAGE OU PLAQUETTE</label>
                                             <input class="custom-file-input" type="file" name="imageUri"/>
                                         </div>
