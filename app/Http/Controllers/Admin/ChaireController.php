@@ -52,6 +52,7 @@ class ChaireController extends Controller
 
 	public function store(Request $request)
 	{
+		dd($request->all());
 		$formation = new Formation();
 		$formation->name=$request->name;
 		$formation->description = $request->description;
