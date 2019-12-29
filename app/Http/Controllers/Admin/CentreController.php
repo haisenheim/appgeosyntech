@@ -27,7 +27,7 @@ class CentreController extends Controller
     {
 	    $entreprises = Centre::all();
 	    //$pays = Pay::all();
-	    return view('Admin/Entreprises/index')->with(compact('entreprises'));
+	    return view('Admin/Centres/index')->with(compact('entreprises'));
     }
 
     /**
