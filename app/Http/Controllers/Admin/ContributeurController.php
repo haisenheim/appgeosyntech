@@ -24,7 +24,7 @@ class ContributeurController extends Controller
     public function index()
     {
         //
-        $users = \App\User::all()->where('role_id','=',6);
+        $users = \App\User::all()->where('role_id','=',7);
 	    $pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";

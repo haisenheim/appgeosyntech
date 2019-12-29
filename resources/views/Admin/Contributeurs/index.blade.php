@@ -96,14 +96,14 @@
            <div class="modal fade" id="modal-lg">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Nouveau compte de consultant</h4>
+                      <div class="modal-header bg-info">
+                        <h4 class="modal-title">NOUVEAU COMPTE DE CONTRIBUTEUR</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.experts.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('admin.contributeurs.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">
@@ -142,13 +142,7 @@
 
                             </div>
 
-                            <div class="form-group">
-                              <label for="agence_id">AGENCE</label>
-                              <select name="agence_id" class="form-control" id="agence_id">
 
-                              </select>
-
-                            </div>
 
                             <fieldset>
                                 <legend>Infos. de connexion</legend>
@@ -170,7 +164,7 @@
                           </div>
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-success"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-outline-info btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>
