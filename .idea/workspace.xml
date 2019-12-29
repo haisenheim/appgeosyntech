@@ -2,7 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/EntrepriseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/EntrepriseController.php" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Angels\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Angels\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Commercials\creances.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Commercials\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Commercials\facture.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Commercials\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Commercials\payees.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Commercials\recu.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Creances\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Creances\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Devises\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Devises\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Events\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Events\edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Events\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Events\index__.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Events\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Infrastructures\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Infrastructures\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Organismes\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Organismes\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Projets\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Projets\recu.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Projets\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Tags\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Tinvestissements\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Tinvestissements\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Admin\Tinvestissements\show.blade.php" afterPath="" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Admin\Devises\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Centres/create.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\Admin\Organismes\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Entreprises/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Entreprises/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -88,16 +118,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/FormationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.32" vertical-offset="738" max-vertical-offset="2960">
-              <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChaireController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ChaireController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,11 +128,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntrepriseController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EntrepriseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/EntrepriseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7207207" vertical-offset="16" max-vertical-offset="2816">
+            <state vertical-scroll-proportion="-9.6" vertical-offset="16" max-vertical-offset="2816">
               <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.2" vertical-offset="435" max-vertical-offset="3504">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Entreprises/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7597598" vertical-offset="387" max-vertical-offset="3504">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -123,16 +163,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="2816">
               <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Centre.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Centre.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.24" vertical-offset="0" max-vertical-offset="368">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,8 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/layouts/owner.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/ClientController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Dossiers/create_diag_strategique.blade.php" />
@@ -202,6 +230,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CentreController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/EntrepriseController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Entreprises/index.blade.php" />
       </list>
     </option>
   </component>
@@ -307,7 +337,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,7 +359,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entreprises" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,11 +563,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\otc\resources\views\Admin" />
       <recent name="C:\xampp\otc\app\Http\Controllers\Admin" />
       <recent name="C:\xampp\otc\app\Models" />
       <recent name="C:\xampp\otc\app\Http\Middleware" />
       <recent name="C:\xampp\otc\app\Http\Controllers\Mcorporate" />
-      <recent name="C:\xampp\alert\resources\views\Angel\Investissements\Earlies" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\otc\app\Http\Controllers\Contributeur" />
@@ -897,13 +953,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/ProjetController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.28" vertical-offset="1655" max-vertical-offset="3744">
-          <caret line="201" column="7" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/EarlyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.76" vertical-offset="1556" max-vertical-offset="5504">
@@ -1346,8 +1395,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/EntrepriseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7207207" vertical-offset="16" max-vertical-offset="2816">
+        <state vertical-scroll-proportion="-9.6" vertical-offset="16" max-vertical-offset="2816">
           <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.2" vertical-offset="435" max-vertical-offset="3504">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Entreprises/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7597598" vertical-offset="387" max-vertical-offset="3504">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding />
         </state>
       </provider>
