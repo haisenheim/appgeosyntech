@@ -139,7 +139,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="/admin/entreprises" class="nav-link">
+            <a href="/admin/corporates" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
               <p>
                 ENTREPRISES
