@@ -19,23 +19,21 @@
                       <th>Cout en ligne</th>
                       <th>Cout en présentiel</th>
                       <th>
-                          Contributeur
+                          Concepteur
                       </th>
+
                       <th>Nb. Modules</th>
                       <th><a class="btn btn-outline-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
-
                   </tr>
               </thead>
               <tbody>
-
-
                    @foreach($formations as $formation)
                         <tr>
                             <td>#</td>
                             <td>
                             <span class="text-bold text-lg-left">{{ $formation->name }}</span>- <small>{{ $formation->created_at?date_format($formation->created_at,'d/m/Y'):'' }}</small><br/>
                             <?= $formation->active?'<span class="badge badge-success">ACTIVE</span>':'<span class="badge badge-danger">Bloquée</span>' ?> -
-                            <?= $formation->free?'<span class="badge badge-info">GRATUITE</span>':'<span class="badge badge-warning">PAYANTE</span>' ?>
+                            <?= $formation->free?'<span class="badge badge-info">GRATUITE</span>':'<span class="badge badge-warning">PAYANTE</span>' ?>- <?= $formation->interne?'<span class="badge badge-success"><i class="fa fa-users"></i> Consultants </span>':'<span class="badge badge-warning"><i class="fa fa-school"></i> Ecoles</span>' ?>
                             </td>
                             <td>
                                 {{number_format($formation->prix_ligne,0,',','.')}}
