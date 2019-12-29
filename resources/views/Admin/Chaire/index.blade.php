@@ -51,7 +51,7 @@
                                 <ul>
                                     <li class="list-inline-item"> <a class="btn btn-primary btn-xs" href="/admin/formations/{{ $formation->token  }}"><i class="fas fa-folder"></i>Afficher</a></li>
 
-                                           @if($projet->active)
+                                           @if($formation->active)
                                                <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>
                                            @else
                                              <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/formation/enable/{{ $user->token }}"><i class="fa fa-unlock"></i></a></li>
