@@ -24,8 +24,8 @@ class Facture extends Model
 	}
 
 	public function lignes(){
-		if($this->apporteur){
-			return $this->hasMany('App\Models\Paiement','facture_apporteur_id');
+		if($this->contibuteur){
+			return $this->hasMany('App\Models\Paiement','facture_contributeur_id');
 		}
 		if($this->consultant){
 			return $this->hasMany('App\Models\Paiement','facture_consultant_id');
