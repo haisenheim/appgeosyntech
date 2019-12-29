@@ -54,7 +54,7 @@
                                            @if($formation->active)
                                                <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>
                                            @else
-                                             <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/formation/enable/{{ $user->token }}"><i class="fa fa-unlock"></i></a></li>
+                                             <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/formation/enable/{{ $formation->token }}"><i class="fa fa-unlock"></i></a></li>
                                            @endif
                                 </ul>
                            </td>
