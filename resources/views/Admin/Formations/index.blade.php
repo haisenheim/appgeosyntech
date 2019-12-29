@@ -30,29 +30,29 @@
               <tbody>
 
 
-                   @foreach($formations as $projet)
+                   @foreach($formations as $formation)
                         <tr>
                             <td>#</td>
                             <td>
-                            <span class="text-bold text-lg-left">{{ $projet->name }}</span>- <small>{{ $projet->created_at?date_format($projet->created_at,'d/m/Y'):'' }}</small><br/>
-                            <?= $projet->active?'<span class="badge badge-success">ACTIVE</span>':'<span class="badge badge-danger">Bloquée</span>' ?> -
-                            <?= $projet->free?'<span class="badge badge-info">GRATUITE</span>':'<span class="badge badge-warning">PAYANTE</span>' ?>
+                            <span class="text-bold text-lg-left">{{ $formation->name }}</span>- <small>{{ $formation->created_at?date_format($formation->created_at,'d/m/Y'):'' }}</small><br/>
+                            <?= $formation->active?'<span class="badge badge-success">ACTIVE</span>':'<span class="badge badge-danger">Bloquée</span>' ?> -
+                            <?= $formation->free?'<span class="badge badge-info">GRATUITE</span>':'<span class="badge badge-warning">PAYANTE</span>' ?>
                             </td>
                             <td>
-                                {{number_format($projet->prix_ligne,0,',','.')}}
+                                {{number_format($formation->prix_ligne,0,',','.')}}
                             </td>
                             <td>
-                                {{number_format($projet->prix_presentiel,0,',','.')}}
+                                {{number_format($formation->prix_presentiel,0,',','.')}}
                             </td>
 
-                            <td>{{$projet->contributeur?$projet->contributeur->name:'-'}}</td>
+                            <td>{{$formation->contributeur?$formation->contributeur->name:'-'}}</td>
 
                           <td class="project-actions text-right">
                                 <ul>
-                                    <li class="list-inline-item"> <a class="btn btn-primary btn-xs" href="/national/projets/{{ $projet->token  }}"><i class="fas fa-folder"></i>Afficher</a></li>
+                                    <li class="list-inline-item"> <a class="btn btn-primary btn-xs" href="/admin/formations/{{ $formation->token  }}"><i class="fas fa-folder"></i>Afficher</a></li>
 
-                                           @if($user->active)
-                                               <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/formation/disable/{{ $user->token }}"><i class="fa fa-lock"></i></a></li>
+                                           @if($projet->active)
+                                               <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>
                                            @else
                                              <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/formation/enable/{{ $user->token }}"><i class="fa fa-unlock"></i></a></li>
                                            @endif
@@ -64,7 +64,7 @@
           </table>
           <div class="">
               <ul class="pagination justify-content-end">
-              {{ $projets->links() }}
+              {{ $formations->links() }}
           </ul>
           </div>
         </div>
