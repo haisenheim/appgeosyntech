@@ -81,7 +81,7 @@ class User extends Authenticatable
 
 	public function getRangAttribute(){
 		$rang = '';
-		if($this->role_id==2){
+		if($this->role_id==6){
 			$rang= 'junior';
 
 			if($this->confirmed){

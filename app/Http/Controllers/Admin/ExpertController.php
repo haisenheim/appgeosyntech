@@ -70,6 +70,7 @@ class ExpertController extends Controller
 	    $user->annee=date('Y');
 	    $user->male = $request['male']=='on'?1:0;
 	    $user->active = 1;
+	    $user->agence_id = $request['agence_id'];
 	    $user->token = sha1(Auth::user()->id . date('Yhmdhis'));
 	    $user->creator_id=Auth::user()->id;
 	    if($request->imageUri){
