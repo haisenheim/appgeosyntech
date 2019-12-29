@@ -3,7 +3,7 @@
         <h3 class="card-title">{{ $formation->name  }}</h3>
     </div>
     <div class="card-body">
-        <div style="width: 100%; height: 320px">
+        <div style="width: 100%; height: 220px">
             <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" style="height: 100%; width: 100%" alt=""/>
         </div>
         <div class="divider"></div>
@@ -17,7 +17,7 @@
         <fieldset>
             <legend>Description</legend>
                 <div style="max-height: 200px; overflow-y: scroll">
-                    <p>{{ $formation->description }}</p>
+                    <p><?= $formation->description ?></p>
                 </div>
         </fieldset>
         <fieldset>
