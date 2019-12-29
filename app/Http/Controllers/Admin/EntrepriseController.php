@@ -25,8 +25,7 @@ class EntrepriseController extends Controller
     public function index()
     {
 	    $entreprises = Entreprise::all();
-	    $pays = Pay::all();
-	    return view('Admin/Entreprises/index')->with(compact('entreprises','pays'));
+	    return view('Admin/Entreprises/index')->with(compact('entreprises'));
     }
 
     /**
