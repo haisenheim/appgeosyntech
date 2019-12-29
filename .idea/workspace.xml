@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Formations/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Formations/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -68,8 +67,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/Formations/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33088234" vertical-offset="1398" max-vertical-offset="1760">
-              <caret line="93" column="21" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.05882353" vertical-offset="912" max-vertical-offset="1760">
+              <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
               <folding>
                 <element signature="e#353#370#0#HTML" expanded="true" />
                 <element signature="e#454#472#0#HTML" expanded="true" />
@@ -1356,8 +1355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Formations/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33088234" vertical-offset="1398" max-vertical-offset="1760">
-          <caret line="93" column="21" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.05882353" vertical-offset="912" max-vertical-offset="1760">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
           <folding>
             <element signature="e#353#370#0#HTML" expanded="true" />
             <element signature="e#454#472#0#HTML" expanded="true" />
