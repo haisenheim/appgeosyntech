@@ -78,8 +78,8 @@
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
                       <th>PAYS</th>
-                      <th>AGENCE</th>
-                      <th>GRADE</th>
+                      <th>VILLE</th>
+
                       <th></th>
                     </tr>
                     </tfoot>
