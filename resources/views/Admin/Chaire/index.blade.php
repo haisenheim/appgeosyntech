@@ -95,7 +95,7 @@
                                    <label for="description">DESCRIPTION</label>
                                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
                                </div>
-                               <div class="form-control">
+                               <div class="form-group">
                                     <label for="">IMAGE OU PLAQUETTE</label>
                                     <input class="form-control" type="file" name="imageUri"/>
                                </div>
@@ -114,31 +114,18 @@
            </div>
 
 
-<link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
-<!-- jQuery -->
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+       <script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
 
-
-
-
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('dist/js/demo.js')}}"></script>
-<!-- DataTables -->
-<script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
-<script>
-  $(function () {
-
-    $('#table-projets').DataTable({
-      "paging": true,
-      "lengthChange": false,
-
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
-  });
-</script>
-
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('textarea').summernote({
+            height: 200,
+            tabsize: 2,
+            followingToolbar: true,
+            lang:'fr-FR'
+          });
+        });
+    </script>
 @endsection
