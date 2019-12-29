@@ -1,3 +1,9 @@
+<style>
+    .pull-right{
+        float: right;
+        margin-right: 10px;
+    }
+</style>
 <div class="card">
     <div class="card-header bg-info">
         <h3 class="card-title">{{ $formation->name  }}</h3>
