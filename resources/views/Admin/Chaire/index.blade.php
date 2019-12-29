@@ -22,7 +22,7 @@
                           Contributeur
                       </th>
                       <th>Nb. Modules</th>
-                      <th><a class="btn btn-outline-success btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+                      <th><a class="btn btn-outline-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
 
                   </tr>
               </thead>
@@ -75,20 +75,34 @@
             <div class="modal fade" id="modal-lg">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header bg-success">
+                      <div class="modal-header bg-primary">
                         <h4 class="modal-title">NOUVELLE FORMATION DE LA CHAIRE</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="" method="post">
+                        <form enctype="multipart/form-data" role="form" action="admin.chaire.store" method="post">
                         {{csrf_field()}}
 
                           <!-- /.card-body -->
+                          <div class="card-body">
+                               <div class="form-group">
+                                    <label for="name">INTITULE</label>
+                                    <input type="text" name="name" id="name" class="form-control"/>
+                               </div>
+                               <div class="form-group">
+                                   <label for="description">DESCRIPTION</label>
+                                   <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+                               </div>
+                               <div class="form-control">
+                                    <label for="">IMAGE OU PLAQUETTE</label>
+                                    <input class="form-control" type="file" name="imageUri"/>
+                               </div>
+                          </div>
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-block btn-outline-success"><i class="fa fa-w fa-save"></i> ENREGISTRER</button>
+                            <button type="submit" class="btn btn-block btn-outline-primary"><i class="fa fa-w fa-save"></i> ENREGISTRER</button>
                           </div>
                         </form>
                       </div>

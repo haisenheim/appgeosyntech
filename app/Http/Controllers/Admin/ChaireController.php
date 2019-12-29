@@ -52,9 +52,34 @@ class ChaireController extends Controller
 
 	public function store(Request $request)
 	{
+		$formation = new Formation();
+		$formation->name=$request->name;
+		$formation->description = $request->description;
+		$formation->owner_id = Auth::user()->id;
+		$formation->chaire_obac =1;
+		$token = sha1(Auth::user()->id. date('ydmhis'));
+		$formation->token = $token;
+		if($request->imageUri){
+			$file = $request->imageUri;
+			$ext = $file->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif');
+			if(in_array($ext,$arr_ext)) {
+				if (!file_exists(public_path('img') . '/formations')) {
+					mkdir(public_path('img') . '/formations');
+				}
 
+				if (file_exists(public_path('img') . '/formations/' . $token . '.' . $ext)) {
+					unlink(public_path('img') . '/formations/' . $token . '.' . $ext);
+				}
+				$name = $token . '.' . $ext;
+				$file->move(public_path('img/formations'), $name);
+				$formation->imageUri = 'formations/' . $name;
+			}
+		}
 
-		$request->session()->flash('success','L\'entreprise  a été correctement enregistré !!!');
+		$formation->save();
+
+		$request->session()->flash('success','La formation a été correctement enregistrée !!!');
 		return back();
 	}
 
