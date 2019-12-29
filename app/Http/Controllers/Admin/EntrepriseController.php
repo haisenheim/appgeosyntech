@@ -25,7 +25,7 @@ class EntrepriseController extends Controller
     public function index()
     {
 	    $entreprises = Entreprise::all();
-	    dd($entreprises);
+	   // dd($entreprises);
 	    return view('Admin/Entreprises/index')->with(compact('entreprises'));
     }
 
