@@ -98,6 +98,7 @@ Route::prefix('admin')
 	    Route::resource('corporates','EntrepriseController');
 	    Route::resource('clients','ClientController');
 
+	    Route::post('formation/add-module','FormationController@addModdule');
 
 
 	    Route::resource('users','UserController');

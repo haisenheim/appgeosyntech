@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Entreprise;
 use App\Models\Formation;
+use App\Models\Module;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -68,6 +69,19 @@ class FormationController extends Controller
 	{
 
 
+	}
+
+	public function addModule(Request $request){
+		$token = $request->token;
+		$data = $request->except(['_token','token']);
+		$formation = Formation::where('token',$token)->first();
+		$data['token'] = sha1($formation->id . Auth::user()->id . date('Yhsimd'));
+		$data['formation_id'] = $formation->id;
+		$data['owner_id'] = Auth::user()->id;
+
+		$data = Module::create($data);
+
+		return back();
 	}
 
     /**

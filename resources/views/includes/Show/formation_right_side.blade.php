@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-header">
         <h4>LISTES DE MODULES</h4>
-        <span><a class="btn btn-outline-info btn-xs" href="#" data-toggle="modal" data-target="#Addmodule"><i class="fa fa-plus-circle"></i></a></span>
+        <span class="pull-right"><a class="btn btn-outline-info btn-xs" href="#" data-toggle="modal" data-target="#moduleAdd"><i class="fa fa-plus-circle"></i></a></span>
     </div>
     <div>
         <ul class="list" style="list-style-type: lower-roman;">
