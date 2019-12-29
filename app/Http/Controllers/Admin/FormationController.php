@@ -77,6 +77,7 @@ class FormationController extends Controller
 		$formation = Formation::where('token',$token)->first();
 		$data['token'] = sha1($formation->id . Auth::user()->id . date('Yhsimd'));
 		$data['formation_id'] = $formation->id;
+		$data['free'] = isset($request->free)?1:0;
 		$data['owner_id'] = Auth::user()->id;
 
 		$data = Module::create($data);
