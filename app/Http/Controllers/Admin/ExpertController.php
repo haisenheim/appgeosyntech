@@ -24,7 +24,7 @@ class ExpertController extends Controller
     public function index()
     {
         //
-        $users = User::all()->where('role_id','=',6);
+        $users = \App\User::all()->where('role_id','=',6);
 	    $pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
