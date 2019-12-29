@@ -25,7 +25,7 @@ class FormationController extends Controller
      */
     public function index()
     {
-	    $formations = Formation::all()->sortByDesc('created_at')->paginate(10);
+	    $formations = Formation::all()->where('chaire_obac',0)->sortByDesc('created_at')->paginate(10);
 
 	    return view('Admin/Formations/index')->with(compact('formations'));
     }

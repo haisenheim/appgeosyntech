@@ -106,13 +106,13 @@
                 <li class="nav-item">
                   <a href="/admin/formations" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
-                    <p>Formations simples</p>
+                    <p>CONTRIBUTIONS</p>
                   </a>
                 </li>
                 <li class="nav-item">
                 <a href="/admin/chaire" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Formations Chaire OBAC</p>
+                  <p>CHAIRE OBAC</p>
                 </a>
                 </li>
             </ul>
