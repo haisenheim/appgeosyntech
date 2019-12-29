@@ -6,7 +6,7 @@
     <div>
         <ul class="list" style="list-style-type: upper-roman;">
             @foreach($formation->modules as $module)
-                <li>{{ $module->name }}    -   <span>Prix en ligne: <b>{{ number_format($module->prix_ligne,0,',','.') }}</b> </span>   -   <span>Prix en presentiel: <b>{{ number_format($module->prix_presentiel,0,',','.') }}</b></span>
+                <li style="margin-top: 10px">{{ $module->name }}    -   <span>Prix en ligne: <b>{{ number_format($module->prix_ligne,0,',','.') }}</b> </span>   -   <span>Prix en presentiel: <b>{{ number_format($module->prix_presentiel,0,',','.') }}</b></span>
                      <ul class="list-inline pull-right">
                         <li class="list-inline-item"><a class="btn btn-xs btn-info" href="" data-toggle="modal" data-target="#moduleShow"><i class="fa fa-search"></i></a></li>
                         <li class="list-inline-item"><a class="btn btn-xs btn-success" href="" data-toggle="modal" data-target="#moduleEdit"><i class="fa fa-edit"></i></a></li>
