@@ -120,6 +120,19 @@ class ExpertController extends Controller
         //
     }
 
+
+	public function confirm($token){
+		$user = \App\User::updateOrCreate(['token'=>$token],['confirmed'=>1]);
+
+		return back();
+	}
+
+	public function senior($token){
+		$user = \App\User::updateOrCreate(['token'=>$token],['senior'=>1]);
+
+		return back();
+	}
+
     /**
      * Update the specified resource in storage.
      *
