@@ -11,7 +11,7 @@ class Formation extends Model
 	protected $guarded = ['id'];
 
 	public function modules(){
-		return $this->hasMany('App\Models\Modules');
+		return $this->hasMany('App\Models\Module');
 	}
 
 	public function contributeur(){
