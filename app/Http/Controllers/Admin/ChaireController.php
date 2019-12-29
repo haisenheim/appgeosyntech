@@ -92,9 +92,12 @@ class ChaireController extends Controller
      * @param  \App\Models\Pay  $pay
      * @return \Illuminate\Http\Response
      */
-    public function show(Pay $pay)
+    public function show( $token)
     {
         //
+	    $formation = Formation::where('token',$token)->first();
+
+	    return view('Admin/Chaire/show')->with(compact('formation'));
     }
 
     /**
