@@ -108,15 +108,13 @@
                                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
                                </div>
                                <div class="form-group">
-                                     <label for="">IMAGE OU PLAQUETTE</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-
-                                            <input class="custom-file-input" type="file" name="imageUri"/>
-                                        </div>
+                                    <label for="customFile">IMAGE OU PLAQUETTE</label>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" name="imageUri" id="customFile">
+                                      <label class="custom-file-label" for="customFile">Parcourir</label>
                                     </div>
-
                                </div>
+
                           </div>
 
                           <div class="card-footer">
