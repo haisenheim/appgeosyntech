@@ -108,8 +108,13 @@
                                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
                                </div>
                                <div class="form-group">
-                                    <label for="">IMAGE OU PLAQUETTE</label>
-                                    <input class="custom-file-input" type="file" name="imageUri"/>
+                                    <div class="input-group">
+                                        <div class="costum-file">
+                                            <label for="">IMAGE OU PLAQUETTE</label>
+                                            <input class="custom-file-input" type="file" name="imageUri"/>
+                                        </div>
+                                    </div>
+
                                </div>
                           </div>
 
