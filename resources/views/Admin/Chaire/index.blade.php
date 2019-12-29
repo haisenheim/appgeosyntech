@@ -82,7 +82,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="admin/chaire/" method="post">
+                        <form enctype="multipart/form-data" role="form" action="chaire/" method="post">
                         {{csrf_field()}}
 
                           <!-- /.card-body -->
