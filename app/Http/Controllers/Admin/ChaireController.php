@@ -58,6 +58,8 @@ class ChaireController extends Controller
 		$formation->description = $request->description;
 		$formation->owner_id = Auth::user()->id;
 		$formation->chaire_obac =1;
+		$formation->free = isset($request['free'])?1:0;
+		$formation->interne = isset($request['interne'])?1:0;
 		$token = sha1(Auth::user()->id. date('ydmhis'));
 		$formation->token = $token;
 		if($request->imageUri){
