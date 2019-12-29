@@ -89,13 +89,27 @@
                                     <label for="name">INTITULE</label>
                                     <input type="text" name="name" id="name" class="form-control"/>
                                </div>
+                               <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="free" class="form-check-input" name="free" />
+                                            <label for="free">Gratuite</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="interne" class="form-check-input" name="interne" />
+                                            <label for="interne">Pour consultants</label>
+                                        </div>
+                                    </div>
+                               </div>
                                <div class="form-group">
                                    <label for="description">DESCRIPTION</label>
                                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
                                </div>
                                <div class="form-group">
                                     <label for="">IMAGE OU PLAQUETTE</label>
-                                    <input class="form-control" type="file" name="imageUri"/>
+                                    <input class="custom-file-input" type="file" name="imageUri"/>
                                </div>
                           </div>
 
