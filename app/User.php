@@ -79,6 +79,10 @@ class User extends Authenticatable
 		return $this->belongsTo('App\User','creator_id');
 	}
 
+	public function ville(){
+		return $this->belongsTo('App\User','ville_id');
+	}
+
 	public function getRangAttribute(){
 		$rang = '';
 		if($this->role_id==6){

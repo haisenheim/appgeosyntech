@@ -69,7 +69,12 @@ Route::prefix('admin')
 
 	    Route::resource('agences','AgenceController');
 
+	    Route::get('contributeur/creances/{token}','FinanceController@getCreancesConsultant');
 
+	    Route::get('contributeur/payees/{token}','FinanceController@getPayeesContributeur');
+	    Route::get('contributeur/facture/{token}','FinanceController@showFactureContributeur');
+	    Route::get('contributeur/disable/{token}','ContributeurController@disable');
+	    Route::get('contributeur/enable/{token}','ContributeurController@enable');
 	    //Finances
 
 
@@ -82,7 +87,7 @@ Route::prefix('admin')
 	    Route::get('alliages/payees','FinanceController@getPayeesAlliages');
 	    Route::get('alliages/facture/{token}','FinanceController@showFactureAlliages');
 
-
+	    Route::resource('contributeurs','ContributeurController');
         Route::resource('villes','VilleController');
 	    Route::resource('formations','FormationController');
 	    Route::resource('chaire','ChaireController');
