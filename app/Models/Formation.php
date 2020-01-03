@@ -25,4 +25,24 @@ class Formation extends Model
 	public function consultants(){
 		return $this->belongsToMany('App\User','consultants_formations');
 	}
+
+	public function getPrixLigneAttribute(){
+		$modules = Module::all()->where('formation_id',$this->id);
+		$s = 0;
+		foreach($modules as $module){
+			$s += $module->prix_ligne;
+		}
+
+		return $s;
+	}
+
+	public function getPrixPresentielAttribute(){
+		$modules = Module::all()->where('formation_id',$this->id);
+		$s = 0;
+		foreach($modules as $module){
+			$s += $module->prix_presentiel;
+		}
+
+		return $s;
+	}
 }
