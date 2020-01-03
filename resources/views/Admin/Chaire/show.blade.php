@@ -35,12 +35,7 @@
                                     <input type="text" name="name" id="name" class="form-control"/>
                                </div>
                                <div class="row">
-                                    <div class="col-md-4 col-sm-12">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="free" class="form-check-input" name="free" />
-                                            <label for="free">Gratuite</label>
-                                        </div>
-                                    </div>
+
                                     <div class="col-md-8 col-sm-12">
                                         <div class="form-group">
                                             <label for="minimum">SCORE MINIMUM REQUIS</label>
