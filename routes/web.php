@@ -13,6 +13,7 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use Pbmedia\LaravelFFMpeg\FFMpegFacade;
 
 Route::get('/', function () {
 
@@ -21,7 +22,7 @@ Route::get('/', function () {
 
 
 Route::get('/test',function(){
-	dd(\FFMpeg\FFMpeg::fromDisk('public'));
+	dd(FFMpegFacade::fromDisk('songs'));
 });
 
 
