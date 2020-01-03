@@ -7,7 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
-    'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
+    'Neutron' => array($vendorDir . '/neutron/temporary-filesystem/src'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
+    'FFMpeg' => array($vendorDir . '/php-ffmpeg/php-ffmpeg/src'),
+    'Evenement' => array($vendorDir . '/evenement/evenement/src'),
+    'Alchemy' => array($vendorDir . '/alchemy/binary-driver/src'),
 );

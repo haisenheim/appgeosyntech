@@ -20,6 +20,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('/test',function(){
+	dd(\FFMpeg\FFMpeg::fromDisk('public'));
+});
+
+
 
 Route::get('send-email', 'EmailController@sendEMail');
 

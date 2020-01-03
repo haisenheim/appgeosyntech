@@ -4,8 +4,6 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\ValidationException;
 
 trait AuthenticatesUsers
@@ -122,20 +120,6 @@ trait AuthenticatesUsers
     protected function authenticated(Request $request, $user)
     {
         //
-	   /* if(Auth::user()->role_id==4) {
-		    if(Auth::user()->organisme_id!=0){
-			    Session::put('entite',Auth::user()->organisme->name);
-		    }
-		    if(Auth::user()->entreprise_id!=0){
-			    Session::put('entite',Auth::user()->entreprise->name);
-		    }
-		    $projet = DB::table('projets')->get(['name', 'montant', 'imageUri'])->last();
-		    $actif = DB::table('actifs')->get(['name', 'prix', 'imageUri', 'description', 'token'])->last();
-		    $slider = ['projet' => $projet, 'actif' => $actif];
-		    Session::put('slides', $slider);
-	    }*/
-
-
     }
 
     /**
