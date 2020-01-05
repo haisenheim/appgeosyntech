@@ -24,8 +24,8 @@
             </div>
             <div class="modal-body">
               <form enctype="multipart/form-data" role="form" action="/admin/module/add-cours/" method="post">
-              <input type="hidden" name="_token" value="zKdS8YjHd5uneGOGRoNsZ8we8YbJRwIkS2pt68Yu">
-              <input type="hidden" name="token" value="9f92168b23bca7a847d8ebf237bdaa0fd8aa0763">
+              @csrf
+              <input type="hidden" name="token" value="<?= $module->token ?>">
 
                 <!-- /.card-body -->
                 <div class="card-body">
