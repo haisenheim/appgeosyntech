@@ -24,8 +24,8 @@
             </div>
             <div class="modal-body">
               <form enctype="multipart/form-data" role="form" action="/admin/module/add-cours/" method="post">
-              @csrf
-              <input type="hidden" name="token" value="<?= $module->token ?>">
+              {{csrf_field()}}
+              <input type="hidden" name="token" value="{{ $module->token }}"/>
 
                 <!-- /.card-body -->
                 <div class="card-body">
