@@ -132,6 +132,7 @@ class FormationController extends Controller
 			$ext = $file->getClientOriginalExtension();
 			$arr_ext = array('mp3');
 			if(in_array($ext,$arr_ext)) {
+				if(!file_exists(public_path('podcasts')))
 				mkdir(public_path('podcasts'),777,true);
 				$file->move(public_path('podcasts'),$token.$ext);
 				$data['audioUri'] = $token.$ext;
@@ -147,6 +148,7 @@ class FormationController extends Controller
 			$ext = $file->getClientOriginalExtension();
 			$arr_ext = array('mp4');
 			if(in_array($ext,$arr_ext)) {
+				if(!file_exists(public_path('videos')))
 				mkdir(public_path('videos'),777,true);
 				$file->move(public_path('videos'),$token.$ext);
 				$data['videoUri'] = $token.$ext;
@@ -162,6 +164,7 @@ class FormationController extends Controller
 			$ext = $file->getClientOriginalExtension();
 			$arr_ext = array('pdf');
 			if(in_array($ext,$arr_ext)) {
+				if(!file_exists(public_path('pdf')))
 				mkdir(public_path('pdf'),777,true);
 				$file->move(public_path('pdf'),$token.$ext);
 				$data['pdfUri'] = $token.$ext;
