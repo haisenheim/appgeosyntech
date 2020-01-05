@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Formations/show_module.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Formations/show_module.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -43,16 +42,6 @@
               <folding>
                 <element signature="e#1100#2286#0#PHP" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formation_left_side.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="736">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -119,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_module.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show_module.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/Formations/show_module.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5925926" vertical-offset="0" max-vertical-offset="1360">
+            <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="1360">
               <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding>
                 <element signature="e#2851#2873#0#HTML" expanded="true" />
@@ -318,6 +307,16 @@
                 <element signature="e#56766#56807#0#HTML" expanded="true" />
                 <element signature="e#56921#56962#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidatePostSize.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.923445" vertical-offset="478" max-vertical-offset="960">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -642,7 +641,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="FullScreen" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/xampp/alert/vendor/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesRequests.php&#10;Aut&#9;null&#9;null&#10;auth&#9;FILE&#9;file://C:/xampp/alert/app/Http/Middleware/Authenticate.php" />
+    <property name="SearchEverywhereHistoryKey" value="ValidatePost&#9;null&#9;null&#10;Aut&#9;null&#9;null&#10;auth&#9;FILE&#9;file://C:/xampp/alert/app/Http/Middleware/Authenticate.php" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
@@ -1037,13 +1036,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.84" vertical-offset="115" max-vertical-offset="2256">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="656">
@@ -1439,7 +1431,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Formations/show_module.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5925926" vertical-offset="0" max-vertical-offset="1360">
+        <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="1360">
           <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
             <element signature="e#2851#2873#0#HTML" expanded="true" />
@@ -1635,6 +1627,14 @@
             <element signature="e#56766#56807#0#HTML" expanded="true" />
             <element signature="e#56921#56962#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.923445" vertical-offset="478" max-vertical-offset="960">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
