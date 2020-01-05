@@ -61,7 +61,7 @@ Route::name('utils.')
 		->group(function(){
 			Route::get('/print/earlie/{token}','DiversController@printEarlie');
 			Route::get('/print/projet/{token}','DiversController@printProjet');
-			Route::get('dossier/getchoices','DossierController@getChoicesJson');
+
 			Route::get('get-villes-pay','DiversController@getVillesByPay');
 			Route::get('get-agences-ville','DiversController@getAgencesByVille');
 		});
@@ -81,7 +81,6 @@ Route::prefix('admin')
 	    Route::get('contributeur/facture/{token}','FinanceController@showFactureContributeur');
 	    Route::get('contributeur/disable/{token}','ContributeurController@disable');
 	    Route::get('contributeur/enable/{token}','ContributeurController@enable');
-
 	    Route::get('formation/disable/{token}','FormationController@disable');
 	    Route::get('formation/enable/{token}','FormationController@enable');
 	    //Finances
@@ -105,6 +104,8 @@ Route::prefix('admin')
 	    Route::resource('clients','ClientController');
 
 	    Route::post('formation/add-module','FormationController@addModule');
+	    Route::post('module/add-cours','FormationController@addCours');
+	    Route::get('show-module/{token}','FormationController@showModule');
 
 
 	    Route::resource('users','UserController');
