@@ -13,8 +13,7 @@
         </div>
     </div>
 
-    <div class="modal">
-
+    <div class="modal" id="coursAdd">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header bg-info">
