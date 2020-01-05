@@ -10,7 +10,7 @@ class Module extends Model
 	protected $guarded = ['id'];
 
 	public function cours(){
-		return $this->hasMany('App\Models\Cours');
+		return $this->hasMany('App\Models\Cour');
 	}
 
 	public function contributeur(){
