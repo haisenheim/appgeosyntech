@@ -1,19 +1,17 @@
 <link href="{{ asset('css/video-js.css') }}" rel="stylesheet">
 <div class="card">
     <div>
-        <ul class="list" style="list-style-type: upper-roman;">
+        <ul class="list" style="list-style-type: none">
 
             @foreach($module->cours as $cour)
                 <li style="margin-top: 10px">
                     <div class="card">
-                        <div class="">
 
-                        </div>
                         <div class="card-body">
                              <h4 class="">{{ $cour->name }} </h4>
                              <div class="row">
                                 <div class="col-md-6 col-sm-12">
-                                    <ul style="" class="list-group">
+
 
                                         @if($cour->videoUri)
 
@@ -23,21 +21,23 @@
                                             </video>
 
                                         @endif
-                                         @if($cour->audioUri)
-                                            <li class="list-group-item"><audio controls style="width: 200px;" > <source src="{{ asset('podcasts/'.$cour->audioUri) }}" type="audio/mpeg"></audio></li>
-                                        @endif
-                                        @if($cour->pdfUri)
-                                            <li class="list-group-item"><a href="/read-pdf/{{ $cour->pdfUri }}"><i class="fa fa-file-pdf"></i> Consulter le fichier</a></li>
-                                        @endif
 
-                                     </ul>
+
+
                                 </div>
 
                                 <div class="col-md-6 col-sm-12">
-                                    <fieldset>
-                                        <legend>Description</legend>
+                                        @if($cour->description)
+                                        <h5>Description</h5>
                                         <p><?= $cour->description ?></p>
-                                    </fieldset>
+                                        @endif
+                                        @if($cour->audioUri)
+                                            <audio controls style="width: 200px;" > <source src="{{ asset('podcasts/'.$cour->audioUri) }}" type="audio/mpeg"></audio>
+                                        @endif
+                                        @if($cour->pdfUri)
+                                            <a href="/read-pdf/{{ $cour->pdfUri }}"><i class="fa fa-file-pdf"></i> Consulter le fichier</a>
+                                        @endif
+
                                 </div>
                              </div>
 
