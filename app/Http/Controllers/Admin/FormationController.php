@@ -135,7 +135,7 @@ class FormationController extends Controller
 				if(!file_exists(public_path('podcasts')))
 				mkdir(public_path('podcasts'),0777,true);
 				$file->move(public_path('podcasts'),$token.'.'.$ext);
-				$data['audioUri'] = $token.$ext;
+				$data['audioUri'] = $token.'.'.$ext;
 			}else{
 				$request->session()->flash('danger','L\'extension de votre fichier audio n\'est pas correcte !!!');
 				return back();
@@ -151,7 +151,7 @@ class FormationController extends Controller
 				if(!file_exists(public_path('videos')))
 				mkdir(public_path('videos'),0777,true);
 				$file->move(public_path('videos'),$token.'.'.$ext);
-				$data['videoUri'] = $token.$ext;
+				$data['videoUri'] = $token.'.'.$ext;
 			}else{
 				$request->session()->flash('danger','L\'extension de votre fichier video n\'est pas correcte !!!');
 				return back();
@@ -167,7 +167,7 @@ class FormationController extends Controller
 				if(!file_exists(public_path('pdf')))
 				mkdir(public_path('pdf'),0777,true);
 				$file->move(public_path('pdf'),$token.'.'.$ext);
-				$data['pdfUri'] = $token.$ext;
+				$data['pdfUri'] = $token.'.'.$ext;
 			}else{
 				$request->session()->flash('danger','L\'extension de votre fichier pdf video n\'est pas correcte !!!');
 				return back();
