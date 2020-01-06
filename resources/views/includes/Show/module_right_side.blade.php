@@ -18,10 +18,10 @@
                                     <li class="list-group-item"><a href="/read-pdf/{{ $cour->pdfUri }}"><i class="fa fa-file-pdf"></i> Consulter le fichier</a></li>
                                 @endif
                                 @if($cour->audioUri)
-                                    <li class="list-group-item"><audio controls style="width: 100px; height: 100px;" > <source src="{{ route('utils.audio',$cour->audioUri) }}" type="audio/mpeg"></audio></li>
+                                    <li class="list-group-item"><audio controls style="width: 200px;" > <source src="{{ asset('podcasts/'.$cour->audioUri) }}" type="audio/mpeg"></audio></li>
                                 @endif
                                 @if($cour->videoUri)
-                                    <li class="list-group-item"><a href="/read-video"><span class="fa fa-video"></span> Regarder la video </a></li>
+                                    <li class="list-group-item"><video controls style="width: 200px;"> <source src="{{ asset('videos/'.$cour->videoUri) }}" > </video></li>
                                 @endif
                              </ul>
                         </div>
