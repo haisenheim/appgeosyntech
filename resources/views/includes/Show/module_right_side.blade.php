@@ -1,8 +1,5 @@
+<link href="{{ asset('css/video-js.css') }}" rel="stylesheet">
 <div class="card">
-    <div class="card-header">
-        <h4>LISTES DE COURS</h4>
-        <span class="pull-right"><a class="btn btn-outline-info btn-xs" href="#" data-toggle="modal" data-target="#coursAdd"><i class="fa fa-plus-circle"></i></a></span>
-    </div>
     <div>
         <ul class="list" style="list-style-type: upper-roman;">
 
@@ -19,6 +16,14 @@
                                     <ul style="" class="list-group">
 
                                         @if($cour->videoUri)
+
+                                            <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+                                                       controls preload="auto" height="300" width="490">
+
+                                                    <source src="{{url('http://otc.test/load-video/89a489a8b7ea73fa0b4bf3e89b0862afaf5f1933.mp4')}}" />
+                                            </video>
+
+
                                             <li class="list-group-item"><video controls style="width: 200px;"> <source src="{{ asset('videos/'.$cour->videoUri) }}" > </video></li>
                                         @endif
                                          @if($cour->audioUri)
