@@ -40,7 +40,7 @@ class DiversController extends Controller
 
 	public function getAudio($token){
 		//$path = public_path('audios').'/'.$token;
-		$path = Storage::disk('public')->get('audios/'.$token);
+		$path = Storage::disk('public')->get('podcasts/'.$token);
 		return (new Response($path,200))->header('Content-Type','audio/mpeg');
 	}
 
