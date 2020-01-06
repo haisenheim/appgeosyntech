@@ -54,7 +54,7 @@ Route::get('/player', function () {
 	$title = "GOD'S PLAN DE Drake";
 	return view('player')->with(compact('video', 'mime', 'title'));
 });
-Route::get('/video/{filename}', function ($filename) {
+Route::get('/load-video/{filename}', function ($filename) {
 	// Pasta dos videos.
 	$videosDir = public_path('videos');
 	if (file_exists($filePath = $videosDir."/".$filename)) {
