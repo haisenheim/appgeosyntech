@@ -77,7 +77,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="formation/" method="post">
+                        <form enctype="multipart/form-data" role="form" action="formations/" method="post">
                         {{csrf_field()}}
 
                           <!-- /.card-body -->
