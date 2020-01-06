@@ -48,6 +48,24 @@ Route::post('/contact-obac','EmailController@contactObac');
 
 Route::post('/profil','UserController@profil');
 
+Route::get('/player', function () {
+	$video = "videos/89a489a8b7ea73fa0b4bf3e89b0862afaf5f1933.mp4";
+	$mime = "video/mp4";
+	$title = "GOD'S PLAN DE Drake";
+	return view('player')->with(compact('video', 'mime', 'title'));
+});
+Route::get('/video/{filename}', function ($filename) {
+	// Pasta dos videos.
+	$videosDir = public_path('videos');
+	if (file_exists($filePath = $videosDir."/".$filename)) {
+		$stream = new \App\Http\VideoStream($filePath);
+		return response()->stream(function() use ($stream) {
+			$stream->start();
+		});
+	}
+	return response("File doesn't exists", 404);
+});
+
 /*
 
 Route::get('/roles/',
