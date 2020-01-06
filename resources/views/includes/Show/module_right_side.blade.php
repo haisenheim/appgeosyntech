@@ -18,7 +18,7 @@
                                     <li class="list-group-item"><a href="/read-pdf/{{ $cour->pdfUri }}"><i class="fa fa-file-pdf"></i> Consulter le fichier</a></li>
                                 @endif
                                 @if($cour->audioUri)
-                                    <li class="list-group-item"><audio controls style="width: 100px; height: 100px;" > <source src="/get-audio/{{$cour->audioUri}}" type="audio/mpeg"></audio> <span class="fa fa-play-circle"></span> Lire le fichier audio</a></li>
+                                    <li class="list-group-item"><audio controls style="width: 100px; height: 100px;" > <source src="{{ route('utils.audio',$cour->audioUri) }}" type="audio/mpeg"></audio></li>
                                 @endif
                                 @if($cour->videoUri)
                                     <li class="list-group-item"><a href="/read-video"><span class="fa fa-video"></span> Regarder la video </a></li>
