@@ -18,7 +18,7 @@
                                     <li><a href="/read-pdf/{{ $cour->pdfUri }}"><i class="fa fa-file-pdf"></i> Consulter le fichier</a></li>
                                 @endif
                                 @if($cour->audioUri)
-                                    <li><audio controls style="width: 100px; height: 100px;" src="{{ route('audio',$cour->audioUri) }}"></audio> <span class="fa fa-play-circle"></span> Lire le fichier audio</a></li>
+                                    <li><audio controls style="width: 100px; height: 100px;" src="get-audio/{{$cour->audioUri}}"></audio> <span class="fa fa-play-circle"></span> Lire le fichier audio</a></li>
                                 @endif
                                 @if($cour->videoUri)
                                     <li><a href="/read-video"><span class="fa fa-viadeo"></span> Regarder la video </a></li>
