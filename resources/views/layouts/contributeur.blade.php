@@ -16,11 +16,21 @@
         <a href="#" class="nav-link">Accueil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link nav-contact-obac-link">Contact</a>
+        <a href="#" class="nav-link" data-toggle="modal" data-target="#obac-contact-form">Contact</a>
       </li>
     </ul>
 
-
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -77,7 +87,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img style="max-height: 20px; max-width: 20px;" src="<?= Auth::user()->imageUri?asset('img/'.Auth::user()->imageUri):asset('img/avatar.png') ?>" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= Auth::user()->imageUri?asset('img/'.Auth::user()->imageUri):asset('img/avatar.png') ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block"><?= Auth::user()->name ?></a>
@@ -90,20 +100,17 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-
-          <li class="nav-item">
-            <a href="#" class="nav-link {{ $active?$active==1?'active':'':'active' }}">
-              <i class="nav-icon fa fa-home"></i>
+           <li class="nav-item">
+            <a href="/contributeur/porteurs" class="nav-link {{ $active==2?'active':'' }}">
+              <i class="nav-icon text-success fas fa-users"></i>
               <p>
-                ACCUEIL
-
+                MES FORMATIONS
               </p>
             </a>
           </li>
-
-           <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link {{ $active==2?'active':'' }}">
-              <i class="nav-icon fa fa-coins text-warning"></i>
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link {{ $active==3?'active':'' }}">
+              <i class="nav-icon fa fa-coins text-info"></i>
               <p>
                 FINANCES
                 <i class="fas fa-angle-left right"></i>
@@ -111,25 +118,24 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/apporteur/finances/creances" class="nav-link">
+                  <a href="/contributeur/finances/creances" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
                     <p>CREANCES</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="/apporteur/finances/payees" class="nav-link">
+                <a href="/contributeur/finances/payees" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>FACTURES PAYEEs</p>
                 </a>
                 </li>
             </ul>
           </li>
-
           <li class="nav-item">
-            <a href="/apporteur/clients" class="nav-link {{ $active==3?'active':'' }}">
-              <i class="nav-icon text-warning fas fa-users-cog "></i>
+            <a href="/contributeur/manuel" class="nav-link {{ $active==4?'active':'' }}">
+              <i class="nav-icon text-success fas fa-users"></i>
               <p>
-               CLIENTS
+                MANUEL UTLISATEUR
               </p>
             </a>
           </li>
@@ -180,5 +186,6 @@
 <!-- ./wrapper -->
 
 @include('includes.footer')
+ @yield('scripts')
 </body>
 </html>

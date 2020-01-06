@@ -21,22 +21,20 @@ class Contributeur
             return redirect('/login');
         }
 
-	    /*$path = explode('/',$request->path());
-	    if(in_array('mailbox',$path)){
-		    Session::put('active', 6);
+	    $path = explode('/',$request->path());
+
+	    if(in_array('manuel',$path)){
+		    Session::put('active', 4);
 	    }
-	    if(in_array('letter',$path)){
-		    Session::put('active', 5);
-	    }
-	    if(in_array('actifs',$path) ||in_array('creances',$path)){
+	    if(in_array('finances',$path)){
 		    Session::put('active', 3);
 	    }
-	    if(in_array('projets',$path) ||in_array('dossiers',$path)){
+	    if(in_array('formations',$path)){
 		    Session::put('active', 2);
 	    }
 	    if(in_array('dashboard',$path)){
 		    Session::put('active', 1);
-	    }*/
+	    }
 
         return $next($request);
     }
