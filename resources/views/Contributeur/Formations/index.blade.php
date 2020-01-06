@@ -30,7 +30,7 @@
                             <td>
                             <span class="text-bold text-lg-left">{{ $formation->name }}</span>- <small>{{ $formation->created_at?date_format($formation->created_at,'d/m/Y'):'' }}</small><br/>
                             <?= $formation->active?'<span class="badge badge-success">ACTIVE</span>':'<span class="badge badge-danger">Bloquée</span>' ?> -
-                            <?= $formation->free?'<span class="badge badge-success">GRATUITE</span>':'<span class="badge badge-warning">PAYANTE</span>' ?>- <?= $formation->interne?'<span class="badge badge-success"><i class="fa fa-users"></i> Consultants </span>':'<span class="badge badge-info"><i class="fa fa-school"></i> Ecoles</span>' ?>
+                            <?= $formation->free?'<span class="badge badge-success">GRATUITE</span>':'<span class="badge badge-warning">PAYANTE</span>' ?>
                             </td>
                             <td>
                                 {{number_format($formation->prix_ligne,0,',','.')}}
@@ -44,12 +44,12 @@
 
                           <td class="project-actions text-right">
                                 <ul>
-                                    <li class="list-inline-item"> <a class="btn btn-primary btn-xs" href="/admin/chaire/{{ $formation->token  }}"><i class="fas fa-folder"></i>Afficher</a></li>
+                                    <li class="list-inline-item"> <a class="btn btn-info btn-xs" href="/contributeur/formations/{{ $formation->token  }}"><i class="fas fa-search"></i>Afficher</a></li>
 
                                            @if($formation->active)
-                                               <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>
+                                               <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/contributeur/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>
                                            @else
-                                             <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/formation/enable/{{ $formation->token }}"><i class="fa fa-unlock"></i></a></li>
+                                             <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/contributeur/formation/enable/{{ $formation->token }}"><i class="fa fa-unlock"></i></a></li>
                                            @endif
                                 </ul>
                            </td>
