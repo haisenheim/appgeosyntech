@@ -155,8 +155,8 @@
        <div class="container">
             @include('includes.flash-message')
        </div>
-       <div class="">
-            <script type="text/javascript" src="{{ asset('js/api.js') }}"></script>
+       <div style="margin-top: 20px" class="">
+
             @yield('content')
 
        </div>

@@ -228,6 +228,9 @@ Route::prefix('contributeur')
 		Route::get('finances/payees','FactureController@payees');
 		Route::get('facture/{token}','FactureController@show');
 		Route::get('facture/print/{token}','FactureController@printit');
+		Route::post('formation/add-module','FormationController@addModule');
+		Route::post('module/add-cours','FormationController@addCours');
+		Route::get('show-module/{token}','FormationController@showModule');
 	});
 
 

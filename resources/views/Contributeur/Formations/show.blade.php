@@ -1,4 +1,9 @@
 @extends('......layouts.contributeur')
+
+@section('page-title')
+{{ $formation->name }}
+@endsection
+
 @section('content')
 
 
