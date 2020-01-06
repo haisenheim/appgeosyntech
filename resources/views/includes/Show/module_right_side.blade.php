@@ -17,14 +17,11 @@
 
                                         @if($cour->videoUri)
 
-                                            <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
-                                                       controls preload="auto" height="300" width="490">
-
-                                                    <source src="{{url('http://otc.test/load-video/89a489a8b7ea73fa0b4bf3e89b0862afaf5f1933.mp4')}}" />
+                                            <video on id="example_video_1" style="width: 95%; height: 300px" class="video-js vjs-default-skin vjs-big-play-centered"
+                                                       controls preload="auto">
+                                                    <source src="{{url('/load-video/'.$cour->videoUri)}}" />
                                             </video>
 
-
-                                            <li class="list-group-item"><video controls style="width: 200px;"> <source src="{{ asset('videos/'.$cour->videoUri) }}" > </video></li>
                                         @endif
                                          @if($cour->audioUri)
                                             <li class="list-group-item"><audio controls style="width: 200px;" > <source src="{{ asset('podcasts/'.$cour->audioUri) }}" type="audio/mpeg"></audio></li>
