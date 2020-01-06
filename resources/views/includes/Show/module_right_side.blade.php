@@ -17,7 +17,7 @@
 
                                         @if($cour->videoUri)
 
-                                            <video on id="example_video_1" style="width: 95%; height: 300px" class="video-js vjs-default-skin vjs-big-play-centered"
+                                            <video  id="example_video_1" style="width: 99%; height: 200px" class="video-js vjs-default-skin vjs-big-play-centered"
                                                        controls preload="auto">
                                                     <source src="{{url('/load-video/'.$cour->videoUri)}}" />
                                             </video>
@@ -32,6 +32,7 @@
 
                                      </ul>
                                 </div>
+
                                 <div class="col-md-6 col-sm-12">
                                     <fieldset>
                                         <legend>Description</legend>
