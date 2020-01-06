@@ -34,31 +34,34 @@ class HomeController extends Controller
                 return  redirect('admin/dashboard');
             }
 
-            if(Auth::user()->role_id==2){
+            if(Auth::user()->role_id==6){
                 return redirect('consultant/dashboard');
             }
 
             if(Auth::user()->role_id==3){
-                return redirect('owner/dossiers');
+                return redirect('adminag/formations');
             }
 
-            if(Auth::user()->role_id==4){
-                return redirect('angel/investissements/dossiers');
-            }
 	        if(Auth::user()->role_id==5){
-		        return redirect('adminentr/angels');
+		        return redirect('corporation/formations');
 	        }
-	        if(Auth::user()->role_id==6){
-		        return redirect('adminorg/dossiers');
+
+
+
+	        if(Auth::user()->role_id==4){
+		        return redirect('formations');
 	        }
 	        if(Auth::user()->role_id==7){
-		        return redirect('apporteur/clients');
+		        return redirect('contributeur/formations');
 	        }
-	        if(Auth::user()->role_id==8){
+	        if(Auth::user()->role_id==2){
 		        return redirect('national/dashboard');
 	        }
 	        if(Auth::user()->role_id==9){
-		        return redirect('adminag/dashboard');
+		        return redirect('mch/formations');
+	        }
+	        if(Auth::user()->role_id==8){
+		        return redirect('mcp/formations');
 	        }
             else{
                 return view('home');

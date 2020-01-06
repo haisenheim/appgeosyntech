@@ -203,7 +203,7 @@ Route::prefix('consultant')
     ->middleware(['auth','consultant'])
     ->name('consultant.')
     ->group(function(){
-        Route::resource('dossiers','DossierController');
+        Route::resource('formations','FormationController');
 	    Route::resource('actifs','ActifController');
         Route::get('profil','ProfilController');
         Route::get('dashboard','DashboardController');
@@ -214,6 +214,21 @@ Route::prefix('consultant')
 	    Route::get('facture/{token}','FactureController@show');
 	    Route::get('facture/print/{token}','FactureController@printit');
     });
+
+
+Route::prefix('contributeur')
+	->namespace('Contributeur')
+	->middleware(['auth','contributeur'])
+	->name('contributeur.')
+	->group(function(){
+		Route::resource('formations','FormationController');
+
+		// Les Finances
+		Route::get('finances/creances','FactureController@creances');
+		Route::get('finances/payees','FactureController@payees');
+		Route::get('facture/{token}','FactureController@show');
+		Route::get('facture/print/{token}','FactureController@printit');
+	});
 
 
 
