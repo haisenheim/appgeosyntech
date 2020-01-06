@@ -15,9 +15,11 @@ use App\Models\Projet;
 use App\Models\TagsProjet;
 use App\Models\Ville;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\Storage;
 use PDF;
 
 class DiversController extends Controller
@@ -33,9 +35,13 @@ class DiversController extends Controller
     }
 
 
-	public function getLettre($token){
-		$investissement = Investissement::where('token',$token)->first();
-		return view('Utils/lettre_intention')->with(compact($investissement));
+
+
+
+	public function getAudio($token){
+		//$path = public_path('audios').'/'.$token;
+		$path = Storage::disk('public')->get('audios/'.$token);
+		return (new Response($path,200))->header('Content-Type','audio/mpeg');
 	}
 
 

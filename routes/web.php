@@ -64,6 +64,7 @@ Route::name('utils.')
 
 			Route::get('get-villes-pay','DiversController@getVillesByPay');
 			Route::get('get-agences-ville','DiversController@getAgencesByVille');
+			Route::get('get-audio/{token}','DiversController@getAudio')->name('audio')->middleware('auth');
 		});
 
 Route::prefix('admin')
@@ -106,6 +107,7 @@ Route::prefix('admin')
 	    Route::post('formation/add-module','FormationController@addModule');
 	    Route::post('module/add-cours','FormationController@addCours');
 	    Route::get('show-module/{token}','FormationController@showModule');
+
 
 
 	    Route::resource('users','UserController');
