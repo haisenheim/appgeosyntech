@@ -8,7 +8,7 @@
                  @include('includes.Show.module_left_side')
             </div>
             <div class="col-md-8 col-sm-12">
-                @if($module->questions->count() < 1))
+                @if($module->questions->count() < 1)
                     <div class="card">
                         <div class="card-body">
                             <div style="margin: 30px; padding: 10px auto; width: 60%">
@@ -84,6 +84,7 @@
                             <tr>
                                 <th>CHOIX</th>
                                 <th>JUSTE ?</th>
+                                <th></th>
                             </tr>
 
                         </thead>
@@ -122,7 +123,13 @@
             $('#choice').val('');
             var juste = $('#chk').is(':checked')?1:0;
             //$('#chk').val('');
-            var tr = '<tr data-choice="'+ choice+'" data-juste='+ juste +'><td>'+ choice+'</td> <td>'+ juste?"oui":"non" +'</td><td><span class="remove btn btn-xs btn-danger"><i class="fa fa-trash"></i></span></td></tr>';
+            var rep = 'NON';
+            if(juste){
+            rep = 'OUI'
+            }
+
+            var tr = '<tr data-choice='+ choice+' data-juste='+ juste +'><td>'+ choice+'</td> <td>'+ rep +'</td><td><span class="remove btn btn-xs btn-danger"><i class="fa fa-trash"></i></span></td></tr>';
+            console.log(tr);
             $('#tab-choices').find('tbody').append(tr);
         });
 
@@ -185,5 +192,22 @@
             });
         });
     </script>
+
+@endsection
+
+
+@section('nav_actions')
+<main>
+    <nav class="floating-menu">
+        <ul class="main-menu">
+            <li>
+                <a title="Ajouter une question" href="#" data-toggle="modal" data-target="#coursAdd" class="ripple">
+                    <i class="fa fa-plus-circle fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="menu-bg"></div>
+    </nav>
+</main>
 
 @endsection

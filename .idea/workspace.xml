@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Module.php" afterPath="$PROJECT_DIR$/app/Models/Module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,27 +71,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module_test.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="module_test.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.64" vertical-offset="131" max-vertical-offset="2288">
-              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.060796645" vertical-offset="131" max-vertical-offset="2288">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
               <folding>
-                <element signature="e#464#516#0#HTML" expanded="true" />
-                <element signature="e#553#576#0#HTML" expanded="true" />
-                <element signature="e#1263#1287#0#HTML" expanded="true" />
-                <element signature="e#5717#7582#0#HTML" expanded="false" />
-                <element signature="e#5788#6011#0#HTML" expanded="false" />
-                <element signature="e#6182#6358#0#HTML" expanded="false" />
+                <element signature="e#463#515#0#HTML" expanded="true" />
+                <element signature="e#552#575#0#HTML" expanded="true" />
+                <element signature="e#1262#1286#0#HTML" expanded="true" />
+                <element signature="e#5716#7581#0#HTML" expanded="false" />
+                <element signature="e#5787#6010#0#HTML" expanded="false" />
+                <element signature="e#6181#6357#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Module.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8877551" vertical-offset="13" max-vertical-offset="592">
+            <state vertical-scroll-proportion="-17.4" vertical-offset="13" max-vertical-offset="592">
               <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
               <folding />
             </state>
@@ -225,8 +224,8 @@
         <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/show_module.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php" />
-        <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Module.php" />
+        <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" />
       </list>
     </option>
   </component>
@@ -912,10 +911,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1610,6 +1609,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.4" vertical-offset="13" max-vertical-offset="592">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.32" vertical-offset="208" max-vertical-offset="1216">
@@ -1628,24 +1635,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.64" vertical-offset="131" max-vertical-offset="2288">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.060796645" vertical-offset="131" max-vertical-offset="2288">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding>
-            <element signature="e#464#516#0#HTML" expanded="true" />
-            <element signature="e#553#576#0#HTML" expanded="true" />
-            <element signature="e#1263#1287#0#HTML" expanded="true" />
-            <element signature="e#5717#7582#0#HTML" expanded="false" />
-            <element signature="e#5788#6011#0#HTML" expanded="false" />
-            <element signature="e#6182#6358#0#HTML" expanded="false" />
+            <element signature="e#463#515#0#HTML" expanded="true" />
+            <element signature="e#552#575#0#HTML" expanded="true" />
+            <element signature="e#1262#1286#0#HTML" expanded="true" />
+            <element signature="e#5716#7581#0#HTML" expanded="false" />
+            <element signature="e#5787#6010#0#HTML" expanded="false" />
+            <element signature="e#6181#6357#0#HTML" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8877551" vertical-offset="13" max-vertical-offset="592">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
