@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -115,16 +114,9 @@
       <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55714285" vertical-offset="207" max-vertical-offset="1456">
-              <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
-              <folding>
-                <element signature="e#1983#3173#0#PHP" expanded="false" />
-                <element signature="e#3176#3613#0#PHP" expanded="false" />
-                <element signature="e#3617#5490#0#PHP" expanded="false" />
-                <element signature="e#5615#5788#0#PHP" expanded="false" />
-                <element signature="e#5793#5970#0#PHP" expanded="false" />
-                <element signature="e#6183#6262#0#PHP" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.58979595" vertical-offset="207" max-vertical-offset="3424">
+              <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -913,10 +905,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1638,16 +1630,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55714285" vertical-offset="207" max-vertical-offset="1456">
-          <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
-          <folding>
-            <element signature="e#1983#3173#0#PHP" expanded="false" />
-            <element signature="e#3176#3613#0#PHP" expanded="false" />
-            <element signature="e#3617#5490#0#PHP" expanded="false" />
-            <element signature="e#5615#5788#0#PHP" expanded="false" />
-            <element signature="e#5793#5970#0#PHP" expanded="false" />
-            <element signature="e#6183#6262#0#PHP" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.58979595" vertical-offset="207" max-vertical-offset="3424">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
