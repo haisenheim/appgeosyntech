@@ -24,4 +24,8 @@ class Module extends Model
 	public function tests(){
 		return $this->hasMany('App\Models\Test');
 	}
+
+	public function questions(){
+		return $this->hasMany('App\Models\Question');
+	}
 }
