@@ -8,7 +8,31 @@
                  @include('includes.Show.module_left_side')
             </div>
             <div class="col-md-8 col-sm-12">
-                 @include('includes.Show.module_right_side')
+                @if($module->questions->count() > 0))
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="margin: 30px; padding: 10px auto; width: 60%">
+                                <p style="font-size: 14px">AUCUNE QUESTION</p>
+                                <button data-target="#coursAdd" data-toggle="modal" class="btn btn-outline-info btn-block"><i class="fa fa-plus-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                @else
+                    <ul class="list-group">
+                        @foreach($module->questions as $question)
+                            <li class="list-group-item">
+                                <h5>{{$question->name}}</h5>
+                                <ol>
+                                    @foreach($question->choices as $choice)
+                                        <li style="margin-top: 10px">{{ $choice->name }} <span class="pull-right"><?= $choice->ok?'<span class="fa fa-check-circle"></span>':'<span class="fa fa-stop"></span>' ?></span></li>
+                                    @endforeach
+                                </ol>
+                            </li>
+                        @endforeach
+                    </ul>
+
+
+                @endif
             </div>
         </div>
     </div>
