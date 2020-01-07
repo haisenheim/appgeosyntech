@@ -128,7 +128,7 @@
             rep = 'OUI'
             }
 
-            var tr = '<tr data-choice='+ choice+' data-juste='+ juste +'><td>'+ choice+'</td> <td>'+ rep +'</td><td><span class="remove btn btn-xs btn-danger"><i class="fa fa-trash"></i></span></td></tr>';
+            var tr = '<tr data-choice="'+ choice+'" data-juste='+ juste +'><td>'+ choice+'</td> <td>'+ rep +'</td><td><span class="remove btn btn-xs btn-danger"><i class="fa fa-trash"></i></span></td></tr>';
             console.log(tr);
             $('#tab-choices').find('tbody').append(tr);
 
