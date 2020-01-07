@@ -59,7 +59,7 @@ class FormationController extends Controller
 
 	public function saveQuestion(Request $request){
 		$token = $request->token;
-		$module = Module::where($token)->first();
+		$module = Module::where('token',$token)->first();
 		$choices = $request->donnees;
 		$question = ['name'=>$request->name, 'module_id'=>$module->id];
 		$question = Question::create($question);

@@ -59,7 +59,7 @@
                      </div>
 
                      <div class="divider"></div>
-                     <h5>LES CHOIX</h5>
+                     <h6>LES CHOIX</h6>
                      <div class="row">
                             <div class="col-md-8 col-sm-12">
                                 <div class="form-group">
@@ -131,12 +131,14 @@
             var tr = '<tr data-choice='+ choice+' data-juste='+ juste +'><td>'+ choice+'</td> <td>'+ rep +'</td><td><span class="remove btn btn-xs btn-danger"><i class="fa fa-trash"></i></span></td></tr>';
             console.log(tr);
             $('#tab-choices').find('tbody').append(tr);
+
+            $('.remove').click(function(e){
+                e.preventDefault();
+                $(this).parent().parent().remove();
+            });
         });
 
-        $('.remove').click(function(e){
-            e.preventDefault();
-            $(this).parent().parent().remove();
-        });
+
 
         $('#btn-save').click(function(e){
             e.preventDefault();
