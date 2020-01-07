@@ -66,8 +66,8 @@ class FormationController extends Controller
 		foreach($choices as $ch){
 			$choice = new Choice();
 			$choice->question_id = $question->id;
-			$choice->name = $ch->name;
-			$choice->ok = $ch->ok;
+			$choice->name = $ch['name'];
+			$choice->ok = $ch['ok'];
 			$choice->save();
 		}
 
