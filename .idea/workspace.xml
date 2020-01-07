@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Choice.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Question.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Reponse.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Utils/TestController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FormationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FormationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Module.php" afterPath="$PROJECT_DIR$/app/Models/Module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="" />
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -45,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="formation_right_side.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="formation_right_side.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.24" vertical-offset="307" max-vertical-offset="896">
-              <caret line="43" column="105" selection-start-line="43" selection-start-column="105" selection-end-line="43" selection-end-column="105" />
+            <state vertical-scroll-proportion="0.033542976" vertical-offset="0" max-vertical-offset="896">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -112,31 +99,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5877551" vertical-offset="384" max-vertical-offset="3392">
+            <state vertical-scroll-proportion="-11.52" vertical-offset="384" max-vertical-offset="3392">
               <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Question.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Question.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="416">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+            <state vertical-scroll-proportion="-14.48" vertical-offset="22" max-vertical-offset="1808">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Choice.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Choice.php">
+      <file leaf-file-name="show_module.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/show_module.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="352">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state vertical-scroll-proportion="-7.64" vertical-offset="209" max-vertical-offset="1360">
+              <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -378,6 +365,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Show" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Contributeur" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -405,32 +440,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Formations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Contributeur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Earlies" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1388,207 +1397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/show_module.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.64" vertical-offset="209" max-vertical-offset="1360">
-          <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
-          <folding>
-            <element signature="e#2778#2800#0#HTML" expanded="false" />
-            <element signature="e#2999#3049#0#HTML" expanded="false" />
-            <element signature="e#5406#5443#0#HTML" expanded="false" />
-            <element signature="e#5724#5752#0#HTML" expanded="false" />
-            <element signature="e#5899#5933#0#HTML" expanded="false" />
-            <element signature="e#6090#6126#0#HTML" expanded="false" />
-            <element signature="e#6281#6315#0#HTML" expanded="false" />
-            <element signature="e#6464#6496#0#HTML" expanded="false" />
-            <element signature="e#6637#6666#0#HTML" expanded="false" />
-            <element signature="e#6804#6833#0#HTML" expanded="false" />
-            <element signature="e#6989#7027#0#HTML" expanded="false" />
-            <element signature="e#7176#7206#0#HTML" expanded="false" />
-            <element signature="e#7379#7417#0#HTML" expanded="false" />
-            <element signature="e#7568#7599#0#HTML" expanded="false" />
-            <element signature="e#7755#7792#0#HTML" expanded="false" />
-            <element signature="e#7956#7994#0#HTML" expanded="false" />
-            <element signature="e#8470#8534#0#HTML" expanded="false" />
-            <element signature="e#9224#9256#0#HTML" expanded="false" />
-            <element signature="e#9446#9478#0#HTML" expanded="false" />
-            <element signature="e#9672#9704#0#HTML" expanded="false" />
-            <element signature="e#9902#9934#0#HTML" expanded="false" />
-            <element signature="e#10132#10164#0#HTML" expanded="false" />
-            <element signature="e#10364#10396#0#HTML" expanded="false" />
-            <element signature="e#10590#10622#0#HTML" expanded="false" />
-            <element signature="e#10820#10852#0#HTML" expanded="false" />
-            <element signature="e#11076#11108#0#HTML" expanded="false" />
-            <element signature="e#11294#11326#0#HTML" expanded="false" />
-            <element signature="e#11528#11560#0#HTML" expanded="false" />
-            <element signature="e#11752#11784#0#HTML" expanded="false" />
-            <element signature="e#11974#12006#0#HTML" expanded="false" />
-            <element signature="e#12194#12226#0#HTML" expanded="false" />
-            <element signature="e#12414#12446#0#HTML" expanded="false" />
-            <element signature="e#12656#12688#0#HTML" expanded="false" />
-            <element signature="e#12916#12948#0#HTML" expanded="false" />
-            <element signature="e#13140#13172#0#HTML" expanded="false" />
-            <element signature="e#13362#13394#0#HTML" expanded="false" />
-            <element signature="e#13592#13624#0#HTML" expanded="false" />
-            <element signature="e#13814#13846#0#HTML" expanded="false" />
-            <element signature="e#14046#14078#0#HTML" expanded="false" />
-            <element signature="e#14284#14316#0#HTML" expanded="false" />
-            <element signature="e#14510#14542#0#HTML" expanded="false" />
-            <element signature="e#14772#14804#0#HTML" expanded="false" />
-            <element signature="e#15004#15036#0#HTML" expanded="false" />
-            <element signature="e#15240#15272#0#HTML" expanded="false" />
-            <element signature="e#15476#15508#0#HTML" expanded="false" />
-            <element signature="e#15700#15732#0#HTML" expanded="false" />
-            <element signature="e#15924#15956#0#HTML" expanded="false" />
-            <element signature="e#16148#16180#0#HTML" expanded="false" />
-            <element signature="e#16382#16414#0#HTML" expanded="false" />
-            <element signature="e#16650#16682#0#HTML" expanded="false" />
-            <element signature="e#16872#16904#0#HTML" expanded="false" />
-            <element signature="e#17094#17126#0#HTML" expanded="false" />
-            <element signature="e#17324#17356#0#HTML" expanded="false" />
-            <element signature="e#17550#17582#0#HTML" expanded="false" />
-            <element signature="e#17784#17816#0#HTML" expanded="false" />
-            <element signature="e#18008#18040#0#HTML" expanded="false" />
-            <element signature="e#18250#18282#0#HTML" expanded="false" />
-            <element signature="e#18504#18536#0#HTML" expanded="false" />
-            <element signature="e#18742#18774#0#HTML" expanded="false" />
-            <element signature="e#18972#19004#0#HTML" expanded="false" />
-            <element signature="e#19208#19240#0#HTML" expanded="false" />
-            <element signature="e#19452#19484#0#HTML" expanded="false" />
-            <element signature="e#19684#19716#0#HTML" expanded="false" />
-            <element signature="e#19918#19950#0#HTML" expanded="false" />
-            <element signature="e#20158#20190#0#HTML" expanded="false" />
-            <element signature="e#20420#20452#0#HTML" expanded="false" />
-            <element signature="e#20646#20678#0#HTML" expanded="false" />
-            <element signature="e#20872#20904#0#HTML" expanded="false" />
-            <element signature="e#21106#21138#0#HTML" expanded="false" />
-            <element signature="e#21342#21374#0#HTML" expanded="false" />
-            <element signature="e#21562#21594#0#HTML" expanded="false" />
-            <element signature="e#21796#21828#0#HTML" expanded="false" />
-            <element signature="e#22026#22058#0#HTML" expanded="false" />
-            <element signature="e#22284#22316#0#HTML" expanded="false" />
-            <element signature="e#22512#22544#0#HTML" expanded="false" />
-            <element signature="e#22740#22772#0#HTML" expanded="false" />
-            <element signature="e#22962#22994#0#HTML" expanded="false" />
-            <element signature="e#23188#23220#0#HTML" expanded="false" />
-            <element signature="e#23410#23442#0#HTML" expanded="false" />
-            <element signature="e#23648#23680#0#HTML" expanded="false" />
-            <element signature="e#23878#23910#0#HTML" expanded="false" />
-            <element signature="e#24533#24565#0#HTML" expanded="false" />
-            <element signature="e#24759#24791#0#HTML" expanded="false" />
-            <element signature="e#24985#25017#0#HTML" expanded="false" />
-            <element signature="e#25211#25243#0#HTML" expanded="false" />
-            <element signature="e#25437#25469#0#HTML" expanded="false" />
-            <element signature="e#25663#25695#0#HTML" expanded="false" />
-            <element signature="e#25889#25921#0#HTML" expanded="false" />
-            <element signature="e#26115#26147#0#HTML" expanded="false" />
-            <element signature="e#26731#26763#0#HTML" expanded="false" />
-            <element signature="e#26953#26985#0#HTML" expanded="false" />
-            <element signature="e#27179#27211#0#HTML" expanded="false" />
-            <element signature="e#27409#27441#0#HTML" expanded="false" />
-            <element signature="e#27639#27671#0#HTML" expanded="false" />
-            <element signature="e#27871#27903#0#HTML" expanded="false" />
-            <element signature="e#28097#28129#0#HTML" expanded="false" />
-            <element signature="e#28327#28359#0#HTML" expanded="false" />
-            <element signature="e#28583#28615#0#HTML" expanded="false" />
-            <element signature="e#28801#28833#0#HTML" expanded="false" />
-            <element signature="e#29035#29067#0#HTML" expanded="false" />
-            <element signature="e#29259#29291#0#HTML" expanded="false" />
-            <element signature="e#29481#29513#0#HTML" expanded="false" />
-            <element signature="e#29701#29733#0#HTML" expanded="false" />
-            <element signature="e#29921#29953#0#HTML" expanded="false" />
-            <element signature="e#30163#30195#0#HTML" expanded="false" />
-            <element signature="e#30423#30455#0#HTML" expanded="false" />
-            <element signature="e#30647#30679#0#HTML" expanded="false" />
-            <element signature="e#30869#30901#0#HTML" expanded="false" />
-            <element signature="e#31099#31131#0#HTML" expanded="false" />
-            <element signature="e#31321#31353#0#HTML" expanded="false" />
-            <element signature="e#31553#31585#0#HTML" expanded="false" />
-            <element signature="e#31791#31823#0#HTML" expanded="false" />
-            <element signature="e#32017#32049#0#HTML" expanded="false" />
-            <element signature="e#32279#32311#0#HTML" expanded="false" />
-            <element signature="e#32511#32543#0#HTML" expanded="false" />
-            <element signature="e#32747#32779#0#HTML" expanded="false" />
-            <element signature="e#32983#33015#0#HTML" expanded="false" />
-            <element signature="e#33207#33239#0#HTML" expanded="false" />
-            <element signature="e#33431#33463#0#HTML" expanded="false" />
-            <element signature="e#33655#33687#0#HTML" expanded="false" />
-            <element signature="e#33889#33921#0#HTML" expanded="false" />
-            <element signature="e#34157#34189#0#HTML" expanded="false" />
-            <element signature="e#34379#34411#0#HTML" expanded="false" />
-            <element signature="e#34601#34633#0#HTML" expanded="false" />
-            <element signature="e#34831#34863#0#HTML" expanded="false" />
-            <element signature="e#35057#35089#0#HTML" expanded="false" />
-            <element signature="e#35291#35323#0#HTML" expanded="false" />
-            <element signature="e#35515#35547#0#HTML" expanded="false" />
-            <element signature="e#35757#35789#0#HTML" expanded="false" />
-            <element signature="e#36011#36043#0#HTML" expanded="false" />
-            <element signature="e#36249#36281#0#HTML" expanded="false" />
-            <element signature="e#36479#36511#0#HTML" expanded="false" />
-            <element signature="e#36715#36747#0#HTML" expanded="false" />
-            <element signature="e#36959#36991#0#HTML" expanded="false" />
-            <element signature="e#37191#37223#0#HTML" expanded="false" />
-            <element signature="e#37425#37457#0#HTML" expanded="false" />
-            <element signature="e#37665#37697#0#HTML" expanded="false" />
-            <element signature="e#37927#37959#0#HTML" expanded="false" />
-            <element signature="e#38153#38185#0#HTML" expanded="false" />
-            <element signature="e#38379#38411#0#HTML" expanded="false" />
-            <element signature="e#38613#38645#0#HTML" expanded="false" />
-            <element signature="e#38849#38881#0#HTML" expanded="false" />
-            <element signature="e#39069#39101#0#HTML" expanded="false" />
-            <element signature="e#39303#39335#0#HTML" expanded="false" />
-            <element signature="e#39533#39565#0#HTML" expanded="false" />
-            <element signature="e#39791#39823#0#HTML" expanded="false" />
-            <element signature="e#40019#40051#0#HTML" expanded="false" />
-            <element signature="e#40247#40279#0#HTML" expanded="false" />
-            <element signature="e#40469#40501#0#HTML" expanded="false" />
-            <element signature="e#40695#40727#0#HTML" expanded="false" />
-            <element signature="e#40917#40949#0#HTML" expanded="false" />
-            <element signature="e#41155#41187#0#HTML" expanded="false" />
-            <element signature="e#41385#41417#0#HTML" expanded="false" />
-            <element signature="e#42032#42064#0#HTML" expanded="false" />
-            <element signature="e#42258#42290#0#HTML" expanded="false" />
-            <element signature="e#42484#42516#0#HTML" expanded="false" />
-            <element signature="e#42710#42742#0#HTML" expanded="false" />
-            <element signature="e#42936#42968#0#HTML" expanded="false" />
-            <element signature="e#43162#43194#0#HTML" expanded="false" />
-            <element signature="e#43388#43420#0#HTML" expanded="false" />
-            <element signature="e#43614#43646#0#HTML" expanded="false" />
-            <element signature="e#46842#46876#0#HTML" expanded="false" />
-            <element signature="e#48968#48990#0#HTML" expanded="false" />
-            <element signature="e#51207#51229#0#HTML" expanded="false" />
-            <element signature="e#52800#52844#0#HTML" expanded="false" />
-            <element signature="e#52886#52927#0#HTML" expanded="false" />
-            <element signature="e#53024#53065#0#HTML" expanded="false" />
-            <element signature="e#53173#53214#0#HTML" expanded="false" />
-            <element signature="e#53322#53363#0#HTML" expanded="false" />
-            <element signature="e#53450#53491#0#HTML" expanded="false" />
-            <element signature="e#53592#53633#0#HTML" expanded="false" />
-            <element signature="e#53737#53778#0#HTML" expanded="false" />
-            <element signature="e#53876#53917#0#HTML" expanded="false" />
-            <element signature="e#54015#54056#0#HTML" expanded="false" />
-            <element signature="e#54163#54204#0#HTML" expanded="false" />
-            <element signature="e#54311#54352#0#HTML" expanded="false" />
-            <element signature="e#54454#54495#0#HTML" expanded="false" />
-            <element signature="e#54588#54629#0#HTML" expanded="false" />
-            <element signature="e#54731#54772#0#HTML" expanded="false" />
-            <element signature="e#54888#54929#0#HTML" expanded="false" />
-            <element signature="e#55040#55081#0#HTML" expanded="false" />
-            <element signature="e#55193#55234#0#HTML" expanded="false" />
-            <element signature="e#55357#55398#0#HTML" expanded="false" />
-            <element signature="e#55523#55564#0#HTML" expanded="false" />
-            <element signature="e#55691#55732#0#HTML" expanded="false" />
-            <element signature="e#55858#55899#0#HTML" expanded="false" />
-            <element signature="e#56025#56066#0#HTML" expanded="false" />
-            <element signature="e#56192#56233#0#HTML" expanded="false" />
-            <element signature="e#56359#56400#0#HTML" expanded="false" />
-            <element signature="e#56526#56567#0#HTML" expanded="false" />
-            <element signature="e#56693#56734#0#HTML" expanded="false" />
-            <element signature="e#56848#56889#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Chaire/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.04" vertical-offset="222" max-vertical-offset="1728">
@@ -1651,14 +1459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.32" vertical-offset="22" max-vertical-offset="1808">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Utils/DiversController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.4" vertical-offset="94" max-vertical-offset="2032">
@@ -1712,17 +1512,6 @@
         <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="416">
           <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.24" vertical-offset="307" max-vertical-offset="896">
-          <caret line="43" column="105" selection-start-line="43" selection-start-column="105" selection-end-line="43" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1782,9 +1571,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5877551" vertical-offset="384" max-vertical-offset="3392">
+        <state vertical-scroll-proportion="-11.52" vertical-offset="384" max-vertical-offset="3392">
           <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/show_module.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.64" vertical-offset="209" max-vertical-offset="1360">
+          <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.48" vertical-offset="22" max-vertical-offset="1808">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033542976" vertical-offset="0" max-vertical-offset="896">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

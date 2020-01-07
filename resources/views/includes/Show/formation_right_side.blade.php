@@ -1,7 +1,7 @@
 <?php
     use Illuminate\Support\Facades\Auth;
 
-    $id = Auth::user()->id;
+    $id = Auth::user()->role_id;
     $link = '';
     if($id==1){
         $link='admin';
