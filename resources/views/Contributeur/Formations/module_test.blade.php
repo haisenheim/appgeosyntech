@@ -8,7 +8,7 @@
                  @include('includes.Show.module_left_side')
             </div>
             <div class="col-md-8 col-sm-12">
-                @if($module->questions->count() > 0))
+                @if($module->questions->count() < 1))
                     <div class="card">
                         <div class="card-body">
                             <div style="margin: 30px; padding: 10px auto; width: 60%">
