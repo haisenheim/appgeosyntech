@@ -235,6 +235,7 @@ Route::prefix('contributeur')
 		Route::post('module/add-cours','FormationController@addCours');
 		Route::get('show-module/{token}','FormationController@showModule');
 		Route::post('test/add-question','FormationController@saveQuestion');
+		Route::get('module/test/{token}','FormationController@getTestModule');
 	});
 
 
