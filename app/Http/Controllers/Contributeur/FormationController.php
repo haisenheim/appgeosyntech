@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Contributeur;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bilan;
+use App\Models\Choice;
 use App\Models\ChoicesProjet;
 use App\Models\Concurrent;
 use App\Models\Cour;
@@ -16,6 +17,7 @@ use App\Models\Module;
 use App\Models\Moi;
 use App\Models\ProduitsProjet;
 use App\Models\Projet;
+use App\Models\Question;
 use App\Models\Reportbilan;
 use App\Models\Reportresultat;
 use App\Models\Resultat;
@@ -48,7 +50,29 @@ class FormationController extends Controller
     }
 
 
+	public function getModuleTest($token){
+		$module = Module::where('token',$token)->first();
 
+		return view('Contributeur/Formations/module_test')->with(compact('module'));
+	}
+
+
+	public function saveQuestion(Request $request){
+		$token = $request->token;
+		$module = Module::where($token)->first();
+		$choices = $request->donnees;
+		$question = ['name'=>$request->name, 'module_id'=>$module->id];
+		$question = Question::create($question);
+		foreach($choices as $ch){
+			$choice = new Choice();
+			$choice->question_id = $question->id;
+			$choice->name = $ch->name;
+			$choice->ok = $ch->ok;
+			$choice->save();
+		}
+
+		return response()->json($question);
+	}
 
 	public function store(Request $request)
 	{

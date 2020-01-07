@@ -214,6 +214,12 @@ class FormationController extends Controller
         //
     }
 
+	public function getModuleTest($token){
+		$module = Module::where('token',$token)->first();
+
+		return view('Contributeur/Formations/module_test')->with(compact('module'));
+	}
+
     /**
      * Update the specified resource in storage.
      *

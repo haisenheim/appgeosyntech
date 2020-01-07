@@ -20,4 +20,8 @@ class Module extends Model
 	public function formation(){
 		return $this->belongsTo('App\Models\Formation');
 	}
+
+	public function tests(){
+		return $this->hasMany('App\Models\Test');
+	}
 }
