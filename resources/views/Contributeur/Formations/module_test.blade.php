@@ -198,7 +198,15 @@
         });
     </script>
 
+    <style>
+        .table-condensed th, .table-condensed td {
+            padding: .30rem 50rem;
+        }
+    </style>
+
 @endsection
+
+
 
 
 @section('nav_actions')
