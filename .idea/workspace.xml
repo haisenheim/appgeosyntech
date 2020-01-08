@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,15 +74,15 @@
       <file leaf-file-name="module_test.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5639413" vertical-offset="1763" max-vertical-offset="2704">
-              <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.3018868" vertical-offset="1408" max-vertical-offset="2704">
+              <caret line="97" column="84" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="84" />
               <folding>
                 <element signature="e#463#515#0#HTML" expanded="true" />
                 <element signature="e#552#575#0#HTML" expanded="true" />
                 <element signature="e#1262#1286#0#HTML" expanded="true" />
-                <element signature="e#5880#7745#0#HTML" expanded="false" />
-                <element signature="e#5951#6174#0#HTML" expanded="false" />
-                <element signature="e#6345#6521#0#HTML" expanded="false" />
+                <element signature="e#5929#7794#0#HTML" expanded="false" />
+                <element signature="e#6000#6223#0#HTML" expanded="false" />
+                <element signature="e#6394#6570#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -218,8 +218,8 @@
         <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/show_module.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Models/Module.php" />
-        <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Contributeur/FormationController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php" />
       </list>
     </option>
   </component>
@@ -1623,15 +1623,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/module_test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5639413" vertical-offset="1763" max-vertical-offset="2704">
-          <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.3018868" vertical-offset="1408" max-vertical-offset="2704">
+          <caret line="97" column="84" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="84" />
           <folding>
             <element signature="e#463#515#0#HTML" expanded="true" />
             <element signature="e#552#575#0#HTML" expanded="true" />
             <element signature="e#1262#1286#0#HTML" expanded="true" />
-            <element signature="e#5880#7745#0#HTML" expanded="false" />
-            <element signature="e#5951#6174#0#HTML" expanded="false" />
-            <element signature="e#6345#6521#0#HTML" expanded="false" />
+            <element signature="e#5929#7794#0#HTML" expanded="false" />
+            <element signature="e#6000#6223#0#HTML" expanded="false" />
+            <element signature="e#6394#6570#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

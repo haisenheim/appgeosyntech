@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="card-footer">
-                  <button id="btn-save"><i class="fa fa-w fa-save"></i> ENREGISTRER</button>
+                  <button id="btn-save" class="btn btn-outline-info btn-sm btn-block"><i class="fa fa-w fa-save "></i> ENREGISTRER</button>
                 </div>
               </form>
             </div>
