@@ -1,4 +1,8 @@
 @extends('......layouts.contributeur')
+@section('page-title')
+{{ $module->name }}
+@endsection
+
 @section('content')
 
 

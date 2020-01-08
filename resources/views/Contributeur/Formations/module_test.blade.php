@@ -1,4 +1,7 @@
 @extends('......layouts.contributeur')
+@section('page-title')
+{{ $module->name }}
+@endsection
 @section('content')
 
 
@@ -59,7 +62,7 @@
                      </div>
 
                      <div class="divider"></div>
-                     <h6>LES CHOIX</h6>
+                     <h6 style="font-weight: bold; padding-bottom: 5px; border-bottom: 1px info solid">LES CHOIX</h6>
                      <div class="row">
                             <div class="col-md-8 col-sm-12">
                                 <div class="form-group">
@@ -68,13 +71,13 @@
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-12">
-                                <div class="form-group">
+                                <div style="margin-top: 30px" class="form-group">
                                     <label for="chk">JUSTE ?</label>
-                                    <input type="checkbox" id="chk" class="form-control"/>
+                                    <input type="checkbox" id="chk" class="f"/>
                                 </div>
                             </div>
-                            <div class="col-md-1 col-sm-12">
-                                <button id="btn-add" class="btn btn-outline-info btn-block btn-xs"><i class="fa fa-plus-circle"></i></button>
+                            <div class="col-md-2 col-sm-12">
+                                <button style="margin-top: 30px; float: right" id="btn-add" class="btn btn-outline-info btn-block btn-xs"><i class="fa fa-plus-circle"></i></button>
                             </div>
                      </div>
 
