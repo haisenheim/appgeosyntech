@@ -91,7 +91,7 @@
                with font-awesome or any other icon font library -->
 
            <li class="nav-item">
-            <a href="/contributeur/porteurs" class="nav-link {{ $active==2?'active':'' }}">
+            <a href="/contributeur/formations" class="nav-link {{ $active==2?'active':'' }}">
               <i class="nav-icon text-success fas fa-users"></i>
               <p>
                 MES FORMATIONS
