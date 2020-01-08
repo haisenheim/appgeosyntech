@@ -8,7 +8,7 @@
                     <div class="card">
 
                         <div class="card-body">
-                             <h4 class="">{{ $cour->name }} </h4>
+                             <h4 style="padding: 5px; margin-bottom: 5px; border-bottom: 1px solid darkcyan; font-family: "'Gill Sans MT', Calibri, sans-serif" class="page-header">{{ $cour->name }} </h4>
                              <div class="row">
                                 <div class="col-md-6 col-sm-12">
 
