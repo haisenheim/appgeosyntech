@@ -62,7 +62,7 @@
                      </div>
 
                      <div class="divider"></div>
-                     <h6 style="font-weight: bold; padding-bottom: 5px; border-bottom: 1px info solid">LES CHOIX</h6>
+                     <h6 style="font-weight: bold; padding-bottom: 5px; border-bottom: 1px #17a2b8 solid">LES CHOIX</h6>
                      <div class="row">
                             <div class="col-md-8 col-sm-12">
                                 <div class="form-group">
@@ -70,7 +70,7 @@
                                     <input type="text" id="choice" class="form-control"/>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-md-2 col-sm-12">
                                 <div style="margin-top: 30px" class="form-group">
                                     <label for="chk">JUSTE ?</label>
                                     <input type="checkbox" id="chk" class="f"/>
@@ -82,7 +82,7 @@
                      </div>
 
                      <div class="divider"></div>
-                     <table id="tab-choices" class="table table-bordered">
+                     <table id="tab-choices" class="table table-bordered table-condensed table-striped">
                         <thead>
                             <tr>
                                 <th>CHOIX</th>
