@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -114,8 +115,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3325792" vertical-offset="2349" max-vertical-offset="3888">
-              <caret line="156" column="30" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.39795917" vertical-offset="749" max-vertical-offset="3888">
+              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -188,13 +189,13 @@
         <option value="$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/contributeur.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Contributeur.php" />
-        <option value="$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/MessageController.php" />
         <option value="$PROJECT_DIR$/app/Models/Message.php" />
         <option value="$PROJECT_DIR$/resources/views/Contributeur/Messages/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/Contributeur/Messages/sent.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Contributeur/MessageController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php" />
       </list>
     </option>
   </component>
@@ -838,10 +839,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1276,8 +1277,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325792" vertical-offset="2349" max-vertical-offset="3888">
-          <caret line="156" column="30" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.39795917" vertical-offset="749" max-vertical-offset="3888">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
           <folding />
         </state>
       </provider>

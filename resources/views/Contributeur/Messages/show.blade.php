@@ -1,4 +1,4 @@
-@extends('......layouts.owner')
+@extends('......layouts.contributeur')
 @section('page-title')
 {{ $message->expediteur->name }} - <b> <small> {{ $message->subject }}</small> </b>
 @endsection
