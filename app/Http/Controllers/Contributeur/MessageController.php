@@ -37,10 +37,10 @@ class MessageController extends Controller
     }
 
 
-	public function allSent()
+	public function Sent()
 	{
 		//
-		//dd(Auth::user());
+		dd(Auth::user());
 		$envois = Message::all()->where('sender_id',Auth::user()->id)->sortBy('created_at',null,true);
 		$receptions = Message::all()->where('receptor_id',Auth::user()->id);
 		$pays = Pay::all();
