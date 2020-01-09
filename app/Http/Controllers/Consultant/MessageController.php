@@ -78,7 +78,7 @@ class MessageController extends Controller
         //
         //dd($request->imageUri);
 
-	        $message = $request->input();
+	        $message = $request->except('pay_id');
 	        $message['token'] = sha1(Auth::user()->id . date('Ymdhsi'));
 	        $message['annee']= date('Y');
 	        $message['moi_id'] = date('m');
