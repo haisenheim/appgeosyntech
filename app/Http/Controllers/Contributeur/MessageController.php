@@ -130,7 +130,9 @@ class MessageController extends Controller
     public function show($token)
     {
         $message = Message::where('token',$token)->first();
-	    $msg = Message::updateOrCreate(['token'=>$token],['lu'=>1]);
+	    if($message->receptor_id == Auth::user()->id){
+		    $msg = Message::updateOrCreate(['token'=>$token],['lu'=>1]);
+	    }
 	    $receptions = Message::all()->where('receptor_id',Auth::user()->id);
 	    $envois = Message::all()->where('sender_id',Auth::user()->id);
 	    $pays = Pay::all();
