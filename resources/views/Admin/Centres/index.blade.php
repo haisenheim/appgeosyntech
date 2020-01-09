@@ -35,6 +35,7 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
+                      <th>PAYS</th>
                       <th>DATE DE CREATION</th>
 
 
@@ -51,6 +52,7 @@
                               <td>{!! $ville->address !!} </td>
                               <td>{!! $ville->phone !!} </td>
                               <td>{!! $ville->email !!} </td>
+                              <td>{{ $ville->pay->name }}</td>
                               <td><?= date_format($ville->created_at,'d/m/Y H:i') ?></td>
                               <td>
 

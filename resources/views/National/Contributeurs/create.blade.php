@@ -1,13 +1,13 @@
-@extends('......layouts.national')
+@extends('......layouts.admin')
 
 @section('content')
     <div class="md-container">
         <div class="widget">
             <div class="widget-header">
-                <h5 class=""><i class="fa fa-user"></i> NOUVEL UTILISATEUR</h5>
+                <h5 class=""><i class="fa fa-user"></i> NOUVEAU CONSULTANT</h5>
             </div>
             <div class="widget-content">
-                <form enctype="multipart/form-data" class="form" action="{{route('national.users.store')}}" method="post">
+                <form enctype="multipart/form-data" class="form" action="{{route('admin.experts.store')}}" method="post">
                     {{csrf_field()}}
                     <div class="row">
 
@@ -20,9 +20,17 @@
                        <input type="text" name="first_name" id="name" class="form-control"/>
                      </div>
                      <div style="" class="col-sm-12 col-md-3">
-                     <ul style="margin-top: 30px" class="list-inline">
+                      <ul style="margin-top: 30px" class="list-inline">
                         <li class="list-inline-item">
-                            <label style="" for="male"> UTILISATEUR HOMME </label>
+                            <label style="" for="senior"> CONSULTANT SENIOR </label>
+                        </li>
+                        <li class="list-inline-item">
+                            <input style="" type="checkbox"  name="senior" id="senior" class="checkbox"/>
+                        </li>
+                     </ul>
+                     <ul style="margin-top: 0" class="list-inline">
+                        <li class="list-inline-item">
+                            <label style="" for="male"> CONSULTANT HOMME </label>
                         </li>
                         <li class="list-inline-item">
                             <input style="" type="checkbox" checked name="male" id="male" class="checkbox"/>

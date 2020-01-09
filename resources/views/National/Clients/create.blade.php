@@ -1,4 +1,4 @@
-@extends('......layouts.national')
+@extends('......layouts.admin')
 
 @section('content')
     <div class="md-container">
@@ -7,7 +7,7 @@
                 <h5 class=""><i class="fa fa-user"></i> NOUVEAU PORTEUR DE PROJET</h5>
             </div>
             <div class="widget-content">
-                <form enctype="multipart/form-data" class="form" action="{{route('national.users.store')}}" method="post">
+                <form enctype="multipart/form-data" class="form" action="{{route('admin.users.store')}}" method="post">
                     {{csrf_field()}}
                     <div class="row">
 

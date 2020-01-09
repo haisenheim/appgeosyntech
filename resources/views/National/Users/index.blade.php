@@ -39,7 +39,7 @@
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
                       <th>ROLE</th>
-
+                      <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -51,7 +51,11 @@
                                <td>{!! $ville->phone !!} </td>
                                 <td>{!! $ville->email !!} </td>
                               <td>{!! $ville->role?$ville->role->name:'-' !!}</td>
-
+                              <td>
+                              <ul style="margin-bottom: 0" class="list-inline">
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('admin.users.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
+                              </ul>
+                              </td>
                           </tr>
                       @endforeach
 
@@ -64,7 +68,7 @@
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
                       <th>ROLE</th>
-
+                      <th></th>
                     </tr>
                     </tfoot>
                   </table>
@@ -107,6 +111,24 @@
                               <label for="phone">TELEPHONE</label>
                               <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
                             </div>
+
+                            <div class="form-group">
+                              <label for="pay_id">PAYS</label>
+                              <select name="pay_id" id="pay_id" class="form-control">
+                                @foreach($pays as $p)
+                                    <option value="{{ $p->id }}">{{ $p->name }}</option>
+                                @endforeach
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="role_id">ROLE</label>
+                              <select name="role_id" id="role_id" class="form-control">
+                                    <option value="8">ADMINITRATEUR NATIONAL</option>
+                                    <option value="1">ADMINISTRATEUR OBAC</option>
+                              </select>
+                            </div>
+
                             <div class="form-group">
                               <label for="email">EMAIL</label>
                               <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
@@ -124,14 +146,11 @@
                             <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
 
                           </div>
-
-
-
                           </div>
                           <!-- /.card-body -->
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-success"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>

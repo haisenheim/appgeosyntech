@@ -1,10 +1,10 @@
 
 
 
-@extends('......layouts.national')
+@extends('......layouts.admin')
 
 @section('page-title')
-{{ $apporteur->name }} - FACTURES PAYEES
+ALLIAGES TECHNOLOGIES - CREANCES
 @endsection
 
 @section('content')
@@ -20,8 +20,6 @@
                       <th>#</th>
                       <th>MOIS</th>
                       <th>MONTANT</th>
-                      <th>PAYEE LE</th>
-                      <th>PAR</th>
                       <th></th>
 
 
@@ -33,12 +31,10 @@
                               <td>{{$creance->name }} </td>
                               <td>{{$creance->mois->name  }} / {{ $creance->annee }} </td>
                               <td>{{ number_format($creance->montant,0,',','.') }} </td>
-                              <td>{{ date_format($creance->filled_at,'d/m/Y H:i') }}</td>
-                              <td>{{ $creance->payeur->name }}</td>
 
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="/national/apporteur/facture/{{ $creance->token }}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="/admin/alliages/facture/{{ $creance->token }}"><i class="fa fa-search"></i></a></li>
                               </ul>
                               </td>
                           </tr>

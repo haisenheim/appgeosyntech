@@ -1,4 +1,4 @@
-@extends('......layouts.national')
+@extends('......layouts.admin')
 
 @section('page-title')
 {{ $facture->name }}
@@ -27,25 +27,24 @@
                 <div class="col-sm-4 invoice-col">
                   PARTENAIRE:
                   <address>
-                    <strong>{{ $facture->owner->name }} </strong><br>
-                    {{ $facture->owner->address }}<br>
+                    <strong>ALLIAGES TECHNOLOGIES </strong><br>
+                    Blvd Ch. De Gaulle<br>
 
-                    Téléphone: {{ $facture->owner->phone }}<br>
-                    Email: {{ $facture->owner->email }}<br/>
+                    Téléphone: +242 064576186<br>
+                    Email: info@alliages-techologies<br/>
 
                   </address>
                 </div>
+
                 <!-- /.col -->
 
                 <!-- /.col -->
                 <div class="col-sm-4 invoice-col">
                   <b>TOTAL : {{ number_format($facture->montant, 0,',','.') }} </b><br>
                   <br>
-
-
                 </div>
                 <!-- /.col -->
-              </div>
+
               <!-- /.row -->
                 <hr/>
               <div class="row">
@@ -69,7 +68,7 @@
                                     <tr>
                                         <td>{{ $i++ }}</td>
                                         <td>{{ $ligne->name }}</td>
-                                        <td>{{ $ligne->montant_apporteur }}</td>
+                                        <td>{{ $ligne->montant_alliages }}</td>
                                         <td>{{ $ligne->owner->name }}</td>
                                         <td>{{ $ligne->projet->name }}</td>
                                         <td>{{ date_format($ligne->created_at, 'd/m/Y') }}</td>
@@ -98,7 +97,7 @@
 
                 @if(!$facture->filled)
                    <li>
-                        <a  title="Payer Cette Facture" class="ripple" href="/national/facture/fill/{{ $facture->token }}"><i class="fa fa-coins fa-lg text-warning"></i></a>
+                        <a  title="Payer Cette Facture" class="ripple" href="/admin/facture/fill/{{ $facture->token }}"><i class="fa fa-coins fa-lg text-warning"></i></a>
                    </li>
                 @endif
 

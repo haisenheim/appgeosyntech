@@ -1,4 +1,7 @@
 @extends('......layouts.contributeur')
+@section('page-title')
+MES FORMATIONS
+@endsection
 @section('content')
 
  <div class="card">

@@ -1,7 +1,7 @@
 
 
 
-@extends('......layouts.national')
+@extends('......layouts.admin')
 
 @section('page-title')
 {{ $apporteur->name }} - FACTURES PAYEES
@@ -38,7 +38,7 @@
 
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="/national/consultant/facture/{{ $creance->token }}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="/admin/consultant/facture/{{ $creance->token }}"><i class="fa fa-search"></i></a></li>
                               </ul>
                               </td>
                           </tr>

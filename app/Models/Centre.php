@@ -12,7 +12,11 @@ class Centre extends Model
 	//public $timestamps = false;
 
 	public function users(){
-		return $this->hasMany('App\Models\User');
+		return $this->hasMany('App\User');
+	}
+
+	public function pay(){
+		return $this->belongsTo('App\Models\Pay');
 	}
 
 }

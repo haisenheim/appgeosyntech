@@ -1,4 +1,4 @@
-@extends('...layouts.national')
+@extends('...layouts.admin')
 
 
 @section('content-header')

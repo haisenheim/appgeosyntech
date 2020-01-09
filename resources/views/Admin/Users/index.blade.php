@@ -124,7 +124,7 @@
                             <div class="form-group">
                               <label for="role_id">ROLE</label>
                               <select name="role_id" id="role_id" class="form-control">
-                                    <option value="8">ADMINITRATEUR NATIONAL</option>
+                                    <option value="2">ADMINITRATEUR NATIONAL</option>
                                     <option value="1">ADMINISTRATEUR OBAC</option>
                               </select>
                             </div>

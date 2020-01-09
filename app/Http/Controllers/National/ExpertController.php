@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\National;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pay;
@@ -24,11 +24,11 @@ class ExpertController extends Controller
     public function index()
     {
         //
-        $users = User::all()->where('role_id','=',2)->where('pay_id',Auth::user()->pay_id);
-	    //$pays = Pay::all();
+        $users = \App\User::all()->where('role_id','=',6);
+	    $pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('National/Experts/index')->with(compact('users'));
+        return view('Admin/Experts/index')->with(compact('users','pays'));
 
     }
 
@@ -65,11 +65,12 @@ class ExpertController extends Controller
        // $user->password=bcrypt($request['password']);
        // $user->role_id =2;
 	    $user->password= Hash::make(($request['password']));
-	    $user->role_id =2;
+	    $user->role_id =6;
 	    $user->moi_id=date('m');
 	    $user->annee=date('Y');
 	    $user->male = $request['male']=='on'?1:0;
 	    $user->active = 1;
+	    $user->agence_id = $request['agence_id'];
 	    $user->token = sha1(Auth::user()->id . date('Yhmdhis'));
 	    $user->creator_id=Auth::user()->id;
 	    if($request->imageUri){
@@ -118,6 +119,19 @@ class ExpertController extends Controller
     {
         //
     }
+
+
+	public function confirm($token){
+		$user = \App\User::updateOrCreate(['token'=>$token],['confirmed'=>1]);
+
+		return back();
+	}
+
+	public function senior($token){
+		$user = \App\User::updateOrCreate(['token'=>$token],['senior'=>1]);
+
+		return back();
+	}
 
     /**
      * Update the specified resource in storage.

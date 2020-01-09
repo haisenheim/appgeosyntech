@@ -2,29 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Factures/creances.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Factures/payees.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Factures/print.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Factures/show.blade.php" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Actifs\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Actifs\edit.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Actifs\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Actifs\index__.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Actifs\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Actifs\show__.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Creances\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Creances\edit.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Creances\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Creances\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Earlies\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Earlies\create_diag_externe.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Earlies\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Earlies\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Earlies\show_old.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Infrastructures\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Infrastructures\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Infrastructures\show.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Contributeur\Infrastructures\show__.blade.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/FormationController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Alliages/creances.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Centres/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Entreprises/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Contributeurs/facture.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Formations/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Modules/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Alliages/payees.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Alliages/recu.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Formations/show.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Modules/show.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/National/Formations/show_module.blade.php" />
+      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\National\ActifController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\National\AngelController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\National\CommercialController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\National\CreanceController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\National\EarlyController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\National\InfrastructureController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\National\InvestissementController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\app\Http\Controllers\National\ProjetController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Actifs\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Actifs\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Angels\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Commercials\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Creances\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Creances\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Infrastructures\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Infrastructures\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Projets\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Projets\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Projets\show_old.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\lettre_intention.blade.php" afterPath="" />
+      <change type="MOVED" beforePath="C:\xampp\otc\app\Http\Controllers\National\OrganismeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Angels\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Contributeurs/create.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Commercials\creances.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Contributeurs/creances.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Commercials\facture.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Alliages/facture.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Commercials\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Contributeurs/index.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Commercials\payees.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Contributeurs/payees.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Commercials\recu.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Contributeurs/recu.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Organismes\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Agences/create.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Organismes\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" />
+      <change type="MOVED" beforePath="C:\xampp\otc\resources\views\National\Projets\recu.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Formations/recu.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Centre.php" afterPath="$PROJECT_DIR$/app/Models/Centre.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/National/ClientController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/ClientController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/National/ExpertController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/ExpertController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Experts/creances.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Experts/creances.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Clients/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Clients/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/dashboard.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Experts/facture.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Experts/facture.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Contributeur/Formations/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Contributeur/Formations/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Clients/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Clients/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Earlies/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Earlies/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Experts/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Experts/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Users/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Users/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Villes/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Villes/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Experts/payees.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Experts/payees.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Earlies/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -57,48 +95,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Factures/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.64" vertical-offset="1574" max-vertical-offset="2496">
-              <caret line="228" column="30" selection-start-line="228" selection-start-column="30" selection-end-line="228" selection-end-column="30" />
-              <folding>
-                <element signature="e#2573#5048#2#PHP" expanded="false" />
-                <element signature="e#5169#6208#2#PHP" expanded="false" />
-                <element signature="e#6324#6395#2#PHP" expanded="false" />
-                <element signature="e#6571#7082#2#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/MessageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.64" vertical-offset="1702" max-vertical-offset="2752">
-              <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+            <state vertical-scroll-proportion="-6.16" vertical-offset="966" max-vertical-offset="1872">
+              <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sent.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Messages/sent.blade.php">
+      <file leaf-file-name="FactureController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/FactureController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.36" vertical-offset="1265" max-vertical-offset="3952">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding>
-                <element signature="e#3064#3109#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-0.64" vertical-offset="368" max-vertical-offset="1696">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contributeur.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/contributeur.blade.php">
+      <file leaf-file-name="Paiement.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Paiement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1699" max-vertical-offset="3120">
-              <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+            <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="624">
+              <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -107,28 +128,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Messages/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4" vertical-offset="400" max-vertical-offset="3920">
-              <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3888">
-              <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Factures/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31428573" vertical-offset="966" max-vertical-offset="1872">
-              <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+            <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="3920">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -144,22 +145,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payees.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Factures/payees.blade.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="1424">
-              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="2208">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#6577#0#Blade" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.8" vertical-offset="371" max-vertical-offset="4720">
+              <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="print.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Factures/print.blade.php">
+      <file leaf-file-name="Centre.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Centre.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1520">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="432">
+              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.76" vertical-offset="470" max-vertical-offset="3472">
+              <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CentreController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48979592" vertical-offset="1968" max-vertical-offset="3056">
+              <caret line="138" column="38" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
+              <folding>
+                <element signature="e#46#82#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,10 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/FinanceController.php" />
-        <option value="$PROJECT_DIR$/public/summernote/dist/summernote.css" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Formations/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Chaire/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ChaireController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Formations/show.blade.php" />
@@ -199,7 +230,6 @@
         <option value="$PROJECT_DIR$/app/Http/VideoStream.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Contributeur/FactureController.php" />
-        <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Test.php" />
         <option value="$PROJECT_DIR$/app/Models/Question.php" />
@@ -228,6 +258,11 @@
         <option value="$PROJECT_DIR$/resources/views/Contributeur/Factures/creances.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Contributeur/Factures/payees.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Contributeur/Factures/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Paiement.php" />
+        <option value="$PROJECT_DIR$/resources/views/Contributeur/Formations/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Centre.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php" />
       </list>
     </option>
   </component>
@@ -386,81 +421,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Contributeur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Contributeur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Messages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Contributeur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Factures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Consultant" />
+              <option name="myItemId" value="National" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -554,7 +515,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Contributeur" />
+              <option name="myItemId" value="National" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -581,11 +568,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\otc\app\Http\Controllers\National" />
+      <recent name="C:\xampp\otc\resources\views" />
       <recent name="C:\xampp\otc\resources\views\Contributeur" />
       <recent name="C:\xampp\otc\resources\views\Contributeur\Messages" />
       <recent name="C:\xampp\otc\app\Http\Controllers\Contributeur" />
-      <recent name="C:\xampp\otc\app\Http\Controllers\Consultant" />
-      <recent name="C:\xampp\otc\resources\views\Contributeur\Formations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\otc\app\Http\Controllers\Contributeur" />
@@ -971,41 +958,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ChaireController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.68" vertical-offset="548" max-vertical-offset="1536">
-          <caret line="86" column="5" selection-start-line="52" selection-start-column="4" selection-end-line="86" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/module_left_side.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.04" vertical-offset="101" max-vertical-offset="544">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_4.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35167465" vertical-offset="5965" max-vertical-offset="17520">
-          <caret line="382" column="9" selection-start-line="382" selection-start-column="9" selection-end-line="382" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22966507" vertical-offset="0" max-vertical-offset="2384">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/File/UploadedFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325359" vertical-offset="2485" max-vertical-offset="4768">
-          <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19617225" vertical-offset="478" max-vertical-offset="976">
@@ -1059,13 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.16" vertical-offset="534" max-vertical-offset="1312">
           <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/FactureController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8" vertical-offset="333" max-vertical-offset="1840">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1157,13 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="896">
           <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.24" vertical-offset="1027" max-vertical-offset="1504">
-          <caret line="143" column="11" selection-start-line="128" selection-start-column="0" selection-end-line="143" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1270,14 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Messages/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4" vertical-offset="400" max-vertical-offset="3920">
-          <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.64" vertical-offset="1574" max-vertical-offset="2496">
@@ -1317,14 +1247,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Factures/creances.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="1344">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Factures/payees.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="1424">
@@ -1343,9 +1265,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Factures/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31428573" vertical-offset="966" max-vertical-offset="1872">
+        <state vertical-scroll-proportion="-6.16" vertical-offset="966" max-vertical-offset="1872">
           <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/FactureController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.64" vertical-offset="368" max-vertical-offset="1696">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Paiement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="624">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Messages/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="3920">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Factures/creances.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="1344">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Formations/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="2208">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#6577#0#Blade" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.8" vertical-offset="371" max-vertical-offset="4720">
+          <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Centre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="432">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Centres/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.76" vertical-offset="470" max-vertical-offset="3472">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48979592" vertical-offset="1968" max-vertical-offset="3056">
+          <caret line="138" column="38" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

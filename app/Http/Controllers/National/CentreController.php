@@ -1,20 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\National;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Centre;
+
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
-use App\Models\Organisme;
+
 use App\Models\Pay;
-use App\Models\Torganisme;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
-class OrganismeController extends Controller
+class CentreController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,10 +25,9 @@ class OrganismeController extends Controller
      */
     public function index()
     {
-	    $organismes = Organisme::all();
-	    $types = Torganisme::all();
-	    $pays = Pay::all();
-	    return view('National/Organismes/index')->with(compact('organismes','types','pays'))->with('success');
+	    $centres = Centre::all()->where('pay_id',Auth::user()->pay_id);
+	    //$pays = Pay::all();
+	    return view('Admin/Centres/index')->with(compact('centres'));
     }
 
     /**
@@ -51,50 +52,41 @@ class OrganismeController extends Controller
 
 	public function store(Request $request)
 	{
-		//
-		//dd($request->imageUri);
-		$ville = new Organisme();
+
 		$data = [
 			'name'=>$request['name'],
 			'address'=>$request['address'],
 			'phone'=>$request['phone'],
-			'type_id'=>$request['type_id'],
+
 			'pay_id'=>$request['pay_id'],
 			'description'=>$request['description'],
 			'email'=>$request['email'],
 			'token'=>sha1(Auth::user()->id. date('Ymdhis'))
 		];
 
-		/*$ville->name = $request['name'];
 
-		$ville->address = $request['address'];
-		$ville->phone = $request['phone'];
-		$ville->type_id = $request['type_id'];
-		$ville->email = $request['email'];
-		$ville->description = $request['description'];
-		$ville->token = sha1(Auth::user()->id. date('Ymdhis'));*/
 
 		if($request->imageUri){
 			$file = $request->imageUri;
 			$ext = $file->getClientOriginalExtension();
 			$arr_ext = array('jpg','png','jpeg','gif');
 			if(in_array($ext,$arr_ext)) {
-				if (!file_exists(public_path('img') . '/organismes')) {
-					mkdir(public_path('img') . '/organismes');
+				if (!file_exists(public_path('img') . '/centres')) {
+					mkdir(public_path('img') . '/centres');
 				}
 				$token = sha1(date('ydmhis'));
-				if (file_exists(public_path('img') . '/organismes/' . $token . '.' . $ext)) {
-					unlink(public_path('img') . '/organismes/' . $token . '.' . $ext);
+				if (file_exists(public_path('img') . '/centres/' . $token . '.' . $ext)) {
+					unlink(public_path('img') . '/centres/' . $token . '.' . $ext);
 				}
 				$name = $token . '.' . $ext;
-				$file->move(public_path('img/organismes'), $name);
-				$data['imageUri'] = 'organismes/' . $name;
+				$file->move(public_path('img/centres'), $name);
+				$data['imageUri'] = 'centres/' . $name;
 			}
 
 		}
 
-		$organisme = Organisme::create($data);
-		if($organisme){
+		$centre = Centre::create($data);
+		if($centre){
 			Validator::make($data, [
 				'email' => [
 					'required',
@@ -104,15 +96,15 @@ class OrganismeController extends Controller
 			$user_data = array(
 				'last_name' => $request->last_name,
 				'first_name' => $request->first_name,
-				'role_id' => 6,
+				'role_id' => 4,
 				'email' => $request->user_email,
 				'password' => Hash::make($request->password),
 				'male' => $request->gender,
 				'address' => $request->user_address,
 				'phone' => $request->user_phone,
 				'remember_token' => sha1(Auth::user()->id. date('Ymdhis')),
-				'organisme_id' => $organisme->id,
-				'pay_id'=>$organisme->pay_id,
+				'centre_id' => $centre->id,
+				'pay_id'=>$centre->pay_id,
 				'creator_id'=>Auth::user()->id,
 				'token'=> sha1(Auth::user()->id . date('YmHisd'))
 
@@ -139,7 +131,7 @@ class OrganismeController extends Controller
 
 			User::create($user_data);
 		}
-		$request->session()->flash('success','L\'organisme financier a été correctement enregistré !!!');
+		$request->session()->flash('success','Le centre  a été correctement enregistré !!!');
 		return back();
 	}
 
@@ -149,9 +141,12 @@ class OrganismeController extends Controller
      * @param  \App\Models\Pay  $pay
      * @return \Illuminate\Http\Response
      */
-    public function show(Pay $pay)
+    public function show($token)
     {
         //
+	    $centre = Centre::where('token',$token)->first();
+
+	    return view('National/Centres/show')->with(compact('centre'));
     }
 
     /**
