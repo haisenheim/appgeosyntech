@@ -33,7 +33,7 @@ MESSAGERIE
                 </li>
 
                 <li class="nav-item">
-                  <a href="/contributeur/mailbox/toto" class="nav-link">
+                  <a href="{{ route('contributeur.mailbox.sent') }}" class="nav-link">
                     <i class="far fa-envelope"></i> Envois
                     <span class="badge bg-warning float-right">{{ $envois->where('lu',0)->count() }}</span>
                   </a>
