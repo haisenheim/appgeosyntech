@@ -26,11 +26,12 @@ MESSAGERIE
             <div class="card-body p-0">
               <ul class="nav nav-pills flex-column">
                 <li class="nav-item active">
-                  <a href="#" class="nav-link">
+                  <a href="/contributeur/mailbox/" class="nav-link">
                     <i class="fas fa-inbox"></i> Boîte de reception
                     <span class="badge bg-success float-right">{{ $receptions->where('lu',0)->count() }}</span>
                   </a>
                 </li>
+
                 <li class="nav-item">
                   <a href="/contributeur/mailbox/toto" class="nav-link">
                     <i class="far fa-envelope"></i> Envois
