@@ -1,6 +1,6 @@
 @extends('......layouts.owner')
 @section('page-title')
-{{ $message->expediteur->name }} - <b> {{ $message->investissement->projet->name }} <small> {{ $message->subject }}</small> </b>
+{{ $message->expediteur->name }} - <b> <small> {{ $message->subject }}</small> </b>
 @endsection
 
 @section('content')
@@ -57,7 +57,7 @@
             <div class="card-body p-0">
 
                 <div class="mailbox-read-info">
-                <h5><b> {{ $message->investissement->projet->name }} <small> {{ $message->subject }}</small> </b></h5>
+                <h5><b> <small> {{ $message->subject }}</small> </b></h5>
                 <h6>De: {{ $message->expediteur->name }} - {{ $message->expediteur->email }}
                   <span class="mailbox-read-time float-right">{{ date_format($message->created_at, 'd/m/Y H:i') }}</span></h6>
               </div>
