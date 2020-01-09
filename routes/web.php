@@ -229,7 +229,7 @@ Route::prefix('contributeur')
 
 		Route::resource('mailbox','MessageController');
 		Route::post('/mailbox/reply','MessageController@reply');
-		Route::get('/mailbox/all-sent','MessageController@getSent');
+		Route::get('/mailbox/sent','MessageController@getSent')->name('mailbox.sent');
 		Route::get('/mailbox/disable/{token}','MessageController@disable');
 		Route::resource('formations','FormationController');
 
