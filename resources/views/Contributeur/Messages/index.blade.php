@@ -32,7 +32,7 @@ MESSAGERIE
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/contributeur/mailbox/get-sent" class="nav-link">
+                  <a href="/contributeur/mailbox/sent" class="nav-link">
                     <i class="far fa-envelope"></i> Envois
                   </a>
                 </li>
