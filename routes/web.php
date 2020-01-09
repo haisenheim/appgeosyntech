@@ -228,8 +228,8 @@ Route::prefix('contributeur')
 	->group(function(){
 
 		Route::resource('mailbox','MessageController');
-		Route::post('/mailbox/reply','MessageController@reply');
-		Route::get('/mailbox/sent','MessageController@getSent')->name('mailbox.sent');
+		Route::post('mailbox/reply','MessageController@reply');
+		Route::get('mailbox/sent','MgsController@getSent')->name('mailbox.sent');
 		Route::get('/mailbox/disable/{token}','MessageController@disable');
 		Route::resource('formations','FormationController');
 
