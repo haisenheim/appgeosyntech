@@ -199,7 +199,7 @@ MESSAGERIE
 <script>
 	$("#pay_id").on('change',function(){
 		// console.log($("#sector_id").val());
-		var url = 'get-consultants-pay';
+		var url = '/get-consultants-pay';
 		$.ajax({
 			url:url,
 			type:'get',
