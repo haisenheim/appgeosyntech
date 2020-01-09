@@ -89,7 +89,7 @@ MESSAGES ENVOYES
                     </td>
 
 
-                    <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/contributeur/mailbox/{{ $envoi->token }}">{{ $envoi->destinataire->name }}</a></td>
+                    <td style="font-weight: {{ $envoi->lu?100:800 }}" class="mailbox-name"><a href="/contributeur/mailbox/{{ $envoi->token }}">{{ $envoi->destinataire->name }}</a></td>
                     <td class="mailbox-subject"> {{ $envoi->subject }}
                     </td>
 
