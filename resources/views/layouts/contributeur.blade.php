@@ -122,10 +122,18 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a href="/contributeur/mailbox" class="nav-link {{ $active==5?'active':'' }}">
+              <i class="nav-icon text-success fa fa-envelope"></i>
+              <p>
+                MESSAGERIE
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="/contributeur/manuel" class="nav-link {{ $active==4?'active':'' }}">
               <i class="nav-icon text-success fas fa-book-open"></i>
               <p>
-                MANUEL UTLISATEUR
+                MANUEL UTILISATEUR
               </p>
             </a>
           </li>

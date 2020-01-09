@@ -14,6 +14,7 @@ use App\Models\Lettre;
 use App\Models\Projet;
 use App\Models\TagsProjet;
 use App\Models\Ville;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
@@ -46,13 +47,18 @@ class DiversController extends Controller
 
 	public function readPdf($token){
 		$path = public_path('pdf').'/'.$token;
+		//return Response::make();
 		//dd($path);
 		//$path = Storage::disk('public')->get('pdf/'.$token);
-		//return (new Response($path,200))->header('Content-Type','application/pdf');
-
-		return response()->setContent($path)->header('Content-Type','application/pdf');
+		return (new Response($path,200))->header('Content-Type','application/pdf');
+		//return response()->content($path)->header('Content-Type','application/pdf');
 	}
 
+
+	public function getConsultantsByPay(Request $request){
+		$consultants = User::all()->where('pay_id',$request->id)->where('role_id',6);
+		return response()->json($consultants);
+	}
 
 	public function getVillesByPay(Request $request){
 		$villes = Ville::all()->where('pay_id',$request->pay_id)->toArray();

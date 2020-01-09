@@ -1,4 +1,4 @@
-@extends('......layouts.owner')
+@extends('......layouts.contributeur')
 
 @section('page-title')
 MESSAGERIE
@@ -117,8 +117,8 @@ MESSAGERIE
                     </td>
 
 
-                    <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/owner/mailbox/{{ $reception->token }}">{{ $reception->expediteur->name }}</a></td>
-                    <td class="mailbox-subject"><b>{{ $reception->investissement->projet->name }}</b> - {{ $reception->subject }}
+                    <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/contributeur/mailbox/{{ $reception->token }}">{{ $reception->expediteur->name }}</a></td>
+                    <td class="mailbox-subject"> {{ $reception->subject }}
                     </td>
 
                     <td class="mailbox-date">{{ date_format($reception->created_at, 'd/m/Y H:i') }}</td>
@@ -160,18 +160,18 @@ MESSAGERIE
                 <div class="card-body">
 
                 <div class="form-group">
-                <label for="">DESTINATAIRE</label>
-                <select name="receptor_id" class="form-control" id="receptor_id">
-                    <option value="0">CHOIX DU DESTINAIRE</option>
-                    @foreach($angels as $angel)
-                        <option value="{{ $angel->id }}">{{ $angel->name  }} - <small>{{ $angel->email }}</small></option>
+                <label for="">PAYS</label>
+                <select name="pay_id" class="form-control" id="pay_id">
+                    <option value="0">CHOIX DU PAYS DU CONSULTANT</option>
+                    @foreach($pays as $p)
+                        <option value="{{ $p->id }}">{{ $p->name  }}</option>
                     @endforeach
                 </select>
 
                 </div>
                 <div class="form-group">
                     <label for="">Projet</label>
-                    <select name="investissement_id"  class="form-control" id="investissement_id">
+                    <select name="receptor_id" class="form-control" id="receptor_id">
 
                     </select>
                 </div>
@@ -197,26 +197,26 @@ MESSAGERIE
 </div>
 
 <script>
-	$("#receptor_id").on('change',function(){
+	$("#pay_id").on('change',function(){
 		// console.log($("#sector_id").val());
-		var url = '/owner/mails/get-investissements';
+		var url = 'get-consultants-pay';
 		$.ajax({
 			url:url,
 			type:'get',
 			dataType:'Json',
-			data:{ id:$("#receptor_id").val()},
+			data:{ id:$("#py_id").val()},
 
 			success: function(data){
-				$("#investissement_id").html("");
+				$("#receptor_id").html("");
 				var option = '';
-				console.log('data  :' + data);
+				//console.log('data  :' + data);
 				var dat =Object.entries(data);
 				//console.log(dat);
 
 
 				for(var i=0; i<dat.length;i++ ){
-					option=option+'<option value='+ dat[i][1].id +'>'+ dat[i][1].projet.name +'</option>';
-					$("#investissement_id").html(option);
+					option=option+'<option value='+ dat[i][1].id +'>'+ dat[i][1].last_name +'  '+ dat[i][1].first_name +'</option>';
+					$("#receptor_id").html(option);
 					//console.log(option);
 				}
 

@@ -85,6 +85,7 @@ Route::name('utils.')
 			Route::get('get-audio/{token}','DiversController@getAudio')->name('audio')->middleware('auth');
 			Route::get('module/test/{token}','TestController@moduleTest');
 			Route::get('read-pdf/{token}','DiversController@readPdf');
+			Route::get('get-consultants-pay','DiversController@getConsultantsByPay');
 
 		});
 
@@ -225,6 +226,8 @@ Route::prefix('contributeur')
 	->middleware(['auth','contributeur'])
 	->name('contributeur.')
 	->group(function(){
+
+		Route::resource('mailbox','MessageController');
 		Route::resource('formations','FormationController');
 
 		// Les Finances
