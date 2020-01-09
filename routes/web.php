@@ -226,8 +226,8 @@ Route::prefix('contributeur')
 	->middleware(['auth','contributeur'])
 	->name('contributeur.')
 	->group(function(){
-		Route::get('test/created','MessageController@getSent')->name('mailbox.sent');
-		Route::resource('mailbox/','MessageController');
+		Route::get('inbox/created','MessageController@getSent')->name('mailbox.sent');
+		Route::resource('mailbox','MessageController');
 		//Route::resource('mailbox/','MessageController@index');
 		Route::post('mailbox/reply','MessageController@reply');
 
