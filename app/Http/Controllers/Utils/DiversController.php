@@ -44,6 +44,12 @@ class DiversController extends Controller
 		return (new Response($path,200))->header('Content-Type','audio/mpeg');
 	}
 
+	public function readPdf($token){
+		$path = public_path('pdf').'/'.$token;
+
+		return (new Response($path,200))->header('Content-Type','pdf');
+	}
+
 
 	public function getVillesByPay(Request $request){
 		$villes = Ville::all()->where('pay_id',$request->pay_id)->toArray();
