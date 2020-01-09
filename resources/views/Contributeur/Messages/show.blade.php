@@ -25,7 +25,7 @@
             <div class="card-body p-0">
               <ul class="nav nav-pills flex-column">
                 <li class="nav-item active">
-                  <a href="#" class="nav-link">
+                  <a href="/contributeur/mailbox" class="nav-link">
                     <i class="fas fa-inbox"></i> Boîte de reception
                     <span class="badge bg-primary float-right">{{ $receptions->where('lu',0)->count() }}</span>
                   </a>
@@ -47,38 +47,7 @@
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Sujets</h3>
 
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body p-0">
-              <ul class="nav nav-pills flex-column">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle text-danger"></i>
-                    Recherche de financements
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle text-warning"></i> Cessions d'actifs
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle text-primary"></i>
-                    Concessions
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.card-body -->
-          </div>
           <!-- /.card -->
         </div>
         <!-- /.col -->
@@ -192,7 +161,7 @@
 
                 </div>
                 <div class="form-group">
-                    <label for="">Projet</label>
+                    <label for="">CONSULTANT</label>
                     <select name="receptor_id" class="form-control" id="receptor_id">
 
                     </select>
@@ -226,7 +195,7 @@
 			url:url,
 			type:'get',
 			dataType:'Json',
-			data:{ id:$("#py_id").val()},
+			data:{ id:$("#pay_id").val()},
 
 			success: function(data){
 				$("#receptor_id").html("");

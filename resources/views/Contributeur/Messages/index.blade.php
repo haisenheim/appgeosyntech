@@ -170,7 +170,7 @@ MESSAGERIE
 
                 </div>
                 <div class="form-group">
-                    <label for="">Projet</label>
+                    <label for="">CONSULTANT</label>
                     <select name="receptor_id" class="form-control" id="receptor_id">
 
                     </select>
@@ -204,7 +204,7 @@ MESSAGERIE
 			url:url,
 			type:'get',
 			dataType:'Json',
-			data:{ id:$("#py_id").val()},
+			data:{ id:$("#pay_id").val()},
 
 			success: function(data){
 				$("#receptor_id").html("");
