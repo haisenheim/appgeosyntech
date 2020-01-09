@@ -45,10 +45,10 @@ class DiversController extends Controller
 	}
 
 	public function readPdf($token){
-		//$path = public_path('pdf').'/'.$token;
+		$path = public_path('pdf').'/'.$token;
 		//dd($path);
-		$path = Storage::disk('public')->get('pdf/'.$token);
-		return (new Response($path,200))->header('Content-Type','pdf');
+		//$path = Storage::disk('public')->get('pdf/'.$token);
+		return (new Response($path,200))->header('Content-Type','application/pdf');
 	}
 
 
