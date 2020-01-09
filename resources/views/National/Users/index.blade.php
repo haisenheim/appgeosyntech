@@ -1,7 +1,7 @@
 
 
 
-@extends('......layouts.admin')
+@extends('......layouts.national')
 
 @section('content-header')
     <div class="container-fluid">
@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/national/dashboard">ACCUEIL</a></li>
               <li class="breadcrumb-item">PARAMETRES</li>
               <li class="breadcrumb-item active">Utilisateurs</li>
             </ol>
@@ -39,7 +39,7 @@
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
                       <th>ROLE</th>
-                      <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -53,7 +53,7 @@
                               <td>{!! $ville->role?$ville->role->name:'-' !!}</td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('admin.users.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('national.users.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
                               </ul>
                               </td>
                           </tr>
@@ -81,85 +81,7 @@
             <!-- /.col -->
           </div>
 
-           <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Nouvel utilisateur</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.users.store')}}" method="post">
-                        {{csrf_field()}}
-                          <div class="card-body">
-                            <div class="form-group">
-                              <label for="name">NOM</label>
-                              <input type="text" class="form-control" id="name" name="last_name" placeholder="Saisir le nom ">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">PRENOM</label>
-                              <input type="text" class="form-control" id="name" name="first_name" placeholder="Saisir le prenom">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">ADRESSE</label>
-                              <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
-                            </div>
 
-                            <div class="form-group">
-                              <label for="phone">TELEPHONE</label>
-                              <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
-                            </div>
-
-                            <div class="form-group">
-                              <label for="pay_id">PAYS</label>
-                              <select name="pay_id" id="pay_id" class="form-control">
-                                @foreach($pays as $p)
-                                    <option value="{{ $p->id }}">{{ $p->name }}</option>
-                                @endforeach
-                              </select>
-                            </div>
-
-                            <div class="form-group">
-                              <label for="role_id">ROLE</label>
-                              <select name="role_id" id="role_id" class="form-control">
-                                    <option value="8">ADMINITRATEUR NATIONAL</option>
-                                    <option value="1">ADMINISTRATEUR OBAC</option>
-                              </select>
-                            </div>
-
-                            <div class="form-group">
-                              <label for="email">EMAIL</label>
-                              <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">MOT DE PASSE</label>
-                              <input type="password" class="form-control" id="name" name="password" placeholder="">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">CONFIRMATION DU MOT DE PASSE</label>
-                              <input type="password" class="form-control" id="name" name="cpassword" placeholder="">
-                            </div>
-                            <div class="form-group">
-                            <label for="exampleInputFile">PHOTO</label>
-                            <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
-
-                          </div>
-                          </div>
-                          <!-- /.card-body -->
-
-                          <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
-                          </div>
-                        </form>
-                      </div>
-
-                    </div>
-                    <!-- /.modal-content -->
-                  </div>
-                  <!-- /.modal-dialog -->
-           </div>
 
 
 <style>

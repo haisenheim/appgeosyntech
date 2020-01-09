@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.national')
 
 @section('content-header')
     <div class="container-fluid">
@@ -8,7 +8,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/national/dashboard">ACCUEIL</a></li>
               <li class="breadcrumb-item">PARAMETRES</li>
               <li class="breadcrumb-item active">VILLES</li>
             </ol>
@@ -46,7 +46,7 @@
                               <td>{!! $ville->pay?$ville->pay->name:'-' !!}</td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('admin.villes.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('national.villes.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
                                  <li class="list-inline-item"><a class="btn btn-success btn-xs btn-edit" title="modifier" data-name="{{ $ville->name }}" data-id="{{$ville->id}}" data-latitude="{{ $ville->latitude }}" data-longitude="{{ $ville->longitude }}" data-toggle="modal" data-target="#editModal-lg" href="#"><i class="fa fa-pencil-alt"></i></a></li>
                               </ul>
                               </td>
@@ -93,7 +93,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.villes.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('national.villes.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">
@@ -152,7 +152,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="/admin/villes/save" method="post">
+                        <form enctype="multipart/form-data" role="form" action="/national/villes/save" method="post">
                         {{csrf_field()}}
                         <input type="hidden" id="ville_id" name="id"/>
                           <div class="card-body">

@@ -84,8 +84,8 @@
            <div class="modal fade" id="modal-lg">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Nouvel utilisateur</h4>
+                      <div class="modal-header bg-info">
+                        <h4 class="modal-title">NOUVEL UTILISATEUR OTC</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -150,7 +150,7 @@
                           <!-- /.card-body -->
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-info btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>

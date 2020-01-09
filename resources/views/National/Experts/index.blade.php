@@ -1,5 +1,5 @@
 
-@extends('......layouts.admin')
+@extends('......layouts.national')
 
 @section('content-header')
     <div class="container-fluid">
@@ -9,7 +9,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/national/dashboard">ACCUEIL</a></li>
 
               <li class="breadcrumb-item active">Consultants</li>
             </ol>
@@ -56,13 +56,13 @@
                                 <td>{!! $user->rang !!} </td>
                                 <td>
                                     <ul class="list-inline">
-                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/consultant/creances/{{ $user->token }}"><i class="fa fa-coins"></i></a></li>
-                                        <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/admin/consultant/payees/{{ $user->token }}"><i class="fa fa-search"></i></a></li>
+                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/consultant/creances/{{ $user->token }}"><i class="fa fa-coins"></i></a></li>
+                                        <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/national/consultant/payees/{{ $user->token }}"><i class="fa fa-search"></i></a></li>
                                         @if(!$user->senior)
                                             @if(!$user->confirmed)
-                                                <li title="Promouvoir le consultant en confirmé" class="list-inline-item"><a class="btn btn-info btn-xs" href="/admin/consultant/set-confirm/{{ $user->token }}"><i class="fa fa-thumbs-up"></i></a></li>
+                                                <li title="Promouvoir le consultant en confirmé" class="list-inline-item"><a class="btn btn-info btn-xs" href="/national/consultant/set-confirm/{{ $user->token }}"><i class="fa fa-thumbs-up"></i></a></li>
                                             @else
-                                                <li title="Promouvoir le consultant en senior" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/consultant/set-senior/{{ $user->token }}"><i class="fa fa-thumbs-up"></i></a></li>
+                                                <li title="Promouvoir le consultant en senior" class="list-inline-item"><a class="btn btn-success btn-xs" href="/national/consultant/set-senior/{{ $user->token }}"><i class="fa fa-thumbs-up"></i></a></li>
                                             @endif
                                         @endif
                                     </ul>
@@ -103,7 +103,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.experts.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('national.experts.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">

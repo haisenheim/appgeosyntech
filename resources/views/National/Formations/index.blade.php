@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.national')
 @section('content')
 
  <div class="card">
@@ -47,12 +47,12 @@
 
                           <td class="project-actions text-right">
                                 <ul>
-                                    <li class="list-inline-item"> <a class="btn btn-primary btn-xs" href="/admin/formations/{{ $formation->token  }}"><i class="fas fa-folder"></i>Afficher</a></li>
+                                    <li class="list-inline-item"> <a class="btn btn-primary btn-xs" href="/national/formations/{{ $formation->token  }}"><i class="fas fa-folder"></i>Afficher</a></li>
 
                                            @if($formation->active)
-                                               <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/admin/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>
+                                               <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>
                                            @else
-                                             <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/admin/formation/enable/{{ $formation->token }}"><i class="fa fa-unlock"></i></a></li>
+                                             <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/national/formation/enable/{{ $formation->token }}"><i class="fa fa-unlock"></i></a></li>
                                            @endif
                                 </ul>
                            </td>
