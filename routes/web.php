@@ -155,12 +155,16 @@ Route::prefix('national')
 	->middleware(['auth','national'])
 	->name('national.')
 	->group(function(){
-		Route::resource('organismes','OrganismeController');
+		Route::resource('centres','OrganismeController');
 		Route::resource('entreprises','EntrepriseController');
+		Route::resource('members','MemberController');
+		Route::resource('formations','FormationController');
+		Route::get('formation/disable/{token}','FormationController@disable');
+		Route::get('formation/enable/{token}','FormationController@enable');
+		Route::get('chaire','FormationController@chaire');
+		Route::resource('contributeurs','ContributeurController');
+
 		//Finances
-		Route::get('apporteur/creances/{token}','FinanceController@getCreancesApporteur');
-		Route::get('apporteur/payees/{token}','FinanceController@getPayeesApporteur');
-		Route::get('apporteur/facture/{token}','FinanceController@showFactureApporteur');
 		Route::get('facture/fill/{token}','FinanceController@fillFacture');
 		Route::get('consultant/creances/{token}','FinanceController@getCreancesConsultant');
 		Route::get('consultant/payees/{token}','FinanceController@getPayeesConsultant');

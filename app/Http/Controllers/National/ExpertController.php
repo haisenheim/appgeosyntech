@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\National;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pay;
@@ -28,7 +28,7 @@ class ExpertController extends Controller
 	    $pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('Admin/Experts/index')->with(compact('users','pays'));
+        return view('National/Experts/index')->with(compact('users','pays'));
 
     }
 
@@ -42,7 +42,7 @@ class ExpertController extends Controller
         //
         //$roles = Role::all();
         $pays = Pay::all();
-        return view('Admin/Experts/create')->with(compact('pays'));
+        return view('National/Experts/create')->with(compact('pays'));
     }
 
     /**

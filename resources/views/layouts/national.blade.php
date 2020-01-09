@@ -76,7 +76,7 @@
     <a href="#" class="brand-link navbar-info">
       <img src="{{asset('img/logo-obac.png')}}" alt="Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">OBAC TRAINING CENTER</span>
+      <span class="brand-text" style="font-weight: 700; font-size: 11px">OBAC TRAINING CENTER</span>
     </a>
 
     <!-- Sidebar -->
@@ -103,7 +103,6 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 TABLEAU DE BORD
-
               </p>
             </a>
           </li>
@@ -119,12 +118,65 @@
           </li>
 
           <li class="nav-item">
-            <a href="/national/angels" class="nav-link">
-              <i class="nav-icon fas fa-coins"></i>
+            <a href="/national/contributeurs" class="nav-link">
+              <i class="nav-icon fas fa-users-cog"></i>
               <p>
-                INVESTISSEURS
+                CONTRIBUTEURS
               </p>
             </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/national/centres" class="nav-link">
+              <i class="nav-icon fas fa-university"></i>
+              <p>
+                ECOLES PARTENAIRES
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/national/entreprises" class="nav-link">
+              <i class="nav-icon fas fa-bank"></i>
+              <p>
+                CLIENTS CORPORATE
+              </p>
+            </a>
+          </li>
+
+         <li class="nav-item">
+            <a href="/national/members" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                CLIENTS ORDINAIRES
+              </p>
+            </a>
+          </li>
+
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-graduation-cap"></i>
+              <p>
+                 FORMATIONS
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/national/formations" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>CONTRIBUTIONS</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/national/chaires" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>CHAIRE OBAC</p>
+                    </a>
+                </li>
+
+
+            </ul>
           </li>
 
 
@@ -173,22 +225,6 @@
               </p>
             </a>
             <ul style="overflow-y: scroll;" class="nav nav-treeview">
-
-
-                <li class="nav-item">
-                <a href="/national/entreprises" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ENTREPRISES</p>
-                </a>
-                </li>
-
-                <li class="nav-item">
-                <a href="/national/organismes" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ORGANISMES FINANCIERS</p>
-                </a>
-               </li>
-
 
               <li class="nav-item">
                 <a href="/national/villes" class="nav-link">

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\National;
 
 use App\Http\Controllers\Controller;
 use App\Models\Cour;
@@ -29,7 +29,7 @@ class FormationController extends Controller
     {
 	    $formations = Formation::all()->where('chaire_obac',0)->sortByDesc('created_at')->paginate(10);
 
-	    return view('Admin/Formations/index')->with(compact('formations'));
+	    return view('National/Formations/index')->with(compact('formations'));
     }
 
 
@@ -190,7 +190,7 @@ class FormationController extends Controller
         //
 	    $formation = Formation::where('token',$token)->first();
 
-	    return view('Admin/Formations/show')->with(compact('formation'));
+	    return view('National/Formations/show')->with(compact('formation'));
     }
 
 
@@ -200,7 +200,7 @@ class FormationController extends Controller
 		//
 		$module = Module::where('token',$token)->first();
 
-		return view('Admin/Formations/show_module')->with(compact('module'));
+		return view('National/Formations/show_module')->with(compact('module'));
 	}
 
     /**

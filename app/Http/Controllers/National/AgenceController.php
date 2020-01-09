@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\National;
 
 use App\Http\Controllers\Controller;
 use App\Models\Agence;
-use App\Models\Devise;
+
 use App\Models\Pay;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
@@ -22,7 +22,7 @@ class AgenceController extends Controller
     {
 	    $devises = Agence::all();
 	    $pays = Pay::all();
-	    return view('Admin/Agences/index')->with(compact('devises','pays'));
+	    return view('National/Agences/index')->with(compact('devises','pays'));
     }
 
     /**

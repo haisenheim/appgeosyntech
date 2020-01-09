@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\National;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pay;
@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
 
-class ClientController extends Controller
+class MemberController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,11 +24,11 @@ class ClientController extends Controller
     public function index()
     {
         //
-        $users = User::all()->where('role_id','=',10);
+        $users = User::all()->where('role_id','=',10)->where('pay_id',Auth::user()->pay_id);
 	    //$pays = Pay::all();
        // dd($villes);
        // echo "Bonjour tout le monde!!";
-        return view('Admin/Clients/index')->with(compact('users'));
+        return view('National/Clients/index')->with(compact('users'));
 
     }
 
@@ -42,7 +42,7 @@ class ClientController extends Controller
         //
         //$roles = Role::all();
         $pays = Pay::all();
-        return view('Admin/Experts/create')->with(compact('pays'));
+        return view('National/Experts/create')->with(compact('pays'));
     }
 
     /**

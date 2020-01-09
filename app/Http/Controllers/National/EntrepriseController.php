@@ -24,9 +24,9 @@ class EntrepriseController extends Controller
      */
     public function index()
     {
-	    $entreprises = Entreprise::all();
-	    $pays = Pay::all();
-	    return view('National/Entreprises/index')->with(compact('entreprises','pays'));
+	    $entreprises = Entreprise::all()->where('pay_id',Auth::user()->pay_id);
+	    //$pays = Pay::all();
+	    return view('National/Entreprises/index')->with(compact('entreprises'));
     }
 
     /**
