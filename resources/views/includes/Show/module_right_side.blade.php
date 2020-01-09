@@ -8,7 +8,7 @@
                     <div class="card">
 
                         <div class="card-body">
-                             <h4 style="padding: 5px; margin-bottom: 5px; border-bottom: 1px solid darkcyan; font-family: "'Gill Sans MT', Calibri, sans-serif" class="page-header">{{ $cour->name }} </h4>
+                             <h4 style="padding: 5px; margin-bottom: 5px; border-bottom: 1px solid darkcyan; font-weight: 700; font-family: Helvetica;" >{{ $cour->name }} </h4>
                              <div class="row">
                                 <div class="col-md-6 col-sm-12">
 
@@ -32,10 +32,10 @@
                                         <p><?= $cour->description ?></p>
                                         @endif
                                         @if($cour->audioUri)
-                                            <audio controls style="width: 200px;" > <source src="{{ asset('podcasts/'.$cour->audioUri) }}" type="audio/mpeg"></audio>
+                                           <p><audio controls style="width: 200px;" > <source src="{{ asset('podcasts/'.$cour->audioUri) }}" type="audio/mpeg"></audio></p>
                                         @endif
                                         @if($cour->pdfUri)
-                                            <a href="/read-pdf/{{ $cour->pdfUri }}"><i class="fa fa-file-pdf"></i> Consulter le fichier</a>
+                                          <p>  <a href="/read-pdf/{{ $cour->pdfUri }}"><i class="fa fa-file-pdf"></i> Consulter le fichier</a> </p>
                                         @endif
 
                                 </div>

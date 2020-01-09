@@ -84,6 +84,7 @@ Route::name('utils.')
 			Route::get('get-agences-ville','DiversController@getAgencesByVille');
 			Route::get('get-audio/{token}','DiversController@getAudio')->name('audio')->middleware('auth');
 			Route::get('module/test/{token}','TestController@moduleTest');
+			Route::get('read-pdf/{token}','DiversController@readPdf');
 
 		});
 
