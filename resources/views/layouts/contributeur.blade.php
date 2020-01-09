@@ -123,7 +123,7 @@
           </li>
           <li class="nav-item">
             <a href="/contributeur/mailbox" class="nav-link {{ $active==5?'active':'' }}">
-              <i class="nav-icon text-success fa fa-envelope"></i>
+              <i class="nav-icon fa fa-envelope"></i>
               <p>
                 MESSAGERIE
               </p>

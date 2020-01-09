@@ -32,6 +32,9 @@ class Contributeur
 	    if(in_array('formations',$path)){
 		    Session::put('active', 2);
 	    }
+	    if(in_array('mailbox',$path)){
+		    Session::put('active', 5);
+	    }
 	    if(in_array('dashboard',$path)){
 		    Session::put('active', 1);
 	    }

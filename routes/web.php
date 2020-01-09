@@ -228,6 +228,7 @@ Route::prefix('contributeur')
 	->group(function(){
 
 		Route::resource('mailbox','MessageController');
+		Route::post('/mailbox/reply','MessageController@reply');
 		Route::resource('formations','FormationController');
 
 		// Les Finances

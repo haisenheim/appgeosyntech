@@ -122,14 +122,14 @@
 <div class="modal fade" id="replyModal">
    <div class="modal-dialog modal-lg">
      <div class="modal-content">
-       <div class="modal-header bg-success">
+       <div class="modal-header bg-info">
          <h4 class="modal-title">REPONSE A {{ $message->expediteur->name }}</h4>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
          </button>
        </div>
        <div class="modal-body">
-         <form enctype="multipart/form-data" role="form" action="/owner/mailbox/reply" method="post">
+         <form enctype="multipart/form-data" role="form" action="/contributeur/mailbox/reply" method="post">
          {{csrf_field()}}
 
            <div class="card">
@@ -143,10 +143,7 @@
                 <input type="text" disabled class="form-control" value="{{ $message->expediteur->name }}"/>
 
                 </div>
-                <div class="form-group">
-                    <label for="">Projet</label>
-                    <input type="text" disabled class="form-control" value="{{ $message->investissement->projet->name }}"/>
-                </div>
+
                 <div class="form-group">
                   <input value="Re : {{ $message->subject }}"  class="form-control" placeholder="Objet:">
                 </div>
@@ -155,7 +152,7 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+               <button type="submit" class="btn btn-info btn-sm btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                 </div>
            </div>
 
@@ -171,32 +168,32 @@
 <div class="modal fade" id="composeModal">
    <div class="modal-dialog modal-lg">
      <div class="modal-content">
-       <div class="modal-header bg-success">
+       <div class="modal-header bg-info">
          <h4 class="modal-title">NOUVEAU MESSAGE</h4>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
          </button>
        </div>
        <div class="modal-body">
-         <form enctype="multipart/form-data" role="form" action="{{route('owner.mailbox.store')}}" method="post">
+         <form enctype="multipart/form-data" role="form" action="{{route('contributeur.mailbox.store')}}" method="post">
          {{csrf_field()}}
 
            <div class="card">
                 <div class="card-body">
 
                 <div class="form-group">
-                <label for="">DESTINATAIRE</label>
-                <select name="receptor_id" class="form-control" id="receptor_id">
-                    <option value="0">CHOIX DU DESTINAIRE</option>
-                    @foreach($angels as $angel)
-                        <option value="{{ $angel->id }}">{{ $angel->name  }} - <small>{{ $angel->email }}</small></option>
+                <label for="">PAYS</label>
+                <select name="pay_id" class="form-control" id="pay_id">
+                    <option value="0">CHOIX DU PAYS DU CONSULTANT</option>
+                    @foreach($pays as $p)
+                        <option value="{{ $p->id }}">{{ $p->name  }}</option>
                     @endforeach
                 </select>
 
                 </div>
                 <div class="form-group">
                     <label for="">Projet</label>
-                    <select name="investissement_id"  class="form-control" id="investissement_id">
+                    <select name="receptor_id" class="form-control" id="receptor_id">
 
                     </select>
                 </div>
@@ -208,7 +205,7 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                <button type="submit" class="btn btn-info btn-sm btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                 </div>
            </div>
 
@@ -222,26 +219,26 @@
 </div>
 
 <script>
-	$("#receptor_id").on('change',function(){
+	$("#pay_id").on('change',function(){
 		// console.log($("#sector_id").val());
-		var url = '/owner/mails/get-investissements';
+		var url = 'get-consultants-pay';
 		$.ajax({
 			url:url,
 			type:'get',
 			dataType:'Json',
-			data:{ id:$("#receptor_id").val()},
+			data:{ id:$("#py_id").val()},
 
 			success: function(data){
-				$("#investissement_id").html("");
+				$("#receptor_id").html("");
 				var option = '';
-				console.log('data  :' + data);
+				//console.log('data  :' + data);
 				var dat =Object.entries(data);
 				//console.log(dat);
 
 
 				for(var i=0; i<dat.length;i++ ){
-					option=option+'<option value='+ dat[i][1].id +'>'+ dat[i][1].projet.name +'</option>';
-					$("#investissement_id").html(option);
+					option=option+'<option value='+ dat[i][1].id +'>'+ dat[i][1].last_name +'  '+ dat[i][1].first_name +'</option>';
+					$("#receptor_id").html(option);
 					//console.log(option);
 				}
 

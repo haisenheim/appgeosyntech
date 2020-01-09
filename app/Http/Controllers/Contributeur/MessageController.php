@@ -117,7 +117,7 @@ class MessageController extends Controller
 	    $pays = Pay::all();
 
 
-        return view('Owner/Messages/show')->with(compact('message','envois','receptions','pays'));
+        return view('Contributeur/Messages/show')->with(compact('message','envois','receptions','pays'));
     }
 
     /**

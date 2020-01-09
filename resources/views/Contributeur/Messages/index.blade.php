@@ -146,14 +146,14 @@ MESSAGERIE
 <div class="modal fade" id="composeModal">
    <div class="modal-dialog modal-lg">
      <div class="modal-content">
-       <div class="modal-header bg-success">
+       <div class="modal-header bg-info">
          <h4 class="modal-title">NOUVEAU MESSAGE</h4>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
          </button>
        </div>
        <div class="modal-body">
-         <form enctype="multipart/form-data" role="form" action="{{route('owner.mailbox.store')}}" method="post">
+         <form enctype="multipart/form-data" role="form" action="{{route('contributeur.mailbox.store')}}" method="post">
          {{csrf_field()}}
 
            <div class="card">
@@ -183,7 +183,7 @@ MESSAGERIE
                 </div>
 
 
-                <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                <button type="submit" class="btn btn-info btn-sm btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                 </div>
            </div>
 
