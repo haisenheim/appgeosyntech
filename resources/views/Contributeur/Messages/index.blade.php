@@ -28,12 +28,13 @@ MESSAGERIE
                 <li class="nav-item active">
                   <a href="#" class="nav-link">
                     <i class="fas fa-inbox"></i> Boîte de reception
-                    <span class="badge bg-primary float-right">{{ $receptions->where('lu',0)->count() }}</span>
+                    <span class="badge bg-success float-right">{{ $receptions->where('lu',0)->count() }}</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/contributeur/mailbox/sent" class="nav-link">
+                  <a href="/contributeur/mailbox/all-sent" class="nav-link">
                     <i class="far fa-envelope"></i> Envois
+                    <span class="badge bg-warning float-right">{{ $envois->where('lu',0)->count() }}</span>
                   </a>
                 </li>
 
