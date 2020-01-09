@@ -37,7 +37,7 @@ class MessageController extends Controller
     }
 
 
-	public function getSent()
+	public function allSent()
 	{
 		//
 		//dd(Auth::user());
