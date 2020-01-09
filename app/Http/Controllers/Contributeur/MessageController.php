@@ -37,6 +37,24 @@ class MessageController extends Controller
     }
 
 
+	public function getSent(Request $request)
+	{
+		//
+		$envois = Message::all()->where('sender_id',Auth::user()->id)->sortBy('created_at',null,true);
+		$receptions = Message::all()->where('receptor_id',Auth::user()->id);
+		$pays = Pay::all();
+		return view('Contributeur/Messages/sent')->with(compact('receptions','envois','pays'));
+
+	}
+
+
+	public function disable($token){
+		$message =  Message::updateOrCreate(['token'=>$token],['active'=>0]);
+
+		return back();
+	}
+
+
 
     /**
      * Show the form for creating a new resource.

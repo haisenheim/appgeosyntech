@@ -1,7 +1,7 @@
 @extends('......layouts.contributeur')
 
 @section('page-title')
-MESSAGERIE
+MESSAGES ENVOYES
 @endsection
 
 @section('content')
@@ -28,12 +28,13 @@ MESSAGERIE
                 <li class="nav-item active">
                   <a href="#" class="nav-link">
                     <i class="fas fa-inbox"></i> Boîte de reception
-                    <span class="badge bg-primary float-right">{{ $receptions->where('lu',0)->count() }}</span>
+                    <span class="badge bg-success float-right">{{ $receptions->where('lu',0)->count() }}</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="/contributeur/mailbox/get-sent" class="nav-link">
                     <i class="far fa-envelope"></i> Envois
+                    <span class="badge bg-warning float-right">{{ $envois->where('lu',0)->where('active',1)->count() }}</span>
                   </a>
                 </li>
 
@@ -41,6 +42,7 @@ MESSAGERIE
                 <li class="nav-item">
                   <a href="#" class="nav-link">
                     <i class="far fa-trash-alt"></i> Corbeille
+                    <span class="badge bg-danger float-right">{{ $envois->where('active',0)->count() }}</span>
                   </a>
                 </li>
               </ul>
@@ -55,7 +57,7 @@ MESSAGERIE
         <div class="col-md-9">
           <div class="card card-info card-outline">
             <div class="card-header">
-              <h3 class="card-title">Boîte de reception</h3>
+              <h3 class="card-title">Boîte d'envoi</h3>
 
               <!-- /.card-tools -->
             </div>
@@ -67,15 +69,16 @@ MESSAGERIE
                   <thead>
                       <tr>
                         <th></th>
-                        <th>Expediteur</th>
+                        <th>Destinataire</th>
                         <th>Objet</th>
 
                         <th>Date</th>
+                        <th></th>
                       </tr>
                   </thead>
                   <tbody>
 
-                  @foreach($receptions as $reception)
+                  @foreach($envois as $envoi)
 
                   <tr>
                     <td>
@@ -86,11 +89,12 @@ MESSAGERIE
                     </td>
 
 
-                    <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/contributeur/mailbox/{{ $reception->token }}">{{ $reception->expediteur->name }}</a></td>
-                    <td class="mailbox-subject"> {{ $reception->subject }}
+                    <td style="font-weight: {{ $reception->lu?100:800 }}" class="mailbox-name"><a href="/contributeur/mailbox/{{ $envoi->token }}">{{ $envoi->destinataire->name }}</a></td>
+                    <td class="mailbox-subject"> {{ $envoi->subject }}
                     </td>
 
-                    <td class="mailbox-date">{{ date_format($reception->created_at, 'd/m/Y H:i') }}</td>
+                    <td class="mailbox-date">{{ date_format($envoi->created_at, 'd/m/Y H:i') }}</td>
+                    <td> <a href="/contributeur/mailbox/disable/{{ $envoi->token }}"><i class="fa fa-trash"></i></a></td>
                   </tr>
                   @endforeach
 

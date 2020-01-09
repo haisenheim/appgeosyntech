@@ -229,6 +229,8 @@ Route::prefix('contributeur')
 
 		Route::resource('mailbox','MessageController');
 		Route::post('/mailbox/reply','MessageController@reply');
+		Route::post('/mailbox/get-sent','MessageController@getSent');
+		Route::get('/mailbox/disable/{token}','MessageController@disable');
 		Route::resource('formations','FormationController');
 
 		// Les Finances

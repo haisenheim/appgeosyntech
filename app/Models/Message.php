@@ -22,7 +22,7 @@ class Message extends Model
 	public function expediteur(){
 		return $this->belongsTo('App\User','sender_id');
 	}
-	public function destinaire(){
+	public function destinataire(){
 		return $this->belongsTo('App\User','receptor_id');
 	}
 }
