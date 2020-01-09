@@ -26,7 +26,7 @@ class MessageController extends Controller
 
 
 
-    public function index(Request $request)
+    public function index()
     {
         //
         $receptions = Message::all()->where('receptor_id',Auth::user()->id)->sortBy('created_at',null,true);
@@ -37,7 +37,7 @@ class MessageController extends Controller
     }
 
 
-	public function getSent(Request $request)
+	public function getSent()
 	{
 		//
 		$envois = Message::all()->where('sender_id',Auth::user()->id)->sortBy('created_at',null,true);
