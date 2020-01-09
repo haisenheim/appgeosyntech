@@ -12,8 +12,8 @@ class Paiement extends Model
 		return $this->belongsTo('App\Models\Facture','facture_consultant_id');
 	}
 
-	public function facture_apporteur(){
-		return $this->belongsTo('App\Models\Facture','facture_apporteur_id');
+	public function facture_contributeur(){
+		return $this->belongsTo('App\Models\Facture','facture_contributeur_id');
 	}
 
 	public function facture_alliages(){
