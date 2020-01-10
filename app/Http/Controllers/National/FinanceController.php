@@ -4,6 +4,8 @@ namespace App\Http\Controllers\National;
 
 use App\Http\Controllers\Controller;
 use App\Models\Actif;
+use App\Models\Centre;
+use App\Models\Entreprise;
 use App\Models\Facture;
 use App\Models\Paiement;
 use App\Models\Projet;
@@ -20,28 +22,26 @@ class FinanceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getCreancesApporteur($token)
+    public function getCreancesCentre($token)
     {
         //
-	    $apporteur = User::where('token',$token)->first();
-	    $factures = Facture::orderBy('created_at','desc')->where('apporteur',1)->where('owner_id',$apporteur->id)->where('filled',0)->paginate(12);
-
-	    return view('National/Commercials/creances')->with(compact('factures','apporteur'));
+	    $centre = Centre::where('token',$token)->first();
+	    $factures = Facture::orderBy('created_at','desc')->where('centre',1)->where('centre_id',$centre->id)->where('filled',0)->paginate(12);
+	    return view('National/Centres/creances')->with(compact('factures','centre'));
     }
 
-	public function getPayeesApporteur($token)
+	public function getPayeesCentre($token)
 	{
 		//
-		$apporteur = User::where('token',$token)->first();
-		$factures = Facture::orderBy('created_at','desc')->where('apporteur',1)->where('owner_id',$apporteur->id)->where('filled',1)->paginate(12);
-
-		return view('National/Commercials/payees')->with(compact('factures','apporteur'));
+		$centre = Centre::where('token',$token)->first();
+		$factures = Facture::orderBy('created_at','desc')->where('centre',1)->where('centre_id',$centre->id)->where('filled',1)->paginate(12);
+		return view('National/Centres/payees')->with(compact('factures','centre'));
 	}
 
-	public function showFactureApporteur( $token)
+	public function showFactureCentre( $token)
 	{
 		$facture = Facture::where('token',$token)->first();
-		return view('National/Commercials/facture')->with(compact('facture'));
+		return view('National/Centres/facture')->with(compact('facture'));
 		//
 	}
 

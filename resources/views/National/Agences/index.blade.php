@@ -35,7 +35,7 @@
                       <th>PAYS</th>
 
 
-                      <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+                      <th><a class="btn btn-info btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
                     </tr>
                     </thead>
                     <tbody>

@@ -56,8 +56,8 @@
 
                                 <td>
                                     <ul class="list-inline">
-                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/consultant/creances/{{ $user->token }}"><i class="fa fa-coins"></i></a></li>
-                                        <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/national/consultant/payees/{{ $user->token }}"><i class="fa fa-search"></i></a></li>
+                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/contributeur/creances/{{ $user->token }}"><i class="fa fa-coins"></i></a></li>
+                                        <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/national/contributeur/payees/{{ $user->token }}"><i class="fa fa-search"></i></a></li>
 
                                             @if($user->active)
                                                 <li title="bloquer le compte" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/contributeur/disable/{{ $user->token }}"><i class="fa fa-lock"></i></a></li>

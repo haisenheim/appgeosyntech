@@ -46,6 +46,20 @@ class EntrepriseController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+	public function disable($token){
+		$entreprise = Entreprise::updateOrCreate(['token'=>$token],['active'=>0]);
+		User::updateOrCreate(['entreprise_id'=>$entreprise->id],['active'=>0]);
+
+		return back();
+	}
+
+	public function enable($token){
+		$entreprise = Entreprise::updateOrCreate(['token'=>$token],['active'=>1]);
+		User::updateOrCreate(['entreprise_id'=>$entreprise->id],['active'=>1]);
+
+		return back();
+	}
+
 
 
 

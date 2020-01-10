@@ -39,7 +39,7 @@
                       <th>DATE DE CREATION</th>
 
 
-                      <th></th>
+                      <th><a class="btn btn-info btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -55,8 +55,19 @@
 
                               <td><?= date_format($ville->created_at,'d/m/Y H:i') ?></td>
                               <td>
+                                    <ul class="list-inline">
+                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/centre/creances/{{ $ville->token }}"><i class="fa fa-coins"></i></a></li>
+                                        <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/national/centre/payees/{{ $ville->token }}"><i class="fa fa-search"></i></a></li>
 
-                              </td>
+                                            @if($ville->active)
+                                                <li title="bloquer le partenaire" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/centre/disable/{{ $ville->token }}"><i class="fa fa-lock"></i></a></li>
+                                            @else
+                                              <li title="débloquer le partenaire" class="list-inline-item"><a class="btn btn-success btn-xs" href="/national/centre/enable/{{ $ville->token }}"><i class="fa fa-unlock"></i></a></li>
+                                            @endif
+
+                                    </ul>
+                                </td>
+
                           </tr>
                       @endforeach
 
