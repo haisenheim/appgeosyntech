@@ -65,9 +65,7 @@ class EntrepriseController extends Controller
 
 	public function store(Request $request)
 	{
-		//
-		//dd($request->imageUri);
-		//$ville = new Organisme();
+
 		$data = [
 			'name'=>$request['name'],
 			'address'=>$request['address'],
@@ -78,15 +76,6 @@ class EntrepriseController extends Controller
 			'email'=>$request['email'],
 			'token'=>sha1(Auth::user()->id. date('Ymdhis'))
 		];
-
-		/*$ville->name = $request['name'];
-
-		$ville->address = $request['address'];
-		$ville->phone = $request['phone'];
-		$ville->type_id = $request['type_id'];
-		$ville->email = $request['email'];
-		$ville->description = $request['description'];
-		$ville->token = sha1(Auth::user()->id. date('Ymdhis'));*/
 
 		if($request->imageUri){
 			$file = $request->imageUri;
@@ -163,10 +152,12 @@ class EntrepriseController extends Controller
      * @param  \App\Models\Pay  $pay
      * @return \Illuminate\Http\Response
      */
-    public function show(Pay $pay)
-    {
-        //
-    }
+	public function show($token)
+	{
+		//
+		$entreprise = Entreprise::where('token',$token)->first();
+		return view('National/Entreprises/show')->with(compact('entreprise'));
+	}
 
     /**
      * Show the form for editing the specified resource.

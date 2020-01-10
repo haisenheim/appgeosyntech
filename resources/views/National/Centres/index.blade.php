@@ -56,6 +56,7 @@
                               <td><?= date_format($ville->created_at,'d/m/Y H:i') ?></td>
                               <td>
                                     <ul class="list-inline">
+                                        <li title="Afficher" class="list-inline-item"><a class="btn btn-info btn-xs" href="/national/centres/{{ $ville->token }}"><i class="fa fa-search"></i></a></li>
                                         <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/centre/creances/{{ $ville->token }}"><i class="fa fa-coins"></i></a></li>
                                         <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-warning btn-xs" href="/national/centre/payees/{{ $ville->token }}"><i class="fa fa-search"></i></a></li>
 

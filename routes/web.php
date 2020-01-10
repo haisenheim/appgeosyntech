@@ -155,14 +155,21 @@ Route::prefix('national')
 	->middleware(['auth','national'])
 	->name('national.')
 	->group(function(){
+		Route::get('centre/disable/{token}','CentreController@disable');
+		Route::get('centre/enable/{token}','CentreController@enable');
+		Route::get('corporate/disable/{token}','EntrepriseController@disable');
+		Route::get('corporate/enable/{token}','EntrepriseController@enable');
 		Route::resource('agences','AgenceController');
 		Route::resource('centres','CentreController');
 		Route::resource('entreprises','EntrepriseController');
 		Route::resource('members','MemberController');
-		Route::resource('formations','FormationController');
+
 		Route::get('formation/disable/{token}','FormationController@disable');
 		Route::get('formation/enable/{token}','FormationController@enable');
 		Route::get('chaire','FormationController@chaire');
+
+		Route::resource('formations','FormationController');
+
 		Route::get('contributeur/creances/{token}','FinanceController@getCreancesConsultant');
 
 		Route::get('contributeur/payees/{token}','FinanceController@getPayeesContributeur');
@@ -175,16 +182,12 @@ Route::prefix('national')
 
 
 
-		Route::get('corporate/disable/{token}','EntrepriseController@disable');
-		Route::get('corporate/enable/{token}','EntrepriseController@enable');
-
 		Route::get('centre/creances/{token}','FinanceController@getCreancesCentre');
 
 		Route::get('centre/payees/{token}','FinanceController@getPayeesCentre');
 		Route::get('centre/facture/{token}','FinanceController@showFactureCentre');
 
-		Route::get('centre/disable/{token}','CentreController@disable');
-		Route::get('centre/enable/{token}','CentreController@enable');
+
 
 		//Finances
 		Route::get('facture/fill/{token}','FinanceController@fillFacture');

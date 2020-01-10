@@ -35,7 +35,7 @@
                       <th>PAYS</th>
 
 
-                      <th><a class="btn btn-info btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+                      <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -44,10 +44,10 @@
                               <td>{!! $ville->name !!} </td>
                               <td>{!!$ville->ville->name !!}</td>
                               <td>{!! $ville->ville->pay->name !!} </td>
-
-
                               <td>
-
+                                    <ul class="list-inline">
+                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-info btn-xs" href="/national/agences/{{ $ville->token }}"><i class="fa fa-search"></i></a></li>
+                                    </ul>
                               </td>
                           </tr>
                       @endforeach

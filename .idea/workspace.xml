@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Agences\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Centres\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\National\Entreprises\create.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Entreprise.php" afterPath="$PROJECT_DIR$/app/Models/Entreprise.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AgenceController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AgenceController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/National/FinanceController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/FinanceController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Contributeurs/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Contributeurs/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -49,32 +44,42 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.03265306" vertical-offset="1408" max-vertical-offset="3344">
-              <caret line="154" column="37" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.22857143" vertical-offset="1376" max-vertical-offset="3392">
+              <caret line="158" column="70" selection-start-line="158" selection-start-column="70" selection-end-line="158" selection-end-column="70" />
               <folding>
                 <element signature="e#2573#5048#2#PHP" expanded="false" />
-                <element signature="e#7563#7634#2#PHP" expanded="false" />
-                <element signature="e#7810#8321#2#PHP" expanded="false" />
+                <element signature="e#7566#7637#2#PHP" expanded="false" />
+                <element signature="e#7813#8324#2#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpertController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/ExpertController.php">
+      <file leaf-file-name="AgenceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.64" vertical-offset="544" max-vertical-offset="2480">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+            <state vertical-scroll-proportion="-12.8" vertical-offset="464" max-vertical-offset="1472">
+              <caret line="56" column="70" selection-start-line="56" selection-start-column="70" selection-end-line="56" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContributeurController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/ContributeurController.php">
+      <file leaf-file-name="AgenceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AgenceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.36" vertical-offset="1494" max-vertical-offset="2384">
-              <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="127" selection-end-column="5" />
+            <state vertical-scroll-proportion="-0.64" vertical-offset="1248" max-vertical-offset="2320">
+              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/National/Agences/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.2" vertical-offset="454" max-vertical-offset="3600">
+              <caret line="49" column="41" selection-start-line="47" selection-start-column="36" selection-end-line="49" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -83,9 +88,12 @@
       <file leaf-file-name="EntrepriseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.08" vertical-offset="294" max-vertical-offset="3184">
-              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-              <folding />
+            <state vertical-scroll-proportion="-11.84" vertical-offset="744" max-vertical-offset="1744">
+              <caret line="157" column="65" selection-start-line="157" selection-start-column="65" selection-end-line="157" selection-end-column="65" />
+              <folding>
+                <element signature="e#1505#3975#0#PHP" expanded="false" />
+                <element signature="e#1559#1818#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,8 +101,8 @@
       <file leaf-file-name="CentreController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.88" vertical-offset="2064" max-vertical-offset="3264">
-              <caret line="146" column="68" selection-start-line="146" selection-start-column="68" selection-end-line="146" selection-end-column="68" />
+            <state vertical-scroll-proportion="-0.64" vertical-offset="2208" max-vertical-offset="3264">
+              <caret line="139" column="22" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
               <folding>
                 <element signature="e#49#85#0#PHP" expanded="true" />
               </folding>
@@ -125,8 +133,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.4" vertical-offset="611" max-vertical-offset="1936">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.08" vertical-offset="611" max-vertical-offset="1952">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -135,18 +143,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/National/Centres/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.88" vertical-offset="627" max-vertical-offset="3552">
-              <caret line="64" column="80" selection-start-line="64" selection-start-column="80" selection-end-line="64" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/National/Contributeurs/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.4" vertical-offset="659" max-vertical-offset="4064">
-              <caret line="59" column="166" selection-start-line="59" selection-start-column="166" selection-end-line="59" selection-end-column="166" />
+            <state vertical-scroll-proportion="-12.04" vertical-offset="627" max-vertical-offset="3568">
+              <caret line="58" column="140" selection-start-line="58" selection-start-column="140" selection-end-line="58" selection-end-column="140" />
               <folding />
             </state>
           </provider>
@@ -165,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/includes/head-tl3.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/contributeur.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Contributeur.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/MessageController.php" />
@@ -201,21 +198,22 @@
         <option value="$PROJECT_DIR$/resources/views/National/Villes/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/ExpertController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/FormationController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/MemberController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/ContributeurController.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Clients/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/National.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/national.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Contributeurs/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Entreprise.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/FinanceController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AgenceController.php" />
+        <option value="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -401,58 +399,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Entreprises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="National" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Contributeurs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="National" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Centres" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -963,14 +909,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contributeur/MessageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.64" vertical-offset="1702" max-vertical-offset="2752">
-          <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Contributeur/Messages/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3888">
@@ -1306,24 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2416">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#49#85#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Agences/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.16" vertical-offset="281" max-vertical-offset="3600">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/National/Contributeurs/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.4" vertical-offset="659" max-vertical-offset="4064">
@@ -1364,48 +1284,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.4" vertical-offset="611" max-vertical-offset="1936">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state vertical-scroll-proportion="-12.8" vertical-offset="464" max-vertical-offset="1472">
+          <caret line="56" column="70" selection-start-line="56" selection-start-column="70" selection-end-line="56" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Centres/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.88" vertical-offset="627" max-vertical-offset="3552">
-          <caret line="64" column="80" selection-start-line="64" selection-start-column="80" selection-end-line="64" selection-end-column="80" />
-          <folding />
+        <state vertical-scroll-proportion="-11.84" vertical-offset="744" max-vertical-offset="1744">
+          <caret line="157" column="65" selection-start-line="157" selection-start-column="65" selection-end-line="157" selection-end-column="65" />
+          <folding>
+            <element signature="e#1505#3975#0#PHP" expanded="false" />
+            <element signature="e#1559#1818#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.88" vertical-offset="2064" max-vertical-offset="3264">
-          <caret line="146" column="68" selection-start-line="146" selection-start-column="68" selection-end-line="146" selection-end-column="68" />
+        <state vertical-scroll-proportion="-0.64" vertical-offset="2208" max-vertical-offset="3264">
+          <caret line="139" column="22" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
           <folding>
             <element signature="e#49#85#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AgenceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.08" vertical-offset="294" max-vertical-offset="3184">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        <state vertical-scroll-proportion="-0.64" vertical-offset="1248" max-vertical-offset="2320">
+          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/National/Agences/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.2" vertical-offset="454" max-vertical-offset="3600">
+          <caret line="49" column="41" selection-start-line="47" selection-start-column="36" selection-end-line="49" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/National/Centres/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.04" vertical-offset="627" max-vertical-offset="3568">
+          <caret line="58" column="140" selection-start-line="58" selection-start-column="140" selection-end-line="58" selection-end-column="140" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.08" vertical-offset="611" max-vertical-offset="1952">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03265306" vertical-offset="1408" max-vertical-offset="3344">
-          <caret line="154" column="37" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.22857143" vertical-offset="1376" max-vertical-offset="3392">
+          <caret line="158" column="70" selection-start-line="158" selection-start-column="70" selection-end-line="158" selection-end-column="70" />
           <folding>
             <element signature="e#2573#5048#2#PHP" expanded="false" />
-            <element signature="e#7563#7634#2#PHP" expanded="false" />
-            <element signature="e#7810#8321#2#PHP" expanded="false" />
+            <element signature="e#7566#7637#2#PHP" expanded="false" />
+            <element signature="e#7813#8324#2#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

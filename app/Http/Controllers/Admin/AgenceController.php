@@ -91,7 +91,6 @@ class AgenceController extends Controller
 		}
 
 		$user->save();
-
 		$request->session()->flash('success','L\'agence a été correctement enregistrée !!!');
 		return back();
 
@@ -104,10 +103,12 @@ class AgenceController extends Controller
      * @param  \App\Models\Pay  $pay
      * @return \Illuminate\Http\Response
      */
-    public function show(Pay $pay)
-    {
-        //
-    }
+	public function show($token)
+	{
+		//
+		$agence = Agence::where('token',$token)->first();
+		return view('Admin/Agences/show')->with(compact('agence'));
+	}
 
     /**
      * Show the form for editing the specified resource.
