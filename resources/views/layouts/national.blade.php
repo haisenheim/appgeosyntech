@@ -99,7 +99,7 @@
 
 
           <li class="nav-item">
-            <a href="/national/dashboard" class="nav-link active">
+            <a href="/national/dashboard" class="nav-link {{ $active==1?'active':'' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 TABLEAU DE BORD
@@ -109,7 +109,7 @@
 
 
             <li class="nav-item">
-            <a href="/national/experts" class="nav-link">
+            <a href="/national/experts" class="nav-link {{ $active==2?'active':'' }}">
               <i class="nav-icon fas fa-user-friends"></i>
               <p>
                 CONSULTANTS
@@ -118,7 +118,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="/national/contributeurs" class="nav-link">
+            <a href="/national/contributeurs" class="nav-link {{ $active==3?'active':'' }}">
               <i class="nav-icon fas fa-users-cog"></i>
               <p>
                 CONTRIBUTEURS
@@ -126,35 +126,10 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/national/centres" class="nav-link">
-              <i class="nav-icon fas fa-university"></i>
-              <p>
-                ECOLES PARTENAIRES
-              </p>
-            </a>
-          </li>
 
-          <li class="nav-item">
-            <a href="/national/entreprises" class="nav-link">
-              <i class="nav-icon fas fa-bank"></i>
-              <p>
-                CLIENTS CORPORATE
-              </p>
-            </a>
-          </li>
-
-         <li class="nav-item">
-            <a href="/national/members" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                CLIENTS ORDINAIRES
-              </p>
-            </a>
-          </li>
 
           <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ $active==4?'active':'' }}">
               <i class="nav-icon fas fa-graduation-cap"></i>
               <p>
                  FORMATIONS
@@ -179,9 +154,40 @@
             </ul>
           </li>
 
+          <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link {{ $active==5?'active':'' }}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                 CLIENTS
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="/national/members" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        CLIENTS ORDINAIRES
+                      </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/national/entreprises" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>CLIENTS CORPORATE</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/national/centres" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>ECOLES PARTENAIRES</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
 
           <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ $active==6?'active':'' }}">
               <i class="nav-icon fas fa-coins"></i>
               <p>
                  FINANCES
@@ -217,7 +223,7 @@
           </li>
 
           <li  class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{ $active==7?'active':'' }}">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 PARAMETRES
@@ -227,9 +233,16 @@
             <ul style="overflow-y: scroll;" class="nav nav-treeview">
 
               <li class="nav-item">
+                <a href="/national/agences" class="nav-link">
+                  <i class="far fa-circle text-info nav-icon"></i>
+                  <p>AGENCES</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a href="/national/villes" class="nav-link">
                   <i class="far fa-circle text-info nav-icon"></i>
-                  <p>Villes</p>
+                  <p>VILLES</p>
                 </a>
               </li>
               <li class="nav-item">
