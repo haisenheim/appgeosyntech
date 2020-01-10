@@ -58,7 +58,7 @@ class CentreController extends Controller
 			'address'=>$request['address'],
 			'phone'=>$request['phone'],
 
-			'pay_id'=>$request['pay_id'],
+			'pay_id'=>Auth::user()->pay_id,
 			'description'=>$request['description'],
 			'email'=>$request['email'],
 			'token'=>sha1(Auth::user()->id. date('Ymdhis'))

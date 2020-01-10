@@ -35,7 +35,7 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
-                      <th>PAYS</th>
+
                       <th>DATE DE CREATION</th>
 
 
@@ -44,7 +44,7 @@
                     </thead>
                     <tbody>
 
-                    @foreach($entreprises as $ville)
+                    @foreach($centres as $ville)
 
                           <tr>
                               <td>{!! $ville->name !!} </td>
@@ -52,7 +52,7 @@
                               <td>{!! $ville->address !!} </td>
                               <td>{!! $ville->phone !!} </td>
                               <td>{!! $ville->email !!} </td>
-                              <td>{{ $ville->pay->name }}</td>
+
                               <td><?= date_format($ville->created_at,'d/m/Y H:i') ?></td>
                               <td>
 
@@ -86,25 +86,19 @@
            <div class="modal fade" id="modal-lg">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Nouvelle entreprise</h4>
+                      <div class="modal-header bg-info">
+                        <h4 class="modal-title">NOUVELLE ECOLE PARTENAIRE</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="" method="post">
+                        <form enctype="multipart/form-data" role="form" action="/national/centres/" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">
                               <label for="name">NOM</label>
                               <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom de l'entreprise">
-                            </div>
-
-
-                            <div class="form-group">
-                              <label for="type_id">PAYS</label>
-
                             </div>
 
                             <div class="form-group">
@@ -173,7 +167,7 @@
                           <!-- /.card-body -->
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-success"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-info btn-block btn-sm"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>
