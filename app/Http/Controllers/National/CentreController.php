@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\National;
 
 use App\Http\Controllers\Controller;
 use App\Models\Centre;
@@ -27,7 +27,7 @@ class CentreController extends Controller
     {
 	    $centres = Centre::all()->where('pay_id',Auth::user()->pay_id);
 	    //$pays = Pay::all();
-	    return view('Admin/Centres/index')->with(compact('centres'));
+	    return view('National/Centres/index')->with(compact('centres'));
     }
 
     /**
