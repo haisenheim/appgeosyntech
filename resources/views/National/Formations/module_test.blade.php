@@ -1,4 +1,4 @@
-@extends('......layouts.contributeur')
+@extends('......layouts.national')
 @section('page-title')
 {{ $module->name }}
 @endsection
@@ -140,18 +140,4 @@
 
 
 
-@section('nav_actions')
-<main>
-    <nav class="floating-menu">
-        <ul class="main-menu">
-            <li>
-                <a title="Ajouter une question" href="#" data-toggle="modal" data-target="#coursAdd" class="ripple">
-                    <i class="fa fa-plus-circle fa-lg"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="menu-bg"></div>
-    </nav>
-</main>
 
-@endsection
