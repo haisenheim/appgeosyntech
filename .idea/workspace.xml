@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -72,8 +74,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/National/Agences/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.2" vertical-offset="454" max-vertical-offset="3600">
-              <caret line="49" column="41" selection-start-line="47" selection-start-column="36" selection-end-line="49" selection-end-column="41" />
+            <state vertical-scroll-proportion="-12.56" vertical-offset="454" max-vertical-offset="3600">
+              <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -82,21 +84,21 @@
       <file leaf-file-name="EntrepriseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.84" vertical-offset="744" max-vertical-offset="1744">
-              <caret line="157" column="65" selection-start-line="157" selection-start-column="65" selection-end-line="157" selection-end-column="65" />
+            <state vertical-scroll-proportion="-1.28" vertical-offset="592" max-vertical-offset="1776">
+              <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
               <folding>
-                <element signature="e#1505#3975#0#PHP" expanded="false" />
-                <element signature="e#1559#1818#0#PHP" expanded="false" />
+                <element signature="e#1603#4073#0#PHP" expanded="false" />
+                <element signature="e#1657#1916#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CentreController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CentreController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3265306" vertical-offset="2064" max-vertical-offset="3280">
-              <caret line="139" column="35" selection-start-line="139" selection-start-column="35" selection-end-line="139" selection-end-column="35" />
+            <state vertical-scroll-proportion="-11.52" vertical-offset="2064" max-vertical-offset="3296">
+              <caret line="147" column="45" selection-start-line="147" selection-start-column="45" selection-end-line="147" selection-end-column="45" />
               <folding>
                 <element signature="e#49#85#0#PHP" expanded="true" />
               </folding>
@@ -134,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/National/Centres/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.04" vertical-offset="627" max-vertical-offset="3568">
-              <caret line="58" column="140" selection-start-line="58" selection-start-column="140" selection-end-line="58" selection-end-column="140" />
+            <state vertical-scroll-proportion="0.6981132" vertical-offset="627" max-vertical-offset="3568">
+              <caret line="60" column="129" selection-start-line="60" selection-start-column="129" selection-end-line="60" selection-end-column="129" />
               <folding />
             </state>
           </provider>
@@ -201,13 +203,13 @@
         <option value="$PROJECT_DIR$/app/Models/Entreprise.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/FinanceController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/AgenceController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AgenceController.php" />
-        <option value="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Entreprises/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php" />
+        <option value="$PROJECT_DIR$/resources/views/National/Agences/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/National/Centres/index.blade.php" />
       </list>
     </option>
   </component>
@@ -1286,37 +1288,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.84" vertical-offset="744" max-vertical-offset="1744">
-          <caret line="157" column="65" selection-start-line="157" selection-start-column="65" selection-end-line="157" selection-end-column="65" />
-          <folding>
-            <element signature="e#1505#3975#0#PHP" expanded="false" />
-            <element signature="e#1559#1818#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AgenceController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.64" vertical-offset="1248" max-vertical-offset="2320">
           <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Agences/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.2" vertical-offset="454" max-vertical-offset="3600">
-          <caret line="49" column="41" selection-start-line="47" selection-start-column="36" selection-end-line="49" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/National/Centres/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.04" vertical-offset="627" max-vertical-offset="3568">
-          <caret line="58" column="140" selection-start-line="58" selection-start-column="140" selection-end-line="58" selection-end-column="140" />
           <folding />
         </state>
       </provider>
@@ -1343,11 +1318,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3265306" vertical-offset="2064" max-vertical-offset="3280">
-          <caret line="139" column="35" selection-start-line="139" selection-start-column="35" selection-end-line="139" selection-end-column="35" />
+        <state vertical-scroll-proportion="-11.52" vertical-offset="2064" max-vertical-offset="3296">
+          <caret line="147" column="45" selection-start-line="147" selection-start-column="45" selection-end-line="147" selection-end-column="45" />
           <folding>
             <element signature="e#49#85#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/EntrepriseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.28" vertical-offset="592" max-vertical-offset="1776">
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+          <folding>
+            <element signature="e#1603#4073#0#PHP" expanded="false" />
+            <element signature="e#1657#1916#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/National/Agences/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.56" vertical-offset="454" max-vertical-offset="3600">
+          <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/National/Centres/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6981132" vertical-offset="627" max-vertical-offset="3568">
+          <caret line="60" column="129" selection-start-line="60" selection-start-column="129" selection-end-line="60" selection-end-column="129" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -145,7 +145,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/national/chaires" class="nav-link">
+                    <a href="/national/chaire" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>CHAIRE OBAC</p>
                     </a>

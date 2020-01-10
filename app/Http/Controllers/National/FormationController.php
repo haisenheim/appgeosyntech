@@ -32,6 +32,12 @@ class FormationController extends Controller
 	    return view('National/Formations/index')->with(compact('formations'));
     }
 
+	public function chaire()
+	{
+		$formations = Formation::all()->where('chaire_obac',1)->sortByDesc('created_at')->paginate(10);
+		return view('National/Formations/index')->with(compact('formations'));
+	}
+
 
 	public function disable($token){
 		$user = Formation::updateOrCreate(['token'=>$token],['active'=>0]);

@@ -46,7 +46,7 @@
                               <td>{!! $ville->ville->pay->name !!} </td>
                               <td>
                                     <ul class="list-inline">
-                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-info btn-xs" href="/national/agences/{{ $ville->token }}"><i class="fa fa-search"></i></a></li>
+                                        <li title="Afficher" class="list-inline-item"><a class="btn btn-info btn-xs" href="/national/agences/{{ $ville->token }}"><i class="fa fa-search"></i></a></li>
                                     </ul>
                               </td>
                           </tr>
