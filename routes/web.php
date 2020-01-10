@@ -180,6 +180,9 @@ Route::prefix('national')
 		Route::get('formation/disable/{token}','FormationController@disable');
 		Route::get('formation/enable/{token}','FormationController@enable');
 
+		Route::get('show-module/{token}','FormationController@showModule');
+		Route::get('module/test/{token}','FormationController@getModuleTest');
+
 
 
 		Route::get('centre/creances/{token}','FinanceController@getCreancesCentre');

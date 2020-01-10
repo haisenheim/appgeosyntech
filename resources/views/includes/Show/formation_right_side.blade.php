@@ -2,6 +2,7 @@
     use Illuminate\Support\Facades\Auth;
 
     $id = Auth::user()->role_id;
+    $i = Auth::user()->id;
     $link = '';
     if($id==1){
         $link='admin';
@@ -31,7 +32,9 @@
 <div class="card">
     <div class="card-header">
         <h4>LISTES DE MODULES</h4>
+        @if($formation->owner_id == 1)
         <span class="pull-right"><a class="btn btn-outline-info btn-xs" href="#" data-toggle="modal" data-target="#moduleAdd"><i class="fa fa-plus-circle"></i></a></span>
+        @endif
     </div>
     <div>
         <ul class="list" style="list-style-type: upper-roman;">
