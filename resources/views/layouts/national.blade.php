@@ -72,6 +72,7 @@
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar elevation-4 sidebar-light-info">
+   <?php $active = \Illuminate\Support\Facades\Session::get('active'); //dd($slides); ?>
     <!-- Brand Logo -->
     <a href="#" class="brand-link navbar-info">
       <img src="{{asset('img/logo-obac.png')}}" alt="Logo" class="brand-image img-circle elevation-3"
