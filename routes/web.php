@@ -155,7 +155,7 @@ Route::prefix('national')
 	->middleware(['auth','national'])
 	->name('national.')
 	->group(function(){
-		Route::resource('centres','OrganismeController');
+		Route::resource('centres','CentreController');
 		Route::resource('entreprises','EntrepriseController');
 		Route::resource('members','MemberController');
 		Route::resource('formations','FormationController');
