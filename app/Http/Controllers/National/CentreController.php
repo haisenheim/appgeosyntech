@@ -137,14 +137,16 @@ class CentreController extends Controller
 
 	public function disable($token){
 		$centre = Centre::updateOrCreate(['token'=>$token],['active'=>0]);
-		User::updateOrCreate(['centre_id'=>$centre->id],['active'=>0]);
+		$centre->users()->update(['active'=>0]);
+		//User::updateOrCreate(['centre_id'=>$centre->id],['active'=>0]);
 
 		return back();
 	}
 
 	public function enable($token){
 		$centre = Centre::updateOrCreate(['token'=>$token],['active'=>1]);
-		User::updateOrCreate(['centre_id'=>$centre->id],['active'=>1]);
+		$centre->users()->update(['active'=>1]);
+		//User::updateOrCreate(['centre_id'=>$centre->id],['active'=>1]);
 		return back();
 	}
 
