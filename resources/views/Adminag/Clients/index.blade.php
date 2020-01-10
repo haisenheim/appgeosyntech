@@ -1,17 +1,17 @@
 
 
 
-@extends('......layouts.adminag')
+@extends('......layouts.admin')
 
 @section('content-header')
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">PORTEURS DE PROJETS</h1>
+            <h1 class="m-0 text-dark">CLIENTS ORDINANIRES</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/adminag/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/national/dashboard">ACCUEIL</a></li>
               <li class="breadcrumb-item">PARAMETRES</li>
               <li class="breadcrumb-item active">Porteurs de projets</li>
             </ol>
@@ -26,7 +26,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES ENTREPRENEURS</h3>
+                  <h3 class="card-title">LISTE DES CLIENTS ORDINANIRES</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -38,7 +38,7 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
-                      <th>PAYS</th>
+                      <th>AGENCE</th>
                       <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
                     </tr>
                     </thead>
@@ -50,10 +50,10 @@
                               <td>{!! $ville->address !!} </td>
                                <td>{!! $ville->phone !!} </td>
                                 <td>{!! $ville->email !!} </td>
-                              <td>{!! $ville->pays?$ville->pays->name:'-' !!}</td>
+                              <td>{!! $ville->agence?$ville->agence->name:'-' !!}</td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('adminag.porteurs.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('national.members.show',[$ville->id])}}"><i class="fa fa-search"></i></a></li>
                               </ul>
                               </td>
                           </tr>
@@ -67,7 +67,7 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
-                      <th>PAYS</th>
+                      <th>AGENCE</th>
                       <th></th>
                     </tr>
                     </tfoot>
@@ -85,13 +85,13 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">Nouvel entrepreneur</h4>
+                        <h4 class="modal-title">NOUVEAU CLIENT</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('adminag.porteurs.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('national.members.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">
@@ -113,7 +113,7 @@
                             </div>
 
                             <div class="form-group">
-                              <label for="pay_id">PAYS</label>
+                              <label for="pay_id">AGENEC</label>
                               <select name="pay_id" class="form-control" id="pay_id">
                                 @foreach($pays as $p)
                                     <option value="{{ $p->id }}">{{ $p->name }}</option>

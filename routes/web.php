@@ -162,7 +162,15 @@ Route::prefix('national')
 		Route::get('formation/disable/{token}','FormationController@disable');
 		Route::get('formation/enable/{token}','FormationController@enable');
 		Route::get('chaire','FormationController@chaire');
+		Route::get('contributeur/creances/{token}','FinanceController@getCreancesConsultant');
+
+		Route::get('contributeur/payees/{token}','FinanceController@getPayeesContributeur');
+		Route::get('contributeur/facture/{token}','FinanceController@showFactureContributeur');
 		Route::resource('contributeurs','ContributeurController');
+		Route::get('contributeur/disable/{token}','ContributeurController@disable');
+		Route::get('contributeur/enable/{token}','ContributeurController@enable');
+		Route::get('formation/disable/{token}','FormationController@disable');
+		Route::get('formation/enable/{token}','FormationController@enable');
 
 		//Finances
 		Route::get('facture/fill/{token}','FinanceController@fillFacture');
