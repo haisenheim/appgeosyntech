@@ -73,7 +73,7 @@ class EntrepriseController extends Controller
 			'address'=>$request['address'],
 			'phone'=>$request['phone'],
 
-			'pay_id'=>$request['pay_id'],
+			'pay_id'=>Auth::user()->pay_id,
 			'creator_id'=>Auth::user()->id,
 			'agence_id'=>Auth::user()->agence_id,
 			'description'=>$request['description'],
