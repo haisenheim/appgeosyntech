@@ -3,16 +3,14 @@
 namespace App\Http\Controllers\Consultant;
 
 use App\Http\Controllers\Controller;
-use App\Models\Investissement;
+
 use App\Models\Message;
 use App\Models\Pay;
-use App\Models\Projet;
+
 use App\Models\Ville;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Session;
 
 
 class MessageController extends Controller
@@ -25,35 +23,36 @@ class MessageController extends Controller
 
 
 
-    public function index(Request $request)
+    public function index()
     {
         //
         $receptions = Message::all()->where('receptor_id',Auth::user()->id)->sortBy('created_at',null,true);
 	    $envois = Message::all()->where('sender_id',Auth::user()->id);
-	    $projets =  Projet::all()->where('owner_id',Auth::user()->id);
-	    $users = collect([]);
-	    foreach($projets as $projet){
-		    $invests = $projet->investissements;
-		    foreach($invests as $inv){
-			    $users = $users->add($inv->angel);
-		    }
-	    }
-
-	    $angels= $users->unique();
-
-        return view('Owner/Messages/index')->with(compact('receptions','envois','angels'));
+	    $pays = Pay::all();
+        return view('Consultant/Messages/index')->with(compact('receptions','envois','pays'));
 
     }
 
-	public function getInvestissements(Request $request){
-		$id = $request->query('id');
-		$investissements = Investissement::all()->where('angel_id',$id);
-		foreach($investissements as $inv){
-			$inv->projet;
-		}
 
-		return response()->json($investissements);
+	public function getSent()
+	{
+		//
+		//dd(Auth::user());
+		$envois = Message::all()->where('sender_id',Auth::user()->id)->sortBy('created_at',null,true);
+		$receptions = Message::all()->where('receptor_id',Auth::user()->id);
+		$pays = Pay::all();
+		return view('Consultant/Messages/sent')->with(compact('receptions','envois','pays'));
+
 	}
+
+
+	public function disable($token){
+		$message =  Message::updateOrCreate(['token'=>$token],['active'=>0]);
+
+		return back();
+	}
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -87,7 +86,7 @@ class MessageController extends Controller
 	        Message::create($message);
 
             $request->session()->flash('success','votre message a été envoyé !!!');
-            return redirect('/owner/mailbox');
+            return redirect('/contributeur/mailbox');
 
 
     }
@@ -111,13 +110,10 @@ class MessageController extends Controller
 	        $message['subject'] = $msg->subject;
 	        $message['receptor_id'] = $msg->sender_id;
 	        $message['reply']=1;
-	        $message['investissement_id']=$msg->investissement_id;
-	        $message['cession_id'] = $msg->cession_id;
-	        $message['concession_id']=$msg->concession_id;
 	        Message::create($message);
 
             $request->session()->flash('success','votre message a été envoyé !!!');
-            return redirect('/owner/mailbox');
+            return redirect('/contributeur/mailbox');
 
 
     }
@@ -131,21 +127,15 @@ class MessageController extends Controller
     public function show($token)
     {
         $message = Message::where('token',$token)->first();
-	    $msg = Message::updateOrCreate(['token'=>$token],['lu'=>1]);
+	    if($message->receptor_id == Auth::user()->id){
+		    $msg = Message::updateOrCreate(['token'=>$token],['lu'=>1]);
+	    }
 	    $receptions = Message::all()->where('receptor_id',Auth::user()->id);
 	    $envois = Message::all()->where('sender_id',Auth::user()->id);
-	    $projets =  Projet::all()->where('owner_id',Auth::user()->id);
-	    $users = collect([]);
-	    foreach($projets as $projet){
-		    $invests = $projet->investissements;
-		    foreach($invests as $inv){
-			    $users = $users->add($inv->angel);
-		    }
-	    }
+	    $pays = Pay::all();
 
-	    $angels= $users->unique();
 
-        return view('Owner/Messages/show')->with(compact('message','envois','receptions','angels'));
+        return view('Consultant/Messages/show')->with(compact('message','envois','receptions','pays'));
     }
 
     /**
