@@ -26,7 +26,7 @@ MESSAGES ENVOYES
             <div class="card-body p-0">
               <ul class="nav nav-pills flex-column">
                 <li class="nav-item active">
-                  <a href="#" class="nav-link">
+                  <a href="/consultant/mailbox" class="nav-link">
                     <i class="fas fa-inbox"></i> Boîte de reception
                     <span class="badge bg-success float-right">{{ $receptions->where('lu',0)->count() }}</span>
                   </a>
