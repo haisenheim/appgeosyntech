@@ -255,8 +255,9 @@ Route::prefix('consultant')
 	    Route::get('facture/{token}','FactureController@show');
 	    Route::get('facture/print/{token}','FactureController@printit');
 
-	    Route::get('inbox/created','MessageController@getSent')->name('mailbox.sent');
 	    Route::resource('mailbox','MessageController');
+	    Route::get('inbox/created','MessageController@getSent')->name('mailbox.sent');
+
 	    //Route::resource('mailbox/','MessageController@index');
 	    Route::post('mailbox/reply','MessageController@reply');
 
