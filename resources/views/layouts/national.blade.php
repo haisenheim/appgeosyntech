@@ -150,8 +150,6 @@
                       <p>CHAIRE OBAC</p>
                     </a>
                 </li>
-
-
             </ul>
           </li>
 

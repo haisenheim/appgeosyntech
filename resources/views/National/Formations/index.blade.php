@@ -47,7 +47,7 @@
 
                           <td class="project-actions text-right">
                                 <ul>
-                                    <li class="list-inline-item"> <a class="btn btn-primary btn-xs" href="/national/formations/{{ $formation->token  }}"><i class="fas fa-folder"></i>Afficher</a></li>
+                                    <li class="list-inline-item" title="Afficher"> <a class="btn btn-info btn-xs" href="/national/formations/{{ $formation->token  }}"><i class="fas fa-search"></i></a></li>
 
                                            @if($formation->active)
                                                <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/national/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>

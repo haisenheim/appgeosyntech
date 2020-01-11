@@ -240,8 +240,12 @@ Route::prefix('consultant')
     ->middleware(['auth','consultant'])
     ->name('consultant.')
     ->group(function(){
+	    Route::resource('/planning','PlanningController');
+	    Route::resource('centres','CentreController');
+	    Route::resource('entreprises','EntrepriseController');
+	    Route::resource('members','MemberController');
         Route::resource('formations','FormationController');
-	    Route::resource('actifs','ActifController');
+
         Route::get('profil','ProfilController');
         Route::get('dashboard','DashboardController');
 
@@ -250,6 +254,13 @@ Route::prefix('consultant')
 	    Route::get('finances/payees','FactureController@payees');
 	    Route::get('facture/{token}','FactureController@show');
 	    Route::get('facture/print/{token}','FactureController@printit');
+
+	    Route::get('inbox/created','MessageController@getSent')->name('mailbox.sent');
+	    Route::resource('mailbox','MessageController');
+	    //Route::resource('mailbox/','MessageController@index');
+	    Route::post('mailbox/reply','MessageController@reply');
+
+	    Route::get('/mailbox/disable/{token}','MessageController@disable');
     });
 
 
