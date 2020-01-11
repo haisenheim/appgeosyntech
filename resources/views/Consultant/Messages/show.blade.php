@@ -31,7 +31,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/consultant/mailbox/created" class="nav-link">
+                  <a href="/consultant/inbox/created" class="nav-link">
                     <i class="far fa-envelope"></i> Envois
                     <span class="badge bg-warning float-right">{{ $envois->where('lu',0)->where('active',1)->count() }}</span>
                   </a>
