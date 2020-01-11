@@ -127,15 +127,15 @@ class MessageController extends Controller
     public function show($token)
     {
         $message = Message::where('token',$token)->first();
-	    if($message->receptor_id == Auth::user()->id){
-		    $msg = Message::updateOrCreate(['token'=>$token],['lu'=>1]);
+	    if($message){
+		    if($message->receptor_id == Auth::user()->id){
+			    $msg = Message::updateOrCreate(['token'=>$token],['lu'=>1]);
+		    }
+		    $receptions = Message::all()->where('receptor_id',Auth::user()->id);
+		    $envois = Message::all()->where('sender_id',Auth::user()->id)->where('active',1);
 	    }
-	    $receptions = Message::all()->where('receptor_id',Auth::user()->id);
-	    $envois = Message::all()->where('sender_id',Auth::user()->id);
-	    $pays = Pay::all();
 
-
-        return view('Consultant/Messages/show')->with(compact('message','envois','receptions','pays'));
+        return view('Consultant/Messages/show')->with(compact('message','envois','receptions'));
     }
 
     /**

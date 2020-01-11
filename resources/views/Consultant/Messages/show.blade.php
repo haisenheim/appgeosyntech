@@ -31,15 +31,15 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="/consultant/mailbox/created" class="nav-link">
                     <i class="far fa-envelope"></i> Envois
+                    <span class="badge bg-warning float-right">{{ $envois->where('lu',0)->where('active',1)->count() }}</span>
                   </a>
                 </li>
-
-
                 <li class="nav-item">
                   <a href="#" class="nav-link">
                     <i class="far fa-trash-alt"></i> Corbeille
+                    <span class="badge bg-danger float-right">{{ $envois->where('active',0)->count() }}</span>
                   </a>
                 </li>
               </ul>
