@@ -60,6 +60,11 @@ class DiversController extends Controller
 		return response()->json($consultants);
 	}
 
+	public function getContributeursByPay(Request $request){
+		$consultants = User::all()->where('pay_id',$request->id)->where('role_id',7);
+		return response()->json($consultants);
+	}
+
 	public function getVillesByPay(Request $request){
 		$villes = Ville::all()->where('pay_id',$request->pay_id)->toArray();
 		//dd($villes);

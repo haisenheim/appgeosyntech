@@ -153,7 +153,7 @@
                 <div class="form-group">
                 <label for="">PAYS</label>
                 <select name="pay_id" class="form-control" id="pay_id">
-                    <option value="0">CHOIX DU PAYS DU CONSULTANT</option>
+                    <option value="0">CHOIX DU PAYS DU CONTRIBUTEUR</option>
                     @foreach($pays as $p)
                         <option value="{{ $p->id }}">{{ $p->name  }}</option>
                     @endforeach
@@ -161,7 +161,7 @@
 
                 </div>
                 <div class="form-group">
-                    <label for="">CONSULTANT</label>
+                    <label for="">CONTRIBUTEUR</label>
                     <select name="receptor_id" class="form-control" id="receptor_id">
 
                     </select>
@@ -190,7 +190,7 @@
 <script>
 	$("#pay_id").on('change',function(){
 		// console.log($("#sector_id").val());
-		var url = '/get-consultants-pay';
+		var url = '/get-contributeurs-pay';
 		$.ajax({
 			url:url,
 			type:'get',

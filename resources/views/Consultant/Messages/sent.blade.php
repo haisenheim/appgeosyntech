@@ -172,7 +172,7 @@ MESSAGES ENVOYES
 <script>
 	$("#pay_id").on('change',function(){
 		// console.log($("#sector_id").val());
-		var url = '/get-consultants-pay';
+		var url = '/get-contributeurs-pay';
 		$.ajax({
 			url:url,
 			type:'get',

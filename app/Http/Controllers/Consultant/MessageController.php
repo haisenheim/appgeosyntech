@@ -134,8 +134,8 @@ class MessageController extends Controller
 		    $receptions = Message::all()->where('receptor_id',Auth::user()->id);
 		    $envois = Message::all()->where('sender_id',Auth::user()->id)->where('active',1);
 	    }
-
-        return view('Consultant/Messages/show')->with(compact('message','envois','receptions'));
+	    $pays = Pay::all();
+        return view('Consultant/Messages/show')->with(compact('message','envois','receptions','pays'));
     }
 
     /**
