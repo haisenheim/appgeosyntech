@@ -1,20 +1,7 @@
 @extends('......layouts.consultant')
 
-@section('content-header')
-    <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">CENTRES DE FORMATIONS</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/consultant/dashboard">ACCUEIL</a></li>
-              <li class="breadcrumb-item">PARAMETRES</li>
-              <li class="breadcrumb-item active">CENTRES</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+@section('page-title')
+ECOLES PARTENAIRES
 @endsection
 
 @section('content')
@@ -22,9 +9,7 @@
     <div class="row">
             <div class="col-12">
               <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">LISTE DES CENTRES DE FORMATION</h3>
-                </div>
+
                 <!-- /.card-header -->
                 <div class="card-body">
                   <table id="example1" class="table table-bordered table-hover table-condensed">
@@ -57,14 +42,7 @@
                               <td>
                                     <ul class="list-inline">
                                         <li title="Afficher" class="list-inline-item"><a class="btn btn-info btn-xs" href="/consultant/centres/{{ $ville->token }}"><i class="fa fa-search"></i></a></li>
-                                        <li title="Toutes les dettes" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/consultant/centre/creances/{{ $ville->token }}"><i class="fa fa-coins"></i></a></li>
-                                        <li title="Toutes les factures payées" class="list-inline-item"><a class="btn btn-success btn-xs" href="/consultant/centre/payees/{{ $ville->token }}"><i class="fa fa-coins"></i></a></li>
 
-                                            @if($ville->active)
-                                                <li title="bloquer le partenaire" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/consultant/centre/disable/{{ $ville->token }}"><i class="fa fa-lock"></i></a></li>
-                                            @else
-                                              <li title="débloquer le partenaire" class="list-inline-item"><a class="btn btn-success btn-xs" href="/consultant/centre/enable/{{ $ville->token }}"><i class="fa fa-unlock"></i></a></li>
-                                            @endif
 
                                     </ul>
                                 </td>

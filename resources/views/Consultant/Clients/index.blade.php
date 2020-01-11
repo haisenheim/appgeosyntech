@@ -3,7 +3,7 @@
 
 @extends('......layouts.consultant')
 
-@section('page-header')
+@section('page-title')
 CLIENTS ORDINAIRES
 @endsection
 
