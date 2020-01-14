@@ -35,17 +35,7 @@ class FormationController extends Controller
 	}
 
 
-	public function disable($token){
-		$user = Formation::updateOrCreate(['token'=>$token],['active'=>0]);
 
-		return back();
-	}
-
-	public function enable($token){
-		$user = Formation::updateOrCreate(['token'=>$token],['active'=>1]);
-
-		return back();
-	}
 
 
     /**
