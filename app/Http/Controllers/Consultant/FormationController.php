@@ -100,7 +100,7 @@ class FormationController extends Controller
         //
     }
 
-	public function getModuleTest($token){
+	public function getTestModule($token){
 		$module = Module::where('token',$token)->first();
 
 		return view('Consultant/Formations/module_test')->with(compact('module'));
