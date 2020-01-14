@@ -255,14 +255,15 @@ Route::prefix('consultant')
 	    Route::get('finances/payees','FactureController@payees');
 	    Route::get('facture/{token}','FactureController@show');
 	    Route::get('facture/print/{token}','FactureController@printit');
-
 	    Route::resource('mailbox','MessageController');
 	    Route::get('inbox/created','MessageController@getSent')->name('mailbox.sent');
-
 	    //Route::resource('mailbox/','MessageController@index');
 	    Route::post('mailbox/reply','MessageController@reply');
 
 	    Route::get('/mailbox/disable/{token}','MessageController@disable');
+
+	    Route::resource('formations','FormationController');
+	    Route::resource('chaire','FormationController@chaire');
     });
 
 
