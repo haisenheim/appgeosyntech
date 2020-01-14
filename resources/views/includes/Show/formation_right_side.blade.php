@@ -32,7 +32,7 @@
 <div class="card">
     <div class="card-header">
         <h4>LISTES DE MODULES</h4>
-        <?php if($formation->owner_id == 1): ?>
+        <?php if($formation->owner_id == Auth::user()->id): ?>
         <span class="pull-right"><a class="btn btn-outline-info btn-xs" href="#" data-toggle="modal" data-target="#moduleAdd"><i class="fa fa-plus-circle"></i></a></span>
         <?php endif ?>
     </div>
