@@ -1,4 +1,9 @@
 @extends('......layouts.consultant')
+
+@section('page-title')
+{{ $module->name }}
+@endsection
+
 @section('content')
 
 

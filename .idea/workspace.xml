@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php" afterPath="$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formation_right_side.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="formation_right_side.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7987421" vertical-offset="355" max-vertical-offset="976">
+            <state vertical-scroll-proportion="-15.24" vertical-offset="355" max-vertical-offset="976">
               <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -109,14 +111,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.68" vertical-offset="467" max-vertical-offset="1408">
-              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.1341719" vertical-offset="0" max-vertical-offset="1424">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding>
-                <element signature="e#359#376#0#HTML" expanded="true" />
-                <element signature="e#460#478#0#HTML" expanded="true" />
+                <element signature="e#321#338#0#HTML" expanded="true" />
+                <element signature="e#422#440#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,7 +127,17 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="368">
+            <state vertical-scroll-proportion="-0.43835616" vertical-offset="0" max-vertical-offset="416">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module_test.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/module_test.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2384">
               <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
               <folding />
             </state>
@@ -135,23 +147,9 @@
       <file leaf-file-name="show_module.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="384">
-              <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+            <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="464">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Messages/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.21917808" vertical-offset="1712" max-vertical-offset="3920">
-              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-              <folding>
-                <element signature="e#117#139#0#HTML" expanded="true" />
-                <element signature="e#2931#2980#0#HTML" expanded="true" />
-                <element signature="e#5273#5294#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -213,13 +211,13 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Utils/DiversController.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Messages/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/module_test.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/FormationController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php" />
       </list>
     </option>
   </component>
@@ -1454,34 +1452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/module_test.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2384">
-          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <element signature="e#516#568#0#HTML" expanded="true" />
-            <element signature="e#605#628#0#HTML" expanded="true" />
-            <element signature="e#1149#1173#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="368">
-          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="490">
-          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Messages/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.21917808" vertical-offset="1712" max-vertical-offset="3920">
@@ -1490,17 +1460,6 @@
             <element signature="e#117#139#0#HTML" expanded="true" />
             <element signature="e#2931#2980#0#HTML" expanded="true" />
             <element signature="e#5273#5294#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.68" vertical-offset="467" max-vertical-offset="1408">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-          <folding>
-            <element signature="e#359#376#0#HTML" expanded="true" />
-            <element signature="e#460#478#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1558,11 +1517,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7987421" vertical-offset="355" max-vertical-offset="976">
+        <state vertical-scroll-proportion="-15.24" vertical-offset="355" max-vertical-offset="976">
           <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="464">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.43835616" vertical-offset="0" max-vertical-offset="416">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/module_test.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2384">
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1341719" vertical-offset="0" max-vertical-offset="1424">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="e#321#338#0#HTML" expanded="true" />
+            <element signature="e#422#440#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

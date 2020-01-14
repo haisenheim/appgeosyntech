@@ -1,4 +1,7 @@
 @extends('......layouts.consultant')
+@section('page-title')
+{{ $formation->name }}
+@endsection
 @section('content')
 
 
