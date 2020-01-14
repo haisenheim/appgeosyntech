@@ -29,7 +29,7 @@
 
  ?>
 
-<div class="card">
+<div style="margin-top: 15px" class="card">
     <div class="card-header">
         <h4>LISTES DE MODULES</h4>
         <?php if($formation->owner_id == Auth::user()->id): ?>
@@ -42,7 +42,9 @@
                 <li style="margin-top: 10px">{{ $module->name }}    -   <span>Prix en ligne: <b>{{ number_format($module->prix_ligne,0,',','.') }}</b> </span>   -   <span>Prix en presentiel: <b>{{ number_format($module->prix_presentiel,0,',','.') }}</b></span>
                      <ul class="list-inline pull-right">
                         <li class="list-inline-item"><a class="btn btn-xs btn-info" href="/{{$link}}/show-module/{{$module->token}}" ><i class="fa fa-search"></i></a></li>
-                        <li class="list-inline-item"><a class="btn btn-xs btn-success" href="" data-toggle="modal" data-target="#moduleEdit"><i class="fa fa-edit"></i></a></li>
+                         <?php if($formation->owner_id == Auth::user()->id): ?>
+                            <li class="list-inline-item"><a class="btn btn-xs btn-success" href="" data-toggle="modal" data-target="#moduleEdit"><i class="fa fa-edit"></i></a></li>
+                          <?php endif ?>
                         @if($canseetest)
                              <li class="list-inline-item"><a class="btn btn-xs btn-danger" href="/{{$link}}/module/test/{{ $module->token }}" ><i class="fa fa-edit"></i></a></li>
                         @endif

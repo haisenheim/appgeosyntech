@@ -4,7 +4,7 @@
         margin-right: 10px;
     }
 </style>
-<div class="card">
+<div style="margin-top: 15px" class="card">
     <div class="card-header bg-info">
         <h3 class="card-title">{{ $formation->name  }}</h3>
     </div>

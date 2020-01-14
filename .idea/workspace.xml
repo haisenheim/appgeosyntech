@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Consultant/FormationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Consultant/FormationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,23 +72,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formation_right_side.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="formation_right_side.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.64" vertical-offset="16" max-vertical-offset="944">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7987421" vertical-offset="355" max-vertical-offset="976">
+              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="formation_left_side.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.08" vertical-offset="0" max-vertical-offset="736">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/FormationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60816324" vertical-offset="1334" max-vertical-offset="2192">
-              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+            <state vertical-scroll-proportion="-14.48" vertical-offset="1334" max-vertical-offset="2192">
+              <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
               <folding>
                 <element signature="e#51#87#0#PHP" expanded="true" />
               </folding>
@@ -104,20 +117,6 @@
               <folding>
                 <element signature="e#359#376#0#HTML" expanded="true" />
                 <element signature="e#460#478#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module_test.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/module_test.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2384">
-              <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-              <folding>
-                <element signature="e#516#568#0#HTML" expanded="true" />
-                <element signature="e#605#628#0#HTML" expanded="true" />
-                <element signature="e#1149#1173#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/National/Experts/creances.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Experts/facture.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Experts/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/National/Experts/payees.blade.php" />
@@ -218,9 +216,10 @@
         <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/FormationController.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php" />
       </list>
     </option>
   </component>
@@ -1016,10 +1015,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1086,16 +1085,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/MemberController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.72" vertical-offset="285" max-vertical-offset="2400">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#49#85#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Adminag/Clients/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2976">
@@ -1387,7 +1376,7 @@
         <state vertical-scroll-proportion="-0.65753424" vertical-offset="0" max-vertical-offset="1424">
           <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding>
-            <element signature="e#1231#1255#0#HTML" expanded="true" />
+            <element signature="e#1231#1255#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1397,7 +1386,7 @@
         <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="1344">
           <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding>
-            <element signature="e#991#1015#0#HTML" expanded="true" />
+            <element signature="e#991#1015#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1419,7 +1408,7 @@
         <state vertical-scroll-proportion="-0.64" vertical-offset="272" max-vertical-offset="2880">
           <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
-            <element signature="e#51#87#0#PHP" expanded="true" />
+            <element signature="e#51#87#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1429,9 +1418,8 @@
         <state vertical-scroll-proportion="-2.4383562" vertical-offset="2606" max-vertical-offset="3952">
           <caret line="174" column="37" selection-start-line="174" selection-start-column="37" selection-end-line="174" selection-end-column="37" />
           <folding>
-            <element signature="e#123#145#0#HTML" expanded="true" />
-            <element signature="e#3075#3120#0#HTML" expanded="true" />
-            <element signature="e#5515#5536#0#HTML" expanded="true" />
+            <element signature="e#123#145#0#HTML" expanded="false" />
+            <element signature="e#5515#5536#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1449,9 +1437,9 @@
         <state vertical-scroll-proportion="-4.1643834" vertical-offset="2304" max-vertical-offset="3888">
           <caret line="163" column="46" selection-start-line="163" selection-start-column="46" selection-end-line="163" selection-end-column="46" />
           <folding>
-            <element signature="e#189#211#0#HTML" expanded="true" />
-            <element signature="e#4602#4623#0#HTML" expanded="true" />
-            <element signature="e#6534#6555#0#HTML" expanded="true" />
+            <element signature="e#189#211#0#HTML" expanded="false" />
+            <element signature="e#4602#4623#0#HTML" expanded="false" />
+            <element signature="e#6534#6555#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1517,16 +1505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64" vertical-offset="16" max-vertical-offset="944">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/module_right_side.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.64" vertical-offset="32" max-vertical-offset="880">
@@ -1560,10 +1538,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/FormationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60816324" vertical-offset="1334" max-vertical-offset="2192">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+        <state vertical-scroll-proportion="-14.48" vertical-offset="1334" max-vertical-offset="2192">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
           <folding>
             <element signature="e#51#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.08" vertical-offset="0" max-vertical-offset="736">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_right_side.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7987421" vertical-offset="355" max-vertical-offset="976">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
