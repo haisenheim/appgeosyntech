@@ -3,20 +3,16 @@
 namespace App\Http\Controllers\Consultant;
 
 use App\Http\Controllers\Controller;
-use App\Models\Cour;
-use App\Models\Entreprise;
+
 use App\Models\Formation;
 use App\Models\Module;
 use App\User;
-use Illuminate\Support\Facades\Hash;
 
-use App\Models\Organisme;
+
 use App\Models\Pay;
-use App\Models\Torganisme;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
+
 
 class FormationController extends Controller
 {

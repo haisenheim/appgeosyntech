@@ -263,7 +263,7 @@ Route::prefix('consultant')
 	    Route::get('/mailbox/disable/{token}','MessageController@disable');
 
 	    Route::resource('formations','FormationController');
-	    Route::resource('chaire','FormationController@chaire');
+	    Route::get('chaire','FormationController@chaire');
     });
 
 
