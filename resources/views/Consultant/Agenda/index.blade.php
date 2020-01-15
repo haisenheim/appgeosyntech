@@ -18,7 +18,10 @@ MON AGENDA
 
     </div>
 
-
+    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+       <!-- jQuery UI -->
+    <script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js')  }}"></script>
    <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
    <script src="{{ asset('plugins/fullcalendar/main.min.js') }}"></script>
    <script src="{{ asset('plugins/fullcalendar-daygrid/main.min.js') }}"></script>
@@ -26,10 +29,7 @@ MON AGENDA
    <script src="{{ asset('plugins/fullcalendar-interaction/main.min.js') }}"></script>
    <script src="{{ asset('plugins/fullcalendar-bootstrap/main.min.js')}}"></script>
 
-   <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
 
-   <!-- jQuery UI -->
-   <script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js')  }}"></script>
 
    <!-- Page specific script -->
    <script>
