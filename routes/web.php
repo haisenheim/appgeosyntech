@@ -266,6 +266,7 @@ Route::prefix('consultant')
 
 	    Route::resource('formations','FormationController');
 	    Route::get('chaire','FormationController@chaire');
+	    Route::get('/agenda','AgendaController@index');
     });
 
 

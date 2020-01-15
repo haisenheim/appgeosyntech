@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Utils;
 use App\Http\Controllers\Controller;
 use App\Models\Actif;
 use App\Models\Agence;
+use App\Models\Agenda;
 use App\Models\Comment;
 use App\Models\Devise;
 use App\Models\Earlie;
@@ -69,6 +70,12 @@ class DiversController extends Controller
 		$villes = Ville::all()->where('pay_id',$request->pay_id)->toArray();
 		//dd($villes);
 		return response()->json($villes);
+	}
+
+	public function getAgendaItems(){
+		$items = Agenda::all()->where('owner_id');
+
+		return response()->json($items);
 	}
 
 	public function getAgencesByVille(Request $request){
