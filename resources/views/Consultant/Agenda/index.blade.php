@@ -80,7 +80,7 @@ MON AGENDA
            y    = date.getFullYear()
 
        var Calendar = FullCalendar.Calendar;
-       var Draggable = FullCalendarInteraction.Draggable;
+       //var Draggable = FullCalendarInteraction.Draggable;
 
        var containerEl = document.getElementById('external-events');
        var checkbox = document.getElementById('drop-remove');
@@ -89,7 +89,7 @@ MON AGENDA
        // initialize the external events
        // -----------------------------------------------------------------
 
-       new Draggable(containerEl, {
+      /* new Draggable(containerEl, {
          itemSelector: '.external-event',
          eventData: function(eventEl) {
            console.log(eventEl);
@@ -100,10 +100,10 @@ MON AGENDA
              textColor: window.getComputedStyle( eventEl ,null).getPropertyValue('color'),
            };
          }
-       });
+       }); */
 
        var calendar = new Calendar(calendarEl, {
-         plugins: [ 'bootstrap', 'interaction', 'dayGrid', 'timeGrid' ],
+         plugins: [ 'bootstrap',  'dayGrid', 'timeGrid' ],
          header    : {
            left  : 'prev,next today',
            center: 'title',
