@@ -43,7 +43,7 @@ class HomeController extends Controller
             }
 
 	        if(Auth::user()->role_id==5){
-		        return redirect('corporation/formations');
+		        return redirect('corporate/formations');
 	        }
 
 
