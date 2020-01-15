@@ -13,8 +13,13 @@ MON AGENDA
       <link rel="stylesheet" href="{{ asset('plugins/fullcalendar-timegrid/main.min.css') }}">
       <link rel="stylesheet" href="{{ asset('plugins/fullcalendar-bootstrap/main.min.css') }}">
     <div class="container">
-
-        <div id="calendar"></div>
+        <div class="col-md-9 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                     <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
