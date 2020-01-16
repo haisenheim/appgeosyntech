@@ -69,7 +69,7 @@
     <a href="#" class="brand-link navbar-info">
       <img src="{{asset('img/logo-obac.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">OTC</span>
+      <span class="brand-text font-weight-light" style="font-weight: 700; color: #FFFFFF; font-size: smaller;">OBAC TRAINING CENTER</span>
     </a>
 
     <!-- Sidebar -->
