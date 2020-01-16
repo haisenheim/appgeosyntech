@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/CompteFormation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/EntrepriseFormation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Corporate/TestController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Corporate/Tests/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Corporate/Tests/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Corporate/Tests/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Entreprise.php" afterPath="$PROJECT_DIR$/app/Models/Entreprise.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Test.php" afterPath="$PROJECT_DIR$/app/Models/Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Corporate/Membres/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Corporate/Membres/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/corporate.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/corporate.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -49,8 +38,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.2" vertical-offset="1734" max-vertical-offset="2464">
-              <caret line="321" column="50" selection-start-line="321" selection-start-column="50" selection-end-line="321" selection-end-column="50" />
+            <state vertical-scroll-proportion="-12.56" vertical-offset="1734" max-vertical-offset="2464">
+              <caret line="320" column="32" selection-start-line="320" selection-start-column="32" selection-end-line="320" selection-end-column="32" />
               <folding>
                 <element signature="e#1850#2534#2#PHP" expanded="false" />
                 <element signature="e#2654#5129#2#PHP" expanded="false" />
@@ -59,6 +48,16 @@
                 <element signature="e#8038#9373#2#PHP" expanded="false" />
                 <element signature="e#9510#10517#2#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="corporate.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/corporate.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1341719" vertical-offset="1936" max-vertical-offset="3760">
+              <caret line="125" column="49" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Tests/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8658281" vertical-offset="435" max-vertical-offset="2560">
+            <state vertical-scroll-proportion="-16.52" vertical-offset="435" max-vertical-offset="2560">
               <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
               <folding />
             </state>
@@ -144,16 +143,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-16.0" vertical-offset="80" max-vertical-offset="2016">
               <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.92" vertical-offset="486" max-vertical-offset="1424">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -212,17 +201,17 @@
         <option value="$PROJECT_DIR$/resources/views/Corporate/Agenda/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Corporate.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Membres/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/corporate.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Entreprise.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Models/EntrepriseFormation.php" />
         <option value="$PROJECT_DIR$/app/Models/CompteFormation.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Models/Test.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/TestController.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Membres/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Tests/index.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/corporate.blade.php" />
       </list>
     </option>
   </component>
@@ -1357,14 +1346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/corporate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.28" vertical-offset="2228" max-vertical-offset="3760">
-          <caret line="160" column="66" selection-start-line="160" selection-start-column="66" selection-end-line="160" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Entreprise.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="480">
@@ -1402,21 +1383,6 @@
         <state vertical-scroll-proportion="-16.0" vertical-offset="80" max-vertical-offset="2016">
           <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.2" vertical-offset="1734" max-vertical-offset="2464">
-          <caret line="321" column="50" selection-start-line="321" selection-start-column="50" selection-end-line="321" selection-end-column="50" />
-          <folding>
-            <element signature="e#1850#2534#2#PHP" expanded="false" />
-            <element signature="e#2654#5129#2#PHP" expanded="false" />
-            <element signature="e#5250#7675#2#PHP" expanded="false" />
-            <element signature="e#7791#7862#2#PHP" expanded="false" />
-            <element signature="e#8038#9373#2#PHP" expanded="false" />
-            <element signature="e#9510#10517#2#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1460,8 +1426,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Tests/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8658281" vertical-offset="435" max-vertical-offset="2560">
+        <state vertical-scroll-proportion="-16.52" vertical-offset="435" max-vertical-offset="2560">
           <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.56" vertical-offset="1734" max-vertical-offset="2464">
+          <caret line="320" column="32" selection-start-line="320" selection-start-column="32" selection-end-line="320" selection-end-column="32" />
+          <folding>
+            <element signature="e#1850#2534#2#PHP" expanded="false" />
+            <element signature="e#2654#5129#2#PHP" expanded="false" />
+            <element signature="e#5250#7675#2#PHP" expanded="false" />
+            <element signature="e#7791#7862#2#PHP" expanded="false" />
+            <element signature="e#8038#9373#2#PHP" expanded="false" />
+            <element signature="e#9510#10517#2#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/corporate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1341719" vertical-offset="1936" max-vertical-offset="3760">
+          <caret line="125" column="49" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
           <folding />
         </state>
       </provider>

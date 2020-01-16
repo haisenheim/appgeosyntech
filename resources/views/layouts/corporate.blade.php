@@ -190,7 +190,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <div style="height: 180px; " class="content-head bg-gradient-info">
+    <div style="height: 180px; margin-bottom: 10px; " class="content-head bg-gradient-info">
         <div>
            <h1 style="margin-top: 3%" class="content-title text-center">@yield('page-title')</h1>
              @yield('nav_actions')
