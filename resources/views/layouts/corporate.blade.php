@@ -113,7 +113,7 @@
 
           <li class="nav-item">
             <a href="/corporate/formations" class="nav-link {{ $active==3?'active':'' }}">
-              <i class="nav-icon fa fa-user-graduate"></i>
+              <i class="nav-icon fa fa-graduation-cap"></i>
               <p>
                 FORMATIONS
               </p>
@@ -132,7 +132,7 @@
 
           <li class="nav-item">
             <a href="/corporate/tests" class="nav-link {{ $active==5?'active':'' }}">
-              <i class="nav-icon fas fa-users-cog"></i>
+              <i class="nav-icon fas fa-user-graduate"></i>
               <p>
                 TESTS
               </p>
