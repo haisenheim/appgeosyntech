@@ -28,7 +28,7 @@ class Corporate
 	    if(in_array('formations',$path)){
 		    Session::put('active', 3);
 	    }
-	    if(in_array('panning',$path)){
+	    if(in_array('planning',$path)){
 		    Session::put('active', 4);
 	    }
 	    if(in_array('tests',$path)){
