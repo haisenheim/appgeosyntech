@@ -24,9 +24,9 @@ class MembreController extends Controller
      */
     public function index()
     {
-	    $angels = User::all()->where('role_id',4)->where('entreprise_id',Auth::user()->entreprise_id);
+	    $angels = User::all()->where('role_id',9)->where('entreprise_id',Auth::user()->entreprise_id);
 	   // $investissements = Investissement::orderBy('created_at','desc')->where('angel_id',Auth::user()->id)->paginate(8);
-	    return view('Adminentr/Angels/index')->with(compact('angels'));
+	    return view('Corporate/Membres/index')->with(compact('angels'));
     }
 
 
@@ -59,7 +59,7 @@ class MembreController extends Controller
 	    $user->email = $request['email'];
 	    $user->pay_id = Auth::user()->pay_id;
 	    $user->password=Hash::make($request['password']);
-	    $user->role_id =4;
+	    $user->role_id =9;
 	    $user->entreprise_id = Auth::user()->entreprise_id;
 	    $user->moi_id=date('m');
 	    $user->annee=date('Y');
@@ -67,7 +67,6 @@ class MembreController extends Controller
 	    // $user->senior = $request['senior']=='on'?1:0;
 	    $user->active = 1;
 	    $user->token= sha1(Auth::user()->id . date('YmHisd'). 'Angel');
-
 	    if($request->imageUri){
 		    $file = $request->imageUri;
 		    $ext = $file->getClientOriginalExtension();
@@ -88,7 +87,7 @@ class MembreController extends Controller
 
 	    $user->save();
 	    session('message','Le compte a été correctement créé !!!');
-	    return redirect('/adminentr/angels');
+	    return redirect('/corporate/comptes');
     }
 
     /**

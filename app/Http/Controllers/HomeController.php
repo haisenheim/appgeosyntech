@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Centre;
+use App\Models\Entreprise;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -43,6 +45,8 @@ class HomeController extends Controller
             }
 
 	        if(Auth::user()->role_id==5){
+		        $entreprise = Entreprise::find(Auth::user()->entreprise_id);
+		        Session::put('corporate', $entreprise);
 		        return redirect('corporate/formations');
 	        }
 
@@ -58,9 +62,13 @@ class HomeController extends Controller
 		        return redirect('national/dashboard');
 	        }
 	        if(Auth::user()->role_id==9){
+		        $entreprise = Centre::find(Auth::user()->centre_id);
+		        Session::put('centre', $entreprise);
 		        return redirect('mch/formations');
 	        }
 	        if(Auth::user()->role_id==8){
+		        $entreprise = Entreprise::find(Auth::user()->entreprise_id);
+		        Session::put('corporate', $entreprise);
 		        return redirect('mcp/formations');
 	        }
             else{
