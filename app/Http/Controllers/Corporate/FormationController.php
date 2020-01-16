@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Corporate;
 
 use App\Http\Controllers\Controller;
 
+use App\Models\Entreprise;
+use App\Models\EntrepriseFormation;
 use App\Models\Formation;
 use App\Models\Module;
 use App\User;
@@ -12,6 +14,7 @@ use App\User;
 use App\Models\Pay;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class FormationController extends Controller
@@ -27,6 +30,19 @@ class FormationController extends Controller
 
 	    return view('Corporate/Formations/index')->with(compact('formations'));
     }
+
+
+	public function getOurFormations(){
+
+		$entreprise = Entreprise::find(Auth::user()->entreprise_id);
+		return view('Corporate/Formations/nos_formations')->with(compact('entreprise'));
+	}
+
+	public function getFormation($token){
+		$formation = Formation::where('token',$token)->first();
+		$formation = EntrepriseFormation::where('entreprise_id',Auth::user()->entreprise_id)->where('formation_id',$formation->id)->first();
+		return view('Corporate/Formations/show')->with(compact('formation'));
+	}
 
 
     /**

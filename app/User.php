@@ -27,23 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    // Association avec les projets
 
-    public function projets(){
-        return $this->hasMany('App\Models\Projet','owner_id');
-    }
 
-	public function actifs(){
-		return $this->hasMany('App\Models\Actif','owner_id');
-	}
-
-	public function investissements(){
-		return $this->hasMany('App\Models\Investissement','angel_id');
-	}
-
-	public function cessions(){
-		return $this->hasMany('App\Models\Cession','angel_id');
-	}
 
     // Association avec les roles
 
@@ -59,17 +44,12 @@ class User extends Authenticatable
 		return $this->belongsTo('App\Models\Entreprise');
 	}
 
-	public function organisme(){
-		return $this->belongsTo('App\Models\Organisme');
+	public function centre(){
+		return $this->belongsTo('App\Models\Centre');
 	}
 
-	public function agence(){
-		return $this->belongsTo('App\Models\Agence');
-	}
 
-	public function tags(){
-		return $this->belongsToMany('App\Models\Tags', 'angels_tags', 'user_id','tag_id');
-	}
+
 
     public function getNameAttribute(){
         return $this->last_name . "  ".$this->first_name;

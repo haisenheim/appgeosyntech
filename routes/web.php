@@ -318,6 +318,8 @@ Route::prefix('corporate')
 		Route::get('module/test/{token}','FormationController@getTestModule');
 
 		Route::resource('formations','FormationController');
+		Route::get('/formations/nos-formations','FormationController@getOurFormations');
+		Route::resource('tests','TestController');
 		Route::get('/planning','AgendaController@index');
 	});
 

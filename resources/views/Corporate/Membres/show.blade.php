@@ -1,4 +1,4 @@
-@extends('......layouts.adminentr')
+@extends('......layouts.corporate')
 
 @section('content')
 
@@ -83,7 +83,7 @@
                                       </small>
                                     </td>
                                     <td class="project-actions text-right">
-                                  <a class="btn btn-primary btn-xs" href="/adminentr/dossiers/{{ $investissement->token  }}">
+                                  <a class="btn btn-primary btn-xs" href="/corporate/dossiers/{{ $investissement->token  }}">
                                       <i class="fas fa-folder">
                                       </i>
                                       Afficher

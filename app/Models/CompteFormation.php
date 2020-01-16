@@ -4,19 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Centre extends Model
+class CompteFormation extends Model
 {
 	//
 
 	protected $guarded = [];
+	protected $table = 'comptes_formations';
 	//public $timestamps = false;
 
-	public function users(){
-		return $this->hasMany('App\User');
+	public function compte(){
+		return $this->belongsTo('App\User','compte_id');
 	}
 
-	public function pay(){
-		return $this->belongsTo('App\Models\Pay');
+	public function formation(){
+		return $this->belongsTo('App\Models\EntrepriseFormation');
 	}
 
 }

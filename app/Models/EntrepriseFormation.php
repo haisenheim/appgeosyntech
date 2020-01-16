@@ -4,19 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Centre extends Model
+class EntrepriseFormation extends Model
 {
 	//
 
 	protected $guarded = [];
+	protected $table ='entreprises_formations';
 	//public $timestamps = false;
 
-	public function users(){
-		return $this->hasMany('App\User');
+	public function formation(){
+		return $this->belongsTo('App\Models\Formation');
 	}
 
-	public function pay(){
-		return $this->belongsTo('App\Models\Pay');
+	public function entreprise(){
+		return $this->belongsTo('App\Models\Entreprise');
+	}
+
+	public function comptes(){
+		return $this->hasMany('App\Models\CompteFormation','enteprise_formation_id');
 	}
 
 }

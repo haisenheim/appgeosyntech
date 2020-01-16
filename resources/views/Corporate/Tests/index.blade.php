@@ -3,11 +3,10 @@
 
 @extends('......layouts.corporate')
 @section('page-title')
-BASE DES SOUS COMPTES
+BASE DES DONNEES DES TESTS
 @endsection
 
 @section('content')
-
     <div class="row">
             <div class="col-12">
               <div class="card">
@@ -17,27 +16,28 @@ BASE DES SOUS COMPTES
                   <table id="example1" class="table table-bordered table-hover table-condensed">
                     <thead>
                      <tr>
-                            <th>NOM</th>
-                            <th>PRENOM</th>
-                            <th>ADRESSE</th>
-                            <th>TELEPHONE</th>
-                            <th>EMAIL</th>
-
-                            <th><a class="btn btn-info btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+                            <th>DATE</th>
+                            <th>COMPTE</th>
+                            <th>FORMATION</th>
+                            <th>MODULE</th>
+                            <th>NOMBRE DE QUESTION</th>
+                            <th>SCORE</th>
+                            <th></th>
                      </tr>
                     </thead>
                     <tbody>
-                        @foreach($angels as $user)
+                        @foreach($tests as $tst)
                             <tr>
-                                <td>{!! $user->last_name !!} </td>
-                                <td>{!! $user->first_name !!} </td>
-                                <td>{!! $user->address !!} </td>
-                                <td>{!! $user->phone !!} </td>
-                                <td>{!! $user->email !!} </td>
+                                <td>{{ date_format($tst->created_at,'d/m/Y') }} </td>
+                                <td>{{ $tst->owner->name }} </td>
+                                <td> {{ $tst->module->formation->name }} </td>
+                                <td>{{ $tst->module->name }} </td>
+                                <td>{{ $tst->module->questions->count() }} </td>
+                                <td>{{ $tst->score }}</td>
 
                                 <td>
                                 <ul class="list-inline">
-                                  <li title="Afficher" class="list-inline-item"><a class="btn btn-info btn-xs" href="{{route('corporate.comptes.show',[$user->token])}}"><i class="fa fa-search"></i></a></li>
+                                  <li title="Afficher" class="list-inline-item"><a class="btn btn-info btn-xs" href="{{route('corporate.tests.show',[$tst->token])}}"><i class="fa fa-search"></i></a></li>
                                 </ul>
                                 </td>
                             </tr>
@@ -45,13 +45,13 @@ BASE DES SOUS COMPTES
                     </tbody>
                     <tfoot>
                     <tr>
-                      <th>NOM</th>
-                      <th>PRENOM</th>
-                      <th>ADRESSE</th>
-                      <th>TELEPHONE</th>
-                      <th>EMAIL</th>
-
-                      <th></th>
+                          <th>DATE</th>
+                          <th>COMPTE</th>
+                          <th>FORMATION</th>
+                          <th>MODULE</th>
+                          <th>NOMBRE DE QUESTION</th>
+                          <th>SCORE</th>
+                          <th></th>
                     </tr>
                     </tfoot>
                   </table>
