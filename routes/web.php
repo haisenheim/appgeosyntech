@@ -295,11 +295,11 @@ Route::prefix('contributeur')
 		Route::get('module/test/{token}','FormationController@getTestModule');
 	});
 
-//Liste des routes du consultant
-Route::prefix('consultant')
-	->namespace('Consultant')
-	->middleware(['auth','consultant'])
-	->name('consultant.')
+//Liste des routes de l'admin corporate
+Route::prefix('corporate')
+	->namespace('Corporate')
+	->middleware(['auth','corporate'])
+	->name('corporate.')
 	->group(function(){
 
 
