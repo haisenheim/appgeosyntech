@@ -295,6 +295,32 @@ Route::prefix('contributeur')
 		Route::get('module/test/{token}','FormationController@getTestModule');
 	});
 
+//Liste des routes du consultant
+Route::prefix('consultant')
+	->namespace('Consultant')
+	->middleware(['auth','consultant'])
+	->name('consultant.')
+	->group(function(){
+
+
+		Route::resource('comptes','MembreController');
+		Route::resource('formations','FormationController');
+
+		Route::get('profil','ProfilController');
+		Route::get('dashboard','DashboardController');
+
+		// Finances
+		Route::get('finances/factures','FactureController@index');
+		Route::get('finances/payees','FactureController@payees');
+		Route::get('facture/{token}','FactureController@show');
+		Route::get('facture/print/{token}','FactureController@printit');
+		Route::get('show-module/{token}','FormationController@showModule');
+		Route::get('module/test/{token}','FormationController@getTestModule');
+
+		Route::resource('formations','FormationController');
+		Route::get('/planning','AgendaController@index');
+	});
+
 
 
 
