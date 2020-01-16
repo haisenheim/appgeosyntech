@@ -1,23 +1,9 @@
 
 
 
-@extends('......layouts.adminentr')
-
-@section('content-header')
-    <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">CHARGES D'AFFAIRES</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
-
-              <li class="breadcrumb-item active">Chargés d'affaires</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+@extends('......layouts.corporate')
+@section('page-title')
+BASE DES SOUS COMPTES
 @endsection
 
 @section('content')
@@ -25,9 +11,7 @@
     <div class="row">
             <div class="col-12">
               <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">BASE DE DONNEES DES CHARGES D'AFFAIRES</h3>
-                </div>
+
                 <!-- /.card-header -->
                 <div class="card-body">
                   <table id="example1" class="table table-bordered table-hover table-condensed">
@@ -53,7 +37,7 @@
 
                                 <td>
                                 <ul class="list-inline">
-                                  <li class="list-inline-item"><a class="btn btn-primary btn-xs" href="{{route('adminentr.angels.show',[$user->token])}}"><i class="fa fa-search"></i></a></li>
+                                  <li title="Afficher" class="list-inline-item"><a class="btn btn-info btn-xs" href="{{route('corporate.comptes.show',[$user->token])}}"><i class="fa fa-search"></i></a></li>
                                 </ul>
                                 </td>
                             </tr>
