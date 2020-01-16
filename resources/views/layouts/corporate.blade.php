@@ -24,10 +24,10 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-        <?php $corp = \Illuminate\Support\Facades\Session::get('corporate'); ?>
+        <?php $corp = \Illuminate\Support\Facades\Session::get('corporate'); debug($corp); ?>
       <!-- Actions Dropdown Menu -->
       <li class="nav-item">
-       <span style="color: #FFFFFF; font-weight: 700"> {{ $corp->name }}</span>
+       <span style="color: #FFFFFF; font-weight: 700"> </span>
       </li>
 
    
