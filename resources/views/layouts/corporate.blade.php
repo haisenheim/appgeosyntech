@@ -115,7 +115,7 @@
 
            <li  class="nav-item has-treeview">
             <a href="#" class="nav-link {{ $active==3?'active':'' }}">
-              <i class="nav-icon fa fa-graduation-cap text-info"></i>
+              <i class="nav-icon fa fa-graduation-cap text-danger"></i>
               <p>
                 FORMATIONS
                 <i class="fas fa-angle-left right"></i>
@@ -158,7 +158,7 @@
 
           <li  class="nav-item has-treeview">
             <a href="#" class="nav-link {{ $active==6?'active':'' }}">
-              <i class="nav-icon fa fa-money-bill-alt text-info"></i>
+              <i class="nav-icon fa fa-money-bill-alt text-success"></i>
               <p>
                 FACTURES
                 <i class="fas fa-angle-left right"></i>
