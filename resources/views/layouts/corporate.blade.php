@@ -111,13 +111,30 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/corporate/formations" class="nav-link {{ $active==3?'active':'' }}">
-              <i class="nav-icon fa fa-graduation-cap"></i>
+
+
+           <li  class="nav-item has-treeview">
+            <a href="#" class="nav-link {{ $active==3?'active':'' }}">
+              <i class="nav-icon fa fa-graduation-cap text-info"></i>
               <p>
                 FORMATIONS
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/corporate/nos-formations/" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>NOS FORMATIONS</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a href="/corporate/formations" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>TOUTES LES FORMATIONS</p>
+                </a>
+                </li>
+            </ul>
           </li>
 
 
