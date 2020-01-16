@@ -67,14 +67,14 @@ BASE DES SOUS COMPTES
            <div class="modal fade" id="modal-lg">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header bg-success">
+                      <div class="modal-header bg-info">
                         <h4 class="modal-title">Nouveau compte</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('adminorg.angels.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('corporate.comptes.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="form-group">
@@ -117,7 +117,7 @@ BASE DES SOUS COMPTES
                           </div>
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-outline-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-outline-info btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>
