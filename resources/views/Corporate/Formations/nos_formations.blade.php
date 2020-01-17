@@ -1,12 +1,10 @@
 @extends('......layouts.corporate')
-
-@section('page-title')
-CATALOGUE DES FORMATIONS
-@endsection
-
 @section('content')
 
+<?php dd($entreprise->formations) ?>
+
  <div class="card">
+
 
         <div class="card-body p-0">
           <table class="table table-striped projects" id="table-projets">
