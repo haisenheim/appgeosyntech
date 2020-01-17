@@ -21,7 +21,7 @@ class EntrepriseFormation extends Model
 	}
 
 	public function comptes(){
-		return $this->hasMany('App\Models\CompteFormation','enteprise_formation_id');
+		return $this->hasMany('App\Models\CompteFormation','entreprise_formation_id');
 	}
 
 }
