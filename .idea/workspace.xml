@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php" afterPath="$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -75,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nos_formations.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nos_formations.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5639413" vertical-offset="531" max-vertical-offset="1440">
-              <caret line="50" column="155" selection-start-line="50" selection-start-column="155" selection-end-line="50" selection-end-column="155" />
+            <state vertical-scroll-proportion="-8.84" vertical-offset="531" max-vertical-offset="1440">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="e#262#279#0#HTML" expanded="true" />
                 <element signature="e#363#381#0#HTML" expanded="true" />
@@ -140,11 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.32" vertical-offset="326" max-vertical-offset="2048">
-              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.55510205" vertical-offset="144" max-vertical-offset="2048">
+              <caret line="38" column="144" selection-start-line="38" selection-start-column="144" selection-end-line="38" selection-end-column="144" />
               <folding />
             </state>
           </provider>
@@ -212,8 +211,8 @@
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Entreprise.php" />
         <option value="$PROJECT_DIR$/app/Models/EntrepriseFormation.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
       </list>
     </option>
   </component>
@@ -1440,22 +1439,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.32" vertical-offset="326" max-vertical-offset="2048">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5639413" vertical-offset="531" max-vertical-offset="1440">
-          <caret line="50" column="155" selection-start-line="50" selection-start-column="155" selection-end-line="50" selection-end-column="155" />
+        <state vertical-scroll-proportion="-8.84" vertical-offset="531" max-vertical-offset="1440">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="e#262#279#0#HTML" expanded="true" />
             <element signature="e#363#381#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55510205" vertical-offset="144" max-vertical-offset="2048">
+          <caret line="38" column="144" selection-start-line="38" selection-start-column="144" selection-end-line="38" selection-end-column="144" />
+          <folding />
         </state>
       </provider>
     </entry>

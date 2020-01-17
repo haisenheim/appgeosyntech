@@ -36,7 +36,7 @@ class FormationController extends Controller
 
 		//$entreprise = Entreprise::find(Auth::user()->entreprise_id);
 		//dd($entreprise);
-		$inscriptions = EntrepriseFormation::all()->where('entreprise_id', Auth::user()->entreprise_id);
+		$inscriptions = EntrepriseFormation::all()->where('entreprise_id', Auth::user()->entreprise_id)->sortByDesc('created_at')->paginate(10);
 		return view('Corporate/Formations/nos_formations')->with(compact('inscriptions'));
 	}
 
