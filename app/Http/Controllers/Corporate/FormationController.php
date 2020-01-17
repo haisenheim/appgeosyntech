@@ -35,6 +35,7 @@ class FormationController extends Controller
 	public function getOurFormations(){
 
 		$entreprise = Entreprise::find(Auth::user()->entreprise_id);
+		dd($entreprise);
 		return view('Corporate/Formations/nos_formations')->with(compact('entreprise'));
 	}
 
