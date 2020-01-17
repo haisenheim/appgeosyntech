@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/corporate.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/corporate.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <ignored path="alert.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60816324" vertical-offset="1734" max-vertical-offset="2464">
-              <caret line="319" column="59" selection-start-line="319" selection-start-column="59" selection-end-line="319" selection-end-column="59" />
+            <state vertical-scroll-proportion="-12.56" vertical-offset="1734" max-vertical-offset="2464">
+              <caret line="320" column="20" selection-start-line="320" selection-start-column="20" selection-end-line="320" selection-end-column="20" />
               <folding>
                 <element signature="e#1850#2534#2#PHP" expanded="false" />
                 <element signature="e#2654#5129#2#PHP" expanded="false" />
@@ -51,12 +52,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="corporate.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="corporate.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/corporate.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.32" vertical-offset="3014" max-vertical-offset="3760">
-              <caret line="192" column="51" selection-start-line="192" selection-start-column="51" selection-end-line="192" selection-end-column="51" />
-              <folding />
+            <state vertical-scroll-proportion="0.16771488" vertical-offset="1920" max-vertical-offset="3760">
+              <caret line="125" column="37" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,11 +211,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/TestController.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Membres/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Tests/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/corporate.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/FactureController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/corporate.blade.php" />
       </list>
     </option>
   </component>
@@ -926,10 +929,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1612" height="865" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20733428" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1403,14 +1406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/corporate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.32" vertical-offset="3014" max-vertical-offset="3760">
-          <caret line="192" column="51" selection-start-line="192" selection-start-column="51" selection-end-line="192" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Corporate/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="490">
@@ -1439,8 +1434,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60816324" vertical-offset="1734" max-vertical-offset="2464">
-          <caret line="319" column="59" selection-start-line="319" selection-start-column="59" selection-end-line="319" selection-end-column="59" />
+        <state vertical-scroll-proportion="-12.56" vertical-offset="1734" max-vertical-offset="2464">
+          <caret line="320" column="20" selection-start-line="320" selection-start-column="20" selection-end-line="320" selection-end-column="20" />
           <folding>
             <element signature="e#1850#2534#2#PHP" expanded="false" />
             <element signature="e#2654#5129#2#PHP" expanded="false" />
@@ -1448,6 +1443,16 @@
             <element signature="e#7791#7862#2#PHP" expanded="false" />
             <element signature="e#8038#9373#2#PHP" expanded="false" />
             <element signature="e#9510#10517#2#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/corporate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16771488" vertical-offset="1920" max-vertical-offset="3760">
+          <caret line="125" column="37" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

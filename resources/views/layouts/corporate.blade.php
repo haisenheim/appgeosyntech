@@ -123,7 +123,7 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/corporate/formations/nos-formations/" class="nav-link">
+                  <a href="/corporate/nos-formations/" class="nav-link">
                     <i class="far fa-circle text-danger nav-icon"></i>
                     <p>NOS FORMATIONS</p>
                   </a>
