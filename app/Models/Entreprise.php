@@ -19,6 +19,10 @@ class Entreprise extends Model
 		return $this->belongsToMany('App\Models\Formation','entreprises_formations');
 	}
 
+	public function inscriptions(){
+		return $this->hasMany('App\Models\EntrepriseFormation', 'entreprise_id');
+	}
+
 
 
 

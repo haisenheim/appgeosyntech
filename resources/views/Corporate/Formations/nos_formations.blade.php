@@ -1,7 +1,7 @@
 @extends('......layouts.corporate')
 @section('content')
 
-<?php dd($entreprise->formations) ?>
+<?php dd($entreprise->inscriptions) ?>
 
  <div class="card">
 

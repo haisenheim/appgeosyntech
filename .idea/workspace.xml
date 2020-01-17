@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/Corporate.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Corporate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Corporate/Formations/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Corporate/Formations/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Entreprise.php" afterPath="$PROJECT_DIR$/app/Models/Entreprise.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -77,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nos_formations.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nos_formations.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10062893" vertical-offset="0" max-vertical-offset="1520">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state vertical-scroll-proportion="-0.64" vertical-offset="0" max-vertical-offset="1520">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
               <folding>
                 <element signature="e#298#315#0#HTML" expanded="true" />
                 <element signature="e#399#417#0#HTML" expanded="true" />
@@ -90,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Entreprise.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Entreprise.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Models/Entreprise.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="480">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.5877551" vertical-offset="0" max-vertical-offset="490">
+              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -200,7 +197,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/AgendaController.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Agenda/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Membres/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Entreprise.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Models/EntrepriseFormation.php" />
         <option value="$PROJECT_DIR$/app/Models/CompteFormation.php" />
@@ -216,6 +212,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Entreprise.php" />
       </list>
     </option>
   </component>
@@ -1442,22 +1439,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Entreprise.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="480">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10062893" vertical-offset="0" max-vertical-offset="1520">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state vertical-scroll-proportion="-0.64" vertical-offset="0" max-vertical-offset="1520">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
           <folding>
             <element signature="e#298#315#0#HTML" expanded="true" />
             <element signature="e#399#417#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Entreprise.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5877551" vertical-offset="0" max-vertical-offset="490">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
