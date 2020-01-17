@@ -1,8 +1,10 @@
 @extends('......layouts.corporate')
+
+@section('page-title')
+NOS FORMATIONS
+@endsection
+
 @section('content')
-
-
-
  <div class="card">
 
 
