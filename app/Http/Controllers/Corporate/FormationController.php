@@ -34,9 +34,10 @@ class FormationController extends Controller
 
 	public function getOurFormations(){
 
-		$entreprise = Entreprise::find(Auth::user()->entreprise_id);
+		//$entreprise = Entreprise::find(Auth::user()->entreprise_id);
 		//dd($entreprise);
-		return view('Corporate/Formations/nos_formations')->with(compact('entreprise'));
+		$inscriptions = EntrepriseFormation::all()->where('entreprise_id', Auth::user()->entreprise_id);
+		return view('Corporate/Formations/nos_formations')->with(compact('inscriptions'));
 	}
 
 	public function getFormation($token){

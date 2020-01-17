@@ -25,7 +25,7 @@
                   </tr>
               </thead>
               <tbody>
-                   @foreach($entreprise->inscriptions as $inscription)
+                   @foreach($inscriptions as $inscription)
                         <?php $formation = $inscription->formation ?>
                         <tr>
                             <td>#</td>
@@ -57,7 +57,7 @@
           </table>
           <div class="">
               <ul class="pagination justify-content-end">
-              {{ $formations->links() }}
+              {{ $inscriptions->links() }}
           </ul>
           </div>
         </div>
