@@ -16,7 +16,7 @@ class Entreprise extends Model
 	}
 
 	public function formations(){
-		return $this->belongsToMany('App\Models\Formations','entreprises_formations');
+		return $this->belongsToMany('App\Models\Formation','entreprises_formations');
 	}
 
 
