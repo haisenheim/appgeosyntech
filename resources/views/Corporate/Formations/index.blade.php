@@ -21,7 +21,7 @@ CATALOGUE DES FORMATIONS
                       <th>Cout en ligne</th>
                       <th>Cout en présentiel</th>
                       <th>
-                          Contributeur
+                          Auteur
                       </th>
 
                       <th>Nb. Modules</th>
@@ -33,9 +33,7 @@ CATALOGUE DES FORMATIONS
                         <tr>
                             <td>#</td>
                             <td>
-                            <span class="text-bold text-lg-left">{{ $formation->name }}</span>- <small>{{ $formation->created_at?date_format($formation->created_at,'d/m/Y'):'' }}</small><br/>
-                            <?= $formation->active?'<span class="badge badge-success">ACTIVE</span>':'<span class="badge badge-danger">Bloquée</span>' ?> -
-                            <?= $formation->free?'<span class="badge badge-info">GRATUITE</span>':'<span class="badge badge-warning">PAYANTE</span>' ?>- <?= $formation->interne?'<span class="badge badge-success"><i class="fa fa-users"></i> Consultants </span>':'<span class="badge badge-warning"><i class="fa fa-school"></i> Ecoles</span>' ?>
+                            <span class="text-bold text-lg-left">{{ $formation->name }}</span>
                             </td>
                             <td>
                                 {{number_format($formation->prix_ligne,0,',','.')}}
@@ -51,11 +49,6 @@ CATALOGUE DES FORMATIONS
                                 <ul>
                                     <li class="list-inline-item" title="Afficher"> <a class="btn btn-info btn-xs" href="/corporate/formations/{{ $formation->token  }}"><i class="fas fa-search"></i></a></li>
 
-                                           @if($formation->active)
-                                               <li title="bloquer cette formation" class="list-inline-item"><a class="btn btn-danger btn-xs" href="/corporate/formation/disable/{{ $formation->token }}"><i class="fa fa-lock"></i></a></li>
-                                           @else
-                                             <li title="débloquer ce formation" class="list-inline-item"><a class="btn btn-success btn-xs" href="/corporate/formation/enable/{{ $formation->token }}"><i class="fa fa-unlock"></i></a></li>
-                                           @endif
                                 </ul>
                            </td>
                         </tr>
