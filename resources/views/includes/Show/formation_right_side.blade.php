@@ -18,14 +18,32 @@
             $link='consultant';
     }
 
+    if($id==5){
+           $link='corporate';
+    }
+
     if($id==3){
             $link='adminag';
+    }
+
+    if($id==10){
+           $link='member';
+    }
+
+    if($id==9){
+        $link='mcp';
+    }
+
+    if($id==8){
+       $link='mch';
     }
 
     $canseetest=false;
     if(in_array($id,[1,2,3,6,7])){
         $canseetest=true;
     }
+
+    $canshow = false;
 
  ?>
 
