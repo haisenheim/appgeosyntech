@@ -27,3 +27,19 @@
     </div>
 
 </div>
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-title">{{ $module->formation->name }}</div>
+    </div>
+    <div class="card-body">
+        <fieldset>
+            <legend>LISTE DES MODULES</legend>
+            <ol>
+                @foreach($module->formation->modules as $m)
+                    <li style="margin-top: 10px">{{ $m->name }} <span style="float: right">{{ $m->cours->count() }} COUR(S)</span></li>
+                @endforeach
+            </ol>
+        </fieldset>
+    </div>
+</div>

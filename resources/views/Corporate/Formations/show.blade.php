@@ -1,4 +1,9 @@
 @extends('......layouts.corporate')
+
+@section('page-title')
+{{ $formation->name }}
+@endsection
+
 @section('content')
 
 

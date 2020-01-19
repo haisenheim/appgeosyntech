@@ -1,4 +1,7 @@
 @extends('......layouts.corporate')
+@section('page-title')
+{{ $module->name }}
+@endsection
 @section('content')
 
 
