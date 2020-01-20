@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Corporate;
 
 use App\Http\Controllers\Controller;
 
+use App\Models\CompteFormation;
 use App\Models\Entreprise;
 use App\Models\EntrepriseFormation;
 use App\Models\Formation;
@@ -42,9 +43,18 @@ class FormationController extends Controller
 
 	public function getFormation($token){
 		$formation = Formation::where('token',$token)->first();
-		$formation = EntrepriseFormation::where('entreprise_id',Auth::user()->entreprise_id)->where('formation_id',$formation->id)->first();
-		return view('Corporate/Formations/show')->with(compact('formation'));
+		$members = User::All()->where('entreprise_id',Auth::user()->entreprise_id)->where('role_id',9);
+		$myformation = EntrepriseFormation::where('entreprise_id',Auth::user()->entreprise_id)->where('formation_id',$formation->id)->first();
+		return view('Corporate/Formations/my_show')->with(compact('myformation','members'));
 	}
+
+	public function getInscription($token){
+		$compteformation = CompteFormation::where('token',$token)->first();
+		return view('Corporate/Formations/inscription')->with(compact('compteformation'));
+	}
+
+
+
 
 
     /**

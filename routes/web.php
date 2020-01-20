@@ -319,6 +319,7 @@ Route::prefix('corporate')
 
 		Route::get('/formations','FormationController@index');
 		Route::get('/nos-formations','FormationController@getOurFormations');
+		Route::get('/formation/inscrit/{token}','FormationController@getInscription');
 		Route::resource('tests','TestController');
 		Route::get('/planning','AgendaController@index');
 	});

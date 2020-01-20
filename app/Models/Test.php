@@ -22,4 +22,8 @@ class Test extends Model
 	public function reponses(){
 		return $this->hasMany('App\Models\Reponse');
 	}
+
+	public function first(){
+		return $this->hasOne('App\Models\Test','premier_id');
+	}
 }

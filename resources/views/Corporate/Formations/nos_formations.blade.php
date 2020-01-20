@@ -32,7 +32,7 @@ NOS FORMATIONS
                         <tr>
                             <td>#</td>
                             <td>
-                            <span class="text-bold text-lg-left">{{ $formation->name }}</span>- <small>{{ $formation->created_at?date_format($formation->created_at,'d/m/Y'):'' }}</small><br/>
+                            <span class="text-bold text-lg-left">{{ $formation->name }}</span>
 
                             </td>
                             <td>
