@@ -37,7 +37,7 @@
     <div class="modal" id="AddCart">
          <div class="modal-dialog modal-lg">
            <div class="modal-content">
-             <div class="modal-header bg-danger">
+             <div class="modal-header bg-info">
                <h4 class="modal-title">ACHAT : {{ $formation->name }}</h4>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
@@ -76,12 +76,13 @@
                                 <div class="col-md-9 col-sm-12">
                                     <div class="form-group">
                                         <label for="nbcomptes">NOMBRE DE SOUS COMPTES</label>
-                                        <input name="nbcomptes" type="number" id="nbcomptes" class="form-contol"/>
+                                        <input name="nbcomptes" type="number" id="nbcomptes" class="form-control"/>
                                     </div>
-                                    <div class="col-md-3 col-sm-12">
-                                        <button id="btn-save"  class="btn btn-danger btn-block"><i class="fa fa-w fa-save"></i> ENREGISTRER</button>
-                                    </div>
+
                                 </div>
+                                <div class="col-md-3 col-sm-12">
+                                   <button id="btn-save"  class="btn btn-danger btn-block"><i class="fa fa-w fa-save"></i> ENREGISTRER</button>
+                                 </div>
                             </div>
                          </form>
 
