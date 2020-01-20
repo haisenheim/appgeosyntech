@@ -65,7 +65,17 @@ class FormationController extends Controller
      */
 
 
+	public function store(Request $request){
 
+		$formation = new EntrepriseFormation();
+		$formation->formation_id = $request->formation_id;
+		$formation->nbcomptes = $request->nbcomptes;
+		$formation->active =0;
+		$formation->entreprise_id = Auth::user()->entreprise_id;
+		$formation->save();
+
+		return response()->json('ok');
+	}
 
 
 
