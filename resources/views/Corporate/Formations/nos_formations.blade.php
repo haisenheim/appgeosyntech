@@ -51,7 +51,7 @@ NOS FORMATIONS
                           <td class="project-actions text-right">
                                 <ul>
                                     @if($inscription->active)
-                                        <li class="list-inline-item" title="Afficher"> <a class="btn btn-info btn-xs" href="/corporate/formations/{{ $formation->token  }}"><i class="fas fa-search"></i></a></li>
+                                        <li class="list-inline-item" title="Afficher"> <a class="btn btn-info btn-xs" href="/corporate/formation/{{ $formation->token  }}"><i class="fas fa-search"></i></a></li>
                                     @else
                                         <li class="list-inline-item"><span class="badge badge-danger">Bloquée</span></li>
                                     @endif
