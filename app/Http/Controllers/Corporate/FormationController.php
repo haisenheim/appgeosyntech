@@ -16,6 +16,7 @@ use App\Models\Pay;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 
 class FormationController extends Controller
@@ -61,6 +62,10 @@ class FormationController extends Controller
 			}
 
 		return response()->json('ok');
+	}
+
+	public function test(){
+		dd(Hash::make('marcFila2020'));
 	}
 
 	public function getInscription($token){

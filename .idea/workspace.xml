@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/CompteFormation.php" afterPath="$PROJECT_DIR$/app/Models/CompteFormation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Corporate/Formations/my_show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Corporate/Formations/my_show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -37,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.28" vertical-offset="1734" max-vertical-offset="2512">
-              <caret line="318" column="79" selection-start-line="318" selection-start-column="79" selection-end-line="318" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.6106557" vertical-offset="1734" max-vertical-offset="2528">
+              <caret line="319" column="55" selection-start-line="319" selection-start-column="55" selection-end-line="319" selection-end-column="55" />
               <folding>
                 <element signature="e#1850#2534#2#PHP" expanded="false" />
                 <element signature="e#2654#5129#2#PHP" expanded="false" />
@@ -77,8 +77,8 @@
       <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.24" vertical-offset="264" max-vertical-offset="2560">
-              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+            <state vertical-scroll-proportion="-18.24" vertical-offset="392" max-vertical-offset="2656">
+              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -107,7 +107,7 @@
       <file leaf-file-name="formation_left_side.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="736">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="736">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -117,9 +117,11 @@
       <file leaf-file-name="my_show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/my_show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.111111" vertical-offset="1740" max-vertical-offset="3360">
-              <caret line="90" column="90" selection-start-line="90" selection-start-column="90" selection-end-line="90" selection-end-column="90" />
-              <folding />
+            <state vertical-scroll-proportion="-15.148149" vertical-offset="2567" max-vertical-offset="3424">
+              <caret line="186" column="61" selection-start-line="186" selection-start-column="61" selection-end-line="186" selection-end-column="61" />
+              <folding>
+                <element signature="e#3857#3882#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,18 +129,18 @@
       <file leaf-file-name="EntrepriseFormation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/EntrepriseFormation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="512">
+            <state vertical-scroll-proportion="-4.8" vertical-offset="24" max-vertical-offset="512">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompteFormation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CompteFormation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/CompteFormation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72131145" vertical-offset="0" max-vertical-offset="488">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state vertical-scroll-proportion="-14.08" vertical-offset="0" max-vertical-offset="480">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -204,10 +206,10 @@
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/inscription.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Models/CompteFormation.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/my_show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
-        <option value="$PROJECT_DIR$/app/Models/CompteFormation.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -1287,26 +1289,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/EntrepriseFormation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="512">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="544">
           <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="736">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1335,18 +1321,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/CompteFormation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.08" vertical-offset="0" max-vertical-offset="480">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/my_show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.111111" vertical-offset="1740" max-vertical-offset="3360">
-          <caret line="90" column="90" selection-start-line="90" selection-start-column="90" selection-end-line="90" selection-end-column="90" />
+        <state vertical-scroll-proportion="-15.148149" vertical-offset="2567" max-vertical-offset="3424">
+          <caret line="186" column="61" selection-start-line="186" selection-start-column="61" selection-end-line="186" selection-end-column="61" />
+          <folding>
+            <element signature="e#3857#3882#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="736">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EntrepriseFormation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8" vertical-offset="24" max-vertical-offset="512">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.24" vertical-offset="392" max-vertical-offset="2656">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.28" vertical-offset="1734" max-vertical-offset="2512">
-          <caret line="318" column="79" selection-start-line="318" selection-start-column="79" selection-end-line="318" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.6106557" vertical-offset="1734" max-vertical-offset="2528">
+          <caret line="319" column="55" selection-start-line="319" selection-start-column="55" selection-end-line="319" selection-end-column="55" />
           <folding>
             <element signature="e#1850#2534#2#PHP" expanded="false" />
             <element signature="e#2654#5129#2#PHP" expanded="false" />
@@ -1355,22 +1375,6 @@
             <element signature="e#8038#9373#2#PHP" expanded="false" />
             <element signature="e#9510#10517#2#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.24" vertical-offset="264" max-vertical-offset="2560">
-          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/CompteFormation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72131145" vertical-offset="0" max-vertical-offset="488">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>

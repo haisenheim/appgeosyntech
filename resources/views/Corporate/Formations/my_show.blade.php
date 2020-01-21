@@ -83,7 +83,7 @@
 
                             </tbody>
                          </table>
-                         <div>
+                         <div style="margin-top: 25px;">
                             <button id="btn-save" class="btn btn-block btn-sm btn-outline-danger"><i class="fa fa-save"></i> ENREGISTER</button>
                          </div>
                          <form action="">
@@ -182,6 +182,10 @@
                                             type: 'success',
                                             title: 'La formation a été ajoutée avec succès!!!'
                                           });
+
+                                setTimeout(function(){
+                                    window.location.reload();
+                                },2000)
 
 
                              },
