@@ -70,7 +70,7 @@ class FormationController extends Controller
 
 	public function getInscription($token){
 		$compteformation = CompteFormation::where('token',$token)->first();
-		dd($compteformation->compte);
+		dd($compteformation->inscription);
 		return view('Corporate/Formations/inscription')->with(compact('compteformation'));
 	}
 

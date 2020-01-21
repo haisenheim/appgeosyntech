@@ -16,7 +16,7 @@ class CompteFormation extends Model
 		return $this->belongsTo('App\User','compte_id');
 	}
 
-	public function formation(){
+	public function inscription(){
 		return $this->belongsTo('App\Models\EntrepriseFormation','entreprise_formation_id');
 	}
 
