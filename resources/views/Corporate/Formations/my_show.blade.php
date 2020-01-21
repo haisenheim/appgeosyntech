@@ -67,7 +67,7 @@
 
                                 </div>
                                 <div class="col-md-3 col-sm-12">
-                                   <button style="margin-top: 20px" id="btn-add"  class="btn btn-danger btn-xs"><i class="fa fa-w fa-save"></i> AJOUTER</button>
+                                   <button style="margin-top: 30px" id="btn-add"  class="btn btn-danger btn-sm"><i class="fa fa-w fa-save"></i> AJOUTER</button>
                                  </div>
                             </div>
                             <div class="divider"></div>
@@ -112,6 +112,30 @@
 
 
     <script>
+        $('#btn-add').click(function(e){
+            if($('#compte_id').val()<1){
+
+            }else{
+                var exist = false;
+                $('#tab-members').find('tbody').find('tr').each(function(){
+                    if($('#compte_id').val() == $(this).data('id')){
+                        exist = true;
+                    }
+                });
+
+                if(exist){
+                    alert('Compte existe dans le tableau !!!');
+                }else{
+                    var tr = '<tr data-id='+ $('#compte_id').val()  +' ><td>'+ $('#compte_id:selected').text()  +'</td><td><span class="remove"><i class="fa fa-trash"></i></span></td></tr>';
+                    $('#tab-members').find('tbody').append(tr);
+
+                }
+            }
+             $('.remove').click(function(){
+                $(this).parent().parent().remove();
+             });
+        });
+
         $('#btn-save').click(function(e){
 
                     e.preventDefault();
@@ -132,10 +156,13 @@
                         {
 
                          var spinHandle_firstProcess = loadingOverlay.activate();
-
+                          var comptes = [];
+                          $('#tab-members').find('tbody').find('tr').each(function(){
+                            comptes.push($(this).data('id'));
+                          });
 
                          $.ajax({
-                             url:'/corporate/formations/add-comptes',
+                             url:'/corporate/formation/add-comptes',
                              type:'Post',
 
                              data:{nbcomptes:$('#nbcomptes').val(), formation_id:$('#formation_id').val()},
@@ -147,15 +174,13 @@
                              success: function(data){
 
                                  loadingOverlay.cancel(spinHandle_firstProcess);
-                                 $('#AddCart').hide();
+
 
                                 Toast.fire({
                                             type: 'success',
                                             title: 'La formation a été ajoutée avec succès!!!'
                                           });
-                                          setTimeout(function() {
-                                            $('#popup').show();
-                                          },2000);
+
 
                              },
                              Error:function(){

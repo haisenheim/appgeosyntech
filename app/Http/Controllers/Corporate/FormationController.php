@@ -48,6 +48,11 @@ class FormationController extends Controller
 		return view('Corporate/Formations/my_show')->with(compact('myformation','members'));
 	}
 
+
+	public function saveComptes(Request $request){
+			$data = $request->donnees;
+	}
+
 	public function getInscription($token){
 		$compteformation = CompteFormation::where('token',$token)->first();
 		return view('Corporate/Formations/inscription')->with(compact('compteformation'));

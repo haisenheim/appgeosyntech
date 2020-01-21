@@ -316,6 +316,7 @@ Route::prefix('corporate')
 		Route::get('facture/print/{token}','FactureController@printit');
 		Route::get('show-module/{token}','FormationController@showModule');
 		Route::get('module/test/{token}','FormationController@getTestModule');
+		Route::post('formation/add-comptes','FormationController@saveComptes');
 
 		Route::get('/formations','FormationController@index');
 		Route::get('/nos-formations','FormationController@getOurFormations');
