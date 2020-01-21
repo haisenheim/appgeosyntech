@@ -1,5 +1,5 @@
 @extends('......layouts.corporate')
-<?php $formation = $compteformation->formation->formation; ?>
+<?php $formation = $compteformation->inscription->formation; ?>
 @section('page-title')
  {{ $compteformation->compte->name }} --  {{ $formation->name }}
 @endsection
