@@ -17,7 +17,7 @@ class CompteFormation extends Model
 	}
 
 	public function formation(){
-		return $this->belongsTo('App\Models\EntrepriseFormation');
+		return $this->belongsTo('App\Models\EntrepriseFormation','entreprise_formation_id');
 	}
 
 
