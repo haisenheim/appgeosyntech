@@ -75,8 +75,8 @@
 
                                     <tr>
                                         <td>{{ $module->name }}</td>
-                                        <td>{{ $test1?($score1 . '%'):'<span class="badge badge-danger">non démarré </span>' }}</td>
-                                        <td>{{ $test2?($score2 . '%'):'<span class="badge badge-danger">non bouclé </span>' }}</td>
+                                        <td><?= $test1?($score1 . '%'):'<span class="badge badge-danger">non démarré </span>' ?></td>
+                                        <td><?= $test2?($score2 . '%'):'<span class="badge badge-danger">non bouclé </span>' ?></td>
 
                                     </tr>
 
