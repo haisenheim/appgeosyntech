@@ -126,7 +126,7 @@
                 if(exist){
                     alert('Compte existe dans le tableau !!!');
                 }else{
-                    var tr = '<tr data-id='+ $('#compte_id').val()  +' ><td>'+ $('#compte_id:selected').text()  +'</td><td><span class="remove"><i class="fa fa-trash"></i></span></td></tr>';
+                    var tr = '<tr data-id='+ $('#compte_id').val()  +' ><td>'+ $('#compte_id option:selected').text()  +'</td><td><span class="remove"><i class="fa fa-trash"></i></span></td></tr>';
                     $('#tab-members').find('tbody').append(tr);
 
                 }
