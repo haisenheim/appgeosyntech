@@ -50,7 +50,17 @@ class FormationController extends Controller
 
 
 	public function saveComptes(Request $request){
-			$data = $request->donnees;
+			$data = $request->comptes;
+			for($i=0; $i<count($data); $i++){
+				$cfr = new CompteFormation();
+				$cfr->entreprise_formation_id = $request->formation_id;
+				$cfr->compte_id = $data[$i];
+				$cfr->token = sha1(date('Yhmdis').Auth::user()->id . $i .$data[$i]);
+				$cfr->active = 1;
+				$cfr->save();
+			}
+
+		return response()->json('ok');
 	}
 
 	public function getInscription($token){

@@ -83,10 +83,12 @@
 
                             </tbody>
                          </table>
+                         <div>
+                            <button id="btn-save" class="btn btn-block btn-sm btn-outline-danger"><i class="fa fa-save"></i> ENREGISTER</button>
+                         </div>
                          <form action="">
                              {{csrf_field()}}
-                             <input type="hidden" id="formation_id" value="{{ $formation->id }}"/>
-
+                             <input type="hidden" id="formation_id" value="{{ $myformation->id }}"/>
                          </form>
 
                     </div>
@@ -165,7 +167,7 @@
                              url:'/corporate/formation/add-comptes',
                              type:'Post',
 
-                             data:{nbcomptes:$('#nbcomptes').val(), formation_id:$('#formation_id').val()},
+                             data:{comptes:comptes, formation_id:$('#formation_id').val()},
 
                              beforeSend:function(xhr){
                                  xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
