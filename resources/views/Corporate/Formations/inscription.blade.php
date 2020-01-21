@@ -1,7 +1,7 @@
 @extends('......layouts.corporate')
 <?php $formation = $compteformation->inscription->formation; ?>
 @section('page-title')
- <span class="text-success" style="font-size: larger; font-weight: bolder">{{ $compteformation->compte->name }} :</span>   {{ $formation->name }}
+ <span style="font-size: larger; font-weight: bolder; font-family: impact;">{{ $compteformation->compte->name }} :</span>   {{ $formation->name }}
 @endsection
 
 @section('content')
