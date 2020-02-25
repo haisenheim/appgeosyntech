@@ -205,10 +205,10 @@
                         </ol>
                         <div class="carousel-inner" role="listbox">
                           <!-- Slide One - Set the background image for this slide in the line below -->
-                          <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
+                          <div class="carousel-item active" style="background-image: url('{{ asset('img/slide1.png') }}')">
                             <div class="carousel-caption d-none d-md-block">
-                              <h3 class="display-4">First Slide</h3>
-                              <p class="lead">This is a description for the first slide.</p>
+                              <h3 class="display-4">PREMIERE SLIDE</h3>
+                              <p class="lead">Description de la premiere slide</p>
                             </div>
                           </div>
                           <!-- Slide Two - Set the background image for this slide in the line below -->
