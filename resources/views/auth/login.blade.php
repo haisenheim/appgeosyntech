@@ -44,7 +44,7 @@
                                 <div class="p-2">
                                     <h5 class="mb-5 text-center">Se connecter à OTC pour continuer</h5>
                                     <form class="form-horizontal" action="{{ route('login') }}" method="post">
-
+                                         {{ csrf_field() }}
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group mb-4">
