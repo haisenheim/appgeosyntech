@@ -205,23 +205,23 @@
                         </ol>
                         <div class="carousel-inner" role="listbox">
                           <!-- Slide One - Set the background image for this slide in the line below -->
-                          <div class="carousel-item active" style="background-image: url('{{ asset('img/slide1.png') }}')">
+                          <div class="carousel-item active" style="background-image: url('{{ asset('img/slide1.jpg') }}')">
                             <div class="carousel-caption d-none d-md-block">
                               <h3 class="display-4">PREMIERE SLIDE</h3>
                               <p class="lead">Description de la premiere slide</p>
                             </div>
                           </div>
                           <!-- Slide Two - Set the background image for this slide in the line below -->
-                          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
+                          <div class="carousel-item" style="background-image: url('{{ asset('img/slide2.jpg') }}')">
                             <div class="carousel-caption d-none d-md-block">
-                              <h3 class="display-4">Second Slide</h3>
+                              <h3 class="display-4">DEUXIEME SLIDE</h3>
                               <p class="lead">This is a description for the second slide.</p>
                             </div>
                           </div>
                           <!-- Slide Three - Set the background image for this slide in the line below -->
-                          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/O7fzqFEfLlo/1920x1080')">
+                          <div class="carousel-item" style="background-image: url('{{ asset('img/slide3.jpg') }}')">
                             <div class="carousel-caption d-none d-md-block">
-                              <h3 class="display-4">Third Slide</h3>
+                              <h3 class="display-4">TROISIEME SLIDE</h3>
                               <p class="lead">This is a description for the third slide.</p>
                             </div>
                           </div>
