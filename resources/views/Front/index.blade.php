@@ -114,7 +114,7 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">
-                                        <i class="mdi mdi-homegit mr-2"></i>ACCUEIL
+                                        <i class="mdi mdi-home mr-2"></i>ACCUEIL
                                     </a>
                                 </li>
 
