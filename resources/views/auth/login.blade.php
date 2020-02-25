@@ -8,7 +8,7 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}">
+        <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
 
         <!-- Bootstrap Css -->
         <!-- Bootstrap Css -->
@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center mb-5">
-                            <a href="/" class="logo"><img src="{{ asset('assets/img/logo-obac.png') }}" height="24" alt="logo"></a>
+                            <a href="/" class="logo"><img src="{{ asset('img/logo-obac.png') }}" height="24" alt="logo"></a>
                             <h5 class="font-size-16 text-white-50 mb-4">OBAC TRAINING CENTER</h5>
                         </div>
                     </div>
