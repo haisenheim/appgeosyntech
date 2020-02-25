@@ -2,7 +2,979 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5945d53-a866-4c04-b07f-1682ceb8c58c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Corporate/Formations/inscription.blade.php" afterPath="$PROJECT_DIR$/resources/views/Corporate/Formations/inscription.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/alertifyjs.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/users/avatar-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/bg-pattern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-editable/img/clear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/dripicons-v2.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/dripicons-v2.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/dripicons-v2.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/error-img.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-brands-400.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-brands-400.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-brands-400.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-brands-400.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-regular-400.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-regular-400.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-regular-400.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-regular-400.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-solid-900.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-solid-900.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-solid-900.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-solid-900.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons/swf/flashExport.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/flags/french.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/flags/germany.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/small/img-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/small/img-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/small/img-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/small/img-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/small/img-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/small/img-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/small/img-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/flags/italy.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-editable/img/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/logo-dark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/logo-light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/logo-sm-dark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/logo-sm-light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/maintenance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/materialdesignicons-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/materialdesignicons-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/materialdesignicons-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/materialdesignicons-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/flags/russia.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/fonts/slick.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/fonts/slick.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/fonts/slick.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/flags/spain.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/summernote-0.8.12-dist.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/summernote.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/font/summernote.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/summernote.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/font/summernote.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/summernote.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/font/summernote.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/themify.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/themify.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/themify.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/images/ui-icons_444444_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/images/ui-icons_555555_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/images/ui-icons_777620_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/images/ui-icons_777777_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/images/ui-icons_cc0000_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/images/flags/us.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/AUTHORS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-sparkline/Changelog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/chart.js/Chart.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/chart.js/Chart.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/chart.js/Chart.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net/License.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-autofill/License.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons/License.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-keytable/License.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-responsive/License.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-select/License.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/af.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/af.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/al.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/css/alertify.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/alertify.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/css/alertify.rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/alertifyjs.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/apex.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/apexcharts.amd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/apexcharts.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/apexcharts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/apexcharts.esm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/apexcharts.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app-dark.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app-dark.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app-rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app-rtl.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app-rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/app.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ar-dz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ar-dz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ar-kw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ar-kw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ar-ly.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ar-ly.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ar-ma.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ar-ma.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ar-sa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ar-sa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ar-tn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ar-tn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-autofill-bs4/css/autoFill.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/az.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/dev/banner.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/dropzone/basic.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/dropzone/min/basic.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/be.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/be.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/bm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/bn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/bo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/bootstrap-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/bootstrap-dark.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/bootstrap-dark.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker-en-CA.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ar-tn.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.az.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.bg.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.bm.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.bn.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.br.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.bs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ca.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.cs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.cy.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.da.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.el.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-AU.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-CA.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-IE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-NZ.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-ZA.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.eo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.et.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.eu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fa.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fr-CH.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.gl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.he.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.hi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.hr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.hu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.hy.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.id.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.is.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.it-CH.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ja.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ka.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.kh.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.kk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.km.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ko.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.kr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.lt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.lv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.me.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.mk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.mn.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ms.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.nl-BE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.no.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.oc.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.pl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.pt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ro.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.rs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ru.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.si.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sq.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sr-latin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sw.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ta.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.tg.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.th.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.tk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.tr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.uk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.uz-cyrl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.uz-latn.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-editable/css/bootstrap-editable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap/css/bootstrap-grid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-maxlength/bootstrap-maxlength.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-rating/bootstrap-rating.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-rating/bootstrap-rating.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap/css/bootstrap-reboot.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap/js/bootstrap.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/bootstrap.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/css/themes/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/css/themes/bootstrap.rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/morris.js/bower.travis.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/bs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/bs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-sparkline/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons/js/buttons.flash.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons/js/buttons.html5.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons/js/buttons.print.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/calendar.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/changelog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/chartist-plugin-tooltips-updated/chartist-plugin-tooltip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/chartist-plugin-tooltips-updated/chartist-plugin-tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/chartist.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/chartist/chartist.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/chartist/chartist.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/chartjs.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/coming-soon.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/config.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide/content.inline.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide-dark/content.inline.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/content/dark/content.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/content/default/content.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/content/document/content.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/content/writer/content.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide/content.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide-dark/content.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide/content.mobile.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide-dark/content.mobile.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/cs.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/cv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/cy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/dashboard.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-autofill/js/dataTables.autoFill.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-select/js/dataTables.select.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/datatables.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/de-at.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/de-at.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/de-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/de-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/de.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/de.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/css/themes/default.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/css/themes/default.rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-rating/deploy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/dripicons-v2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/dropzone/dropzone-amd-module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/dropzone/min/dropzone-amd-module.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/dropzone/dropzone.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/dropzone/dropzone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/dropzone/min/dropzone.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/dropzone/min/dropzone.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/dv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/el.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/el.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/email-summernote.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/emoticons/js/emojis.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/en-SG.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/en-au.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/en-au.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/en-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/en-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/en-gb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/en-gb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/en-ie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/en-ie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/en-il.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/en-nz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/en-nz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/en.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/en.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/ender.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/eo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/es-do.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/es-do.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/es-us.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/es-us.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/es.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/excanvas.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-brands-400.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-regular-400.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/fa-solid-900.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/fi.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/fi.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/flot.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/flot.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/fo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/form-advanced.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/form-editor.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/form-mask.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/form-validation.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/fr-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/fr-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/fr-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/fr-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/fr.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/fr.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/fullcalendar.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/fullcalendar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/fullcalendar.print.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/fy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ga.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/gallery.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/gcal.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/gd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.controls.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.geofences.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.geometry.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/gmaps.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.layers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.map_types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.markers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/gmaps.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.native_extensions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.overlays.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.routes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.static.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.streetview.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.styles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/lib/gmaps.utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/gom-latn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/gu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/he.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/hi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/hi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/hi.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/hr.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/hr.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/hu.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/hy-am.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/hy.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/icons.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/css/icons.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/id.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/id.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-maxlength/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-rating/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-editable/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/metismenu/cjs/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/metismenu/modules/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/advlist/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/anchor/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/autolink/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/autoresize/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/autosave/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/bbcode/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/charmap/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/code/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/codesample/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/colorpicker/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/contextmenu/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/directionality/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/emoticons/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/fullpage/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/fullscreen/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/help/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/hr/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/image/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/imagetools/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/importcss/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/insertdatetime/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/legacyoutput/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/link/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/lists/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/media/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/nonbreaking/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/noneditable/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/pagebreak/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/paste/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/preview/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/print/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/quickbars/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/save/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/searchreplace/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/spellchecker/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/tabfocus/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/table/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/template/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/textcolor/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/textpattern/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/toc/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/visualblocks/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/visualchars/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/wordcount/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/themes/mobile/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/themes/silver/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/bindings/inputmask.binding.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/bindings/inputmask.binding.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/inputmask.date.extensions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/inputmask.date.extensions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/inputmask.extensions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/inputmask.extensions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/inputmask.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/inputmask.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/inputmask.numeric.extensions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/inputmask.numeric.extensions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/ion-rangeslider/js/ion.rangeSlider.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/it-ch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/it.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/it.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ja.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/jquery-knob.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/jquery-ui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/jquery-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/jquery-ui.structure.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/jquery-ui.theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.colorhelpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-countdown/jquery.countdown.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net/js/jquery.dataTables.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.canvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.categories.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.crosshair.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.errorbars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.fillbetween.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.navigate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-orderbars/js/jquery.flot.orderBars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.pie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.resize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.selection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-spline/js/jquery.flot.spline.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.stack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.symbol.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.threshold.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.flot.time.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.source.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/jquery.inputmask.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/jquery.inputmask.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/jquery.inputmask.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/jquery.inputmask.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/flot-charts/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-ui-dist/external/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-knob/jquery.knob.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/magnific-popup/jquery.magnific-popup.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/nestable2/jquery.nestable.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/nestable2/jquery.nestable.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery/jquery.slim.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jquery-sparkline/jquery.sparkline.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/jquery.tinymce.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/continents/jquery.vmap.africa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.algeria.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.argentina.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/continents/jquery.vmap.asia.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/continents/jquery.vmap.australia.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.brazil.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.canada.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.europe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/continents/jquery.vmap.europe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.france.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.germany.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.greece.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.iran.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.iraq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/jquery.vmap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/continents/jquery.vmap.north-america.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.russia.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/continents/jquery.vmap.south-america.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.tunisia.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.turkey.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.usa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/maps/jquery.vmap.world.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jqvmap/jqvmap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/jsdoc.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/jszip/jszip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/jv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-keytable-bs4/js/keyTable.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/kk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/kk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/km.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/kn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ku.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ky.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/lb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/lb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/lightbox.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/lo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale-all.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/min/locales.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/lt.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/lv.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/magnific-popup/magnific-popup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/me.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/metismenu/metisMenu.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/metismenu/metisMenu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/mi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/mn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/min/moment-with-locales.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/moment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/min/moment.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/morris.js/morris.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/morris.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/morris.js/morris.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/mr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ms-my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ms-my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ms.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/mt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ne.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/nestable.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/nl-be.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/nl-be.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/nl.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/nn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/nn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/pa-in.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/package.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/parsley.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/pdfmake/build/pdfmake.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/advlist/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/anchor/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/autolink/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/autoresize/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/autosave/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/bbcode/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/charmap/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/code/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/codesample/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/colorpicker/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/contextmenu/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/directionality/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/emoticons/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/fullpage/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/fullscreen/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/help/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/hr/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/image/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/imagetools/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/importcss/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/insertdatetime/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/legacyoutput/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/link/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/lists/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/media/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/nonbreaking/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/noneditable/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/pagebreak/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/paste/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/preview/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/print/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/quickbars/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/save/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/searchreplace/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/spellchecker/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/tabfocus/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/table/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/template/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/textcolor/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/textpattern/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/toc/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/visualblocks/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/visualchars/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/plugins/wordcount/plugin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/popper.js/popper-utils.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/popper.js/esm/popper-utils.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/popper.js/umd/popper-utils.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/popper.js/umd/popper.js.flow" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/popper.js/popper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/popper.js/esm/popper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/popper.js/umd/popper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/pt-br.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/pt-pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/range-sliders.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/dev/raphael.amd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/dev/raphael.core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/raphael.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/raphael.no-deps.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/dev/raphael.svg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/dev/raphael.vml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/raphael/dev/raphaelTest.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/rating-init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ro.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ru.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/ru.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/RWD-Table-Patterns/css/rwd-table.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/RWD-Table-Patterns/js/rwd-table.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/sd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/se.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/se.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-select-bs4/css/select.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/datatables.net-select-bs4/js/select.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/css/themes/semantic.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/alertifyjs/build/css/themes/semantic.rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/si.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/simplebar/simplebar-core.esm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/simplebar/simplebar.esm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/simplebar/simplebar.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/simplebar/simplebar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sk.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide/skin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide-dark/skin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide/skin.mobile.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/skins/ui/oxide-dark/skin.mobile.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sl.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/slick-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/slick.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/slick.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/slick-slider/slick/fonts/slick.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/sparklines.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/sq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/sq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/sr-cyrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/sr-cyrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sr.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ss.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-ar-AR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-bg-BG.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/summernote-bs4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/summernote-bs4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-ca-ES.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-cs-CZ.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-da-DK.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-de-DE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-el-GR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-es-ES.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-es-EU.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-fa-IR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-fi-FI.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-fr-FR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-gl-ES.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-he-IL.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-hr-HR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-hu-HU.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-id-ID.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-it-IT.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-ja-JP.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-ko-KR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/summernote-lite.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/summernote-lite.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-lt-LT.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-lt-LV.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-mn-MN.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-nb-NO.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-nl-NL.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-pl-PL.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-pt-BR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-pt-PT.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-ro-RO.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-ru-RU.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-sk-SK.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-sl-SI.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-sr-RS-Latin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-sr-RS.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-sv-SE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-ta-IN.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-th-TH.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-tr-TR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-uk-UA.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-uz-UZ.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-vi-VN.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-zh-CN.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/lang/summernote-zh-TW.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/summernote.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/summernote.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/summernote/summernote.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sv.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/sw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/sweet-alerts.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/sweetalert2/sweetalert2.all.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/sweetalert2/sweetalert2.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/sweetalert2/sweetalert2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ta.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/table-editable.int.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/table-responsive.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/te.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/tet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/tg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/th.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/themes/mobile/theme.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/themes/silver/theme.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/fonts/themify.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/timline.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/tinymce/tinymce.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/tk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/tl-ph.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/tlh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/tr.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/tzl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/tzm-latn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/tzm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ua.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/apexcharts/locales/ua.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ug-cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/uk.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/gmaps/umd.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/ur.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/ur.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/uz-latn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/uz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/js/pages/vector-map.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/pdfmake/build/vfs_fonts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/node-waves/waves.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/node-waves/waves.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/pdfmake/webpack-standardfonts.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/inputmask/global/window.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/inputmask/min/inputmask/global/window.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/x-pseudo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/yo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/zh-cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/zh-cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/zh-hk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/zh-hk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/fullcalendar/locale/zh-tw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/moment/locale/zh-tw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/zh_cn.extra.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/zh_cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Front/assets/libs/parsleyjs/i18n/zh_tw.js" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\Villes\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\Villes\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\Villes\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\about.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\contactform\Readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\contactform\contactform.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\css\scss-files.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\home.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\cover.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\gadgets.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\logo-nav.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\parallax-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\porf-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\porf-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\porf-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\porf-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\porf-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\porf-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\porf-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\porf-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\team-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\team-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\team-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\img\team-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\index_.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\index__.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\index__.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\index_save.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\js\custom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\bootstrap\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\bootstrap\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\bootstrap\js\bootstrap.bundle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\bootstrap\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\counterup\counterup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\easing\easing.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\easing\easing.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\font-awesome\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\font-awesome\css\font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\font-awesome\fonts\FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\font-awesome\fonts\fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\font-awesome\fonts\fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\font-awesome\fonts\fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\font-awesome\fonts\fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\font-awesome\fonts\fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\jquery\jquery-migrate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\jquery\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\lockfixed\lockfixed.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\parallax\parallax.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\stellar\stellar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\stickyjs\sticky.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\superfish\hoverIntent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\superfish\superfish.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\superfish\superfish.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\css\tether-theme-arrows-dark.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\css\tether-theme-arrows-dark.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\css\tether-theme-arrows.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\css\tether-theme-arrows.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\css\tether-theme-basic.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\css\tether-theme-basic.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\css\tether.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\css\tether.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\js\tether.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\tether\js\tether.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\otc\resources\views\Front\lib\waypoints\waypoints.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Front/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Front/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alert.iws" />
@@ -35,112 +1007,125 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.92" vertical-offset="1734" max-vertical-offset="2528">
-              <caret line="319" column="10" selection-start-line="319" selection-start-column="10" selection-end-line="319" selection-end-column="10" />
-              <folding>
-                <element signature="e#1850#2534#2#PHP" expanded="false" />
-                <element signature="e#2654#5129#2#PHP" expanded="false" />
-                <element signature="e#5250#7675#2#PHP" expanded="false" />
-                <element signature="e#7791#7862#2#PHP" expanded="false" />
-                <element signature="e#8038#9373#2#PHP" expanded="false" />
-                <element signature="e#9510#10517#2#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nos_formations.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/nos_formations.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="467" max-vertical-offset="1536">
-              <caret line="53" column="135" selection-start-line="53" selection-start-column="135" selection-end-line="53" selection-end-column="135" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="3232">
-              <caret line="83" column="67" selection-start-line="83" selection-start-column="67" selection-end-line="83" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.12" vertical-offset="600" max-vertical-offset="2672">
+            <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2672">
               <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Test.php">
+      <file leaf-file-name="inscription.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/inscription.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="544">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="2832">
+              <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/inscription.blade.php">
+      <file leaf-file-name="CentreController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CentreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.101052634" vertical-offset="0" max-vertical-offset="2832">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2182" max-vertical-offset="2816">
+              <caret line="177" column="22" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpertController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1926" max-vertical-offset="2480">
+              <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ClientController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2256">
+              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChaireController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ChaireController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="982" max-vertical-offset="1536">
+              <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding>
-                <element signature="e#130#176#0#HTML" expanded="true" />
+                <element signature="e#1100#2286#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formation_left_side.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/Show/formation_left_side.blade.php">
+      <file leaf-file-name="CentreController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="736">
+            <state vertical-scroll-proportion="-11.96" vertical-offset="597" max-vertical-offset="1776">
+              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+              <folding>
+                <element signature="e#1018#3440#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Front/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.94871795" vertical-offset="1904" max-vertical-offset="21440">
+              <caret line="156" column="38" selection-start-line="156" selection-start-column="38" selection-end-line="156" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apex.init.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Front/assets/js/pages/apex.init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/my_show.blade.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Front/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.148149" vertical-offset="2567" max-vertical-offset="3424">
-              <caret line="186" column="61" selection-start-line="186" selection-start-column="61" selection-end-line="186" selection-end-column="61" />
-              <folding>
-                <element signature="e#3857#3882#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntrepriseFormation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/EntrepriseFormation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.84" vertical-offset="24" max-vertical-offset="512">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompteFormation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/CompteFormation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="480">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="21904">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1363" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,7 +1144,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/Consultant/Factures/payees.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Factures/creances.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Consultant/MessageController.php" />
         <option value="$PROJECT_DIR$/resources/views/Consultant/Messages/sent.blade.php" />
@@ -210,6 +1194,7 @@
         <option value="$PROJECT_DIR$/app/Models/CompteFormation.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php" />
         <option value="$PROJECT_DIR$/resources/views/Corporate/Formations/inscription.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Front/index.blade.php" />
       </list>
     </option>
   </component>
@@ -246,6 +1231,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -368,159 +1354,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Show" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Corporate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Corporate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Corporate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Membres" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Corporate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Formations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Corporate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agenda" />
+              <option name="myItemId" value="Front" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -570,9 +1404,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="National" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -580,7 +1461,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../atlas" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
@@ -593,11 +1474,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\otc\resources\views\Front" />
       <recent name="C:\xampp\otc\resources\views\Corporate\Formations" />
       <recent name="C:\xampp\otc\resources\views\includes\Show" />
       <recent name="C:\xampp\otc\app\Http\Controllers\Corporate" />
       <recent name="C:\xampp\otc\resources\views\Corporate" />
-      <recent name="C:\xampp\otc\app\Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\otc\app\Http\Controllers\Contributeur" />
@@ -865,15 +1746,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -916,26 +1797,26 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20792079" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20675105" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14993565" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22136422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22908624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26944444" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -955,9 +1836,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3018018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -983,62 +1864,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/FormationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.48" vertical-offset="1334" max-vertical-offset="2192">
-          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/show_module.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.28" vertical-offset="0" max-vertical-offset="464">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.43835616" vertical-offset="0" max-vertical-offset="416">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/module_test.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2384">
-          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Agenda.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.68" vertical-offset="102" max-vertical-offset="720">
-          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Utils/DiversController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.12" vertical-offset="486" max-vertical-offset="2432">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Consultant/AgendaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.32" vertical-offset="86" max-vertical-offset="3232">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Consultant/Formations/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.56" vertical-offset="0" max-vertical-offset="1424">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/plugins/fullcalendar3/lib/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="502">
@@ -1225,7 +2050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.08" vertical-offset="0" max-vertical-offset="544">
           <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1275,7 +2099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="544">
           <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,7 +2106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="3232">
           <caret line="83" column="67" selection-start-line="83" selection-start-column="67" selection-end-line="83" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,17 +2113,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="467" max-vertical-offset="1536">
           <caret line="53" column="135" selection-start-line="53" selection-start-column="135" selection-end-line="53" selection-end-column="135" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/my_show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.148149" vertical-offset="2567" max-vertical-offset="3424">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2567" max-vertical-offset="3424">
           <caret line="186" column="61" selection-start-line="186" selection-start-column="61" selection-end-line="186" selection-end-column="61" />
-          <folding>
-            <element signature="e#3857#3882#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1309,13 +2127,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="736">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.92" vertical-offset="1734" max-vertical-offset="2528">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="2528">
           <caret line="319" column="10" selection-start-line="319" selection-start-column="10" selection-end-line="319" selection-end-column="10" />
           <folding>
             <element signature="e#1850#2534#2#PHP" expanded="false" />
@@ -1330,7 +2147,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/EntrepriseFormation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.84" vertical-offset="24" max-vertical-offset="512">
+        <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="512">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
@@ -1338,7 +2155,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/CompteFormation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="480">
+        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="480">
           <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding />
         </state>
@@ -1346,7 +2163,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Corporate/FormationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.12" vertical-offset="600" max-vertical-offset="2672">
+        <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2672">
           <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
           <folding />
         </state>
@@ -1354,10 +2171,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Corporate/Formations/inscription.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.101052634" vertical-offset="0" max-vertical-offset="2832">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="2832">
+          <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CentreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2182" max-vertical-offset="2816">
+          <caret line="177" column="22" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1926" max-vertical-offset="2480">
+          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2256">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ChaireController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="982" max-vertical-offset="1536">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
-            <element signature="e#130#176#0#HTML" expanded="true" />
+            <element signature="e#1100#2286#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/National/CentreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.96" vertical-offset="597" max-vertical-offset="1776">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding>
+            <element signature="e#1018#3440#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Front/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="21904">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1363" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Front/assets/js/pages/apex.init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="649">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Front/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94871795" vertical-offset="1904" max-vertical-offset="21440">
+          <caret line="156" column="38" selection-start-line="156" selection-start-column="38" selection-end-line="156" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

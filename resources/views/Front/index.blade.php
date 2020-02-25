@@ -1,666 +1,1249 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 
     <head>
+        <meta charset="utf-8" />
+        <title>OTC | OBAC TRAINING CENTER</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-		<!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <title>OBAC TRAINING CENTER</title>
+        <!-- slick css -->
+        <link href="assets/libs/slick-slider/slick/slick.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/slick-slider/slick/slick-theme.css" rel="stylesheet" type="text/css" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
-        <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
-        <link rel="stylesheet" href="{{asset('front/css/style.css')}}">
-        <link rel="stylesheet" href="{{asset('front/css/media-queries.css')}}">
-        <link rel="stylesheet" href="{{asset('front/css/carousel.css')}}">
+        <!-- jvectormap -->
+        <link href="assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
 
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
 
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('front/ico/apple-touch-icon-144-precomposed.png')}}">
-
-         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-                <style type="text/css">
-                    #map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
-                       width: 100%; /* important! if you need full width display */
-                       height: 640px;
-                       margin-top: 60px;
-                       border-radius: 5px;
-                                   	/* ... */
-                    }
-                </style>
-
-
-        <style>
-
-
-
-            .header {
-              width:100%;
-              height:30px;
-              font-size:10px;
-              color:#FFFFFF;
-              background: #212529;
-              font-weight:bold;
-            }
-
-            .nav {
-              width:100%;
-              height:60px;
-              font-size:20px;
-              line-height:60px;
-              background:#007bff;
-              color:#fff;
-              position:relative;
-              margin-bottom:-60px;
-              z-index:3;
-              text-transform:uppercase;
-            }
-
-
-            .sticky {
-              position:fixed;
-              top:0;
-              z-index: 999999;
-              padding: 0;
-              height: 60px;
-            }
-            .sticky a{
-                font-weight: 600;
-            }
-
-            p {
-              line-height:2;
-            }
-            .navbar-right a{
-                color: #FFFFFF;
-                text-decoration: none;
-                border-bottom: none;
-            }
-
-            form .form-control {
-                font-size: 0.9rem;
-
-            }
-
-            .bottom-inner{
-                padding: 25px 5px;
-            }
-
-            #poles .col-md-4, #poles .col-sm-12{
-                border-radius: 50%;
-                background: #007bff;
-                height: 360px;
-                padding: 4%;
-                color:#fff;
-                box-sizing: border-box;
-            }
-            #menu-bottom li{
-            margin: 10px 0 5px 0;
-            }
-
-             #howto .col-md-4, #howto .col-sm-12{
-                border-radius: 50%;
-                background: #ffff;
-                border: solid 1px #007bff;
-                height: 360px;
-                padding: 4%;
-                color:#007bff;
-                box-sizing: border-box;
-                text-align: center;
-            }
-
-             #types .col-md-4, #types .col-sm-12{
-                border-radius: 50%;
-                background: #ffff;
-                border: solid 1px #007bff;
-                height: 360px;
-                padding: 4%;
-                text-align: center;
-
-                box-sizing: border-box;
-            }
-
-            .divider-1 span {
-                display: inline-block;
-                width: 300px;
-                border-bottom: 1px solid  #007bff;
-            }
-
-           .section-reverse .divider-1 span {
-                display: inline-block;
-                width: 300px;
-                border-bottom: 1px solid #fff;
-            }
-
-
-            #howto h3{
-                font-size: 0.8rem;
-            }
-
-
-             #howto .col-sm-12 p{
-               font-size: 0.8rem;
-               margin-top: 0;
-
-               margin-bottom: 1rem;
-
-               box-sizing: border-box;
-
-               margin-left: -15px;
-
-               margin-right: -15px;
-
-               text-align: center;
-            }
-
-            #poles h3, #howto h3{
-
-            font-size: 0.8rem;
-            font-family: initial;
-            font-weight: bold;
-            position:relative;
-            margin:3%;
-
-            }
-
-           .sup{
-            height: 60px;
-           }
-
-            .label-reverse .disc-title {
-               margin-top: 100px;
-               width: 300px;
-               margin-left: auto;
-               margin-right: auto;
-               color: #FFFFFF;
-             }
-
-            .label-reverse .disc-group {
-               top: 50px;
-               left: 10px;
-               width: 260px;
-               color:#007bff
-             }
-             .carousel-inner .carousel-item-right.active,
-                .carousel-inner .carousel-item-next {
-                  transform: translateX(33.33%);
-                }
-
-                .carousel-inner .carousel-item-left.active,
-                .carousel-inner .carousel-item-prev {
-                  transform: translateX(-33.33%)
-                }
-
-                .carousel-inner .carousel-item-right,
-                .carousel-inner .carousel-item-left{
-                  transform: translateX(0);
-                }
-         .section-container{
-            padding: 70px 5px;
-         }
-
-         .section-reverse{
-            background:#007bff ;
-         }
-
-         .section-reverse a{
-            color: #a4f095;;
-         }
-
-         .section-reverse a:hover{
-            color: #6cddf0;
-         }
-
-          .bottom-inner{
-            height: 560px;
-
-          }
-
-          .border-right{
-            border-right: 1px solid #fff;
-          }
-
-          .section-1-container h1 {
-            color:#007bff ;
-            font-weight: 700;
-          }
-
-          .section-reverse h1, .section-reverse h2, .section-reverse h3{
-            color:#FFFFFF;
-          }
-
-          .section-1-box{
-            text-align: center;
-          }
-
-          #types h3{
-          font-size: 1.1rem;
-          font-weight: 900;
-          color:#007bff ;
-          }
-
-          #types p, #obac p {
-          color: #000000;
-          }
-
-          #poles .col-sm-12{
-            text-align: center;
-          }
-
-          #obac h1, #events h1, #about h1 {
-            color:#007bff ;
-          }
-        </style>
     </head>
 
-    <body style="overflow-x: hidden">
+    <body data-topbar="dark" data-layout="horizontal">
 
-		<!-- Top menu -->
-
-
-		<div class="header">
-            <div class="" style="" id="">
-                <ul style="float: right; margin-right: 65px; margin-bottom: 0" class="navbar-right list-inline">
-                    <li class="list-inline-item">
-                        <a href="/login">Se connecter</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="/register">Créer un compte</a>
-                    </li>
-                </ul>
-            </div>
-		</div>
-		<div class="nav navbar navbar-dark navbar-expand-md">
-            <div class="container">
-            				<a class="navbar-brand" style="background: none; text-indent: 0" href=""><i><img style="border-radius:35px; height: 45px; width:50px;" src="img/bg-obac.png" alt=""/></i> OBAC TRAINING CENTER</a>
-            			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            			        <span class="navbar-toggler-icon"></span>
-            			    </button>
-            			    <div class="collapse navbar-collapse" id="navbarNav">
-            			        <ul class="navbar-nav ml-auto">
-            			            <li class="nav-item">
-            			                <a class="nav-link" href="/"><i class="fa fa-home -fa-lg"></i></a>
-            			            </li>
-            			             <li class="nav-item">
-            			                <a class="nav-link" href="#projets">TOUS LES FORMATIONS</a>
-            			            </li>
-            			            <li class="nav-item">
-            			                <a class="nav-link" href="#about">COMMENT CA MARCHE?</a>
-            			            </li>
-            			            <li class="nav-item">
-            			                <a class="nav-link" href="#obac">OBAC</a>
-            			            </li>
-
-            			        </ul>
-            			    </div>
-            		    </div>
-		</div>
+        <!-- Begin page -->
+        <div id="layout-wrapper">
 
 
-		 <div class="section-1-container section-container">
-        	        <div class="container">
-        	                <div class="col section-1 section-description wow fadeIn">
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm-dark.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="19">
+                                </span>
+                            </a>
 
-                                 <h1>BIENVENUE SUR OBAC TRAINING CENTER</h1>
-                                 <div class="divider-1 wow fadeInUp"><span></span></div>
-          	                    <p>
-          	                    	Obac alert est l’outil de mobilisation de capitaux du cabinet de conseils stratégiques et financiers et à vocation de banques d’affaires : OBAC Sarl. Cet outil nous permet de présenter à notre réseau de partenaires financiers locaux,
-          	                    	 régionaux et internationaux <b> les projets structurés par le cabinet dans les pays dans lesquels nous intervenons.</b>
-          	                    </p>
-        	                </div>
-        	        </div>
-          </div>
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm-light.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="19">
+                                </span>
+                            </a>
+                        </div>
 
+                        <button type="button" class="btn btn-sm mr-2 font-size-16 d-lg-none header-item waves-effect waves-light" data-toggle="collapse" data-target="#topnav-menu-content">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
 
-
-        <!-- Section 1 -->
-        <div class="section-1-container section-container">
-	        <div id="types" class="container">
-	            <div class="row">
-	                <div class="col section-1 section-description wow fadeIn">
-	                    <h1>NOUS VOUS PRESENTONS 3 TYPES DE PROJETS</h1>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                    <p>
-	                    	Nous présentons à notre réseau de partenaires financiers, 3 types de projets :
-	                    </p>
-	                </div>
-	            </div>
-	            <div class="row">
-                	<div class="col-md-4 section-1-box wow fadeInUp">
-                		<div class="row">
-                			<div class="col-md-12">
-			                	<div style="width: 150px; margin: 10px auto;" class="">
-			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/projets-industriels.png" alt=""/>
-			                	</div>
-			                	<h3>Projets Industriels et de service</h3>
-		                	</div>
-	                		<div class="col-md-12">
-	                    		<p>Des projets industriels ou de services à forte valeur ajoutée</p>
-	                    	</div>
-	                    </div>
+                        <!-- App Search-->
+                        <form class="app-search d-none d-lg-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Rechercher...">
+                                <span class="mdi mdi-magnify"></span>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-md-4 section-1-box wow fadeInDown">
-	                	<div class="row">
-                			<div class="col-md-12">
-			                	<div style="width: 150px; margin: 10px auto;" class="">
-			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/financement-de-linnovation.jpg" alt=""/>
-			                	</div>
-			                	<h3>Projets d'infrastructures </h3>
-		                	</div>
-	                		<div class="col-md-12">
 
-	                    		<p>Des projets liés aux financements structurés (Ressources naturelles et infrastructures)</p>
-	                    	</div>
-	                    </div>
-                    </div>
-                    <div class="col-md-4 section-1-box wow fadeInUp">
-	                	<div class="row">
-                			<div class="col-md-12">
-			                	<div style="width: 150px; margin: 10px auto;" class="">
-			                		<img style="height: 80px; width:90px; border-radius: 40px" src="img/cessions.jpg" alt=""/>
-			                	</div>
-			                	<h3>Cession d’actifs ou de créances</h3>
-		                	</div>
-	                		<div class="col-md-12">
+                    <div class="d-flex">
 
-	                    		<p>projets de cession d’actifs immobilisés ou de créances</p>
-	                    	</div>
-	                    </div>
-                    </div>
-	            </div>
-	            <div class="row">
-                    <div class="col section-1 section-description wow fadeIn">
-                        <h3>Afin d’intégrer notre réseau de partenaires financiers</h3>
-                        <p><b>Cliquez sur <a href="#contact">Contacter le cabinet OBAC</a></b></p>
-                        <div class="divider-1 wow fadeInUp"><span></span></div>
-                    </div>
-                </div>
-	        </div>
-        </div>
+                        <div class="dropdown d-inline-block d-lg-none ml-2">
+                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                                aria-labelledby="page-header-search-dropdown">
 
-
-
-        <!-- Section 2 -->
-        <div id="about" class="section-2-container section-container">
-	        <div class="container">
-	            <div class="">
-	                <h1>COMMENT CA MARCHE ?</h1>
-                       <div class="divider-1 wow fadeInUp"><span></span></div>
-	                <div class="col section-2 section-description wow fadeIn">
-	                  <p>  Nous sélectionnons nos partenaires financiers </p>
-	                </div>
-	            </div>
-	            <div class="row">
-	            	<div class="col section-2-box wow fadeInLeft">
-	            	    <div id="howto" class="row">
-
-	            	        <div class="col col-sm-12 col-md-4 section-2-box wow fadeInLeft">
-	            	            <div class="sup"><h3>1- PRISE DE CONTACT </h3></div>
-
-	            	            <div class="inf">
-                                     <p>
-                                        Nous prenons connaissance de votre politique d’investissement ainsi que de la valeur ajoutée,
-                                        tant financière que non financière, que vous pouvez apporter aux projets que nous structurons.
-                                    </p>
-	            	            </div>
-
-	            	        </div>
-	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	            <div class="sup"><h3>2- SIGNATURE D’UNE CONVENTION DE PARTENARIAT  </h3></div>
-
-	            	            <p>
-	            	                Nous développons des partenariats avec des organismes financiers,
-	            	                des groupes d’entreprises et des Business Angels en Afrique et dans le monde afin d’accompagner la croissance des projets que nous structurons
-	            	            </p>
-	            	        </div>
-	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	        <div class="sup"><h3>3- CREATION D’UN COMPTE « INVESTISSEUR »  </h3></div>
-
-	            	            <p>
-	            	               Le compte Investisseur vous permettra d’accéder aux projets structurés par le cabinet dans les pays dans lesquels nous intervenons.
-	            	            </p>
-	            	        </div>
-	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	        <div class="sup"><h3>4- RENCONTRE AVEC LES PORTEURS DE PROJET   </h3></div>
-
-	            	            <p>
-	            	                Avant toutes décisions d’investissement, nous favorisons la rencontre entre le porteur de projet et
-	            	                les investisseurs qui s’intéressent à son projet.
-	            	            </p>
-	            	        </div>
-
-
-	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	        <div class="sup"><h3>5- ANALYSE DE LA DATA ROOM, DUE DILIGENCE ET LETTRE D’INTENTION </h3></div>
-                                <p>Vous y trouverez une présentation détaillée du projet. </p>
-	            	        </div>
-	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	            <div class="sup"><h3>6- VALIDATION DE LA DOCUMENTATION JURIDIQUE DE L’OPERATION   </h3></div>
-
-	            	              <p>  Nous mettons à votre disposition des documents types vous permettant d’encadrer juridiquement votre investissement. </p>
-
-	            	        </div>
-	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInLeft">
-	            	        <div class="sup"><h3>7- VERSEMENT DES FONDS   </h3></div>
-	            	             <p>Le versement des fonds se fera sur un numéro de compte qui vous sera communiqué le moment venu </p>
-
-	            	        </div>
-	            	        <div class="col col-md-4 col-sm-12 section-2-box wow fadeInRight">
-	            	        <div class="sup"><h3> 8- LE SUIVI DE L’INVESTISSEMENT APRES LE DEAL   </h3></div>
-
-	            	             <p style="font-size: 0.7rem">  Après la clôture du Deal, le pôle RISK MANAGEMENT accompagne le porteur de projet
-	            	             dans l’exécution du projet afin d’identifier, évaluer et maitriser les risques d’exploitation,
-	            	             financiers, d’aléas et stratégiques y relatifs.
-	            	             <b>De plus, chaque mois le porteur de projet est tenu de rédiger un rapport de gestion.  </b>
-	            	             </p>
-
-
-	            	        </div>
-	            	        <div class="col  col-md-4 col-sm-12 wow fadeInLeft">
-	            	            <h3> 9-RECOLTEZ LES FRUITS DE VOTRE INVESTISSEMENT DANS LE RESPECT DE LA DOCUMENTATION JURIDIQUE QUI A ETE SIGNEE</h3>
-
-	            	        </div>
-	            	    </div>
-	                </div>
-	            </div>
-	        </div>
-        </div>
-
-		<!-- Section 3 -->
-        <div id="obac" class="section-3-container section-container">
-	        <div class="container">
-	        	
-	            <div class="row">
-	                <div class="col section-1 section-description wow fadeIn">
-	                    <h1>A PROPOS DU CABINET OBAC</h1>
-	                     <div class="divider-1 wow fadeInUp"><span></span></div>
-	                        <p>
-	                            Créé en 2014, OBAC est un cabinet de conseils stratégiques et financiers spécialisé sur l'Afrique Centrale et à vocation de Banque d’affaires.
-	                             OBAC est structuré autour de 3 pôles d’expertise visant chacun à accomplir une mission spécifique.
-	                        </p>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                </div>
-	            </div>
-	            
-	            <div id="poles" style="margin-bottom: 30px;" class="row">
-	                <div style="border-radius: 50%;background: #007bff;height: 360px; padding: 6%" class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
-	                	<div class="">
-	                	    <div style="width: 150px; margin: 10px auto;" class="">
-			                	<img style="height: 90px; width:90px; border-radius: 50%" src="img/structuration-projet.jpg" alt=""/>
-			                </div>
-	                		<div style="">
-                                <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE STRUCTURATION DE PROJETS </h3>
-                                Nous aidons les porteurs de projet à créer de la valeur en structurant leur entreprise
-	                		</div>
-	                	</div>
-	                </div>
-	                <div class="col-md-4 col-sm-12 section-3-box wow fadeInRight">
-	                	<div class="">
-	                	    <div style="width: 150px; margin: 10px auto;" class="">
-			                	<img style="height: 90px; width:90px; border-radius: 50%" src="img/risk-management.jpg" alt=""/>
-			                </div>
-	                		<div>
-                                <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE RISK MANAGEMENT </h3>
-                                Nous accompagnons les porteurs de projets dans la maitrise des risques liés à l’exécution de leur plan d’actions
-	                		</div>
-	                	</div>
-	                </div>
-
-	                <div class="col-md-4 col-sm-12 section-3-box wow fadeInLeft">
-	                	<div class="">
-	                	    <div style="width: 150px; margin: 10px auto;" class="">
-			                	<img style="height: 90px; width:90px; border-radius: 50%" src="img/pole-formation.jpg" alt=""/>
-			                </div>
-	                		<div style="">
-                                <h3 style="color: #fff; font-size: 1.2rem; font-family: initial; font-weight: bold;">POLE FORMATION  </h3>
-                                Nous accompagnons les porteurs de projet dans le renforcement de leurs capacités managériales
-	                		</div>
-	                	</div>
-	                </div>
-	            </div>
-	            
-	            <div class="row">
-	                <p>Notre ambition à moyen terme est d’être présent dans les 6 pays de la CEMAC d’ici 2025
-	                tout en saisissant les opportunités présentes dans les pays de la CEDEAO.  </p>
-	                <p>Notre mission est d'accompagner d'une part les porteurs de projets dans la structuration
-	                de leur projet afin de leur permettre de retrouver une bonne performance et santé financière
-                       et d’autre part les investisseurs institutionnels ou privés dans la réduction / maîtrise
-                       des risques liés aux investissements.</p>
-                    <p>
-                        Par ailleurs, le cabinet OBAC forme chaque année des centaines de porteurs de projets à travers différents programmes et séminaires de
-                        formation afin de leur donner les outils qui leur permettront de réussir leur aventure entrepreneuriale
-                    </p>
-	            </div>
-	            </div>
-	         </div>
-                <div class="divider-1 wow fadeInUp"><span></span></div>
-
-		<!-- Section 4 -->
-        <div id="contact" class="section-4-container section-container section-reverse section-container-image-bg">
-	        <div class="container">
-	            <div class="row">
-	                  <div class="col-md-4">
-                            <div class="bottom-inner border-right">
-                                <div style='background: url("img/logo-obac.png"); background-size: cover; width: 55%; height: 158px; margin-bottom: 20px;'>
-
-                                </div>
-                                <div style="color: #fff; text-align: left;" class="address-obac">
-                                    <h5 class="page-header">CABINET OBAC</h5>
-                                    <ul>
-                                        <li>POLE STRUCTURATION</li>
-                                        <li>POLE RISK MANAGEMENT</li>
-                                        <li>POLE FORMATION</li>
-                                    </ul>
-
-
-                                        <p style="font-weight: 600;">TOUR MIROIR, 2 <sup>e</sup> Etage - Pointe-Noire, Rep. Congo</p>
-                                        <p>TEL : +242 069704898 </p>
-
-
-                                    <p>SITE WEB:<a href="http://cabinet-obac.com">http://cabinet-obac.com</a></p>
-                                </div>
-                          </div>
-	                  </div>
-	                  <div class="col-md-4">
-                          <div style="text-align: left;" class="bottom-inner border-right">
-                            <ul id="menu-bottom" style="list-style: none;">
-                                <li><a href="/">Accueil</a></li>
-                                <li><a href="/projets">Tous les projets</a></li>
-                                <li><a href="#obac">A Propos du cabinet OBAC</a></li>
-                                <li><a href="#about">Investir - Comment ça marche?</a></li>
-                            </ul>
-                          </div>
-	                  </div>
-	                  <div class="col-md-4">
-	                    <div class="bottom-inner">
-	                        <h4>CONTACTEZ NOUS</h4>
-                        <div class="divider-1 wow fadeInUp"><span></span></div>
-                        <div style="margin-top:40px;" class="">
-                                <form action="/contact" method="post">
-                                 @csrf
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-
-                                                <input required="required" type="text" name="name" class="form-control" placeholder="Votre nom complet"/>
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Rechercher ..." aria-label="Recipient's username">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
                                             </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-
-                                                <input required="required" type="email" name="email" class="form-control" placeholder="Votre adresse email"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-
-                                                <input required="required" type="text" name="objet" class="form-control" placeholder="Objet"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-
-                                                <textarea required="required" name="message" id="" cols="30" rows="4" class="form-control" placeholder="Votre message ..."></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <button class="btn btn-warning btn-block btn-sm"><i class="fa fa-envelope"></i> ENVOYER</button>
                                         </div>
                                     </div>
                                 </form>
+                            </div>
                         </div>
-	                    </div>
-	                  </div>
 
-	            </div>
+                        <div class="dropdown d-none d-lg-inline-block ml-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                                <i class="mdi mdi-fullscreen"></i>
+                            </button>
+                        </div>
 
-	        </div>
-        </div>
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                                <i class="mdi mdi-tune"></i>
+                            </button>
+                        </div>
 
-        <!-- Footer -->
-        <footer class="footer-container">
-        
-	        <div class="container">
-	        	<div class="row">
-	        		
-                    <div class="col">
-                    	&copy; OBAC TRAINING CENTER - Cabinet Obac <?= date('Y') ?> - Tous droits Reservés.
+
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                <span class="d-none d-sm-inline-block ml-1">Shane</span>
+                                <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-face-profile font-size-16 align-middle mr-1"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-credit-card-outline font-size-16 align-middle mr-1"></i> Billing</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-settings font-size-16 align-middle mr-1"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock font-size-16 align-middle mr-1"></i> Lock screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item href="#"><i class="mdi mdi-logout font-size-16 align-middle mr-1"></i> Logout</a>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
-	        </div>
-                	
-        </footer>
+            </header>
+
+            <div class="topnav">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+
+                        <div class="collapse navbar-collapse" id="topnav-menu-content">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">
+                                        <i class="mdi mdi-storefront mr-2"></i>Dashboard
+                                    </a>
+                                </li>
+
+                                <li class="nav-item dropdown mega-dropdown">
+                                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-uielement" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="mdi mdi-format-underline mr-2"></i>UI Elements <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu mega-dropdown-menu" aria-labelledby="topnav-uielement">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div>
+                                                    <a href="ui-alerts.html" class="dropdown-item">Alerts</a>
+                                                    <a href="ui-badge.html" class="dropdown-item">Badge</a>
+                                                    <a href="ui-buttons.html" class="dropdown-item">Buttons</a>
+                                                    <a href="ui-cards.html" class="dropdown-item">Cards</a>
+                                                    <a href="ui-dropdowns.html" class="dropdown-item">Dropdowns</a>
+                                                    <a href="ui-navs.html" class="dropdown-item">Navs</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div>
+                                                    <a href="ui-tabs-accordions.html" class="dropdown-item">Tabs &amp; Accordions</a>
+                                                    <a href="ui-modals.html" class="dropdown-item">Modals</a>
+                                                    <a href="ui-images.html" class="dropdown-item">Images</a>
+                                                    <a href="ui-progressbars.html" class="dropdown-item">Progress Bars</a>
+                                                    <a href="ui-pagination.html" class="dropdown-item">Pagination</a>
+                                                    <a href="ui-popover-tooltips.html" class="dropdown-item">Popover & Tooltips</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div>
+                                                    <a href="ui-spinner.html" class="dropdown-item">Spinner</a>
+                                                    <a href="ui-carousel.html" class="dropdown-item">Carousel</a>
+                                                    <a href="ui-video.html" class="dropdown-item">Video</a>
+                                                    <a href="ui-typography.html" class="dropdown-item">Typography</a>
+                                                    <a href="ui-grid.html" class="dropdown-item">Grid</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="mdi mdi-cloud-print-outline mr-2"></i>Components <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="topnav-components">
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Email <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-email">
+                                                <a href="email-inbox.html" class="dropdown-item">Inbox</a>
+                                                <a href="email-read.html" class="dropdown-item">Email Read</a>
+                                                <a href="email-compose.html" class="dropdown-item">Email Compose</a>
+                                            </div>
+                                        </div>
+                                        <a href="calendar.html" class="dropdown-item">Calendar</a>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-icon"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Icons <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-icon">
+                                                <a href="icons-materialdesign.html" class="dropdown-item">Material Design</a>
+                                                <a href="icons-dripicons.html" class="dropdown-item">Dripicons</a>
+                                                <a href="icons-fontawesome.html" class="dropdown-item">Font awesome 5</a>
+                                                <a href="icons-themify.html" class="dropdown-item">Themify</a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-table"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Tables <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-table">
+                                                <a href="tables-basic.html" class="dropdown-item">Basic Tables</a>
+                                                <a href="tables-datatable.html" class="dropdown-item">Data Tables</a>
+                                                <a href="tables-responsive.html" class="dropdown-item">Responsive Table</a>
+                                                <a href="tables-editable.html" class="dropdown-item">Editable Table</a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Forms <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                                <a href="form-elements.html" class="dropdown-item">Form Elements</a>
+                                                <a href="form-validation.html" class="dropdown-item">Form Validation</a>
+                                                <a href="form-advanced.html" class="dropdown-item">Form Advanced</a>
+                                                <a href="form-editors.html" class="dropdown-item">Form Editors</a>
+                                                <a href="form-uploads.html" class="dropdown-item">Form File Upload</a>
+                                                <a href="form-mask.html" class="dropdown-item">Form Mask</a>
+                                                <a href="form-summernote.html" class="dropdown-item">Summernote</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-table"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Charts <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-table">
+                                                <a href="charts-morris.html" class="dropdown-item">Morris</a>
+                                                <a href="charts-apex.html" class="dropdown-item">Apex</a>
+                                                <a href="charts-chartist.html" class="dropdown-item">Chartist</a>
+                                                <a href="charts-chartjs.html" class="dropdown-item">Chartjs</a>
+                                                <a href="charts-flot.html" class="dropdown-item">Flot</a>
+                                                <a href="charts-sparkline.html" class="dropdown-item">Sparkline</a>
+                                                <a href="charts-knob.html" class="dropdown-item">Jquery Knob</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-advancedui" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="mdi mdi-package-variant-closed mr-2"></i>Advanced UI <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="topnav-advancedui">
+                                        <a href="advanced-alertify.html" class="dropdown-item">Alertify</a>
+                                        <a href="advanced-rating.html" class="dropdown-item">Rating</a>
+                                        <a href="advanced-nestable.html" class="dropdown-item">Nestable</a>
+                                        <a href="advanced-rangeslider.html" class="dropdown-item">Range Slider</a>
+                                        <a href="advanced-sweet-alert.html" class="dropdown-item">Sweet-Alert</a>
+                                        <a href="advanced-lightbox.html" class="dropdown-item">Lightbox</a>
+                                        <a href="advanced-maps.html" class="dropdown-item">Maps</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-more" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="mdi mdi-file-document-box-multiple-outline mr-2"></i>Extra pages <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="topnav-more">
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Authentication <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                                <a href="auth-login.html" class="dropdown-item">Login</a>
+                                                <a href="auth-register.html" class="dropdown-item">Register</a>
+                                                <a href="auth-recoverpw.html" class="dropdown-item">Recover Password</a>
+                                                <a href="auth-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-utility"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Utility <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-utility">
+                                                <a href="pages-starter.html" class="dropdown-item">Starter Page</a>
+                                                <a href="pages-maintenance.html" class="dropdown-item">Maintenance</a>
+                                                <a href="pages-comingsoon.html" class="dropdown-item">Coming Soon</a>
+                                                <a href="pages-timeline.html" class="dropdown-item">Timeline</a>
+                                                <a href="pages-gallery.html" class="dropdown-item">Gallery</a>
+                                                <a href="pages-faqs.html" class="dropdown-item">FAQs</a>
+                                                <a href="pages-pricing.html" class="dropdown-item">Pricing</a>
+                                                <a href="pages-404.html" class="dropdown-item">Error 404</a>
+                                                <a href="pages-500.html" class="dropdown-item">Error 500</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="mdi mdi-flip-horizontal mr-2"></i>Layouts <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="topnav-layout">
+                                        <a href="layouts-topbar-light.html" class="dropdown-item">Topbar light</a>
+                                        <a href="layouts-boxed-width.html" class="dropdown-item">Boxed width</a>
+                                        <a href="layouts-colored-header.html" class="dropdown-item">Colored Header</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 font-size-18">Dashboard</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Apaxy</a></li>
+                                            <li class="breadcrumb-item active">Dashboard</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="font-size-14">Number of Sales</h5>
+                                            </div>
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle bg-primary">
+                                                    <i class="dripicons-box"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h4 class="m-0 align-self-center">1,753</h4>
+                                        <p class="mb-0 mt-3 text-muted"><span class="text-success">1.23 % <i class="mdi mdi-trending-up mr-1"></i></span> From previous period</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="font-size-14">Sales Revenue</h5>
+                                            </div>
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle bg-primary">
+                                                    <i class="dripicons-briefcase"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h4 class="m-0 align-self-center">$45,253</h4>
+                                        <p class="mb-0 mt-3 text-muted"><span class="text-success">2.73 % <i class="mdi mdi-trending-up mr-1"></i></span> From previous period</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="font-size-14">Average Price</h5>
+                                            </div>
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle bg-primary">
+                                                    <i class="dripicons-tags"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h4 class="m-0 align-self-center">$12.74</h4>
+                                        <p class="mb-0 mt-3 text-muted"><span class="text-danger">4.35 % <i class="mdi mdi-trending-down mr-1"></i></span> From previous period</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="font-size-14">Product Sold</h5>
+                                            </div>
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle bg-primary">
+                                                    <i class="dripicons-cart"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h4 class="m-0 align-self-center">20,781</h4>
+                                        <p class="mb-0 mt-3 text-muted"><span class="text-success">7.21 % <i class="mdi mdi-trending-up mr-1"></i></span> From previous period</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-4">Sales Analytics</h4>
+                                        <div class="row justify-content-center">
+                                            <div class="col-sm-4">
+                                                <div class="text-center">
+                                                    <p>This Month</p>
+                                                    <h4>$ 46,543</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="text-center">
+                                                    <p>This Week</p>
+                                                    <h4>$ 7,842</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="revenue-chart" class="apex-charts" dir="ltr"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-4">Marketplaces Earning</h4>
+
+                                        <div dir="ltr">
+
+                                            <div class="slick-slider slider-for hori-timeline-desc pt-0">
+                                                <div>
+                                                    <p class="font-size-16">Daily Earning</p>
+                                                    <h4 class="mb-4">$ 1,452</h4>
+                                                    <div id="earning-day-chart" class="apex-charts"></div>
+                                                </div>
+                                                <div>
+                                                    <p class="font-size-16">Weekly Earning</p>
+                                                    <h4 class="mb-4">$ 6,536</h4>
+                                                    <div id="earning-weekly-chart" class="apex-charts"></div>
+                                                </div>
+                                                <div>
+                                                    <p class="font-size-16">Monthly Earning</p>
+                                                    <h4 class="mb-4">$ 24,562</h4>
+                                                    <div id="earning-monthly-chart" class="apex-charts"></div>
+                                                </div>
+                                                <div>
+                                                    <p class="font-size-16">Yearly Earning</p>
+                                                    <h4 class="mb-4">$ 2,82,562</h4>
+                                                    <div id="earning-yearly-chart" class="apex-charts"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row justify-content-center mb-3">
+                                                <div class="col-lg-11">
+                                                    <div class="slick-slider slider-nav hori-timeline-nav">
+                                                        <div class="slider-nav-item">
+                                                            <h5 class="nav-title font-size-14 mb-0">Day</h5>
+                                                        </div>
+                                                        <div class="slider-nav-item">
+                                                            <h5 class="nav-title font-size-14 mb-0">Week</h5>
+                                                        </div>
+                                                        <div class="slider-nav-item">
+                                                            <h5 class="nav-title font-size-14 mb-0">Month</h5>
+                                                        </div>
+                                                        <div class="slider-nav-item">
+                                                            <h5 class="nav-title font-size-14 mb-0">Year</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Social Source</h4>
+                                        <div id="social-source-chart" class="apex-charts" dir="ltr"></div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="text-center mt-2">
+                                                    <i class="mdi mdi-facebook h2 text-primary"></i>
+
+                                                    <p class="mt-3 mb-2">Facebook</p>
+                                                    <h5>1245</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="text-center mt-2">
+                                                    <i class="mdi mdi-twitter h2 text-info"></i>
+
+                                                    <p class="mt-3 mb-2">Twitter</p>
+                                                    <h5>852</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-4">Clients Review</h4>
+
+                                        <ul class="verti-timeline list-unstyled mb-0" data-simplebar style="max-height: 393px;">
+                                            <li class="event-list">
+                                                <div class="media">
+                                                    <div class="avatar-xs mr-3">
+                                                        <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                            D
+                                                        </span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h5 class="font-size-14 mb-1">Danny Campbell</h5>
+                                                        <p class="text-muted mb-0 font-size-13">To an English person, it will seem like simplified.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="event-list">
+                                                <div class="media">
+                                                    <div class="avatar-xs mr-3">
+                                                        <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                            R
+                                                        </span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h5 class="font-size-14 mb-1">Ralph Merkel</h5>
+                                                        <p class="text-muted mb-0 font-size-13">At solmen va esser necessi far sommun paroles.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="event-list">
+                                                <div class="media">
+                                                    <div class="avatar-xs mr-3">
+                                                        <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                            M
+                                                        </span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h5 class="font-size-14 mb-1">Marcus Smith</h5>
+                                                        <p class="text-muted mb-0 font-size-13">Everyone realizes why a new common language.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="event-list">
+                                                <div class="media">
+                                                    <div class="avatar-xs mr-3">
+                                                        <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                            J
+                                                        </span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h5 class="font-size-14 mb-1">James Denson</h5>
+                                                        <p class="text-muted mb-0 font-size-13">For science, music, sport, etc, europe vocabulary.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="event-list">
+                                                <div class="media">
+                                                    <div class="avatar-xs mr-3">
+                                                        <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                            D
+                                                        </span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h5 class="font-size-14 mb-1">Danny Campbell</h5>
+                                                        <p class="text-muted mb-0 font-size-13">To an English person, it will seem like simplified.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="event-list">
+                                                <div class="media">
+                                                    <div class="avatar-xs mr-3">
+                                                        <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                            R
+                                                        </span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h5 class="font-size-14 mb-1">Ralph Merkel</h5>
+                                                        <p class="text-muted mb-0 font-size-13">At solmen va esser necessi far sommun paroles.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="event-list">
+                                                <div class="media">
+                                                    <div class="avatar-xs mr-3">
+                                                        <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                            M
+                                                        </span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h5 class="font-size-14 mb-1">Marcus Smith</h5>
+                                                        <p class="text-muted mb-0 font-size-13">Everyone realizes why a new common language.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="event-list">
+                                                <div class="media">
+                                                    <div class="avatar-xs mr-3">
+                                                        <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                            J
+                                                        </span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h5 class="font-size-14 mb-1">James Denson</h5>
+                                                        <p class="text-muted mb-0 font-size-13">For science, music, sport, etc, europe vocabulary.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-4">Revenue by Location</h4>
+                                        <div id="usa" style="height: 200px"></div>
+
+                                        <div class="mt-5">
+                                            <div class="position-relative">
+                                                <div class="progress-label text-primary border-primary mb-2">California</div>
+                                                <div class="progress progress-sm progress-animate mb-4">
+                                                    <div class="progress-bar" role="progressbar" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-value">
+                                                            <h5 class="mb-1 text-dark font-size-14">86%</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="position-relative">
+                                                <div class="progress-label text-primary border-primary mb-2">Montana</div>
+                                                <div class="progress progress-sm progress-animate mb-4">
+                                                    <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-value">
+                                                            <h5 class="mb-1 text-dark font-size-14">72%</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <a href="#" class="btn btn-primary btn-sm">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
 
 
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-4">Latest Transaction</h4>
 
-        <!-- Javascript -->
-		<script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
-		<script src="{{asset('front/js/jquery-migrate-3.0.0.min.js')}}"></script>
-		<script src="{{asset('front/js/popper.min.js')}}"></script>
-		<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+                                        <div class="table-responsive">
+                                            <table class="table table-centered table-nowrap mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"  style="width: 50px;">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckall">
+                                                                <label class="custom-control-label" for="customCheckall"></label>
+                                                            </div>
+                                                        </th>
+                                                        <th scope="col"  style="width: 60px;"></th>
+                                                        <th scope="col">ID & Name</th>
+                                                        <th scope="col">Date</th>
+                                                        <th scope="col">Price</th>
+                                                        <th scope="col">Quantity</th>
+                                                        <th scope="col">Amount</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                <label class="custom-control-label" for="customCheck1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <img src="assets/images/users/avatar-2.jpg" alt="user" class="avatar-xs rounded-circle" />
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-1 font-size-12">#AP1234</p>
+                                                            <h5 class="font-size-15 mb-0">David Wiley</h5>
+                                                        </td>
+                                                        <td>02 Nov, 2019</td>
+                                                        <td>$ 1,234</td>
+                                                        <td>1</td>
 
-        <script src="{{asset('front/js/wow.min.js')}}"></script>
+                                                        <td>
+                                                            $ 1,234
+                                                        </td>
+                                                        <td>
+                                                            <i class="mdi mdi-checkbox-blank-circle text-success mr-1"></i> Confirm
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+                                                            <button type="button" class="btn btn-outline-danger btn-sm">Cancel</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                                <label class="custom-control-label" for="customCheck2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="avatar-xs">
+                                                                <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                                    W
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-1 font-size-12">#AP1235</p>
+                                                            <h5 class="font-size-15 mb-0">Walter Jones</h5>
+                                                        </td>
+                                                        <td>04 Nov, 2019</td>
+                                                        <td>$ 822</td>
+                                                        <td>2</td>
+
+                                                        <td>
+                                                            $ 1,644
+                                                        </td>
+                                                        <td>
+                                                            <i class="mdi mdi-checkbox-blank-circle text-success mr-1"></i> Confirm
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+                                                            <button type="button" class="btn btn-outline-danger btn-sm">Cancel</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                <label class="custom-control-label" for="customCheck3"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <img src="assets/images/users/avatar-3.jpg" alt="user" class="avatar-xs rounded-circle" />
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-1 font-size-12">#AP1236</p>
+                                                            <h5 class="font-size-15 mb-0">Eric Ryder</h5>
+                                                        </td>
+                                                        <td>05 Nov, 2019</td>
+                                                        <td>$ 1,153</td>
+                                                        <td>1</td>
+
+                                                        <td>
+                                                            $ 1,153
+                                                        </td>
+                                                        <td>
+                                                            <i class="mdi mdi-checkbox-blank-circle text-danger mr-1"></i> Cancel
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+                                                            <button type="button" class="btn btn-outline-danger btn-sm">Cancel</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                <label class="custom-control-label" for="customCheck4"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <img src="assets/images/users/avatar-6.jpg" alt="user" class="avatar-xs rounded-circle" />
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-1 font-size-12">#AP1237</p>
+                                                            <h5 class="font-size-15 mb-0">Kenneth Jackson</h5>
+                                                        </td>
+                                                        <td>06 Nov, 2019</td>
+                                                        <td>$ 1,365</td>
+                                                        <td>1</td>
+
+                                                        <td>
+                                                            $ 1,365
+                                                        </td>
+                                                        <td>
+                                                            <i class="mdi mdi-checkbox-blank-circle text-success mr-1"></i> Confirm
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+                                                            <button type="button" class="btn btn-outline-danger btn-sm">Cancel</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                                <label class="custom-control-label" for="customCheck5"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="avatar-xs">
+                                                                <span class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                                    R
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-1 font-size-12">#AP1238</p>
+                                                            <h5 class="font-size-15 mb-0">Ronnie Spiller</h5>
+                                                        </td>
+                                                        <td>08 Nov, 2019</td>
+                                                        <td>$ 740</td>
+                                                        <td>2</td>
+
+                                                        <td>
+                                                            $ 1,480
+                                                        </td>
+                                                        <td>
+                                                            <i class="mdi mdi-checkbox-blank-circle text-warning mr-1"></i> Pending
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+                                                            <button type="button" class="btn btn-outline-danger btn-sm">Cancel</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
 
 
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                2019 © Apaxy.
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-right d-none d-sm-block">
+                                    Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesdesign
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
 
-        <script>
-            var yourNavigation = $(".nav");
-                stickyDiv = "sticky";
-                yourHeader = $('.header').height();
+        </div>
+        <!-- END layout-wrapper -->
 
-            $(window).scroll(function() {
-              if( $(this).scrollTop() > yourHeader ) {
-                yourNavigation.addClass(stickyDiv);
-              } else {
-                yourNavigation.removeClass(stickyDiv);
-              }
-            });
-        </script>
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div data-simplebar class="h-100">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs nav-tabs-custom rightbar-nav-tab nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link py-3 active" data-toggle="tab" href="#chat-tab" role="tab">
+                            <i class="mdi mdi-message-text font-size-22"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-3" data-toggle="tab" href="#tasks-tab" role="tab">
+                            <i class="mdi mdi-format-list-checkbox font-size-22"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-3" data-toggle="tab" href="#settings-tab" role="tab">
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <i class="mdi mdi-settings font-size-22"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content text-muted">
+                    <div class="tab-pane active" id="chat-tab" role="tabpanel">
+
+                        <form class="search-bar py-4 px-3">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="mdi mdi-magnify"></span>
+                            </div>
+                        </form>
+
+                        <h6 class="font-weight-medium px-4 mt-2 text-uppercase">Group Chats</h6>
+
+                        <div class="p-2">
+                            <a href="javascript: void(0);" class="text-reset notification-item pl-3 mb-2 d-block">
+                                <i class="mdi mdi-checkbox-blank-circle-outline mr-1 text-success"></i>
+                                <span class="mb-0 mt-1">App Development</span>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item pl-3 mb-2 d-block">
+                                <i class="mdi mdi-checkbox-blank-circle-outline mr-1 text-warning"></i>
+                                <span class="mb-0 mt-1">Office Work</span>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item pl-3 mb-2 d-block">
+                                <i class="mdi mdi-checkbox-blank-circle-outline mr-1 text-danger"></i>
+                                <span class="mb-0 mt-1">Personal Group</span>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item pl-3 d-block">
+                                <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i>
+                                <span class="mb-0 mt-1">Freelance</span>
+                            </a>
+                        </div>
+
+                        <h6 class="font-weight-medium px-4 mt-4 text-uppercase">Favourites</h6>
+
+                        <div class="p-2">
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-10.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status online"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Andrew Mackie</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">It will seem like simplified English.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status away"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Rory Dalyell</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">To an English person, it will seem like simplified</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-9.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status busy"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Jaxon Dunhill</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">To achieve this, it would be necessary.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <h6 class="font-weight-medium px-4 mt-4 text-uppercase">Other Chats</h6>
+
+                        <div class="p-2 pb-4">
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status online"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Jackson Therry</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">Everyone realizes why a new common language.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status away"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Charles Deakin</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">The languages only differ in their grammar.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status online"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Ryan Salting</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">If several languages coalesce the grammar of the resulting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status online"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Sean Howse</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">It will seem like simplified English.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status busy"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Dean Coward</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">The new common language will be more simple.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset notification-item">
+                                <div class="media">
+                                    <div class="position-relative mr-3">
+                                        <img src="assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <i class="mdi mdi-circle user-status away"></i>
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h6 class="mt-0 mb-1">Hayley East</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-0 text-truncate">One could refuse to pay expensive translators.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane" id="tasks-tab" role="tabpanel">
+                        <h6 class="font-weight-medium px-3 mb-0 mt-4">Working Tasks</h6>
+
+                        <div class="p-2">
+                            <a href="javascript: void(0);" class="text-reset item-hovered d-block p-3">
+                                <p class="text-muted mb-0">App Development<span class="float-right">75%</span></p>
+                                <div class="progress mt-2" style="height: 4px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset item-hovered d-block p-3">
+                                <p class="text-muted mb-0">Database Repair<span class="float-right">37%</span></p>
+                                <div class="progress mt-2" style="height: 4px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 37%" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset item-hovered d-block p-3">
+                                <p class="text-muted mb-0">Backup Create<span class="float-right">52%</span></p>
+                                <div class="progress mt-2" style="height: 4px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 52%" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <h6 class="font-weight-medium px-3 mb-0 mt-4">Upcoming Tasks</h6>
+
+                        <div class="p-2">
+                            <a href="javascript: void(0);" class="text-reset item-hovered d-block p-3">
+                                <p class="text-muted mb-0">Sales Reporting<span class="float-right">12%</span></p>
+                                <div class="progress mt-2" style="height: 4px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset item-hovered d-block p-3">
+                                <p class="text-muted mb-0">Redesign Website<span class="float-right">67%</span></p>
+                                <div class="progress mt-2" style="height: 4px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </a>
+
+                            <a href="javascript: void(0);" class="text-reset item-hovered d-block p-3">
+                                <p class="text-muted mb-0">New Admin Design<span class="float-right">84%</span></p>
+                                <div class="progress mt-2" style="height: 4px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="p-3 mt-2">
+                            <a href="javascript: void(0);" class="btn btn-success btn-block waves-effect waves-light">Create Task</a>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="settings-tab" role="tabpanel">
+                            <h6 class="font-weight-medium px-4 py-3 text-uppercase bg-light">General Settings</h6>
+
+                        <div class="p-4">
+                            <h6 class="font-weight-medium">Online Status</h6>
+                            <div class="custom-control custom-switch mb-1">
+                                <input type="checkbox" class="custom-control-input" id="settings-check1" name="settings-check1" checked="">
+                                <label class="custom-control-label font-weight-normal" for="settings-check1">Show your status to all</label>
+                            </div>
+
+                            <h6 class="font-weight-medium mt-4">Auto Updates</h6>
+                            <div class="custom-control custom-switch mb-1">
+                                <input type="checkbox" class="custom-control-input" id="settings-check2" name="settings-check2" checked="">
+                                <label class="custom-control-label font-weight-normal" for="settings-check2">Keep up to date</label>
+                            </div>
+
+                            <h6 class="font-weight-medium mt-4">Backup Setup</h6>
+                            <div class="custom-control custom-switch mb-1">
+                                <input type="checkbox" class="custom-control-input" id="settings-check3" name="settings-check3">
+                                <label class="custom-control-label font-weight-normal" for="settings-check3">Auto backup</label>
+                            </div>
+
+                        </div>
+
+                        <h6 class="font-weight-medium px-4 py-3 mt-2 text-uppercase bg-light">Advanced Settings</h6>
+
+                        <div class="p-4">
+                            <h6 class="font-weight-medium">Application Alerts</h6>
+                            <div class="custom-control custom-switch mb-1">
+                                <input type="checkbox" class="custom-control-input" id="settings-check4" name="settings-check4" checked="">
+                                <label class="custom-control-label font-weight-normal" for="settings-check4">Email Notifications</label>
+                            </div>
+
+                            <div class="custom-control custom-switch mb-1">
+                                <input type="checkbox" class="custom-control-input" id="settings-check5" name="settings-check5">
+                                <label class="custom-control-label font-weight-normal" for="settings-check5">SMS Notifications</label>
+                            </div>
+
+                            <h6 class="font-weight-medium mt-4">API</h6>
+                            <div class="custom-control custom-switch mb-1">
+                                <input type="checkbox" class="custom-control-input" id="settings-check6" name="settings-check6">
+                                <label class="custom-control-label font-weight-normal" for="settings-check6">Enable access</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end slimscroll-menu-->
+        </div>
+        <!-- /Right-bar -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <script src="assets/libs/slick-slider/slick/slick.min.js"></script>
+
+        <!-- Jq vector map -->
+        <script src="assets/libs/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
+
+        <script src="assets/js/pages/dashboard.init.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
     </body>
-
 </html>
