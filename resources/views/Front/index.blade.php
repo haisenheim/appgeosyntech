@@ -23,6 +23,17 @@
         <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+        <style>
+            .carousel-item {
+              height: 65vh;
+              min-height: 350px;
+              background: no-repeat center center scroll;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+            }
+        </style>
 
     </head>
 
@@ -184,121 +195,55 @@
             <!-- ============================================================== -->
             <div class="main-content">
 
-                <div class="page-content">
-                    <div class="container-fluid">
-
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Accueil</h4>
-
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Apaxy</a></li>
-                                            <li class="breadcrumb-item active">Accueil</li>
-                                        </ol>
-                                    </div>
-
-                                </div>
+                <div class="" style="margin-top: 50px;">
+                    <header>
+                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                          <!-- Slide One - Set the background image for this slide in the line below -->
+                          <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3 class="display-4">First Slide</h3>
+                              <p class="lead">This is a description for the first slide.</p>
                             </div>
+                          </div>
+                          <!-- Slide Two - Set the background image for this slide in the line below -->
+                          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3 class="display-4">Second Slide</h3>
+                              <p class="lead">This is a description for the second slide.</p>
+                            </div>
+                          </div>
+                          <!-- Slide Three - Set the background image for this slide in the line below -->
+                          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/O7fzqFEfLlo/1920x1080')">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3 class="display-4">Third Slide</h3>
+                              <p class="lead">This is a description for the third slide.</p>
+                            </div>
+                          </div>
                         </div>
-                        <!-- end page title -->
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                      </div>
+                    </header>
 
-                        <div class="row">
-                            <div class="col-sm-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-xl-8">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end row -->
-
-
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end row -->
-
-                    </div> <!-- container-fluid -->
+                    <!-- Page Content -->
+                    <section class="py-5">
+                      <div class="container">
+                        <h1 class="font-weight-light">Half Page Image Slider</h1>
+                        <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images in this snippet are from <a href="https://unsplash.com">Unsplash</a>!</p>
+                      </div>
+                    </section>
                 </div>
                 <!-- End Page-content -->
 
@@ -322,6 +267,7 @@
 
         </div>
         <!-- END layout-wrapper -->
+
 
 
 
