@@ -251,7 +251,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="overlay-content">
-                                                        <h5 class="font-size-14 text-truncate mb-0">FORMATION DE RANG <?= $i ?></h5>
+                                                        <h5 class="font-size-14 text-truncate mb-0">FORMATION de Rang <?= $i ?></h5>
                                                     </div>
                                                 </div>
                                             </a>
