@@ -94,7 +94,7 @@
 
 
                         <div class="dropdown d-inline-block">
-                            <a href="/login"  class="btn header-item noti-icon right-bar-toggle waves-effect">
+                            <a style="height: 50px; color: #FFFFFF" href="/login"  class="btn header-item noti-icon right-bar-toggle waves-effect">
                             <span class="d-none d-sm-inline-block ml-1">SE CONNECTER</span>
                                 <i class="mdi mdi-login"></i>
                             </a>
