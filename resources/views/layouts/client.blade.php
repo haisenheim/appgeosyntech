@@ -48,11 +48,9 @@
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
-                            <div class="navbar-brand-box">
                             <a href="/" class="logo logo-dark">OBAC TRAINING CENTER</a>
 
                             <a href="/" style="color: #FFFFFF" class="logo logo-light">OBAC TRAINING CENTER</a>
-                        </div>
                         </div>
 
                         <button type="button" class="btn btn-sm mr-2 font-size-16 d-lg-none header-item waves-effect waves-light" data-toggle="collapse" data-target="#topnav-menu-content">
