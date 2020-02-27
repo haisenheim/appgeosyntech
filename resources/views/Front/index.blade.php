@@ -227,14 +227,14 @@
 
                     <!-- Page Content -->
                     <section class="py-5">
-                      <div class="container">
+                      <div class="container-fluid">
                         <h1 class="font-weight-light">BIENVENU SUR OBAC TRAINING CENTER - <small>Votre Plateforme de formation</small></h1>
                         <p class="lead">OBAC TRAINING CENTER est une plateforme qui gere ........ <a href="https://unsplash.com">Unsplash</a>!</p>
                       </div>
                     </section>
 
                     <section>
-                        <div class="container">
+                        <div class="container-fluid">
                             <h1> DECOUVREZ NOS FORMATIONS</h1>
                             <div class="row">
                                <?php for($i=1; $i<=12; $i++): ?>
@@ -254,7 +254,7 @@
                                                         <h5 class="font-size-14 text-truncate mb-0">FORMATION de Rang <?= $i ?></h5>
                                                         <p>
                                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                            Amet dignissimos eligendi facilis incidunt nisi obcaecati sequi.
+                                                            Amet dignissimos eligendi.
                                                         </p>
                                                     </div>
                                                 </div>
