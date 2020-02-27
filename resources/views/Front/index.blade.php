@@ -25,7 +25,7 @@
         <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
         <style>
             .carousel-item {
-              height: 65vh;
+              height: 80vh;
               min-height: 350px;
               background: no-repeat center center scroll;
               -webkit-background-size: cover;
@@ -43,8 +43,8 @@
         <div id="layout-wrapper">
 
 
-            <header id="page-topbar">
-                <div class="navbar-header">
+            <header style="background-color: #28a745" id="page-topbar">
+                <div style="height: 50px;" class="navbar-header">
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
@@ -105,7 +105,7 @@
                 </div>
             </header>
 
-            <div class="topnav">
+            <div style="margin-top: 50px;" class="topnav">
                 <div class="container-fluid">
                     <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
 
@@ -183,7 +183,7 @@
             <!-- ============================================================== -->
             <div class="main-content">
 
-                <div class="" style="margin-top: 50px;">
+                <div class="" style="margin-top: 105px;">
                     <header>
                       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
