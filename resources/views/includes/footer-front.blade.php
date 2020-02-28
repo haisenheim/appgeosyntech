@@ -53,7 +53,7 @@
                  <li class="Ro6CP"><a class="bmiV0 _229R0" href="https://envato.com/sitemap/">Sitemap</a></li>
               </ul>
               <hr class="_1eqUd VBCSb">
-              <span class="n1aMi">All prices are in USD</span>
+              <span class="n1aMi">OPPORTUNITES DE BUSINESS EN AFRIQUE CENTRALE</span>
               <small class="n1aMi">© <?= date('Y') ?> OBAC Training Center. Trademarks and brands are the property of their respective owners.</small>
            </div>
            <div class="_5akfd">
@@ -68,7 +68,18 @@
         </div>
     </div>
 
+        <!-- JAVASCRIPT -->
+        <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/metismenu/metisMenu.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
 
+
+
+        <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
+
+        <script src="{{ asset('assets/js/app.js') }}"></script>
 
 
 
