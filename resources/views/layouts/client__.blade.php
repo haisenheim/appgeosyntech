@@ -1,4 +1,41 @@
-    @include('head-front')
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>OTC | OBAC TRAINING CENTER</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="OBAC TRAINING CENTER" name="description" />
+        <meta content="Themesdesign" name="Clement ESSOMBA" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
+
+        <!-- slick css -->
+        <link href="{{ asset('assets/libs/slick-slider/slick/slick.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/libs/slick-slider/slick/slick-theme.css') }}" rel="stylesheet" type="text/css" />
+
+        <!-- jvectormap -->
+        <link href="{{ asset('assets/libs/jqvmap/jqvmap.min.css')}} " rel="stylesheet" />
+
+        <!-- Bootstrap Css -->
+        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+        <style>
+            .carousel-item {
+              height: 65vh;
+              min-height: 350px;
+              background: no-repeat center center scroll;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+            }
+        </style>
+
+    </head>
 
     <body data-topbar="dark" data-layout="horizontal">
 
@@ -6,16 +43,14 @@
         <div id="layout-wrapper">
 
 
-            <header style="background-color: #28a745" id="page-topbar">
-                <div style="height: 50px;" class="navbar-header">
+            <header id="page-topbar">
+                <div class="navbar-header">
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
-                            <div class="navbar-brand-box">
                             <a href="/" class="logo logo-dark">OBAC TRAINING CENTER</a>
 
                             <a href="/" style="color: #FFFFFF" class="logo logo-light">OBAC TRAINING CENTER</a>
-                        </div>
                         </div>
 
                         <button type="button" class="btn btn-sm mr-2 font-size-16 d-lg-none header-item waves-effect waves-light" data-toggle="collapse" data-target="#topnav-menu-content">
@@ -57,7 +92,7 @@
 
 
                         <div class="dropdown d-inline-block">
-                            <a style="height: 50px; color: #FFFFFF" href="/login"  class="btn header-item noti-icon right-bar-toggle waves-effect">
+                            <a href="/login"  class="btn header-item noti-icon right-bar-toggle waves-effect">
                             <span class="d-none d-sm-inline-block ml-1">SE CONNECTER</span>
                                 <i class="mdi mdi-login"></i>
                             </a>
@@ -68,7 +103,7 @@
                 </div>
             </header>
 
-            <div style="margin-top: 50px;" class="topnav">
+            <div class="topnav">
                 <div class="container-fluid">
                     <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
 
@@ -146,7 +181,7 @@
             <!-- ============================================================== -->
             <div class="main-content">
 
-                <div class="" style="margin-top: 105px;">
+                <div class="" style="margin-top: 50px;">
                     <header>
                       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -190,43 +225,10 @@
 
                     <!-- Page Content -->
                     <section class="py-5">
-                      <div class="container-fluid">
-                        <h1 class="font-weight-light">BIENVENU SUR OBAC TRAINING CENTER - <small>Votre Plateforme de formation</small></h1>
-                        <p class="lead">OBAC TRAINING CENTER est une plateforme qui gere ........ <a href="https://unsplash.com">Unsplash</a>!</p>
+                      <div class="container">
+                        <h1 class="font-weight-light">Half Page Image Slider</h1>
+                        <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images in this snippet are from <a href="https://unsplash.com">Unsplash</a>!</p>
                       </div>
-                    </section>
-
-                    <section>
-                        <div class="container-fluid">
-                            <h1> DECOUVREZ NOS FORMATIONS</h1>
-                            <div class="row">
-                               <?php for($i=1; $i<=12; $i++): ?>
-                                    <div class="col-lg-3 col-md-4">
-                                        <div class="gallery-box text-center card p-2">
-                                            <a href="assets/images/small/img-1.jpg" class="text-dark gallery-popup">
-                                                <div class="position-relative gallery-content">
-                                                    <div class="demo-img">
-                                                        <img src="assets/images/small/img-1.jpg" alt="" class="img-fluid mx-auto d-block rounded">
-                                                    </div>
-                                                    <div class="gallery-overlay">
-                                                        <div class="gallery-overlay-icon">
-                                                            <i class="ti-zoom-in text-white"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="overlay-content">
-                                                        <h5 class="font-size-14 text-truncate mb-0">FORMATION de Rang <?= $i ?></h5>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                            Amet dignissimos eligendi.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                               <?php endfor ?>
-                            </div>
-                        </div>
                     </section>
                 </div>
                 <!-- End Page-content -->
@@ -270,4 +272,4 @@
         <script src="assets/js/app.js"></script>
 
     </body>
-    @include('footer-front')
+</html>

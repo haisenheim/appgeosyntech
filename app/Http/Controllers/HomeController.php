@@ -71,13 +71,17 @@ class HomeController extends Controller
 		        Session::put('corporate', $entreprise);
 		        return redirect('mcp/formations');
 	        }
+	        if(Auth::user()->role_id==10){
+
+		        return redirect('/');
+	        }
             else{
-                return view('home');
+                return redirect('/login');
             }
         }
 
 
-        return view('home');
+	    return redirect('/login');
     }
 
 	public function about(){
