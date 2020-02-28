@@ -1,4 +1,4 @@
-@extends('......layouts.national')
+@extends('......layouts.front')
 
 @section('content')
 
