@@ -51,15 +51,12 @@
               </ul>
               <hr class="_1eqUd VBCSb">
               <span class="n1aMi">OPPORTUNITES DE BUSINESS EN AFRIQUE CENTRALE</span>
-              <small class="n1aMi">© <?= date('Y') ?> OBAC Training Center. Trademarks and brands are the property of their respective owners.</small>
+              <small class="n1aMi">© <?= date('Y') ?> OBAC Training Center. Les Formations et cours restent la propriété de leurs producteurs.</small>
            </div>
            <div class="_5akfd">
-               <ul itemscope="" itemtype="http://schema.org/Organization">
-                    <li class="un_MZ"><a class="_1HTgw" rel="nofollow" href="https://twitter.com/envato" aria-label="Twitter"><img class="_3Ie-f" alt="Twitter" title="Twitter" src="https://assets.shopfront.envato-static.com/images/icon-twitter.svg"></a></li>
-                    <li class="un_MZ"><a class="_1HTgw" rel="nofollow" href="https://www.facebook.com/envato" aria-label="Facebook"><img class="_3Ie-f" alt="Facebook" title="Facebook" src="https://assets.shopfront.envato-static.com/images/icon-facebook.svg"></a></li>
-                    <li class="un_MZ"><a class="_1HTgw" rel="nofollow" href="https://www.youtube.com/user/Envato" aria-label="YouTube"><img class="_3Ie-f" alt="YouTube" title="YouTube" src="https://assets.shopfront.envato-static.com/images/icon-youtube.svg"></a></li>
-                    <li class="un_MZ"><a class="_1HTgw" rel="nofollow" href="https://www.instagram.com/envato/" aria-label="Instagram"><img class="_3Ie-f" alt="Instagram" title="Instagram" src="https://assets.shopfront.envato-static.com/images/icon-instagram.svg"></a></li>
-                    <li class="un_MZ"><a class="_1HTgw" rel="nofollow" href="https://www.pinterest.com/envato/" aria-label="Pinterest"><img class="_3Ie-f" alt="Pinterest" title="Pinterest" src="https://assets.shopfront.envato-static.com/images/icon-pinterest.svg"></a></li>
+               <ul itemscope="" >
+                    <li class="un_MZ"><a class="_1HTgw" rel="nofollow" href="https://www.linkedin.com/in/cabinet-obac-209837186/" aria-label="LinkedIn"><i class="ti-linkedin"></i></a></li>
+                    <li class="un_MZ"><a class="_1HTgw" rel="nofollow" href="https://www.facebook.com/Obac-296785357435548/" aria-label="Facebook"><i class="ti-facebook"></i></a></li>
                 </ul>
            </div>
         </div>
