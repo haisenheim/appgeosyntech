@@ -57,14 +57,33 @@
                         </div>
 
 
-
+                        @if(auth())
+                            <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src=" {{ auth()->user()->imageUrl?auth()->user()->imageUrl:'img/avatar.png'  }}"
+                                    alt="Header Avatar">
+                                <span class="d-none d-sm-inline-block ml-1">{{ auth()->user()->last_name ." ".auth()->user()->first_name }}</span>
+                                <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-face-profile font-size-16 align-middle mr-1"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-credit-card-outline font-size-16 align-middle mr-1"></i> Billing</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-settings font-size-16 align-middle mr-1"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock font-size-16 align-middle mr-1"></i> Lock screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/logout"><i class="mdi mdi-logout font-size-16 align-middle mr-1"></i> Logout</a>
+                            </div>
+                        </div>
+                        @else
                         <div class="dropdown d-inline-block">
                             <a style="height: 50px; color: #FFFFFF" href="/login"  class="btn header-item noti-icon right-bar-toggle waves-effect">
                             <span class="d-none d-sm-inline-block ml-1">SE CONNECTER</span>
                                 <i class="mdi mdi-login"></i>
                             </a>
                         </div>
-
+                        @endif
 
                     </div>
                 </div>
