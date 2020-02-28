@@ -1,4 +1,4 @@
-    @include('head-front')
+    @include('includes.head-front')
 
     <body data-topbar="dark" data-layout="horizontal">
 
