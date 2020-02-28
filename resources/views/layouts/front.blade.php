@@ -159,7 +159,7 @@
 
         </div>
         <!-- END layout-wrapper -->
-        @include('footer-front')
+        @include('includes.footer-front')
 
     </body>
 
