@@ -2,6 +2,7 @@
 
     <body data-topbar="dark" data-layout="horizontal">
 
+
         <!-- Begin page -->
         <div id="layout-wrapper">
 
@@ -25,7 +26,8 @@
                         <!-- App Search-->
                         <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Rechercher...">
+
+                                <input id="nav-search-input" type="text" class="form-control" placeholder="Rechercher...">
                                 <span class="mdi mdi-magnify"></span>
                             </div>
                         </form>

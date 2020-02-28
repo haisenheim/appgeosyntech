@@ -1,7 +1,4 @@
-<footer>
-
-
-
+<footer class="_1Pb5I" role="navigation">
     <div class="_1s697">
         <div class="_3J3Xl">
             <nav class="_2ruF4">

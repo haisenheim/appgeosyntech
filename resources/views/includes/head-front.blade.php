@@ -34,6 +34,10 @@
               -o-background-size: cover;
               background-size: cover;
             }
+
+            #nav-search-input::placeholder{
+                color: #FFFFFF;
+            }
         </style>
 
     </head>
