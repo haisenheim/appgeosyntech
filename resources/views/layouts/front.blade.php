@@ -57,7 +57,7 @@
                             </div>
                         </div>
 
-                        @if(auth())
+                        @if(auth()->user())
 
                             <div class="dropdown d-inline-block">
                                 <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
@@ -193,6 +193,7 @@
 
 
         <!-- Right Sidebar -->
+        @if(auth()->user()))
         <div class="right-bar">
             <div data-simplebar class="h-100">
 
@@ -502,6 +503,7 @@
 
             </div> <!-- end slimscroll-menu-->
         </div>
+        @endif
         <!-- /Right-bar -->
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
