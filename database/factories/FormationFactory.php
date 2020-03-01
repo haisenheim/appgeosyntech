@@ -18,7 +18,7 @@ $factory->define(\App\Models\Formation::class, function (Faker $faker) {
 	    'token'=>sha1($faker->randomAscii . rand(1000,99999)),
 	    'imageUri'=>$imgs[rand(0,6)],
 	    'description'=>$faker->text(),
-	    'chaire-obac'=>rand(0,1),
+	    'chaire_obac'=>rand(0,1),
 	    'interne'=>rand(0,1),
 	    'active'=>rand(0,1),
 
