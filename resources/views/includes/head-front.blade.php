@@ -24,6 +24,17 @@
         <!-- App Css-->
         <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('css/footer-front.css') }}" rel="stylesheet" type="text/css" />
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function(){
+          $('.preloader-background').delay(1000).fadeOut('slow');
+
+          $('.preloader-wrapper')
+            .delay(1000)
+            .fadeOut();
+          });
+        </script>
+
         <style>
             .carousel-item {
               height: 80vh;
@@ -38,6 +49,20 @@
             #nav-search-input::placeholder{
                 color: #FFFFFF;
             }
+
+
+            .preloader-background {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #eee;
+                position: fixed;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+              }
         </style>
 
     </head>

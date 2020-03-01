@@ -2,6 +2,7 @@
 
     <body data-topbar="dark" data-layout="horizontal">
 
+    @include('includes.spinner')
 
         <!-- Begin page -->
         <div id="layout-wrapper">
