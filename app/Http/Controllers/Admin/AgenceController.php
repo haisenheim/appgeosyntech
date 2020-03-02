@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AgenceController extends Controller
 {
@@ -63,6 +64,7 @@ class AgenceController extends Controller
 		if($request->imageUri){
 			$file = $request->imageUri;
 			$ext = $file->getClientOriginalExtension();
+			$ext = Str::lower($ext);
 			$arr_ext = array('jpg','png','jpeg','gif');
 			if(in_array($ext,$arr_ext)) {
 				if (!file_exists(public_path('img') . '/agences')) {
