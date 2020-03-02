@@ -58,7 +58,7 @@
                <?php foreach($formations as $formation): ?>
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-box text-center card p-2">
-                            <a href="assets/images/small/img-1.jpg" class="text-dark gallery-popup">
+                            <a href="/formation/{{ $token }}" class="text-dark gallery-popup">
                                 <div class="position-relative gallery-content">
                                     <div class="demo-img">
                                         <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
