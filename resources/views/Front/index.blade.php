@@ -98,6 +98,7 @@
                 <div class="card-body">
 
                     <h3 class="text-center"> DECOUVREZ NOS FORMATIONS</h3>
+                    <div class="divider text-center"><span></span></div>
                     <div class="row">
                        <?php foreach($formations as $formation): ?>
                             <div class="col-lg-3 col-md-4">
@@ -140,7 +141,7 @@
             font-weight: 900;
         }
 
-        section{
+        section .card{
             padding: 40px 0 25px 0;
         }
 

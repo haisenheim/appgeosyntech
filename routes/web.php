@@ -22,6 +22,14 @@ Route::get('/', function () {
     return view('Front/index')->with(compact('formations','chaire'));
 });
 
+Route::name('front.')
+	->namespace('Front')
+	->group(function(){
+		Route::get('/formation/{token}','FormationController');
+	});
+
+
+
 
 Route::get('/test',function(){
 	dd(FFMpegFacade::fromDisk('songs'));
