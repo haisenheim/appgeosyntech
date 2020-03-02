@@ -145,6 +145,10 @@
             padding: 40px 0 25px 0;
         }
 
+        section{
+            background-color: #FFFFFF;
+        }
+
         /*section h3, section h2, section h1{
             margin-bottom: 15px;
         }*/
