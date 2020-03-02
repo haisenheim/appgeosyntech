@@ -25,7 +25,10 @@ Route::get('/', function () {
 Route::name('front.')
 	->namespace('Front')
 	->group(function(){
-		//Route::get('/formation/{token}','FormationController');
+		Route::get('/formation/{token}','FormationController@show');
+		Route::get('/formations','FormationController@index');
+		Route::get('/chaire','FormationContoller@chaire');
+		Route::get('/secteur/formations/{token}','FormationController@getAllBySecteur');
 	});
 
 
