@@ -218,10 +218,15 @@
 
     </style>
 
-     <!-- Magnific Popup-->
+
+
+@endsection
+
+
+@section('scripts')
+    <!-- Magnific Popup-->
         <script src="{{ asset('assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
         <!-- Tour init js-->
         <script src=" {{ asset('assets/js/pages/lightbox.init.js') }}"></script>
-
 @endsection
