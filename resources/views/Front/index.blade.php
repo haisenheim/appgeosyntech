@@ -56,7 +56,8 @@
         <div class="container-fluid">
         <div class="card">
             <div class="card-body">
-                <h3 class="text-center"> DECOUVREZ LA CHAIRE OBAC</h3>
+                <h3 class="text-center mb-5"> DECOUVREZ LA CHAIRE OBAC</h3>
+                    <div class="divider"><span></span></div>
             <div class="row">
                <?php foreach($chaire as $formation): ?>
                     <div class="col-lg-3 col-md-4">
@@ -127,5 +128,21 @@
             </div>
         </div>
     </section>
+
+
+    <style>
+
+        .divider span {
+            display: inline-block;
+            width: 300px;
+            border-bottom: 1px solid
+            #28a745;
+        }
+
+        section h3{
+            margin: 30px 0 15px 0;
+        }
+
+    </style>
 
 @endsection
