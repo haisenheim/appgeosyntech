@@ -55,13 +55,13 @@
         <div class="container-fluid">
             <h1> DECOUVREZ NOS FORMATIONS</h1>
             <div class="row">
-               <?php for($i=1; $i<=12; $i++): ?>
+               <?php foreach($formations as $formation): ?>
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-box text-center card p-2">
                             <a href="assets/images/small/img-1.jpg" class="text-dark gallery-popup">
                                 <div class="position-relative gallery-content">
                                     <div class="demo-img">
-                                        <img src="assets/images/small/img-1.jpg" alt="" class="img-fluid mx-auto d-block rounded">
+                                        <img src="{{ $formation->imageUrl }}" alt="" class="img-fluid mx-auto d-block rounded">
                                     </div>
                                     <div class="gallery-overlay">
                                         <div class="gallery-overlay-icon">
@@ -69,17 +69,17 @@
                                         </div>
                                     </div>
                                     <div class="overlay-content">
-                                        <h5 class="font-size-14 text-truncate mb-0">FORMATION de Rang <?= $i ?></h5>
+                                        <h5 class="font-size-14 text-truncate mb-0"><?= $formation->name ?></h5>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Amet dignissimos eligendi.
+                                            <?= \Illuminate\Support\Str::limit($formation->description, 50) ?>
+
                                         </p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-               <?php endfor ?>
+               <?php endforeach ?>
             </div>
         </div>
     </section>

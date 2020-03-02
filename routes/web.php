@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 use Pbmedia\LaravelFFMpeg\FFMpegFacade;
 
 Route::get('/', function () {
-
-    return view('Front/index');
+	$formations = \App\Models\Formation::all()->where('chaire_obac',0)->take(-8);
+	$chaire = \App\Models\Formation::all()->where('chaire_obac',1)->take(-4);
+    return view('Front/index')->with(compact('formations','chaire'));
 });
 
 
