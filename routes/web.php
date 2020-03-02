@@ -18,6 +18,7 @@ use Pbmedia\LaravelFFMpeg\FFMpegFacade;
 Route::get('/', function () {
 	$formations = \App\Models\Formation::all()->where('chaire_obac',0)->take(-8);
 	$chaire = \App\Models\Formation::all()->where('chaire_obac',1)->take(-4);
+	dd($formations);
     return view('Front/index')->with(compact('formations','chaire'));
 });
 
