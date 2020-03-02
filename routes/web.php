@@ -18,8 +18,9 @@ use Pbmedia\LaravelFFMpeg\FFMpegFacade;
 Route::get('/', function () {
 	$formations = \App\Models\Formation::all()->where('chaire_obac',0)->take(-8);
 	$chaire = \App\Models\Formation::all()->where('chaire_obac',1)->take(-4);
+	$centres = \App\Models\Agence::all();
 	//dd($formations);
-    return view('Front/index')->with(compact('formations','chaire'));
+    return view('Front/index')->with(compact('formations','chaire','centres'));
 });
 
 Route::name('front.')
