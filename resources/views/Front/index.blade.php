@@ -68,8 +68,8 @@
                                             <i class="ti-zoom-in text-white"></i>
                                         </div>
                                     </div>
-                                    <div class="overlay-content">
-                                        <h5 class="font-size-14 text-truncate mb-0"><?= $formation->name ?> </h5>
+                                    <div style="bottom: -30px" class="overlay-content">
+                                        <h4 class="font-size-16 text-truncate mb-2"><?= $formation->name ?> </h4>
                                         <p>
                                             <?= \Illuminate\Support\Str::limit($formation->description,50); ?>
                                         </p>
