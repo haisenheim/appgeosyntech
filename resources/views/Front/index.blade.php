@@ -50,6 +50,7 @@
         <p class="lead">OBAC TRAINING CENTER est une plateforme qui gere ........ </p>
       </div>
     </section>
+    <hr/>
 
     <section>
         <div class="container-fluid">
@@ -61,7 +62,7 @@
                             <a href="/formation/{{ $formation->token }}" class="text-dark gallery-popup">
                                 <div class="position-relative gallery-content">
                                     <div class="demo-img">
-                                        <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
+                                        <img style="height: 220px" src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
                                     </div>
                                     <div class="gallery-overlay">
                                         <div class="gallery-overlay-icon">
@@ -82,6 +83,8 @@
             </div>
         </div>
     </section>
+
+    <hr/>
 
     <section>
         <div class="container-fluid">
