@@ -136,12 +136,17 @@
             display: inline-block;
             width: 300px;
             border-bottom: 1px solid #28a745;
-            margin-bottom: 20px;
+            margin: 20px 0;
+            font-weight: 900;
         }
 
         section{
-            margin: 40px 0 25px 0;
+            padding: 40px 0 25px 0;
         }
+
+        /*section h3, section h2, section h1{
+            margin-bottom: 15px;
+        }*/
 
     </style>
 
