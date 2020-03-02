@@ -61,7 +61,7 @@
                             <a href="assets/images/small/img-1.jpg" class="text-dark gallery-popup">
                                 <div class="position-relative gallery-content">
                                     <div class="demo-img">
-                                        <img src="{{ $formation->imageUrl }}" alt="" class="img-fluid mx-auto d-block rounded">
+                                        <img src="assets/images/small/img-1.jpg" alt="" class="img-fluid mx-auto d-block rounded">
                                     </div>
                                     <div class="gallery-overlay">
                                         <div class="gallery-overlay-icon">
@@ -69,7 +69,7 @@
                                         </div>
                                     </div>
                                     <div class="overlay-content">
-                                        <h5 class="font-size-14 text-truncate mb-0"><?= $formation->name ?></h5>
+                                        <h5 class="font-size-14 text-truncate mb-0">FORMATION de Rang <?= $i ?></h5>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                             Amet dignissimos eligendi.
