@@ -69,10 +69,10 @@
                                         </div>
                                     </div>
                                     <div class="overlay-content">
-                                        <h5 class="font-size-14 text-truncate mb-0"><?= $formation->name ?></h5>
+                                        <h5 class="font-size-14 text-truncate mb-0">FORMATION de Rang</h5>
                                         <p>
-                                            <?= \Illuminate\Support\Str::limit($formation->description, 50) ?>
-
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Amet dignissimos eligendi.
                                         </p>
                                     </div>
                                 </div>
