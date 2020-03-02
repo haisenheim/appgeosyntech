@@ -47,8 +47,40 @@
     <section class="py-5">
       <div class="container-fluid">
         <h1 class="font-weight-light">BIENVENU SUR OBAC TRAINING CENTER - <small>Votre Plateforme de formation</small></h1>
-        <p class="lead">OBAC TRAINING CENTER est une plateforme qui gere ........ <a href="https://unsplash.com">Unsplash</a>!</p>
+        <p class="lead">OBAC TRAINING CENTER est une plateforme qui gere ........ </p>
       </div>
+    </section>
+
+    <section>
+        <div class="container-fluid">
+            <h1> DECOUVREZ LA CHAIRE OBAC</h1>
+            <div class="row">
+               <?php foreach($chaire as $formation): ?>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-box text-center card p-2">
+                            <a href="/formation/{{ $formation->token }}" class="text-dark gallery-popup">
+                                <div class="position-relative gallery-content">
+                                    <div class="demo-img">
+                                        <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
+                                    </div>
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-overlay-icon">
+                                            <i class="ti-zoom-in text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div  class="overlay-content">
+                                        <h4 class="font-size-16 text-truncate mb-2"><?= $formation->name ?> </h4>
+                                        <p>
+                                            <?= \Illuminate\Support\Str::limit($formation->description,50); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+               <?php endforeach ?>
+            </div>
+        </div>
     </section>
 
     <section>
