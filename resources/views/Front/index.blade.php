@@ -217,6 +217,8 @@
         }*/
 
     </style>
+    <!-- Lightbox css -->
+            <link href="{{ asset('assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
 
 
 
