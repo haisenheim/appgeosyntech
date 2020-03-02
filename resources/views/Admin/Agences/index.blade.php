@@ -167,20 +167,20 @@
                                       <fieldset>
                                             <legend>Info. de connexion</legend>
                                             <div class="row">
-                                                <div class="col-md-12 col-sm-12">
+                                                <div class="col-md-4 col-sm-12">
                                                     <div class="form-group">
                                                       <label for="email">EMAIL</label>
                                                       <input required="required" type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-6 col-sm-12">
+                                                <div class="col-md-4 col-sm-12">
                                                     <div class="form-group">
                                                       <label for="name">MOT DE PASSE</label>
                                                       <input required="required" type="password" class="form-control" id="name" name="password" placeholder="">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 col-sm-12">
+                                                <div class="col-md-4 col-sm-12">
                                                     <div class="form-group">
                                                       <label for="name">CONFIRMATION DU MOT DE PASSE</label>
                                                       <input required="required" type="password" class="form-control" id="name" name="cpassword" placeholder="">
