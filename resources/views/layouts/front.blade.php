@@ -159,7 +159,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/centres">
+                                    <a class="nav-link" href="#centres">
                                         <i class="mdi mdi-houzz mr-2"></i>NOS CENTRES
                                     </a>
                                 </li>

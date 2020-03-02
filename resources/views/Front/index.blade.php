@@ -139,7 +139,7 @@
             </div>
         </div>
     </section>
-
+    <hr/>
     <section id="centres">
         <div class="container-fluid">
             <div class="card">
@@ -149,47 +149,23 @@
                     <p class="card-title-desc">OBAC TRAINING Center c'est un ensemble de centres eparpille a travers plusieurs villes du Congo et du monde ......</p>
 
                     <div class="popup-gallery">
-                        <a class="float-left" href="assets/images/small/img-1.jpg" title="Project 1">
-                            <div class="img-fluid">
-                                <img src="assets/images/small/img-1.jpg" alt="" width="120">
-                            </div>
-                        </a>
-                        <a class="float-left" href="assets/images/small/img-2.jpg" title="Project 2">
-                            <div class="img-fluid">
-                                <img src="assets/images/small/img-2.jpg" alt="" width="120">
-                            </div>
-                        </a>
-                        <a class="float-left" href="assets/images/small/img-3.jpg" title="Project 3">
-                            <div class="img-fluid">
-                                <img src="assets/images/small/img-3.jpg" alt="" width="120">
-                            </div>
-                        </a>
-                        <a class="float-left" href="assets/images/small/img-4.jpg" title="Project 4">
-                            <div class="img-fluid">
-                                <img src="assets/images/small/img-4.jpg" alt="" width="120">
-                            </div>
-                        </a>
-                        <a class="float-left" href="assets/images/small/img-5.jpg" title="Project 5">
-                            <div class="img-fluid">
-                                <img src="assets/images/small/img-5.jpg" alt="" width="120">
-                            </div>
-                        </a>
-                        <a class="float-left" href="assets/images/small/img-6.jpg" title="Project 6">
-                            <div class="img-fluid">
-                                <img src="assets/images/small/img-6.jpg" alt="" width="120">
-                            </div>
-                        </a>
+
+                        @foreach($centres as $centre)
+                            <a class="float-left" href="assets/images/small/img-1.jpg" title="{{ $centre->name }}">
+                                <div class="img-fluid">
+                                    <img src="assets/images/small/img-1.jpg" alt="" width="120">
+                                </div>
+                            </a>
+                        @endforeach
+
+
+
+
 
                     </div>
                 </div>
             </div>
-            <div class="row">
-                @foreach($centres as $agence)
-                   <div class="col-md-4 col-sm-12">
 
-                   </div>
-                @endforeach
-            </div>
         </div>
     </section>
 
