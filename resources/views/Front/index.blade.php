@@ -85,6 +85,11 @@
                <?php endforeach ?>
             </div>
             </div>
+            <div class="card-footer">
+                <div class="text-center">
+                    <a class="btn btn-success" href="/chaire">Afficher toutes les formations de la chaire OBAC <i class="ti-blackboard"></i></a>
+                </div>
+            </div>
         </div>
         </div>
     </section>
@@ -124,6 +129,11 @@
                                 </div>
                             </div>
                        <?php endforeach ?>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="text-center">
+                        <a class="btn btn-success" href="/formations">Afficher toutes les formations <i class="ti-blackboard"></i></a>
                     </div>
                 </div>
             </div>
