@@ -107,7 +107,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-5 col-sm-12">
+                                <div class="col-md-4 col-sm-12">
                                     <div class="form-group">
                                       <label for="pay_id">PAYS</label>
                                      <select name="pay_id" class="form-control" id="pay_id">
@@ -117,20 +117,26 @@
                                      </select>
                                     </div>
                                 </div>
-                                <div class="col-md-7 col-sm-12">
+                                <div class="col-md-4 col-sm-12">
                                     <div class="form-group">
                                       <label for="ville_id">VILLE</label>
-                                      <select name="ville_id" id="ville_id" class="form-control">
+                                      <select required="required" name="ville_id" id="ville_id" class="form-control">
 
                                       </select>
                                     </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">PHOTO</label>
+                                        <input type="file" class="form-control" id="exampleInputFile" required="required" name="imageUri">
+                                     </div>
                                 </div>
                             </div>
 
                             <fieldset>
                                 <legend>ADMINISTRATEUR</legend>
                                     <div class="row">
-                                        <div class="col-md-6 col-md-12">
+                                        <div class="col-md-6 col-sm-12">
                                             <div class="form-group">
                                               <label for="name">NOM</label>
                                               <input type="text" class="form-control" id="name" name="last_name" placeholder="Saisir le nom ">
@@ -155,12 +161,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4 col-sm-12">
-                                            <div class="form-group">
-                                                <label for="exampleInputFile">PHOTO</label>
-                                                <input type="file" class="form-control" id="exampleInputFile" required="required" name="imageUri">
-                                             </div>
-                                        </div>
+
 
                                       </div>
                                       <fieldset>
