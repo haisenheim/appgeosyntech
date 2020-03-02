@@ -147,6 +147,7 @@
                     <h3 class="text-center"> DECOUVREZ LES CENTRES OBAC TRAINING CENTER</h3>
                     <div class="divider text-center"><span></span></div>
                     <p class="card-title-desc">OBAC TRAINING Center c'est un ensemble de centres eparpille a travers plusieurs villes du Congo et du monde ......</p>
+
                     <div class="popup-gallery">
                         <a class="float-left" href="assets/images/small/img-1.jpg" title="Project 1">
                             <div class="img-fluid">
@@ -216,5 +217,11 @@
         }*/
 
     </style>
+
+     <!-- Magnific Popup-->
+        <script src="{{ asset('assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+
+        <!-- Tour init js-->
+        <script src=" {{ asset('assets/js/pages/lightbox.init.js') }}"></script>
 
 @endsection
