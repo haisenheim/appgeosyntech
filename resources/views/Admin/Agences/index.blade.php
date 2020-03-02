@@ -87,20 +87,20 @@
 
                           <div class="card-body">
                             <div class="row">
-                                <div class="col-md-10 col-sm-12">
+                                <div class="col-md-5 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">NOM</label>
                                       <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom de l'agence">
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-4 col-sm-12">
                                    <div class="form-group">
                                       <label for="name">ADRESSE</label>
                                       <input type="text" class="form-control" id="name" name="agaddress" placeholder="Saisir l'adresse de l'agence">
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-3 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">TELEPHONE</label>
                                       <input type="text" class="form-control" id="name" name="agphone" placeholder="">
