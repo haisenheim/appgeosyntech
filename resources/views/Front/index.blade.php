@@ -56,7 +56,7 @@
         <div class="container-fluid">
         <div class="card">
             <div class="card-body">
-                <h1> DECOUVREZ LA CHAIRE OBAC</h1>
+                <h3 class="text-center"> DECOUVREZ LA CHAIRE OBAC</h3>
             <div class="row">
                <?php foreach($chaire as $formation): ?>
                     <div class="col-lg-3 col-md-4">
@@ -96,7 +96,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h1> DECOUVREZ NOS FORMATIONS</h1>
+                    <h3 class="text-center"> DECOUVREZ NOS FORMATIONS</h3>
                     <div class="row">
                        <?php foreach($formations as $formation): ?>
                             <div class="col-lg-3 col-md-4">
