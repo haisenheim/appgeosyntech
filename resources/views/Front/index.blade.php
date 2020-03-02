@@ -87,7 +87,7 @@
             </div>
             <div class="card-footer">
                 <div class="text-center">
-                    <a class="btn btn-success" href="/chaire">Afficher toutes les formations de la chaire OBAC <i class="ti-blackboard"></i></a>
+                    <a class="btn btn-success" href="/chaire">Afficher toutes les formations de la chaire OBAC <i class="fas fa-book-reader"></i></a>
                 </div>
             </div>
         </div>
