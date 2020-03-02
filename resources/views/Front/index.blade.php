@@ -151,9 +151,9 @@
                     <div class="popup-gallery">
 
                         @foreach($centres as $centre)
-                            <a class="float-left" href="assets/images/small/img-1.jpg" title="{{ $centre->name }}">
+                            <a class="float-left" href="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" title="{{ $centre->name }} - <small> {{ $centre->address   }} - {{ $centre->phone }}</small>">
                                 <div class="img-fluid">
-                                    <img src="assets/images/small/img-1.jpg" alt="" width="120">
+                                    <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" width="240">
                                 </div>
                             </a>
                         @endforeach
