@@ -136,25 +136,25 @@
                             <fieldset>
                                 <legend>ADMINISTRATEUR</legend>
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-12">
+                                        <div class="col-md-4 col-sm-12">
                                             <div class="form-group">
                                               <label for="name">NOM</label>
                                               <input type="text" class="form-control" id="name" name="last_name" placeholder="Saisir le nom ">
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-sm-12">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="form-group">
                                               <label for="name">PRENOM</label>
                                               <input type="text" class="form-control" id="name" name="first_name" placeholder="Saisir le prenom">
                                             </div>
                                         </div>
-                                        <div class="col-md-4 col-sm-12">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="form-group">
                                               <label for="name">ADRESSE</label>
                                               <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
                                             </div>
                                         </div>
-                                        <div class="col-md-4 col-sm-12">
+                                        <div class="col-md-2 col-sm-12">
                                             <div class="form-group">
                                               <label for="phone">TELEPHONE</label>
                                               <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
