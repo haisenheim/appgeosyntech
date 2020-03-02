@@ -45,6 +45,12 @@ class AgenceController extends Controller
 	{
 		//
 		//dd($request->imageUri);
+
+		if($request['password']!= $request['cpassword']){
+			$request->session()->flash('danger','Les mots de passe ne correspondent pas !');
+			return redirect()->back();
+		}
+
 		$ville =[];
 		$ville['name']=$request->name;
 		$ville['address'] = $request->agphone;
@@ -53,6 +59,24 @@ class AgenceController extends Controller
 		$ville['ville_id'] = $request->ville_id;
 		$ville['phone'] = $request->agphone;
 		$ville['token'] = sha1(date('hmdYsi'.Auth::user()->id));
+
+		if($request->imageUri){
+			$file = $request->imageUri;
+			$ext = $file->getClientOriginalExtension();
+			$arr_ext = array('jpg','png','jpeg','gif');
+			if(in_array($ext,$arr_ext)) {
+				if (!file_exists(public_path('img') . '/agences')) {
+					mkdir(public_path('img') . '/agences');
+				}
+				$token = sha1(Auth::user()->id. date('ydmhis'));
+				if (file_exists(public_path('img') . '/agences/' . $token . '.' . $ext)) {
+					unlink(public_path('img') . '/agences/' . $token . '.' . $ext);
+				}
+				$name = $token . '.' . $ext;
+				$file->move(public_path('img/agences'), $name);
+				$ville['imageUri'] = 'agences/' . $name;
+			}
+		}
 
 		$ville = Agence::create($ville);
 
@@ -63,6 +87,7 @@ class AgenceController extends Controller
 		$user->address = $request['address'];
 		$user->email = $request['email'];
 		$user->pay_id = $ville->ville->pay_id;
+		$user->ville_id = $ville->ville->id;
 		$user->password= Hash::make(($request['password']));
 		$user->role_id =9;
 		$user->moi_id=date('m');
@@ -71,24 +96,6 @@ class AgenceController extends Controller
 		$user->active = 1;
 		$user->agence_id= $ville->id;
 		$user->token = sha1(Auth::user()->id . date('Yhmdhis'));
-
-		if($request->imageUri){
-			$file = $request->imageUri;
-			$ext = $file->getClientOriginalExtension();
-			$arr_ext = array('jpg','png','jpeg','gif');
-			if(in_array($ext,$arr_ext)) {
-				if (!file_exists(public_path('img') . '/users')) {
-					mkdir(public_path('img') . '/users');
-				}
-				$token = sha1(Auth::user()->id. date('ydmhis'));
-				if (file_exists(public_path('img') . '/users/' . $token . '.' . $ext)) {
-					unlink(public_path('img') . '/users/' . $token . '.' . $ext);
-				}
-				$name = $token . '.' . $ext;
-				$file->move(public_path('img/users'), $name);
-				$user->imageUri = 'users/' . $name;
-			}
-		}
 
 		$user->save();
 		$request->session()->flash('success','L\'agence a été correctement enregistrée !!!');
