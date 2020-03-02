@@ -61,7 +61,7 @@
                             <a href="assets/images/small/img-1.jpg" class="text-dark gallery-popup">
                                 <div class="position-relative gallery-content">
                                     <div class="demo-img">
-                                        <img src="assets/images/small/img-1.jpg" alt="" class="img-fluid mx-auto d-block rounded">
+                                        <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
                                     </div>
                                     <div class="gallery-overlay">
                                         <div class="gallery-overlay-icon">
