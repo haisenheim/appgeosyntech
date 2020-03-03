@@ -19,8 +19,11 @@ Route::get('/', function () {
 	$formations = \App\Models\Formation::all()->where('chaire_obac',0)->take(-8);
 	$chaire = \App\Models\Formation::all()->where('chaire_obac',1)->take(-4);
 	$centres = \App\Models\Agence::all();
+	$secteurs = \App\Models\Secteur::all();
+	$secteurs = $secteurs->split(3);
+
 	//dd($formations);
-    return view('Front/index')->with(compact('formations','chaire','centres'));
+    return view('Front/index')->with(compact('formations','chaire','centres','secteurs'));
 });
 
 Route::name('front.')

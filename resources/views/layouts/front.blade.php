@@ -118,35 +118,16 @@
                                     </a>
                                     <div class="dropdown-menu mega-dropdown-menu" aria-labelledby="topnav-uielement">
                                         <div class="row">
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <a href="#" class="dropdown-item">FINANCES</a>
-                                                    <a href="#" class="dropdown-item">COMPTABILITE</a>
-                                                    <a href="#" class="dropdown-item">GESTION FINANCIERE</a>
-                                                    <a href="#" class="dropdown-item">RH</a>
-                                                    <a href="#" class="dropdown-item">MARKETING</a>
-                                                    <a href="#" class="dropdown-item">GESTION D'ENTREPRISE</a>
+
+                                            @foreach($secteurs as $grp)
+                                                <div class="col-lg-4">
+                                                    <div>
+                                                        @foreach($grp as $item)
+                                                            <a href="#" class="dropdown-item">{{ $item->name  }}</a>
+                                                        @endforeach
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <a href="#" class="dropdown-item">RESEAUX &amp; TELECOMS</a>
-                                                    <a href="#" class="dropdown-item">PROGRAMMATION</a>
-                                                    <a href="#" class="dropdown-item">INFOGRAPHIE</a>
-                                                    <a href="#" class="dropdown-item">BASES DE DONNEES</a>
-                                                    <a href="#" class="dropdown-item">SYSTEMES D'EXPLOITATION</a>
-                                                    <a href="#" class="dropdown-item">MODELISATION</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <a href="#" class="dropdown-item">Spinner</a>
-                                                    <a href="#" class="dropdown-item">Carousel</a>
-                                                    <a href="#" class="dropdown-item">Video</a>
-                                                    <a href="#" class="dropdown-item">Typography</a>
-                                                    <a href="#" class="dropdown-item">Grid</a>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
 
                                     </div>
