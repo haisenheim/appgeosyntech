@@ -15,7 +15,7 @@ class Metier extends Model
 
 
 	public function formations(){
-		return $this->hasMany('App\Models\Formation','metier_id');
+		return $this->belongsToMany('App\Models\Formation','formations_metiers');
 	}
 
 	public function secteur(){
