@@ -23,9 +23,9 @@ class MetierController extends Controller
      */
     public function index()
     {
-	    $devises = Metier::all();
+	    $metiers = Metier::all();
 		$secteurs = Secteur::all();
-	    return view('Admin/Metiers/index')->with(compact('devises'));
+	    return view('Admin/Metiers/index')->with(compact('metiers','secteurs'));
     }
 
     /**
