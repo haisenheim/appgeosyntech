@@ -80,10 +80,10 @@
 
 
            <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-xl">
+                  <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">NOUVEAU METIERS</h4>
+                        <h4 class="modal-title">NOUVEAU METIER</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -94,13 +94,13 @@
 
                           <div class="card-body">
                             <div class="row">
-                                <div class="col-md-5 col-sm-12">
+                                <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">NOM</label>
                                       <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom ">
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-12 col-sm-12">
                                    <div class="form-group">
                                       <label for="name">ICONE</label>
                                       <input type="text" class="form-control" id="name" name="icon" placeholder="Saisir l'icone">
@@ -108,7 +108,7 @@
                                 </div>
 
 
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                       <label for="secteur_id">SECTEUR</label>
                                      <select name="secteur_id" class="form-control" id="secteur_id">
