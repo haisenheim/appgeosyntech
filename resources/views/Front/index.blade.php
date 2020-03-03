@@ -226,7 +226,7 @@
         <script src=" {{ asset('assets/js/pages/lightbox.init.js') }}"></script>
 
         <script>
-            $('#formation-show').click(function(e){
+            $('.formation-show').click(function(e){
 
                 var token = $(this).data('token');
                 var content = $('#content-body');
@@ -236,7 +236,7 @@
                     dataType:'json',
                     success:function(data){
                         var html = '';
-                        $('#content-title').html(data.name);
+                        $('#modal-title').html(data.name);
                     }
 
 
