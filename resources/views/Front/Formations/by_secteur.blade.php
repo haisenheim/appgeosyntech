@@ -4,7 +4,7 @@
 
     <header>
          <div class="overlay"></div>
-          <img src="{{ asset('img/slide1.png')  }}" alt=""/>
+          <img src="{{ asset('img/slide1.jpg')  }}" alt=""/>
           <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
               <div class="w-100 text-white">
@@ -76,8 +76,7 @@
         header {
           position: relative;
           background-color: black;
-          height: 75vh;
-          min-height: 25rem;
+
           width: 100%;
           overflow: hidden;
         }
