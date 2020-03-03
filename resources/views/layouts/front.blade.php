@@ -20,9 +20,9 @@
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
                             <div class="navbar-brand-box">
-                            <a href="/" class="logo logo-dark"><img src="{{ asset('img/logo-obac.png') }}" alt=""/> OBAC TRAINING CENTER</a>
+                            <a href="/" style="color: #FFFFFF" class="logo logo-dark"><img src="{{ asset('img/logo-obac.png') }}" alt=""/> OBAC TRAINING CENTER</a>
 
-                            <a href="/" style="color: #FFFFFF" class="logo logo-light">OBAC TRAINING CENTER</a>
+                            <a href="/" style="color: #FFFFFF" class="logo logo-light"><img src="{{ asset('img/logo-obac.png') }}" alt=""/>OBAC TRAINING CENTER</a>
                         </div>
                         </div>
 
