@@ -88,13 +88,13 @@
 
                           <div class="card-body">
                             <div class="row">
-                                <div class="col-md-5 col-sm-12">
+                                <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">NOM</label>
                                       <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom du secteur">
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-12 col-sm-12">
                                    <div class="form-group">
                                       <label for="name">ICONE</label>
                                       <input type="text" class="form-control" id="icon" name="icon" placeholder="Saisir l'icone">
