@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <header>
+    <div id="page-head">
          <div class="overlay"></div>
           <img src="{{ asset('img/slide1.jpg')  }}" alt=""/>
           <div class="container h-100">
@@ -13,7 +13,7 @@
               </div>
             </div>
           </div>
-    </header>
+    </div>
 
     <!-- Page Content -->
     <section class="py-5">
@@ -73,7 +73,7 @@
             background-color: #FFFFFF;
         }
 
-        header {
+        #page-head {
           position: relative;
           background-color: black;
 
@@ -81,7 +81,7 @@
           overflow: hidden;
         }
 
-        header img {
+        #page-head img {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -96,12 +96,12 @@
           transform: translateX(-50%) translateY(-50%);
         }
 
-        header .container {
+        #page-head .container {
           position: relative;
           z-index: 2;
         }
 
-        header .overlay {
+        #page-head .overlay {
           position: absolute;
           top: 0;
           left: 0;
