@@ -43,7 +43,7 @@
                     </ul>
             </nav>
             <div class="_1E0b_">
-               <img class="_39Wh1" alt="Envato Market" src="{{ asset('img/logo-obac-png') }}">
+               <img class="_39Wh1" alt="OBAC" src="{{ asset('img/logo-obac.png') }}">
                <ul class="_2Hrzv">
                     <li class="gNZTp"><span class="_3zD21">58,078,216 </span> Consultants</li>
                     <li class="gNZTp"><span class="_3zD21">$801,919,660 </span>Projets suivis </li>
