@@ -105,7 +105,7 @@
                 </div>
             </header>
 
-            <div style="margin-top: 50px;" class="topnav">
+            <div style="margin-top: 50px; z-index: 9999999" class="topnav">
                 <div class="container-fluid">
                     <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
 
