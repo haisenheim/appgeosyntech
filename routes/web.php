@@ -22,8 +22,11 @@ Route::get('/', function () {
 	$secteurs = \App\Models\Secteur::all();
 	$secteurs = $secteurs->split(3);
 
+	$metiers = \App\Models\Metier::all();
+	$metiers = $metiers->split(3);
+
 	//dd($formations);
-    return view('Front/index')->with(compact('formations','chaire','centres','secteurs'));
+    return view('Front/index')->with(compact('formations','chaire','centres','secteurs','metiers'));
 });
 
 Route::name('front.')
@@ -33,6 +36,7 @@ Route::name('front.')
 		Route::get('/formations','FormationController@index');
 		Route::get('/chaire','FormationContoller@chaire');
 		Route::get('/secteur/formations/{token}','FormationController@getAllBySecteur');
+		Route::get('/metier/formations/{token}','FormationController@getAllByMetier');
 	});
 
 

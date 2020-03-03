@@ -123,7 +123,29 @@
                                                 <div class="col-lg-4">
                                                     <div>
                                                         @foreach($grp as $item)
-                                                            <a href="#" class="dropdown-item">{{ $item->name  }}</a>
+                                                            <a href="/secteur/formations/{{ $item->token }}" class="dropdown-item">{{ $item->name  }}  <i class="{{ $item->icon }}"></i> </a>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown mega-dropdown">
+                                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-uielement" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-cogs mr-2"></i>METIERS <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu mega-dropdown-menu" aria-labelledby="topnav-uielement">
+                                        <div class="row">
+
+                                            @foreach($metiers as $grp)
+                                                <div class="col-lg-4">
+                                                    <div>
+                                                        @foreach($grp as $item)
+                                                            <a href="/metier/formations/{{ $item->token }}" class="dropdown-item">{{ $item->name  }}  <i class="{{ $item->icon }}"></i> </a>
                                                         @endforeach
                                                     </div>
                                                 </div>
@@ -134,7 +156,7 @@
                                 </li>
 
                                  <li class="nav-item">
-                                    <a class="nav-link" href="/formations">
+                                    <a class="nav-link" href="{{ route('front.formations.index') }}">
                                         <i class="mdi mdi-school mr-2"></i>TOUTES LES FORMATIONS
                                     </a>
                                 </li>
