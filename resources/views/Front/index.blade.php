@@ -108,7 +108,7 @@
                        <?php foreach($formations as $formation): ?>
                             <div class="col-lg-3 col-md-4">
                                 <div class="gallery-box text-center card p-2">
-                                    <a href="/formation/{{ $formation->token }}" class="text-dark gallery-popup">
+                                    <a href="#content-show" data-token="{{ $formation->token }}" class="text-dark gallery-popup formation-show">
                                         <div class="position-relative gallery-content">
                                             <div class="demo-img">
                                                 <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
@@ -194,8 +194,15 @@
 
     </style>
     <!-- Lightbox css -->
-            <link href="{{ asset('assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
+    <div class="card mfp-hide mfp-popup-form mx-auto" id="content-show">
+         <div class="card-body">
+             <h4 id="content-title" class="mt-0 mb-4"></h4>
+            <div class="" id="content-body">
 
+            </div>
+         </div>
+     </div>
 
 
 @endsection
@@ -207,4 +214,23 @@
 
         <!-- Tour init js-->
         <script src=" {{ asset('assets/js/pages/lightbox.init.js') }}"></script>
+
+        <script>
+            $('#formation-show').click(function(e){
+                e.preventDefault();
+                var token = $(this).data('token');
+                var content = $('#content-body');
+                $.ajax({
+                    url: '/formation/'+token,
+                    type:'get',
+                    dataType:'json',
+                    success:function(data){
+                        var html = '';
+                        $('#content-title').html(data.name);
+                    }
+
+
+                });
+            });
+        </script>
 @endsection
