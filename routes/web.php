@@ -26,7 +26,7 @@ Route::get('/', function () {
 	//$metiers = $metiers->split(3);
 
 	//dd($formations);
-    return view('Front/index')->with(compact('formations','chaire','centres','secteurs','metiers'));
+    return view('Front/index')->with(compact('formations','chaire','centres'));
 });
 
 Route::name('front.')

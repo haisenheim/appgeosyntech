@@ -4,6 +4,12 @@
 
     @include('includes.spinner')
 
+        <?php
+            $secteurs = \App\Models\Secteur::all();
+
+            $metiers = \App\Models\Metier::all();
+         ?>
+
         <!-- Begin page -->
         <div id="layout-wrapper">
 
