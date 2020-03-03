@@ -156,7 +156,7 @@
                                 </li>
 
                                  <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('front.formations.index') }}">
+                                    <a class="nav-link" href="/formations">
                                         <i class="mdi mdi-school mr-2"></i>TOUTES LES FORMATIONS
                                     </a>
                                 </li>
