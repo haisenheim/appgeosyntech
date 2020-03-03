@@ -8,7 +8,7 @@
           <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
               <div class="w-100 text-white">
-                <h1 class="display-3">{{ $secteur->name }}</h1>
+                <h1 style="color: #FFFFFF; font-weight: 800;" class="display-3">{{ $secteur->name }}</h1>
 
               </div>
             </div>
@@ -76,7 +76,7 @@
         #page-head {
           position: relative;
           background-color: black;
-
+          height: 25rem;
           width: 100%;
           overflow: hidden;
         }
