@@ -212,6 +212,20 @@
                   </a>
                 </li>
 
+                <li class="nav-item">
+                  <a href="/admin/metiers" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>METIERS</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="/admin/secteurs" class="nav-link">
+                    <i class="far fa-circle text-danger nav-icon"></i>
+                    <p>SECTEURS</p>
+                  </a>
+                </li>
+
 
               <li class="nav-item">
                 <a href="/admin/villes" class="nav-link">

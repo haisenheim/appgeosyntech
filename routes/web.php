@@ -113,6 +113,10 @@ Route::prefix('admin')
 
 	    Route::resource('agences','AgenceController');
 
+	    Route::resource('secteurs','SecteurController');
+
+	    Route::resource('metiers','MetierController');
+
 	    Route::get('contributeur/creances/{token}','FinanceController@getCreancesConsultant');
 
 	    Route::get('contributeur/payees/{token}','FinanceController@getPayeesContributeur');
