@@ -242,7 +242,7 @@
                     success:function(data){
                         var html = '';
                         $('#modal-title').html(data.formation.name);
-                        $('#formation-image').css({'background-image':'url("http://otc.test/img/photo1.png")','background-color':'green','background-size':'cover' ,'min-height':'240px'});
+                        $('#formation-image').css({'background-image':'url("http://otc.test/img/"'+data.formation.imageUri+')','background-color':'green','background-size':'cover' ,'min-height':'240px'});
                         html = '<div>' +
                                     '' +
                                 '</div>';
