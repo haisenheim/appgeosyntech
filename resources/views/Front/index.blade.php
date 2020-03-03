@@ -108,7 +108,7 @@
                        <?php foreach($formations as $formation): ?>
                             <div class="col-lg-3 col-md-4">
                                 <div class="gallery-box text-center card p-2">
-                                    <a href="#content-show" data-token="{{ $formation->token }}" class="text-dark gallery-popup formation-show">
+                                    <a href="#" data-toggle="modal" data-target="#content-show" data-token="{{ $formation->token }}" class="formation-show">
                                         <div class="position-relative gallery-content">
                                             <div class="demo-img">
                                                 <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
@@ -195,14 +195,24 @@
     </style>
     <!-- Lightbox css -->
     <link href="{{ asset('assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
-    <div class="card mfp-hide mfp-popup-form mx-auto" id="content-show">
-         <div class="card-body">
-             <h4 id="content-title" class="mt-0 mb-4"></h4>
-            <div class="" id="content-body">
 
-            </div>
-         </div>
-     </div>
+
+
+    <div id="content-show" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="#modal-title" class="modal-title mt-0"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1>Ceci est un test</h1>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
 @endsection
