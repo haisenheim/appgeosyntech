@@ -110,7 +110,7 @@
 
                                 <div class="col-md-4 col-sm-12">
                                     <div class="form-group">
-                                      <label for="secteur_id">PAYS</label>
+                                      <label for="secteur_id">SECTEUR</label>
                                      <select name="secteur_id" class="form-control" id="secteur_id">
                                         @foreach($secteurs as $p)
                                             <option value="{{ $p->id }}">{{ $p->name }}</option>
