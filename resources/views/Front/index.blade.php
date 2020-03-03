@@ -242,7 +242,7 @@
                     success:function(data){
                         var html = '';
                         $('#modal-title').html(data.formation.name);
-                        $('#formation-image').css({'background-image':'url("http://otc.test/img/"'+data.formation.imageUri+')'});
+                        $('#formation-image').css({'background-image':'url("http://otc.test/img/"'+data.formation.imageUri+')','background-color':'green' });
                         html = '<div>' +
                                     '' +
                                 '</div>';
