@@ -211,7 +211,7 @@
                     <h1></h1>
                     <div class="row">
                         <div id="formation-image" class="col-md-6 col-sm-12">
-
+                            <img id="form-img" src="" style="width: 100%; height: 100%" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -242,7 +242,8 @@
                     success:function(data){
                         var html = '';
                         $('#modal-title').html(data.formation.name);
-                        $('#formation-image').css({'background-image':'url("http://otc.test/img/"'+data.formation.imageUri+')','background-color':'green','background-size':'cover' ,'min-height':'240px'});
+                        $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
+                        $('#formation-image').css({'background-color':'green','background-size':'cover' ,'min-height':'240px'});
                         html = '<div>' +
                                     '' +
                                 '</div>';
