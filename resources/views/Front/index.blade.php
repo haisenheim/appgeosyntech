@@ -217,7 +217,7 @@
 
         <script>
             $('#formation-show').click(function(e){
-                e.preventDefault();
+
                 var token = $(this).data('token');
                 var content = $('#content-body');
                 $.ajax({
