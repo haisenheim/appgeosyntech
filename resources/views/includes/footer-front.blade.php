@@ -1,4 +1,12 @@
 <footer class="_1Pb5I" role="navigation">
+
+    <?php
+
+        use App\Models\Secteur;
+        $sects = Secteur::all();
+
+    ?>
+
     <div class="_1s697">
         <div class="_3J3Xl">
             <nav class="_2ruF4">
@@ -6,19 +14,21 @@
                 <ul class="_1isW-">
                     <li class="_1a8GI">
                         <ul class="_10fbW">
-                            <li class="iovEC">Envato Market</li>
-                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://themeforest.net/legal/market">Terms</a></li>
-                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://themeforest.net/licenses">Licenses</a></li>
-                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://build.envato.com">Market API</a></li>
-                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://envato.com/market/affiliate-program">Become an affiliate</a></li>
+                            <li class="iovEC">SECTEURS</li>
+
+                            @foreach($sects as $sect)
+                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="/secteur/formations/{{ $sect->token }}">{{$sect->name}}</a></li>
+                            @endforeach
+
+
                         </ul>
                     </li>
                     <li class="_1a8GI">
                         <ul class="_10fbW">
-                            <li class="iovEC">Help</li>
-                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://help.market.envato.com">Themes and Templates</a></li>
-                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://help.market.envato.com/hc/en-us/categories/200216014">Authors</a></li>
-                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://help.market.envato.com">Help Center</a></li>
+                            <li class="iovEC">Autres liens</li>
+                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://obac-alert.com">OBAC ALERT</a></li>
+                            <li class="mkT_W"><a class="bmiV0 _3t5SY" href="https://cabinet-obac.com">CABINET OBAC</a></li>
+
                         </ul>
                     </li>
                     <li class="_1a8GI">
@@ -33,10 +43,10 @@
                     </ul>
             </nav>
             <div class="_1E0b_">
-               <img class="_39Wh1" alt="Envato Market" src="https://assets.shopfront.envato-static.com/images/logo-envato-market.svg">
+               <img class="_39Wh1" alt="Envato Market" src="{{ asset('img/logo-obac-png') }}">
                <ul class="_2Hrzv">
-                    <li class="gNZTp"><span class="_3zD21">58,078,216 </span>items sold</li>
-                    <li class="gNZTp"><span class="_3zD21">$801,919,660 </span>community earnings</li>
+                    <li class="gNZTp"><span class="_3zD21">58,078,216 </span> Consultants</li>
+                    <li class="gNZTp"><span class="_3zD21">$801,919,660 </span>Projets suivis </li>
                </ul>
             </div>
         </div>

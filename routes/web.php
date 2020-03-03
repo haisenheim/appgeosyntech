@@ -20,10 +20,10 @@ Route::get('/', function () {
 	$chaire = \App\Models\Formation::all()->where('chaire_obac',1)->take(-4);
 	$centres = \App\Models\Agence::all();
 	$secteurs = \App\Models\Secteur::all();
-	$secteurs = $secteurs->split(3);
+	//$secteurs = $secteurs->split(3);
 
 	$metiers = \App\Models\Metier::all();
-	$metiers = $metiers->split(3);
+	//$metiers = $metiers->split(3);
 
 	//dd($formations);
     return view('Front/index')->with(compact('formations','chaire','centres','secteurs','metiers'));

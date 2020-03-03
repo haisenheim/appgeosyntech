@@ -118,8 +118,8 @@
                                     </a>
                                     <div class="dropdown-menu mega-dropdown-menu" aria-labelledby="topnav-uielement">
                                         <div class="row">
-
-                                            @foreach($secteurs as $grp)
+                                            <?php $splited = $secteurs->split(3) ?>
+                                            @foreach($splited as $grp)
                                                 <div class="col-lg-4">
                                                     <div>
                                                         @foreach($grp as $item)
@@ -140,8 +140,8 @@
                                     </a>
                                     <div class="dropdown-menu mega-dropdown-menu" aria-labelledby="topnav-uielement">
                                         <div class="row">
-
-                                            @foreach($metiers as $grp)
+                                            <?php $splited = $metiers->split(3) ?>
+                                            @foreach($splited as $grp)
                                                 <div class="col-lg-4">
                                                     <div>
                                                         @foreach($grp as $item)
@@ -426,15 +426,12 @@
                             </a>
                         </div>
 
-                        <h6 class="font-weight-medium px-3 mb-0 mt-4">Upcoming Tasks</h6>
+                        <h6 class="font-weight-medium px-3 mb-0 mt-4">Secteurs</h6>
 
                         <div class="p-2">
-                            <a href="javascript: void(0);" class="text-reset item-hovered d-block p-3">
-                                <p class="text-muted mb-0">Sales Reporting<span class="float-right">12%</span></p>
-                                <div class="progress mt-2" style="height: 4px;">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </a>
+
+
+
 
                             <a href="javascript: void(0);" class="text-reset item-hovered d-block p-3">
                                 <p class="text-muted mb-0">Redesign Website<span class="float-right">67%</span></p>
