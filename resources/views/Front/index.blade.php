@@ -209,6 +209,11 @@
                 </div>
                 <div class="modal-body">
                     <h1>Ceci est un test</h1>
+                    <div class="row">
+                        <div id="formation-image" class="col-md-6 col-sm-12">
+
+                        </div>
+                    </div>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -236,7 +241,11 @@
                     dataType:'json',
                     success:function(data){
                         var html = '';
-                        $('#modal-title').html(data.name);
+                        $('#modal-title').html(data.formation.name);
+                        $('#formation-image').css({'background-image':url('http://otc.test/img/'+data.formation.imageUri)});
+                        html = '<div>' +
+                                    '' +
+                                '</div>';
                     }
 
 
