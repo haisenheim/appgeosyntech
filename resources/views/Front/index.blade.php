@@ -226,9 +226,9 @@
                 </div>
                 <div class="modal-footer">
                     @if(auth()->user())
-                        <button class="btn btn-block btn-success">SOUSCRIRE</button>
+                        <a href="#"  class="btn btn-block btn-success">SOUSCRIRE <i class="mdi mdi-draw"></i></a>
                     @else
-                        <a class="btn btn-block btn-danger" href="/login"></a>
+                        <a class="btn btn-block btn-danger" href="/login">SE CONNECTER POUR CONTINUER <i class="mdi mdi-login"></i></a>
                     @endif
                 </div>
             </div><!-- /.modal-content -->
@@ -267,8 +267,9 @@
                                     }
 
                                   var  html = '<ul class="list-group">' +
-                                     '<li class="list-group-item">Cout en ligne: <span class="badge badge-warning">'+ data.formation.montant  +'</span> </li>' +
-                                     '<li class="list-group-item">Auteur : <span class="badge badge-warning">'+ owner +'</span> </li>'+
+                                     '<li class="list-group-item">Cout en ligne: <span class="badge badge-success">'+ data.formation.montant  +'</span> </li>' +
+                                     '<li class="list-group-item">Cout en présentiel: <span class="badge badge-info">'+ data.formation.montant  +'</span> </li>' +
+                                     '<li class="list-group-item">Auteur : <span class="badge badge-primary">'+ owner +'</span> </li>'+
                                      '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
                                       '</ul>';
                                       console.log(html);
