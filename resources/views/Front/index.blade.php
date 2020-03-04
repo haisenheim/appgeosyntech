@@ -228,7 +228,7 @@
                     @if(auth()->user())
                         <button class="btn btn-block btn-success">SOUSCRIRE</button>
                     @else
-                        <a class="btn-" href=""></a>
+                        <a class="btn btn-block btn-danger" href="/login"></a>
                     @endif
                 </div>
             </div><!-- /.modal-content -->
@@ -256,7 +256,7 @@
                     type:'get',
                     dataType:'json',
                     success:function(data){
-                        var maFonction = function(){
+
                                     $('#modal-title').html(data.formation.name);
                                     $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
                                     $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
@@ -267,11 +267,12 @@
                                      '<li class="list-group-item">Auteur : <span class="badge badge-warning">'+ data.formation.contributeur?data.formation.contributeur.name:'-'  +'</span> </li>'+
                                      '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
                                       '</ul>';
+                                      console.log(html);
 
                                     $('#form-details').html(html);
                                    // $('#mon-spinner').hide();
-                            };
-                        setTimeout(maFonction, 1000);
+
+                        //setTimeout(maFonction, 1000);
 
                     }
 
