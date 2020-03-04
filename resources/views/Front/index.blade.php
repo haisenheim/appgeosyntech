@@ -258,7 +258,8 @@
                 e.preventDefault();
                 console.log($('#form-token').val());
                 //$("#sa-success").click(function(){
-                Swal.fire({title:"Good job!",text:"You clicked the button!",icon:"success",showCancelButton:!0,confirmButtonColor:"#3d8ef8",cancelButtonColor:"#f46a6a"})
+                $('#content-show').hide();
+                Swal.fire({title:"SUCCES!",text:"Souscription faite avec succès!",icon:"success",showCancelButton:0,confirmButtonColor:"#11c46e",cancelButtonColor:"#f46a6a"})
                // })
 
 
