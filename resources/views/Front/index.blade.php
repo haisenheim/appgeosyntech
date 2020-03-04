@@ -256,7 +256,11 @@
 
                         html = '<ul class="list-group">' +
                          '<li class="list-group-item">Cout en ligne: <span class="badge badge-warning">'+ data.formation.montant  +'</span> </li>' +
+                         '<li class="list-group-item">Auteur : <span class="badge badge-warning">'+ data.formation.owner?data.formation.owner.name:'-'  +'</span> </li>'+
+                         '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
                           '</ul>'
+
+                        $('#form-details').html(html);
                     }
 
 
