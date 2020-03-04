@@ -261,10 +261,14 @@
                                     $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
                                     $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
                                     $('#form-desc').text(data.formation.description);
+                                    var owner='-';
+                                    if(data.formation.contributeur!=null){
+                                        owner = data.formation.contributeur.last_name + "  "+data.formation.contributeur.first_name;
+                                    }
 
                                   var  html = '<ul class="list-group">' +
                                      '<li class="list-group-item">Cout en ligne: <span class="badge badge-warning">'+ data.formation.montant  +'</span> </li>' +
-                                     '<li class="list-group-item">Auteur : <span class="badge badge-warning">'+ data.formation.contributeur?data.formation.contributeur.name:'-'  +'</span> </li>'+
+                                     '<li class="list-group-item">Auteur : <span class="badge badge-warning">'+ owner +'</span> </li>'+
                                      '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
                                       '</ul>';
                                       console.log(html);
