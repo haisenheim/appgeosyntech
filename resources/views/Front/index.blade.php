@@ -248,6 +248,8 @@
 
         <!-- Tour init js-->
         <script src=" {{ asset('assets/js/pages/lightbox.init.js') }}"></script>
+        <!-- Sweet alert init js-->
+        <script src="{{ asset('assets/js/pages/sweet-alerts.init.js') }}"></script>
 
         <script>
 
@@ -255,7 +257,9 @@
             $('#subs-link').click(function(e){
                 e.preventDefault();
                 console.log($('#form-token').val());
-                $("#sa-success").click(function(){Swal.fire({title:"Good job!",text:"You clicked the button!",icon:"success",showCancelButton:!0,confirmButtonColor:"#3d8ef8",cancelButtonColor:"#f46a6a"})})
+                //$("#sa-success").click(function(){
+                Swal.fire({title:"Good job!",text:"You clicked the button!",icon:"success",showCancelButton:!0,confirmButtonColor:"#3d8ef8",cancelButtonColor:"#f46a6a"})
+               // })
 
 
             });
