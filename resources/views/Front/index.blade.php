@@ -1,7 +1,9 @@
 @extends('......layouts.front')
 
 @section('content')
-
+    <!-- Sweet Alert-->
+    <link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+    <input type="hidden" id="form-token"/>
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -241,12 +243,23 @@
 
 @section('scripts')
     <!-- Magnific Popup-->
+        <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
         <script src="{{ asset('assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
         <!-- Tour init js-->
         <script src=" {{ asset('assets/js/pages/lightbox.init.js') }}"></script>
 
         <script>
+
+
+            $('#subs-link').click(function(e){
+                e.preventDefault();
+                console.log($('#form-token').val());
+                $("#sa-success").click(function(){Swal.fire({title:"Good job!",text:"You clicked the button!",icon:"success",showCancelButton:!0,confirmButtonColor:"#3d8ef8",cancelButtonColor:"#f46a6a"})})
+
+
+            });
+
             $('.formation-show').click(function(e){
 
                 var token = $(this).data('token');
@@ -261,7 +274,7 @@
                                     $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
                                     $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
                                     $('#form-desc').text(data.formation.description);
-                                    $('#subs-link').data('token',token);
+                                    $('#form-token').val(token);
                                     var owner='-';
                                     if(data.formation.contributeur!=null){
                                         owner = data.formation.contributeur.last_name + "  "+data.formation.contributeur.first_name;
@@ -271,7 +284,7 @@
                                     var duree =0;
                                     for(var i=0;i< data.formation.modules.length; i++){
                                         cl = cl + parseInt(data.formation.modules[i].prix_ligne);
-                                         cl = cp + parseInt(data.formation.modules[i].prix_presentiel);
+                                         cp = cp + parseInt(data.formation.modules[i].prix_presentiel);
                                          duree = duree + parseInt(data.formation.modules[i].duree);
                                     }
 
@@ -286,6 +299,8 @@
 
                                     $('#form-details').html(html);
                                    // $('#mon-spinner').hide();
+
+                                   // $("#sa-success").click(function(){Swal.fire({title:"Good job!",text:"You clicked the button!",icon:"success",showCancelButton:!0,confirmButtonColor:"#3d8ef8",cancelButtonColor:"#f46a6a"})})
 
                         //setTimeout(maFonction, 1000);
 
