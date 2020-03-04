@@ -208,7 +208,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="spinner-grow text-success" id="mon-spinner"></div>
+
                     <div class="row">
                         <div id="formation-image" class="col-md-6 col-sm-12">
                             <img id="form-img" src="" style="width: 100%; height: 100%" alt=""/>
@@ -222,6 +222,14 @@
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div class="modal-footer">
+                    @if(auth()->user())
+                        <button class="btn btn-block btn-success">SOUSCRIRE</button>
+                    @else
+                        <a class="btn-" href=""></a>
+                    @endif
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -254,14 +262,14 @@
                                     $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
                                     $('#form-desc').text(data.formation.description);
 
-                                    html = '<ul class="list-group">' +
+                                  var  html = '<ul class="list-group">' +
                                      '<li class="list-group-item">Cout en ligne: <span class="badge badge-warning">'+ data.formation.montant  +'</span> </li>' +
                                      '<li class="list-group-item">Auteur : <span class="badge badge-warning">'+ data.formation.contributeur?data.formation.contributeur.name:'-'  +'</span> </li>'+
                                      '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
                                       '</ul>';
 
                                     $('#form-details').html(html);
-                                    $('#mon-spinner').hide();
+                                   // $('#mon-spinner').hide();
                             };
                         setTimeout(maFonction, 1000);
 

@@ -63,6 +63,11 @@
                 right: 0;
                 bottom: 0;
               }
+
+              .nav-link.active {
+                  color:
+                  #28a745;
+              }
         </style>
 
     </head>
