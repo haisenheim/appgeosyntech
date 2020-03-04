@@ -208,7 +208,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h1></h1>
+                    <div class="spinner-grow text-success" id="mon-spinner"></div>
                     <div class="row">
                         <div id="formation-image" class="col-md-6 col-sm-12">
                             <img id="form-img" src="" style="width: 100%; height: 100%" alt=""/>
@@ -248,19 +248,23 @@
                     type:'get',
                     dataType:'json',
                     success:function(data){
-                        var html = '';
-                        $('#modal-title').html(data.formation.name);
-                        $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
-                        $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
-                        $('#form-desc').text(data.formation.description);
+                        var maFonction = function(){
+                                    $('#modal-title').html(data.formation.name);
+                                    $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
+                                    $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
+                                    $('#form-desc').text(data.formation.description);
 
-                        html = '<ul class="list-group">' +
-                         '<li class="list-group-item">Cout en ligne: <span class="badge badge-warning">'+ data.formation.montant  +'</span> </li>' +
-                         '<li class="list-group-item">Auteur : <span class="badge badge-warning">'+ data.formation.owner?data.formation.owner.name:'-'  +'</span> </li>'+
-                         '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
-                          '</ul>'
+                                    html = '<ul class="list-group">' +
+                                     '<li class="list-group-item">Cout en ligne: <span class="badge badge-warning">'+ data.formation.montant  +'</span> </li>' +
+                                     '<li class="list-group-item">Auteur : <span class="badge badge-warning">'+ data.formation.contributeur?data.formation.contributeur.name:'-'  +'</span> </li>'+
+                                     '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
+                                      '</ul>';
 
-                        $('#form-details').html(html);
+                                    $('#form-details').html(html);
+                                    $('#mon-spinner').hide();
+                            };
+                        setTimeout(maFonction, 1000);
+
                     }
 
 

@@ -64,7 +64,7 @@ class FormationController extends Controller
     public function show($token)
     {
         //
-	    $formation = Formation::where('token',$token)->first()->load('modules');
+	    $formation = Formation::where('token',$token)->first()->load('modules','contributeur');
 
 	    return response()->json(compact('formation'));
     }
