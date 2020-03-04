@@ -269,10 +269,10 @@
                                     var cl =0;
                                     var cp=0;
                                     var duree =0;
-                                    for(var module in data.formation.modules){
-                                        cl = cl + parseInt(module.prix_ligne);
-                                         cl = cp + parseInt(module.prix_presentiel);
-                                         duree = duree + parseInt(module.duree);
+                                    for(var i=0;i< data.formation.modules.length; i++){
+                                        cl = cl + parseInt(data.formation.modules[i].prix_ligne);
+                                         cl = cp + parseInt(data.formation.modules[i].prix_presentiel);
+                                         duree = duree + parseInt(data.formation.modules[i].duree);
                                     }
 
                                   var  html = '<ul class="list-group">' +
@@ -280,7 +280,7 @@
                                      '<li class="list-group-item">Cout en présentiel: <span class="badge badge-info">'+ cp  +'</span> </li>' +
                                      '<li class="list-group-item">Auteur : <span class="badge badge-primary">'+ owner +'</span> </li>'+
                                      '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
-                                      '<li class="list-group-item">Durée globale : <span class="badge badge-warning">'+ owner +' jours</span> </li>'+
+                                      '<li class="list-group-item">Durée globale : <span class="badge badge-warning">'+ duree +' jours</span> </li>'+
                                       '</ul>';
                                       //console.log(html);
 
