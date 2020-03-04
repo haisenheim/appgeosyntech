@@ -226,7 +226,7 @@
                 </div>
                 <div class="modal-footer">
                     @if(auth()->user())
-                        <a href="#"  class="btn btn-block btn-success">SOUSCRIRE <i class="mdi mdi-draw"></i></a>
+                        <a id="subs-link" href="#"  class="btn btn-block btn-success">SOUSCRIRE <i class="mdi mdi-draw"></i></a>
                     @else
                         <a class="btn btn-block btn-danger" href="/login">SE CONNECTER POUR CONTINUER <i class="mdi mdi-login"></i></a>
                     @endif
@@ -261,18 +261,28 @@
                                     $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
                                     $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
                                     $('#form-desc').text(data.formation.description);
+                                    $('#subs-link').data('token',token);
                                     var owner='-';
                                     if(data.formation.contributeur!=null){
                                         owner = data.formation.contributeur.last_name + "  "+data.formation.contributeur.first_name;
                                     }
+                                    var cl =0;
+                                    var cp=0;
+                                    var duree =0;
+                                    for(var module in data.formation.modules){
+                                        cl = cl + parseInt(module.prix_ligne);
+                                         cl = cp + parseInt(module.prix_presentiel);
+                                         duree = duree + parseInt(module.duree);
+                                    }
 
                                   var  html = '<ul class="list-group">' +
-                                     '<li class="list-group-item">Cout en ligne: <span class="badge badge-success">'+ data.formation.montant  +'</span> </li>' +
-                                     '<li class="list-group-item">Cout en présentiel: <span class="badge badge-info">'+ data.formation.montant  +'</span> </li>' +
+                                     '<li class="list-group-item">Cout en ligne: <span class="badge badge-success">'+ cl  +'</span> </li>' +
+                                     '<li class="list-group-item">Cout en présentiel: <span class="badge badge-info">'+ cp  +'</span> </li>' +
                                      '<li class="list-group-item">Auteur : <span class="badge badge-primary">'+ owner +'</span> </li>'+
                                      '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
+                                      '<li class="list-group-item">Durée globale : <span class="badge badge-warning">'+ owner +' jours</span> </li>'+
                                       '</ul>';
-                                      console.log(html);
+                                      //console.log(html);
 
                                     $('#form-details').html(html);
                                    // $('#mon-spinner').hide();
