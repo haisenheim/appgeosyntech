@@ -199,7 +199,7 @@
 
 
     <div id="content-show" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 id="modal-title" class="modal-title mt-0"></h5>
@@ -212,6 +212,14 @@
                     <div class="row">
                         <div id="formation-image" class="col-md-6 col-sm-12">
                             <img id="form-img" src="" style="width: 100%; height: 100%" alt=""/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div id="form-desc">
+
+                            </div>
+                            <div id="form-details">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,9 +252,11 @@
                         $('#modal-title').html(data.formation.name);
                         $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
                         $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
-                        html = '<div>' +
-                                    '' +
-                                '</div>';
+                        $('#form-desc').text(data.formation.description);
+
+                        html = '<ul class="list-group">' +
+                         '<li class="list-group-item">Cout en ligne: <span class="badge badge-warning">'+ data.formation.montant  +'</span> </li>' +
+                          '</ul>'
                     }
 
 
