@@ -64,7 +64,7 @@
                 bottom: 0;
               }
 
-              .topnav .navbar #topnav-menu-content .nav-link.active {
+              .topnav .navbar #topnav-menu-content .nav-link.active, .topnav .navbar #topnav-menu-content .dropdown.active>a{
                   color:
                   #28a745;
               }
