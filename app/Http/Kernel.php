@@ -66,7 +66,7 @@ class Kernel extends HttpKernel
 	    'chaire' => \App\Http\Middleware\Chaire::class,
 	    'national' => \App\Http\Middleware\National::class,
 	    'adminag' => \App\Http\Middleware\Adminag::class,
-	    'membre' => \App\Http\Middleware\Membre::class,
+	    'member' => \App\Http\Middleware\Membre::class,
 
     ];
 }

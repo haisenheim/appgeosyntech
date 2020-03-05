@@ -48,6 +48,10 @@ class User extends Authenticatable
 		return $this->belongsTo('App\Models\Centre');
 	}
 
+	public function formations(){
+		return $this->belongsToMany('App\Models\Formation','comptes_formations');
+	}
+
 
 
 
