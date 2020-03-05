@@ -36,6 +36,19 @@ class Formation extends Model
 		return $s;
 	}
 
+	public function getGratuiteAttribute(){
+		$modules = Module::all()->where('formation_id',$this->id);
+		$free = true;
+		foreach($modules as $module){
+			if($module->prix_ligne==0 || $module->free){
+				$free = false;
+				break;
+			} ;
+		}
+
+		return $free;
+	}
+
 	public function getPrixPresentielAttribute(){
 		$modules = Module::all()->where('formation_id',$this->id);
 		$s = 0;

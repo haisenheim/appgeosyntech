@@ -38,7 +38,7 @@ class FormationController extends Controller
 	public function subscribe(Request $request){
 		$formation = Formation::where('token',$request->token)->first();
 		$cf = [];
-		$cf['active'] = $formation->free?1:0;
+		$cf['active'] = $formation->gratuite?1:0;
 		$cf['compte_id'] = Auth::user()->id;
 		$cf['entreprise_formation_id'] =0;
 		$cf['formation_id'] = $formation->id;
