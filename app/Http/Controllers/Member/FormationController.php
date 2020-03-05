@@ -80,8 +80,8 @@ class FormationController extends Controller
     {
         //
 	    $formation = Formation::where('token',$token)->first()->load('modules','contributeur');
-
-	    return response()->json(compact('formation'));
+		return view('/Member/Formations/show')->with(compact('formation'));
+	    //return response()->json(compact('formation'));
     }
 
 

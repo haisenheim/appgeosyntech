@@ -23,7 +23,7 @@
                 <div class="col-md-3 col-sm-12">
 
                                 <div class="gallery-box text-center card p-2">
-                                    <a href="/formation/{{ $formation->token }}" class="text-dark gallery-popup">
+                                    <a href="/member/formation/{{ $formation->token }}" class="text-dark gallery-popup">
                                         <div class="position-relative gallery-content">
                                             <div class="demo-img">
                                                 <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
@@ -76,7 +76,7 @@
         #page-head {
           position: relative;
           background-color: black;
-          height: 25rem;
+          height: 15rem;
           width: 100%;
           overflow: hidden;
         }
