@@ -263,7 +263,7 @@
                    url:'/client/formation/add',
                    type:'get',
                    dataType:'json',
-                   data:{token:$('#form-token').val()}
+                   data:{token:$('#form-token').val()},
                    success:function(data){
                       Swal.fire({title:"SUCCES!",text:"Souscription faite avec succès!",icon:"success",showCancelButton:0,confirmButtonColor:"#11c46e",cancelButtonColor:"#f46a6a"})
                    }
