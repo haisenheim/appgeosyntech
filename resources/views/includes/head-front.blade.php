@@ -65,8 +65,11 @@
               }
 
               .topnav .navbar #topnav-menu-content .nav-link.active, .topnav .navbar #topnav-menu-content .dropdown.active>a{
-                  color:
-                  #28a745;
+                  color:#28a745;
+              }
+
+              .topnav .navbar #topnav-menu-content .dropdown-item.active, .topnav .navbar #topnav-menu-content .dropdown-item:hover {
+                  color:#28a745;
               }
         </style>
 
