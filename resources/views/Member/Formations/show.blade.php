@@ -161,7 +161,10 @@
 @section('scripts')
 
 <script>
-    $('.nav-link.active').css({'background-color':'#28a745'});
+    $('.nav-link').click(function(){
+        $('.nav-link.active').css({'background-color':'#28a745'});
+    });
+
 </script>
 
 @endsection
