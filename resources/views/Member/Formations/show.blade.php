@@ -151,6 +151,10 @@
           z-index: 1;
         }
 
+        .nav-pills .nav-link.active{
+            background-color: #28a745;
+        }
+
 
 
     </style>
@@ -161,9 +165,9 @@
 @section('scripts')
 
 <script>
-    $('.nav-link').click(function(){
+   /* $('.nav-link').click(function(){
         $('.nav-link.active').css({'background-color':'#28a745'});
-    });
+    });*/
 
 </script>
 
