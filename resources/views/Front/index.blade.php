@@ -260,7 +260,7 @@
                 //$("#sa-success").click(function(){
                 $('#content-show').modal('hide');
                 $.ajax({
-                   url:'/client/formation/subscribe',
+                   url:'/member/formation/subscribe',
                    type:'get',
                    dataType:'json',
                    data:{token:$('#form-token').val()},
