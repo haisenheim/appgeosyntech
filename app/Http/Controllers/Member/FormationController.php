@@ -29,7 +29,7 @@ class FormationController extends Controller
      */
     public function index()
     {
-	    $formations = Formation::all()->where('chaire_obac',0)->sortByDesc('created_at')->paginate(10);
+
 	    $user = User::find(Auth::user()->id);
 	    $formations = $user->formations;
 	    return view('Member/Formations/index')->with(compact('formations'));
