@@ -64,7 +64,7 @@
                 bottom: 0;
               }
 
-              .nav-link.active {
+              .topnav .navbar #topnav-menu-content .nav-link.active {
                   color:
                   #28a745;
               }
