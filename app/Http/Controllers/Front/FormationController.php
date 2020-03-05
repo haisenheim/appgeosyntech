@@ -28,8 +28,8 @@ class FormationController extends Controller
      */
     public function index()
     {
-	    $formations = Formation::all()->where('chaire_obac',0)->sortByDesc('created_at')->paginate(10);
-	    return view('Admin/Formations/index')->with(compact('formations'));
+	    $formations = Formation::all()->where('chaire_obac',0)->sortByDesc('created_at')->paginate(8);
+	    return view('Front/Formations/index')->with(compact('formations'));
     }
 
 
