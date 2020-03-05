@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Member;
 
 use App\Http\Controllers\Controller;
+use App\Models\CompteFormation;
 use App\Models\Cour;
 use App\Models\Entreprise;
 use App\Models\Formation;
@@ -42,7 +43,7 @@ class FormationController extends Controller
 		$cf['entreprise_formation_id'] =0;
 		$cf['formation_id'] = $formation->id;
 		$cf['token'] = sha1(Auth::user()->id . date('Ymdhsi'). $formation->id);
-		$cf = Formation::create($cf);
+		$cf = CompteFormation::create($cf);
 		return response()->json(compact('cf'));
 	}
 
