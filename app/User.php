@@ -49,7 +49,7 @@ class User extends Authenticatable
 	}
 
 	public function formations(){
-		return $this->belongsToMany('App\Models\Formation','comptes_formations');
+		return $this->belongsToMany('App\Models\Formation','comptes_formations','compte_id');
 	}
 
 
