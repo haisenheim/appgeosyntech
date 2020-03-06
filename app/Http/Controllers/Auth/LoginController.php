@@ -79,6 +79,6 @@ class LoginController extends Controller
 		}
 		//session(['lock-expires-at' => now()->addMinutes($request->user()->getLockoutTime())]);
 		session(['lock-expires-at' => now()->addMinutes(1)]);
-		return redirect('/');
+		return redirect()->intended();
 	}
 }
