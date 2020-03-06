@@ -78,7 +78,7 @@
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src=" {{ auth()->user()->imageUrl?auth()->user()->imageUrl:'img/avatar.png'  }}"
-                                    alt="Header Avatar">
+                                    alt="">
                                 <span class="d-none d-sm-inline-block ml-1">{{ auth()->user()->last_name ." ".auth()->user()->first_name }}</span>
                                 <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                             </button>
@@ -206,12 +206,9 @@
         <div class="right-bar">
             <div data-simplebar class="h-100">
 
-
+                @include('includes.user')
 
                     <div >
-
-
-
                         <div class="p-2">
                             <a href="/member/formations" class="text-reset notification-item pl-3 mb-2 d-block">
                                 <i class="mdi mdi-checkbox-blank-circle-outline mr-1 text-success"></i>
