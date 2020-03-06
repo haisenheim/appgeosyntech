@@ -47,9 +47,9 @@
             @endforeach
          </div>
           <div class="">
-              <ul class="pagination justify-content-end">
+
                 {{ $formations->links() }}
-              </ul>
+
           </div>
       </div>
     </section>
