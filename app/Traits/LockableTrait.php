@@ -8,7 +8,7 @@ trait LockableTrait
 
 	public function getLockoutTime()
 	{
-		return 1;
+		return 10;
 	}
 
 	public function hasLockoutTime()

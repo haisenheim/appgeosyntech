@@ -72,17 +72,16 @@
 
                                 <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-right">
+                            <div style="margin: -10px" class="dropdown-menu dropdown-menu-right">
                                 <!-- item-->
                                 <a class="dropdown-item" href="#"><i class="mdi mdi-face-profile font-size-16 align-middle mr-1"></i> Mon Profil</a>
                                 <a class="dropdown-item" href="#"><i class="mdi mdi-credit-card-outline font-size-16 align-middle mr-1"></i> Billing</a>
                                 <a class="dropdown-item" href="#"><i class="mdi mdi-account-settings font-size-16 align-middle mr-1"></i> Settings</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock font-size-16 align-middle mr-1"></i> Lock screen</a>
+                                <a class="dropdown-item" href="{{route('login.locked')}}"><i class="mdi mdi-lock font-size-16 align-middle mr-1"></i> Lock screen</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/logout"><i class="mdi mdi-logout font-size-16 align-middle mr-1"></i> Logout</a>
                             </div>
                         </div>
-
 
                             <div class="dropdown d-inline-block">
                                 <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
@@ -104,7 +103,7 @@
                 </div>
             </header>
 
-            <div style="margin-top: 50px; z-index: 9999" class="topnav">
+            <div style="margin-top: 50px; z-index: 999" class="topnav">
                 <div class="container-fluid">
                     <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
 
