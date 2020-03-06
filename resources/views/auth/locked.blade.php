@@ -37,18 +37,18 @@
                                     <h5 class="mb-5 text-center">ECRAN DE VERROUILLAGE</h5>
 
 
-                                    <form class="form-horizontal" action="{{ route('login') }}" method="post">
+                                    <form class="form-horizontal" action="{{ route('login.unlock') }}" method="post">
                                          {{ csrf_field() }}
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="user-thumb text-center m-b-30">
                                                     <img src="{{ asset(auth()->user()->imageUri?auth()->user()->imageUri:'img/avatar.png')  }}" class="rounded-circle avatar-lg img-thumbnail mx-auto d-block" alt="thumbnail">
                                                 </div>
-                                                <h4 class="text-center">{{ auth()->user()->first_name . "  ". auth()->user()->last_name }}</h4>
+                                                <h5 class="text-center text-info">{{ auth()->user()->first_name . "  ". auth()->user()->last_name }}</h5>
 
 
                                                 <div class="form-group mb-4">
-                                                    <label for="password">MOT DE PASSE</label>
+
                                                     <input required="required" name="password" type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" id="password" placeholder="Saisir votre mot de passe">
 
                                                     @if ($errors->has('password'))
