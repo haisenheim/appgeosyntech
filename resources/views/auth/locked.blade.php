@@ -41,14 +41,15 @@
                                          {{ csrf_field() }}
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div>
+                                                <div class="user-thumb text-center m-b-30">
                                                     <img src="{{ asset(auth()->user()->imageUri?auth()->user()->imageUri:'img/avatar.png')  }}" class="rounded-circle avatar-lg img-thumbnail mx-auto d-block" alt="thumbnail">
                                                 </div>
+                                                <h4 class="text-center">{{ auth()->user()->first_name . "  ". auth()->user()->last_name }}</h4>
 
 
                                                 <div class="form-group mb-4">
                                                     <label for="password">MOT DE PASSE</label>
-                                                    <input required="required" name="password" type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" id="password" placeholder="Saisir votre mot de passw">
+                                                    <input required="required" name="password" type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" id="password" placeholder="Saisir votre mot de passe">
 
                                                     @if ($errors->has('password'))
                                                         <span class="invalid-feedback" role="alert">
@@ -58,23 +59,14 @@
                                                 </div>
 
                                                 <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                                            <label class="custom-control-label" for="customControlInline">Se souvenir de moi</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="text-md-right mt-3 mt-md-0">
-                                                            <a href="/reset-password" class="text-muted"><i class="mdi mdi-lock"></i> Vous avez oublié votre mot de passe?</a>
-                                                        </div>
-                                                    </div>
+
+
                                                 </div>
                                                 <div class="mt-4">
                                                     <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Se Connecter</button>
                                                 </div>
                                                 <div class="mt-4 text-center">
-                                                    <a href="/contact" class="text-muted"><i class="mdi mdi-account-circle mr-1"></i> Contacter nous pour avoir un compte</a>
+                                                    <a href="#" class="text-muted"><i class="mdi mdi-account-circle mr-1"></i> Contacter nous pour avoir un compte</a>
                                                 </div>
                                             </div>
                                         </div>
