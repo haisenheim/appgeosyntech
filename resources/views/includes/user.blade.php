@@ -1,4 +1,4 @@
-<div style="margin: 30px 5px 20px 5px">
-    <img class="rounded-circle header-profile-user" src=" {{ auth()->user()->imageUrl?auth()->user()->imageUrl:'img/avatar.png'  }}" alt="">
-    <h3>{{ auth()->user()->first_name . "  ". auth()->user()->last_name }}</h3>
+<div style="margin: 50px auto 20px auto; width: 60%">
+    <img class="rounded-circle" style="margin: 10px auto; width: 100px; height: 100px" src=" {{ auth()->user()->imageUrl?auth()->user()->imageUrl:'img/avatar.png'  }}" alt="">
+    <h3 style="font-size: 13px">{{ auth()->user()->first_name . "  ". auth()->user()->last_name }}</h3>
 </div>
