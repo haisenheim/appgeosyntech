@@ -63,15 +63,6 @@
                             </div>
                         </div>
 
-                        @if(auth()->user())
-
-                            <div class="dropdown d-inline-block">
-                                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
-                                    <i class="mdi mdi-tune"></i>
-                                </button>
-                            </div>
-                        @endif
-
 
                         @if(auth()->user())
                             <div class="dropdown d-inline-block">
@@ -91,6 +82,14 @@
                                 <a class="dropdown-item" href="/logout"><i class="mdi mdi-logout font-size-16 align-middle mr-1"></i> Logout</a>
                             </div>
                         </div>
+
+
+                            <div class="dropdown d-inline-block">
+                                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                                    <i class="mdi mdi-tune"></i>
+                                </button>
+                            </div>
+
                         @else
                         <div class="dropdown d-inline-block">
                             <a style="height: 50px; color: #FFFFFF" href="/login"  class="btn header-item noti-icon right-bar-toggle waves-effect">
@@ -99,6 +98,7 @@
                             </a>
                         </div>
                         @endif
+
 
                     </div>
                 </div>

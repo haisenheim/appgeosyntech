@@ -67,6 +67,7 @@ class Kernel extends HttpKernel
 	    'national' => \App\Http\Middleware\National::class,
 	    'adminag' => \App\Http\Middleware\Adminag::class,
 	    'member' => \App\Http\Middleware\Membre::class,
+	    'auth.lock' => \App\Http\Middleware\AuthLock::class,
 
     ];
 }

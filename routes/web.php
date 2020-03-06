@@ -40,6 +40,10 @@ Route::name('front.')
 	});
 
 
+Route::get('login/locked', 'Auth\LoginController@locked')->middleware('auth')->name('login.locked');
+Route::post('login/locked', 'Auth\LoginController@unlock')->name('login.unlock');
+
+
 
 
 Route::get('/test',function(){
@@ -357,7 +361,7 @@ Route::prefix('corporate')
 Route::prefix('member')
 	->namespace('Member')
 	->name('Member')
-	->middleware(['auth','member'])
+	->middleware(['auth','member','auth.lock'])
 	->group(function(){
 		Route::get('/formation/subscribe','FormationController@subscribe');
 		Route::get('/formations','FormationController@index');
