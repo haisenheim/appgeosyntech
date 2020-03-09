@@ -23,7 +23,7 @@
                 <div class="col-md-3 col-sm-12">
 
                                 <div class="gallery-box text-center card p-2">
-                                    <a href="/formation/{{ $formation->token }}" class="text-dark gallery-popup">
+                                    <a href="#" data-toggle="modal" data-target="#content-show" data-token="{{ $formation->token }}" class="formation-show">
                                         <div class="position-relative gallery-content">
                                             <div class="demo-img">
                                                 <img src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt="" class="img-fluid mx-auto d-block rounded">
@@ -120,5 +120,76 @@
 
 
 @section('scripts')
+<script>
 
+
+            $('#subs-link').click(function(e){
+                e.preventDefault();
+                //console.log();
+                //$("#sa-success").click(function(){
+                $('#content-show').modal('hide');
+                $.ajax({
+                   url:'/member/formation/subscribe',
+                   type:'get',
+                   dataType:'json',
+                   data:{token:$('#form-token').val()},
+                   success:function(data){
+                      Swal.fire({title:"SUCCES!",text:"Souscription faite avec succès!",icon:"success",showCancelButton:0,confirmButtonColor:"#11c46e",cancelButtonColor:"#f46a6a"})
+                   }
+                });
+               // })
+
+
+            });
+
+            $('.formation-show').click(function(e){
+
+                var token = $(this).data('token');
+                var content = $('#content-body');
+                $.ajax({
+                    url: '/formation/'+token,
+                    type:'get',
+                    dataType:'json',
+                    success:function(data){
+
+                                    $('#modal-title').html(data.formation.name);
+                                    $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
+                                    $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
+                                    $('#form-desc').text(data.formation.description);
+                                    $('#form-token').val(token);
+                                    var owner='-';
+                                    if(data.formation.contributeur!=null){
+                                        owner = data.formation.contributeur.last_name + "  "+data.formation.contributeur.first_name;
+                                    }
+                                    var cl =0;
+                                    var cp=0;
+                                    var duree =0;
+                                    for(var i=0;i< data.formation.modules.length; i++){
+                                        cl = cl + parseInt(data.formation.modules[i].prix_ligne);
+                                         cp = cp + parseInt(data.formation.modules[i].prix_presentiel);
+                                         duree = duree + parseInt(data.formation.modules[i].duree);
+                                    }
+
+                                  var  html = '<ul class="list-group">' +
+                                     '<li class="list-group-item">Cout en ligne: <span class="badge badge-success">'+ cl  +'</span> </li>' +
+                                     '<li class="list-group-item">Cout en présentiel: <span class="badge badge-info">'+ cp  +'</span> </li>' +
+                                     '<li class="list-group-item">Auteur : <span class="badge badge-primary">'+ owner +'</span> </li>'+
+                                     '<li class="list-group-item">Nombre de modules: <span class="badge badge-danger">'+ data.formation.modules.length  +'</span> </li>'+
+                                      '<li class="list-group-item">Durée globale : <span class="badge badge-warning">'+ duree +' jours</span> </li>'+
+                                      '</ul>';
+                                      //console.log(html);
+
+                                    $('#form-details').html(html);
+                                   // $('#mon-spinner').hide();
+
+                                   // $("#sa-success").click(function(){Swal.fire({title:"Good job!",text:"You clicked the button!",icon:"success",showCancelButton:!0,confirmButtonColor:"#3d8ef8",cancelButtonColor:"#f46a6a"})})
+
+                        //setTimeout(maFonction, 1000);
+
+                    }
+
+
+                });
+            });
+        </script>
 @endsection
