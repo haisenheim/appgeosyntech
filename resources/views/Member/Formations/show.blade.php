@@ -41,9 +41,7 @@
                                      <div class="tab-content mt-4 mt-sm-0">
                                         <?php $i=0; ?>
                                         @foreach($formation->modules as $module)
-                                            <a class="nav-link <?= $i==0?'active':'' ?> mb-2" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-<?= $module->token ?>" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                                                 <i class="dripicons-home font-size-18 d-block my-1"></i> <?= $module->name ?>
-                                             </a>
+
 
                                              <div class="tab-pane fade <?= $i==0?'show active':'' ?>" id="v-pills-<?= $module->token ?>" role="tabpanel" aria-labelledby="v-pills-<?= $module->token ?>-tab">
                                                  <p>
