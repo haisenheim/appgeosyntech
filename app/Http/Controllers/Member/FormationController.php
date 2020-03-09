@@ -88,7 +88,7 @@ class FormationController extends Controller
 	public function getModule($token){
 		$module = Module::where('token',$token)->first();
 
-		return view('/Member/Formation/module')->with(compact('module'));
+		return view('/Member/Formations/module')->with(compact('module'));
 	}
 
 
