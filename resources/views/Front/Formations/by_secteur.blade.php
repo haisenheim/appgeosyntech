@@ -189,7 +189,7 @@
                                     $('#modal-title').html(data.formation.name);
                                     $('#form-img').prop('src',"http://otc.test/img/"+data.formation.imageUri);
                                     $('#formation-image').css({'background-size':'cover' ,'min-height':'240px'});
-                                    $('#form-desc').text(data.formation.description);
+                                    $('#form-desc').html(data.formation.description);
                                     $('#form-token').val(token);
                                     var owner='-';
                                     if(data.formation.contributeur!=null){
