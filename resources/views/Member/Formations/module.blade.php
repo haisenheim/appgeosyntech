@@ -1,4 +1,4 @@
-@extends('......layouts.front')
+@extends('layouts.front')
 
 @section('content')
 
@@ -8,7 +8,7 @@
           <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
               <div class="w-100 text-white">
-                <h1 style="color: #FFFFFF; font-weight: 800;" class="display-3">{{ $formation->name }}</h1>
+                <h1 style="color: #FFFFFF; font-weight: 800;" class="display-3">{{ $module->name }}</h1>
 
               </div>
             </div>
@@ -23,7 +23,7 @@
             <div class="col-md-9 col-sm-12">
                 <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">LISTE DES MODULES</h4>
+                    <h4 class="card-title">LISTE DES COURS</h4>
                 </div>
                     <div class="card-body">
 
@@ -31,9 +31,9 @@
                                  <div class="col-sm-3">
                                      <div class="nav flex-column nav-pills text-center" role="tablist" aria-orientation="vertical">
                                         <?php $i=0; ?>
-                                        @foreach($formation->modules as $module)
-                                            <a class="nav-link <?= $i==0?'active':'' ?> mb-2"  id="v-pills-<?= $module->token ?>-tab" data-toggle="pill" href="#v-pills-<?= $module->token ?>" role="tab" aria-controls="v-pills-<?= $module->token ?>" aria-selected="true">
-                                                 <?= $module->name ?>
+                                        @foreach($module->cours as $cours)
+                                            <a class="nav-link <?= $i==0?'active':'' ?> mb-2"  id="v-pills-<?= $cours->token ?>-tab" data-toggle="pill" href="#v-pills-<?= $cours->token ?>" role="tab" aria-controls="v-pills-<?= $cours->token ?>" aria-selected="true">
+                                                 <?= $cours->name ?>
                                              </a>
                                              <?php $i++ ?>
                                         @endforeach
@@ -42,18 +42,19 @@
                                  <div class="col-sm-9">
                                      <div class="tab-content mt-4 mt-sm-0">
                                         <?php $i=0; ?>
-                                        @foreach($formation->modules as $module)
+                                        @foreach($module->cours as $cours)
 
 
-                                             <div class="tab-pane fade <?= $i==0?'show active':'' ?>" id="v-pills-<?= $module->token ?>" role="tabpanel" aria-labelledby="v-pills-<?= $module->token ?>-tab">
+                                             <div class="tab-pane fade <?= $i==0?'show active':'' ?>" id="v-pills-<?= $cours->token ?>" role="tabpanel" aria-labelledby="v-pills-<?= $cours->token ?>-tab">
 
-                                                <div class="card text-white bg-success">
+                                                <div class="card text-white">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">{{ $cours->name }}</h4>
+                                                    </div>
                                                     <div class="card-body">
-                                                        <p>
-                                                              <?= $module->description . $module->description. $module->description. $module->description. $module->description ?>
-                                                        </p>
 
-                                                        <a class="btn btn-info btn-sm btn-block" href="/member/module/{{$module->token}}"><i class="fa fa-eye font-size-15"></i> Afficher</a>
+
+
                                                     </div>
                                                 </div>
 
@@ -72,14 +73,22 @@
             </div>
 
             <div class="col-md-3 col-sm-12">
-                <div class="card">
+                <div class="card text-white bg-info">
                     <div class="card-header">
-                        <h4 class="card-title text-center">{{ $formation->name }}</h4>
+                        <h4 class="card-tite">{{ $module->name }}</h4>
                     </div>
                     <div class="card-body">
-                        <img style="height: 220px; max-width: 220px;" src="{{ $formation->imageUri?asset('img/'.$formation->imageUri):'img/logo-obac.png' }}" alt=""/>
-                        <p>
-                            <?= $formation->description ?>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-center">{{ $module->formation->name }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <img style="height: 240px; width: 99%;" src="{{ $module->formation->imageUri?asset('img/'.$module->formation->imageUri):'img/logo-obac.png' }}" alt=""/>
+                        <p style="margin-top: 20px;">
+                            <?= $module->formation->description ?>
                         </p>
                     </div>
                 </div>

@@ -366,7 +366,7 @@ Route::prefix('member')
 		Route::get('/formation/subscribe','FormationController@subscribe');
 		Route::get('/formations','FormationController@index');
 		Route::get('/formation/{token}','FormationController@show');
-		Route::get('/formation/module/{token}','FormationController@getModule');
+		Route::get('/module/{token}','FormationController@getModule');
 	});
 
 
