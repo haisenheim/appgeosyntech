@@ -97,7 +97,7 @@
         .divider span {
             display: inline-block;
             width: 300px;
-            border-bottom: 1px solid #28a745;
+            border-bottom: 1px solid #11c46e;
             margin: 20px 0;
             font-weight: 900;
         }
@@ -150,7 +150,7 @@
         }
 
         .nav-pills .nav-link.active{
-            background-color: #28a745;
+            background-color: #11c46e;
         }
 
 
@@ -164,7 +164,7 @@
 
 <script>
    /* $('.nav-link').click(function(){
-        $('.nav-link.active').css({'background-color':'#28a745'});
+        $('.nav-link.active').css({'background-color':'#11c46e'});
     });*/
 
 </script>
