@@ -2,6 +2,8 @@
 
 @section('content')
 
+     <link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+     <input type="hidden" id="form-token"/>
     <div id="page-head">
          <div class="overlay"></div>
           <img src="{{ asset('img/slide1.jpg')  }}" alt=""/>
@@ -154,6 +156,16 @@
 
 
 @section('scripts')
+
+<!-- Magnific Popup-->
+        <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+
+        <!-- Tour init js-->
+        <script src=" {{ asset('assets/js/pages/lightbox.init.js') }}"></script>
+        <!-- Sweet alert init js-->
+        <script src="{{ asset('assets/js/pages/sweet-alerts.init.js') }}"></script>
+
 <script>
 
 
