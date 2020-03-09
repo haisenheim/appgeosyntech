@@ -45,7 +45,7 @@
 
                                              <div class="tab-pane fade <?= $i==0?'show active':'' ?>" id="v-pills-<?= $module->token ?>" role="tabpanel" aria-labelledby="v-pills-<?= $module->token ?>-tab">
                                                  <p>
-                                                      <?= $module->description ?>
+                                                      <?= $module->description . $module->description. $module->description. $module->description. $module->description ?>
                                                  </p>
 
                                              </div>
