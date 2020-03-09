@@ -23,7 +23,7 @@
             <div class="col-md-9 col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="page-header text-center">LISTE DES MODULES</h4>
+                        <h4 class="page-header">LISTE DES MODULES</h4>
 
                              <div class="row">
                                  <div class="col-sm-3">
@@ -31,7 +31,7 @@
                                         <?php $i=0; ?>
                                         @foreach($formation->modules as $module)
                                             <a class="nav-link <?= $i==0?'active':'' ?> mb-2"  id="v-pills-<?= $module->token ?>-tab" data-toggle="pill" href="#v-pills-<?= $module->token ?>" role="tab" aria-controls="v-pills-<?= $module->token ?>" aria-selected="true">
-                                                 <i class="dripicons-home font-size-18 d-block my-1"></i> <?= $module->name ?>
+                                                 <?= $module->name ?>
                                              </a>
                                              <?php $i++ ?>
                                         @endforeach
@@ -44,9 +44,15 @@
 
 
                                              <div class="tab-pane fade <?= $i==0?'show active':'' ?>" id="v-pills-<?= $module->token ?>" role="tabpanel" aria-labelledby="v-pills-<?= $module->token ?>-tab">
-                                                 <p>
-                                                      <?= $module->description . $module->description. $module->description. $module->description. $module->description ?>
-                                                 </p>
+
+                                                <div class="card text-white bg-success">
+                                                    <div class="card-body">
+                                                        <p>
+                                                              <?= $module->description . $module->description. $module->description. $module->description. $module->description ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
 
                                              </div>
                                              <?php $i++ ?>
