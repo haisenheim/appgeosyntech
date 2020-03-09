@@ -55,7 +55,42 @@
     </section>
 
 
+     <div id="content-show" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="modal-title" class="modal-title mt-0"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
+                    <div class="row">
+                        <div id="formation-image" class="col-md-6 col-sm-12">
+                            <img id="form-img" src="" style="width: 100%; height: 100%" alt=""/>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div id="form-desc">
+
+                            </div>
+                            <div id="form-details">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    @if(auth()->user())
+                        <a id="subs-link" href="#"  class="btn btn-block btn-success">SOUSCRIRE <i class="mdi mdi-draw"></i></a>
+                    @else
+                        <a class="btn btn-block btn-danger" href="/login">SE CONNECTER POUR CONTINUER <i class="mdi mdi-login"></i></a>
+                    @endif
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
 
