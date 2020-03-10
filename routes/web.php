@@ -79,7 +79,7 @@ Route::get('/player', function () {
 	$title = "GOD'S PLAN DE Drake";
 	return view('player')->with(compact('video', 'mime', 'title'));
 });
-/*Route::get('/load-video/{filename}',
+Route::get('/load-video/{filename}',
 	function ($filename) {
 	// Pasta dos videos.
 		//dd(\Illuminate\Support\Facades\Auth::user());
@@ -91,7 +91,7 @@ Route::get('/player', function () {
 		});
 	}
 	return response("File doesn't exists", 404);
-})->middleware('admin');*/
+})->middleware('admin');
 
 /*
 
