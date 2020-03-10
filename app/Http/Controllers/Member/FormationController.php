@@ -58,6 +58,18 @@ class FormationController extends Controller
 		return view('Front/Formations/by_metier')->with(compact('secteur'));
 	}
 
+	public function readVideo ($filename) {
+		// Pasta dos videos.
+		$videosDir = public_path('videos');
+		if (file_exists($filePath = $videosDir."/".$filename)) {
+			$stream = new \App\Http\VideoStream($filePath);
+			return response()->stream(function() use ($stream) {
+				//$stream->start();
+			});
+		}
+		return response("File doesn't exists", 404);
+	}
+
 
     /**
      * Show the form for creating a new resource.

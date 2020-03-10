@@ -53,7 +53,7 @@
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="embed-responsive embed-responsive-4by3">
-                                                            <iframe class="embed-responsive-item" src="/load-video/{{ $cours->videoUri }}"></iframe>
+                                                            <iframe class="embed-responsive-item" src="/member/cours/read-video/{{ $cours->videoUri }}"></iframe>
                                                         </div>
 
                                                     </div>

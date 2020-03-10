@@ -79,7 +79,8 @@ Route::get('/player', function () {
 	$title = "GOD'S PLAN DE Drake";
 	return view('player')->with(compact('video', 'mime', 'title'));
 });
-Route::get('/load-video/{filename}', function ($filename) {
+Route::get('/load-video/{filename}',
+	function ($filename) {
 	// Pasta dos videos.
 	$videosDir = public_path('videos');
 	if (file_exists($filePath = $videosDir."/".$filename)) {
@@ -367,6 +368,7 @@ Route::prefix('member')
 		Route::get('/formations','FormationController@index');
 		Route::get('/formation/{token}','FormationController@show');
 		Route::get('/module/{token}','FormationController@getModule');
+		Route::get('/cours/read-video/{token}','FormationController@readVideo');
 	});
 
 
