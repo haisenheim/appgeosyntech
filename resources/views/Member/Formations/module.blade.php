@@ -58,7 +58,6 @@
 
                                                          <video width="320" height="240" controls>
                                                               <source src="/load-video/{{ $cours->videoUri }}" type="video/mp4">
-
                                                          </video>
 
 
