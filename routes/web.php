@@ -82,7 +82,7 @@ Route::get('/player', function () {
 Route::get('/load-video/{filename}',
 	function ($filename) {
 	// Pasta dos videos.
-		$user = \Illuminate\Support\Facades\Auth::user();
+		//$user = \Illuminate\Support\Facades\Auth::user();
 		//dd(\Illuminate\Support\Facades\Auth::user());
 	$videosDir = public_path('videos');
 	if (file_exists($filePath = $videosDir."/".$filename)) {
