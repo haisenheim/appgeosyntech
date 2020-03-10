@@ -52,8 +52,9 @@
                                                         <h4 class="card-title">{{ $cours->name }}</h4>
                                                     </div>
                                                     <div class="card-body">
-
-
+                                                        <div class="embed-responsive embed-responsive-4by3">
+                                                            <iframe class="embed-responsive-item" src="/load-video/{{ $cours->videoUri }}"></iframe>
+                                                        </div>
 
                                                     </div>
                                                 </div>
