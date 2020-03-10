@@ -85,7 +85,7 @@ Route::get('/load-video/{filename}', function ($filename) {
 	if (file_exists($filePath = $videosDir."/".$filename)) {
 		$stream = new \App\Http\VideoStream($filePath);
 		return response()->stream(function() use ($stream) {
-			$stream->start();
+			//$stream->start();
 		});
 	}
 	return response("File doesn't exists", 404);
