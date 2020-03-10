@@ -89,7 +89,7 @@ Route::get('/load-video/{filename}', function ($filename) {
 		});
 	}
 	return response("File doesn't exists", 404);
-});
+})->middleware('admin');
 
 /*
 
