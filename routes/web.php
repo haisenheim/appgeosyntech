@@ -82,7 +82,7 @@ Route::get('/player', function () {
 Route::get('/load-video/{filename}',
 	function ($filename) {
 	// Pasta dos videos.
-		//dd(\Illuminate\Support\Facades\Auth::user());
+		dd(\Illuminate\Support\Facades\Auth::user());
 	$videosDir = public_path('videos');
 	if (file_exists($filePath = $videosDir."/".$filename)) {
 		$stream = new \App\Http\VideoStream($filePath);
@@ -91,7 +91,7 @@ Route::get('/load-video/{filename}',
 		});
 	}
 	return response("File doesn't exists", 404);
-})->middleware('member');
+});
 
 /*
 
