@@ -83,13 +83,13 @@ Route::get('/load-video/{filename}',
 	function ($filename) {
 	// Pasta dos videos.
 		dd(\Illuminate\Support\Facades\Auth::user());
-	$videosDir = public_path('videos');
+	/*$videosDir = public_path('videos');
 	if (file_exists($filePath = $videosDir."/".$filename)) {
 		$stream = new \App\Http\VideoStream($filePath);
 		return response()->stream(function() use ($stream) {
 			//$stream->start();
 		});
-	}
+	}*/
 	return response("File doesn't exists", 404);
 })->middleware('admin');
 
