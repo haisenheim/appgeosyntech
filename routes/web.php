@@ -82,9 +82,10 @@ Route::get('/player', function () {
 Route::get('/load-video/{filename}',
 	function ($filename) {
 	// Pasta dos videos.
-		dd(\Illuminate\Support\Facades\Auth::user());
+		$user = \Illuminate\Support\Facades\Auth::user();
+		//dd(\Illuminate\Support\Facades\Auth::user());
 	$videosDir = public_path('videos');
-	if (file_exists($filePath = $videosDir."/".$filename)) {
+	if (file_exists($filePath = $videosDir."/".$filename)&& in_array($user->role_id,[10,1,6])) {
 		$stream = new \App\Http\VideoStream($filePath);
 		return response()->stream(function() use ($stream) {
 			//$stream->start();
