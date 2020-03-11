@@ -18,4 +18,8 @@ class Pay extends Model
 	public function question(){
 		return $this->belongsTo('App\Models\Question');
 	}
+
+	public function choice(){
+		return $this->belongsTo('App\Models\Choice');
+	}
 }

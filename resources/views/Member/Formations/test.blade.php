@@ -23,61 +23,24 @@
             <div class="col-md-9 col-sm-12">
                 <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">LISTE DES COURS</h4>
+                    <h4 class="card-title">{{ $module->name  }} : TEST DE CONNAISSANCE</h4>
                 </div>
                     <div class="card-body">
 
-                             <div class="row">
-                                 <div class="col-sm-3">
-                                     <div class="nav flex-column nav-pills text-center" role="tablist" aria-orientation="vertical">
-                                        <?php $i=0; ?>
-                                        @foreach($module->cours as $cours)
-                                            <a class="nav-link <?= $i==0?'active':'' ?> mb-2"  id="v-pills-<?= $cours->token ?>-tab" data-toggle="pill" href="#v-pills-<?= $cours->token ?>" role="tab" aria-controls="v-pills-<?= $cours->token ?>" aria-selected="true">
-                                                 <?= $cours->name ?>
-                                             </a>
-                                             <?php $i++ ?>
+                        <ul class="list-group">
+
+                            @foreach($module->questions as $question)
+                                <li class="list-group-item">
+                                    <h5>{{ $question->name }}</h5>
+                                    <ul class="list-group">
+                                        @foreach($question->choices as $response)
+                                            <li class="list-group-item"><input class="radio" type="radio" name="{{$question->id}}"/>{{ $response->name }}</li>
                                         @endforeach
-                                     </div>
-                                 </div>
-                                 <div class="col-sm-9">
-                                     <div class="tab-content mt-4 mt-sm-0">
-                                        <?php $i=0; ?>
-                                        @foreach($module->cours as $cours)
+                                    </ul>
+                                </li>
+                            @enforeach
 
-
-                                             <div class="tab-pane fade <?= $i==0?'show active':'' ?>" id="v-pills-<?= $cours->token ?>" role="tabpanel" aria-labelledby="v-pills-<?= $cours->token ?>-tab">
-
-                                                <div class="card text-white">
-                                                    <div class="card-header">
-                                                        <h4 class="card-title">{{ $cours->name }}</h4>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        @if($cours->videoUri)
-                                                            <div class="embed-responsive embed-responsive-4by3">
-                                                                <iframe class="embed-responsive-item" src="/load-video/{{ $cours->videoUri }}"></iframe>
-                                                            </div>
-                                                        @endif
-                                                        <hr/>
-                                                        @if($cours->audioUri)
-
-
-                                                            <audio controls>
-                                                                  <source src="/member/load-audio/{{ $cours->audioUri }}" type="audio/mpeg">
-                                                             </audio>
-                                                        @endif
-
-
-                                                    </div>
-                                                </div>
-
-
-                                             </div>
-                                             <?php $i++ ?>
-                                        @endforeach
-
-                                     </div>
-                                 </div>
-                             </div>
+                        </ul>
 
 
                     </div>

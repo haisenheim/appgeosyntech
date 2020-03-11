@@ -64,25 +64,13 @@ class FormationController extends Controller
 		if (file_exists($filePath = $videosDir."/".$filename)) {
 			$stream = new \App\Http\VideoStream($filePath);
 			return response()->stream(function() use ($stream) {
-				//$stream->start();
+				$stream->start();
 			});
 		}
 		return response("File doesn't exists", 404);
 	}
 
 	public function readAudio($filename){
-
-		/*$audioDir = public_path('audios');
-		if (file_exists($filePath = $audioDir."/".$filename)) {
-
-			if ($stream = fopen($filePath, 'r')) {
-				while (!feof($stream)) {
-					echo fread($stream, 1024);
-				}
-				fclose($stream);
-			}
-		}*/
-
 
 		return response()->streamDownload(function () use ($filename) {
 			$audioDir = public_path('podcasts');
@@ -127,6 +115,11 @@ class FormationController extends Controller
 
 	public function getModule($token){
 		$module = Module::where('token',$token)->first();
+
+		$first_test = $module->tests->where('user_id',Auth::user()->id)->where('premier_id',0)->first();
+		if(!$first_test){
+			return view('Member/Formations/test')->with(compact('module'));
+		}
 
 		return view('/Member/Formations/module')->with(compact('module'));
 	}
