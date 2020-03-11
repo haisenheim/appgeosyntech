@@ -29,7 +29,7 @@
 
                         <ul class="list-group">
 
-                            @foreach($module->questions as $question)
+                            <?php foreach($module->questions as $question): ?>
                                 <li class="list-group-item">
                                     <h5>{{ $question->name }}</h5>
                                     <ul class="list-group">
@@ -38,7 +38,7 @@
                                         @endforeach
                                     </ul>
                                 </li>
-                            @enforeach
+                            <?php endforeach ?>
 
                         </ul>
 
@@ -135,9 +135,7 @@
           z-index: 1;
         }
 
-        .nav-pills .nav-link.active{
-            background-color: #11c46e;
-        }
+
 
 
 
