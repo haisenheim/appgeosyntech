@@ -85,7 +85,7 @@ class FormationController extends Controller
 
 
 		return response()->streamDownload(function () use ($filename) {
-			$audioDir = public_path('audios');
+			$audioDir = public_path('podcasts');
 			$filePath = $audioDir."/".$filename;
 			if ($stream = fopen($filePath, 'r')) {
 				while (!feof($stream)) {
