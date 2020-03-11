@@ -52,10 +52,19 @@
                                                         <h4 class="card-title">{{ $cours->name }}</h4>
                                                     </div>
                                                     <div class="card-body">
-                                                        <div class="embed-responsive embed-responsive-4by3">
-                                                            <iframe class="embed-responsive-item" src="/load-video/{{ $cours->videoUri }}"></iframe>
-                                                        </div>
+                                                        @if($cours->videoUri)
+                                                            <div class="embed-responsive embed-responsive-4by3">
+                                                                <iframe class="embed-responsive-item" src="/load-video/{{ $cours->videoUri }}"></iframe>
+                                                            </div>
+                                                        @endif
+                                                        <hr/>
+                                                        @if($cours->audioUri)
+                                                            <audio controls src="/load-audio/{{$cours->audioUri}}"></audio>
 
+                                                            <audio>
+                                                                  <source src="{{ url('member.audio', ['filename' => $cours->audioUri]) }}" type="audio/mp3">
+                                                             </audio>
+                                                        @endif
                                                          <video width="320" height="240" controls>
                                                               <source src="/load-video/{{ $cours->videoUri }}" type="video/mp4">
                                                          </video>

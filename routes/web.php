@@ -94,6 +94,20 @@ Route::get('/load-video/{filename}',
 	return response("File doesn't exists", 404);
 })->middleware('member');
 
+/*Route::get('/load-audio/{filename}',
+	function($filename){
+		$audioDir = public_path('audios');
+		if (file_exists($filePath = $audioDir."/".$filename)) {
+
+			$response = new \Symfony\Component\HttpFoundation\BinaryFileResponse($filePath);
+			\Symfony\Component\HttpFoundation\BinaryFileResponse::;
+			return $response;
+		}
+	}
+)->middleware('member');*/
+
+Route::get('/load-audio/{filename}','FormationController@readAudi')->name('member.audio');
+
 /*
 
 Route::get('/roles/',
