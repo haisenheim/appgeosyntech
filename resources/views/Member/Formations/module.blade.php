@@ -59,9 +59,9 @@
                                                         @endif
                                                         <hr/>
                                                         @if($cours->audioUri)
-                                                            <audio controls src="/load-audio/{{$cours->audioUri}}"></audio>
 
-                                                            <audio>
+
+                                                            <audio controls>
                                                                   <source src="{{ url('member.audio', ['filename' => $cours->audioUri]) }}" type="audio/mpeg">
                                                              </audio>
                                                         @endif
