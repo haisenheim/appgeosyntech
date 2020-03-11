@@ -37,7 +37,32 @@ class DiversController extends Controller
     }
 
 
+	public function readAudio($filename){
 
+		/*$audioDir = public_path('audios');
+		if (file_exists($filePath = $audioDir."/".$filename)) {
+
+			if ($stream = fopen($filePath, 'r')) {
+				while (!feof($stream)) {
+					echo fread($stream, 1024);
+				}
+				fclose($stream);
+			}
+		}*/
+
+		return response()->streamDownload(function () use ($filename) {
+			$audioDir = public_path('audios');
+			$filePath = $audioDir."/".$filename;
+			if ($stream = fopen($filePath, 'r')) {
+				while (!feof($stream)) {
+					echo fread($stream, 1024);
+					flush();
+				}
+				fclose($stream);
+			}
+		}, $filename);
+
+	}
 
 
 	public function getAudio($token){

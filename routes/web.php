@@ -106,7 +106,7 @@ Route::get('/load-video/{filename}',
 	}
 )->middleware('member');*/
 
-Route::get('/load-audio/{filename}','FormationController@readAudi')->name('member.audio');
+
 
 /*
 
@@ -385,6 +385,7 @@ Route::prefix('member')
 		Route::get('/formation/{token}','FormationController@show');
 		Route::get('/module/{token}','FormationController@getModule');
 		Route::get('/cours/read-video/{token}','FormationController@readVideo');
+		Route::get('/load-audio/{filename}','FormationController@readAudio')->name('member.audio');
 	});
 
 
