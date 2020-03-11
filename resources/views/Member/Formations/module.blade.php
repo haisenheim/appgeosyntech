@@ -62,7 +62,7 @@
 
 
                                                             <audio controls>
-                                                                  <source src="{{ route('member.audio', ['filename' => $cours->audioUri]) }}" type="audio/mpeg">
+                                                                  <source src="/member/load-audio/{{ $cours->audioUri }}" type="audio/mpeg">
                                                              </audio>
                                                         @endif
                                                          <video width="320" height="240" controls>
