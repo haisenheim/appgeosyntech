@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
-class Metier extends Model
+class Competence extends Model
 {
     //
 
@@ -15,12 +15,10 @@ class Metier extends Model
 
 
 	public function formations(){
-		return $this->belongsToMany('App\Models\Formation','formations_metiers');
+		return $this->belongsToMany('App\User','competences_users');
 	}
 
-	public function secteur(){
-		return $this->belongsTo('App\Models\Secteur');
-	}
+
 
 
 }

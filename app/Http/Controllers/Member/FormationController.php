@@ -118,7 +118,8 @@ class FormationController extends Controller
 
 		$first_test = $module->tests->where('user_id',Auth::user()->id)->where('premier_id',0)->first();
 		if(!$first_test){
-			return view('Member/Formations/test')->with(compact('module'));
+			$premier = 0;
+			return view('Member/Formations/test')->with(compact('module','premier'));
 		}
 
 		return view('/Member/Formations/module')->with(compact('module'));

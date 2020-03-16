@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Centre extends Model
+class Client extends Model
 {
 	//
 
@@ -15,8 +15,13 @@ class Centre extends Model
 		return $this->hasMany('App\User');
 	}
 
-	public function pay(){
-		return $this->belongsTo('App\Models\Pay');
+
+
+	public function commandes(){
+		return $this->hasMany('App\Models\Commande', 'client_id');
 	}
+
+
+
 
 }

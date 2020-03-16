@@ -26,15 +26,16 @@
                     <h4 class="card-title">{{ $module->name  }} : TEST DE CONNAISSANCE</h4>
                 </div>
                     <div class="card-body">
+                    <input type="hidden" id="premier" value="{{ $premier }}"/>
 
-                        <ul class="list-group">
+                        <ul id="questionnaire" class="list-group">
 
                             <?php foreach($module->questions as $question): ?>
                                 <li class="list-group-item">
                                     <h5>{{ $question->name }}</h5>
                                     <ul class="list-group">
                                         @foreach($question->choices as $response)
-                                            <li class="list-group-item"><input class="radio" type="radio" name="{{$question->id}}"/>{{ $response->name }}</li>
+                                            <li class="list-group-item"><input value="{{ $response->id }}" data-ok="{{ $response->ok }}" class="radio" type="radio" name="{{$question->id}}"/>{{ $response->name }}</li>
                                         @endforeach
                                     </ul>
                                 </li>
@@ -147,9 +148,13 @@
 @section('scripts')
 
 <script>
-   /* $('.nav-link').click(function(){
-        $('.nav-link.active').css({'background-color':'#11c46e'});
-    });*/
+    var reponses = [];
+  $('.questionnaire').find('input:checked').each(function(){
+      var elt = {};
+      elt.choice_id=$(this).val();
+      elt.question_id=$(this).prop('name');
+      reponses.push(elt);
+  });
 
 </script>
 
