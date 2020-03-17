@@ -1368,7 +1368,7 @@
         <!-- apexcharts -->
         <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-        <script src="{{ aset('assets/libs/slick-slider/slick/slick.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/slick-slider/slick/slick.min.js') }}"></script>
 
         <!-- Jq vector map -->
         <script src="{{ asset('assets/libs/jqvmap/jquery.vmap.min.js') }}"></script>
