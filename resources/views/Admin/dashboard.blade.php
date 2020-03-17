@@ -25,6 +25,9 @@
     <div class="card-header">
         <h3 class="card-title">ICI LE TABLEAU DE BOARD</h3>
     </div>
+    <div class="card-body">
+        CORPS DU TABLEAU DE BORD
+    </div>
 </div>
 
 @endsection
