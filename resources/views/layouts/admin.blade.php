@@ -147,8 +147,8 @@
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src=" {{ asset(auth()->user()->imageUrl?auth()->user()->imageUrl:'img/avatar.png')  }}" alt="">
-                                    alt="Header Avatar">
-                                <span class="d-none d-sm-inline-block ml-1">Shane</span>
+
+                                <span class="d-none d-sm-inline-block ml-1">{{ auth()->user()->fist_name . "  ". auth()->user()->last_name }}</span>
                                 <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
