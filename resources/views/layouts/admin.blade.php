@@ -26,7 +26,7 @@
 
     </head>
 
-    <body data-sidebar="dark">
+    <body data-sidebar="success">
 
         <!-- Begin page -->
         <div id="layout-wrapper">
