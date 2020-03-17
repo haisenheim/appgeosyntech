@@ -1365,16 +1365,7 @@
         <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
         <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
 
-        <!-- apexcharts -->
-        <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-        <script src="{{ asset('assets/libs/slick-slider/slick/slick.min.js') }}"></script>
-
-        <!-- Jq vector map -->
-        <script src="{{ asset('assets/libs/jqvmap/jquery.vmap.min.js') }}"></script>
-        <script src="{{ asset('assets/libs/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
-
-        <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
 
         <script src="{{ asset('assets/js/app.js') }}"></script>
 
