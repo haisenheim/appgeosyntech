@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Dashboard | Apaxy - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>SITGEST | SITRAD - GESTION</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
@@ -11,8 +11,8 @@
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- slick css -->
-        <link href="assets/libs/slick-slider/slick/slick.css" rel="stylesheet" type="text/css" />
-        <link href="assets/libs/slick-slider/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/libs/slick-slider/slick/slick.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/libs/slick-slider/slick/slick-theme.css') }}" rel="stylesheet" type="text/css" />
 
         <!-- jvectormap -->
         <link href="assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
