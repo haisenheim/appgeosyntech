@@ -83,55 +83,14 @@ Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->name('admin.')
     ->group(function(){
-
-
-	    Route::resource('agences','AgenceController');
-
+	    Route::resource('postes','PosteController');
 	    Route::resource('secteurs','SecteurController');
-
-	    Route::resource('metiers','MetierController');
-
-	    Route::get('contributeur/creances/{token}','FinanceController@getCreancesConsultant');
-
-	    Route::get('contributeur/payees/{token}','FinanceController@getPayeesContributeur');
-	    Route::get('contributeur/facture/{token}','FinanceController@showFactureContributeur');
-	    Route::get('contributeur/disable/{token}','ContributeurController@disable');
-	    Route::get('contributeur/enable/{token}','ContributeurController@enable');
-	    Route::get('formation/disable/{token}','FormationController@disable');
-	    Route::get('formation/enable/{token}','FormationController@enable');
-	    //Finances
-
-
-	    Route::get('consultant/creances/{token}','FinanceController@getCreancesConsultant');
-	    Route::get('consultant/set-confirm/{token}','ExpertController@confirm');
-	    Route::get('consultant/set-senior/{token}','ExpertController@senior');
-	    Route::get('consultant/payees/{token}','FinanceController@getPayeesConsultant');
-	    Route::get('consultant/facture/{token}','FinanceController@showFactureConsultant');
-	    Route::get('alliages/creances','FinanceController@getCreancesAlliages');
-	    Route::get('alliages/payees','FinanceController@getPayeesAlliages');
-	    Route::get('alliages/facture/{token}','FinanceController@showFactureAlliages');
-
-	    Route::resource('contributeurs','ContributeurController');
-        Route::resource('villes','VilleController');
-	    Route::resource('formations','FormationController');
-	    Route::resource('chaire','ChaireController');
-	    Route::resource('centres','CentreController');
-	    Route::resource('corporates','EntrepriseController');
+	    Route::resource('competences','CompetenceController');
+	    Route::resource('categories','CategorieController');
 	    Route::resource('clients','ClientController');
-
-	    Route::post('formation/add-module','FormationController@addModule');
-	    Route::post('module/add-cours','FormationController@addCours');
-	    Route::get('show-module/{token}','FormationController@showModule');
-	    Route::get('module/test/{token}','FormationController@getModuleTest');
-
-
 
 	    Route::resource('users','UserController');
 	    Route::resource('pays','PayController');
-
-
-        Route::resource('experts','ExpertController');
-
 	    Route::get('dashboard','DashboardController');
 
 

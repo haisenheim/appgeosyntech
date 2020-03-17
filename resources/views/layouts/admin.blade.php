@@ -46,7 +46,7 @@
                                 <form class="p-3">
                                     <div class="form-group m-0">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                            <input type="text" class="form-control" placeholder="Recharcher ..." aria-label="Recipient's username">
                                             <div class="input-group-append">
                                                 <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
                                             </div>
@@ -183,22 +183,18 @@
                                 </a>
                             </li>
 
-                            <li>
-                                <a href="#" class=" waves-effect">
-                                    <i class="mdi mdi-calendar-month"></i>
-                                    <span>Calendar</span>
-                                </a>
-                            </li>
+
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="mdi mdi-email-multiple-outline"></i>
-                                    <span>Email</span>
+                                    <span>PARAMETRES</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="email-inbox.html">Inbox</a></li>
-                                    <li><a href="email-read.html">Email Read</a></li>
-                                    <li><a href="email-compose.html">Email Compose</a></li>
+                                    <li><a href="/admin/secteurs">SECTEURS</a></li>
+                                    <li><a href="/admin/competences">COMPETENCES</a></li>
+                                    <li><a href="/admin/postes">POSTES</a></li>
+                                    <li><a href="/admin/categories">CATEGORIES PROFESS.</a></li>
                                 </ul>
                             </li>
 

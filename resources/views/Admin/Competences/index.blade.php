@@ -1,20 +1,22 @@
 @extends('......layouts.admin')
 
-@section('content-header')
-    <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">METIERS</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
-              <li class="breadcrumb-item">PARAMETRES</li>
-              <li class="breadcrumb-item active">METIERS</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+
+@section('page-title')
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box d-flex align-items-center justify-content-between">
+                <h4 class="mb-0 font-size-18">COMPETENCES</h4>
+
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">SGN</a></li>
+                        <li class="breadcrumb-item active">Competences</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('content')
@@ -24,7 +26,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES AGENCES</h3>
+                  <h3 class="card-title">COMPETENCES</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -32,21 +34,17 @@
                     <thead>
                     <tr>
                       <th>NOM</th>
-                      <th>SECTEUR</th>
-                      <th>ICONE</th>
-                      <th>NB. FORMATIONS</th>
+
 
 
                       <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($metiers as $ville)
+                    @foreach($competences as $ville)
                           <tr>
                               <td>{!! $ville->name !!} </td>
-                              <td>{{ $ville->secteur?$ville->secteur->name:'-' }}</td>
-                              <td>{{ $ville->icon }} </td>
-                              <td>{{ $ville->formations->count() }}</td>
+
 
 
                               <td>
@@ -59,9 +57,7 @@
                     <tfoot>
                         <tr>
                       <th>NOM</th>
-                      <th>SECTEUR</th>
-                      <th>ICONE</th>
-                      <th>FORMATIONS</th>
+
 
                       <th></th>
                     </tr>
@@ -83,13 +79,13 @@
                   <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">NOUVEAU METIER</h4>
+                        <h4 class="modal-title">NOUVELLE COMPETENCE</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.metiers.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('admin.competences.store')}}" method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
@@ -98,24 +94,6 @@
                                     <div class="form-group">
                                       <label for="name">NOM</label>
                                       <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom ">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                   <div class="form-group">
-                                      <label for="name">ICONE</label>
-                                      <input type="text" class="form-control" id="name" name="icon" placeholder="Saisir l'icone">
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="secteur_id">SECTEUR</label>
-                                     <select name="secteur_id" class="form-control" id="secteur_id">
-                                        @foreach($secteurs as $p)
-                                            <option value="{{ $p->id }}">{{ $p->name }}</option>
-                                        @endforeach
-                                     </select>
                                     </div>
                                 </div>
 
@@ -146,12 +124,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 
-
-<!-- DataTables -->
-<script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 
 
 

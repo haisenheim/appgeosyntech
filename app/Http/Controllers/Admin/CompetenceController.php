@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Agence;
+use App\Models\Competence;
 use App\Models\Devise;
 use App\Models\Metier;
 use App\Models\Pay;
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-class MetierController extends Controller
+class CompetenceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,9 +24,9 @@ class MetierController extends Controller
      */
     public function index()
     {
-	    $metiers = Metier::all();
-		$secteurs = Secteur::all();
-	    return view('Admin/Metiers/index')->with(compact('metiers','secteurs'));
+	    $competences = Competence::all();
+
+	    return view('Admin/Competences/index')->with(compact('competences'));
     }
 
     /**
