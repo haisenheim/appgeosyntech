@@ -26,7 +26,7 @@
 
     </head>
 
-    <body data-sidebar="success">
+    <body data-sidebar="dark">
 
         <!-- Begin page -->
         <div id="layout-wrapper">
@@ -1366,17 +1366,17 @@
         <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
 
         <!-- apexcharts -->
-        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-        <script src="assets/libs/slick-slider/slick/slick.min.js"></script>
+        <script src="{{ aset('assets/libs/slick-slider/slick/slick.min.js') }}"></script>
 
         <!-- Jq vector map -->
-        <script src="assets/libs/jqvmap/jquery.vmap.min.js"></script>
-        <script src="assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <script src="{{ asset('assets/libs/jqvmap/jquery.vmap.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
 
-        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
 
-        <script src="assets/js/app.js"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
 
     </body>
 </html>
