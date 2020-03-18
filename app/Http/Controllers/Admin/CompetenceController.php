@@ -56,16 +56,11 @@ class CompetenceController extends Controller
 
 
 
-		$ville['icon'] = $request->icon;
-		$ville['secteur_id'] = $request->secteur_id;
-		//$ville['promoted'] = $request->promoted?1:0;
-		$ville['token'] = sha1(date('hmdYsi'.Auth::user()->id));
 
 
+		$ville = Competence::create($ville);
 
-		$ville = Metier::create($ville);
-
-		$request->session()->flash('success','Le metier a été correctement enregistré !!!');
+		$request->session()->flash('success','La competaence a été correctement enregistré !!!');
 		return back();
 
 

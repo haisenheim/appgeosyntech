@@ -49,9 +49,9 @@ class SecteurController extends Controller
 		//dd($request->imageUri);
 		$ville =[];
 		$ville['name']=$request->name;
-		$ville['icon'] = $request->icon;
+
 		//$ville['promoted'] = $request->promoted?1:0;
-		$ville['token'] = sha1(date('hmdYsi'.Auth::user()->id));
+		//$ville['token'] = sha1(date('hmdYsi'.Auth::user()->id));
 
 
 
