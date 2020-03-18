@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-class CompetenceController extends Controller
+class PosteController extends Controller
 {
     /**
      * Display a listing of the resource.
