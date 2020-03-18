@@ -10,17 +10,9 @@ class Secteur extends Model
     //
 
 	protected $guarded = [];
+	public $timestamps = false;
 
 
-
-
-	public function formations(){
-		return $this->hasMany('App\Models\Formation','secteur_id');
-	}
-
-	public function metiers(){
-		return $this->hasMany('App\Models\Metier','secteur_id');
-	}
 
 
 }

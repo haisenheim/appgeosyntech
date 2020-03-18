@@ -4,12 +4,12 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 class="mb-0 font-size-18">SECTEURS</h4>
+                <h4 class="mb-0 font-size-18">POSTES</h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="javascript: void(0);">SGN</a></li>
-                        <li class="breadcrumb-item active">Secteurs</li>
+                        <li class="breadcrumb-item active">Postes</li>
                     </ol>
                 </div>
 
@@ -25,7 +25,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES SECTEURS</h3>
+                  <h3 class="card-title">LISTE DES POSTES</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -33,17 +33,16 @@
                     <thead>
                     <tr>
                       <th>NOM</th>
-                      <th>ICONE</th>
 
 
                       <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($devises as $ville)
+                    @foreach($postes as $ville)
                           <tr>
                               <td>{!! $ville->name !!} </td>
-                              <td><i class="{{ $ville->icon }}"></i> <span class="text-danger"> {{ $ville->icon }} </span> </td>
+
 
                               <td>
 
@@ -55,8 +54,6 @@
                     <tfoot>
                         <tr>
                       <th>NOM</th>
-                      <th>ICON</th>
-
 
                       <th></th>
                     </tr>
@@ -76,13 +73,13 @@
                   <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">NOUVEAU SECTEUR</h4>
+                        <h4 class="modal-title">NOUVEAU POSTE</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.secteurs.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('admin.postes.store')}}" method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
@@ -92,6 +89,21 @@
                                       <label for="name">NOM</label>
                                       <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom du secteur">
                                     </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <ul class="list-inline">
+                                        @foreach($secteurs as $secteur)
+                                            <li class="list-inline">
+                                                <div class="form-group">
+                                                    <label for="">
+                                                        <input name="{{ $secteur->id }}" type="checkbox"/>
+                                                        <span>{{ $secteur->name }}</span>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        @enforeach
+                                    </ul>
                                 </div>
 
 
