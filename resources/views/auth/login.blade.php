@@ -20,7 +20,7 @@
 
     </head>
 
-    <body class="bg-success bg-pattern">
+    <body class="bg-info bg-pattern">
         <div class="home-btn d-none d-sm-block">
             <a href="/"><i class="mdi mdi-home-variant h2 text-white"></i></a>
         </div>
