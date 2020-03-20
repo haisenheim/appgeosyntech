@@ -25,11 +25,8 @@ class UserController extends Controller
     {
         //
 	    $users= \App\User::all();
-	    $pays = Pay::all();
-        //$users = User::all();
-       // dd($villes);
-       // echo "Bonjour tout le monde!!";
-        return view('Admin/Users/index')->with(compact('users','pays'));
+
+        return view('Admin/Users/index')->with(compact('users'));
 
     }
 

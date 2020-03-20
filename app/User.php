@@ -29,9 +29,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-
-
-
     // Association avec les roles
 
     public function role(){
