@@ -93,7 +93,7 @@
 
                                 <div class="form-group">
                                     <ul class="list-inline">
-                                        @foreach($secteurs as $secteur)
+                                        <?php foreach($secteurs as $secteur): ?>
                                             <li class="list-inline">
                                                 <div class="form-group">
                                                     <label for="">
@@ -102,7 +102,7 @@
                                                     </label>
                                                 </div>
                                             </li>
-                                        @enforeach
+                                        <?php endforeach ?>
                                     </ul>
                                 </div>
 

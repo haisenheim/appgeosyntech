@@ -33,7 +33,7 @@
                     <thead>
                     <tr>
                       <th>NOM</th>
-                      <th>ICONE</th>
+
 
 
                       <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
@@ -43,7 +43,6 @@
                     @foreach($devises as $ville)
                           <tr>
                               <td>{!! $ville->name !!} </td>
-                              <td><i class="{{ $ville->icon }}"></i> <span class="text-danger"> {{ $ville->icon }} </span> </td>
 
                               <td>
 
@@ -55,7 +54,7 @@
                     <tfoot>
                         <tr>
                       <th>NOM</th>
-                      <th>ICON</th>
+
 
 
                       <th></th>
