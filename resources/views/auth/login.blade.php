@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center mb-5">
-                            <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="24" ></a>
+                            <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="24" alt="Ici le logo" ></a>
                             <h2 class="font-size-20 text-white-50 mb-4">SITRAD MANAGEMENT</h2>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                         <div class="card">
                             <div class="card-body p-4">
                                 <div class="p-2">
-                                    <h5 class="mb-5 text-center">Se connecter pour continuer</h5>
+
                                     <form class="form-horizontal" action="{{ route('login') }}" method="post">
                                          {{ csrf_field() }}
                                         <div class="row">
