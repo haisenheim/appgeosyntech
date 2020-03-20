@@ -133,10 +133,7 @@
     }
   </style>
 
-@endsection
-
-@section('scripts')
-    <script>
+  <script>
         $('#btn-save').click(function(e){
             e.preventDefault();
             var data = [];
@@ -149,5 +146,6 @@
 
             submit('/admin/post','post',data,redirect('/admin/secteurs'));
         })
-    </script>
+  </script>
+
 @endsection
