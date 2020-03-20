@@ -185,7 +185,7 @@
 
                             <li>
                                 <a href="/admin/users" class="waves-effect">
-                                    <i class="mdi mdi-users"></i>
+                                    <i class="mdi mdi-account-group"></i>
                                     <span>UTILISATEURS</span>
                                 </a>
                             </li>

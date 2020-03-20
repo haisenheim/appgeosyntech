@@ -30,7 +30,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-bordered table-hover table-condensed">
+                  <table id="example1" class="table table-bordered table-hover table-condensed datatable">
                     <thead>
                     <tr>
                       <th>NOM</th>
@@ -179,18 +179,6 @@
     }
   </style>
 
-  <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
-
-<!-- DataTables -->
-<script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
-<script>
-  $(function () {
-    $("#example1").DataTable();
-
-  });
-</script>
 
 
 @endsection
