@@ -30,8 +30,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center mb-5">
-                            <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="24" alt="logo"></a>
-                            <h5 class="font-size-20 text-black-50 mb-4">SITRAD MANAGEMENT</h5>
+                            <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="24" ></a>
+                            <h2 class="font-size-20 text-white-50 mb-4">SITRAD MANAGEMENT</h2>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                                                 </div>
                                                 <div class="form-group mb-4">
                                                     <label for="password">MOT DE PASSE</label>
-                                                    <input name="password" type="password" class="form-control" id="password" placeholder="Saisir votre mot de passw">
+                                                    <input name="password" type="password" class="form-control" id="password" placeholder="Saisir votre mot de passe">
                                                 </div>
 
                                                 <div class="row">
@@ -63,14 +63,9 @@
                                                             <label class="custom-control-label" for="customControlInline">Se souvenir de moi</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="text-md-right mt-3 mt-md-0">
-                                                            <a href="/reset-password" class="text-muted"><i class="mdi mdi-lock"></i> Vous avez oublié votre mot de passe?</a>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div class="mt-4">
-                                                    <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Se Connecter</button>
+                                                    <button class="btn btn-info btn-block waves-effect waves-light" type="submit">Se Connecter</button>
                                                 </div>
 
                                             </div>
