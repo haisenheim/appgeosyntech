@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>OTC | OBAC TRAINING CENTER</title>
+        <title>SM | SITRAD MANAGEMENT</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
@@ -30,8 +30,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center mb-5">
-                            <a href="/" class="logo"><img src="{{ asset('img/logo-obac.png') }}" height="24" alt="logo"></a>
-                            <h5 class="font-size-16 text-white-50 mb-4">OBAC TRAINING CENTER</h5>
+                            <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="24" alt="logo"></a>
+                            <h5 class="font-size-20 text-black-50 mb-4">SITRAD MANAGEMENT</h5>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <div class="card">
                             <div class="card-body p-4">
                                 <div class="p-2">
-                                    <h5 class="mb-5 text-center">Se connecter à OTC pour continuer</h5>
+                                    <h5 class="mb-5 text-center">Se connecter pour continuer</h5>
                                     <form class="form-horizontal" action="{{ route('login') }}" method="post">
                                          {{ csrf_field() }}
                                         <div class="row">
@@ -72,9 +72,7 @@
                                                 <div class="mt-4">
                                                     <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Se Connecter</button>
                                                 </div>
-                                                <div class="mt-4 text-center">
-                                                    <a href="/contact" class="text-muted"><i class="mdi mdi-account-circle mr-1"></i> Contacter nous pour avoir un compte</a>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </form>
