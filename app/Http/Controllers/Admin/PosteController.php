@@ -49,28 +49,16 @@ class PosteController extends Controller
      */
 	public function store(Request $request)
 	{
-		//
-		//dd($request->imageUri);
-
 
 		$ville =[];
 		$ville['name']=$request->name;
-
+		$s = Poste::create($ville);
 		$secteurs = $request->secteurs;
-
-
-
-		$ville = Poste::create($ville);
-
-		for($i=0;$i<count();$i++){
-			//DB::table('postes_secteurs')->insert([''])
+		foreach($secteurs as $secteur){
+			DB::table('postes_secteurs')->insert(['secteur_id'=>$secteur,'poste_id'=>$s->id]);
 		}
 
-
-
-		$request->session()->flash('success','Le poste a été correctement enregistré !!!');
-		return back();
-
+		return response()->json(compact('s'));
 
 	}
 

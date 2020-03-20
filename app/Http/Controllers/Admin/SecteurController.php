@@ -51,15 +51,6 @@ class SecteurController extends Controller
 		//dd($request->imageUri);
 		$ville =[];
 		$ville['name']=$request->name;
-		$s = Poste::create($ville);
-		$secteurs = $request->secteurs;
-		foreach($secteurs as $secteur){
-			DB::table('postes_secteurs')->insert(['secteur_id'=>$secteur,'poste_id'=>$s->id]);
-		}
-
-		//$ville['promoted'] = $request->promoted?1:0;
-		//$ville['token'] = sha1(date('hmdYsi'.Auth::user()->id));
-
 
 
 		$ville = Secteur::create($ville);

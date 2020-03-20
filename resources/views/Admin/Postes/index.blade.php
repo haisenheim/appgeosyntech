@@ -147,7 +147,7 @@
             });
             data.push(data);
 
-            submit('/admin/secteurs','post',data,redirect('/admin/secteurs'));
+            submit('/admin/post','post',data,redirect('/admin/secteurs'));
         })
     </script>
 @endsection
