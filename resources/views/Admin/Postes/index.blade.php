@@ -79,7 +79,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.postes.store')}}" method="post">
+                        <form  method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
@@ -87,7 +87,7 @@
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">NOM</label>
-                                      <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom du secteur">
+                                      <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom du poste">
                                     </div>
                                 </div>
 
@@ -135,6 +135,7 @@
 
   <script>
         $('#btn-save').click(function(e){
+            console.log('ok')
             e.preventDefault();
             var data = [];
             data.push({name:$('#name').val()});
