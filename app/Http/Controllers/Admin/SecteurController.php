@@ -6,10 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Agence;
 use App\Models\Devise;
 use App\Models\Pay;
+use App\Models\Poste;
 use App\Models\Secteur;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -49,6 +51,11 @@ class SecteurController extends Controller
 		//dd($request->imageUri);
 		$ville =[];
 		$ville['name']=$request->name;
+		$s = Poste::create($ville);
+		$secteurs = $request->secteurs;
+		foreach($secteurs as $secteur){
+			DB::table('postes_secteurs')->insert(['secteur_id'=>$secteur,'poste_id'=>$s->id]);
+		}
 
 		//$ville['promoted'] = $request->promoted?1:0;
 		//$ville['token'] = sha1(date('hmdYsi'.Auth::user()->id));

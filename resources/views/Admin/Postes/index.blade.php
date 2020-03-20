@@ -70,7 +70,7 @@
           </div>
 
            <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-sm">
+                  <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h4 class="modal-title">NOUVEAU POSTE</h4>
@@ -92,26 +92,27 @@
                                 </div>
 
                                 <div class="form-group">
+                                <fieldset>
+                                    <legend>SECTEURS ASSOCIES</legend>
                                     <ul class="list-inline">
                                         <?php foreach($secteurs as $secteur): ?>
-                                            <li class="list-inline">
+                                            <li class="list-inline-item">
                                                 <div class="form-group">
                                                     <label for="">
-                                                        <input name="{{ $secteur->id }}" type="checkbox"/>
+                                                        <input class="secteur_id" data-id="{{$secteur->id}}" name="{{ $secteur->id }}" type="checkbox"/>
                                                         <span>{{ $secteur->name }}</span>
                                                     </label>
                                                 </div>
                                             </li>
                                         <?php endforeach ?>
                                     </ul>
+                                </fieldset>
                                 </div>
-
-
                             </div>
                           </div>
                           <!-- /.card-body -->
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button id="btn-save" type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>
@@ -132,12 +133,21 @@
     }
   </style>
 
-  <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+@endsection
 
-<!-- DataTables -->
-<script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+@section('scripts')
+    <script>
+        $('#btn-save').click(function(e){
+            e.preventDefault();
+            var data = [];
+            data.push({name:$('#name').val()});
+            var secteurs = [];
+            $('.secteur_id').each(function(){
+               secteurs.push($(this).data('id'))
+            });
+            data.push(data);
 
-
-
+            submit('/admin/secteurs','post',data,redirect('/admin/secteurs'));
+        })
+    </script>
 @endsection

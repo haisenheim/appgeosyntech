@@ -36,6 +36,22 @@
         <script src="{{ asset('assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js') }}"></script>
         <script>
             $(document).ready(function(){$(".datatable").DataTable();});
+
+            function submit(uri,type,data,action){
+                $.ajax({
+                    url:uri,
+                    dataType:'json',
+                    type:type,
+                    data:data,
+                    success:function(dt){
+                        action;
+                    }
+                });
+            }
+
+            function redirect(url){
+                window.location.href=url;
+            }
         </script>
 
 
