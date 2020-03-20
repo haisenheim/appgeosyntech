@@ -13,6 +13,7 @@ use App\Models\Secteur;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -26,8 +27,8 @@ class PosteController extends Controller
     public function index()
     {
 	    $postes = Poste::all();
-
-	    return view('Admin/Postes/index')->with(compact('postes'));
+		$secteurs = Secteur::all();
+	    return view('Admin/Postes/index')->with(compact('postes','secteurs'));
     }
 
     /**
@@ -55,13 +56,19 @@ class PosteController extends Controller
 		$ville =[];
 		$ville['name']=$request->name;
 
+		$secteurs = $request->secteurs;
 
 
 
+		$ville = Poste::create($ville);
 
-		$ville = Competence::create($ville);
+		for($i=0;$i<count();$i++){
+			//DB::table('postes_secteurs')->insert([''])
+		}
 
-		$request->session()->flash('success','La competaence a été correctement enregistré !!!');
+
+
+		$request->session()->flash('success','Le poste a été correctement enregistré !!!');
 		return back();
 
 

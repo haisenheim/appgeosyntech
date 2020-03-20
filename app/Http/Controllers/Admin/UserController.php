@@ -68,7 +68,7 @@ class UserController extends Controller
         $user->role_id = $request->role_id;
         $user->moi_id=date('m');
         $user->annee=date('Y');
-        $user->male = $request['male']=='on'?1:0;
+       // $user->male = $request['male']=='on'?1:0;
         $user->active = 1;
 	    $user->token = sha1(Auth::user()->id . date('Yhmdhis'));
 
@@ -92,7 +92,7 @@ class UserController extends Controller
 
 
         $user->save();
-          $request->session()->flash('message','La ville a été correctement enregistrée !!!');
+          $request->session()->flash('message','L\'utilisateur a été correctement enregistrée !!!');
             return redirect('/admin/users');
 
 

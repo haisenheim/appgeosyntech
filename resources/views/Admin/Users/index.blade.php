@@ -1,7 +1,7 @@
 
 
 
-@extends('......layouts.admin')
+@extends('layouts.admin')
 
 @section('content-header')
     <div class="container-fluid">
@@ -85,7 +85,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header bg-info">
-                        <h4 class="modal-title">NOUVEL UTILISATEUR OTC</h4>
+                        <h4 class="modal-title">NOUVEL UTILISATEUR</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -94,58 +94,66 @@
                         <form enctype="multipart/form-data" role="form" action="{{route('admin.users.store')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
-                            <div class="form-group">
-                              <label for="name">NOM</label>
-                              <input type="text" class="form-control" id="name" name="last_name" placeholder="Saisir le nom ">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">PRENOM</label>
-                              <input type="text" class="form-control" id="name" name="first_name" placeholder="Saisir le prenom">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">ADRESSE</label>
-                              <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
-                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="name">NOM</label>
+                                      <input type="text" class="form-control" id="name" name="last_name" placeholder="Saisir le nom ">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="name">PRENOM</label>
+                                      <input type="text" class="form-control" id="name" name="first_name" placeholder="Saisir le prenom">
+                                    </div>
+                                </div>
 
-                            <div class="form-group">
-                              <label for="phone">TELEPHONE</label>
-                              <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
-                            </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="name">ADRESSE</label>
+                                      <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
+                                    </div>
+                                </div>
 
-                            <div class="form-group">
-                              <label for="pay_id">PAYS</label>
-                              <select name="pay_id" id="pay_id" class="form-control">
-                                @foreach($pays as $p)
-                                    <option value="{{ $p->id }}">{{ $p->name }}</option>
-                                @endforeach
-                              </select>
-                            </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="phone">TELEPHONE</label>
+                                      <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
+                                    </div>
+                                </div>
 
-                            <div class="form-group">
-                              <label for="role_id">ROLE</label>
-                              <select name="role_id" id="role_id" class="form-control">
-                                    <option value="2">ADMINITRATEUR NATIONAL</option>
-                                    <option value="1">ADMINISTRATEUR OBAC</option>
-                              </select>
-                            </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="role_id">ROLE</label>
+                                      <select required="required" name="role_id" id="role_id" class="form-control">
+                                        <option value="0">SELECTIONNER UN ROLE</option>
+                                            @foreach($roles as $role)
+                                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                            @endforeach
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="email">EMAIL</label>
+                                      <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="name">MOT DE PASSE</label>
+                                      <input type="password" class="form-control" id="name" name="password" placeholder="">
+                                    </div>
+                                </div>
 
-                            <div class="form-group">
-                              <label for="email">EMAIL</label>
-                              <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">MOT DE PASSE</label>
-                              <input type="password" class="form-control" id="name" name="password" placeholder="">
-                            </div>
-                            <div class="form-group">
-                              <label for="name">CONFIRMATION DU MOT DE PASSE</label>
-                              <input type="password" class="form-control" id="name" name="cpassword" placeholder="">
-                            </div>
-                            <div class="form-group">
-                            <label for="exampleInputFile">PHOTO</label>
-                            <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
+                                <div class="col-md-3 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">PHOTO</label>
+                                        <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
+                                    </div>
+                                </div>
 
-                          </div>
+                            </div>
                           </div>
                           <!-- /.card-body -->
 
