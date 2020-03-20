@@ -25,8 +25,8 @@ class UserController extends Controller
     {
         //
 	    $users= \App\User::all();
-
-        return view('Admin/Users/index')->with(compact('users'));
+		$roles = Role::all()->where('id','<',6);
+        return view('Admin/Users/index')->with(compact('users','roles'));
 
     }
 
