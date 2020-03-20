@@ -193,7 +193,7 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-email-multiple-outline"></i>
+                                    <i class="mdi mdi-cogs"></i>
                                     <span>PARAMETRES</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">

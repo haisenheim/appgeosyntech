@@ -84,7 +84,7 @@
            <div class="modal fade" id="modal-lg">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header bg-info">
+                      <div class="modal-header">
                         <h4 class="modal-title">NOUVEL UTILISATEUR</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
@@ -108,7 +108,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-3 col-sm-12">
+                                <div class="col-md-5 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">ADRESSE</label>
                                       <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
