@@ -8,7 +8,7 @@
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">SGN</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">SM</a></li>
                         <li class="breadcrumb-item active">Secteurs</li>
                     </ol>
                 </div>
@@ -25,29 +25,23 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES SECTEURS <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
+                  <h3 class="card-title">BASE DE DONNEES DES SECTEURS <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
 
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-bordered table-hover table-condensed datatable">
-                    <thead>
-                    <tr>
-                      <th>NOM</th>
+                    <ul class="list-inline">
+                             @foreach($devises as $ville)
+                              <li class="list-inline-item index-item">
+                               <ul class="list-inline " style="margin-left: 10px">
+                                    <li class="list-inline-item">{!! $ville->name !!}</li>
+                                    <li class="list-inline-item"><a title="afficher" class="badge badge-info" href="#"><i class="fa fa-eye"></i></a></li>
+                                    <li class="list-inline-item"><a title="supprimer" class="badge badge-danger" href="#"><i class="fa fa-trash"></i></a></li>
+                               </ul>
+                        @endforeach
+                        </li>
+                    </ul>
 
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($devises as $ville)
-                          <tr>
-                              <td>{!! $ville->name !!} </td>
-
-                          </tr>
-                      @endforeach
-
-                    </tbody>
-
-                  </table>
                 </div>
                 <!-- /.card-body -->
               </div>
