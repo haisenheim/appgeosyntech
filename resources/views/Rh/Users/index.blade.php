@@ -1,7 +1,7 @@
 
 
 
-@extends('layouts.admin')
+@extends('layouts.rh')
 
 @section('content-header')
     <div class="container-fluid">

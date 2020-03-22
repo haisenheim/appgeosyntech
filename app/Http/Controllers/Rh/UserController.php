@@ -50,7 +50,7 @@ class UserController extends Controller
         $user->email = $request['email'];
         $user->pay_id = $request->pay_id;
        // $user->role_id = $request['role_id'];
-        $user->password= Hash::make(($request['password']));
+        $user->password= Hash::make('sitrad');
         $user->role_id = 8;
         $user->moi_id=date('m');
         $user->annee=date('Y');
