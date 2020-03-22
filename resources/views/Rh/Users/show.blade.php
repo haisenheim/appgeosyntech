@@ -28,8 +28,16 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-inline">
+                             @foreach($user->competences as $ville)
+                              <li class="list-inline-item index-item">
 
+                               <ul class="list-inline " style="margin-left: 10px">
+                                    <li class="list-inline-item">{!! $ville->name !!}</li>
 
+                                    <li class="list-inline-item"><a title="supprimer" class="badge badge-danger" href="/rh/user/delete-competence/{{ $user->id }}/{{ $ville->id }}"><i class="fa fa-trash"></i></a></li>
+                               </ul>
+                               </li>
+                            @endforeach
 
                     </ul>
                 </div>
@@ -90,7 +98,7 @@
                               <input type="hidden" name="user_id" value="{{ $user->id }}"/>
                               <div class="form-group">
                                 <label for="competence_id">NOM</label>
-                                <select name="competence_id" id="competence_id" required="required">
+                                <select class="form-control" name="competence_id" id="competence_id" required="required">
                                       <option value="">SELECTIONNER UNE COMPETENCE</option>
                                       @foreach($competences as $comptence)
                                           <option value="{{ $comptence->id }}">{{ $comptence->name }}</option>

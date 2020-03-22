@@ -96,6 +96,7 @@ class UserController extends Controller
     {
         //
         $user = User::where('token',$token)->first();
+	    dd($user->competences);
 	    $competences = Competence::all();
         return view('Rh/Users/show')->with(compact('user','competences'));
     }
