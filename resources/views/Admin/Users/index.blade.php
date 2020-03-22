@@ -26,7 +26,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES UTILISATEURS</h3>
+                  <h3 class="card-title">LISTE DES UTILISATEURS <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -39,7 +39,7 @@
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
                       <th>ROLE</th>
-                      <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+                      <th></th>
                     </tr>
                     </thead>
                     <tbody>

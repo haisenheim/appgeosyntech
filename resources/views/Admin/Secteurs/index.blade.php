@@ -25,8 +25,8 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES SECTEURS</h3>
-                  <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a>
+                  <h3 class="card-title">LISTE DES SECTEURS <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
+
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">

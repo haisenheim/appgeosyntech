@@ -29,4 +29,10 @@
         <!-- App Css-->
         <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
+        <style>
+            .pull-right{
+                float: right;
+            }
+        </style>
+
     </head>
