@@ -34,26 +34,16 @@
 
                              @foreach($competences as $ville)
                               <li class="list-inline-item">
-                              {!! $ville->name !!}
+
                                <ul class="list-inline" style="margin-left: 10px">
+                                    <li class="list-inline-item">{!! $ville->name !!}</li>
                                     <li class="list-inline-item"><a title="afficher" class="badge badge-info" href="#"><i class="fa fa-eye"></i></a></li>
                                     <li class="list-inline-item"><a title="supprimer" class="badge badge-danger" href="#"><i class="fa fa-trash"></i></a></li>
                                </ul>
                         @endforeach
                         </li>
                     </ul>
-                  <table id="example1" class="table table-bordered table-hover table-condensed">
-                    <thead>
-                    <tr>
-                      <th>NOM</th>
-                    </tr>
-                    </thead>
-                    <tbody>
 
-
-                    </tbody>
-
-                  </table>
                 </div>
                 <!-- /.card-body -->
               </div>
