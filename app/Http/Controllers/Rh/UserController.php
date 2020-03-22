@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Rh;
 
 use App\Http\Controllers\Controller;
+use App\Models\Classement;
 use App\Models\Competence;
 use App\Models\Pay;
 use App\Models\Role;
@@ -10,6 +11,7 @@ use App\Models\Ville;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
@@ -111,6 +113,24 @@ class UserController extends Controller
 		}else{
 			request()->session()->flash('warning','Competence presente !!!');
 		}
+
+		return redirect()->back();
+	}
+
+
+	public function addCategory(){
+
+		//dd($competence);
+
+			$classe = Classement::where('user_id',request('user_id'))->last();
+			if($classe){
+				$classe->fin = new Date();
+				$classe->save();
+			}
+
+			DB::table('classements')->insert(['category_id'=>request('category_id'),'user_id'=>request('user_id'),'debut'=>request('debut')]);
+			request()->session()->flash('success','Ok !!!');
+
 
 		return redirect()->back();
 	}

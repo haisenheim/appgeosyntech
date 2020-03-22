@@ -67,10 +67,11 @@
                         </div>
                     <div style="padding: 10px;">
                         <ul class="list-group">
-                            <li class="list-inline-item"><h5>Adresse: {{ $user->address }}</h5></li>
-                            <li class="list-inline-item"><h6><i class="fa fa-mobile"></i> {{ $user->phone }}</h6></li>
-                            <li class="list-inline-item"><h6><i class="fa fa-envelope"></i> {{ $user->email }}</h6></li>
-
+                            <li class="list-group-item"><h5>Adresse: {{ $user->address }}</h5></li>
+                            <li class="list-group-item"><h6><i class="fa fa-mobile"></i> {{ $user->phone }}</h6></li>
+                            <li class="list-group-item"><h6><i class="fa fa-envelope"></i> {{ $user->email }}</h6></li>
+                            <li class="list-group-item"><h6><i class="mdi mdi-google-classroom"></i> {{ $user->classe?$user->classe->categorie->name:'-' }}</h6></li>
+                            <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-xs btn-danger btn-block btn-sm"><i class="mdi mdi-shape-rectangle-plus"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,6 +105,55 @@
                                           <option value="{{ $comptence->id }}">{{ $comptence->name }}</option>
                                       @endforeach
                                 </select>
+                              </div>
+                          </div>
+
+                      </div>
+
+
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+     </div>
+     <div class="modal fade" id="addCategory">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">AJOUT D'UNE CATEGORIE</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form  action="/rh/user/add-category" method="post">
+                  {{csrf_field()}}
+
+                    <div class="card-body">
+                      <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                              <input type="hidden" name="user_id" value="{{ $user->id }}"/>
+                              <div class="form-group">
+                                <label for="competence_id">CATEGORIE</label>
+                                <select class="form-control" name="category_id" id="competence_id" required="required">
+                                      <option value="">SELECTIONNER UNE CATEGORIE</option>
+                                      @foreach($categories as $comptence)
+                                          <option value="{{ $comptence->id }}">{{ $comptence->name }}</option>
+                                      @endforeach
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <label for="debut">DEPUIS LE :</label>
+                                <input class="form-control" name="debut" id="debut" type="date" required="required">
+
                               </div>
                           </div>
 

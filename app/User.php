@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Classement;
 use App\Traits\LockableTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -47,6 +48,9 @@ class User extends Authenticatable
 		return $this->hasMany('App\Models\Livraison');
 	}
 
+	public function classements(){
+		return $this->hasMany('App\Models\Classement');
+	}
 	public function competences(){
 		return $this->belongsToMany('App\Models\Competence','competences_users');
 	}
@@ -55,6 +59,12 @@ class User extends Authenticatable
 		return $this->hasMany('App\Models\Bulletin');
 	}
 
+	public function getClasseAttribute(){
+		$classement = Classement::where('user_id',$this->id)->last();
+
+		return $classement;
+
+	}
 
     public function getNameAttribute(){
         return $this->last_name . "  ".$this->first_name;
