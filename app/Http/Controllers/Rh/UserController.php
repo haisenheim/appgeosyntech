@@ -24,6 +24,7 @@ class UserController extends Controller
     {
         //
 	    $users= \App\User::all()->where('role',8);
+	    $pays = Pay::all();
 
         return view('Rh/Users/index')->with(compact('users','roles'));
 
