@@ -44,45 +44,9 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">PLACEMENTS</h4>
-                </div>
+
                 <div class="card-body">
-                   <table id="example1" class="table table-bordered table-hover table-condensed">
-                    <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>ENTREPRISE</th>
 
-                      <th>DEBUT</th>
-                      <th>FIN</th>
-
-
-                      <th>POSTE</th>
-                      <th>STATUT</th>
-                      <th></th>
-
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($user->livraisons as $liv)
-                          <tr>
-                             <td>{{ $liv->name }}</td>
-                             <td>{{ $liv->ligne->commande->client->name }}</td>
-                             <td>{{ date($liv->debut,'d/m/Y') }}</td>
-                             <td>{{ date($liv->fin,'d/m/Y') }}</td>
-
-
-                             <td>{{ $liv->poste?$liv->poste->name:'-' }}</td>
-                             <td>-</td>
-                              <td></td>
-
-                          </tr>
-                      @endforeach
-
-                    </tbody>
-
-                  </table>
                 </div>
             </div>
         </div>
