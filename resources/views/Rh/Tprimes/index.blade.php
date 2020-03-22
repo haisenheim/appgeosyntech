@@ -77,7 +77,7 @@
                           </div>
                           <!-- /.card-body -->
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Valider</button>
                           </div>
                         </form>
                       </div>
