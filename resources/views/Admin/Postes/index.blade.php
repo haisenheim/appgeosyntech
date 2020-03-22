@@ -133,20 +133,24 @@
     }
   </style>
 
-  <script>
-        $('#btn-save').click(function(e){
-            console.log('ok');
-            e.preventDefault();
-            var data = [];
-            data.push({name:$('#name').val()});
-            var secteurs = [];
-            $('.secteur_id').each(function(){
-               secteurs.push($(this).data('id'))
-            });
-            data.push(data);
 
-           // submit('/admin/post','post',data,redirect('/admin/secteurs'));
-        })
-  </script>
 
+@endsection
+
+@section('scripts')
+    <script>
+            $('#btn-save').click(function(e){
+                console.log('ok');
+                e.preventDefault();
+                var data = [];
+                data.push({name:$('#name').val()});
+                var secteurs = [];
+                $('.secteur_id').each(function(){
+                   secteurs.push($(this).data('id'))
+                });
+                data.push(data);
+
+               submit('/admin/post','post',data,redirect('/admin/secteurs'));
+            })
+      </script>
 @endsection
