@@ -35,8 +35,6 @@ class User extends Authenticatable
         return $this->belongsTo('App\Models\Role');
     }
 
-
-
 	public function client(){
 		return $this->belongsTo('App\Models\Client');
 	}
@@ -50,7 +48,7 @@ class User extends Authenticatable
 	}
 
 	public function competences(){
-		return $this->belongsToMany('App\Models\Competence');
+		return $this->belongsToMany('App\Models\Competence','competences_users');
 	}
 
 	public function bulletins(){

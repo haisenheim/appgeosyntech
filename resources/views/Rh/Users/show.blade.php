@@ -27,7 +27,7 @@
                     <h4>COMPETENCES <a href="#" data-toggle="modal" data-target="#addCompetence" class="btn btn-xs btn-info pull-right"><i class="fa fa-plus-circle"></i></a></h4>
                 </div>
                 <div class="card-body">
-                    <ul class="list-inline">
+                    <ul clas    s="list-inline">
 
                              @foreach($user->competences as $ville)
                               <li class="list-inline-item index-item">
@@ -38,7 +38,7 @@
                                     <li class="list-inline-item"><a title="supprimer" class="badge badge-danger" href="/rh/user/delete-competence/{{ $user->id }}/{{ $ville->id }}"><i class="fa fa-trash"></i></a></li>
                                </ul>
                                </li>
-                        @endforeach
+                            @endforeach
 
                     </ul>
                 </div>
