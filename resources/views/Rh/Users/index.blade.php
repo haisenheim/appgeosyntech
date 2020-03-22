@@ -67,7 +67,7 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
-                      <th>ROLE</th>
+                      <th>PAYS RES./th>
                       <th></th>
                     </tr>
                     </tfoot>
@@ -125,7 +125,7 @@
                                 <div class="col-md-4 col-sm-12">
                                     <div class="form-group">
                                       <label for="role_id">PAYS</label>
-                                      <select required="required" name="role_id" id="role_id" class="form-control">
+                                      <select required="required" name="pay_id" id="pay_id" class="form-control">
                                         <option value="0">SELECTIONNER UN PAYS</option>
                                             @foreach($pays as $role)
                                                 <option value="{{ $role->id }}">{{ $role->name }}</option>

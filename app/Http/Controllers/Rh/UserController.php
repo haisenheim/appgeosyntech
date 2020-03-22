@@ -23,7 +23,7 @@ class UserController extends Controller
     public function index()
     {
         //
-	    $users= \App\User::all()->where('role',8);
+	    $users= \App\User::all()->where('role_id',8);
 	    $pays = Pay::all();
 
         return view('Rh/Users/index')->with(compact('users','pays'));
@@ -79,7 +79,7 @@ class UserController extends Controller
 
         $user->save();
           $request->session()->flash('message','L\'agent a été correctement enregistré !!!');
-            return redirect('/admin/users');
+            return redirect('/rh/users');
 
 
     }
