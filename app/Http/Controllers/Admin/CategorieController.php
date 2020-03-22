@@ -26,7 +26,6 @@ class CategorieController extends Controller
     public function index()
     {
 	    $categories = Competence::all();
-
 	    return view('Admin/Categories/index')->with(compact('categories'));
     }
 

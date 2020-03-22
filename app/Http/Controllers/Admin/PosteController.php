@@ -53,12 +53,9 @@ class PosteController extends Controller
 		$ville =[];
 		$ville['name']=$request->name;
 		$s = Poste::create($ville);
-		$secteurs = $request->secteurs;
-		foreach($secteurs as $secteur){
-			DB::table('postes_secteurs')->insert(['secteur_id'=>$secteur,'poste_id'=>$s->id]);
-		}
 
-		return response()->json(compact('s'));
+		$request->session()->flash('success','Le poste a été correctement enregistré !!!');
+		return redirect()->back();
 
 	}
 

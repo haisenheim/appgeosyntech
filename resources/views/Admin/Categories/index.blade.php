@@ -1,15 +1,16 @@
 @extends('......layouts.admin')
 
+
 @section('page-title')
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 class="mb-0 font-size-18">POSTES</h4>
+                <h4 class="mb-0 font-size-18">BASE DE DONNEES DES CATEGORIES SOCIO PROFESSIONNELLES</h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="javascript: void(0);">SM</a></li>
-                        <li class="breadcrumb-item active">Postes</li>
+                        <li class="breadcrumb-item active">Categories socio prof.</li>
                     </ol>
                 </div>
 
@@ -20,19 +21,20 @@
 
 @section('content')
 
-          <div class="container">
-                <div class="row">
+    <div class="container">
+         <div class="row">
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">BASE DE DONNEES DES POSTES <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
-
+                  <h3 class="card-title">CATEGORIES S.P. <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                     <ul class="list-inline">
-                             @foreach($postes as $ville)
+
+                             @foreach($categories as $ville)
                               <li class="list-inline-item index-item">
+
                                <ul class="list-inline " style="margin-left: 10px">
                                     <li class="list-inline-item">{!! $ville->name !!}</li>
                                     <li class="list-inline-item"><a title="afficher" class="badge badge-info" href="#"><i class="fa fa-eye"></i></a></li>
@@ -41,6 +43,7 @@
                         @endforeach
                         </li>
                     </ul>
+
                 </div>
                 <!-- /.card-body -->
               </div>
@@ -49,19 +52,21 @@
 
             <!-- /.col -->
           </div>
-          </div>
+    </div>
+
+
 
            <div class="modal fade" id="modal-lg">
                   <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">NOUVEAU POSTE</h4>
+                        <h4 class="modal-title">NOUVELLE CATEGORIE</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form action="/admin/postes" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('admin.categories.store')}}" method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
@@ -69,15 +74,17 @@
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">NOM</label>
-                                      <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom du poste">
+                                      <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom ">
                                     </div>
                                 </div>
 
                             </div>
+
+
                           </div>
                           <!-- /.card-body -->
                           <div class="card-footer">
-                            <button id="btn-save" type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>
@@ -100,32 +107,6 @@
 
 
 
-@endsection
-
-@section('scripts')
-    <script>
-            $('#btn-save').click(function(e){
-                //console.log('ok');
-                e.preventDefault();
-                var data = [];
-                data.push({name:$('#name').val()});
-                var secteurs = [];
-                $('.secteur_id').each(function(){
-                   secteurs.push($(this).data('id'))
-                });
-                data.push(data);
-
-                 $.ajax({
-                     url:'/admin/post',
-                     dataType:'json',
-                     type:'get',
-                     data:data,
-                     success:function(dt){
-                         window.location.href='/admin/postes';
-                     }
-                 });
 
 
-            })
-      </script>
 @endsection

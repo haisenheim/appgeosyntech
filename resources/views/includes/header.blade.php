@@ -38,6 +38,7 @@
                 border: 1px #ccc solid;
                 padding: 8px;
                 border-radius: 10px;
+                margin-top:5px;
             }
 
            .card> div.card-header{
