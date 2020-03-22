@@ -130,7 +130,11 @@ class UserController extends Controller
 				$classe->save();
 			}
 
-			DB::table('classements')->insert(['category_id'=>request('category_id'),'user_id'=>request('user_id'),'debut'=>request('debut')]);
+			$data = ['category_id'=>request('category_id'),'user_id'=>request('user_id'),'debut'=>request('debut')];
+
+		Classement::create($data);
+
+			//DB::table('classements')->insert(['category_id'=>request('category_id'),'user_id'=>request('user_id'),'debut'=>request('debut')]);
 			request()->session()->flash('success','Ok !!!');
 
 
