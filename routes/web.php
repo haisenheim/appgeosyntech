@@ -110,7 +110,7 @@ Route::prefix('rh')
 		Route::resource('secteurs','SecteurController');
 		Route::resource('competences','CompetenceController');
 		Route::resource('categories','CategorieController');
-		Route::resource('tcertificats','TcerficatController');
+		Route::resource('tcertificats','TcertificatController');
 		Route::resource('tprimes','TprimeController');
 		Route::resource('users','UserController');
 		Route::get('dashboard','DashboardController');
