@@ -101,7 +101,20 @@ Route::prefix('admin')
 
     });
 
+Route::prefix('rh')
+	->namespace('Rh')
+	->middleware(['auth','rh'])
+	->name('rh.')
+	->group(function(){
+		Route::resource('postes','PosteController');
+		Route::resource('secteurs','SecteurController');
+		Route::resource('competences','CompetenceController');
+		Route::resource('categories','CategorieController');
+		Route::resource('users','UserController');
+		Route::get('dashboard','DashboardController');
 
+
+	});
 
 
 Route::prefix('member')

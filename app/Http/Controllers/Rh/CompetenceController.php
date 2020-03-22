@@ -1,22 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Rh;
 
 use App\Http\Controllers\Controller;
-use App\Models\Agence;
-use App\Models\Category;
+
 use App\Models\Competence;
-use App\Models\Devise;
-use App\Models\Metier;
+
 use App\Models\Pay;
 use App\Models\Secteur;
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 
-class CategorieController extends Controller
+class CompetenceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,8 +19,9 @@ class CategorieController extends Controller
      */
     public function index()
     {
-	    $categories = Category::all();
-	    return view('Admin/Categories/index')->with(compact('categories'));
+	    $competences = Competence::all();
+
+	    return view('Rh/Competences/index')->with(compact('competences'));
     }
 
     /**
@@ -50,12 +45,17 @@ class CategorieController extends Controller
 		//
 		//dd($request->imageUri);
 
+
 		$ville =[];
 		$ville['name']=$request->name;
 
-		$ville = Category::create($ville);
 
-		$request->session()->flash('success','La categorie a été correctement enregistrée !!!');
+
+
+
+		$ville = Competence::create($ville);
+
+		$request->session()->flash('success','La competaence a été correctement enregistré !!!');
 		return back();
 
 
@@ -71,7 +71,7 @@ class CategorieController extends Controller
 	{
 		//
 		$secteur = Secteur::where('token',$token)->first();
-		return view('Admin/Secteurs/show')->with(compact('secteur'));
+		return view('Rh/Secteurs/show')->with(compact('secteur'));
 	}
 
     /**

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class Adminag
+class Ro
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class Adminag
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->role_id != 3){
+        if(Auth::user()->role_id != 5){
             return redirect('/login');
         }
 
