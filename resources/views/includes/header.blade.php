@@ -39,6 +39,10 @@
                 padding: 8px;
                 border-radius: 10px;
             }
+
+           .card> div.card-header{
+                background-color: #fff;
+            }
         </style>
 
     </head>
