@@ -122,7 +122,7 @@ class UserController extends Controller
 
 		//dd($competence);
 
-			$classe = Classement::where('user_id',request('user_id'))->last();
+			$classe = Classement::all()->where('user_id',request('user_id'))->last();
 			if($classe){
 				$classe->fin = new Date();
 				$classe->save();

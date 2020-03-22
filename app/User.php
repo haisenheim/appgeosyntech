@@ -60,7 +60,7 @@ class User extends Authenticatable
 	}
 
 	public function getClasseAttribute(){
-		$classement = Classement::where('user_id',$this->id)->last();
+		$classement = Classement::all()->where('user_id',$this->id)->last();
 
 		return $classement;
 
