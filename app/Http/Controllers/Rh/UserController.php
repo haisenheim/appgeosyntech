@@ -103,7 +103,7 @@ class UserController extends Controller
 
 
 	public function addCompetence(){
-		$competence = DB::table('competences_users')->where(['competence_id'=>request('competence_id'),'user_id'=>request('user_id')])->get();
+		$competence = DB::table('competences_users')->where(['competence_id'=>request('competence_id'),'user_id'=>request('user_id')])->first();
 		dd($competence);
 		if(!$competence){
 			DB::table('competences_users')->insert(['competence_id'=>request('competence_id'),'user_id'=>request('user_id')]);
