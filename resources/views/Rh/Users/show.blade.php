@@ -65,7 +65,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($user->livraison as $liv)
+                    @foreach($user->livraisons as $liv)
                           <tr>
                              <td>{{ $liv->name }}</td>
                              <td>{{ $liv->ligne->commande->client->name }}</td>
