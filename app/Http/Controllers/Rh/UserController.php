@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Rh;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Classement;
 use App\Models\Competence;
 use App\Models\Pay;
@@ -100,7 +101,8 @@ class UserController extends Controller
         $user = User::where('token',$token)->first();
 	    //dd($user->competences);
 	    $competences = Competence::all();
-        return view('Rh/Users/show')->with(compact('user','competences'));
+	    $categories = Category::all();
+        return view('Rh/Users/show')->with(compact('user','competences','categories'));
     }
 
 
