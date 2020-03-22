@@ -97,21 +97,10 @@
            </div>
 
 
-<style>
-    .table th,
-    .table td {
-      padding: 0.35rem;
-      vertical-align: top;
-      border-top: 1px solid #dee2e6;
-    }
-  </style>
+@endsection
 
-  <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
-
-<!-- DataTables -->
-<script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
-
-
+@section('scripts')
+<script>
+     $(document).ready(function(){$(".datatable").DataTable();});
+</script>
 @endsection
