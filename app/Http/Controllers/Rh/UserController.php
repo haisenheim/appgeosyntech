@@ -7,7 +7,7 @@ use App\Models\Competence;
 use App\Models\Pay;
 use App\Models\Role;
 use App\Models\Ville;
-use Illuminate\Foundation\Auth\User;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -96,7 +96,7 @@ class UserController extends Controller
     {
         //
         $user = User::where('token',$token)->first();
-	    dd($user->competences);
+	    //dd($user->competences);
 	    $competences = Competence::all();
         return view('Rh/Users/show')->with(compact('user','competences'));
     }
