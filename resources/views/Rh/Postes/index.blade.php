@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.rh')
 
 @section('page-title')
     <div class="row">
@@ -61,7 +61,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form action="/admin/postes" method="post">
+                        <form action="/rh/postes" method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
@@ -116,12 +116,12 @@
                 data.push(data);
 
                  $.ajax({
-                     url:'/admin/post',
+                     url:'/rh/post',
                      dataType:'json',
                      type:'get',
                      data:data,
                      success:function(dt){
-                         window.location.href='/admin/postes';
+                         window.location.href='/rh/postes';
                      }
                  });
 

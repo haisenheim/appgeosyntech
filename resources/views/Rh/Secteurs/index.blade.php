@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.rh')
 
 @section('page-title')
     <div class="row">
@@ -62,7 +62,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.secteurs.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('rh.secteurs.store')}}" method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
