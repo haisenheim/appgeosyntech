@@ -169,7 +169,6 @@
                   <!-- /.modal-dialog -->
            </div>
 
-
 <style>
     .table th,
     .table td {

@@ -39,15 +39,7 @@
 
 
             function submit(uri,type,data,action){
-                $.ajax({
-                    url:uri,
-                    dataType:'json',
-                    type:type,
-                    data:data,
-                    success:function(dt){
-                        action;
-                    }
-                });
+
             }
 
             function redirect(url){

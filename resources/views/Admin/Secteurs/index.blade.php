@@ -26,14 +26,15 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">LISTE DES SECTEURS</h3>
+                  <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-bordered table-hover table-condensed">
+                  <table id="example1" class="table table-bordered table-hover table-condensed datatable">
                     <thead>
                     <tr>
                       <th>NOM</th>
-                      <th><a class="btn btn-primary btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -41,22 +42,11 @@
                           <tr>
                               <td>{!! $ville->name !!} </td>
 
-                              <td>
-
-                              </td>
                           </tr>
                       @endforeach
 
                     </tbody>
-                    <tfoot>
-                        <tr>
-                      <th>NOM</th>
 
-
-
-                      <th></th>
-                    </tr>
-                    </tfoot>
                   </table>
                 </div>
                 <!-- /.card-body -->
