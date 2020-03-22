@@ -28,7 +28,13 @@ class Facture extends Model
 		return $this->belongsTo('App\User', 'filled_by');
 	}
 
-	public function
+	public function pointages(){
+		return $this->hasMany('App\Models\Pointage');
+	}
+
+	public function paiements(){
+		return $this->hasMany('App\Models\Paiement');
+	}
 
 
 }

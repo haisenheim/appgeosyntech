@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Rh;
 
 use App\Http\Controllers\Controller;
+use App\Models\Competence;
 use App\Models\Pay;
 use App\Models\Role;
 use App\Models\Ville;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -78,7 +80,7 @@ class UserController extends Controller
 
 
         $user->save();
-          $request->session()->flash('message','L\'agent a été correctement enregistré !!!');
+          $request->session()->flash('success','L\'agent a été correctement enregistré !!!');
             return redirect('/rh/users');
 
 
@@ -90,12 +92,31 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($token)
     {
         //
-        //$user = User::find($user)->first();
-        return view('Rh/Users/show')->with(compact('user'));
+        $user = User::where('token',$token)->first();
+	    $comptences = Competence::all();
+        return view('Rh/Users/show')->with(compact('user','comptences'));
     }
+
+
+	public function addComptence(){
+		$competence = DB::table('competences_users')->where(['competence_id'=>request('competence_id'),'user_id'=>request('user_id')])->get();
+		if(!$competence){
+			DB::table('competences_users')->insert(['competence_id'=>request('competence_id'),'user_id'=>request('user_id')]);
+			request()->session()->flash('success','Ok !!!');
+		}else{
+			request()->session()->flash('warning','Competence presente !!!');
+		}
+
+		return redirect()->back();
+	}
+
+	public function deleteCompetence($user_id,$competence_id){
+		DB::table('competences_users')->where(['competence_id'=>$competence_id,'user_id'=>$user_id])->delete();
+		return redirect()->back();
+	}
 
     /**
      * Show the form for editing the specified resource.

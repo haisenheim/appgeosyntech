@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
-class Competence extends Model
+class Tcertificat extends Model
 {
     //
 
@@ -13,8 +13,8 @@ class Competence extends Model
 	public $timestamps = false;
 
 
-	public function competences(){
-		return $this->belongsToMany('App\User','competences_users');
+	public function certificats(){
+		return $this->hasMany('App\Models\Certificat');
 	}
 
 

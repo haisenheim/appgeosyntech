@@ -41,6 +41,22 @@ class User extends Authenticatable
 		return $this->belongsTo('App\Models\Client');
 	}
 
+	public function certificats(){
+		return $this->hasMany('App\Models\Certificat');
+	}
+
+	public function livraisons(){
+		return $this->hasMany('App\Models\Livraison');
+	}
+
+	public function competences(){
+		return $this->belongsToMany('App\Models\Competence');
+	}
+
+	public function bulletins(){
+		return $this->hasMany('App\Models\Bulletin');
+	}
+
 
     public function getNameAttribute(){
         return $this->last_name . "  ".$this->first_name;

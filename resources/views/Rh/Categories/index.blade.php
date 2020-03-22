@@ -40,8 +40,9 @@
                                     <li class="list-inline-item"><a title="afficher" class="badge badge-info" href="#"><i class="fa fa-eye"></i></a></li>
                                     <li class="list-inline-item"><a title="supprimer" class="badge badge-danger" href="#"><i class="fa fa-trash"></i></a></li>
                                </ul>
+                               </li>
                         @endforeach
-                        </li>
+
                     </ul>
 
                 </div>

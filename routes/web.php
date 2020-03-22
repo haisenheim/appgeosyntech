@@ -113,6 +113,9 @@ Route::prefix('rh')
 		Route::resource('users','UserController');
 		Route::get('dashboard','DashboardController');
 
+		Route::post('/user/add-competence','UserController@addCompetence');
+		Route::get('/user/delete-competence/{user_id}/{competence_id}','UserController@deleteCompetence');
+
 
 	});
 
