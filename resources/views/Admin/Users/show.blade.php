@@ -1,4 +1,4 @@
-@extends('......layouts.rh')
+@extends('......layouts.admin')
 
 
 @section('page-title')
@@ -24,7 +24,7 @@
         <div class="col-md-8 col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>COMPETENCES <a href="#" data-toggle="modal" data-target="#addCompetence" class="btn btn-xs btn-info"><i class="fa fa-plus-circle"></i></a></h4>
+                    <h4>COMPETENCES</h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-inline">
@@ -35,7 +35,7 @@
                                <ul class="list-inline " style="margin-left: 10px">
                                     <li class="list-inline-item">{!! $ville->name !!}</li>
 
-                                    <li class="list-inline-item"><a title="supprimer" class="badge badge-danger" href="/rh/user/delete-competence/{{ $user->id }}/{{ $ville->id }}"><i class="fa fa-trash"></i></a></li>
+
                                </ul>
                                </li>
                         @endforeach
@@ -116,50 +116,7 @@
 
         </div>
     </div>
-     <div class="modal fade" id="addCompetence">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">AJOUT D'UNE COMPETENCE</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form  action="/rh/user/add-competence" method="post">
-                  {{csrf_field()}}
 
-                    <div class="card-body">
-                      <div class="row">
-                          <div class="col-md-12 col-sm-12">
-                              <input type="hidden" name="user_id" value="{{ $user->id }}"/>
-                              <div class="form-group">
-                                <label for="competence_id">NOM</label>
-                                <select name="competence_id" id="competence_id" required="required">
-                                      <option value="">SELECTIONNER UNE COMPETENCE</option>
-                                      @foreach($competences as $comptence)
-                                          <option value="{{ $comptence->id }}">{{ $comptence->name }}</option>
-                                      @endforeach
-                                </select>
-                              </div>
-                          </div>
-
-                      </div>
-
-
-                    </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer">
-                      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
-                    </div>
-                  </form>
-                </div>
-
-              </div>
-              <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-     </div>
 @endsection
 
 @section('script')
