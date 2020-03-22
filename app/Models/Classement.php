@@ -14,7 +14,7 @@ class Classement extends Model
 	protected $dates = ['debut','fin'];
 
 
-	public function categorie(){
+	public function category(){
 		return $this->belongsTo('App\Models\Category');
 	}
 
