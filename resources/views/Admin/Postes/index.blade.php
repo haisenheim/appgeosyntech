@@ -135,7 +135,7 @@
 
   <script>
         $('#btn-save').click(function(e){
-            console.log('ok')
+            console.log('ok');
             e.preventDefault();
             var data = [];
             data.push({name:$('#name').val()});
@@ -145,7 +145,7 @@
             });
             data.push(data);
 
-            submit('/admin/post','post',data,redirect('/admin/secteurs'));
+           // submit('/admin/post','post',data,redirect('/admin/secteurs'));
         })
   </script>
 
