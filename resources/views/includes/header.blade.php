@@ -33,6 +33,12 @@
             .pull-right{
                 float: right;
             }
+
+            .index-item{
+                border: 1px #ccc solid;
+                padding: 8px;
+                border-radius: 10px;
+            }
         </style>
 
     </head>

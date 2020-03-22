@@ -25,31 +25,22 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES POSTES <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
+                  <h3 class="card-title">BASE DE DONNEES DES POSTES <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
 
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-bordered table-hover table-condensed datatable">
-                    <thead>
-                    <tr>
-                      <th>NOM</th>
-
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($postes as $ville)
-                          <tr>
-                              <td>{!! $ville->name !!} </td>
-
-
-
-                          </tr>
-                      @endforeach
-
-                    </tbody>
-
-                  </table>
+                    <ul class="list-inline">
+                             @foreach($postes as $ville)
+                              <li class="list-inline-item index-item">
+                               <ul class="list-inline " style="margin-left: 10px">
+                                    <li class="list-inline-item">{!! $ville->name !!}</li>
+                                    <li class="list-inline-item"><a title="afficher" class="badge badge-info" href="#"><i class="fa fa-eye"></i></a></li>
+                                    <li class="list-inline-item"><a title="supprimer" class="badge badge-danger" href="#"><i class="fa fa-trash"></i></a></li>
+                               </ul>
+                        @endforeach
+                        </li>
+                    </ul>
                 </div>
                 <!-- /.card-body -->
               </div>
