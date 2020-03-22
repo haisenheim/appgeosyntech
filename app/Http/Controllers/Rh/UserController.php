@@ -126,7 +126,7 @@ class UserController extends Controller
 
 			$classe = Classement::all()->where('user_id',request('user_id'))->last();
 			if($classe){
-				$classe->fin = new Date();
+				$classe->fin = new \DateTime();
 				$classe->save();
 			}
 
