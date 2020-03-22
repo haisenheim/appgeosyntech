@@ -77,7 +77,7 @@
                           </div>
                           <!-- /.card-body -->
                           <div class="card-footer">
-                            <button id="btn-save" type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>
@@ -102,8 +102,3 @@
 
 @endsection
 
-@section('scripts')
-    <script>
-
-      </script>
-@endsection
