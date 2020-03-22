@@ -26,7 +26,7 @@ class CategorieController extends Controller
     public function index()
     {
 	    $categories = Category::all();
-	    return view('Admin/Categories/index')->with(compact('categories'));
+	    return view('Rh/Categories/index')->with(compact('categories'));
     }
 
     /**
