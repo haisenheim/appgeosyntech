@@ -69,7 +69,7 @@
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">NOM</label>
-                                      <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom du poste">
+                                      <input required type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom ">
                                     </div>
                                 </div>
 
