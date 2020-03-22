@@ -3,7 +3,7 @@
 
 @extends('layouts.rh')
 
-@section('content-header')
+@section('page-title')
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">

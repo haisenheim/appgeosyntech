@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.rh')
 
 
 @section('page-title')
@@ -66,7 +66,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.categories.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('rh.categories.store')}}" method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
