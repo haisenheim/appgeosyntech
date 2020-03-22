@@ -101,9 +101,7 @@
                                 <label for="competence_id">NOM</label>
                                 <select name="competence_id" id="competence_id" required="required">
                                       <option value="">SELECTIONNER UNE COMPETENCE</option>
-                                      @foreach($competences as $comptence)
-                                          <option value="{{ $comptence->id }}">{{ $comptence->name }}</option>
-                                      @endforeach
+
                                 </select>
                               </div>
                           </div>
