@@ -201,9 +201,13 @@
 
             var tr = '<tr data-poste='+ poste_id +' data-secteur='+ secteur_id +' data-quantity='+ quantity +' data-debut='+ debut +' data-fin='+ fin +'>'+
 
-            +'<td>'+ secteur +'</td><td>'+ poste +'</td><td>'+ quantity +'</td><td>'+ debut +'</td><td>'+ fin +'</td><td><span title="Retirer cette ligne" class="remove btn btn-xs btn-danger"><i class="fa fa-trash"></i></span></td></tr>';
+            '<td>'+ secteur +'</td><td>'+ poste +'</td><td>'+ quantity +'</td><td>'+ debut +'</td><td>'+ fin +'</td><td><span style="padding: 2px" title="Retirer cette ligne" class="remove btn btn-xs btn-outline-danger"><i class="fa fa-trash"></i></span></td></tr>';
 
             $('#tab-lines').find('tbody').append(tr);
+
+            $('.remove').click(function(){
+                $(this).parent().parent().remove();
+            });
 
         }else{
             alert('Ajout impossible. Verifiez les informations');
