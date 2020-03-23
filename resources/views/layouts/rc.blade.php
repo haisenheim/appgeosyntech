@@ -199,7 +199,7 @@
 
                             <li>
                                 <a href="/rc/factures" class="waves-effect">
-                                    <i class="mdi mdi-account-group"></i>
+                                    <i class="fas fa-coins"></i>
                                     <span>FACTURES</span>
                                 </a>
                             </li>
@@ -223,7 +223,7 @@
                                     <li><a href="/rc/competences">COMPETENCES</a></li>
                                     <li><a href="/rc/postes">POSTES</a></li>
                                     <li><a href="/rc/categories">CATEGORIES PROFESS.</a></li>
-                                    <li><a href="/rc/tcertificats">TYPES DE CERTIFICAT</a></li>
+
                                     <li><a href="/rc/tprimes">TYPES DE PRIME</a></li>
                                 </ul>
                             </li>

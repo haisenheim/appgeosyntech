@@ -83,7 +83,7 @@ class ClientController extends Controller
         $user->pay_id = $request->pay_id;
        // $user->role_id = $request['role_id'];
         $user->password= Hash::make('sitrad');
-        $user->role_id = 8;
+        $user->role_id = 6;
         $user->moi_id=date('m');
         $user->annee=date('Y');
 	    $user->client_id = $client->id;
