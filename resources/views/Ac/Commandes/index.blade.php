@@ -131,7 +131,7 @@
                                       </div>
 
                                       <div class="col-auto">
-                                          <button id="btn-add" class="btn btn-outline-secondary mt-2"><i class="fa fa-plus-square"></i></button>
+                                          <button style="margin-top: 20px;" id="btn-add" class="btn btn-outline-secondary mt-2"><i class="fa fa-plus-square"></i></button>
                                       </div>
                                   </div>
                               </form>
@@ -158,7 +158,21 @@
                           <!-- /.card-body -->
 
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-info btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12"></div>
+                                 <div class="col-md-4 col-sm-12">
+                                    <button id="btn-store" type="submit" class="btn btn-info btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+
+                                        <div id="save-spinner" style="display: none" class="bs-spinner mt-4 mt-lg-0">
+
+                                            <div class="spinner-grow mr-2 mt-2" style="width: 3rem; height: 3rem;" role="status">
+                                                <span class="sr-only">Enregistrement en cours...</span>
+                                            </div>
+                                        </div>
+
+                                 </div>
+                            </div>
+
                           </div>
 
                       </div>
@@ -201,7 +215,7 @@
 
             var tr = '<tr data-poste='+ poste_id +' data-secteur='+ secteur_id +' data-quantity='+ quantity +' data-debut='+ debut +' data-fin='+ fin +'>'+
 
-            '<td>'+ secteur +'</td><td>'+ poste +'</td><td>'+ quantity +'</td><td>'+ debut +'</td><td>'+ fin +'</td><td><span style="padding: 2px" title="Retirer cette ligne" class="remove btn btn-xs btn-outline-danger"><i class="fa fa-trash"></i></span></td></tr>';
+            '<td>'+ secteur +'</td><td>'+ poste +'</td><td>'+ quantity +'</td><td>'+ debut +'</td><td>'+ fin +'</td><td><span style="padding: 2px;font-size: 0.6rem" title="Retirer cette ligne" class="remove btn btn-xs btn-outline-danger"><i class="fa fa-trash"></i></span></td></tr>';
 
             $('#tab-lines').find('tbody').append(tr);
 
@@ -212,6 +226,50 @@
         }else{
             alert('Ajout impossible. Verifiez les informations');
         }
+
      });
+
+     $('#btn-store').click(function(e){
+        e.preventDefault();
+
+        var data =[];
+
+        $('#tab-lines').find('tbody').find('tr').each(function(){
+            var elt = {};
+            elt.secteur_id = $(this).data('secteur');
+            elt.poste_id = $(this).data('poste');
+            elt.quantity = $(this).data('quantity');
+            elt.debut = $(this).data('debut');
+            elt.fin = $(this).data('fin');
+            data.push(elt);
+        });
+
+        if(data.length){
+            $('#save-spinner').show();
+            $('#btn-store').hide();
+             $.ajax({
+            url:'/ac/commande/save',
+            type:'post',
+            dataType:'json',
+            data:{lignes:data},
+            beforeSend:function(xhr){
+                xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+            },
+            success:function(dt){
+                window.location.href='/ac/commandes/'+dt.token
+            }
+        });
+        }
+
+        $.ajax({
+            url:'/ac/commande/save',
+            type:'post',
+            dataType:'json',
+            data:{lignes:data},
+            success:function(dt){
+                window.location.href='/ac/commandes/'+dt.token
+            }
+        });
+     })
 </script>
 @endsection

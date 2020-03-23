@@ -152,8 +152,7 @@ Route::prefix('ac')
 
 		Route::resource('factures','FactureController');
 		Route::resource('commandes','CommandeController');
-
-
+		Route::post('/commande/save','CommandeController@save');
 		Route::resource('users','UserController');
 		Route::get('dashboard','DashboardController');
 

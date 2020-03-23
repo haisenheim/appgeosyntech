@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Ac;
 use App\Http\Controllers\Controller;
 
 
+use App\Models\Cligne;
 use App\Models\Commande;
 use App\Models\Pay;
 
@@ -28,6 +29,37 @@ class CommandeController extends Controller
 	    $commandes = Commande::all()->where('client_id',Auth::user()->client_id)->sortByDesc('created_at');
 	    return view('Ac/Commandes/index')->with(compact('commandes','postes','secteurs'));
     }
+
+	public function save(){
+
+		$lignes = request('lignes');
+		$n = Auth::user()->client_id .date('whsi');
+
+		$commande = Commande::create([
+			'client_id'=>Auth::user()->client_id,
+			'token'=> sha1(Auth::user()->id).date('Ymdihs'),
+			'name'=>str_pad($n,6,'0',STR_PAD_LEFT).'/'.date('y'),
+			'moi_id'=>date('m'),
+			'annee'=>date('Y')
+
+		]);
+		$i=1;
+		foreach($lignes as $ligne){
+
+			Cligne::create([
+				'commande_id'=>$commande->id,
+				'secteur_id'=>$ligne['secteur_id'],
+				'poste_id'=>$ligne['poste_id'],
+				'quantity'=>$ligne['quantity'],
+
+				'debut'=>$ligne['debut'],
+				'fin'=>$ligne['fin'],
+				'token'=>sha1(Auth::user()->id . date('dhYmis') . $i)
+			]);
+		}
+
+		return response()->json(compact('commande'));
+	}
 
     /**
      * Show the form for creating a new resource.
