@@ -50,22 +50,22 @@
                     <ul class="nav nav-pills nav-justified" role="tablist">
                         <li class="nav-item waves-effect waves-light">
                             <a class="nav-link active" data-toggle="tab" href="#home-justify" role="tab">
-                                <i class="dripicons-home mr-1 align-middle"></i> <span class="d-none d-md-inline-block">Home</span>
+                                <i class="dripicons-home mr-1 align-middle"></i> <span class="d-none d-md-inline-block">PLACEMENTS</span>
                             </a>
                         </li>
                         <li class="nav-item waves-effect waves-light">
                             <a class="nav-link" data-toggle="tab" href="#profile-justify" role="tab">
-                                <i class="dripicons-user mr-1 align-middle"></i> <span class="d-none d-md-inline-block">Profile</span>
+                                <i class="dripicons-document-remove mr-1 align-middle"></i> <span class="d-none d-md-inline-block">CERTIFICATS</span>
                             </a>
                         </li>
                         <li class="nav-item waves-effect waves-light">
                             <a class="nav-link" data-toggle="tab" href="#messages-justify" role="tab">
-                                <i class="dripicons-mail mr-1 align-middle"></i> <span class="d-none d-md-inline-block">Messages</span>
+                                <i class="fas fa-coins mr-1 align-middle"></i> <span class="d-none d-md-inline-block">SALAIRES</span>
                             </a>
                         </li>
                         <li class="nav-item waves-effect waves-light">
                             <a class="nav-link" data-toggle="tab" href="#settings-justify" role="tab">
-                                <i class="dripicons-gear mr-1 align-middle"></i> <span class="d-none d-md-inline-block">Settings</span>
+                                <i class="fas fa-chart-line mr-1 align-middle"></i> <span class="d-none d-md-inline-block">CARRIERE</span>
                             </a>
                         </li>
                     </ul>
@@ -73,26 +73,58 @@
                     <!-- Tab panes -->
                     <div class="tab-content p-3">
                         <div class="tab-pane active" id="home-justify" role="tabpanel">
-                            <p class="mb-0">
-                                Etsy mixtape wayfarers, ethical wes anderson tofu before they
-                                sold out mcsweeney's organic lomo retro fanny pack lo-fi
-                                farm-to-table readymade. Messenger bag gentrify pitchfork
-                                tattooed craft beer, iphone skateboard locavore carles etsy
-                                salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
-                                Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh
-                                mi whatever gluten carles.
-                            </p>
+
+                                <table class="table datatable table-bordered table-hover table-striped table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>ENTREPRISE</th>
+                                            <th>EN TANT QUE</th>
+                                            <th>DEBUT</th>
+                                            <th>FIN</th>
+                                            <th>SALAIRES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($user->livraisons as $liv)
+
+                                            <tr>
+                                                <td>{{ $liv->client?$liv->client->name:'-' }}</td>
+                                                <td>{{ $liv->poste?$liv->poste->name:'-' }}</td>
+                                                <td>{{ date_format($liv->debut,'d/m/Y') }}</td>
+                                                <td>{{ date_format($liv->fin,'d/m/Y') }}</td>
+                                                <td></td>
+                                            </tr>
+
+                                        @endforeach
+                                    </tbody>
+                                </table>
+
                         </div>
                         <div class="tab-pane" id="profile-justify" role="tabpanel">
-                            <p class="mb-0">
-                                Raw denim you probably haven't heard of them jean shorts Austin.
-                                Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
-                                cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
-                                butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
-                                qui irure terry richardson ex squid. Aliquip placeat salvia cillum
-                                iphone. Seitan aliquip quis cardigan american apparel, butcher
-                                voluptate nisi qui.
-                            </p>
+                            <table class="table datatable table-bordered table-hover table-striped table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>INTITULE</th>
+
+                                            <th>DEBUT</th>
+                                            <th>FIN</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($user->certificats as $liv)
+
+                                            <tr>
+
+                                                <td>{{ $liv->tcertificat?$liv->tcertificat->name:'-' }}</td>
+                                                <td>{{ date_format($liv->debut,'d/m/Y') }}</td>
+                                                <td>{{ date_format($liv->fin,'d/m/Y') }}</td>
+                                                <td></td>
+                                            </tr>
+
+                                        @endforeach
+                                    </tbody>
+                             </table>
                         </div>
                         <div class="tab-pane" id="messages-justify" role="tabpanel">
                             <p class="mb-0">

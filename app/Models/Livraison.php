@@ -19,6 +19,18 @@ class Livraison extends Model
 		return $this->belongsTo('App\User');
 	}
 
+	public function poste(){
+		return $this->belongsTo('App\Models\Poste');
+	}
+
+	public function client(){
+		return $this->belongsTo('App\Models\Client');
+	}
+
+	public function primes(){
+		return $this->hasMany('App\Models\Primes');
+	}
+
 
 
 
