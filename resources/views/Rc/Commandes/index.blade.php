@@ -42,7 +42,7 @@
                            </tr>
                        </thead>
                        <tbody>
-                           @foreach($factures as $liv)
+                           @foreach($commandes as $liv)
 
                                <tr>
                                    <td>{{ $liv->client?$liv->client->name:'-' }}</td>
