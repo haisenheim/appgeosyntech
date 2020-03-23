@@ -88,7 +88,7 @@
                                   <div class="form-row align-items-center">
                                       <div class="col-auto">
                                           <div class="mt-3 mr-sm-2">
-                                              <label class="sr-only" title="Secteur d'activite" for="secteur_id">SECTEUR</label>
+                                              <label  title="Secteur d'activite" for="secteur_id">SECTEUR</label>
                                               <select class="form-control mb-2" id="secteur_id">
                                                   <option value="0">CHOISIR</option>
                                                   @foreach($secteurs as $secteur)
@@ -99,7 +99,7 @@
                                       </div>
                                       <div class="col-auto">
                                           <div class="mt-3 mr-sm-2">
-                                              <label class="sr-only" for="poste_id">POSTE</label>
+                                              <label  for="poste_id">POSTE</label>
                                               <select class="form-control mb-2" id="poste_id">
                                                   <option value="0">CHOISIR</option>
                                                   @foreach($postes as $poste)
@@ -110,7 +110,7 @@
                                       </div>
                                       <div class="col-auto">
                                           <div class="mt-3 mr-sm-2">
-                                              <label class="sr-only" for="quantity">QUANTITE</label>
+                                              <label  for="quantity">QUANTITE</label>
                                                   <input type="number"  class="form-control" id="quantity" placeholder="Nombre">
 
                                           </div>
@@ -118,20 +118,20 @@
 
                                       <div class="col-auto">
                                           <div class="mt-3 mr-sm-2">
-                                              <label class="sr-only" for="debut">DU</label>
+                                              <label for="debut">DU</label>
                                                   <input type="date"  class="form-control" id="debut">
                                           </div>
                                       </div>
 
                                       <div class="col-auto">
                                           <div class="mt-3 mr-sm-2">
-                                              <label class="sr-only" for="fin">AU</label>
+                                              <label  for="fin">AU</label>
                                                   <input type="date"  class="form-control" id="fin">
                                           </div>
                                       </div>
 
                                       <div class="col-auto">
-                                          <button id="btn-add" class="btn btn-danger mt-2"><i class="fa fa-plus-square"></i></button>
+                                          <button id="btn-add" class="btn btn-outline-secondary mt-2"><i class="fa fa-plus-square"></i></button>
                                       </div>
                                   </div>
                               </form>
@@ -203,7 +203,7 @@
 
             +'<td>'+ secteur +'</td><td>'+ poste +'</td><td>'+ quantity +'</td><td>'+ debut +'</td><td>'+ fin +'</td><td><span title="Retirer cette ligne" class="remove btn btn-xs btn-danger"><i class="fa fa-trash"></i></span></td></tr>';
 
-            $('tab-lines').find('tbody').append(tr);
+            $('#tab-lines').find('tbody').append(tr);
 
         }else{
             alert('Ajout impossible. Verifiez les informations');
