@@ -1,7 +1,7 @@
 
 
 
-@extends('layouts.rc')
+@extends('layouts.ac')
 
 @section('page-title')
     <div class="container-fluid">
@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/rc/dashboard">SM</a></li>
+              <li class="breadcrumb-item"><a href="/ac/dashboard">SM</a></li>
               <li class="breadcrumb-item">CLIENTS</li>
               <li class="breadcrumb-item active">FACTURES</li>
             </ol>
@@ -53,7 +53,7 @@
                                    <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/factures/{{ $liv->token }}"></a></li>
+                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/ac/factures/{{ $liv->token }}"></a></li>
                                        </ul>
                                    </td>
                                </tr>

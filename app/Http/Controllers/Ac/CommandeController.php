@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Rc;
+namespace App\Http\Controllers\Ac;
 
 use App\Http\Controllers\Controller;
 
-use App\Models\Category;
 
 use App\Models\Commande;
 use App\Models\Pay;
-use App\Models\Secteur;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class CommandeController extends Controller
@@ -21,8 +21,8 @@ class CommandeController extends Controller
      */
     public function index()
     {
-	    $commandes = Commande::all();
-	    return view('Rc/Commandes/index')->with(compact('commandes'));
+	    $commandes = Commande::all()->where('client_id',Auth::user()->client_id)->sortByDesc('created_at');
+	    return view('Ac/Commandes/index')->with(compact('commandes'));
     }
 
     /**
@@ -47,7 +47,7 @@ class CommandeController extends Controller
 	{
 		//
 		$commande = Commande::where('token',$token)->first();
-		return view('Rc/Commandes/show')->with(compact('commande'));
+		return view('Ac/Commandes/show')->with(compact('commande'));
 	}
 
     /**

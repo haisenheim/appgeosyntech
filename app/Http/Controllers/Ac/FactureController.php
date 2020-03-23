@@ -10,6 +10,7 @@ use App\Models\Facture;
 use App\Models\Pay;
 use App\Models\Secteur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class FactureController extends Controller
@@ -21,7 +22,7 @@ class FactureController extends Controller
      */
     public function index()
     {
-	    $factures = Facture::all()->sortByDesc('created_at');
+	    $factures = Facture::all()->where('client_id',Auth::user()->client_id)->sortByDesc('created_at');
 	    return view('Ac/Factures/index')->with(compact('factures'));
     }
 
