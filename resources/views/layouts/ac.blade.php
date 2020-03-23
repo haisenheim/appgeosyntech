@@ -12,10 +12,10 @@
                         <div class="navbar-brand-box">
                             <a href="#" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img sac="{{ asset('assets/images/logo.png') }}" alt="" height="22">
+                                    <img src="{{ asset('assets/images/logo.png') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img sac="{{ asset('assets/images/logo-dark.png') }}" alt="" height="20">
+                                    <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="20">
                                 </span>
                             </a>
                         </div>
@@ -93,7 +93,7 @@
                                     </a>
                                     <a href="" class="text-reset notification-item">
                                         <div class="media">
-                                            <img sac="assets/images/users/avatar-3.jpg"
+                                            <img src="assets/images/users/avatar-3.jpg"
                                                 class="mr-3 rounded-ciacle avatar-xs" alt="user-pic">
                                             <div class="media-body">
                                                 <h6 class="mt-0 mb-1">Andrew Mackie</h6>
@@ -123,7 +123,7 @@
 
                                     <a href="" class="text-reset notification-item">
                                         <div class="media">
-                                            <img sac="assets/images/users/avatar-4.jpg"
+                                            <img src="assets/images/users/avatar-4.jpg"
                                                 class="mr-3 rounded-ciacle avatar-xs" alt="user-pic">
                                             <div class="media-body">
                                                 <h6 class="mt-0 mb-1">Dominic Kellway</h6>
@@ -146,7 +146,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-ciacle header-profile-user" sac=" {{ asset(auth()->user()->imageUrl?auth()->user()->imageUrl:'img/avatar.png')  }}" alt="">
+                                <img class="rounded-ciacle header-profile-user" src=" {{ asset(auth()->user()->imageUrl?auth()->user()->imageUrl:'img/avatar.png')  }}" alt="">
 
                                 <span class="d-none d-sm-inline-block ml-1">{{ auth()->user()->first_name . "  ". auth()->user()->last_name }}</span>
                                 <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
