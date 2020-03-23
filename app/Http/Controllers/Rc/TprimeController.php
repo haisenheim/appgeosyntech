@@ -23,7 +23,7 @@ class TprimeController extends Controller
     {
 	    $types = Tprime::all();
 
-	    return view('Rh/Tprimes/index')->with(compact('types'));
+	    return view('Rc/Tprimes/index')->with(compact('types'));
     }
 
     /**
