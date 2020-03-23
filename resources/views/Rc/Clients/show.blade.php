@@ -169,6 +169,51 @@
 
 
         </div>
+
+        <div class="modal fade" id="addSecteur">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">AJOUT D'UNE COMPETENCE</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form  action="/rc/client/add-secteur" method="post">
+                  {{csrf_field()}}
+
+                    <div class="card-body">
+                      <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                              <input type="hidden" name="client_id" value="{{ $client->id }}"/>
+                              <div class="form-group">
+                                <label for="competence_id">SECTEUR</label>
+                                <select class="form-control" name="secteur_id" id="competence_id" required="required">
+                                      <option value="">SELECTIONNER UN SECTEUR</option>
+                                      @foreach($secteurs as $comptence)
+                                          <option value="{{ $comptence->id }}">{{ $comptence->name }}</option>
+                                      @endforeach
+                                </select>
+                              </div>
+                          </div>
+
+                      </div>
+
+
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+     </div>
     </div>
      
 @endsection
