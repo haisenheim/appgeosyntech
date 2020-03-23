@@ -21,6 +21,12 @@ class Client extends Model
 		return $this->hasMany('App\Models\Commande', 'client_id');
 	}
 
+	public function factures(){
+		return $this->hasMany('App\Models\Facture', 'client_id');
+	}
+
+
+
 
 
 
