@@ -6,7 +6,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-right d-none d-sm-block">
-                                    Conçu par <i class="mdi mdi-script text-success"></i> Alliages Technologies
+                                    Conçu par <i class="mdi mdi-code-braces text-danger"></i> <i class="mdi mdi-code-string text-primary"></i>  Alliages Technologies
                                 </div>
                             </div>
                         </div>
