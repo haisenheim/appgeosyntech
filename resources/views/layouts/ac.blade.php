@@ -27,7 +27,7 @@
                         <!-- App Seaach-->
                         <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Seaach...">
+                                <input type="text" class="form-control" placeholder="Rechercher...">
                                 <span class="mdi mdi-magnify"></span>
                             </div>
                         </form>
