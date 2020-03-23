@@ -143,6 +143,23 @@ Route::prefix('rc')
 	});
 
 
+Route::prefix('ac')
+	->namespace('Ac')
+	->middleware(['auth','ac'])
+	->name('ac.')
+	->group(function(){
+		Route::resource('postes','PosteController');
+
+		Route::resource('factures','FactureController');
+		Route::resource('commandes','CommandeController');
+
+
+		Route::resource('users','UserController');
+		Route::get('dashboard','DashboardController');
+
+	});
+
+
 Route::prefix('member')
 	->namespace('Member')
 	->name('Member')
