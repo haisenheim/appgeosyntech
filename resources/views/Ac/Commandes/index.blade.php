@@ -130,8 +130,8 @@
                                           </div>
                                       </div>
 
-                                      <div class="col-auto">
-                                          <button style="margin-top: 20px;" id="btn-add" class="btn btn-outline-secondary mt-2"><i class="fa fa-plus-square"></i></button>
+                                      <div style="margin-top: 35px;" class="col-auto">
+                                          <button  id="btn-add" class="btn btn-outline-secondary mt-2"><i class="fa fa-plus-square"></i></button>
                                       </div>
                                   </div>
                               </form>
@@ -256,7 +256,7 @@
                 xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
             },
             success:function(dt){
-                window.location.href='/ac/commandes/'+dt.token
+                window.location.href='/ac/commandes/'+dt.commande.token
             }
         });
         }
