@@ -26,7 +26,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">COMMANDES</h3>
+                  <h3 class="card-title">COMMANDES <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -71,6 +71,104 @@
             <!-- /.col -->
           </div>
 
+           <div class="modal fade" id="modal-lg">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">NOUVELLE DEMANDE DE RECRUTEMENT</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+
+                        {{csrf_field()}}
+                          <div class="card-body">
+                             <form>
+                                  <div class="form-row align-items-center">
+                                      <div class="col-auto">
+                                          <div class="mt-3 mr-sm-2">
+                                              <label class="sr-only" title="Secteur d'activite" for="secteur_id">SECTEUR</label>
+                                              <select class="form-control mb-2" id="secteur_id">
+                                                  <option value="0">CHOISIR</option>
+                                                  @foreach($secteurs as $secteur)
+                                                  <option value="{{ $secteur->id }}">{{ $secteur->name }}</option>
+                                                  @endforeach
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-auto">
+                                          <div class="mt-3 mr-sm-2">
+                                              <label class="sr-only" for="poste_id">POSTE</label>
+                                              <select class="form-control mb-2" id="poste_id">
+                                                  <option value="0">CHOISIR</option>
+                                                  @foreach($postes as $poste)
+                                                  <option value="{{ $poste->id }}">{{ $poste->name }}</option>
+                                                  @endforeach
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-auto">
+                                          <div class="mt-3 mr-sm-2">
+                                              <label class="sr-only" for="quantity">QUANTITE</label>
+                                                  <input type="number"  class="form-control" id="quantity" placeholder="Nombre">
+
+                                          </div>
+                                      </div>
+
+                                      <div class="col-auto">
+                                          <div class="mt-3 mr-sm-2">
+                                              <label class="sr-only" for="debut">DU</label>
+                                                  <input type="date"  class="form-control" id="debut">
+                                          </div>
+                                      </div>
+
+                                      <div class="col-auto">
+                                          <div class="mt-3 mr-sm-2">
+                                              <label class="sr-only" for="fin">AU</label>
+                                                  <input type="date"  class="form-control" id="fin">
+                                          </div>
+                                      </div>
+
+                                      <div class="col-auto">
+                                          <button id="btn-add" class="btn btn-danger mt-2"><i class="fa fa-plus-square"></i></button>
+                                      </div>
+                                  </div>
+                              </form>
+
+
+
+                              <table id="tab-lines" class="table table-bordered table-striped table-condensed table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>SECTEUR</th>
+                                        <th>POSTE</th>
+                                        <th>QUANTITE</th>
+                                        <th>DU</th>
+                                        <th>AU</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                              </table>
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-info btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                          </div>
+
+                      </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+           </div>
+
 
 
 <style>
@@ -89,5 +187,27 @@
 @section('scripts')
 <script>
      $(document).ready(function(){$(".datatable").DataTable();});
+     $('#btn-add').click(function(e){
+        e.preventDefault();
+        var poste_id = $('#poste_id').val();
+        var poste = $('#poste_id option:selected').text();
+        var secteur_id = $('#secteur_id').val();
+        var secteur = $('#secteur_id option:selected').text();
+        var quantity = $('#quantity').val();
+        var debut = $('#debut').val();
+        var fin = $('#fin').val();
+
+        if(poste_id && secteur_id && quantity && debut && fin){
+
+            var tr = '<tr data-poste='+ poste_id +' data-secteur='+ secteur_id +' data-quantity='+ quantity +' data-debut='+ debut +' data-fin='+ fin +'>'+
+
+            +'<td>'+ secteur +'</td><td>'+ poste +'</td><td>'+ quantity +'</td><td>'+ debut +'</td><td>'+ fin +'</td><td><span title="Retirer cette ligne" class="remove btn btn-xs btn-danger"><i class="fa fa-trash"></i></span></td></tr>';
+
+            $('tab-lines').find('tbody').append(tr);
+
+        }else{
+            alert('Ajout impossible. Verifiez les informations');
+        }
+     });
 </script>
 @endsection

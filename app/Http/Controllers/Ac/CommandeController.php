@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Commande;
 use App\Models\Pay;
 
+use App\Models\Poste;
+use App\Models\Secteur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,8 +23,10 @@ class CommandeController extends Controller
      */
     public function index()
     {
+	    $secteurs = Secteur::all();
+	    $postes = Poste::all();
 	    $commandes = Commande::all()->where('client_id',Auth::user()->client_id)->sortByDesc('created_at');
-	    return view('Ac/Commandes/index')->with(compact('commandes'));
+	    return view('Ac/Commandes/index')->with(compact('commandes','postes','secteurs'));
     }
 
     /**
