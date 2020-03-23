@@ -131,6 +131,7 @@ Route::prefix('rc')
 		Route::resource('categories','CategorieController');
 		Route::resource('factures','FactureController');
 		Route::resource('commandes','CommandeController');
+		Route::resource('clients','ClientController');
 
 		Route::resource('tprimes','TprimeController');
 		Route::resource('users','UserController');

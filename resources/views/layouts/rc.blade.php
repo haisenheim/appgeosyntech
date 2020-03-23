@@ -192,8 +192,23 @@
 
                             <li>
                                 <a href="/rc/clients" class="waves-effect">
-                                    <i class="mdi mdi-account-group"></i>
+                                    <i class="mdi mdi-home-group"></i>
                                     <span>CLIENTS</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/rc/factures" class="waves-effect">
+                                    <i class="mdi mdi-account-group"></i>
+                                    <span>FACTURES</span>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="/rc/commandes" class="waves-effect">
+                                    <i class="mdi mdi-file-chart-outline"></i>
+                                    <span>COMMANDES</span>
                                 </a>
                             </li>
 
