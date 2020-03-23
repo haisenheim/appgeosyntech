@@ -53,6 +53,7 @@ class ClientController extends Controller
 	    $data=['name'=>$request->name,'phone'=>$request->phone,'email'=>$request->email];
 	    $token = sha1(Auth::user()->id. date('ydmhis'));
 	    $data['token']=$token;
+	    $data['created_by'] = Auth::user()->id;
 	    if($request->imageUri){
 		    $file = $request->imageUri;
 		    $ext = $file->getClientOriginalExtension();
