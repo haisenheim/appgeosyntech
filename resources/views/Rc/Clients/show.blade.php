@@ -97,50 +97,36 @@
                             <table class="table datatable table-bordered table-hover table-striped table-condensed">
                                     <thead>
                                         <tr>
-                                            <th>INTITULE</th>
+                                            <th>#</th>
 
-                                            <th>DEBUT</th>
-                                            <th>FIN</th>
+                                            <th>DATE</th>
+                                            <th>NB D'AGENT</th>
+                                            <th>STATUT</th>
+                                            <th></th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($client->certificats as $liv)
+                                        @foreach($client->commandes as $liv)
 
                                             <tr>
 
-                                                <td>{{ $liv->tcertificat?$liv->tcertificat->name:'-' }}</td>
-                                                <td>{{ date_format($liv->debut,'d/m/Y') }}</td>
-                                                <td>{{ date_format($liv->fin,'d/m/Y') }}</td>
-                                                <td></td>
+                                                <td>{{ $liv->name }}</td>
+                                                <td>{{ date_format($liv->created_at,'d/m/Y') }}</td>
+                                                <th>{{ number_format($liv->nombre,0,',','.') }}</th>
+                                                <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
+                                                <td>
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/factures/{{ $liv->token }}"></a></li>
+                                                    </ul>
+                                                </td>
                                             </tr>
 
                                         @endforeach
                                     </tbody>
                              </table>
                         </div>
-                        <div class="tab-pane" id="messages-justify" role="tabpanel">
-                            <p class="mb-0">
-                                Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                single-origin coffee squid. Exercitation +1 labore velit, blog
-                                sartorial PBR leggings next level wes anderson artisan four loko
-                                farm-to-table craft beer twee. Qui photo booth letterpress,
-                                commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                aesthetic magna delectus mollit.
-                            </p>
-                        </div>
-                        <div class="tab-pane" id="settings-justify" role="tabpanel">
-                            <p class="mb-0">
-                                Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
-                                art party before they sold out master cleanse gluten-free squid
-                                scenester freegan cosby sweater. Fanny pack portland seitan DIY,
-                                art party locavore wolf cliche high life echo park Austin. Cred
-                                vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
-                                farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
-                                mustache.
-                            </p>
-                        </div>
+
                     </div>
 
                 </div>
@@ -167,8 +153,16 @@
                             <li class="list-group-item"><h5>Adresse: {{ $client->address }}</h5></li>
                             <li class="list-group-item"><h6><i class="fa fa-mobile"></i> {{ $client->phone }}</h6></li>
                             <li class="list-group-item"><h6><i class="fa fa-envelope"></i> {{ $client->email }}</h6></li>
-                            <li class="list-group-item"><h6><i class="mdi mdi-google-classroom"></i> {{ $client->classe?$client->classe->category->name:'-' }}</h6></li>
+
 \                        </ul>
+                    </div>
+                    <div class="index-item">
+                        <h5>Utilisateurs</h5>
+                        <ul class="list-group">
+                            @foreach($client->users as $user)
+                                <li class="list-group-item">{{ $user->name }}- <span style="font-size: smaller">{{ $user->email }}</span> <span class="pull-right">{{ $user->role->name }}</span></li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>

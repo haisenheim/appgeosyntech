@@ -113,7 +113,7 @@ class ClientController extends Controller
 
         $user->save();
           $request->session()->flash('success','Le client a été correctement enregistré !!!');
-            return redirect('/rc/users');
+            return redirect('/rc/clients');
 
 
     }
