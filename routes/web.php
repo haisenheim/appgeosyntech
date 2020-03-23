@@ -129,14 +129,16 @@ Route::prefix('rc')
 		Route::resource('secteurs','SecteurController');
 		Route::resource('competences','CompetenceController');
 		Route::resource('categories','CategorieController');
-		Route::resource('tcertificats','TcertificatController');
+		Route::resource('factures','FactureController');
+		Route::resource('commandes','CommandeController');
+
 		Route::resource('tprimes','TprimeController');
 		Route::resource('users','UserController');
 		Route::get('dashboard','DashboardController');
 
-		Route::post('/user/add-competence','UserController@addCompetence');
-		Route::post('/user/add-category','UserController@addCategory');
-		Route::get('/user/delete-competence/{user_id}/{competence_id}','UserController@deleteCompetence');
+		Route::post('/client/add-secteur','ClientController@addSecteur');
+
+		Route::get('/client/delete-secteur/{user_id}/{competence_id}','ClientController@deleteSecteur');
 	});
 
 

@@ -36,5 +36,23 @@ class Facture extends Model
 		return $this->hasMany('App\Models\Paiement');
 	}
 
+	public function getEtatAttribute(){
+		$etat=[];
+
+		if($this->filled){
+			$etat['status'] = 2;
+			$etat['icon'] = 'fa fa-check-circle';
+			$etat['color'] = 'success';
+			$etat['name'] = 'payée';
+		}else {
+			$etat['status'] = 1;
+			$etat['icon'] = 'fa fa-stop';
+			$etat['color'] = 'danger';
+			$etat['name'] = 'en attente';
+		}
+
+		return $etat;
+	}
+
 
 }

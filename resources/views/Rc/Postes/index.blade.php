@@ -1,4 +1,4 @@
-@extends('......layouts.rh')
+@extends('......layouts.rc')
 
 @section('page-title')
     <div class="row">
@@ -25,7 +25,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">BASE DE DONNEES DES POSTES <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
+                  <h3 class="card-title">BASE DE DONNEES DES POSTES </h3>
 
                 </div>
                 <!-- /.card-header -->
@@ -61,7 +61,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form action="/rh/postes" method="post">
+                        <form action="/rc/postes" method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
