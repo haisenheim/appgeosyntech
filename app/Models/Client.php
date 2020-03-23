@@ -15,8 +15,6 @@ class Client extends Model
 		return $this->hasMany('App\User');
 	}
 
-
-
 	public function commandes(){
 		return $this->hasMany('App\Models\Commande', 'client_id');
 	}
@@ -25,6 +23,10 @@ class Client extends Model
 		return $this->hasMany('App\Models\Facture', 'client_id');
 	}
 
+
+	public function secteurs(){
+		return $this->belongsToMany('App\Models\Secteur','clients_secteurs');
+	}
 
 
 

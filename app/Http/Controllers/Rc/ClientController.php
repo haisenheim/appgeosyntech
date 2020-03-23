@@ -130,6 +130,8 @@ class ClientController extends Controller
         $client = Client::where('token',$token)->first();
 	    //dd($user->competences);
 	    $secteurs = Secteur::all();
+
+
         return view('Rc/Clients/show')->with(compact('client','secteurs'));
     }
 
