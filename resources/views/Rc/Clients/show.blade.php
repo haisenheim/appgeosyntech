@@ -24,7 +24,7 @@
         <div class="col-md-8 col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>SECTEUR <a href="#" data-toggle="modal" data-target="#addSecteur" class="btn btn-xs btn-info pull-right"><i class="fa fa-plus-circle"></i></a></h4>
+                    <h4>SECTEURS <a href="#" data-toggle="modal" data-target="#addSecteur" class="btn btn-xs btn-info pull-right"><i class="fa fa-plus-circle"></i></a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-inline">

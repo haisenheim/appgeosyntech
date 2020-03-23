@@ -7,13 +7,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">BASE DES FACTURES CLIENT</h1>
+            <h1 class="m-0 text-dark">BASE DES COMMANDES CLIENT</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="/rc/dashboard">SM</a></li>
               <li class="breadcrumb-item">CLIENTS</li>
-              <li class="breadcrumb-item active">FACTURES</li>
+              <li class="breadcrumb-item active">COMMANDES</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,7 +26,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">FACTURES</h3>
+                  <h3 class="card-title">COMMANDES</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -35,8 +35,8 @@
                            <tr>
                                <th>CLIENT</th>
                                <th>&numero;</th>
-                               <th>PERIODE</th>
-                               <th>MONTANT</th>
+                               <th>DATE</th>
+                               <th>NOMBRE D'AGENT</th>
                                <th>STATUT</th>
                                <th></th>
                            </tr>
@@ -48,12 +48,12 @@
                                    <td>{{ $liv->client?$liv->client->name:'-' }}</td>
                                    <td>{{ $liv->name }}</td>
 
-                                   <td>{{ $liv->moi_id }} / {{ $liv->annee }} </td>
-                                   <td>{{ number_format($liv->montant, 0,',','.') }}</td>
+                                   <td>{{ date_format($liv->created_at,'d/m/Y') }}  </td>
+                                   <td>{{ number_format($liv->nombre, 0,',','.') }}</td>
                                    <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/factures/{{ $liv->token }}"></a></li>
+                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/commandes/{{ $liv->token }}"></a></li>
                                        </ul>
                                    </td>
                                </tr>
