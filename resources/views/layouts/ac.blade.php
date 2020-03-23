@@ -25,7 +25,7 @@
                         </button>
 
                         <!-- App Seaach-->
-                        <form class="app-seaach d-none d-lg-block">
+                        <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
                                 <input type="text" class="form-control" placeholder="Seaach...">
                                 <span class="mdi mdi-magnify"></span>
@@ -36,12 +36,12 @@
                     <div class="d-flex">
 
                         <div class="dropdown d-inline-block d-lg-none ml-2">
-                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-seaach-dropdown"
+                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-magnify"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
-                                aria-labelledby="page-header-seaach-dropdown">
+                                aria-labelledby="page-header-search-dropdown">
 
                                 <form class="p-3">
                                     <div class="form-group m-0">
