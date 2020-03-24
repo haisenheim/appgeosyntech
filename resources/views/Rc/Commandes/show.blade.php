@@ -146,10 +146,10 @@
      
 @endsection
 
-@section('script')
+@section('scripts')
 <script>
 
-    $('.btn-add').click(function(e){
+    $('.btn-add').click(function(){
         console.log('ok');
         var id = $(this).data('id');
         $('#cligne_id').val(id);
