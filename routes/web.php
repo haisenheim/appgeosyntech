@@ -160,7 +160,7 @@ Route::prefix('ac')
 		Route::get('dashboard','DashboardController');
 		Route::get('/commande/disable/{token}','CommandeController@disable');
 		Route::get('/commande/valider/{token}','CommandeController@valider');
-		Route::get('/commande/send/{token}','CommandeController@envoyer');
+		Route::get('/commande/order/{token}','CommandeController@envoyer');
 
 	});
 

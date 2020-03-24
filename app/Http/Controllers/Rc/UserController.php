@@ -34,6 +34,10 @@ class UserController extends Controller
     }
 
 
+	public function get(){
+		$user = User::find(request('id'));
+		return response()->json(compact('user'));
+	}
 
     /**
      * Store a newly created resource in storage.
