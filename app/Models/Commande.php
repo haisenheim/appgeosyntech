@@ -63,7 +63,7 @@ class Commande extends Model
 
 				}else{
 					$step['level'] =2;
-					$step['color'] = 'info';
+					$step['color'] = 'primary';
 					$step['name'] = 'non envoyée';
 				}
 			}else{
@@ -82,7 +82,7 @@ class Commande extends Model
 
 	public function getNombreAttribute(){
 
-		$lignes = Cligne::all()->where('commande_id',$this);
+		$lignes = Cligne::all()->where('commande_id',$this->id);
 		$s=0;
 		foreach($lignes as $ligne){
 			$s = $s+$ligne->quantity;
