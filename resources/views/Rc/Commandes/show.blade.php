@@ -150,10 +150,10 @@
 <script>
 
     $('.btn-add').click(function(){
-        console.log('ok');
+        //console.log('ok');
         var id = $(this).data('id');
         $('#cligne_id').val(id);
-        $('poste').val($(this).data('poste'));
+        $('#poste').val($(this).data('poste'));
         $.ajax({
             url:'/rc/ligne/get',
             type:'get',
@@ -164,7 +164,7 @@
             var html ='<option> Selectionner un agent </option>';
             $('#user_id').html('');
             for(var i=0;i<users.length;i++){
-                html = html + '<option value="'+ users[i].id +'">'+ users[id].first_name +'  '+users[id].last_name +'</option>';
+                html = html + '<option value="'+ users[i].id +'">'+ users[i].first_name +'  '+users[i].last_name +'</option>';
 
             }
 
@@ -184,7 +184,7 @@
             var user = data.user;
             $('#user-img').prop('src',document.location.origin+'/'+user.imageUri);
 
-            var competences = $user.competences;
+            var competences = user.competences;
             var lst = '';
             for(var i=0;i<competences.length;i++){
                 lst = lst + '<li class="list-inline-item index-item">'+ competences[i].name +'</li>';

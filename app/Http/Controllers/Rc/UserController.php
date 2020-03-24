@@ -35,7 +35,7 @@ class UserController extends Controller
 
 
 	public function get(){
-		$user = User::find(request('id'));
+		$user = User::find(request('id'))->load('competences');
 		return response()->json(compact('user'));
 	}
 
