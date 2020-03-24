@@ -20,12 +20,18 @@
 @endsection
 
 @section('content')
-    <?php $client= $commande->client ?>
+
     <div class="row">
         <div class="col-md-8 col-sm-12">
 
             <div class="card">
-
+                <div class="card-header">
+                    @if($commande->active)
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a class="btn btn-outline-danger btn-xs" href="/ac/commande/disable/{{ $commande->token }}"><i class="fa fa-trash"></i></a></li>
+                        </ul>
+                    @endif
+                </div>
                 <div class="card-body">
                     <table class="table datatable table-bordered table-hover table-striped table-condensed">
                        <thead>
@@ -40,7 +46,7 @@
                            </tr>
                        </thead>
                        <tbody>
-                           @foreach($facture->lignes as $liv)
+                           @foreach($commande->lignes as $liv)
 
                                <tr>
 
@@ -48,8 +54,8 @@
 
 
                                    <td>{{ number_format($liv->quantity, 0,',','.') }}</td>
-                                   <td>{{ date_format($commande->debut,'d/m/Y') }}</td>
-                                   <td>{{ date_format($commande->fin,'d/m/Y') }}</td>
+                                   <td>{{ date_format($liv->debut,'d/m/Y') }}</td>
+                                   <td>{{ date_format($liv->fin,'d/m/Y') }}</td>
 
                                    <td>
                                        <ul class="list-inline">

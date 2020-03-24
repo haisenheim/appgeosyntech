@@ -203,7 +203,7 @@
                             <li>
                                 <a href="/ac/commandes" class="waves-effect">
                                     <i class="mdi mdi-file-chart-outline"></i>
-                                    <span>COMMANDES</span>
+                                    <span>RECRUTEMENTS</span>
                                 </a>
                             </li>
 
