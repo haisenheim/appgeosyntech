@@ -50,7 +50,7 @@ class CommandeController extends Controller
 		'debut'=>$ligne->debut, 'fin'=>$ligne->fin,'client_id'=>$ligne->commande->client_id,'montant'=>request('montant')
 		]);
 		request()->session()->flash('success','L\'agent a été correctement placé !!!');
-		return request()->back();
+		return redirect()->back();
 	}
 
 
