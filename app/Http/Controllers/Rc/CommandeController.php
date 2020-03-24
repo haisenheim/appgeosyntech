@@ -40,7 +40,7 @@ class CommandeController extends Controller
 
 	public function getLigne(){
 		$users = User::all();
-
+		dd($users);
 		return response()->json(compact($users));
 	}
 
