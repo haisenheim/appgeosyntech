@@ -50,9 +50,44 @@ class Commande extends Model
 		return $etat;
 	}
 
+	public function getStepAttribute(){
 
+		$step=[];
 
+		if($this->active){
+			if($this->validated){
+				if($this->ordered){
+					$step['level'] =3;
+					$step['color'] = 'success';
+					$step['name'] = 'envoyée';
 
+				}else{
+					$step['level'] =2;
+					$step['color'] = 'info';
+					$step['name'] = 'non envoyée';
+				}
+			}else{
+				$step['level'] = 1;
+				$step['color'] = 'warning';
+				$step['name'] = 'brouillon';
+			}
+		}else{
+			$step['level'] = 0;
+			$step['color'] = 'danger';
+			$step['name'] = 'annulée';
+		}
 
+		return $step;
+	}
 
+	public function getNombreAttribute(){
+
+		$lignes = Cligne::all()->where('commande_id',$this);
+		$s=0;
+		foreach($lignes as $ligne){
+			$s = $s+$ligne->quantity;
+		}
+
+		return $s;
+	}
 }

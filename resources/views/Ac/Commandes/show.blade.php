@@ -26,11 +26,20 @@
 
             <div class="card">
                 <div class="card-header">
-                    @if($commande->active)
+
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a class="btn btn-outline-danger btn-xs" href="/ac/commande/disable/{{ $commande->token }}"><i class="fa fa-trash"></i></a></li>
+                            @if($commande->step['level']==1 || $commande->step['level']==2)
+                                <li class="list-inline-item"><a title="Annuler la procedure" class="btn btn-outline-danger btn-xs" href="/ac/commande/disable/{{ $commande->token }}"><i class="fa fa-trash"></i></a></li>
+                                <li class="list-inline-item"><a title="Modifier" class="btn btn-outline-warning btn-xs" href="/ac/commande/edit/{{ $commande->token }}"><i class="fa fa-edit"></i></a></li>
+                            @endif
+                            @if($commande->step['level']==1)
+                                <li class="list-inline-item"><a title="Valider la demande" class="btn btn-outline-{{$commande->step['color']}} btn-xs" href="/ac/commande/valider/{{ $commande->token }}"><i class="fa fa-edit"></i></a></li>
+                            @endif
+                            @if($commande->step['level']==2)
+                                <li class="list-inline-item"><a title="Commander" class="btn btn-outline-{{$commande->step['color']}} btn-xs" href="/ac/commande/order/{{ $commande->token }}"><i class="fa fa-edit"></i></a></li>
+                            @endif
                         </ul>
-                    @endif
+
                 </div>
                 <div class="card-body">
                     <table class="table datatable table-bordered table-hover table-striped table-condensed">
