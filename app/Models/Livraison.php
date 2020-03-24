@@ -11,6 +11,7 @@ class Livraison extends Model
 
 	protected $guarded = [];
 	public $timestamps = false;
+	protected $dates = ['debut','fin'];
 
 	public function ligne(){
 		return $this->belongsTo('App\Models\Cligne');
