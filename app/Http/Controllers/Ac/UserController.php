@@ -27,11 +27,11 @@ class UserController extends Controller
     public function index()
     {
         //
-	    $users= \App\User::all()->where('role_id',8);
-	    $livraisons = Livraison::all()->where('client_id',Auth::user()->id);
-	    $pays = Pay::all();
+	    //$users= \App\User::all()->where('role_id',8);
+	    $livraisons = Livraison::all()->where('client_id',Auth::user()->client_id);
+	    //$pays = Pay::all();
 
-        return view('Ac/Users/index')->with(compact('users','pays','livraisons'));
+        return view('Ac/Users/index')->with(compact('livraisons'));
 
     }
 
