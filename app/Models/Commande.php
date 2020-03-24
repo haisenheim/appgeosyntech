@@ -59,12 +59,12 @@ class Commande extends Model
 				if($this->ordered){
 					$step['level'] =3;
 					$step['color'] = 'success';
-					$step['name'] = 'envoyée';
+					$step['name'] = 'commandée';
 
 				}else{
 					$step['level'] =2;
 					$step['color'] = 'primary';
-					$step['name'] = 'non envoyée';
+					$step['name'] = 'non commandée';
 				}
 			}else{
 				$step['level'] = 1;

@@ -20,12 +20,16 @@
 @endsection
 
 @section('content')
-    <?php $client= $commande->client ?>
+
     <div class="row">
         <div class="col-md-8 col-sm-12">
 
             <div class="card">
+                <div class="card-header">
 
+
+
+                </div>
                 <div class="card-body">
                     <table class="table datatable table-bordered table-hover table-striped table-condensed">
                        <thead>
@@ -35,12 +39,13 @@
                                <th>QUANTITE</th>
                                <th>DEBUT</th>
                                <th>FIN</th>
-
+                               <th>NIVEAU</th>
+                                <th></th>
                                <th></th>
                            </tr>
                        </thead>
                        <tbody>
-                           @foreach($facture->lignes as $liv)
+                           @foreach($commande->lignes as $liv)
 
                                <tr>
 
@@ -48,12 +53,20 @@
 
 
                                    <td>{{ number_format($liv->quantity, 0,',','.') }}</td>
-                                   <td>{{ date_format($commande->debut,'d/m/Y') }}</td>
-                                   <td>{{ date_format($commande->fin,'d/m/Y') }}</td>
+                                   <td>{{ date_format($liv->debut,'d/m/Y') }}</td>
+                                   <td>{{ date_format($liv->fin,'d/m/Y') }}</td>
+                                   <td><span class="badge badge-{{ $liv->level['color'] }}">{{ $liv->level['name'] }}</span></td>
+                                   <td>
+                                       <div class="progress">
+                                           <div class="progress-bar bg-{{ $liv->etat['color'] }}" role="progressbar" style="width: <?= $liv->etat['progress'].'%' ?>;" aria-valuenow="{{ $liv->etat['progress'] }}" aria-valuemin="0" aria-valuemax="100">{{ $liv->etat['progress'] }}%</div>
+                                       </div>
+                                   </td>
 
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/lignes/{{ $liv->token }}"></a></li>
+                                            @if($commande->step['level']==3)
+                                                <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/commande/ligne/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
+                                            @endif
                                        </ul>
                                    </td>
                                </tr>
@@ -66,42 +79,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 col-sm-12">
 
-            <div class="card card-info">
-                <div class="card-header">
-                    <h5 class="card-title">{{ $client->name }} </h5>
-                    <span style="float: right" class="badge badge-<?= !$client->active?'danger':'success' ?>"><?= !$client->active?'compte bloqué':'compte actif' ?></span>
-
-
-                </div>
-                <div class="card-body">
-                        <div style="padding: 10px auto">
-                            <div class="">
-                              <img style="max-height: 100px; max-height:100px; border-radius: 50%" src="<?= $client->imageUri?asset('img/'. $client->imageUri):asset('img/avatar.png') ?>" class="img-circle elevation-2">
-                            </div>
-                        </div>
-                    <div style="padding: 10px;">
-                        <ul class="list-group">
-                            <li class="list-group-item"><h5>Adresse: {{ $client->address }}</h5></li>
-                            <li class="list-group-item"><h6><i class="fa fa-mobile"></i> {{ $client->phone }}</h6></li>
-                            <li class="list-group-item"><h6><i class="fa fa-envelope"></i> {{ $client->email }}</h6></li>
-
-\                        </ul>
-                    </div>
-                    <div class="index-item">
-                        <h5>Utilisateurs</h5>
-                        <ul class="list-group">
-                            @foreach($client->users as $user)
-                                <li class="list-group-item">{{ $user->name }}- <span style="font-size: smaller">{{ $user->email }}</span> <span class="pull-right">{{ $user->role->name }}</span></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
 
 
     </div>
