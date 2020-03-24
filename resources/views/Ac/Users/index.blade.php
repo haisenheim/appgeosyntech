@@ -38,22 +38,26 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
-                      <th>PAYS DE RES.</th>
+                      <th>POSTE</th>
+                      <th>DU</th>
+                      <th>AU</th>
                       <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($users as $ville)
+                    @foreach($livraisons as $livraison)
                           <tr>
-                              <td>{!! $ville->last_name !!} </td>
-                              <td>{!! $ville->first_name !!} </td>
-                              <td>{!! $ville->address !!} </td>
-                               <td>{!! $ville->phone !!} </td>
-                                <td>{!! $ville->email !!} </td>
-                              <td>{!! $ville->pay?$ville->pay->name:'-' !!}</td>
+                              <td>{{ $livraison->user->last_name }} </td>
+                              <td>{{ $livraison->user->first_name }} </td>
+                              <td>{{ $livraison->user->address }} </td>
+                               <td>{{ $livraison->phone }} </td>
+                                <td>{{ $livraison->poste->email }} </td>
+                              <td>{{ $livraison->poste->name }}</td>
+                              <td>{{ date_format($livraison->debut,'d/m/Y') }}</td>
+                              <td>{{ date_format($livraison->fin,'d/m/Y') }}</td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('ac.users.show',[$ville->token])}}"><i class="fa fa-seaach"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('ac.users.show',[$livraison->user->token])}}"><i class="fa fa-seaach"></i></a></li>
                               </ul>
                               </td>
                           </tr>
@@ -81,88 +85,6 @@
             <!-- /.col -->
           </div>
 
-           <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">NOUVEL AGENT</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('ac.users.store')}}" method="post">
-                        {{csrf_field()}}
-                          <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="name">NOM</label>
-                                      <input type="text" class="form-control" id="name" name="last_name" placeholder="Saisir le nom ">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="name">PRENOM</label>
-                                      <input type="text" class="form-control" id="name" name="first_name" placeholder="Saisir le prenom">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-5 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="name">ADRESSE</label>
-                                      <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="phone">TELEPHONE</label>
-                                      <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="role_id">PAYS</label>
-                                      <select required="required" name="pay_id" id="pay_id" class="form-control">
-                                        <option value="0">SELECTIONNER UN PAYS</option>
-                                            @foreach($pays as $role)
-                                                <option value="{{ $role->id }}">{{ $role->name }}</option>
-                                            @endforeach
-                                      </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-5 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="email">EMAIL</label>
-                                      <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">PHOTO</label>
-                                        <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
-                                    </div>
-                                </div>
-
-                            </div>
-                          </div>
-                          <!-- /.card-body -->
-
-                          <div class="card-footer">
-                            <button type="submit" class="btn btn-info btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
-                          </div>
-                        </form>
-                      </div>
-
-                    </div>
-                    <!-- /.modal-content -->
-                  </div>
-                  <!-- /.modal-dialog -->
-           </div>
 
 <style>
     .table th,

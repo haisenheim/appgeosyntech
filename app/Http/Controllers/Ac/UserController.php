@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Classement;
 use App\Models\Competence;
+use App\Models\Livraison;
 use App\Models\Pay;
 use App\Models\Ville;
 use App\User;
@@ -27,9 +28,10 @@ class UserController extends Controller
     {
         //
 	    $users= \App\User::all()->where('role_id',8);
+	    $livraisons = Livraison::all()->where('client_id',Auth::user()->id);
 	    $pays = Pay::all();
 
-        return view('Ac/Users/index')->with(compact('users','pays'));
+        return view('Ac/Users/index')->with(compact('users','pays','livraisons'));
 
     }
 
