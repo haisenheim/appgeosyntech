@@ -155,6 +155,9 @@ Route::prefix('ac')
 		Route::post('/commande/save','CommandeController@save');
 		Route::resource('users','UserController');
 		Route::get('dashboard','DashboardController');
+		Route::get('/commande/disable/{token}','CommandeController@disable');
+		Route::get('/commande/valider/{token}','CommandeController@valider');
+		Route::get('/commande/send/{token}','CommandeController@envoyer');
 
 	});
 

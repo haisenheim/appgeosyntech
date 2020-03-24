@@ -61,6 +61,37 @@ class CommandeController extends Controller
 		return response()->json(compact('commande'));
 	}
 
+
+
+	public  function valider($token){
+		$commande = Commande::where('token',$token)->first();
+		$commande->validated=1;
+		$commande->save();
+		request()->session()->flash('info','Demande validée !!!');
+		return redirect()->back();
+	}
+
+	public  function disable($token){
+		$commande = Commande::where('token',$token)->first();
+		$commande->active=0;
+		$commande->save();
+		request()->session()->flash('info','Demande annulée !!!');
+		return redirect()->back();
+	}
+
+	public  function envoyer($token){
+		$commande = Commande::where('token',$token)->first();
+		$commande->ordered=1;
+		$commande->ordered_by = Auth::user()->id;
+		$commande->ordered_at = new \DateTime();
+		$commande->save();
+		request()->session()->flash('success','Demande envoyée, commande confirmée !!!');
+		return redirect()->back();
+	}
+
+
+
+
     /**
      * Show the form for creating a new resource.
      *
