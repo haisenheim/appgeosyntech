@@ -92,8 +92,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="card-body">
-                       <div style="padding: 10px auto">
-                            <div class="">
+                       <div>
+                            <div style="margin: 10px auto; max-width: 150px" class="">
                               <img id="user-img" style="max-height: 100px; max-width:100px; border-radius: 50%" src="<?= asset('img/avatar.png') ?>" class="img-circle elevation-2">
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                               <div class="col-auto">
                                   <div class="mt-3 mr-sm-2">
                                       <label  for="montant">COUT</label>
-                                       <input disabled type="number" class="form-control" name="montant" id="montant">
+                                       <input  type="number" class="form-control" name="montant" id="montant">
                                   </div>
                               </div>
 
@@ -182,7 +182,8 @@
             data:{id:$('#user_id').val()},
             success:function(data){
             var user = data.user;
-            $('#user-img').prop('src',document.location.origin+'/'+user.imageUri);
+            var link =document.location.origin+'/'+user.imageUri;
+            $('#user-img').prop('src',link);
 
             var competences = user.competences;
             var lst = '';
