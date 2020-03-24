@@ -41,6 +41,15 @@
                 margin-top:5px;
             }
 
+            td>ul.list-inline{
+                margin-bottom: 0;
+            }
+
+            .btn.btn-xs{
+                font-size: 0.6rem;
+                padding: 3px;
+            }
+
            .card> div.card-header{
                 background-color: #fff;
             }
