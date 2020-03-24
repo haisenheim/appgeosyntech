@@ -50,10 +50,10 @@
 
                                    <td>{{ date_format($liv->created_at,'d/m/Y') }}  </td>
                                    <td>{{ number_format($liv->nombre, 0,',','.') }}</td>
-                                   <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
+                                   <td> <span class="badge badge-{{ $liv->step['color'] }}">{{ $liv->step['name'] }}</span> </td>
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/commandes/{{ $liv->token }}"></a></li>
+                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/commandes/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
                                        </ul>
                                    </td>
                                </tr>

@@ -26,7 +26,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES AGENTS <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-ciacle"></i></a></h3>
+                  <h3 class="card-title">LISTE DES AGENTS </h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -71,7 +71,9 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
-                      <th>PAYS RES.</th>
+                      <th>POSTE</th>
+                      <th>DU</th>
+                      <th>AU</th>
                       <th></th>
                     </tr>
                     </tfoot>
