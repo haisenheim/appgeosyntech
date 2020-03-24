@@ -6,9 +6,12 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Category;
 
+use App\Models\Cligne;
 use App\Models\Commande;
+use App\Models\Livraison;
 use App\Models\Pay;
 use App\Models\Secteur;
+use App\User;
 use Illuminate\Http\Request;
 
 
@@ -34,6 +37,21 @@ class CommandeController extends Controller
     {
         //
     }
+
+	public function getLigne(){
+		$users = User::all();
+
+		return response()->json(compact($users));
+	}
+
+	public function addLigne(){
+		$ligne = Cligne::find(request('cligne_id'));
+		Livraison::create(['user_id'=>request('user_id'),'cligne_id'=>request('cligne_id'),'poste_id'=>$ligne->poste_id,'commande_id'=>$ligne->commande_id,
+		'debut'=>$ligne->debut, 'fin'=>$ligne->fin,'client_id'=>$ligne->commande->client_id,'montant'=>request('montant')
+		]);
+		request()->session()->flash('success','L\'agent a été correctement placé !!!');
+		return request()->back();
+	}
 
 
 

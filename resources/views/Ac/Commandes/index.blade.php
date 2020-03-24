@@ -56,6 +56,7 @@
                                            <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/ac/commandes/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
                                        </ul>
                                    </td>
+
                                </tr>
 
                            @endforeach

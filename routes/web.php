@@ -140,6 +140,9 @@ Route::prefix('rc')
 		Route::post('/client/add-secteur','ClientController@addSecteur');
 
 		Route::get('/client/delete-secteur/{user_id}/{competence_id}','ClientController@deleteSecteur');
+		Route::get('/user/get','UserController@get');
+		Route::get('/ligne/get','CommandeController@getLigne');
+		Route::post('/ligne/add','CommandeController@addLigne');
 	});
 
 

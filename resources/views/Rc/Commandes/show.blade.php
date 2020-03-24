@@ -40,8 +40,10 @@
                                <th>DEBUT</th>
                                <th>FIN</th>
                                <th>NIVEAU</th>
+                               @if($commande->step['level']==3)
                                 <th></th>
                                <th></th>
+                               @endif
                            </tr>
                        </thead>
                        <tbody>
@@ -56,38 +58,142 @@
                                    <td>{{ date_format($liv->debut,'d/m/Y') }}</td>
                                    <td>{{ date_format($liv->fin,'d/m/Y') }}</td>
                                    <td><span class="badge badge-{{ $liv->level['color'] }}">{{ $liv->level['name'] }}</span></td>
+                                   @if($commande->step['level']==3)
                                    <td>
                                        <div class="progress">
                                            <div class="progress-bar bg-{{ $liv->etat['color'] }}" role="progressbar" style="width: <?= $liv->etat['progress'].'%' ?>;" aria-valuenow="{{ $liv->etat['progress'] }}" aria-valuemin="0" aria-valuemax="100">{{ $liv->etat['progress'] }}%</div>
                                        </div>
                                    </td>
 
+
                                    <td>
                                        <ul class="list-inline">
-                                            @if($commande->step['level']==3)
-                                                <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/commande/ligne/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
-                                            @endif
+                                            <li class="list-inline-item"><a class="btn btn-xs btn-info btn-add" data-poste="{{ $liv->poste->name }}" data-id="{{ $liv->id }}" data-toggle="modal" data-target="#addLivraison" title="Afficher" href="#"><i class="fa fa-eye"></i></a></li>
                                        </ul>
                                    </td>
+                                  @endif
                                </tr>
-
                            @endforeach
                        </tbody>
                    </table>
-
                 </div>
             </div>
         </div>
-
-
-
-
     </div>
+
+     <div class="modal fade" id="addLivraison">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">NOUVEAU POSTE</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                       <div style="padding: 10px auto">
+                            <div class="">
+                              <img id="user-img" style="max-height: 100px; max-width:100px; border-radius: 50%" src="<?= asset('img/avatar.png') ?>" class="img-circle elevation-2">
+                            </div>
+                        </div>
+                      <form action="/rc/ligne/add" method="post">
+                          {{csrf_field()}}
+                          <input type="hidden" id="cligne_id" name="cligne_id" />
+
+
+                          <div class="form-row align-items-center">
+
+                              <div class="col-auto">
+                                  <div class="mt-3 mr-sm-2">
+                                      <label  for="poste">POSTE</label>
+                                       <input disabled type="text" class="form-control" id="poste">
+                                  </div>
+                              </div>
+                              <div class="col-auto">
+                                  <div class="mt-3 mr-sm-2">
+                                      <label  for="user_id">AGENT</label>
+                                      <select required="required" class="form-control mb-2" name="user_id" id="user_id"></select>
+
+                                  </div>
+                              </div>
+                              <div class="col-auto">
+                                  <div class="mt-3 mr-sm-2">
+                                      <label  for="montant">COUT</label>
+                                       <input disabled type="number" class="form-control" name="montant" id="montant">
+                                  </div>
+                              </div>
+
+                              <div class="col-auto">
+                                  <button type="submit" class="btn btn-primary mt-2">Valider</button>
+                              </div>
+                          </div>
+                      </form>
+
+                      <ul id="cl" class="list-inline">
+
+                      </ul>
+
+                    </div>
+
+                </div>
+
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+     </div>
      
 @endsection
 
 @section('script')
 <script>
+
+    $('.btn-add').click(function(e){
+        var id = $(this).data('id');
+        $('#cligne_id').val(id);
+        $('poste').val($(this).data('poste'));
+        $.ajax({
+            url:'/rc/ligne/get',
+            type:'get',
+            dataType:'json',
+            data:{id:id},
+            success:function(data){
+            var users = data.users;
+            var html ='<option> Selectionner un agent </option>';
+            $('#user_id').html('');
+            for(var i=0;i<users.length;i++){
+                html = html + '<option value="'+ users[i].id +'">'+ users[id].first_name +'  '+users[id].last_name +'</option>';
+
+            }
+
+             $('#user_id').html(html);
+            }
+        })
+    });
+
+    $('#user_id').change(function(){
+
+        $.ajax({
+            url:'/rc/user/get',
+            type:'get',
+            dataType:'json',
+            data:{id:$('#user_id').val()},
+            success:function(data){
+            var user = data.user;
+            $('#user-img').prop('src',document.location.origin+'/'+user.imageUri);
+
+            var competences = $user.competences;
+            var lst = '';
+            for(var i=0;i<competences.length;i++){
+                lst = lst + '<li class="list-inline-item index-item">'+ competences[i].name +'</li>';
+            }
+            $('#cl').html(lst);
+
+            }
+        });
+    });
+
   $(function () {
     $(".datatable").DataTable();
 
