@@ -57,7 +57,7 @@ class Cligne extends Model
 		$level = [];
 		$commande = Commande::find($this->commande_id);
 		$secteurs = DB::table('clients_secteurs')->where(['client_id'=>$commande->client_id])->get(['secteur_id']);
-		dd($secteurs);
+		dd($secteurs->whereIn('secteur_id',[$this->secteur_id])->all());
 		if($secteurs->contains($this->secteur_id)){
 			$level['name'] = 'sensible';
 			$level['color'] ='warning';
