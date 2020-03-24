@@ -82,10 +82,10 @@
     </div>
 
      <div class="modal fade" id="addLivraison">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">NOUVEAU POSTE</h4>
+                  <h4 class="modal-title">NOUVELLE AFFECTATION</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -124,7 +124,7 @@
                                   </div>
                               </div>
 
-                              <div class="col-auto">
+                              <div style="margin-top: 30px;" class="col-auto">
                                   <button type="submit" class="btn btn-primary mt-2">Valider</button>
                               </div>
                           </div>
@@ -150,6 +150,7 @@
 <script>
 
     $('.btn-add').click(function(e){
+        console.log('ok');
         var id = $(this).data('id');
         $('#cligne_id').val(id);
         $('poste').val($(this).data('poste'));
