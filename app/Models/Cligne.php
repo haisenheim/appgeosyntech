@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class Cligne extends Model
 {
@@ -50,6 +51,21 @@ class Cligne extends Model
 		}
 
 		return $data;
+	}
+
+	public function getLevelAttribute(){
+		$level = [];
+		$commande = Commande::find($this->commande_id);
+		$secteurs = DB::table('clients_secteurs')->where(['client_id'=>$commande->client_id])->get(['secteur_id']);
+		if(in_array($this->secteur_id,$secteurs)){
+			$level['name'] = 'sensible';
+			$level['color'] ='warning';
+		}else{
+			$level['name'] = 'souple';
+			$level['color'] = 'info';
+		}
+
+		return $level;
 	}
 
 }

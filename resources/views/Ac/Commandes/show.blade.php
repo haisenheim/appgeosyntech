@@ -68,7 +68,9 @@
 
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/ac/lignes/{{ $liv->token }}"></a></li>
+                                            @if($liv->etat['value'])
+                                                <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/ac/commande/ligne/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
+                                            @endif
                                        </ul>
                                    </td>
                                </tr>

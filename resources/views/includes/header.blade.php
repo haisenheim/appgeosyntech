@@ -46,8 +46,8 @@
             }
 
             .btn.btn-xs{
-                font-size: 0.6rem;
-                padding: 3px;
+                font-size: 0.7rem;
+                padding: 4px;
             }
 
            .card> div.card-header{
