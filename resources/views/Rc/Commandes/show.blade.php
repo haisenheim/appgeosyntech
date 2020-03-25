@@ -160,10 +160,10 @@
             dataType:'json',
             data:{id:id},
             success:function(data){
-            var users = data;
+            var users = Object.values(data);
             var html ='<option> Selectionner un agent </option>';
             $('#user_id').html('');
-            console.log(users.length);
+            console.log(users);
             for(var i=0;i<users.length;i++){
                 html = html + '<option value="'+ users[i].id +'">'+ users[i].first_name +'  '+users[i].last_name +'</option>';
 
