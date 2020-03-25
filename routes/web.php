@@ -145,6 +145,8 @@ Route::prefix('rc')
 		Route::post('/ligne/add','CommandeController@addLigne');
 		Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
 		Route::get('/commande/ligne/{token}','CommandeController@showLigne');
+
+		Route::post('/commande/livraison/add-primes','CommandeController@addPrime');
 	});
 
 

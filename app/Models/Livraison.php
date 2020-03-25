@@ -29,7 +29,7 @@ class Livraison extends Model
 	}
 
 	public function primes(){
-		return $this->hasMany('App\Models\Primes');
+		return $this->hasMany('App\Models\Prime');
 	}
 
 

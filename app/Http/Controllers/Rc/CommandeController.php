@@ -10,7 +10,9 @@ use App\Models\Cligne;
 use App\Models\Commande;
 use App\Models\Livraison;
 use App\Models\Pay;
+use App\Models\Prime;
 use App\Models\Secteur;
+use App\Models\Tprime;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -52,7 +54,20 @@ class CommandeController extends Controller
 	public function getLivraison($token){
 		$livraison = Livraison::where('token',$token)->first();
 		//dd($livraison);
-		return view('Rc/Commandes/livraison')->with(compact('livraison'));
+		$types = Tprime::all();
+		return view('Rc/Commandes/livraison')->with(compact('livraison','types'));
+	}
+
+	public function addPrime(){
+		$data = request('primes');
+		$id = request('id');
+		$livraison = Livraison::find($id);
+		$livraison->primes()->delete();
+		foreach($data as $d){
+			Prime::create(['livraison_id'=>$livraison->id,'montant'=>$d['montant'],'tprime_id'=>$d['id']]);
+		}
+
+		return response()->json(compact('livraison'));
 	}
 
 	public function showLigne($token){

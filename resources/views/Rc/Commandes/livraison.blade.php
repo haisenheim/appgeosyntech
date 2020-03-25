@@ -42,7 +42,7 @@
                             <li class="list-group-item"><h6><i class="fa fa-mobile"></i> {{ $user->phone }}</h6></li>
                             <li class="list-group-item"><h6><i class="fa fa-envelope"></i> {{ $user->email }}</h6></li>
                             <li class="list-group-item"><h6><i class="mdi mdi-google-classroom"></i> {{ $user->classe?$user->classe->category->name:'-' }}</h6></li>
-\                        </ul>
+                       </ul>
                     </div>
                 </div>
             </div>
@@ -71,10 +71,32 @@
         <div class="col-md-6 col-sm-12">
 
             <div class="card">
+               <div class="card-header">
+                    <h4 class="card-title">PRIMES <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-cog"></i></a></h4>
+               </div>
                 <div class="card-body">
-
-
-
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PRIME</th>
+                                <th>MONTANT</th>
+                            </tr>
+                        </thead>
+                        <?php $somme =0; ?>
+                        <tbody>
+                            @foreach($livraison->primes as $pr)
+                                <?php $somme = $somme + $pr->montant ?>
+                                <tr>
+                                    <td>{{ $pr->tprime->name }}</td>
+                                    <td>{{ number_format($pr->montant,0,',','.') }}</td>
+                                </tr>
+                            @endforeach
+                            <tr>
+                                <th>TOTAL</th>
+                                <th>{{ number_format($somme,0,',','.') }}</th>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -116,13 +138,166 @@
         </div>
     </div>
 
+
+
+
+
+
+     <div class="modal fade" id="modal-lg">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">GESTION DES PRIMES</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+
+                        {{csrf_field()}}
+                        <input type="hidden" id="id" value="{{ $livraison->id }}"/>
+                          <div class="card-body">
+                             <form>
+                                  <div class="form-row align-items-center">
+
+                                      <div class="col-auto">
+                                          <div class="mt-3 mr-sm-2">
+                                              <label  for="prime_id">PRIME</label>
+                                              <select class="form-control mb-2" id="prime_id">
+                                                  <option value="0">CHOISIR</option>
+                                                  @foreach($types as $poste)
+                                                  <option value="{{ $poste->id }}">{{ $poste->name }}</option>
+                                                  @endforeach
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-auto">
+                                          <div class="mt-3 mr-sm-2">
+                                              <label  for="montant">MONTANT</label>
+                                                  <input type="number"  class="form-control" id="montant" placeholder="montant">
+
+                                          </div>
+                                      </div>
+
+
+
+                                      <div style="margin-top: 35px;" class="col-auto">
+                                          <button  id="btn-add" class="btn btn-outline-secondary mt-2"><i class="fa fa-plus-square"></i></button>
+                                      </div>
+                                  </div>
+                              </form>
+
+
+
+                              <table id="tab-lines" class="table table-bordered table-striped table-condensed table-hover">
+                                <thead>
+                                    <tr>
+
+                                        <th>PRIME</th>
+                                        <th>MONTANT</th>
+
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                              </table>
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12"></div>
+                                 <div class="col-md-4 col-sm-12">
+                                    <button id="btn-store" type="submit" class="btn btn-info btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+
+                                        <div id="save-spinner" style="display: none" class="bs-spinner mt-4 mt-lg-0">
+
+                                            <div class="spinner-grow mr-2 mt-2" style="width: 3rem; height: 3rem;" role="status">
+                                                <span class="sr-only">Enregistrement en cours...</span>
+                                            </div>
+                                        </div>
+
+                                 </div>
+                            </div>
+
+                          </div>
+
+                      </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+           </div>
+
+
+
 @endsection
 
-@section('script')
+@section('scripts')
 <script>
-  $(function () {
-    $(".datatable").DataTable();
+     $(document).ready(function(){$(".datatable").DataTable();});
+     $('#btn-add').click(function(e){
+        e.preventDefault();
+        var prime_id = $('#prime_id').val();
+        var prime = $('#prime_id option:selected').text();
 
-  });
+        var montant = $('#montant').val();
+
+
+        if(montant && prime_id){
+
+            var tr = '<tr data-prime='+ prime_id  +' data-montant='+ montant +'>'+
+
+            '<td>'+ prime +'</td><td>'+ montant +'</td><td><span style="padding: 2px;font-size: 0.6rem" title="Retirer cette ligne" class="remove btn btn-xs btn-outline-danger"><i class="fa fa-trash"></i></span></td></tr>';
+
+            $('#tab-lines').find('tbody').append(tr);
+
+            $('.remove').click(function(){
+                $(this).parent().parent().remove();
+            });
+
+        }else{
+            alert('Ajout impossible. Verifiez les informations');
+        }
+
+     });
+
+     $('#btn-store').click(function(e){
+        e.preventDefault();
+
+        var data =[];
+
+        $('#tab-lines').find('tbody').find('tr').each(function(){
+            var elt = {};
+
+            elt.prime_id = $(this).data('prime');
+            elt.montant = $(this).data('montant');
+
+            data.push(elt);
+        });
+
+        if(data.length){
+            $('#save-spinner').show();
+            $('#btn-store').hide();
+             $.ajax({
+            url:'/rc/commande/livraison/add-primes',
+            type:'post',
+            dataType:'json',
+            data:{primes:data,id:$('#id').val()},
+            beforeSend:function(xhr){
+                xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
+            },
+            success:function(dt){
+                 window.location.href='/ac/commande/livraison/'+dt.livraison.token
+            }
+        });
+        }
+
+
+     })
 </script>
 @endsection
