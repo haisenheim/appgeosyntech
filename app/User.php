@@ -7,6 +7,7 @@ use App\Models\Livraison;
 use App\Traits\LockableTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Carbon;
 
 class User extends Authenticatable
 {
