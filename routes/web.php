@@ -143,6 +143,7 @@ Route::prefix('rc')
 		Route::get('/user/get','UserController@get');
 		Route::get('/ligne/get','CommandeController@getLigne');
 		Route::post('/ligne/add','CommandeController@addLigne');
+		Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
 	});
 
 

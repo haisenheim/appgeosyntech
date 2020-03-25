@@ -41,6 +41,11 @@
                 margin-top:5px;
             }
 
+            .img-center{
+                margin: 5px auto;
+                max-width: 150px;
+            }
+
             td>ul.list-inline{
                 margin-bottom: 0;
             }
