@@ -73,7 +73,7 @@ class User extends Authenticatable
 
 		$livraisons = Livraison::all()->where('user_id',$this->id)->where('fin','>',Carbon::today());
 
-		return (!$livraisons->count()==0);
+		return ($livraisons->count()==0);
 	}
 
     public function getNameAttribute(){
