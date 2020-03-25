@@ -79,6 +79,13 @@
                                     </div>
                                 </div>
 
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="minimum">SALAIRE</label>
+                                      <input type="number" class="form-control" id="minimum" name="minimum" >
+                                    </div>
+                                </div>
+
                             </div>
 
 

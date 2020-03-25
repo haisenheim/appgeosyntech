@@ -292,7 +292,7 @@
                 xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
             },
             success:function(dt){
-                 window.location.href='/ac/commande/livraison/'+dt.livraison.token
+                 window.location.href='/rc/commande/livraison/'+dt.livraison.token
             }
         });
         }

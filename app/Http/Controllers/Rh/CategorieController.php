@@ -52,6 +52,7 @@ class CategorieController extends Controller
 
 		$ville =[];
 		$ville['name']=$request->name;
+		$ville['minimum'] = $request->minimum;
 
 		$ville = Category::create($ville);
 
