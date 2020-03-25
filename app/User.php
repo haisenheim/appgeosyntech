@@ -71,9 +71,9 @@ class User extends Authenticatable
 	public function getFreeAttribute(){
 		//$user = User::find($this->id);
 
-		$livraisons = Livraison::all()->where('user_id',$this->id)->where('fin','<',Carbon::today());
+		$livraisons = Livraison::all()->where('user_id',$this->id)->where('fin','>',Carbon::today());
 
-		return ($livraisons->count()==0);
+		return (!$livraisons->count()==0);
 	}
 
     public function getNameAttribute(){
