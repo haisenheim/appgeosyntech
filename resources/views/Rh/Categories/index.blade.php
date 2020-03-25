@@ -37,7 +37,7 @@
 
                                <ul class="list-inline " style="margin-left: 10px">
                                     <li class="list-inline-item">{!! $ville->name !!}</li>
-                                    <li class="list-inline-item">{{ number_format($ville->minimum,0,',','.') }}</li>
+                                    <li class="list-inline-item badge badge-secondary">{{ number_format($ville->minimum,0,',','.') }}</li>
                                     <li class="list-inline-item"><a title="afficher" class="badge badge-info" href="#"><i class="fa fa-eye"></i></a></li>
 
                                </ul>
