@@ -39,9 +39,9 @@ class CommandeController extends Controller
     }
 
 	public function getLigne(){
-		$users = User::all()->filter(function($item){
+		$users = User::all()/*->filter(function($item){
 			return $item->free;
-		})->all();
+		})->all()*/;
 
 		//dd($users);
 		return response()->json(compact('users'));
