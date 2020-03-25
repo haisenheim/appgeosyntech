@@ -75,6 +75,7 @@ Route::name('utils.')
 			Route::get('read-pdf/{token}','DiversController@readPdf');
 			Route::get('get-consultants-pay','DiversController@getConsultantsByPay');
 			Route::get('get-contributeurs-pay','DiversController@getContributeursByPay');
+			Route::get('/pointage/test/add','TestController@addPointage');
 
 		});
 
