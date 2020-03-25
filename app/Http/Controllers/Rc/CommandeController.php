@@ -64,7 +64,7 @@ class CommandeController extends Controller
 		$livraison = Livraison::find($id);
 		$livraison->primes()->delete();
 		foreach($data as $d){
-			Prime::create(['livraison_id'=>$livraison->id,'montant'=>$d['montant'],'tprime_id'=>$d['id']]);
+			Prime::create(['livraison_id'=>$livraison->id,'montant'=>$d['montant'],'tprime_id'=>$d['prime_id']]);
 		}
 
 		return response()->json(compact('livraison'));
