@@ -47,7 +47,7 @@
                             @foreach($ligne->livraisons as $liv)
                                 <tr>
                                     <td>{{ $liv->user->name }}</td>
-                                    <td>{{ $liv->user->classe->name }}</td>
+                                    <td>{{ $liv->user->classe->category->name }}</td>
                                     <td>
                                         <ul class="list-inline">
                                         @foreach($liv->user->competences as $cmp)
