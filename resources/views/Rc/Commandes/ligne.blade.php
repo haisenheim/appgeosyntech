@@ -2,7 +2,7 @@
 
 
 @section('page-title')
-    <?php  $client = $ligne->client; ?>
+    <?php  $client = $ligne->commande->client; ?>
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
