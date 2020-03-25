@@ -44,7 +44,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($ligne->livraison as $liv)
+                            @foreach($ligne->livraisons as $liv)
                                 <tr>
                                     <td>{{ $liv->user->name }}</td>
                                     <td>{{ $liv->user->classe->name }}</td>
