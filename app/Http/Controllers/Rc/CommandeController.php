@@ -51,8 +51,13 @@ class CommandeController extends Controller
 
 	public function getLivraison($token){
 		$livraison = Livraison::where('token',$token)->first();
-		dd($livraison);
+		//dd($livraison);
 		return view('Rc/Commandes/livraison')->with(compact('livraison'));
+	}
+
+	public function showLigne($token){
+		$ligne = Cligne::where('token',$token)->first();
+		return view('Rc/Commandes/ligne')->with(compact('ligne'));
 	}
 
 	public function addLigne(){

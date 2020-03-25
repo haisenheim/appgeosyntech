@@ -70,7 +70,7 @@
                                        <ul class="list-inline">
                                             <li class="list-inline-item"><a class="btn btn-xs btn-info btn-add" data-poste="{{ $liv->poste->name }}" data-id="{{ $liv->id }}" data-toggle="modal" data-target="#addLivraison" title="traiter la commande" href="#"><i class="fa fa-upload"></i></a></li>
                                              @if($liv->livraisons)
-                                             <li class="list-inline-item"><a class="btn btn-xs btn-success"      title="Afficher" href="/rc/commande/livraison/{{$liv->token}}"><i class="fa fa-eye"></i></a></li>
+                                             <li class="list-inline-item"><a class="btn btn-xs btn-success"      title="Afficher" href="/rc/commande/ligne/{{$liv->token}}"><i class="fa fa-eye"></i></a></li>
                                              @endif
                                        </ul>
                                    </td>

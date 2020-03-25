@@ -144,6 +144,7 @@ Route::prefix('rc')
 		Route::get('/ligne/get','CommandeController@getLigne');
 		Route::post('/ligne/add','CommandeController@addLigne');
 		Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
+		Route::get('/commande/ligne/{token}','CommandeController@showLigne');
 	});
 
 
