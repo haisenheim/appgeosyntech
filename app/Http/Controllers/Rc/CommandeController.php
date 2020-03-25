@@ -42,7 +42,7 @@ class CommandeController extends Controller
 		$fil = User::all()->filter(function($item){
 			return $item->free;
 		});
-		$users = $fil->all();
+		$users = $fil->toArray();
 
 		//dd($users);
 		return response()->json(compact('users'));
