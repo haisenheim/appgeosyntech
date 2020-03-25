@@ -33,12 +33,12 @@ class Livraison extends Model
 	}
 
 
-	public function setTokenAttribute()
+	/*public function setTokenAttribute()
 	{
 
 			$this->attributes['token'] = sha1(Auth::user()->id.date('Yhdmsi'));
 
 
-	}
+	}*/
 
 }
