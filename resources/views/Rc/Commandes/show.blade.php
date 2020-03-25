@@ -160,7 +160,7 @@
             dataType:'json',
             data:{id:id},
             success:function(data){
-            var users = data.users;
+            var users = data;
             var html ='<option> Selectionner un agent </option>';
             $('#user_id').html('');
             for(var i=0;i<users.length;i++){

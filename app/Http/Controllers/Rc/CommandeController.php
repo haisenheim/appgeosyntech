@@ -45,7 +45,7 @@ class CommandeController extends Controller
 		$users = $fil->toArray();
 
 		//dd($users);
-		return response()->json(compact('users'));
+		return response()->json($users);
 	}
 
 	public function addLigne(){
