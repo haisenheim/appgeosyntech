@@ -75,7 +75,7 @@
                     <h4 class="card-title">PRIMES <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-cog"></i></a></h4>
                </div>
                 <div class="card-body">
-                    <table>
+                    <table class="table table-striped table-condensed table-hover table-bordered">
                         <thead>
                             <tr>
                                 <th>PRIME</th>
