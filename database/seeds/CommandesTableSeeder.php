@@ -39,7 +39,7 @@ class CommandesTableSeeder extends Seeder
 								  'commande_id'=>$commande->id,
 								  'annee'=>date_format($jour,'Y'),
 								  'user_id'=>rand(1,5),
-								  'token'=>sha1(rand(100.3000) . rand(1000,99999)),
+								  'token'=>sha1(rand(100,3000) . rand(1000,99999)),
 								  'jour'=>$jour,
 								  'moi_id'=>date_format($jour,'m'),
 							  ]
