@@ -186,7 +186,7 @@
             data:{id:$('#user_id').val()},
             success:function(data){
             var user = data.user;
-            var link =document.location.origin+'/'+user.imageUri;
+            var link =document.location.origin+'/img/'+user.imageUri;
             $('#user-img').prop('src',link);
 
             var competences = user.competences;
