@@ -8,8 +8,9 @@ use Faker\Generator as Faker;
 $factory->define(\App\Models\Cligne::class, function (Faker $faker) {
 	//$unixTimestamp = '1561467200';
     $m= rand(1,100);
-	$debut = \Carbon\Carbon::now()->add('day',$m);
-	$fin = $debut->add('day',rand(200,700));
+	$debut = $faker->dateTimeBetween('+'.$m.' days','+3 years');
+	$fin = $debut->add(rand(200,700).'days');
+	//date('Y-m-d', strtotime($debut. ' + 2 days'));
 
 	return [
         //
