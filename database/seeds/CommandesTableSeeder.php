@@ -51,7 +51,7 @@ class CommandesTableSeeder extends Seeder
 			    for($i=1;$i<=$ligne->quantity;$i++){
 				    factory(\App\Models\Livraison::class,1)->create(['cligne_id'=>$ligne->id,'commande_id'=>$commande->id,
 					    'client_id'=>$commande->client_id,'poste_id'=>$ligne->poste_id,
-				         'debut'=>$commande->debut,'fin'=>$commande->fin
+				         'debut'=>$ligne->debut,'fin'=>$ligne->fin
 				    ])
 					    //->make( ['cligne_id'=>$ligne->id,'commande_id'=>$commande->id,'client_id'=>$commande->client_id,'poste_id'=>$ligne->poste_id])->create()
 					    ->each(function($livraison) use($commande){

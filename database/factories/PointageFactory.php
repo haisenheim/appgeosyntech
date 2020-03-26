@@ -13,7 +13,7 @@ $factory->define(\App\Models\Pointage::class, function (Faker $faker) {
         //
 		'moi_id'=>rand(1,12),
 		'annee'=>rand(2010,2020),
-		'debut'=>$faker->$debut,
+		'debut'=>$debut,
 		'fin'=>$faker->dateTimeBetween($debut,'+'. rand(2,9) . 'hours'),
 	    'token'=>sha1($faker->randomAscii . rand(1000,99999)),
 

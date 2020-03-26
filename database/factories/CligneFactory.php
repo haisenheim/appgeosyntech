@@ -6,10 +6,11 @@
 use Faker\Generator as Faker;
 
 $factory->define(\App\Models\Cligne::class, function (Faker $faker) {
-	$unixTimestamp = '1561467200';
-    $m= rand(1,12);
-	$debut = $faker->dateTimeBetween(time(),'+'.$m.' months');
-	$marge = rand(1,5);
+	//$unixTimestamp = '1561467200';
+    $m= rand(1,100);
+	$debut = \Carbon\Carbon::now()->addDays($m);
+	$fin = $debut->addDays(rand(200,700));
+
 	return [
         //
 
@@ -19,7 +20,7 @@ $factory->define(\App\Models\Cligne::class, function (Faker $faker) {
 
 	    'quantity'=>rand(1,7),
 	    'debut'=>$debut,
-	    'fin'=>$faker->dateTimeBetween($debut,'+3 years'),
+	    'fin'=>$fin,
 	    'moi_id'=>rand(1,12),
 	    'annee'=>rand(2019,2020)
     ];
