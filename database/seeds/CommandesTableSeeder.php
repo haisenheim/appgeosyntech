@@ -68,6 +68,7 @@ class CommandesTableSeeder extends Seeder
 										 $k=rand(10,26);
 										 for($i=1;$i<=$k;$i++){
 											 $fiche = \App\Models\Fiche::where('annee',$bulletin->annee)->where('moi_id',$bulletin->moi_id)->where('commande_id',$commande->id)->first();
+
 											 $debut = \Carbon\Carbon::createFromImmutable($fiche->jour);
 											 $debut = $debut->add('hour',rand(7,9));
 											 factory(\App\Models\Pointage::class)->create(
