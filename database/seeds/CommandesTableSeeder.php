@@ -71,7 +71,7 @@ class CommandesTableSeeder extends Seeder
 
 											 $debut = $fiche->jour;
 											 $deb = $fiche->jour;
-											 $fin = $deb->add(new DateInterval('P'.rand(2,9).'H'));;
+											 $fin = $deb->add(new DateInterval('PT'.rand(2,9).'H30S'));;
 											 //$debut = $deb->add('hour',rand(7,9));
 											 factory(\App\Models\Pointage::class)->create(
 												 ['livraison_id'=>$bulletin->livraison_id,'user_id'=>$bulletin->user_id,
