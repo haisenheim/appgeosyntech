@@ -22,6 +22,10 @@ class Commande extends Model
 		return $this->hasMany('App\Models\Cligne');
 	}
 
+	public function fiches(){
+		return $this->hasMany('App\Models\Fiche');
+	}
+
 	public function livraisons(){
 		return $this->hasMany('App\Models\Livraison');
 	}

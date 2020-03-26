@@ -20,6 +20,10 @@ class Pointage extends Model
 		return $this->belongsTo('App\Models\Moi');
 	}
 
+	public function fiche(){
+		return $this->belongsTo('App\Models\Fiche');
+	}
+
 	public function livraison(){
 		return $this->belongsTo('App\Models\Livraison');
 	}

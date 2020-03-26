@@ -23,6 +23,10 @@ class Client extends Model
 		return $this->hasMany('App\Models\Facture', 'client_id');
 	}
 
+	public function fiches(){
+		return $this->hasMany('App\Models\Fiche');
+	}
+
 
 	public function secteurs(){
 		return $this->belongsToMany('App\Models\Secteur','clients_secteurs');
