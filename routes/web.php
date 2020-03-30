@@ -13,7 +13,7 @@
 */
 
 use Illuminate\Support\Facades\Route;
-use Pbmedia\LaravelFFMpeg\FFMpegFacade;
+
 
 Route::get('/', function () {
     return view('auth/login');
