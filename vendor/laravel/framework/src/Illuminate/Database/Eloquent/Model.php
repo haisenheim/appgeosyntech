@@ -17,7 +17,7 @@ use Illuminate\Contracts\Queue\QueueableCollection;
 use Illuminate\Support\Collection as BaseCollection;
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
 
-abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializable, QueueableEntity, UrlRoutable
+abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializable, QueueableEntity, UrlRoutable
 {
     use Concerns\HasAttributes,
         Concerns\HasEvents,
@@ -1649,27 +1649,4 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
     {
         $this->bootIfNotBooted();
     }
-
-
-	/*
-	 *  Adding of some mutators by Clement ESSOMBA
-	 */
-
-	public function setAnneeAttribute()
-	{
-		if(isset($this->attributes['annee'])){
-			$this->attributes['annee'] = date('Y');
-		}
-
-	}
-
-	public function setMoiIdAttribute()
-	{
-		if(isset($this->attributes['moi_id'])){
-			$this->attributes['moi_id'] = date('m');
-		}
-
-	}
-
-
 }
