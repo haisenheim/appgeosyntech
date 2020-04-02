@@ -33,7 +33,7 @@ class FicheController extends Controller
 	    if (Auth::user()) {
 
 		    $user = Auth::user();
-		    dd(str_pad(date('ydm').$user->client_id,7,'0',STR_PAD_LEFT));
+		    dd(sha1($user->id . date('Ymdhis')));
 		    $fiche = Fiche::create(['name'=>str_pad(date('ydm').$user->client_id,7,'0',STR_PAD_LEFT),'jour'=>new Date(), 'user_id'=>$user->id, 'client_id'=>$user->client_id,
 		        'token'=>sha1($user->id . date('Ymdhis')), 'moi_id'=>date('m'),'annee'=>date('Y')
 		    ]);
