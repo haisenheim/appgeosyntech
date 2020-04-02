@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Fiche;
+use App\Models\Moi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -51,8 +52,48 @@ class FicheController extends Controller
 	    }
 
 
-	    return response()->json(['message'=>'All is Ok !!!']);
+
     }
+
+
+	public function getMonths(){
+		if (Auth::user()) {
+
+			$user = Auth::user();
+			// dd(sha1($user->id . date('Ymdhis')));
+			$months = Moi::all();
+
+			return response()->json([
+				'success' => true,
+				'message' => 'Toutes les fiches par mois !!!',
+				'fiche'=>$months
+			]);
+		}else {
+			return response()->json([
+				'success' => false,
+				'message' => 'Impossible de charger les mois'
+			]);
+		}
+	}
+
+	public function getFicheByMonth(){
+		if (Auth::user()) {
+
+			$fiches = Fiche::all()->where('moi_id',request('id'));
+			$month = Moi::find(request('id'));
+			return response()->json([
+				'success' => true,
+				'message' => 'Toutes les fiches par mois !!!',
+				'fiches'=>$fiches,
+				'month'=>$month
+			]);
+		}else {
+			return response()->json([
+				'success' => false,
+				'message' => 'Impossible de charger les fiches'
+			]);
+		}
+	}
 
     /**
      * Store a newly created resource in storage.
