@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class FicheController extends Controller
 {
@@ -25,7 +26,7 @@ class FicheController extends Controller
     public function create()
     {
         //
-
+		dd(Auth::user());
 	    return response()->json(['message'=>'All is Ok !!!']);
     }
 
