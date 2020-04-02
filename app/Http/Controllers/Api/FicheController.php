@@ -26,6 +26,7 @@ class FicheController extends Controller
     public function create()
     {
         //
+	    dd(request());
 		dd(Auth::user());
 	    return response()->json(['message'=>'All is Ok !!!']);
     }
