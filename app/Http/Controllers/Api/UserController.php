@@ -57,6 +57,7 @@ class UserController extends Controller
 		}
 		$input = $request->all();
 		$input['password'] = bcrypt($input['password']);
+		$input['token'] = sha1(date('Yhimds'));
 		$user = User::create($input);
 		$success['token'] = $user->createToken('appToken')->accessToken;
 		return response()->json([
