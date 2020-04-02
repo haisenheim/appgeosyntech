@@ -45,7 +45,7 @@ class FicheController extends Controller
 	    }else {
 		    return response()->json([
 			    'success' => false,
-			    'message' => 'Unable to Logout'
+			    'message' => 'Impossible de creer la fiche'
 		    ]);
 	    }
 

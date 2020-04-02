@@ -24,7 +24,7 @@ Route::resource('projets', '\App\Http\Controllers\Api\ProjetController');*/
 Route::group(['prefix' => 'v1','namespace'=>'Api'], function () {
 	Route::post('/login', 'UserController@login');
 	Route::post('/register', 'UserController@register');
-	Route::get('/fiche/create','FicheController@create');
+	Route::get('/fiche/create','FicheController@create')->middleware('auth:api');
 	Route::get('/logout', 'UserController@logout')->middleware('auth:api');
 });
 
