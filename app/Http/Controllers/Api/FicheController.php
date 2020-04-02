@@ -76,7 +76,7 @@ class FicheController extends Controller
 		}
 	}
 
-	public function getFicheByMonth(){
+	public function getFichesByMonth(){
 		if (Auth::user()) {
 
 			$fiches = Fiche::all()->where('moi_id',request('id'));
