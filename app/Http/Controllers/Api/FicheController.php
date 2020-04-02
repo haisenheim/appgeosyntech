@@ -25,6 +25,8 @@ class FicheController extends Controller
     public function create()
     {
         //
+
+	    return response()->json(['message'=>'All is Ok !!!']);
     }
 
     /**
