@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('projets', '\App\Http\Controllers\Api\ProjetController');*/
 
 
-Route::group(['prefix' => 'v1'], function () {
+Route::group(['prefix' => 'v1','namespace'=>'Api'], function () {
 	Route::post('/login', 'UsersController@login');
 	Route::post('/register', 'UsersController@register');
 	Route::get('/fiche/create','FicheController@create');
