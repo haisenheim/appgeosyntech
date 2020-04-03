@@ -38,7 +38,7 @@ class FicheController extends Controller
 	    if (Auth::user()) {
 
 		    $user = Auth::user();
-		    $livraisons = Livraison::all()->where('client_id',$user->client_id)->where('fin','>',Carbon::today());
+		    $livraisons = Livraison::all()->where('client_id',$user->client_id);
 		    dd($livraisons);
 		   // dd(sha1($user->id . date('Ymdhis')));
 		    $fiche = Fiche::create(['name'=>str_pad(date('ydm').$user->client_id,10,'0',STR_PAD_LEFT),'jour'=>new \DateTime(), 'user_id'=>$user->id, 'client_id'=>$user->client_id,
