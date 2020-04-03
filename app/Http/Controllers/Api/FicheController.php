@@ -129,7 +129,7 @@ class FicheController extends Controller
 
 	public function get(){
 		if(Auth::user()){
-			$fiche = Fiche::find('id')->load('Pointages.User');
+			$fiche = Fiche::find(request('id'))->load('Pointages.User');
 			if($fiche){
 
 			}else{
