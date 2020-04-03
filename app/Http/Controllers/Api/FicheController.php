@@ -149,8 +149,35 @@ class FicheController extends Controller
 				'message' => 'Accès non autorisé!!!'
 			]);
 		}
+	}
 
+	public function point(){
+		if(Auth::user()){
+			$pointage = Pointage::find(request('id'));
+			if($pointage){
+				if($pointage->debut){
+					$pointage->fin = new \DateTime();
+				}else{
+					$pointage->debut = new \DateTime();
+				}
+				$pointage = $pointage->save();
+				return response()->json([
+					'success' => true,
+					'message' => 'pointage effectué!',
 
+				]);
+			}else{
+				return response()->json([
+					'success' => false,
+					'message' => 'Pointage impossible!!!'
+				]);
+			}
+		}else{
+			return response()->json([
+				'success' => false,
+				'message' => 'Accès non autorisé!!!'
+			]);
+		}
 
 	}
 
