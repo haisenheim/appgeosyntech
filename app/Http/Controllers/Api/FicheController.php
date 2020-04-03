@@ -127,6 +127,28 @@ class FicheController extends Controller
 		}
 	}
 
+	public function get(){
+		if(Auth::user()){
+			$fiche = Fiche::where('id',request('id'))->load('Pointages.User')->first();
+			if($fiche){
+
+			}else{
+				return response()->json([
+					'success' => false,
+					'message' => 'Fiche introuvable.'
+				]);
+			}
+		}else{
+			return response()->json([
+				'success' => false,
+				'message' => 'Accès non autorisé!!!'
+			]);
+		}
+
+
+
+	}
+
     /**
      * Store a newly created resource in storage.
      *
