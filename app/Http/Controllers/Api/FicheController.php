@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Bulletin;
+use App\Models\Facture;
 use App\Models\Fiche;
 use App\Models\Livraison;
 use App\Models\Moi;
@@ -44,6 +45,13 @@ class FicheController extends Controller
 		    $fiche = Fiche::create(['name'=>str_pad(date('ydm').$user->client_id,10,'0',STR_PAD_LEFT),'jour'=>new \DateTime(), 'user_id'=>$user->id, 'client_id'=>$user->client_id,
 		        'token'=>sha1($user->id . date('Ymdhis')), 'moi_id'=>date('m'),'annee'=>date('Y')
 		    ]);
+
+		    $facture = Facture::where('client_id',$user->client_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
+		    if(!$facture){
+			    $facture = Facture::create(['name'=>str_pad(date('ydm').$user->client_id,10,'0',STR_PAD_LEFT),'moi_id'=>date('m'),'annee'=>date('Y'),
+				    'token'=>sha1($user->id . date('Ymdhis')), 'client_id'=>$user->client_id
+			    ]);
+		    }
 		    if($fiche){
 			    $livraisons = Livraison::all()->where('client_id',$user->client_id)->where('fin','>',Carbon::today());
 			    foreach($livraisons as $livraison){
@@ -57,7 +65,7 @@ class FicheController extends Controller
 				    }
 				    Pointage::create([
 					    'bulletin_id'=>$bulletin->id, 'livraison_id'=>$livraison->id,'user_id'=>$livraison->user_id,
-				        'fiche_id'=>$fiche->id,'moi_id'=>date('m'),
+				        'fiche_id'=>$fiche->id,'moi_id'=>date('m'),'facture_id'=>$facture->id,
 					    'annee'=>date('Y'),'token'=>sha1($fiche->id . $livraison->user_id . $livraison->id. date('Ymdhsi'))
 				    ]);
 			    }
