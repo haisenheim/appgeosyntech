@@ -131,7 +131,12 @@ class FicheController extends Controller
 		if(Auth::user()){
 			$fiche = Fiche::find(request('id'))->load('Pointages.User');
 			if($fiche){
+				return response()->json([
+					'success' => true,
+					'message' => 'Retrait d\'une fiche',
+					'fiche'=>$fiche,
 
+				]);
 			}else{
 				return response()->json([
 					'success' => false,
