@@ -30,8 +30,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center mb-5">
-                            <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="24" alt="Ici le logo" ></a>
-                            <h2 class="font-size-20 text-white-50 mb-4">SITRAD MANAGEMENT</h2>
+                            <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="120" alt="Ici le logo" ></a>
+                            <h2 class="font-size-20 text-black-90 mb-4">SITRAD MANAGEMENT</h2>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="mt-4">
-                                                    <button class="btn btn-info btn-block waves-effect waves-light" type="submit">Se Connecter</button>
+                                                    <button class="btn btn-dark btn-block waves-effect waves-light" type="submit">Se Connecter</button>
                                                 </div>
 
                                             </div>
