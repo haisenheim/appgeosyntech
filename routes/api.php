@@ -29,6 +29,7 @@ Route::group(['prefix' => 'v1','namespace'=>'Api'], function () {
 	Route::get('/fiches','FicheController@getFichesByMonth')->middleware('auth:api');
 	Route::get('/fiche','FicheController@get')->middleware('auth:api');
 	Route::get('/point','FicheController@point')->middleware('auth:api');
+	Route::get('/fich','FicheController@get');
 	Route::get('/logout', 'UserController@logout')->middleware('auth:api');
 });
 
