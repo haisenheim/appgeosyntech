@@ -20,7 +20,7 @@
 
     </head>
 
-    <body class="bg-info bg-pattern">
+    <body class="bg-info bg-pattern" style="background-color: #FFFFFF">
         <div class="home-btn d-none d-sm-block">
             <a href="/"><i class="mdi mdi-home-variant h2 text-white"></i></a>
         </div>
@@ -31,7 +31,7 @@
                     <div class="col-lg-12">
                         <div class="text-center mb-5">
                             <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="120" alt="Ici le logo" ></a>
-                            <h2 class="font-size-20 text-black-90 mb-4">SITRAD MANAGEMENT</h2>
+                            <h2 style="margin-top: 20px; font-weight: bold; text-shadow: 2px 1px #eee;" class="font-size-20 text-black-90 mb-4">SITRAD MANAGEMENT</h2>
                         </div>
                     </div>
                 </div>
