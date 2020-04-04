@@ -20,7 +20,7 @@
 
     </head>
 
-    <body class="bg-info bg-pattern" style="background-color: #FFFFFF">
+    <body class="bg bg-pattern" style="background-color: #FFFFFF">
         <div class="home-btn d-none d-sm-block">
             <a href="/"><i class="mdi mdi-home-variant h2 text-white"></i></a>
         </div>
