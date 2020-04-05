@@ -18,18 +18,18 @@ class UserController extends Controller
 	{
 		if (Auth::attempt(['email' => request('email'), 'password' => request('password')])) {
 			$user = Auth::user();
-			$success['token'] = $user->createToken('appToken')->accessToken;
+			//$success['token'] = $user->createToken('appToken')->accessToken;
 			//After successfull authentication, notice how I return json parameters
 			return response()->json([
 				'success' => true,
-				'token' => $success,
+				//'token' => $success,
 				'user' => $user
 			]);
 		} else {
 			//if authentication is unsuccessfull, notice how I return json parameters
 			return response()->json([
 				'success' => false,
-				'message' => 'Invalid Email or Password',
+				'message' => 'Email ou Mot de passe invalide',
 			], 401);
 		}
 	}
@@ -71,12 +71,13 @@ class UserController extends Controller
 	/*
 	 * Logout Action
 	 */
-	public function logout(Request $res)
+	public function logout()
 	{
-		if (Auth::user()) {
+		$user = User::where('token',request('token'))->first();
+		if ($user) {
 
-			$user = Auth::user()->token();
-			$user->revoke();
+			//$user = Auth::user()->token();
+			//$user->revoke();
 
 			return response()->json([
 				'success' => true,

@@ -9,6 +9,7 @@ use App\Models\Livraison;
 use App\Models\Moi;
 use App\Models\Pointage;
 use Carbon\Carbon;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +27,11 @@ class FicheController extends Controller
         //
     }
 
+	private function _getUser(){
+		$user = User::where('token',request('token'))->first();
+		return $user;
+	}
+
     /**
      * Show the form for creating a new resource.
      *
@@ -34,11 +40,11 @@ class FicheController extends Controller
     public function create()
     {
         //
-	   dd(request());
+	   //dd(request());
+		$user = $this->_getUser();
+	    if ($user) {
 
-	    if (Auth::user()) {
-
-		    $user = Auth::user();
+		    //$user = Auth::user();
 		    //$livraisons = Livraison::all()->where('client_id',$user->client_id)->where('fin','>',Carbon::today());
 		    //dd($livraisons);
 		   // dd(sha1($user->id . date('Ymdhis')));
@@ -89,9 +95,11 @@ class FicheController extends Controller
 
 
 	public function getMonths(){
-		if (Auth::user()) {
 
-			$user = Auth::user();
+		$user = $this->_getUser();
+		if ($user) {
+
+			//$user = Auth::user();
 			// dd(sha1($user->id . date('Ymdhis')));
 			$months = Moi::all();
 
@@ -109,7 +117,8 @@ class FicheController extends Controller
 	}
 
 	public function getFichesByMonth(){
-		if (Auth::user()) {
+		$user = $this->_getUser();
+		if ($user) {
 
 			$fiches = Fiche::all()->where('moi_id',request('id'));
 			$month = Moi::find(request('id'));
@@ -128,7 +137,8 @@ class FicheController extends Controller
 	}
 
 	public function get(){
-		if(Auth::user()){
+		$user = $this->_getUser();
+		if($user){
 			$fiche = Fiche::find(request('id'))->load('Pointages.User');
 			if($fiche){
 				return response()->json([
@@ -152,7 +162,8 @@ class FicheController extends Controller
 	}
 
 	public function point(){
-		if(Auth::user()){
+		$user = $this->_getUser();
+		if($user){
 			$pointage = Pointage::find(request('id'));
 			if($pointage){
 				if($pointage->debut){
