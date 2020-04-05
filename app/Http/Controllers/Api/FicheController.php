@@ -34,7 +34,7 @@ class FicheController extends Controller
     public function create()
     {
         //
-	   //dd(Auth);
+	   dd(request());
 
 	    if (Auth::user()) {
 

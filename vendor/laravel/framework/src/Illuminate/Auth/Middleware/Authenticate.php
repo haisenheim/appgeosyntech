@@ -54,6 +54,7 @@ class Authenticate
      */
     protected function authenticate($request, array $guards)
     {
+	    dd($request);
         if (empty($guards)) {
             $guards = [null];
         }
