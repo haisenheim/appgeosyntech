@@ -24,7 +24,7 @@ Route::resource('projets', '\App\Http\Controllers\Api\ProjetController');*/
 Route::group(['prefix' => 'v1','namespace'=>'Api'], function () {
 	Route::post('/login', 'UserController@login');
 	Route::post('/register', 'UserController@register');
-	Route::get('/fiche/new','FicheController@save');//->middleware('auth:api');
+	Route::get('/fiche/create','FicheController@save');//->middleware('auth:api');
 	Route::get('/months','FicheController@getMonths');//->middleware('auth:api');
 	Route::get('/fiches','FicheController@getFichesByMonth');//->middleware('auth:api');
 	Route::get('/fiche','FicheController@get');//->middleware('auth:api');
