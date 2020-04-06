@@ -37,17 +37,12 @@ class FicheController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function save()
     {
-        //
-	   //dd(request());
 		$user = $this->_getUser();
-	    if ($user) {
 
-		    //$user = Auth::user();
-		    //$livraisons = Livraison::all()->where('client_id',$user->client_id)->where('fin','>',Carbon::today());
-		    //dd($livraisons);
-		   // dd(sha1($user->id . date('Ymdhis')));
+	    if ($user) {
+			debug($user);
 		    $fiche = Fiche::create(['name'=>str_pad(date('ydm').$user->client_id,10,'0',STR_PAD_LEFT),'jour'=>new \DateTime(), 'user_id'=>$user->id, 'client_id'=>$user->client_id,
 		        'token'=>sha1($user->id . date('Ymdhis')), 'moi_id'=>date('m'),'annee'=>date('Y')
 		    ]);
