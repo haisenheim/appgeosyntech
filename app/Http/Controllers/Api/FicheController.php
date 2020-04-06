@@ -57,6 +57,7 @@ class FicheController extends Controller
 		    }
 		    if($fiche){
 			    $livraisons = Livraison::all()->where('client_id',$user->client_id)->where('fin','>',Carbon::today());
+			    dd($livraisons);
 			    foreach($livraisons as $livraison){
 				    $bulletin = Bulletin::where('user_id',$livraison->user_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
 				    if(!$bulletin){
