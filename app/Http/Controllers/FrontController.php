@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+
+use App\Models\Bulletin;
+use App\Models\Facture;
+use App\Models\Fiche;
+use App\Models\Livraison;
 use App\Models\Pay;
-use App\Models\Projet;
+use App\Models\Pointage;
+
 use App\Models\Ville;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 
 use PDF;
@@ -19,6 +25,60 @@ class FrontController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+	public function test()
+	{
+		$user = User::where('token',request('token'))->first();
+
+		if ($user) {
+			//dd($user);
+			$fiche = Fiche::create(['name'=>str_pad(date('ydm').$user->client_id,10,'0',STR_PAD_LEFT),'jour'=>new \DateTime(), 'user_id'=>$user->id, 'client_id'=>$user->client_id,
+				'token'=>sha1($user->id . date('Ymdhis')), 'moi_id'=>date('m'),'annee'=>date('Y')
+			]);
+
+			// dd($fiche);
+
+			$facture = Facture::where('client_id',$user->client_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
+			if(!$facture){
+				$facture = Facture::create(['name'=>str_pad(date('ydm').$user->client_id,10,'0',STR_PAD_LEFT),'moi_id'=>date('m'),'annee'=>date('Y'),
+					'token'=>sha1($user->id . date('Ymdhis')), 'client_id'=>$user->client_id
+				]);
+			}
+			//dd($facture);
+			if($fiche){
+				$livraisons = Livraison::all()->where('client_id',$user->client_id)->where('fin','>',Carbon::today());
+
+				foreach($livraisons as $livraison){
+					$bulletin = Bulletin::where('user_id',$livraison->user_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
+					if(!$bulletin){
+						$bulletin = Bulletin::create(['user_id'=>$livraison->user_id,'moi_id'=>date('m'),'annee'=>date('Y'),
+							'token'=>sha1($user->id.date('ymdsih').$livraison->user_id),
+							'name'=>str_pad(date('ydm').$livraison->user_id,10,'0',STR_PAD_LEFT),
+							'livraison_id'=>$livraison->id
+						]);
+					}
+					Pointage::create([
+						'bulletin_id'=>$bulletin->id, 'livraison_id'=>$livraison->id,'user_id'=>$livraison->user_id,
+						'fiche_id'=>$fiche->id,'moi_id'=>date('m'),'facture_id'=>$facture->id,
+						'annee'=>date('Y'),'token'=>sha1($fiche->id . $livraison->user_id . $livraison->id. date('Ymdhsi'))
+					]);
+				}
+			}
+
+			return response()->json([
+				'success' => true,
+				'message' => 'Fche créée avec succès !!!',
+				'fiche'=>$fiche
+			]);
+		}else {
+			return response()->json([
+				'success' => false,
+				'message' => 'Impossible de creer la fiche'
+			]);
+		}
+
+
+
+	}
 
 
     public function index(Request $request)

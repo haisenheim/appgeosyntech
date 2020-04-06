@@ -29,6 +29,8 @@ Route::name('front.')
 		Route::get('/metier/formations/{token}','FormationController@getAllByMetier');*/
 	});
 
+Route::get('fiche/test','FrontController@test');
+
 
 Route::get('login/locked', 'Auth\LoginController@locked')->middleware('auth')->name('login.locked');
 Route::post('login/locked', 'Auth\LoginController@unlock')->name('login.unlock');
