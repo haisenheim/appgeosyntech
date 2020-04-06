@@ -63,9 +63,11 @@ class FrontController extends Controller
 						'fiche_id'=>$fiche->id,'moi_id'=>date('m'),'facture_id'=>$facture->id,
 						'annee'=>date('Y'),'token'=>sha1($fiche->id . $livraison->user_id . $livraison->id. date('Ymdhsi'))
 					]);
-					dd($point);
+
 				}
 			}
+
+			dd($fiche);
 
 			return view('Utils/test')->with(compact('fiche','facture','bulletin'));
 		}else {
