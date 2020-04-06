@@ -44,7 +44,7 @@ class FrontController extends Controller
 					'token'=>sha1($user->id . date('Ymdhis')), 'client_id'=>$user->client_id
 				]);
 			}
-			//dd($facture);
+			dd($facture);
 			if($fiche){
 				$livraisons = Livraison::all()->where('client_id',$user->client_id)->where('fin','>',Carbon::today());
 
