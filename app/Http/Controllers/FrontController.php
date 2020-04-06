@@ -64,11 +64,7 @@ class FrontController extends Controller
 				}
 			}
 
-			return response()->json([
-				'success' => true,
-				'message' => 'Fche créée avec succès !!!',
-				'fiche'=>$fiche
-			]);
+			return view('Utils/test')->with(compact('fiche','facture','bulletin'));
 		}else {
 			return response()->json([
 				'success' => false,
