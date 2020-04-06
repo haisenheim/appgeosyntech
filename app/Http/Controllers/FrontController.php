@@ -67,7 +67,7 @@ class FrontController extends Controller
 				}
 			}
 
-			dd($fiche);
+			//dd($fiche);
 
 			return view('Utils/test')->with(compact('fiche','facture','bulletin'));
 		}else {
