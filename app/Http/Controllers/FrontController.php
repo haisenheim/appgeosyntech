@@ -57,12 +57,13 @@ class FrontController extends Controller
 							'livraison_id'=>$livraison->id
 						]);
 					}
-					dd($bulletin);
-					Pointage::create([
+					//dd($bulletin);
+					$point =Pointage::create([
 						'bulletin_id'=>$bulletin->id, 'livraison_id'=>$livraison->id,'user_id'=>$livraison->user_id,
 						'fiche_id'=>$fiche->id,'moi_id'=>date('m'),'facture_id'=>$facture->id,
 						'annee'=>date('Y'),'token'=>sha1($fiche->id . $livraison->user_id . $livraison->id. date('Ymdhsi'))
 					]);
+					dd($point);
 				}
 			}
 
