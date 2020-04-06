@@ -42,10 +42,12 @@ class FicheController extends Controller
 		$user = $this->_getUser();
 
 	    if ($user) {
-			dd($user);
+			//dd($user);
 		    $fiche = Fiche::create(['name'=>str_pad(date('ydm').$user->client_id,10,'0',STR_PAD_LEFT),'jour'=>new \DateTime(), 'user_id'=>$user->id, 'client_id'=>$user->client_id,
 		        'token'=>sha1($user->id . date('Ymdhis')), 'moi_id'=>date('m'),'annee'=>date('Y')
 		    ]);
+
+		    dd($fiche);
 
 		    $facture = Facture::where('client_id',$user->client_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
 		    if(!$facture){
