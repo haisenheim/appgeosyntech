@@ -47,7 +47,7 @@ class FicheController extends Controller
 		        'token'=>sha1($user->id . date('Ymdhis')), 'moi_id'=>date('m'),'annee'=>date('Y')
 		    ]);
 
-		    dd($fiche);
+		   // dd($fiche);
 
 		    $facture = Facture::where('client_id',$user->client_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
 		    if(!$facture){
