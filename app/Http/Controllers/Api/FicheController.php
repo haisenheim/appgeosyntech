@@ -138,7 +138,7 @@ class FicheController extends Controller
 	public function get(){
 		$user = $this->_getUser();
 		if($user){
-			$fiche = Fiche::find(request('id'))->load('Pointages.User');
+			$fiche = Fiche::find(request('id'))->load('Pointages.User','Pointages.Livraison.Poste');
 			if($fiche){
 				return response()->json([
 					'success' => true,
