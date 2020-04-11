@@ -12,7 +12,7 @@ class Bulletin extends Model
 	protected $guarded = [];
 
 	public function owner(){
-		return $this->belongsToMany('App\User','user_id');
+		return $this->belongsToMany('App\User');
 	}
 
 	public function livraison(){
@@ -34,7 +34,7 @@ class Bulletin extends Model
 
 	public function getMontantAttribute(){
 		$bulletin = Bulletin::find($this->id);
-		$sm = $bulletin->owner->classe->minimum;
+		$sm = $bulletin->minimum;
 
 		$primes = Prime::all()->where('livraison_id',$bulletin->livraison_id);
 		$s =0;

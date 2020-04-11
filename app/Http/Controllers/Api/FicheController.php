@@ -60,9 +60,9 @@ class FicheController extends Controller
 			    $livraisons = Livraison::all()->where('client_id',$user->client_id)->where('fin','>',Carbon::today());
 
 			    foreach($livraisons as $livraison){
-				    $bulletin = Bulletin::where('user_id',$livraison->user_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
+				    $bulletin = Bulletin::where('owner_id',$livraison->user_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
 				    if(!$bulletin){
-					    $bulletin = Bulletin::create(['user_id'=>$livraison->user_id,'moi_id'=>date('m'),'annee'=>date('Y'),
+					    $bulletin = Bulletin::create(['owner_id'=>$livraison->user_id,'moi_id'=>date('m'),'annee'=>date('Y'),
 						    'token'=>sha1($user->id.date('ymdsih').$livraison->user_id),
 						    'name'=>str_pad(date('ydm').$livraison->user_id,10,'0',STR_PAD_LEFT),
 						    'livraison_id'=>$livraison->id,'facture_id'=>$facture->id,'minimum'=>$livraison->user->classe?$livraison->user->classe->category->minimum:0
