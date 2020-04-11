@@ -50,6 +50,7 @@ class ClientController extends Controller
         //
       //  dd($request['imageUri']);
 
+
 	    $data=['name'=>$request->name,'phone'=>$request->phone,'email'=>$request->email,'address'=>$request->address];
 	    $token = sha1(Auth::user()->id. date('ydmhis'));
 	    $data['token']=$token;

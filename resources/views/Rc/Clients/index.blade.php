@@ -95,10 +95,17 @@
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="row">
-                                <div class="col-md-7 col-sm-12">
+                                <div class="col-md-8 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">NOM</label>
                                       <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom ">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="name">POURCENTAGE</label>
+                                      <input type="text" class="form-control" id="pourcentage" name="pourcentage" placeholder="Exple : 12.5 (Sans le signe %) ">
                                     </div>
                                 </div>
 
