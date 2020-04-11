@@ -49,11 +49,11 @@
                                    <td>{{ $liv->name }}</td>
 
                                    <td>{{ $liv->moi_id }} / {{ $liv->annee }} </td>
-                                   <td>{{ number_format($liv->montant, 0,',','.') }}</td>
+                                   <td style="padding-right: 10px;text-align: right; font-weight: bolder">{{ number_format($liv->montant, 0,',','.') }}</td>
                                    <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/factures/{{ $liv->token }}"></a></li>
+                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/factures/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
                                        </ul>
                                    </td>
                                </tr>
