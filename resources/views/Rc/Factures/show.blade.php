@@ -38,11 +38,11 @@
                            </tr>
                        </thead>
                        <tbody>
-                           @foreach($facture->livraisons as $liv)
+                           @foreach($facture->bulletins as $liv)
 
                                <tr>
-                                   <td>{{ $liv->user?$liv->user->name:'-' }}</td>
-                                   <td>{{ $liv->poste?$liv->poste->name:'-' }}</td>
+                                   <td>{{ $liv->owner?$liv->owner->name:'-' }}</td>
+                                   <td>{{ $liv->livraison?$liv->livraison->poste->name:'-' }}</td>
 
 
                                    <td>{{ number_format($liv->montant, 0,',','.') }}</td>
