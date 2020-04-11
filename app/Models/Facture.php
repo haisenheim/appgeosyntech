@@ -32,6 +32,10 @@ class Facture extends Model
 		return $this->hasMany('App\Models\Pointage');
 	}
 
+	public function bulletins(){
+		return $this->hasMany('App\Models\Bulletin','facture_id');
+	}
+
 	public function paiements(){
 		return $this->hasMany('App\Models\Paiement');
 	}
@@ -52,6 +56,18 @@ class Facture extends Model
 		}
 
 		return $etat;
+	}
+
+	public function getMontantAttribute(){
+		$bulletins = Bulletin::all()->where('facture_id',$this->id);
+		$m = 0;
+		foreach($bulletins as $bulletin){
+			$m = $bulletin->montant + $m;
+		}
+
+		$m = $m*(1 + $this->pourcentage/100);
+
+		return $m;
 	}
 
 

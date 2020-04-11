@@ -19,6 +19,10 @@ class Bulletin extends Model
 		return $this->belongsToMany('App\Models\Livraison');
 	}
 
+	public function facture(){
+		return $this->belongsToMany('App\Models\Facture');
+	}
+
 	public function mois(){
 		return $this->belongsTo('App\Models\Moi', 'moi_id');
 	}
@@ -28,6 +32,17 @@ class Bulletin extends Model
 	}
 
 
+	public function getMontantAttribute(){
+		$bulletin = Bulletin::find($this->id);
+		$sm = $bulletin->owner->classe->minimum;
 
+		$primes = Prime::all()->where('livraison_id',$bulletin->livraison_id);
+		$s =0;
+		foreach($primes as $prime){
+			$s = $s + $prime->montant;
+		}
+
+		return $sm + $s;
+	}
 
 }
