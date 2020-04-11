@@ -12,7 +12,7 @@ class Bulletin extends Model
 	protected $guarded = [];
 
 	public function owner(){
-		return $this->belongsToMany('App\User');
+		return $this->belongsTo('App\User');
 	}
 
 	public function livraison(){
