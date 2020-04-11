@@ -38,23 +38,34 @@
                            </tr>
                        </thead>
                        <tbody>
+                           <?php $total = 0 ?>
                            @foreach($facture->bulletins as $liv)
-
+                            <?php $total = $total + $liv->montant ?>
                                <tr>
                                    <td>{{ $liv->owner?$liv->owner->name:'-' }}</td>
                                    <td>{{ $liv->livraison?$liv->livraison->poste->name:'-' }}</td>
 
 
-                                   <td>{{ number_format($liv->montant, 0,',','.') }}</td>
+                                   <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($liv->montant, 0,',','.') }}</td>
 
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/livraisons/{{ $liv->token }}"></a></li>
+                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/bulletins/{{ $liv->token }}"></a><i class="fa fa-eye"></i></li>
                                        </ul>
                                    </td>
                                </tr>
 
                            @endforeach
+                           <tr>
+                                <td colspan="2">TOTAL</td>
+                                <th style="padding-right: 10px; text-align: right; "><?= number_format($total,0,',','.') ?></th>
+                                <td></td>
+                           </tr>
+                           <tr>
+                                <td colspan="2">NET A PAYER</td>
+                                 <th style="padding-right: 10px; text-align: right; "><?= number_format($total*(1 + $client->pourcentage/100),0,',','.') ?></th>
+                                 <td></td>
+                           </tr>
                        </tbody>
                    </table>
 
