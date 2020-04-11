@@ -16,11 +16,11 @@ class Bulletin extends Model
 	}
 
 	public function livraison(){
-		return $this->belongsToMany('App\Models\Livraison');
+		return $this->belongsTo('App\Models\Livraison');
 	}
 
 	public function facture(){
-		return $this->belongsToMany('App\Models\Facture');
+		return $this->belongsTo('App\Models\Facture');
 	}
 
 	public function mois(){
