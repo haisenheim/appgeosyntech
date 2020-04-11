@@ -38,6 +38,7 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
+                      <th>POURCENTAGE</th>
 
                       <th></th>
                     </tr>
@@ -50,6 +51,7 @@
                               <td>{!! $ville->address !!} </td>
                                <td>{!! $ville->phone !!} </td>
                                 <td>{!! $ville->email !!} </td>
+                                <td style="text-align: right; padding-right: 10px">{{ number_format($ville->pourcentage,2,',','.') }}%</td>
 
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
@@ -67,6 +69,7 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
+                      <th>POURCENTAGE</th>
 
                       <th></th>
                     </tr>
@@ -110,26 +113,26 @@
                                 </div>
 
 
-                                <div class="col-md-5 col-sm-12">
+                                <div class="col-md-7 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">ADRESSE</label>
                                       <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
                                     </div>
                                 </div>
 
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-5 col-sm-12">
                                     <div class="form-group">
                                       <label for="phone">TELEPHONE</label>
                                       <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                       <label for="email">EMAIL</label>
                                       <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label for="exampleInputFile">LOGO</label>
                                         <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
