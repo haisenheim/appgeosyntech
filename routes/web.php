@@ -184,7 +184,7 @@ Route::prefix('ra')
 	->name('ra.')
 	->group(function(){
 		Route::resource('unites','UniteController');
-
+		Route::resource('tarticles','TarticleController');
 		Route::resource('articles','ArticleController');
 		Route::resource('approvisionnements','ApprovisionnementController');
 		Route::post('/approvisionnement/save','ApprovisionnementController@save');
