@@ -50,8 +50,8 @@
 
                                 <tr style="background-color: <?= ($article->quantity <= $article->minimum)?'rgba(255, 10, 3, 0.36)':''  ?> ">
                                     <td>{{ $article->name }}</td>
-                                    <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($article->quantity,0,',','.') }}</td>
-                                    <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($article->minimum,0,',','.') }}</td>
+                                    <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($article->quantity,0,',','.') }} {{ $article->unite?$article->unite->name:'Unité(s)' }}</td>
+                                    <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($article->minimum,0,',','.') }} {{ $article->unite?$article->unite->name:'Unité(s)' }}</td>
                                     <td>{{ $article->type?$article->type->name:'-' }}</td>
                                     <td>
                                         <ul class="list-inline">
