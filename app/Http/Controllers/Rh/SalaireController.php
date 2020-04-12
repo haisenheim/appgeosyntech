@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Competence;
 use App\Models\Devise;
 use App\Models\Metier;
+use App\Models\Moi;
 use App\Models\Pay;
 use App\Models\Secteur;
 use Illuminate\Foundation\Auth\User;
@@ -28,9 +29,10 @@ class SalaireController extends Controller
     {
 	    $moi_id = request('moi_id')?request('moi_id'):date('m');
 	    $annee = request('annee')?request('annee'):date('Y');
+	    $mois = Moi::all();
 
 	    $bulletins = Bulletin::all()->where('moi_id',$moi_id)->where('annee',$annee);
-	    return view('Rh/Salaires/index')->with(compact('bulletins','annee','moi_id'));
+	    return view('Rh/Salaires/index')->with(compact('bulletins','annee','moi_id','mois'));
     }
 
 	public function show($token)
