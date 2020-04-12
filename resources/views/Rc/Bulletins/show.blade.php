@@ -40,8 +40,8 @@
                         </div>
                         <div class="col-md-4 col-sm-12">
                             <ul class="list-group">
-                                <li class="list-group-item">PLACEMENT : <span class="value"> {{ $bulletion->livraison->client->name }}</span></li>
-                                <li class="list-group-item">POSTE : <span class="value"> {{ $bulletion->livraison->poste->name }}</span></li>
+                                <li class="list-group-item">PLACEMENT : <span class="value"> {{ $bulletin->livraison->client->name }}</span></li>
+                                <li class="list-group-item">POSTE : <span class="value"> {{ $bulletin->livraison->poste->name }}</span></li>
                             </ul>
                         </div>
                     </div>
