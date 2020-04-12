@@ -102,8 +102,8 @@ class SortieController extends Controller
 	public function show($token)
 	{
 		//
-		$entree = Approvisionnement::where('token',$token)->first();
-		return view('Ra/Approvisionnements/show')->with(compact('entree'));
+		$sortie = Disposition::where('token',$token)->first();
+		return view('Ra/Sorties/show')->with(compact('sortie'));
 	}
 
 
