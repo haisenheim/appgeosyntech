@@ -72,6 +72,8 @@ class SortieController extends Controller
 		$ville['user_id'] = Auth::user()->id;
 		$ville['client_id'] = $request->client_id;
 		$ville['commande_id'] = $request->commande_id;
+		$ville['moi_id'] = date('m');
+		$ville['annee'] = date('Y');
 		$lignes = $request->lignes;
 		//$ville['minimum'] = $request->minimum;
 
