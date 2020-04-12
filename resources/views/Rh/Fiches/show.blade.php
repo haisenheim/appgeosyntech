@@ -72,18 +72,14 @@
                                    <td>{{ $liv->livraison->poste?$liv->livraison->poste->name:'-' }}</td>
 
 
-                                   <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ date_format($liv->debut,'H:i') }}</td>
-                                   <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ date_format($liv->fin,'H:i') }}</td>
+                                   <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ $liv->debut?date_format($liv->debut,'H:i'):'-' }}</td>
+                                   <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ $liv->fin?date_format($liv->fin,'H:i'):'-' }}</td>
 
 
                                </tr>
 
                            @endforeach
-                           <tr>
-                                <td>TOTAL</td>
-                                <th style="padding-right: 10px; text-align: right; "><?= number_format($total,0,',','.') ?></th>
 
-                           </tr>
 
                        </tbody>
                    </table>
