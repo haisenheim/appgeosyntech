@@ -50,7 +50,7 @@
 
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/bulletins/{{ $liv->token }}"></a><i class="fa fa-eye"></i></li>
+                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rc/bulletin/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
                                        </ul>
                                    </td>
                                </tr>

@@ -150,6 +150,7 @@ Route::prefix('rc')
 		Route::get('/commande/ligne/{token}','CommandeController@showLigne');
 
 		Route::post('/commande/livraison/add-primes','CommandeController@addPrime');
+		Route::get('/bulletin/{token}','BulletinController@show');
 	});
 
 
