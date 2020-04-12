@@ -17,7 +17,7 @@ class Article extends Model
 	}
 
 	public function type(){
-		return $this->belongsTo('App\Models\Tarticle');
+		return $this->belongsTo('App\Models\Tarticle','tarticle_id');
 	}
 
 	public function unite(){
