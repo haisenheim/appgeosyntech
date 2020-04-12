@@ -224,7 +224,7 @@
        $('#commande_id').html('');
        var html='';
          $.ajax({
-             url:'ra/get-commandes-client',
+             url:'/ra/get-commandes-client',
              type:'get',
              dataType:'json',
              data:{client_id:$('#client_id').val()},
@@ -247,7 +247,7 @@
        $('#livraison_id').html('');
        var html='';
          $.ajax({
-             url:'ra/get-livraisons-commande',
+             url:'/ra/get-livraisons-commande',
              type:'get',
              dataType:'json',
              data:{commande_id:$('#commande_id').val()},
