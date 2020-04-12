@@ -32,7 +32,7 @@
                 <div class="card-body">
                     <ul class="list-inline">
 
-                             @foreach($unite as $ville)
+                             @foreach($unites as $ville)
                               <li class="list-inline-item index-item">
 
                                <ul class="list-inline " style="margin-left: 10px">
