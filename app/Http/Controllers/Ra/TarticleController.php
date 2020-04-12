@@ -55,7 +55,7 @@ class TarticleController extends Controller
 		$ville['name']=$request->name;
 		//$ville['minimum'] = $request->minimum;
 
-		$ville = Category::create($ville);
+		$ville = Tarticle::create($ville);
 
 		$request->session()->flash('success','Le type d\'article a été correctement enregistré !!!');
 		return back();
