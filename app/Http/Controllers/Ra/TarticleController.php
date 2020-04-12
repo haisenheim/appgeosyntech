@@ -27,7 +27,7 @@ class TarticleController extends Controller
     public function index()
     {
 	    $types = Tarticle::all();
-	    return view('Rh/Tarticles/index')->with(compact('types'));
+	    return view('Ra/Tarticles/index')->with(compact('types'));
     }
 
     /**
