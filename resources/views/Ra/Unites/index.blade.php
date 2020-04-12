@@ -1,4 +1,4 @@
-@extends('......layouts.rh')
+@extends('......layouts.ra')
 
 
 @section('page-title')
