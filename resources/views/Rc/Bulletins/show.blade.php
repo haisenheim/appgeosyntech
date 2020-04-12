@@ -27,7 +27,11 @@
             <div class="card">
 
                 <div class="card-body">
-
+                    <div class="card text-white" style="background-color: #888; border-color: #333;">
+                        <div class="card-body">
+                            BULLETIN &numero;: <span style="text-align: right;" class="value">{{ $bulletin->name }}</span>
+                        </div>
+                   </div>
                     <div class="row">
                         <div class="col-md-8 col-sm-12">
                             <ul class="list-group">
@@ -80,7 +84,7 @@
 
                        </tbody>
                    </table>
-                   <div class="card text-white" style="background-color: #666; border-color: #333;">
+                   <div class="card text-white" style="background-color: #888; border-color: #333;">
                         <div class="card-body">
                             NET A PERCEVOIR : <span style="text-align: right;" class="value">{{ number_format($total + $bulletin->minimum,0,',','.') }}</span>
                         </div>
