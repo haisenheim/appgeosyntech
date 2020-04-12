@@ -38,19 +38,19 @@
                    <div>
                         <form class="form-inline" action="">
                             <label class="mr-10" for="moi_id">MOIS</label>
-                            <select class="form-control mr-20" name="moi_id" id="moi_id">
+                            <select class="form-control" style="margin-right: 20px" name="moi_id" id="moi_id">
                                 @foreach($mois as $m)
                                     <option value="{{ $m->id }}">{{ $m->name }}</option>
                                 @endforeach
                             </select>
 
-                            <label class="mr-10" for="annee">MOIS</label>
-                            <select class="form-control mr-20"  name="annee" id="annee">
+                            <label class="mr-10" for="annee">ANNEE</label>
+                            <select class="form-control" style="margin-right: 20px"  name="annee" id="annee">
                                 <?php $an = date('Y'); for($i=0;$i<5;$i++): ?>
                                     <option value=" {{ $an-$i }} "> {{ $an - $i }} </option>
                                 <?php endfor; ?>
                             </select>
-                            <button class="btn btn-danger btn-xs mt-3" type="submit" title="charger"><i class="fa fa-search"></i></button>
+                            <button class="btn btn-danger btn-sm" type="submit" title="charger"><i class="fa fa-search"></i></button>
                         </form>
                    </div>
 
