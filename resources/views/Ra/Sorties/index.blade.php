@@ -227,7 +227,7 @@
              url:'ra/get-commandes-client',
              type:'get',
              dataType:'json',
-             data:{pay_id:$('#client_id').val()},
+             data:{client_id:$('#client_id').val()},
              success:function(data) {
 
               // console.log(Object.entries(data));
@@ -250,7 +250,7 @@
              url:'ra/get-livraisons-commande',
              type:'get',
              dataType:'json',
-             data:{pay_id:$('#commande_id').val()},
+             data:{commande_id:$('#commande_id').val()},
              success:function(data) {
 
               // console.log(Object.entries(data));
