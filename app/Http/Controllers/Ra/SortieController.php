@@ -39,7 +39,7 @@ class SortieController extends Controller
 		return response()->json($villes);
 	}
 
-	public function getLivraisonByCommande(Request $request){
+	public function getLivraisonsByCommande(Request $request){
 		$villes = Livraison::all()->where('commande_id',$request->commande_id)->load(['User','Poste'])->toArray();
 		//dd($villes);
 		return response()->json($villes);
