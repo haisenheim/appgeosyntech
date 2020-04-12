@@ -195,7 +195,8 @@ Route::prefix('ra')
 		Route::get('dashboard','DashboardController');
 		Route::get('/sortie/disable/{token}','SortieController@disable');
 		Route::get('/approvisionnement/disable/{token}','ApprovisionnementController@disable');
-		//Route::get('/commande/order/{token}','CommandeController@envoyer');
+		Route::get('/get-commandes-client','SortieController@getCommandesByClient');
+		Route::get('/get-livraisons-commande','SortieController@getLivraisonsByCommande');
 
 	});
 
