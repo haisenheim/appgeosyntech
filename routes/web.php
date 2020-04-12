@@ -117,6 +117,8 @@ Route::prefix('rh')
 		Route::resource('tprimes','TprimeController');
 		Route::resource('users','UserController');
 		Route::get('dashboard','DashboardController');
+		Route::get('salaires','SalaireController@index');
+		Route::get('/bulletin/{token}','SalaireController@show');
 
 		Route::post('/user/add-competence','UserController@addCompetence');
 		Route::post('/user/add-category','UserController@addCategory');
