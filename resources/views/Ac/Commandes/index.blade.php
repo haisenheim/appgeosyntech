@@ -260,17 +260,11 @@
                 window.location.href='/ac/commandes/'+dt.commande.token
             }
         });
+        }else{
+            alert("Aucune entrée !!!");
         }
 
-        $.ajax({
-            url:'/ac/commande/save',
-            type:'post',
-            dataType:'json',
-            data:{lignes:data},
-            success:function(dt){
-                window.location.href='/ac/commandes/'+dt.token
-            }
-        });
+
      })
 </script>
 @endsection

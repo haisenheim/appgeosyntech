@@ -73,7 +73,7 @@
           </div>
 
            <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-xl">
+                  <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h4 class="modal-title">NOUVELLE ENTREE EN STOCK</h4>
@@ -234,17 +234,11 @@
                 window.location.href='/ra/approvisionnements/'+dt.token
             }
         });
+        }else{
+            alert("Aucune entrée !!!");
         }
 
-        $.ajax({
-            url:'/ac/commande/save',
-            type:'post',
-            dataType:'json',
-            data:{lignes:data},
-            success:function(dt){
-                window.location.href='/ac/commandes/'+dt.token
-            }
-        });
+
      })
 </script>
 @endsection
