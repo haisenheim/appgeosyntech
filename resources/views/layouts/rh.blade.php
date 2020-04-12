@@ -112,6 +112,13 @@
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="/rh/fiches" class="waves-effect">
+                                    <i class="far fa-hand-paper"></i>
+                                    <span>FICHES DE POINTAGES</span>
+                                </a>
+                            </li>
+
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">

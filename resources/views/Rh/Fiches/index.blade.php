@@ -5,12 +5,12 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 class="mb-0 font-size-18">ETAT DE LA PAIE</h4>
+                <h4 class="mb-0 font-size-18">FICHES DE POINTAGE</h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="javascript: void(0);">SM</a></li>
-                        <li class="breadcrumb-item active">Salaires</li>
+                        <li class="breadcrumb-item active">Pointage</li>
                     </ol>
                 </div>
 
@@ -26,17 +26,24 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">PAYE </h3>
+                  <h3 class="card-title">FICHES DE POINTAGE </h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="card text-white" style="background-color: #888; border-color: #333;">
                         <div class="card-body">
-                            MOIS DE <span style="text-align: right;" class="value">{{ $moi_id }}/{{ $annee }}</span>
+                            MOIS DE <span style="text-align: right;" class="value">{{ $moi_id }}/{{ $annee }}</span> <span style="float: right; font-weight: bolder; font-size: larger">{{ $client?$client->name:'' }}</span>
                         </div>
                    </div>
                    <div>
                         <form class="form-inline" action="">
+                             <label class="mr-10" for="client_id">CLIENT</label>
+                            <select class="form-control" style="margin-right: 20px" name="client_id" id="client_id">
+                                @foreach($clients as $cl)
+                                    <option value="{{ $cl->id }}">{{ $cl->name }}</option>
+                                @endforeach
+                            </select>
+
                             <label class="mr-10" for="moi_id">MOIS</label>
                             <select class="form-control" style="margin-right: 20px" name="moi_id" id="moi_id">
                                 @foreach($mois as $m)
@@ -57,22 +64,22 @@
                    <table class="table table-bordered table-striped table-condensed table-hover datatable">
                         <thead>
                             <tr>
-                                <th>AGENT</th>
-                                <th>MONTANT</th>
+                                <th>#</th>
+                                <th>JOUR</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $s=0; ?>
-                            @foreach($bulletins as $bulletin)
-                                <?php $s=$s+$bulletin->montant; ?>
+
+                            @foreach($fiches as $fiche)
+
                                 <tr>
-                                    <td>{{ $bulletin->owner->name }}</td>
-                                    <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($bulletin->montant,0,',','.') }}</td>
+                                    <td>{{ $fiche->name }}</td>
+                                    <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ date_format($fiche->jour, 'd/m/Y') }}</td>
                                     <td>
                                         <ul class="list-inline">
                                             <li class="list-inline">
-                                                 <a class="btn btn-xs btn-info" href="/rh/bulletin/{{ $bulletin->token }}"><i class="fa fa-eye"></i></a>
+                                                 <a class="btn btn-xs btn-info" href="/rh/fiche/{{ $fiche->token }}"><i class="fa fa-eye"></i></a>
                                             </li>
                                         </ul>
                                     </td>
@@ -81,11 +88,7 @@
                         </tbody>
                    </table>
 
-                   <div class="card text-white" style="background-color: #888; border-color: #333;">
-                        <div class="card-body">
-                            MASSE SALAIRE DU MOIS : <span style="text-align: right;" class="value">{{ number_format($s,0,',','.') }}</span>
-                        </div>
-                   </div>
+
 
                 </div>
                 <!-- /.card-body -->
@@ -96,11 +99,6 @@
             <!-- /.col -->
           </div>
     </div>
-
-
-
-
-
 
 <style>
     .table th,
