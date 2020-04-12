@@ -256,7 +256,7 @@
               // console.log(Object.entries(data));
                data = Object.entries(data);
                for(var i=0;i<data.length;i++){
-               html= html + '<option value="'+ data[i][1].id +'">'+ data[i][1].user.last_name +'</option>';
+               html= html + '<option value="'+ data[i][1].id +'">'+ data[i][1].user.first_name + " " + data[i][1].user.last_name + "("+ data[i][1].poste.name +")" +'</option>';
                //console.log(html);
                }
                //console.log(html);
