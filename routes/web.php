@@ -178,6 +178,28 @@ Route::prefix('ac')
 	});
 
 
+Route::prefix('ra')
+	->namespace('Ra')
+	->middleware(['auth','ra'])
+	->name('ra.')
+	->group(function(){
+		Route::resource('unites','UniteController');
+
+		Route::resource('articles','ArticleController');
+		Route::resource('approvisionnements','ApprovisionnementController');
+		Route::post('/approvisionnement/save','ApprovisionnementController@save');
+		Route::resource('larticles','LarticleController');
+		Route::resource('sorties','SortieController');
+		Route::post('/sortie/save','SortieController@save');
+		//Route::resource('users','UserController');
+		Route::get('dashboard','DashboardController');
+		Route::get('/sortie/disable/{token}','SortieController@disable');
+		Route::get('/approvisionnement/disable/{token}','ApprovisionnementController@disable');
+		//Route::get('/commande/order/{token}','CommandeController@envoyer');
+
+	});
+
+
 Route::prefix('member')
 	->namespace('Member')
 	->name('Member')
