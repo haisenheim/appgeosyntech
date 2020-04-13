@@ -102,7 +102,7 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="mdi mdi-cogs"></i>
-                                    <span>RESSOURCES HUMAINES</span>
+                                    <span>RESSOURCES HUM.</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/admin/agents">AGENTS</a></li>
