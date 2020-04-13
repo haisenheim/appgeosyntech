@@ -101,13 +101,26 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-cogs"></i>
+                                    <i class="mdi mdi-file-account-outline"></i>
                                     <span>RESSOURCES HUM.</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/admin/agents">AGENTS</a></li>
                                     <li><a href="/admin/fiches">FICHES DE POINTAGE</a></li>
                                     <li><a href="/admin/salaires">SALAIRES</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="mdi mdi-account-switch"></i>
+                                    <span>REL. CLIENT</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/admin/clients">CLIENTS</a></li>
+                                    <li><a href="/admin/factures">FACTURES</a></li>
+                                    <li><a href="/admin/commandes">COMMANDES</a></li>
 
                                 </ul>
                             </li>

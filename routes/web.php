@@ -92,13 +92,22 @@ Route::prefix('admin')
 	    Route::resource('categories','CategorieController');
 	    Route::resource('clients','ClientController');
 
+	    //Ressources humaines
 	    Route::get('salaires','SalaireController@index');
 	    Route::get('/bulletin/{token}','SalaireController@show');
-
 	    Route::get('fiches','FicheController@index');
 	    Route::get('/fiche/{token}','FicheController@show');
 	    Route::get('agents','UserController@getAgents');
 	    Route::get('agent/{token}','UserController@getAgent');
+
+	    //Relation Client
+	    Route::resource('factures','FactureController');
+	    Route::resource('commandes','CommandeController');
+	    Route::resource('clients','ClientController');
+	    Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
+	    Route::get('/commande/ligne/{token}','CommandeController@showLigne');
+
+
 	    Route::resource('users','UserController');
 	    Route::resource('pays','PayController');
 	    Route::get('dashboard','DashboardController');

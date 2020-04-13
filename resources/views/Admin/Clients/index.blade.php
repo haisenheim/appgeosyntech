@@ -1,16 +1,19 @@
-@extends('......layouts.admin')
 
-@section('content-header')
+
+
+@extends('layouts.admin')
+
+@section('page-title')
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">CLIENTS CORPORATE</h1>
+            <h1 class="m-0 text-dark">BASE DE DONNEES DES CLIENTS</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">ACCUEIL</a></li>
+              <li class="breadcrumb-item"><a href="/admin/dashboard">TABLEAU DE BORD</a></li>
               <li class="breadcrumb-item">PARAMETRES</li>
-              <li class="breadcrumb-item active">Entreprises</li>
+              <li class="breadcrumb-item active">Clients</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -23,11 +26,11 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">LISTE DES ENTREPRISES</h3>
+                  <h3 class="card-title">BASE DES CLIENTS </h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-bordered table-hover table-condensed">
+                  <table id="example1" class="table table-bordered table-hover table-condensed datatable">
                     <thead>
                     <tr>
                       <th>NOM</th>
@@ -35,25 +38,25 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
-                      <th>DATE DE CREATION</th>
-
+                      <th>POURCENTAGE</th>
 
                       <th></th>
                     </tr>
                     </thead>
                     <tbody>
-
-                    @foreach($entreprises as $ville)
-
+                    @foreach($clients as $ville)
                           <tr>
                               <td>{!! $ville->name !!} </td>
 
                               <td>{!! $ville->address !!} </td>
-                              <td>{!! $ville->phone !!} </td>
-                              <td>{!! $ville->email !!} </td>
-                              <td><?= date_format($ville->created_at,'d/m/Y H:i') ?></td>
-                              <td>
+                               <td>{!! $ville->phone !!} </td>
+                                <td>{!! $ville->email !!} </td>
+                                <td style="text-align: right; padding-right: 10px">{{ number_format($ville->pouadminentage,2,',','.') }}%</td>
 
+                              <td>
+                              <ul style="margin-bottom: 0" class="list-inline">
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('admin.clients.show',[$ville->token])}}"><i class="fa fa-search"></i></a></li>
+                              </ul>
                               </td>
                           </tr>
                       @endforeach
@@ -61,15 +64,15 @@
                     </tbody>
                     <tfoot>
                         <tr>
+                      <th>NOM</th>
 
-                            <th>NOM</th>
+                      <th>ADRESSE</th>
+                      <th>TELEPHONE</th>
+                      <th>EMAIL</th>
+                      <th>POURCENTAGE</th>
 
-                              <th>ADRESSE</th>
-                              <th>TELEPHONE</th>
-                              <th>EMAIL</th>
-                              <th>DATE DE CREATION</th>
-                            <th></th>
-                        </tr>
+                      <th></th>
+                    </tr>
                     </tfoot>
                   </table>
                 </div>
@@ -82,6 +85,7 @@
           </div>
 
 
+
 <style>
     .table th,
     .table td {
@@ -91,19 +95,12 @@
     }
   </style>
 
-  <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 
 
-<!-- DataTables -->
-<script src="{{asset('plugins/datatables/jquery.dataTables.js')}} "></script>
-<script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+@endsection
 
+@section('scripts')
 <script>
-  $(function () {
-    $("#example1").DataTable();
-
-  });
+     $(document).ready(function(){$(".datatable").DataTable();});
 </script>
-
-
 @endsection
