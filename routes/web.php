@@ -97,8 +97,8 @@ Route::prefix('admin')
 
 	    Route::get('fiches','FicheController@index');
 	    Route::get('/fiche/{token}','FicheController@show');
-	    Route::resource('agents','UserController@getAgents');
-	    Route::resource('agent/{token}','UserController@getAgent');
+	    Route::get('agents','UserController@getAgents');
+	    Route::get('agent/{token}','UserController@getAgent');
 	    Route::resource('users','UserController');
 	    Route::resource('pays','PayController');
 	    Route::get('dashboard','DashboardController');
