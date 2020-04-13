@@ -127,7 +127,7 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-account-switch"></i>
+                                    <i class="mdi mdi-animation"></i>
                                     <span>STOCK</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
