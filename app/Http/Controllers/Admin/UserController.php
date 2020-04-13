@@ -30,7 +30,29 @@ class UserController extends Controller
 
     }
 
-    /**
+
+	public function getAgents()
+	{
+		//
+		$users= \App\User::all()->where('role_id',8);
+		$pays = Pay::all();
+
+		return view('Admin/Users/agents')->with(compact('users','pays'));
+
+	}
+
+
+	public function getAgent($token)
+	{
+		//
+		$user = User::where('token',$token)->first();
+
+		return view('Admin/Users/agent')->with(compact('user'));
+	}
+
+
+
+	/**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

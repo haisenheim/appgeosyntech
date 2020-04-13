@@ -92,6 +92,13 @@ Route::prefix('admin')
 	    Route::resource('categories','CategorieController');
 	    Route::resource('clients','ClientController');
 
+	    Route::get('salaires','SalaireController@index');
+	    Route::get('/bulletin/{token}','SalaireController@show');
+
+	    Route::get('fiches','FicheController@index');
+	    Route::get('/fiche/{token}','FicheController@show');
+	    Route::resource('agents','UserController@getAgents');
+	    Route::resource('agent/{token}','UserController@getAgent');
 	    Route::resource('users','UserController');
 	    Route::resource('pays','PayController');
 	    Route::get('dashboard','DashboardController');
