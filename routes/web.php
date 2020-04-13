@@ -107,6 +107,11 @@ Route::prefix('admin')
 	    Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
 	    Route::get('/commande/ligne/{token}','CommandeController@showLigne');
 
+	    //Approvisionnements
+	    Route::resource('articles','ArticleController');
+	    Route::resource('approvisionnements','ApprovisionnementController');
+	    Route::resource('sorties','SortieController');
+
 
 	    Route::resource('users','UserController');
 	    Route::resource('pays','PayController');

@@ -26,7 +26,15 @@ class Disposition extends Model
 		return $this->hasMany('App\Models\Ldispo');
 	}
 
+	public function getNombreAttribute(){
 
+		$lignes = Ldispo::all()->where('disposition_id',$this->id);
+		$s=0;
+		foreach($lignes as $ligne){
+			$s = $s+$ligne->quantity;
+		}
+		return $s;
+	}
 
 
 
