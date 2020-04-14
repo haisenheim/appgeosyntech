@@ -122,7 +122,10 @@ class UserController extends Controller
 				if(in_array($ext,$arr_ext)) {
 					if(!file_exists($path)){
 						//umask(777);
-						mkdir($path,777,true);
+						if(!file_exists(public_path('files'))){
+							mkdir(public_path('files'));
+						}
+						mkdir($path);
 					}
 
 					$token = sha1(Auth::user()->id. date('ydmhis'));
