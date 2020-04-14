@@ -112,7 +112,9 @@ class UserController extends Controller
 		$comp = DB::table('certificats')->where(['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')])->first();
 		//dd($competence);
 		if(!$comp){
+			$token = sha1(Auth::user()->id. date('ydmhis'));
 			$data = ['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')];
+			$data['token'] = $token;
 			$tc = Tcertificat::find(request('tcertificat_id'));
 			$tname = $tc->name;
 			if(request('fichier')){
@@ -129,7 +131,7 @@ class UserController extends Controller
 						mkdir($path);
 					}
 
-					$token = sha1(Auth::user()->id. date('ydmhis'));
+
 					if (file_exists($path.'/' . $token . '.' . $ext)) {
 						unlink($path . '/' . $token . '.' . $ext);
 					}
