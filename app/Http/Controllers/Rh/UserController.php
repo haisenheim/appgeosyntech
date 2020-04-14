@@ -121,7 +121,7 @@ class UserController extends Controller
 				$path = public_path('files') . '/'. Str::slug($tname,'_');
 				if(in_array($ext,$arr_ext)) {
 					if(!file_exists($path)){
-						//umask(777);
+						umask(777);
 						mkdir($path,777,true);
 					}
 
