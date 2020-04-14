@@ -113,7 +113,7 @@ class UserController extends Controller
 		//dd($competence);
 		if(!$comp){
 			$token = sha1(Auth::user()->id. date('ydmhis'));
-			$data = ['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')];
+			$data = ['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id'),'debut'=>request('debut'),'fin'=>request('fin')];
 			$data['token'] = $token;
 			$tc = Tcertificat::find(request('tcertificat_id'));
 			$tname = $tc->name;
@@ -135,7 +135,7 @@ class UserController extends Controller
 					}
 					$name = $token . '.' . $ext;
 					$file->move($path, $name);
-					$data['path'] = Str::slug($tname).'/' . $name;
+					$data['path'] = Str::slug($tname,'_').'/' . $name;
 				}else{
 					request()->session()->flash('danger','EXtension du fichier non valide !!!');
 					return redirect()->back();
