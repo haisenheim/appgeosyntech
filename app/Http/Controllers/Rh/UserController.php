@@ -130,8 +130,6 @@ class UserController extends Controller
 						}
 						mkdir($path);
 					}
-
-
 					if (file_exists($path.'/' . $token . '.' . $ext)) {
 						unlink($path . '/' . $token . '.' . $ext);
 					}
