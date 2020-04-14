@@ -110,7 +110,7 @@ class UserController extends Controller
 
 	public function showCertif($token){
 		$cert = Certificat::where('token',$token)->first();
-		return response()->file(public_path('files').$cert->path);
+		return response()->file(public_path('files').'/'.$cert->path);
 	}
 
 	public function addCertificat(){
