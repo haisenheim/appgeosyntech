@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Rh;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Certificat;
 use App\Models\Classement;
 use App\Models\Competence;
 use App\Models\Pay;
@@ -134,13 +135,14 @@ class UserController extends Controller
 					}
 					$name = $token . '.' . $ext;
 					$file->move($path, $name);
-					$data['path'] = $path.'/' . $name;
+					$data['path'] = $tname.'/' . $name;
 				}else{
 					request()->session()->flash('danger','EXtension du fichier non valide !!!');
 					return redirect()->back();
 				}
 			}
-			DB::table('certificats')->insert($data);
+			Certificat::create($data);
+			//DB::table('certificats')->insert($data);
 			request()->session()->flash('success','Ok !!!');
 		}else{
 			request()->session()->flash('warning','Document déjà present !!!');
