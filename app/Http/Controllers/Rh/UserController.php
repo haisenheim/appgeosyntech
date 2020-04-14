@@ -135,7 +135,7 @@ class UserController extends Controller
 					}
 					$name = $token . '.' . $ext;
 					$file->move($path, $name);
-					$data['path'] = $tname.'/' . $name;
+					$data['path'] = Str::slug($tname).'/' . $name;
 				}else{
 					request()->session()->flash('danger','EXtension du fichier non valide !!!');
 					return redirect()->back();

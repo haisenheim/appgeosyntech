@@ -10,7 +10,7 @@ class Certificat extends Model
     //
 
 	protected $guarded = [];
-	public $timestamps = false;
+	//public $timestamps = false;
 
 
 	public function user(){
