@@ -122,7 +122,7 @@
                                                 <td>{{ date_format($liv->fin,'d/m/Y') }}</td>
                                                 <td>
                                                     <ul class="list-inline">
-                                                        <li class="list-inline-item"><a href="/rh/user/show-certif/{{ $liv->token }}"></a></li>
+                                                        <li class="list-inline-item"><a href="/rh/user/show-certif/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
                                                 </td>
                                             </tr>
