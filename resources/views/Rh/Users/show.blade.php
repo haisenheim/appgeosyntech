@@ -195,7 +195,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form  action="/rh/user/add-certificat" method="post">
+                  <form enctype="multipart/form-data"  action="/rh/user/add-certificat" method="post">
                   {{csrf_field()}}
 
                     <div class="card-body">
@@ -204,7 +204,7 @@
                               <input type="hidden" name="user_id" value="{{ $user->id }}"/>
                               <div class="form-group">
                                 <label for="competence_id">TYPE DE DOCUMENT</label>
-                                <select class="form-control" name="competence_id" id="competence_id" required="required">
+                                <select class="form-control" name="tcertificat_id" id="competence_id" required="required">
                                       <option value="">SELECTIONNER UN TYPE DE DOCUMENT</option>
                                       @foreach($types as $type)
                                           <option value="{{ $type->id }}">{{ $type->name }}</option>
@@ -212,7 +212,26 @@
                                 </select>
                               </div>
                           </div>
-
+                          <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="debut">DEBUT</label>
+                                    <input id="debut" type="date" required="required" class="form-control" name="debut"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="fin">FIN</label>
+                                    <input id="fin" type="date" required="required" class="form-control" name="fin"/>
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-sm-12">
+                                <div class="form-group">
+                                    <label for="fichier">FICHIER</label>
+                                    <input id="fichier" type="file" required="required" class="form-control" name="fichier"/>
+                                </div>
+                            </div>
+                          </div>
                       </div>
 
 

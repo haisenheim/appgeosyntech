@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Str;
 
 
 class UserController extends Controller
@@ -111,7 +111,32 @@ class UserController extends Controller
 		$comp = DB::table('certificats')->where(['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')])->first();
 		//dd($competence);
 		if(!$comp){
-			DB::table('certificats')->insert(['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')]);
+			$data = ['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')];
+			$tc = Tcertificat::find(request('tcertificat_id'));
+			$tname = $tc->name;
+			if(request('fichier')){
+				$file = request('fichier');
+				$ext = $file->getClientOriginalExtension();
+				$arr_ext = array('jpg','png','jpeg','pdf');
+				$path = public_path('files') . '/'. Str::slug($tname,'_');
+				if(in_array($ext,$arr_ext)) {
+					if(!file_exists($path)){
+						mkdir($path,777,true);
+					}
+
+					$token = sha1(Auth::user()->id. date('ydmhis'));
+					if (file_exists($path.'/' . $token . '.' . $ext)) {
+						unlink($path . '/' . $token . '.' . $ext);
+					}
+					$name = $token . '.' . $ext;
+					$file->move($path, $name);
+					$data['path'] = $path.'/' . $name;
+				}else{
+					request()->session()->flash('danger','EXtension du fichier non valide !!!');
+					return redirect()->back();
+				}
+			}
+			DB::table('certificats')->insert($data);
 			request()->session()->flash('success','Ok !!!');
 		}else{
 			request()->session()->flash('warning','Document déjà present !!!');
