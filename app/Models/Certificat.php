@@ -11,8 +11,8 @@ class Certificat extends Model
 
 	protected $guarded = [];
 	//public $timestamps = false;
-	public $dates = ['fin','debut'];
-
+	//public $dates = ['fin','debut'];
+	protected $dates = ['debut','fin'];
 
 	public function user(){
 		return $this->belongsTo('App\User');
