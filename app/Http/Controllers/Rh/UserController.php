@@ -8,6 +8,7 @@ use App\Models\Classement;
 use App\Models\Competence;
 use App\Models\Pay;
 use App\Models\Role;
+use App\Models\Tcertificat;
 use App\Models\Ville;
 use App\User;
 use Illuminate\Http\Request;
@@ -102,8 +103,22 @@ class UserController extends Controller
 	    //dd($user->competences);
 	    $competences = Competence::all();
 	    $categories = Category::all();
-        return view('Rh/Users/show')->with(compact('user','competences','categories'));
+	    $types = Tcertificat::all();
+        return view('Rh/Users/show')->with(compact('user','competences','categories','types'));
     }
+
+	public function addCertificat(){
+		$comp = DB::table('certificats')->where(['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')])->first();
+		//dd($competence);
+		if(!$comp){
+			DB::table('certificats')->insert(['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')]);
+			request()->session()->flash('success','Ok !!!');
+		}else{
+			request()->session()->flash('warning','Document déjà present !!!');
+		}
+
+		return redirect()->back();
+	}
 
 
 	public function addCompetence(){

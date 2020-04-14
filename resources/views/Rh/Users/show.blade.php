@@ -108,6 +108,7 @@
 
                                             <th>DEBUT</th>
                                             <th>FIN</th>
+                                            <th><a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-certif"><i class="fa fa-plus-circle"></i></a></th>
 
                                         </tr>
                                     </thead>
@@ -184,6 +185,51 @@
 
         </div>
     </div>
+    <div class="modal fade" id="modal-certif">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">AJOUT D'UN DOCUMENT </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form  action="/rh/user/add-certificat" method="post">
+                  {{csrf_field()}}
+
+                    <div class="card-body">
+                      <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                              <input type="hidden" name="user_id" value="{{ $user->id }}"/>
+                              <div class="form-group">
+                                <label for="competence_id">TYPE DE DOCUMENT</label>
+                                <select class="form-control" name="competence_id" id="competence_id" required="required">
+                                      <option value="">SELECTIONNER UN TYPE DE DOCUMENT</option>
+                                      @foreach($types as $type)
+                                          <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                      @endforeach
+                                </select>
+                              </div>
+                          </div>
+
+                      </div>
+
+
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+     </div>
+
      <div class="modal fade" id="addCompetence">
             <div class="modal-dialog modal-sm">
               <div class="modal-content">
