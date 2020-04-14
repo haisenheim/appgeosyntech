@@ -108,6 +108,11 @@ class UserController extends Controller
         return view('Rh/Users/show')->with(compact('user','competences','categories','types'));
     }
 
+	public function showCertif($token){
+		$cert = Certificat::where('token',$token)->first();
+		return response()->file(public_path('files').$cert->path);
+	}
+
 	public function addCertificat(){
 		$comp = DB::table('certificats')->where(['tcertificat_id'=>request('tcertificat_id'),'user_id'=>request('user_id')])->first();
 		//dd($competence);

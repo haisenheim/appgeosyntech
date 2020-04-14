@@ -144,6 +144,7 @@ Route::prefix('rh')
 		Route::get('fiches','FicheController@index');
 		Route::get('/fiche/{token}','FicheController@show');
 		Route::post('/user/add-certificat','UserController@addCertificat');
+		Route::get('/user/show-certif/{token}','UserController@showCertif');
 		Route::post('/user/add-competence','UserController@addCompetence');
 		Route::post('/user/add-category','UserController@addCategory');
 		Route::get('/user/delete-competence/{user_id}/{competence_id}','UserController@deleteCompetence');

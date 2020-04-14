@@ -120,7 +120,11 @@
                                                 <td>{{ $liv->tcertificat?$liv->tcertificat->name:'-' }}</td>
                                                 <td>{{ date_format($liv->debut,'d/m/Y') }}</td>
                                                 <td>{{ date_format($liv->fin,'d/m/Y') }}</td>
-                                                <td></td>
+                                                <td>
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><a href="/rh/user/show-certif/{{ $liv->token }}"></a></li>
+                                                    </ul>
+                                                </td>
                                             </tr>
 
                                         @endforeach
