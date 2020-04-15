@@ -60,4 +60,12 @@ class Bulletin extends Model
 		return $somme;
 	}
 
+	public function getResteAttribute(){
+
+		$m= $this->getMontantAttribute();
+		$r = $this->getVersementAttribute();
+
+		return $m - $r;
+	}
+
 }
