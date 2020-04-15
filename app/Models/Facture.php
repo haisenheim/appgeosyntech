@@ -40,23 +40,36 @@ class Facture extends Model
 		return $this->hasMany('App\Models\Paiement');
 	}
 
+
+
 	public function getEtatAttribute(){
 		$etat=[];
 
-		if($this->filled){
+		$pmts = Paiement::all()->where('facture_id',$this->id);
+		$somme = 0;
+		foreach($pmts as $pt){
+			$somme = $somme + $pt->montant;
+		}
+
+		$montant = $this->getMontantAttribute();
+
+		if($montant <= $somme){
 			$etat['status'] = 2;
 			$etat['icon'] = 'fa fa-check-circle';
 			$etat['color'] = 'success';
 			$etat['name'] = 'payée';
 		}else {
+
 			$etat['status'] = 1;
 			$etat['icon'] = 'fa fa-stop';
-			$etat['color'] = 'danger';
-			$etat['name'] = 'en attente';
+			$etat['color'] = 'warning';
+			$etat['name'] = 'non soldée';
 		}
 
 		return $etat;
 	}
+
+
 
 	public function getMontantAttribute(){
 		$bulletins = Bulletin::all()->where('facture_id',$this->id);
@@ -69,6 +82,26 @@ class Facture extends Model
 
 		return $m;
 	}
+
+	public function getVersementAttribute(){
+		$pmts = Paiement::all()->where('facture_id',$this->id);
+
+		$somme = 0;
+		foreach($pmts as $pt){
+			$somme = $somme + $pt->montant;
+		}
+
+		return $somme;
+	}
+
+	public function getResteAttribute(){
+		$vrs = $this->getVersementAttribute();
+		$montant = $this->getMontantAttribute();
+
+		return $montant - $vrs;
+	}
+
+
 
 
 }

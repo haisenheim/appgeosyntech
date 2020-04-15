@@ -25,6 +25,10 @@ class Depense extends Model
 		return $this->belongsTo('App\Models\Moi','moi_id');
 	}
 
+	public function bulletin(){
+		return $this->belongsTo('App\Models\Bulletin');
+	}
+
 
 
 

@@ -23,6 +23,10 @@ class Bulletin extends Model
 		return $this->belongsTo('App\Models\Facture');
 	}
 
+	public function depenses(){
+		return $this->hasMany('App\Models\Depenses');
+	}
+
 	public function mois(){
 		return $this->belongsTo('App\Models\Moi', 'moi_id');
 	}
@@ -43,6 +47,17 @@ class Bulletin extends Model
 		}
 
 		return $sm + $s;
+	}
+
+	public function getVersementAttribute(){
+
+		$pmts = Depense::all()->where('bulletin_id',$this->id);
+		$somme = 0;
+		foreach($pmts as $pt){
+			$somme = $somme + $pt->montant;
+		}
+
+		return $somme;
 	}
 
 }
