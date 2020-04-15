@@ -230,7 +230,7 @@ Route::prefix('rf')
 	->group(function(){
 
 		Route::resource('factures','FactureController');
-		Route::resource('facture/add-paiement','FactureController@addPaiement');
+		Route::post('facture/add-paiement','FactureController@addPaiement');
 		Route::resource('paiements','PaiementController');
 		Route::resource('commandes','CommandeController');
 		Route::resource('clients','ClientController');
