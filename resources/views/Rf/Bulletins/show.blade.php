@@ -30,7 +30,7 @@
                     <div class="card text-white" style="background-color: #888; border-color: #333;">
                         <div class="card-body">
                             BULLETIN &numero;: <span style="text-align: right;" class="value">{{ $bulletin->name }} </span>
-                            @if($facture->reste>0)
+                            @if($bulletin->reste>0)
                                <a class="btn btn-danger btn-xs pull-right" title="Enregistrer un paiement" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-coins"></i></a>
                             @endif
                         </div>
