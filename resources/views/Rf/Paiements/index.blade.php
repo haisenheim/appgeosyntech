@@ -74,7 +74,7 @@
 
                                    <td>
                                        <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-secondary" title="Afficher" href="/rf/depenses/{{ $paiement->token }}"><i class="fa fa-eye"></i></a></li>
+                                           <li class="list-inline-item"><a class="btn btn-xs btn-secondary" title="Afficher" href="/rf/paiements/{{ $paiement->token }}"><i class="fa fa-eye"></i></a></li>
                                        </ul>
                                    </td>
                                </tr>
