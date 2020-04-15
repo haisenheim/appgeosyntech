@@ -245,7 +245,7 @@ Route::prefix('rf')
 		Route::get('/commande/ligne/{token}','CommandeController@showLigne');
 
 		Route::get('salaires','SalaireController@index');
-		Route::get('/bulletin/{token}','BulletinController@show');
+		Route::get('/bulletin/{token}','SalaireController@show');
 	});
 
 
