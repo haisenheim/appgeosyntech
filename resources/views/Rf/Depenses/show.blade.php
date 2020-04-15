@@ -53,7 +53,15 @@
 
     </div>
 
-     
+     <style>
+        .label{
+            font-weight: bolder;
+        }
+
+        .list-inline-item{
+        padding: 10px;
+        }
+     </style>
 @endsection
 
 @section('script')
