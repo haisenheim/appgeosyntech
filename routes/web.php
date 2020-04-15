@@ -243,6 +243,7 @@ Route::prefix('rf')
 
 		Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
 		Route::get('/commande/ligne/{token}','CommandeController@showLigne');
+		Route::get('/user/show-certif/{token}','UserController@showCertif');
 
 		Route::get('salaires','SalaireController@index');
 		Route::get('/bulletin/{token}','SalaireController@show');

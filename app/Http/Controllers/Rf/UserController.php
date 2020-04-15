@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Rf;
 
 use App\Http\Controllers\Controller;
+use App\Models\Certificat;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,12 @@ class UserController extends Controller
 
     }
 
-
+	public function showCertif($token){
+		$cert = Certificat::where('token',$token)->first();
+		return response()->file(public_path('files').'/'.$cert->path);
+		//$now = Carbon::now();
+		//$week = $now->month;
+	}
     /**
      * Store a newly created resource in storage.
      *
