@@ -140,6 +140,17 @@
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="mdi mdi-cogs"></i>
+                                    <span>ETATS FINANCIERS</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/rf/compte-resultat">COMPTE DE RESULTAT</a></li>
+
+                                </ul>
+                            </li>
+
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -148,8 +159,6 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/rf/tdepenses">TYPES DEP.</a></li>
-
-
 
                                 </ul>
                             </li>

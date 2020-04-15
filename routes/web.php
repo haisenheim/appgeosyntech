@@ -240,6 +240,7 @@ Route::prefix('rf')
 		Route::get('dashboard','DashboardController');
 
 		Route::get('/ligne/get','CommandeController@getLigne');
+		Route::get('/compte-resultat','EtatController@getCompteResultat');
 
 		Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
 		Route::get('/commande/ligne/{token}','CommandeController@showLigne');
