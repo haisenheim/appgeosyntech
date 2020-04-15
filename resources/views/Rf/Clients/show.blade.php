@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('......layouts.rf')
 
 
 @section('page-title')
@@ -83,7 +83,7 @@
                                                 <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
                                                 <td>
                                                     <ul class="list-inline">
-                                                        <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/admin/factures/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
+                                                        <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rf/factures/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -117,7 +117,7 @@
                                                 <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
                                                 <td>
                                                     <ul class="list-inline">
-                                                        <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/admin/commandes/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
+                                                        <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/rf/commandes/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
                                                 </td>
                                             </tr>

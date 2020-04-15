@@ -7,8 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Client;
 
 
-use Illuminate\Support\Facades\DB;
-
 
 
 
@@ -48,26 +46,6 @@ class ClientController extends Controller
     }
 
 
-	public function addSecteur(){
-		$competence = DB::table('clients_secteurs')->where(['secteur_id'=>request('secteur_id'),'client_id'=>request('client_id')])->first();
-		//dd($competence);
-		if(!$competence){
-			DB::table('clients_secteurs')->insert(['secteur_id'=>request('secteur_id'),'client_id'=>request('client_id')]);
-			request()->session()->flash('success','Ok !!!');
-		}else{
-			request()->session()->flash('warning','Secteur present !!!');
-		}
-
-		return redirect()->back();
-	}
-
-
-
-
-	public function deleteSecteur($client_id,$secteur_id){
-		DB::table('clients_secteurs')->where(['secteur_id'=>$secteur_id,'client_id'=>$client_id])->delete();
-		return redirect()->back();
-	}
 
 
 }
