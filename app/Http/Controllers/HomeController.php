@@ -55,8 +55,8 @@ class HomeController extends Controller
 	        if(Auth::user()->role_id==6){
 		        return redirect('ac/dashboard');
 	        }
-	        if(Auth::user()->role_id==2){
-		        return redirect('national/dashboard');
+	        if(Auth::user()->role_id==9){
+		        return redirect('rf/dashboard');
 	        }
 
             else{
