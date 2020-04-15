@@ -63,7 +63,7 @@
 
                                    <td>{{ date_format($liv->jour,'d/m/Y') }} </td>
                                    <td style="padding-right: 10px;text-align: right; font-weight: bolder">{{ number_format($liv->montant, 0,',','.') }}</td>
-                                   <td style="font-weight: bolder">{{ $liv->tdepense?$liv->tdepense->name:$liv->bulletin?'Paiement salaire - '.$liv->bulletin->owner->name:'-' }}</td>
+                                   <td style="font-weight: bolder">{{ $liv->tdepense?$liv->tdepense->name:$liv->bulletin?'Paiement salaire - mois -'.$liv->bulletin->mois->name.' - '.$liv->bulletin->owner->name:'-' }}</td>
 
                                    <td>
                                        <ul class="list-inline">
@@ -131,7 +131,7 @@
 
                                 <div class="col-md-12 col-sm-12">
                                     <label for="motif">MOTIF</label>
-                                    <textarea name="motif" id="motif" cols="10" rows="3"></textarea>
+                                    <textarea class="form-control" name="motif" id="motif" cols="10" rows="3"></textarea>
                                 </div>
 
 
@@ -141,7 +141,7 @@
                           </div>
                           <!-- /.card-body -->
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-danger btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>

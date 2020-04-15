@@ -29,10 +29,10 @@
                 <div class="card-body">
 
                         <ul class="list-inline">
-                            <li class="list-inline-item"><span class="label">LIBELLE :</span> <span class="value">{{ $depense->tdepense?$depense->tdepense->name:$depense->bulletin?'Paiement salaire - '.$depense->bulletin->owner->name:'-' }}</span></li>
+                            <li class="list-inline-item"><span class="label">LIBELLE :</span> <span class="value">{{ $depense->tdepense?$depense->tdepense->name:$depense->bulletin?'Paiement salaire - mois -'.$depense->bulletin->mois->name.' - '.$depense->bulletin->owner->name:'-' }}</span></li>
                             <li class="list-inline-item"><span class="label">MONTANT :</span> <span class="value">{{ number_format($depense->montant,0,',','.') }}</span></li>
                             <li class="list-inline-item"><span class="label">DATE CONCERNEE :</span> <span class="value">{{ date_format($depense->jour,'d/m/Y') }}</span></li>
-                            <li class="list-inline-item"><span class="label">DATE DE SAISIE :</span> <span class="value">{{ date_format($depense->created,'d/m/Y H:i:s') }}</span></li>
+                            <li class="list-inline-item"><span class="label">DATE DE SAISIE :</span> <span class="value">{{ date_format($depense->created_at,'d/m/Y H:i:s') }}</span></li>
                             <li class="list-inline-item"><span class="label">OPERATEUR :</span> <span class="value">{{ $depense->user?$depense->user->name:'-' }}</span></li>
                         </ul>
                     
