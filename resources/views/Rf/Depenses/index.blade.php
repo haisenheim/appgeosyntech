@@ -56,14 +56,23 @@
                        </thead>
                        <tbody>
                            @foreach($depenses as $liv)
-
+                                <?php
+                                    $lib = "";
+                                    if($liv->bulletin){
+                                        $lib = 'Paiement salaire - mois -'.$liv->bulletin->mois->name.' - '.$liv->bulletin->owner->name;
+                                    }else{
+                                        if($liv->tdepense){
+                                           $lib = $liv->tdepense->name;
+                                        }
+                                    }
+                                ?>
                                <tr>
 
                                    <td>{{ $liv->name }}</td>
 
                                    <td>{{ date_format($liv->jour,'d/m/Y') }} </td>
                                    <td style="padding-right: 10px;text-align: right; font-weight: bolder">{{ number_format($liv->montant, 0,',','.') }}</td>
-                                   <td style="font-weight: bolder">{{ $liv->tdepense?$liv->tdepense->name:$liv->bulletin?'Paiement salaire - mois -'.$liv->bulletin->mois->name.' - '.$liv->bulletin->owner->name:'-' }}</td>
+                                   <td style="font-weight: bolder">{{ $lib }}</td>
 
                                    <td>
                                        <ul class="list-inline">
