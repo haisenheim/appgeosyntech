@@ -235,7 +235,7 @@ Route::prefix('rf')
 		Route::resource('commandes','CommandeController');
 		Route::resource('clients','ClientController');
 		Route::resource('depenses','DepenseController');
-		Route::resource('Tdepenses','TdepenseController');
+		Route::resource('tdepenses','TdepenseController');
 		Route::resource('users','UserController');
 		Route::get('dashboard','DashboardController');
 
