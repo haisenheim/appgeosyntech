@@ -104,7 +104,7 @@
                                 <div class="col-md-5 col-sm-12">
                                     <div class="form-group">
                                       <label for="variable">TYPE DE DEPENSE</label>
-                                      <select class="form-control" name="variable" required="required" id="variable">
+                                      <select class="form-control" name="tdepense_id" required="required" id="variable">
 
                                         <option value="0">SELECTIONNER</option>
                                         @foreach($types as $type)
