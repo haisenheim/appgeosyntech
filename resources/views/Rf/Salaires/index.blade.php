@@ -76,7 +76,7 @@
                                     <td>
                                         <ul class="list-inline">
                                             <li class="list-inline">
-                                                 <a class="btn btn-xs btn-info" href="/admin/bulletin/{{ $bulletin->token }}"><i class="fa fa-eye"></i></a>
+                                                 <a class="btn btn-xs btn-info" href="/rf/bulletin/{{ $bulletin->token }}"><i class="fa fa-eye"></i></a>
                                             </li>
                                         </ul>
                                     </td>
