@@ -22,7 +22,7 @@
 @section('content')
    
     <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-5 col-sm-12">
 
             <div class="card">
 

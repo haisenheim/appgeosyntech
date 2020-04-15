@@ -35,8 +35,8 @@
                             <label style="margin-right: 5px" class="mr-10" for="debut">DEBUT</label>
                             <input type="date" class="form-control" name="debut" id="debut"/>
 
-                            <label style="margin: 0 5px 0 20px" class="mr-10" for="debut">DEBUT</label>
-                            <input type="date" style="margin-right: 20px" class="form-control" name="debut" id="debut"/>
+                            <label style="margin: 0 5px 0 20px" class="mr-10" for="debut">FIN</label>
+                            <input type="date" style="margin-right: 20px" class="form-control" name="fin" id="debut"/>
 
 
                             <button class="btn btn-danger btn-sm" type="submit" title="charger"><i class="fa fa-search"></i></button>
