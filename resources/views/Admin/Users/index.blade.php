@@ -130,6 +130,7 @@
                                             @foreach($roles as $role)
                                                 <option value="{{ $role->id }}">{{ $role->name }}</option>
                                             @endforeach
+                                            <option value="9">RESPONSABLES DES FINANCES</option>
                                       </select>
                                     </div>
                                 </div>

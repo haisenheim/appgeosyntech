@@ -63,6 +63,7 @@ class Kernel extends HttpKernel
 	    'ra' => \App\Http\Middleware\Ra::class,
 	    'ro' => \App\Http\Middleware\Ro::class,
 	    'ac' => \App\Http\Middleware\Ac::class,
+	    'rf' => \App\Http\Middleware\Rf::class,
 	    'auth.lock' => \App\Http\Middleware\AuthLock::class,
 
     ];

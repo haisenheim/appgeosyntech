@@ -223,6 +223,33 @@ Route::prefix('ra')
 	});
 
 
+Route::prefix('rf')
+	->namespace('Rf')
+	->middleware(['auth','rf'])
+	->name('rf.')
+	->group(function(){
+
+		Route::resource('factures','FactureController');
+		Route::resource('facture/add-paiement','FactureController@addPaiement');
+		Route::resource('paiements','PaiementController');
+		Route::resource('commandes','CommandeController');
+		Route::resource('clients','ClientController');
+		Route::resource('depenses','DepenseController');
+		Route::resource('Tdepenses','TdepenseController');
+		Route::resource('users','UserController');
+		Route::get('dashboard','DashboardController');
+
+		Route::get('/ligne/get','CommandeController@getLigne');
+
+		Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
+		Route::get('/commande/ligne/{token}','CommandeController@showLigne');
+
+		Route::get('salaires','SalaireController@index');
+		Route::get('/bulletin/{token}','BulletinController@show');
+	});
+
+
+
 Route::prefix('member')
 	->namespace('Member')
 	->name('Member')

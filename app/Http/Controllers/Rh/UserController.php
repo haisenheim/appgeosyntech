@@ -12,6 +12,7 @@ use App\Models\Role;
 use App\Models\Tcertificat;
 use App\Models\Ville;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
@@ -111,6 +112,8 @@ class UserController extends Controller
 	public function showCertif($token){
 		$cert = Certificat::where('token',$token)->first();
 		return response()->file(public_path('files').'/'.$cert->path);
+		//$now = Carbon::now();
+		//$week = $now->month;
 	}
 
 	public function addCertificat(){
