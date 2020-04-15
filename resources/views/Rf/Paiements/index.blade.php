@@ -67,7 +67,7 @@
 
                                    <td>{{ $paiement->name }}</td>
 
-                                   <td>{{ date_format($paiement->jour,'d/m/Y') }} </td>
+                                   <td>{{ date_format($paiement->created_at,'d/m/Y') }} </td>
                                    <td style="padding-right: 10px;text-align: right; font-weight: bolder">{{ number_format($paiement->montant, 0,',','.') }}</td>
                                    <td style="font-weight: bolder">{{ $lib }}</td>
                                    <td>{{ $paiement->client?$paiement->client->name:'-' }}</td>
