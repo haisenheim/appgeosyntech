@@ -27,6 +27,18 @@
             <div class="card">
 
                 <div class="card-body">
+                    <div style="float: left">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><span class="badge badge-{{ $facture->etat['color'] }}">{{ $facture->etat['name'] }}</span></li>
+                        </ul>
+                    </div>
+                    <div class="" style="float: right;">
+                        <ul class="list-inline">
+                            @if($facture->reste>0)
+                               <li class="list-inline-item"><a class="btn btn-secondary btn-xs" title="Enregistrer un paiement" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-coins"></i></a></li>
+                            @endif
+                        </ul>
+                    </div>
                     <table class="table datatable table-bordered table-hover table-striped table-condensed">
                        <thead>
                            <tr>
@@ -63,12 +75,27 @@
                            </tr>
                            <tr>
                                 <td colspan="2">NET A PAYER</td>
-                                 <th style="padding-right: 10px; text-align: right; "><?= number_format($total*(1 + $client->pourcentage/100),0,',','.') ?></th>
+                                 <th style="padding-right: 10px; text-align: right; "><?= number_format($facture->montant,0,',','.') ?></th>
                                  <td></td>
                            </tr>
                        </tbody>
                    </table>
+                    <div class="card text-white" style="background-color: #888; border-color: #333;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    MONTANT: <span style="text-align: right;" class="value">{{ number_format($facture->montant,0,',','.') }} </span>
+                                </div>
+                                <div class="col-md-5 col-sm-12">
+                                    TOTAL DES PAIEMENTS: <span style="text-align: right;" class="value">{{ number_format($facture->versement,0,',','.') }} </span>
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    RESTE: <span style="text-align: right;" class="value">{{ number_format($facture->reste,0,',','.') }} </span>
+                                </div>
+                            </div>
 
+                        </div>
+                   </div>
                 </div>
             </div>
         </div>
@@ -112,6 +139,46 @@
 
 
     </div>
+
+    <div class="modal fade" id="modal-lg">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">NOUVEAU PAIEMENT</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form role="form" action="/rf/facture/add-paiement" method="post">
+                        {{csrf_field()}}
+
+                          <div class="card-body">
+                            <div class="row">
+                            <input type="hidden" name="id" value="{{ $facture->token }}"/>
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="name">MONTANT</label>
+                                      <input type="number" class="form-control" id="name" name="montant" placeholder="Saisir le montant ">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                          </div>
+                          <!-- /.card-body -->
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                          </div>
+                        </form>
+                      </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+           </div>
      
 @endsection
 
