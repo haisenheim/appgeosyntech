@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Bulletin;
 use App\Models\Depense;
 use App\Models\Moi;
-
+use Illuminate\Support\Facades\Auth;
 
 
 class SalaireController extends Controller
@@ -38,14 +38,16 @@ class SalaireController extends Controller
 
 		$facture = Bulletin::where('token',request('id'))->first();
 		if($facture) {
+			if(request('montant') <= $facture->montant  ) {
+				$paiement = Depense::create(['name' => str_pad(date('ydm') . $facture->owner_id, 10, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
+					'montant' => request('montant'),
+					'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'), 'semaine' => date('W'), 'bulletin_id' => $facture->id
+				]);
 
-			$paiement = Depense::create(['name' => str_pad(date('ydm') . $facture->owner_id, 10, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
-				'montant'=>request('montant'),
-				'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'),'semaine'=>date('W'),'bulletin_id'=>$facture->id
-			]);
-
-			request()->session()->flash('success','Paiement enregistré !!!');
-
+				request()->session()->flash('success', 'Paiement enregistré !!!');
+			}else{
+				request()->session()->flash('danger', 'Echec paiement. Montant superieur au solde !!!');
+			}
 			return redirect()->back();
 
 		}
