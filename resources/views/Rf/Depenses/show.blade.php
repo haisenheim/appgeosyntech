@@ -48,10 +48,13 @@
                        <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="card bg-primary text-white">
-                                    <h5 style="color: white; font-size: 12px">MOTIF:</h5>
+                                <div class="card-body">
+                                    <h5 style="color: white; font-size: 13px; font-weight: bolder">MOTIF:</h5>
                                     <p>
                                         {{ $depense->motif?$depense->motif:'Aucun !!!' }}
                                     </p>
+                                </div>
+
                                 </div>
                             </div>
                        </div>
