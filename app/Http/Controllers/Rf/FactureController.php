@@ -52,7 +52,7 @@ class FactureController extends Controller
 
 			$paiement = Paiement::create(['name' => str_pad(date('ydm') . $facture->client_id, 10, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
 				'client_id' => $facture->client_id,'montant'=>request('montant'),
-				'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'),'semaine'=>date('w'),'facture_id'=>$facture->id
+				'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'),'semaine'=>date('W'),'facture_id'=>$facture->id
 			]);
 
 			request()->session()->flash('success','Paiement enregistré !!!');

@@ -59,6 +59,8 @@
                             <tr>
                                 <th>AGENT</th>
                                 <th>MONTANT</th>
+                                <th>PERCU</th>
+                                <th>A PERCEVOIR</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -69,6 +71,8 @@
                                 <tr>
                                     <td>{{ $bulletin->owner->name }}</td>
                                     <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($bulletin->montant,0,',','.') }}</td>
+                                    <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($bulletin->versement,0,',','.') }}</td>
+                                    <td style="padding-right: 10px; text-align: right; font-weight: bolder">{{ number_format($bulletin->reste,0,',','.') }}</td>
                                     <td>
                                         <ul class="list-inline">
                                             <li class="list-inline">
@@ -83,7 +87,7 @@
 
                    <div class="card text-white" style="background-color: #888; border-color: #333;">
                         <div class="card-body">
-                            MASSE SALAIRE DU MOIS : <span style="text-align: right;" class="value">{{ number_format($s,0,',','.') }}</span>
+                            MASSE SALARIALE DU MOIS : <span style="text-align: right;" class="value">{{ number_format($s,0,',','.') }}</span>
                         </div>
                    </div>
 

@@ -246,6 +246,7 @@ Route::prefix('rf')
 
 		Route::get('salaires','SalaireController@index');
 		Route::get('/bulletin/{token}','SalaireController@show');
+		Route::post('bulletin/add-paiement','SalaireController@addPaiement');
 	});
 
 

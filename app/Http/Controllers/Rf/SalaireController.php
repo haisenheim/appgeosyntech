@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Rf;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bulletin;
+use App\Models\Depense;
 use App\Models\Moi;
 
 
@@ -30,6 +31,24 @@ class SalaireController extends Controller
 		//
 		$bulletin = Bulletin::where('token',$token)->first();
 		return view('Rf/Bulletins/show')->with(compact('bulletin'));
+	}
+
+
+	public function addPaiement(){
+
+		$facture = Bulletin::where('token',request('id'))->first();
+		if($facture) {
+
+			$paiement = Depense::create(['name' => str_pad(date('ydm') . $facture->owner_id, 10, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
+				'montant'=>request('montant'),
+				'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'),'semaine'=>date('W'),'bulletin_id'=>$facture->id
+			]);
+
+			request()->session()->flash('success','Paiement enregistré !!!');
+
+			return redirect()->back();
+
+		}
 	}
 
     /**

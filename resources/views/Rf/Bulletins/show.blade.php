@@ -30,6 +30,9 @@
                     <div class="card text-white" style="background-color: #888; border-color: #333;">
                         <div class="card-body">
                             BULLETIN &numero;: <span style="text-align: right;" class="value">{{ $bulletin->name }} </span>
+                            @if($facture->reste>0)
+                               <a class="btn btn-danger btn-xs pull-right" title="Enregistrer un paiement" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-coins"></i></a>
+                            @endif
                         </div>
                    </div>
                     <div class="row">
@@ -92,11 +95,46 @@
                 </div>
             </div>
         </div>
-
-
-
-
     </div>
+    <div class="modal fade" id="modal-lg">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">NOUVEAU PAIEMENT</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form role="form" action="/rf/bulletin/add-paiement" method="post">
+                        {{csrf_field()}}
+
+                          <div class="card-body">
+                            <div class="row">
+                            <input type="hidden" name="id" value="{{ $bulletin->token }}"/>
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="name">MONTANT</label>
+                                      <input type="number" class="form-control" id="name" name="montant" placeholder="Saisir le montant ">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                          </div>
+                          <!-- /.card-body -->
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                          </div>
+                        </form>
+                      </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+           </div>
      
 @endsection
 
