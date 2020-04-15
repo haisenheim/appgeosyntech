@@ -100,49 +100,49 @@
 
                             <li>
                                 <a href="/rf/paiements" class="waves-effect">
-                                    <i class="mdi mdi-layers-triple"></i>
+                                    <i class="mdi mdi-boom-gate-down-outline"></i>
                                     <span>ENTREES</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="/rf/depenses" class="waves-effect">
-                                    <i class="mdi mdi-inbox-arrow-down"></i>
+                                    <i class="mdi mdi-boom-gate-up-outline"></i>
                                     <span>SORTIES</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="/rf/salaires" class="waves-effect">
-                                    <i class="mdi mdi-inbox-arrow-up"></i>
+                                    <i class="fa fa-coins"></i>
                                     <span>SALAIRES</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="/rf/factures" class="waves-effect">
-                                    <i class="mdi mdi-inbox-arrow-up"></i>
+                                    <i class="mdi mdi-file-settings"></i>
                                     <span>FACTURES</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="/rf/clients" class="waves-effect">
-                                    <i class="mdi mdi-inbox-arrow-up"></i>
+                                    <i class="mdi mdi-account-multiple"></i>
                                     <span>CLIENTS</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="/rf/users" class="waves-effect">
-                                    <i class="mdi mdi-inbox-arrow-up"></i>
+                                    <i class="mdi mdi-account-group"></i>
                                     <span>AGENTS</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-cogs"></i>
+                                    <i class="mdi mdi-file-pdf-box-outline"></i>
                                     <span>ETATS FINANCIERS</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">

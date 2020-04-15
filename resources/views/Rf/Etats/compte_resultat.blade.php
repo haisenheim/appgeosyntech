@@ -46,23 +46,23 @@
                         <tbody>
                            <tr>
                                <th>CHIFFRE D'AFFAIRE</th>
-                               <td>{{ number_format($ca,0,',','.') }}</td>
+                               <td style="text-align: right; padding-right: 10px;">{{ number_format($ca,0,',','.') }}</td>
                            </tr>
                             <tr>
                                <th>CHARGES VARIABLES</th>
-                               <td>{{ number_format($cv,0,',','.') }}</td>
+                               <td style="text-align: right; padding-right: 10px;">{{ number_format($cv,0,',','.') }}</td>
                             </tr>
                             <tr>
-                               <th>MARGE BRUTE</th>
-                               <td>{{ number_format($ca - $cv,0,',','.') }}</td>
+                               <th style="font-weight: bolder">MARGE BRUTE</th>
+                               <td style="font-weight: bolder; text-align: right; padding-right: 10px;">{{ number_format($ca - $cv,0,',','.') }}</td>
                             </tr>
                             <tr>
                                <th>CHARGES FIXES</th>
-                               <td>{{ number_format($cf,0,',','.') }}</td>
+                               <td style="text-align: right; padding-right: 10px;">{{ number_format($cf,0,',','.') }}</td>
                             </tr>
                             <tr>
-                               <th>VALEUR AJOUTEE</th>
-                               <td>{{ number_format($ca - $cv - $cf,0,',','.') }}</td>
+                               <th style="font-weight: bolder">VALEUR AJOUTEE</th>
+                               <td style="font-weight: bolder; text-align: right; padding-right: 10px;">{{ number_format($ca - $cv - $cf,0,',','.') }}</td>
                            </tr>
                    </tbody>
 
