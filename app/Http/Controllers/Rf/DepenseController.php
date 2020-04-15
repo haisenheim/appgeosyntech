@@ -26,7 +26,7 @@ class DepenseController extends Controller
 		    $depenses = Depense::all()->whereBetween('jour',[$debut,$fin])->sortByDesc('created_at');
 		   // return view('Rf/Depenses/index')->with(compact('depenses'));
 	    }else{
-		    $depenses = Depense::all()->where('moi_id',date('m'))->sortByDesc('created_at');
+		    $depenses = Depense::all()->where('moi_id',date('m'))->where('annee',date('Y'))->sortByDesc('created_at');
 	    }
 
 	    $types = Tdepense::all();
