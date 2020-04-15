@@ -63,7 +63,7 @@ class DepenseController extends Controller
 	public function store(){
 			$jour = new \DateTime(request('jour'));
 
-			$paiement = Paiement::create(['name' => str_pad(date('ymWdhis'), 15, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
+			$paiement = Depense::create(['name' => str_pad(date('ymWdhis'), 15, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
 				'jour' => request('jour'),'montant'=>request('montant'),'motif'=>request('motif'),'tdepense_id'=>request('tdepense_id'),
 				'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => $jour->format('m'), 'annee' => $jour->format('Y'),'semaine'=>$jour->format('W')
 			]);
