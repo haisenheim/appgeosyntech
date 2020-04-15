@@ -40,7 +40,7 @@ class SalaireController extends Controller
 		if($facture) {
 			if(request('montant') <= $facture->montant  ) {
 				$paiement = Depense::create(['name' => str_pad(date('ydm') . $facture->owner_id, 10, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
-					'montant' => request('montant'),
+					'montant' => request('montant'),'jour'=>new \DateTime(),
 					'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'), 'semaine' => date('W'), 'bulletin_id' => $facture->id
 				]);
 
