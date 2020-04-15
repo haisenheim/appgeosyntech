@@ -51,7 +51,7 @@
                               <td>{!! $ville->address !!} </td>
                                <td>{!! $ville->phone !!} </td>
                                 <td>{!! $ville->email !!} </td>
-                                <td style="text-align: right; padding-right: 10px">{{ number_format($ville->pouadminentage,2,',','.') }}%</td>
+                                <td style="text-align: right; padding-right: 10px">{{ number_format($ville->pourcentage,2,',','.') }}%</td>
 
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">

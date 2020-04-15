@@ -37,6 +37,8 @@
                                <th>&numero;</th>
                                <th>PERIODE</th>
                                <th>MONTANT</th>
+                               <th>VERSEMENT</th>
+                               <th>RESTE</th>
                                <th>STATUT</th>
                                <th></th>
                            </tr>
@@ -50,6 +52,8 @@
 
                                    <td>{{ $liv->moi_id }} / {{ $liv->annee }} </td>
                                    <td style="padding-right: 10px;text-align: right; font-weight: bolder">{{ number_format($liv->montant, 0,',','.') }}</td>
+                                   <td style="padding-right: 10px;text-align: right; font-weight: bolder">{{ number_format($liv->versement, 0,',','.') }}</td>
+                                   <td style="padding-right: 10px;text-align: right; font-weight: bolder">{{ number_format($liv->reste, 0,',','.') }}</td>
                                    <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
                                    <td>
                                        <ul class="list-inline">
