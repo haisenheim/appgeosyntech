@@ -3,13 +3,21 @@
 namespace App\Http\Controllers\Ro;
 
 use App\Models\Certificat;
+use App\Models\Partenaire;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class CertificatController extends Controller
 {
 	//
-	public function showCertif($token)
+
+	public function index(){
+		$partenaires = Partenaire::all();
+		$certificats = Certificat::all()->sortByDesc('created_at');
+		 return view('Ro/Certificats/index')->with(compact('certificats','partenaires'));
+	}
+
+	public function show($token)
 	{
 		$cert = Certificat::where('token', $token)->first();
 		return response()->file(public_path('files') . '/' . $cert->path);
@@ -17,16 +25,19 @@ class CertificatController extends Controller
 		//$week = $now->month;
 	}
 
-	public function addCertificat()
+	public function renew()
 	{
-		$comp = DB::table('certificats')->where(['tcertificat_id' => request('tcertificat_id'), 'user_id' => request('user_id')])->first();
+		$comp = Certificat::where('token', request('token'))->first();
 		//dd($competence);
-		if (!$comp) {
+		if ($comp) {
 			$token = sha1(Auth::user()->id . date('ydmhis'));
-			$data = ['tcertificat_id' => request('tcertificat_id'), 'user_id' => request('user_id'), 'debut' => request('debut'), 'fin' => request('fin')];
+
+			$data = ['tcertificat_id' => $comp->tcertificat_id, 'user_id' => $comp->user_id, 'debut' => request('debut'), 'fin' => request('fin')];
 			$data['token'] = $token;
-			$tc = Tcertificat::find(request('tcertificat_id'));
-			$tname = $tc->name;
+			$data['parent'] = $comp->id;
+			$data['partenaire_id']= request('partenaire_id');
+			//$tc = $comp->tcertificat;
+			$tname = $comp->tcertificat->name;
 			if (request('fichier')) {
 				$file = request('fichier');
 				$ext = $file->getClientOriginalExtension();

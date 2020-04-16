@@ -22,6 +22,14 @@ class Certificat extends Model
 		return $this->belongsTo('App\Models\Tcertificat');
 	}
 
+	public function partenaire(){
+		return $this->belongsTo('App\Models\Partenaire');
+	}
+
+	public function ante(){
+		return $this->belongsTo('App\Models\Certificat','parent');
+	}
+
 
 
 

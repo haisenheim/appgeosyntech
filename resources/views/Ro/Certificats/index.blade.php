@@ -7,13 +7,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h2 class="m-0 text-dark">BASE DE DONNEES DES PARTENAIRES</h2>
+            <h2 class="m-0 text-dark">LISTE DES DOCUMENTS</h2>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="/ro/dashboard">TABLEAU DE BORD</a></li>
-              <li class="breadcrumb-item">PARAMETRES</li>
-              <li class="breadcrumb-item active">PARTENAIRES</li>
+              <li class="breadcrumb-item">FICHIERS</li>
+              <li class="breadcrumb-item active">CERTIFICATS</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,54 +26,53 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">BASE DES PARTENAIRES <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
+                  <h3 class="card-title">BASE DES CERTIFICATS ET AUTRES DOCUMENTS </h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                   <table id="example1" class="table table-bordered table-hover table-condensed datatable">
                     <thead>
                     <tr>
-                      <th>NOM</th>
+                      <th>&numero;</th>
+                      <th>TYPE</th>
 
-                      <th>ADRESSE</th>
-                      <th>TELEPHONE</th>
-                      <th>EMAIL</th>
-                      <th>CATEGORIE</th>
+                      <th>PROPRIETAIRE</th>
+                      <th>PARTENAIRE</th>
+                      <th>DEBUT</th>
+                      <th>FIN DE VALIDITE</th>
+                      <th>DOCUMENT ANTERIEUR</th>
 
                       <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($partenaires as $ville)
+                    @foreach($certificats as $certificat)
                           <tr>
-                              <td>{!! $ville->name !!} </td>
+                              <td>{{ $certificat->name }}</td>
 
-                              <td>{!! $ville->address !!} </td>
-                               <td>{!! $ville->phone !!} </td>
-                                <td>{!! $ville->email !!} </td>
-                                <td style="text-align: right; padding-right: 10px">{{ $ville->tpartenaire?$ville->tpartenaire->name:'-' }}</td>
-
+                              <td>{{ $certificat->tcertificat?$certificat->tcertificat->name:'-' }} </td>
+                               <td>{{ $certificat->user?$certificat->user->name:'-' }} </td>
+                                <td>{{ $certificat->partenaire?$certificat->partenaire->name:'-' }} </td>
+                                <td>{{ date_format($certificat->debut,'d/m/Y') }}</td>
+                                <td style="font-weight: bolder">{{ date_format($certificat->fin,'d/m/Y') }}</td>
+                                @if($certificat->ante)
+                                    <td> <a href="{{route('ro.certificats.show',[$certificat->ante->token])}}">{{ $certificat->ante->name }}</a></td>
+                                @else
+                                    <td>AUCUN</td>
+                                @endif
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('ro.partenaires.show',[$ville->token])}}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('ro.certificats.show',[$certificat->token])}}"><i class="fa fa-eye"></i></a></li>
+                                @if($certificat->expired)
+                                    <li class="list-inline-item"><a data-token="{{ $certificat->token }}" title="renouveler ce certificat" class="btn btn-danger btn-xs btn-renew" href="#" data-toggle="modal" data-target="#modal-lg"><i class="mdi mdi-file-restore-outline"></i></a></li>
+                                @endif
                               </ul>
                               </td>
                           </tr>
                       @endforeach
 
                     </tbody>
-                    <tfoot>
-                        <tr>
-                      <th>NOM</th>
 
-                      <th>ADRESSE</th>
-                      <th>TELEPHONE</th>
-                      <th>EMAIL</th>
-                      <th>CATEGORIE</th>
-
-                      <th></th>
-                    </tr>
-                    </tfoot>
                   </table>
                 </div>
                 <!-- /.card-body -->
@@ -85,32 +84,26 @@
           </div>
 
            <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-lg">
+                  <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">NOUVEAU PARTENAIRE</h4>
+                        <h4 class="modal-title">NOUVELLE MISE A JOUR</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('ro.partenaires.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('ro.certificats.renew')}}" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="row">
-                                <div class="col-md-8 col-sm-12">
+                               <input type="hidden" id="token" name="token"/>
+                                <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
-                                      <label for="name">NOM</label>
-                                      <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom ">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="tpartenaire_id">TYPE</label>
-                                      <select required="required" class="form-control" name="tpartenaire_id" id="tpartenaire_id">
+                                      <label for="tpartenaire_id">PARTENAIRE</label>
+                                      <select required="required" class="form-control" name="partenaire_id" id="partenaire_id">
                                             <option value="">SELECTIONNER</option>
-                                            @foreach($types as $type)
+                                            @foreach($partenaires as $type)
                                                 <option value="{{$type->id}}">{{ $type->name }}</option>
                                             @endforeach
                                       </select>
@@ -118,31 +111,35 @@
                                 </div>
 
 
-                                <div class="col-md-7 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
-                                      <label for="name">ADRESSE</label>
-                                      <input type="text" class="form-control" id="name" name="address" placeholder="Saisir l'adresse">
+                                      <label for="name">DEBUT DE VALIDITE</label>
+                                      <input required="required" type="date" class="form-control" id="name" name="debut" >
                                     </div>
                                 </div>
 
-                                <div class="col-md-5 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="phone">TELEPHONE</label>
-                                      <input type="text" class="form-control" id="phone" name="phone" placeholder="exple : 0456773878">
-                                    </div>
-                                </div>
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
-                                      <label for="email">EMAIL</label>
-                                      <input type="email" class="form-control" id="email" name="email" placeholder="exple : info@system.com">
+                                      <label for="name">FIN DE VALIDITE</label>
+                                      <input required="required" type="date" class="form-control" id="name" name="fin" >
                                     </div>
                                 </div>
+
+                                <div class="col-md-7 col-sm-12">
+                                    <div class="form-group">
+                                      <label for="name">COUT D'ETAB. DU DOC.</label>
+                                      <input required="required" style="text-align: right; padding-right: 10px" type="number" class="form-control" id="name" name="debut" >
+                                    </div>
+                                </div>
+
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
-                                        <label for="exampleInputFile">LOGO</label>
-                                        <input type="file" class="form-control" id="exampleInputFile" name="imageUri">
+                                      <label for="name">FICHIER</label>
+                                      <input type="file" class="form-control" id="name" name="fichier" required="required" >
                                     </div>
                                 </div>
+
+
 
 
                             </div>
@@ -177,5 +174,8 @@
 @section('scripts')
 <script>
      $(document).ready(function(){$(".datatable").DataTable();});
+     $('.btn-renew').click(function(){
+        $('#token').val($(this).data('token'));
+     });
 </script>
 @endsection
