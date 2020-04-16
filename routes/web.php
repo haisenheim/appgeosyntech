@@ -251,6 +251,19 @@ Route::prefix('rf')
 		Route::post('bulletin/add-paiement','SalaireController@addPaiement');
 	});
 
+Route::prefix('ro')
+	->namespace('Ro')
+	->name('ro.')
+	->middleware(['auth','ro'])
+	->group(function(){
+		Route::get('/user/show-certif/{token}','UserController@showCertif');
+		Route::resource('partenaires','PartenaireController');
+		Route::resource('tpartenaires','TpartenaireController');
+		Route::resource('users','UserController');
+		Route::get('dashboard','DashboardController');
+	});
+
+
 
 
 Route::prefix('member')
