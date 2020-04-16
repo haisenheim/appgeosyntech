@@ -31,7 +31,7 @@ class PartenaireController extends Controller
 
 	public function store(){
 		//$data = [];
-		$data = ['name'=>request('name'),'address'=>request('address'),'email'=>request('email'),'phone'=>request('phone'),'tpartenaire_id'=>request('tparteniare_id'),'user_id'=>Auth::user()->id,
+		$data = ['name'=>request('name'),'address'=>request('address'),'email'=>request('email'),'phone'=>request('phone'),'tpartenaire_id'=>request('tpartenaire_id'),'user_id'=>Auth::user()->id,
 				'semaine'=>date('W'),'moi_id'=>date('m'),'annee'=>date('Y')
 		];
 
