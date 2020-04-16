@@ -7,12 +7,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">BASE DE DONNEES DES AGENTS</h1>
+            <h2 class="m-0 text-dark">BASE DE DONNEES DES AGENTS</h2>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="/ro/dashboard">TABLEAU DE BORD</a></li>
-              <li class="breadcrumb-item">PARAMETRES</li>
+              <li class="breadcrumb-item">RH</li>
               <li class="breadcrumb-item active">Agent</li>
             </ol>
           </div><!-- /.col -->
