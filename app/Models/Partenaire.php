@@ -24,6 +24,9 @@ class Partenaire extends Model
 		return $this->belongsTo('App\User');
 	}
 
+	public function certificats(){
+		return $this->hasMany('App\Models\Certificat');
+	}
 
 
 
