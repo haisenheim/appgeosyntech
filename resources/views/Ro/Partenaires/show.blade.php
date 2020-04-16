@@ -68,7 +68,7 @@
 
             <div class="card card-info">
                 <div class="card-header">
-                    <h5 class="card-title">{{ $partenaire->name }} - <span style="font-size: smaller; font-weight: bolder">{{ $partenaire->tpartenaire?$partenaire->name:'-' }}</span>  </h5>
+                    <h5 class="card-title">{{ $partenaire->name }} - <span style="font-size: smaller; font-weight: bolder">{{ $partenaire->tpartenaire?$partenaire->tpartenaire->name:'-' }}</span>  </h5>
                     
 
                 </div>
