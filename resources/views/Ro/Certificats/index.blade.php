@@ -93,7 +93,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('ro.certificats.renew')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="/ro/certificat/renew" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="row">
