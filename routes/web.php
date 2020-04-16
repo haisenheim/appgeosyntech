@@ -257,7 +257,7 @@ Route::prefix('ro')
 	->middleware(['auth','ro'])
 	->group(function(){
 		//Route::get('/user/show-certif/{token}','UserController@showCertif');
-		Route::post('/certificat/renew','CertificatController@renew');
+		Route::post('/certificats/renew','CertificatController@renew');
 		Route::resource('partenaires','PartenaireController');
 		Route::resource('certificats','CertificatController');
 		Route::resource('tpartenaires','TpartenaireController');
