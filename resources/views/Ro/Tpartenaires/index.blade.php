@@ -65,7 +65,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('ra.tpartenaires.store')}}" method="post">
+                        <form enctype="multipart/form-data" role="form" action="{{route('ro.tpartenaires.store')}}" method="post">
                         {{csrf_field()}}
 
                           <div class="card-body">
