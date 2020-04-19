@@ -55,7 +55,7 @@ class BillController extends Controller
 		if($facture) {
 
 			$paiement = Depense::create(['name' => str_pad(date('ydm') . $facture->partenaire_id, 10, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
-				'montant'=>request('montant'),
+				'montant'=>request('montant'),'jour'=>new \DateTime(),
 				'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'),'semaine'=>date('W'),'bill_id'=>$facture->id
 			]);
 

@@ -29,6 +29,10 @@ class Depense extends Model
 		return $this->belongsTo('App\Models\Bulletin');
 	}
 
+	public function bill(){
+		return $this->belongsTo('App\Models\Bill');
+	}
+
 
 
 

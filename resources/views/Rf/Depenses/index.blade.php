@@ -59,8 +59,11 @@
                                 <?php
                                     $lib = "";
                                     if($liv->bulletin){
-                                        $lib = 'Paiement salaire - mois -'.$liv->bulletin->mois->name.' - '.$liv->bulletin->owner->name;
+                                        $lib = 'Paiement salaire -'.$liv->bulletin->mois->name.' - '.$liv->bulletin->owner->name;
                                     }else{
+                                        if($liv->bill_id){
+                                            $lib = 'Paiement - Facture#'.$liv->bill->name.'-'. $liv->bill->partenaire->name
+                                        }
                                         if($liv->tdepense){
                                            $lib = $liv->tdepense->name;
                                         }
