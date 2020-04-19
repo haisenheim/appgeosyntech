@@ -137,7 +137,8 @@ Route::prefix('rh')
 	->middleware(['auth','rh'])
 	->name('rh.')
 	->group(function(){
-		Route::get('contrats','ContractController@index');
+		Route::get('contrats','ContratController@index');
+		Route::post('/contrat/renew','ContratController@renew');
 		Route::resource('tcontrats','TcontratController');
 		Route::resource('postes','PosteController');
 		Route::resource('secteurs','SecteurController');
