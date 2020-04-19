@@ -11,9 +11,9 @@ class ContratController extends Controller
 	//
 
 	public function index(){
-		$users = User::all()->where('role_id',8);
+		//$users = User::all()->where('role_id',8);
 		$contrats = Contrat::all()->sortByDesc('created_at');
-		 return view('Rh/Contrats/index')->with(compact('contrats','users'));
+		 return view('Rh/Contrats/index')->with(compact('contrats'));
 	}
 
 	public function show($token)

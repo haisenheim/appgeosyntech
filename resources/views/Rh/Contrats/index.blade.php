@@ -89,50 +89,35 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">NOUVELLE MISE A JOUR</h4>
+                        <h4 class="modal-title">RENOUVELLEMENT CONTRAT</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="/ro/certificat/renew" method="post">
+                        <form enctype="multipart/form-data" role="form" action="/rh/contrat/renew" method="post">
                         {{csrf_field()}}
                           <div class="card-body">
                             <div class="row">
                                <input type="hidden" id="token" name="token"/>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="tpartenaire_id">PARTENAIRE</label>
-                                      <select required="required" class="form-control" name="partenaire_id" id="partenaire_id">
-                                            <option value="">SELECTIONNER</option>
-                                            @foreach($partenaires as $type)
-                                                <option value="{{$type->id}}">{{ $type->name }}</option>
-                                            @endforeach
-                                      </select>
-                                    </div>
-                                </div>
+
 
 
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
-                                      <label for="name">DEBUT DE VALIDITE</label>
+                                      <label for="name">DEBUT DE SIGNATURE</label>
                                       <input required="required" type="date" class="form-control" id="name" name="debut" >
                                     </div>
                                 </div>
 
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
-                                      <label for="name">FIN DE VALIDITE</label>
+                                      <label for="name">FIN DE SIGNATURE</label>
                                       <input required="required" type="date" class="form-control" id="name" name="fin" >
                                     </div>
                                 </div>
 
-                                <div class="col-md-7 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="name">COUT D'ETAB. DU DOC.</label>
-                                      <input required="required" style="text-align: right; padding-right: 10px" type="number" class="form-control" id="name" name="debut" >
-                                    </div>
-                                </div>
+
 
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
