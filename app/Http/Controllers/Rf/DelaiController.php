@@ -49,7 +49,7 @@ class DelaiController extends Controller
 
 		$ville =[];
 		$ville['name']=$request->name;
-		$ville['nombre'] = $request->variable;
+		$ville['nombre'] = $request->nombre;
 
 		$ville = Delai::create($ville);
 
