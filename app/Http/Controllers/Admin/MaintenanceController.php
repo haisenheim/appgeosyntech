@@ -23,6 +23,8 @@ class MaintenanceController extends Controller
 		$modele = Modele::create(['name'=>request('name'),'role_id'=>request('role_id')]);
 
 		request()->session()->flash('success','OK !!!');
+		return redirect()->back();
+
 	}
 
 }
