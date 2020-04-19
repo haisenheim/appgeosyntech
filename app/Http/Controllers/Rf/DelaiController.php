@@ -23,7 +23,7 @@ class DelaiController extends Controller
     public function index()
     {
 	    $delais = Delai::all();
-	    return view('Rf/Delai/index')->with(compact('delais'));
+	    return view('Rf/Delais/index')->with(compact('delais'));
     }
 
     /**
