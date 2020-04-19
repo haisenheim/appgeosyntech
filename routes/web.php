@@ -138,6 +138,7 @@ Route::prefix('rh')
 	->name('rh.')
 	->group(function(){
 		Route::get('contrats','ContratController@index');
+		Route::get('certificats','CertificatController@index');
 		Route::post('/contrat/renew','ContratController@renew');
 		Route::resource('tcontrats','TcontratController');
 		Route::resource('postes','PosteController');
