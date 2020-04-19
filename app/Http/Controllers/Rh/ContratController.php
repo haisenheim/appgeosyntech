@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers\Rh;
 
-use App\Models\Certificat;
 use App\Models\Contrat;
-use App\Models\Partenaire;
 use App\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class CertificatController extends Controller
+class ContratController extends Controller
 {
 	//
 
