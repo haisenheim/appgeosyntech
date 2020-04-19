@@ -49,11 +49,11 @@ class DelaiController extends Controller
 
 		$ville =[];
 		$ville['name']=$request->name;
-		$ville['variable'] = $request->variable;
+		$ville['nombre'] = $request->variable;
 
-		$ville = Tdepense::create($ville);
+		$ville = Delai::create($ville);
 
-		$request->session()->flash('success','Le type de depense a été correctement enregistré !!!');
+		$request->session()->flash('success','Le delai a été correctement enregistré !!!');
 		return back();
 
 
