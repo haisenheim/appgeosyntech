@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Rf;
 use App\Http\Controllers\Controller;
+use App\Models\Delai;
 use App\Models\Facture;
 use App\Models\Paiement;
 use Illuminate\Support\Facades\Auth;
@@ -42,7 +43,8 @@ class FactureController extends Controller
 	{
 		//
 		$facture = Facture::where('token',$token)->first();
-		return view('Rf/Factures/show')->with(compact('facture'));
+		$delais = Delai::all();
+		return view('Rf/Factures/show')->with(compact('facture','delais'));
 	}
 
 	public function addPaiement(){

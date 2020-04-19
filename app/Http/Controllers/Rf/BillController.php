@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Rf;
 use App\Http\Controllers\Controller;
 use App\Models\Bill;
+use App\Models\Delai;
 use App\Models\Depense;
 use App\Models\Facture;
 use App\Models\Paiement;
@@ -44,7 +45,8 @@ class BillController extends Controller
 	{
 		//
 		$facture = Bill::where('token',$token)->first();
-		return view('Rf/Bills/show')->with(compact('facture'));
+		$delais = Delai::all();
+		return view('Rf/Bills/show')->with(compact('facture','delais'));
 	}
 
 	public function addPaiement(){
