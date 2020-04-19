@@ -129,6 +129,7 @@
                                     <li><a href="/rh/secteurs">SECTEURS</a></li>
                                     <li><a href="/rh/competences">COMPETENCES</a></li>
                                     <li><a href="/rh/postes">POSTES</a></li>
+                                    <li><a href="/rh/tcontrats">TYPES DE CONTRAT</a></li>
                                     <li><a href="/rh/categories">CATEGORIES PROFESS.</a></li>
                                     <li><a href="/rh/tcertificats">TYPES DE CERTIFICAT</a></li>
                                     <li><a href="/rh/tprimes">TYPES DE PRIME</a></li>

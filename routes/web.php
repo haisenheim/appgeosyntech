@@ -237,7 +237,7 @@ Route::prefix('rf')
 	->middleware(['auth','rf'])
 	->name('rf.')
 	->group(function(){
-
+		Route::resource('delais','DelaiController');
 		Route::resource('factures','FactureController');
 		Route::post('facture/add-paiement','FactureController@addPaiement');
 		Route::resource('paiements','PaiementController');
