@@ -10,13 +10,13 @@ class MaintenanceController extends Controller
 {
     //
 	public function index(){
-		 return view('Admin/Maintenance/dashboard');
+		 return view('Maintenance/dashboard');
 	}
 
 	public function modeles(){
 		$modeles = Modele::all();
 		$roles = Role::all();
-		return view('Admin/Maintenance/modeles')->with(compact('modeles','roles'));
+		return view('Maintenance/modeles')->with(compact('modeles','roles'));
 	}
 
 	public function saveModele(){
