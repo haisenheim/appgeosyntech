@@ -86,6 +86,13 @@ Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->name('admin.')
     ->group(function(){
+
+	    //Mode Maintenance
+	    Route::get('maintenance','MaintenanceController@index');
+	    Route::get('maintenance/modeles','MaintenanceController@modeles');
+	    Route::post('maintenance/save-modele','MaintenanceController@saveModele');
+
+
 	    Route::resource('postes','PosteController');
 	    Route::resource('secteurs','SecteurController');
 	    Route::resource('competences','CompetenceController');
