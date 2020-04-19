@@ -16,7 +16,7 @@ class Bill extends Model
 	}
 
 	public function partenaire(){
-		return $this->belongsTo('App\Models\Client', 'client_id');
+		return $this->belongsTo('App\Models\Partenaire', 'partenaire_id');
 	}
 
 	public function payeur(){
