@@ -27,9 +27,19 @@
     </div>
     <div class="card-body">
         <div style="max-width: 400px; margin: 30px auto">
-            <div><i style="font-size: 30px" class="mdi mdi-settings-transfer-outline"></i></div>
+            <div><i id="fa-set"  class="mdi mdi-settings-transfer-outline"></i></div>
         </div>
     </div>
 </div>
+
+<style>
+    #fa-set{
+        font-size: 132px;
+        width: 100px;
+        display: block;
+
+        margin: 0 auto;
+    }
+</style>
 
 @endsection
