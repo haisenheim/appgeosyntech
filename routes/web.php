@@ -240,6 +240,10 @@ Route::prefix('rf')
 		Route::resource('delais','DelaiController');
 		Route::resource('factures','FactureController');
 		Route::post('facture/add-paiement','FactureController@addPaiement');
+		Route::post('facture/add-delai','FactureController@addDelai');
+		Route::resource('bills','BillController');
+		Route::post('bill/add-paiement','BillController@addPaiement');
+		Route::post('bill/add-delai','BillController@addDelai');
 		Route::resource('paiements','PaiementController');
 		Route::resource('commandes','CommandeController');
 		Route::resource('clients','ClientController');

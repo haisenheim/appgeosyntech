@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Rf;
 use App\Http\Controllers\Controller;
+use App\Models\Bill;
+use App\Models\Depense;
 use App\Models\Facture;
 use App\Models\Paiement;
 use Illuminate\Support\Facades\Auth;
 
 
-class FactureController extends Controller
+class BillController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +18,8 @@ class FactureController extends Controller
      */
     public function index()
     {
-	    $factures = Facture::all()->sortByDesc('created_at');
-	    return view('Rf/Factures/index')->with(compact('factures'));
+	    $factures = Bill::all()->sortByDesc('created_at');
+	    return view('Rf/Bills/index')->with(compact('factures'));
     }
 
     /**
@@ -41,30 +43,34 @@ class FactureController extends Controller
 	public function show($token)
 	{
 		//
-		$facture = Facture::where('token',$token)->first();
-		return view('Rf/Factures/show')->with(compact('facture'));
+		$facture = Bill::where('token',$token)->first();
+		return view('Rf/Bills/show')->with(compact('facture'));
 	}
 
 	public function addPaiement(){
 
-		$facture = Facture::where('token',request('id'))->first();
+		$facture = Bill::where('token',request('id'))->first();
 		if($facture) {
 
-			$paiement = Paiement::create(['name' => str_pad(date('ydm') . $facture->client_id, 10, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
-				'client_id' => $facture->client_id,'montant'=>request('montant'),
-				'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'),'semaine'=>date('W'),'facture_id'=>$facture->id
+			$paiement = Depense::create(['name' => str_pad(date('ydm') . $facture->partenaire_id, 10, '0', STR_PAD_LEFT), 'user_id' => Auth::user()->id,
+				'montant'=>request('montant'),
+				'token' => sha1(Auth::user()->id . date('Ymdhis')), 'moi_id' => date('m'), 'annee' => date('Y'),'semaine'=>date('W'),'bill_id'=>$facture->id
 			]);
 
 			request()->session()->flash('success','Paiement enregistré !!!');
 
 			return redirect()->back();
 
+		}else{
+			request()->session()->flash('danger','Facture inconnue !!!');
+
+			return redirect()->back();
 		}
 	}
 
 	public function addDelai(){
 
-		$facture = Facture::where('token',request('id'))->first();
+		$facture = Bill::where('token',request('id'))->first();
 		if($facture) {
 
 			$facture->delai_id = request('delai_id');
@@ -80,6 +86,8 @@ class FactureController extends Controller
 			return redirect()->back();
 		}
 	}
+
+
 
 
 

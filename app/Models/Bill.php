@@ -19,11 +19,13 @@ class Bill extends Model
 		return $this->belongsTo('App\Models\Client', 'client_id');
 	}
 
-
-
 	public function payeur(){
-
 		return $this->belongsTo('App\User', 'filled_by');
+	}
+
+	public function delai(){
+
+		return $this->belongsTo('App\Models\Delai', 'delai_id');
 	}
 
 
@@ -43,7 +45,7 @@ class Bill extends Model
 	public function getEtatAttribute(){
 		$etat=[];
 
-		$pmts = Paiement::all()->where('facture_id',$this->id);
+		$pmts = Depense::all()->where('bill_id',$this->id);
 		$somme = 0;
 		foreach($pmts as $pt){
 			$somme = $somme + $pt->montant;
@@ -70,19 +72,17 @@ class Bill extends Model
 
 
 	public function getMontantAttribute(){
-		$bulletins = Bulletin::all()->where('facture_id',$this->id);
+		$bulletins = Certificat::all()->where('bill_id',$this->id);
 		$m = 0;
 		foreach($bulletins as $bulletin){
 			$m = $bulletin->montant + $m;
 		}
 
-		$m = $m*(1 + $this->pourcentage/100);
-
 		return $m;
 	}
 
 	public function getVersementAttribute(){
-		$pmts = Paiement::all()->where('facture_id',$this->id);
+		$pmts = Depense::all()->where('bill_id',$this->id);
 
 		$somme = 0;
 		foreach($pmts as $pt){

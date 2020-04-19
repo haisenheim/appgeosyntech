@@ -119,11 +119,18 @@
                                 </a>
                             </li>
 
+
+
                             <li>
-                                <a href="/rf/factures" class="waves-effect">
-                                    <i class="mdi mdi-file-settings"></i>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                     <i class="mdi mdi-file-settings"></i>
                                     <span>FACTURES</span>
                                 </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/rf/factures">CLIENTS</a></li>
+                                    <li><a href="/rf/bills">FOURNISSEURS</a></li>
+
+                                </ul>
                             </li>
 
                             <li>

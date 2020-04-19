@@ -23,6 +23,11 @@ class Facture extends Model
 		return $this->belongsTo('App\Models\Commande', 'commande_id');
 	}
 
+	public function delai(){
+
+		return $this->belongsTo('App\Models\Delai', 'delai_id');
+	}
+
 	public function payeur(){
 
 		return $this->belongsTo('App\User', 'filled_by');
