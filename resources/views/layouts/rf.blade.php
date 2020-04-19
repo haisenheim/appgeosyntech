@@ -159,6 +159,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/rf/tdepenses">TYPES DEP.</a></li>
+                                    <li><a href="/rf/delais">DELAIS DE PAIEMENT</a></li>
 
                                 </ul>
                             </li>

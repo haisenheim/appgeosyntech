@@ -52,7 +52,7 @@ class FicheController extends Controller
 		    $facture = Facture::where('client_id',$user->client_id)->where('moi_id',date('m'))->where('annee',date('Y'))->first();
 		    if(!$facture){
 			    $facture = Facture::create(['name'=>str_pad(date('ydm').$user->client_id,10,'0',STR_PAD_LEFT),'moi_id'=>date('m'),'annee'=>date('Y'),
-				    'token'=>sha1($user->id . date('Ymdhis')), 'client_id'=>$user->client_id,'pourcentage'=>$user->client->pourcentage
+				    'token'=>sha1($user->id . date('Ymdhis')), 'client_id'=>$user->client_id,'pourcentage'=>$user->client->pourcentage,'semaine'=>date('W')
 			    ]);
 		    }
 		    //dd($facture);
