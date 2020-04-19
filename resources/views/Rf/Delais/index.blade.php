@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                       <label for="variable">NOMBRE DE JOURS</label>
                                       <input class="form-control" type="number" name="nombre" id="variable"/>
