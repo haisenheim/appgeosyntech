@@ -190,7 +190,7 @@
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
                                       <label for="delai_id">DELAI</label>
-                                     <select name="delai_id" id="delai_id">
+                                     <select class="form-control" name="delai_id" id="delai_id">
                                         @foreach($delais as $dela)
                                           <option value="{{ $dela->id }}">{{ $dela->name }}</option>
                                         @endforeach
