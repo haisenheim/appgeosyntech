@@ -119,6 +119,18 @@
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="mdi mdi-file-pdf-box-outline"></i>
+                                    <span>DOCUMENTS</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/rh/contrats">CONTRATS</a></li>
+                                    <li><a href="/rh/certificats">CERTIFICATS</a></li>
+
+                                </ul>
+                            </li>
+
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">

@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Models\Classement;
+use App\Models\Contrat;
 use App\Models\Livraison;
 use App\Traits\LockableTrait;
 use Illuminate\Notifications\Notifiable;
@@ -47,6 +48,10 @@ class User extends Authenticatable
 		return $this->hasMany('App\Models\Certificat');
 	}
 
+	public function contrats(){
+		return $this->hasMany('App\Models\Contrat');
+	}
+
 	public function livraisons(){
 		return $this->hasMany('App\Models\Livraison');
 	}
@@ -81,5 +86,9 @@ class User extends Authenticatable
         return $this->last_name . "  ".$this->first_name;
     }
 
+	public function getContractAttribute(){
+		$contrat = Contrat::where('user_id',$this->id)->where('active',true)->first();
+		return $contrat;
+	}
 
 }

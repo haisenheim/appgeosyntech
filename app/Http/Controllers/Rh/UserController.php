@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Certificat;
 use App\Models\Classement;
 use App\Models\Competence;
+use App\Models\Contrat;
 use App\Models\Pay;
 use App\Models\Role;
 use App\Models\Tcertificat;
@@ -150,6 +151,49 @@ class UserController extends Controller
 				}
 			}
 			Certificat::create($data);
+			//DB::table('certificats')->insert($data);
+			request()->session()->flash('success','Ok !!!');
+		}else{
+			request()->session()->flash('warning','Document déjà present !!!');
+		}
+
+		return redirect()->back();
+	}
+
+
+	public function addContrat(){
+		$comp = DB::table('contrats')->where(['user_id'=>request('user_id')])->first();
+		//dd($competence);
+		if(!$comp){
+			$token = sha1(Auth::user()->id. date('ydmhis'));
+			$data = ['tcontrat_id'=>request('tcontrat_id'),'user_id'=>request('user_id'),'debut'=>request('debut'),'fin'=>request('fin')];
+			$data['token'] = $token;
+
+			if(request('fichier')){
+				$file = request('fichier');
+				$ext = $file->getClientOriginalExtension();
+				$arr_ext = array('jpg','png','jpeg','pdf');
+				$path = public_path('files').'/contrats';
+				if(in_array($ext,$arr_ext)) {
+					if(!file_exists($path)){
+						//umask(777);
+						if(!file_exists(public_path('files'))){
+							mkdir(public_path('files'));
+						}
+						mkdir($path);
+					}
+					if (file_exists($path.'/' . $token . '.' . $ext)) {
+						unlink($path . '/' . $token . '.' . $ext);
+					}
+					$name = $token . '.' . $ext;
+					$file->move($path, $name);
+					$data['path'] = 'contrats/' . $name;
+				}else{
+					request()->session()->flash('danger','EXtension du fichier non valide !!!');
+					return redirect()->back();
+				}
+			}
+			Contrat::create($data);
 			//DB::table('certificats')->insert($data);
 			request()->session()->flash('success','Ok !!!');
 		}else{
