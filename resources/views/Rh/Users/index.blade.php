@@ -7,13 +7,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">BASE DE DONNEES DES AGENTS</h1>
+            <h2 class="m-0 text-dark">BASE DE DONNEES DES AGENTS</h2>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/rh/dashboard">TABLEAU DE BORD</a></li>
-              <li class="breadcrumb-item">PARAMETRES</li>
-              <li class="breadcrumb-item active">Agent</li>
+              <li class="breadcrumb-item"><a href="/rh/dashboard">SM</a></li>
+              <li class="breadcrumb-item">RH</li>
+              <li class="breadcrumb-item active">Agents</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -38,6 +38,7 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
+                      <th>CONTRAT</th>
                       <th>PAYS DE RES.</th>
                       <th></th>
                     </tr>
@@ -50,6 +51,11 @@
                               <td>{!! $ville->address !!} </td>
                                <td>{!! $ville->phone !!} </td>
                                 <td>{!! $ville->email !!} </td>
+                                @if($ville->contract)
+                                    <td><a href="/rh/contrats/show/{{ $ville->token }}">{{ $ville->contract->tcontrat->name }}</a></td>
+                                @else
+                                    <td>Aucun contrat</td>
+                                @endif
                               <td>{!! $ville->pay?$ville->pay->name:'-' !!}</td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
@@ -67,7 +73,8 @@
                       <th>ADRESSE</th>
                       <th>TELEPHONE</th>
                       <th>EMAIL</th>
-                      <th>PAYS RES./th>
+                      <th>CONTRAT</th>
+                      <th>PAYS RES.</th>
                       <th></th>
                     </tr>
                     </tfoot>
