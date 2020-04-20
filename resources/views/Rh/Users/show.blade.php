@@ -187,8 +187,8 @@
                                 <label for="competence_id">TYPE DE CONTRAT</label>
                                 <select class="form-control" name="tcontrat_id" id="competence_id" required="required">
                                       <option value="">SELECTIONNER </option>
-                                      @foreach($types as $type)
-                                          <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                      @foreach($tcontrats as $tp)
+                                          <option value="{{ $tp->id }}">{{ $tp->name }}</option>
                                       @endforeach
                                 </select>
                               </div>

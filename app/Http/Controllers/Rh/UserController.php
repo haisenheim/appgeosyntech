@@ -11,6 +11,7 @@ use App\Models\Contrat;
 use App\Models\Pay;
 use App\Models\Role;
 use App\Models\Tcertificat;
+use App\Models\Tcontrat;
 use App\Models\Ville;
 use App\User;
 use Carbon\Carbon;
@@ -107,7 +108,8 @@ class UserController extends Controller
 	    $competences = Competence::all();
 	    $categories = Category::all();
 	    $types = Tcertificat::all();
-        return view('Rh/Users/show')->with(compact('user','competences','categories','types'));
+	    $tcontrats = Tcontrat::all();
+        return view('Rh/Users/show')->with(compact('user','competences','categories','types','tcontrats'));
     }
 
 	public function showCertif($token){
