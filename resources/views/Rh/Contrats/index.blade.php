@@ -51,7 +51,7 @@
                           <tr style="background-color: <?= $certificat->expired?'red':'' ?>">
                               <td>{{ $certificat->name }}</td>
 
-                              <td>{{ $certificat->tcertificat?$certificat->tcertificat->name:'-' }} </td>
+                              <td>{{ $certificat->tcontrat?$certificat->tcontrat->name:'-' }} </td>
                                <td>{{ $certificat->user?$certificat->user->name:'-' }} </td>
 
                                 <td>{{ date_format($certificat->debut,'d/m/Y') }}</td>
@@ -66,9 +66,9 @@
                               <td><?= $certificat->expired?'Expiré':'En cours de validité' ?></td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('rh.contrats.show',[$certificat->token])}}"><i class="fa fa-eye"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-info btn-xs" href="{{route('rh.contrats.show',[$certificat->token])}}"><i class="fa fa-eye"></i></a></li>
                                 @if($certificat->expired)
-                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="/rh/contrat/renew/{{ $certificat->token }}"><i class="fa fa-eye"></i></a></li>
+                                <li class="list-inline-item"><a class="btn btn-success btn-xs" href="/rh/contrat/renew/{{ $certificat->token }}"><i class="fa fa-eye"></i></a></li>
                                 @endif
                               </ul>
                               </td>

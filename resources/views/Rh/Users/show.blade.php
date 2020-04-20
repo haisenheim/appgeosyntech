@@ -150,7 +150,7 @@
                             <li class="list-group-item"><h6><i class="fa fa-mobile"></i> {{ $user->phone }}</h6></li>
                             <li class="list-group-item"><h6><i class="fa fa-envelope"></i> {{ $user->email }}</h6></li>
                             <li class="list-group-item"><h6><i class="mdi mdi-google-classroom"></i> {{ $user->classe?$user->classe->category->name:'-' }}</h6></li>
-                            <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-xs btn-danger btn-block btn-sm"><i class="mdi mdi-shape-rectangle-plus"></i></a></li>
+                            <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-xs btn-danger btn-block btn-sm">Changer la cat. Socio. Prof. <i class="mdi mdi-shape-rectangle-plus"></i></a></li>
                             @if($user->contract)
                             <li class="list-group-item"><a class="btn btn-info btn-xs btn-block" href="{{route('rh.contrats.show',[$user->contract->token])}}">Afficher le contrat <i class="fa fa-eye"></i></a></li>
 
