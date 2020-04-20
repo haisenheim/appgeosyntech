@@ -58,16 +58,7 @@
                                 <i class="dripicons-document-remove mr-1 align-middle"></i> <span class="d-none d-md-inline-block">CERTIFICATS</span>
                             </a>
                         </li>
-                        <li class="nav-item waves-effect waves-light">
-                            <a class="nav-link" data-toggle="tab" href="#messages-justify" role="tab">
-                                <i class="fas fa-coins mr-1 align-middle"></i> <span class="d-none d-md-inline-block">SALAIRES</span>
-                            </a>
-                        </li>
-                        <li class="nav-item waves-effect waves-light">
-                            <a class="nav-link" data-toggle="tab" href="#settings-justify" role="tab">
-                                <i class="fas fa-chart-line mr-1 align-middle"></i> <span class="d-none d-md-inline-block">CARRIERE</span>
-                            </a>
-                        </li>
+
                     </ul>
 
                     <!-- Tab panes -->
@@ -131,28 +122,7 @@
                                     </tbody>
                              </table>
                         </div>
-                        <div class="tab-pane" id="messages-justify" role="tabpanel">
-                            <p class="mb-0">
-                                Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                single-origin coffee squid. Exercitation +1 labore velit, blog
-                                sartorial PBR leggings next level wes anderson artisan four loko
-                                farm-to-table craft beer twee. Qui photo booth letterpress,
-                                commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                aesthetic magna delectus mollit.
-                            </p>
-                        </div>
-                        <div class="tab-pane" id="settings-justify" role="tabpanel">
-                            <p class="mb-0">
-                                Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
-                                art party before they sold out master cleanse gluten-free squid
-                                scenester freegan cosby sweater. Fanny pack portland seitan DIY,
-                                art party locavore wolf cliche high life echo park Austin. Cred
-                                vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
-                                farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
-                                mustache.
-                            </p>
-                        </div>
+                       
                     </div>
 
                 </div>
@@ -170,8 +140,8 @@
                 </div>
                 <div class="card-body">
                         <div style="padding: 10px auto">
-                            <div class="">
-                              <img style="max-height: 100px; max-height:100px; border-radius: 50%" src="<?= $user->imageUri?asset('img/'. $user->imageUri):asset('img/avatar.png') ?>" class="img-circle elevation-2">
+                            <div class="div-img">
+                              <img style="max-height: 100px; max-width:100px; border-radius: 50%" src="<?= $user->imageUri?asset('img/'. $user->imageUri):asset('img/avatar.png') ?>" class="img-circle elevation-2">
                             </div>
                         </div>
                     <div style="padding: 10px;">
@@ -181,6 +151,12 @@
                             <li class="list-group-item"><h6><i class="fa fa-envelope"></i> {{ $user->email }}</h6></li>
                             <li class="list-group-item"><h6><i class="mdi mdi-google-classroom"></i> {{ $user->classe?$user->classe->category->name:'-' }}</h6></li>
                             <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#addCategory" class="btn btn-xs btn-danger btn-block btn-sm"><i class="mdi mdi-shape-rectangle-plus"></i></a></li>
+                            @if($use->contract)
+                            <li class="list-group-item"><a class="btn btn-info btn-xs" href="{{route('rh.contrats.show',[$user->contract->token])}}"><i class="fa fa-eye"></i></a></li>
+
+                            @else
+                            <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#modal-contrat" class="btn btn-xs btn-secondary btn-block btn-sm"><i class="mdi mdi-file-upload"></i></a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -189,6 +165,72 @@
 
         </div>
     </div>
+
+    <div class="modal fade" id="modal-contrat">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">AJOUT DU CONTRAT </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form enctype="multipart/form-data"  action="/rh/user/add-contrat" method="post">
+                  {{csrf_field()}}
+
+                    <div class="card-body">
+                      <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                              <input type="hidden" name="user_id" value="{{ $user->id }}"/>
+                              <div class="form-group">
+                                <label for="competence_id">TYPE DE CONTRAT</label>
+                                <select class="form-control" name="tcontrat_id" id="competence_id" required="required">
+                                      <option value="">SELECTIONNER </option>
+                                      @foreach($types as $type)
+                                          <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                      @endforeach
+                                </select>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="debut">DATE DE SIGNATURE</label>
+                                    <input id="debut" type="date" required="required" class="form-control" name="debut"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="fin">DATE D'EXPIRATION</label>
+                                    <input id="fin" type="date" required="required" class="form-control" name="fin"/>
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-sm-12">
+                                <div class="form-group">
+                                    <label for="fichier">FICHIER</label>
+                                    <input id="fichier" type="file" required="required" class="form-control" name="fichier"/>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+
+
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+     </div>
+
+
     <div class="modal fade" id="modal-certif">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -346,6 +388,15 @@
             </div>
             <!-- /.modal-dialog -->
      </div>
+     
+     <style>
+        .div-img{
+            margin: 10px auto;
+            max-width:200px;
+
+        }
+     </style>
+     
 @endsection
 
 @section('script')

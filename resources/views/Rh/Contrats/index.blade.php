@@ -67,7 +67,9 @@
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
                                 <li class="list-inline-item"><a class="btn btn-default btn-xs" href="{{route('rh.contrats.show',[$certificat->token])}}"><i class="fa fa-eye"></i></a></li>
-
+                                @if($certificat->expired)
+                                <li class="list-inline-item"><a class="btn btn-default btn-xs" href="/rh/contrat/renew/{{ $certificat->token }}"><i class="fa fa-eye"></i></a></li>
+                                @endif
                               </ul>
                               </td>
                           </tr>
