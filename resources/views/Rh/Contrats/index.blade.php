@@ -33,23 +33,23 @@
                   <table id="example1" class="table table-bordered table-hover table-condensed datatable">
                     <thead>
                     <tr>
-                      <th>&numero;</th>
+
                       <th>TYPE</th>
 
                       <th>PROPRIETAIRE</th>
 
-                      <th>DATE DE SIGNATURE</th>
-                      <th>DATE D'EXPIRATION</th>
-                      <th>NOMBRE DE JOURS RESTANTS</th>
-                      <th>DOCUMENT ANTERIEUR</th>
+                      <th>DATE DE SIG.</th>
+                      <th>DATE D'EXP.</th>
+                      <th>JOURS RESTANTS</th>
+                      <th>CONTRAT PREC.</th>
                       <th>STATUT</th>
                       <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($contrats as $certificat)
-                          <tr style="background-color: <?= $certificat->expired?'red':'' ?>">
-                              <td>{{ $certificat->name }}</td>
+                          <tr style="background-color: <?= $certificat->expired?'red':'' ?>;color: <?= $certificat->expired?'#FFF':'' ?>  ">
+
 
                               <td>{{ $certificat->tcontrat?$certificat->tcontrat->name:'-' }} </td>
                                <td>{{ $certificat->user?$certificat->user->name:'-' }} </td>
@@ -63,7 +63,7 @@
                                     <td>AUCUN</td>
                                 @endif
 
-                              <td><?= $certificat->expired?'Expiré':'En cours de validité' ?></td>
+                              <td><?= $certificat->expired?'Expiré':'Valide' ?></td>
                               <td>
                               <ul style="margin-bottom: 0" class="list-inline">
                                 <li class="list-inline-item"><a class="btn btn-info btn-xs" href="{{route('rh.contrats.show',[$certificat->token])}}"><i class="fa fa-eye"></i></a></li>
