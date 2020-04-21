@@ -48,7 +48,7 @@
 
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">OBJECTIFS AGENTS</h3>
+                  <h4 class="card-title">OBJECTIFS AGENTS</h4>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -59,6 +59,27 @@
                                 <tr>
                                  <td>{{ $type->name }}</td>
                                  <td class="td-value" data-val="{{ $type->id }}" data-field="tobagent_id" data-table="obtobagents" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                   </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">OBJECTIFS FOURNISSEURS</h4>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                   <table class="table table-striped table-hover table-bordered">
+                        <tbody>
+                            @foreach($tpartenaires as $type)
+                                <?php $obj = $obj_partenaires->firstWhere('tpartenaire_id',$type->id); ?>
+                                <tr>
+                                 <td>{{ $type->name }}</td>
+                                 <td class="td-value" data-val="{{ $type->id }}" data-field="tpartenaire_id" data-table="obtpartenaires" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
