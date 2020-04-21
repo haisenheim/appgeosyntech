@@ -86,6 +86,15 @@ Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->name('admin.')
     ->group(function(){
+		// Objectifs de performance
+		Route::get('objectifs/clients','ObjectifController@clients');
+	    Route::get('objectifs/partenaires','ObjectifController@partenaires');
+	    Route::get('objectifs/agents','ObjectifController@agents');
+	    Route::get('objectifs/delais-clients','ObjectifController@delaisClients');
+	    Route::get('objectifs/result','ObjectifController@result');
+	    Route::get('objectifs/bilan','ObjectifController@bilan');
+	    Route::get('objectifs/tresorerie','ObjectifController@tresorerie');
+
 
 	    //Mode Maintenance
 	    Route::get('maintenance','MaintenanceController@index');

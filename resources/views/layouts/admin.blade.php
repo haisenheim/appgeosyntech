@@ -147,6 +147,22 @@
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="mdi mdi-timetable"></i>
+                                    <span>OBJECTIFS DE PERFORM.</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/admin/objectifs/clients">CLIENTS</a></li>
+                                    <li><a href="/admin/objectifs/delais-clients">DELAIS DE PAIEMENT</a></li>
+                                    <li><a href="/admin/objectifs/agents">AGENTS</a></li>
+                                    <li><a href="/admin/objectifs/partenaires">PARTENAIRES</a></li>
+                                    <li><a href="/admin/objectifs/result">PERFOR. FINANCIERE></a></li>
+                                    <li><a href="/admin/objectifs/bilan">SANTE FINANCIERE</a></li>
+                                    <li><a href="/admin/objectifs/tresorerie">TRESORERIE</a></li>
+                                </ul>
+                            </li>
+
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">

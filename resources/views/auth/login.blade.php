@@ -5,11 +5,11 @@
         <meta charset="utf-8" />
         <title>SM | SITRAD MANAGEMENT</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesdesign" name="author" />
+        <meta content="SITRAD GROUP ERP By ALLIAGES TECHNOLOGIES" name="description" />
+        <meta content="CLEMENT ESSOMBA" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
 
+        <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
         <!-- Bootstrap Css -->
         <!-- Bootstrap Css -->
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
