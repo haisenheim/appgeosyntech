@@ -124,7 +124,7 @@
                                 <div class="col-md-7 col-sm-12">
                                     <div class="form-group">
                                         <label for="tcontrat_id">TYPE DE CONTRAT</label>
-                                        <select name="tcontrat_id" id="tcontrat_id" required="required">
+                                        <select class="form-control" name="tcontrat_id" id="tcontrat_id" required="required">
                                             <option value="">SELECTIONNER</option>
                                             @foreach($types as $tp)
                                                 <option value="{{ $tp->id }}">{{ $tp->name }}</option>
