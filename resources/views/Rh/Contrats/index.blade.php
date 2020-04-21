@@ -58,7 +58,7 @@
                                 <td style="font-weight: bolder">{{ date_format($certificat->fin,'d/m/Y') }}</td>
                                 <td>{{ $certificat->expired?' - ':number_format($certificat->remaining_days, 0,',','.') }} Jour(s)</td>
                                 @if($certificat->ante)
-                                    <td> <a href="{{route('rh.contrats.show',[$certificat->ante->token])}}">{{ $certificat->ante->name }}</a></td>
+                                    <td> <a href="{{route('rh.contrats.show',[$certificat->ante->token])}}">{{ $certificat->ante->tcontrat->name }}</a></td>
                                 @else
                                     <td>AUCUN</td>
                                 @endif
