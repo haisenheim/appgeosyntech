@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Rh;
 
 use App\Models\Contrat;
+use App\Models\Tcontrat;
 use App\User;
 use App\Http\Controllers\Controller;
 
@@ -12,8 +13,9 @@ class ContratController extends Controller
 
 	public function index(){
 		//$users = User::all()->where('role_id',8);
+		$types = Tcontrat::all();
 		$contrats = Contrat::all()->sortByDesc('created_at');
-		 return view('Rh/Contrats/index')->with(compact('contrats'));
+		 return view('Rh/Contrats/index')->with(compact('contrats','types'));
 	}
 
 	public function show($token)
@@ -31,7 +33,7 @@ class ContratController extends Controller
 		if ($comp) {
 			$token = sha1(Auth::user()->id . date('ydmhis'));
 
-			$data = ['tcontrat_id' => $comp->tcontrat_id, 'user_id' => $comp->user_id, 'debut' => request('debut'), 'fin' => request('fin')];
+			$data = ['tcontrat_id' => request('tcontrat_id'), 'user_id' => $comp->user_id, 'debut' => request('debut'), 'fin' => request('fin')];
 			$data['token'] = $token;
 			$data['parent'] = $comp->id;
 			//$data['partenaire_id']= request('partenaire_id');
@@ -67,7 +69,7 @@ class ContratController extends Controller
 			//DB::table('certificats')->insert($data);
 			request()->session()->flash('success', 'Ok !!!');
 		} else {
-			request()->session()->flash('warning', 'Document déjà present !!!');
+			request()->session()->flash('warning', 'Contrat precedent introuvable !!!');
 		}
 
 		return redirect()->back();

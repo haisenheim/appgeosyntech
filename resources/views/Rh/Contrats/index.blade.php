@@ -69,7 +69,7 @@
                                 <li class="list-inline-item"><a class="btn btn-info btn-xs" href="{{route('rh.contrats.show',[$certificat->token])}}"><i class="fa fa-eye"></i></a></li>
                                 @if($certificat->expired)
                                     @if($certificat->active)
-                                    <li class="list-inline-item"><a class="btn btn-default btn-xs" href="#" data-toggle="modal" data-target="#modal-lg"><i class="mdi mdi-reload"></i></a></li>
+                                    <li class="list-inline-item"><a class="btn btn-warning btn-xs btn-renew" data-token="{{ $certificat->token }}"  href="#" data-toggle="modal" data-target="#modal-lg"><i class="mdi mdi-reload"></i></a></li>
                                     @endif
                                 @endif
                               </ul>
@@ -121,9 +121,19 @@
                                     </div>
                                 </div>
 
+                                <div class="col-md-7 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="tcontrat_id">TYPE DE CONTRAT</label>
+                                        <select name="tcontrat_id" id="tcontrat_id" required="required">
+                                            <option value="">SELECTIONNER</option>
+                                            @foreach($types as $tp)
+                                                <option value="{{ $tp->id }}">{{ $tp->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
 
-
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-5 col-sm-12">
                                     <div class="form-group">
                                       <label for="name">FICHIER</label>
                                       <input type="file" class="form-control" id="name" name="fichier" required="required" >
