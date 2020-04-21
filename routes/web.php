@@ -94,6 +94,7 @@ Route::prefix('admin')
 	    Route::get('objectifs/result','ObjectifController@result');
 	    Route::get('objectifs/bilan','ObjectifController@bilan');
 	    Route::get('objectifs/tresorerie','ObjectifController@tresorerie');
+	    Route::get('objectifs/save','ObjectifController@save');
 
 
 	    //Mode Maintenance

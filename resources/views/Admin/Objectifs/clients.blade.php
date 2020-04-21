@@ -36,7 +36,7 @@
                                 <?php $obj = $obj_clients->firstWhere('tobclient_id',$type->id); ?>
                                 <tr>
                                  <td>{{ $type->name }}</td>
-                                 <td class="td-value" data-id="{{ $type->id }}" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
+                                 <td class="td-value" data-val="{{ $type->id }}" data-field="tobclient_id" data-table="obtobclients" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -107,6 +107,34 @@
 
 
 
+<script>
 
+    $('.td-value').keypress(function(e){
+        var keycode = e.keyCode?e.keyCode:e.which;
+        if(keycode == '13'){
+            //alert($(this).text());
+            var objectif = $(this).text();
+            var table = $(this).data('table');
+            var field = $(this).data('field');
+            var val = $(this).data('val');
+            //var id = $(this).data('id');
+            if($.isNumeric(objectif)){
+                $.ajax({
+                    url :'/admin/objectifs/save',
+                    type:'get',
+                    dataType:'json',
+                    data:{table:table,field:field,objectif:objectif,val:val},
+                    success:function(){
+                        window.location.reload();
+                    }
+                });
+            }else{
+                alert('donnée invalide !!!')
+            }
+        }
+    })
+
+
+</script>
 
 @endsection
