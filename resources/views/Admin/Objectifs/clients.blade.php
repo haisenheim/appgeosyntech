@@ -106,7 +106,7 @@
   </style>
 
 
-
+<script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
 <script>
 
     $('.td-value').keypress(function(e){
