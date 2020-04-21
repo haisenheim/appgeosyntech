@@ -21,9 +21,9 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="">
          <div class="row">
-            <div class="col-12">
+            <div class="col-4">
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">OBJECTIFS CLIENTS</h3>
@@ -44,7 +44,8 @@
                 </div>
                 <!-- /.card-body -->
               </div>
-
+            </div>
+            <div class="col-4">
 
               <div class="card">
                 <div class="card-header">
@@ -66,7 +67,8 @@
                 </div>
                 <!-- /.card-body -->
               </div>
-
+            </div>
+            <div class="col-4">
               <div class="card">
                 <div class="card-header">
                   <h4 class="card-title">OBJECTIFS FOURNISSEURS</h4>
