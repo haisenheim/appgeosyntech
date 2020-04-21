@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Tobresult extends Model
 {
     //
+	public $timestamps = false;
 }

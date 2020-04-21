@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Tobclient extends Model
 {
     //
+	public $timestamps = false;
 }
