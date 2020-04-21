@@ -55,7 +55,7 @@
                    <table class="table table-striped table-hover table-bordered">
                         <tbody>
                             @foreach($tobagents as $type)
-                                <?php $obj = $obj_agents->firstWhere('tobclient_id',$type->id); ?>
+                                <?php $obj = $obj_agents->firstWhere('tobagent_id',$type->id); ?>
                                 <tr>
                                  <td>{{ $type->name }}</td>
                                  <td class="td-value" data-val="{{ $type->id }}" data-field="tobagent_id" data-table="obtobagents" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
