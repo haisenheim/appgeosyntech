@@ -6,6 +6,7 @@ use App\Models\Contrat;
 use App\Models\Tcontrat;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ContratController extends Controller
 {
