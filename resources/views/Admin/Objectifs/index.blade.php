@@ -32,7 +32,7 @@
                 <div class="card-body">
                    <table class="table table-striped table-hover table-bordered">
                         <tbody>
-                            @foreach($types as $type)
+                            @foreach($tobclients as $type)
                                 <?php $obj = $obj_clients->firstWhere('tobclient_id',$type->id); ?>
                                 <tr>
                                  <td>{{ $type->name }}</td>
@@ -41,9 +41,28 @@
                             @endforeach
                         </tbody>
                    </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
 
 
-
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">OBJECTIFS AGENTS</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                   <table class="table table-striped table-hover table-bordered">
+                        <tbody>
+                            @foreach($tobagents as $type)
+                                <?php $obj = $obj_agents->firstWhere('tobclient_id',$type->id); ?>
+                                <tr>
+                                 <td>{{ $type->name }}</td>
+                                 <td class="td-value" data-val="{{ $type->id }}" data-field="tobagent_id" data-table="obtobagents" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                   </table>
                 </div>
                 <!-- /.card-body -->
               </div>
@@ -55,45 +74,6 @@
     </div>
 
 
-
-           <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">NOUVELLE CATEGORIE</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form enctype="multipart/form-data" role="form" action="{{route('admin.categories.store')}}" method="post">
-                        {{csrf_field()}}
-
-                          <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                      <label for="name">NOM</label>
-                                      <input type="text" class="form-control" id="name" name="name" placeholder="Saisir le nom ">
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                          </div>
-                          <!-- /.card-body -->
-                          <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
-                          </div>
-                        </form>
-                      </div>
-
-                    </div>
-                    <!-- /.modal-content -->
-                  </div>
-                  <!-- /.modal-dialog -->
-           </div>
 
 
 <style>

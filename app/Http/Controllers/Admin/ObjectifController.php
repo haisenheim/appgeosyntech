@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Objectifs\Obtobagent;
 use App\Models\Objectifs\Obtobclient;
+use App\Models\Objectifs\Tobagent;
 use App\Models\Objectifs\Tobclient;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,10 +13,14 @@ use Illuminate\Support\Facades\DB;
 class ObjectifController extends Controller
 {
     //
-	public function clients(){
+	public function index(){
 		$obj_clients = Obtobclient::all()->where('annee',date('Y'));
-		$types = Tobclient::all();
-		return view('Admin/Objectifs/clients')->with(compact('obj_clients','types'));
+		$tobclients = Tobclient::all();
+
+		$obj_agents = Obtobagent::all()->where('annee',date('Y'));
+		$tobagents = Tobagent::all();
+
+		return view('Admin/Objectifs/index')->with(compact('obj_clients','tobclients','obj_agents','tobagents'));
 	}
 
 	public function save(){

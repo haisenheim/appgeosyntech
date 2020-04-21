@@ -87,7 +87,7 @@ Route::prefix('admin')
     ->name('admin.')
     ->group(function(){
 		// Objectifs de performance
-		Route::get('objectifs/clients','ObjectifController@clients');
+		Route::get('objectifs/','ObjectifController@index');
 	    Route::get('objectifs/partenaires','ObjectifController@partenaires');
 	    Route::get('objectifs/agents','ObjectifController@agents');
 	    Route::get('objectifs/delais-clients','ObjectifController@delaisClients');
