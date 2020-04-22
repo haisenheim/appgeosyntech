@@ -37,7 +37,7 @@
                             <tr>
                                 <th></th>
                                 @foreach($mois as $m)
-                                  <th>{{ $mi->name }}</th>
+                                  <th>{{ $m->name }}</th>
                                 @endforeach
                             </tr>
                         </thead>
