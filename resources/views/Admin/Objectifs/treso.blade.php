@@ -53,7 +53,7 @@
                                       @php
                                         $obj = $objs->where('moi_id',$m->id)->first();
                                       @endphp
-                                     <td class="td-value" data-val="{{ $type->id }}" data-field="client_id" data-table="obtobtresoreries" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
+                                     <td class="td-value" data-moi="{{ $m->id }}" data-val="{{ $type->id }}" data-field="tobtresorerie_id" data-table="obtobtresoreries" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
 
                                 @endforeach
                                 </tr>
@@ -93,16 +93,17 @@
         if(keycode == '13'){
             //alert($(this).text());
             var objectif = $(this).text();
-            var table = $(this).data('table');
-            var field = $(this).data('field');
+            //var table = $(this).data('table');
+            //var field = $(this).data('field');
             var val = $(this).data('val');
+            var moi_id = $(this).data('moi');
             //var id = $(this).data('id');
             if($.isNumeric(objectif)){
                 $.ajax({
-                    url :'/admin/objectifs/save',
+                    url :'/admin/objectifs/save-treso',
                     type:'get',
                     dataType:'json',
-                    data:{table:table,field:field,objectif:objectif,val:val},
+                    data:{objectif:objectif,val:val,moi_id:moi_id},
                     success:function(){
                         window.location.reload();
                     }

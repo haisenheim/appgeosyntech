@@ -64,14 +64,19 @@ class ObjectifController extends Controller
 		$objectif = request('objectif');
 		$annee = date('Y');
 		DB::table($table)->updateOrInsert(['annee'=>$annee, $field=>$value],['objectif'=>$objectif]);
-		/*$ligne = Obtobclient::where('annee',date('Y'))->where('tobclient_id',request('tobclient_id'))->first();
-		if($ligne){
-			$ligne->objectif = request('objectif');
-			$ligne->save();
-		}else{
-			$ligne = Obtobclient::create(['annee'=>date('Y'),'tobclient_id'=>request('tobclient_id'),'objectif'=>request('objectif')]);
 
-		}*/
+		return response()->json('ok');
+	}
+
+	public function saveTreso(){
+		//$field = request('field');
+		//$table = request('table');
+		$value = request('val');
+		$objectif = request('objectif');
+		$moi_id = request('moi_id');
+		$annee = date('Y');
+		DB::table('obtobtresoreries')->updateOrInsert(['annee'=>$annee, 'tobtresorerie_id'=>$value,'moi_id'=>$moi_id],['objectif'=>$objectif]);
+
 		return response()->json('ok');
 	}
 }
