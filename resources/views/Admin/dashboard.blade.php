@@ -94,6 +94,42 @@
             </div>
         </div>
 
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title">AGENTS</h6>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>OBJECTIF</th>
+                                <th>REALISATION</th>
+                                <th>ECART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           @php
+                              $i=0;
+                           @endphp
+                           @foreach($tob_agents as $ta)
+                                @php
+                                    $obj = $obj_agents->firstWhere('tobagent_id',$ta->id);
+                                @endphp
+                                <tr>
+                                    <td>{{ $ta->name }}</td>
+                                    <td>{{ $data[$i++] }}</td>
+                                </tr>
+
+                           @endforeach
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </div>
