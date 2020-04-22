@@ -82,7 +82,7 @@
                                @endphp
                                <tr>
                                    <td>{{ $frn->name }}</td>
-                                   <td>{{ $ob = $bj?$obj->objectif:0 }}</td>
+                                   <td>{{ $ob = $obj?$obj->objectif:0 }}</td>
                                    <td>{{ $nb = $frn->partenaires->count() }}</td>
                                    <td>{{ $nb - $ob }} </td>
                                </tr>
