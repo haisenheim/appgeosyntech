@@ -155,6 +155,7 @@
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/admin/objectifs/">ACTIVITE</a></li>
                                     <li><a href="/admin/objectifs/finances">FINANCES</a></li>
+                                    <li><a href="/admin/objectifs/treso">TRESORERIE</a></li>
 
                                 </ul>
                             </li>

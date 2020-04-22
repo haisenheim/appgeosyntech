@@ -3,16 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Client;
+use App\Models\Moi;
 use App\Models\Objectifs\Obdelaiclient;
 use App\Models\Objectifs\Obtobagent;
 use App\Models\Objectifs\Obtobbilan;
 use App\Models\Objectifs\Obtobclient;
 use App\Models\Objectifs\Obtobresult;
+use App\Models\Objectifs\Obtobtresorerie;
 use App\Models\Objectifs\Obtpartenaire;
 use App\Models\Objectifs\Tobagent;
 use App\Models\Objectifs\Tobbilan;
 use App\Models\Objectifs\Tobclient;
 use App\Models\Objectifs\Tobresult;
+use App\Models\Objectifs\Tobtresorerie;
 use App\Models\Tpartenaire;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -44,6 +47,14 @@ class ObjectifController extends Controller
 		$clients = Client::all()->where('active',true);
 
 		return view('Admin/Objectifs/finances')->with(compact('obj_results','tobresults','obj_bilans','tobbilans','obj_delaiclients','clients'));
+	}
+
+	public function treso(){
+		$obj_tresos = Obtobtresorerie::all()->where('annee',date('Y'));
+		$tobtresos = Tobtresorerie::all();
+		$mois = Moi::all();
+
+		return view('Admin/Objectifs/treso')->with(compact('obj_tresos','tobtresos','mois'));
 	}
 
 	public function save(){

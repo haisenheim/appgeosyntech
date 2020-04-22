@@ -90,8 +90,9 @@ Route::prefix('admin')
 		Route::get('objectifs/','ObjectifController@index');
 
 	    Route::get('objectifs/finances','ObjectifController@finances');
+	    Route::get('objectifs/treso','ObjectifController@treso');
 	    Route::get('objectifs/save','ObjectifController@save');
-	    Route::get('objectifs/save-finances','ObjectifController@saveFinances');
+	    Route::get('objectifs/save-treso','ObjectifController@saveTreso');
 
 
 	    //Mode Maintenance
