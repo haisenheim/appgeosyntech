@@ -23,6 +23,31 @@
 
     <div class="">
          <div class="row">
+
+            <div class="col-6">
+
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">OBJECTIFS - DELAIS DE PAIEMENT CLIENTS</h4>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                   <table class="table table-striped table-hover table-bordered">
+                        <tbody>
+                            @foreach($clients as $type)
+                                <?php $obj = $obj_delaiclients->firstWhere('client_id',$type->id); ?>
+                                <tr>
+                                 <td>{{ $type->name }}</td>
+                                 <td class="td-value" data-val="{{ $type->id }}" data-field="client_id" data-table="obdelaiclients" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                   </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+            </div>
+
             <div class="col-6">
               <div class="card">
                 <div class="card-header">

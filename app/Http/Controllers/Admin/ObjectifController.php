@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Client;
+use App\Models\Objectifs\Obdelaiclient;
 use App\Models\Objectifs\Obtobagent;
 use App\Models\Objectifs\Obtobbilan;
 use App\Models\Objectifs\Obtobclient;
@@ -38,7 +40,10 @@ class ObjectifController extends Controller
 		$obj_bilans = Obtobbilan::all()->where('annee',date('Y'));
 		$tobbilans = Tobbilan::all();
 
-		return view('Admin/Objectifs/finances')->with(compact('obj_results','tobresults','obj_bilans','tobbilans'));
+		$obj_delaiclients = Obdelaiclient::all()->where('annee',date('Y'));
+		$clients = Client::all()->where('active',true);
+
+		return view('Admin/Objectifs/finances')->with(compact('obj_results','tobresults','obj_bilans','tobbilans','obj_delaiclients','clients'));
 	}
 
 	public function save(){
