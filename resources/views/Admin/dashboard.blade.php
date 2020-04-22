@@ -119,7 +119,9 @@
                                 @endphp
                                 <tr>
                                     <td>{{ $ta->name }}</td>
-                                    <td>{{ $data[$i++] }}</td>
+                                    <td>{{ $ob = $obj?$obj->objectif:0 }}</td>
+                                    <td>{{ $d = $data[$i++] }}</td>
+                                    <td>{{ $d - $ob }}</td>
                                 </tr>
 
                            @endforeach
