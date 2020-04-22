@@ -32,7 +32,7 @@ class DashboardController extends Controller
 			return $value->contract?($value->contract->tcontract_id == 1):false;
 		})->count();
 		$nb_cdi = $agents->filter(function($value, $key){
-			return $value->contract?($value->contract->tcontract_id == 2):false;
+			return $value->contract?true:false;
 		})->count();
 		$nb_cdp = $agents->filter(function($value, $key){
 			return $value->contract?($value->contract->tcontract_id == 3):false;
