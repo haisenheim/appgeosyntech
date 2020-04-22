@@ -77,10 +77,12 @@
                         </thead>
                         <tbody>
                            @foreach($frns as $frn)
-
+                               @php
+                                $obj = $obj_frns->firstWhere('tpartenaire_id',$frn->id);
+                               @endphp
                                <tr>
                                    <td>{{ $frn->name }}</td>
-                                   <td>{{ $ob = $obj_frns->firstWhere('tpartenaire_id',$frn->id)->objectif }}</td>
+                                   <td>{{ $ob = $bj?$obj->objectif:0 }}</td>
                                    <td>{{ $nb = $frn->partenaires->count() }}</td>
                                    <td>{{ $nb - $ob }} </td>
                                </tr>
