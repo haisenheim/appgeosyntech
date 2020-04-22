@@ -41,7 +41,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th>{{ $nname = $obj_clients->firstWhere('id',1)->tobclient->name }}</th>
+                                <th>{{ $nname = $obj_clients->firstWhere('id',1)->type->name }}</th>
                                 <th>{{ $ob = $obj_clients->firstWhere('id',1)->objectif }}</th>
                                 <th>{{ $nb_clients }}</th>
                                 <th>{{ $nb_clients - $ob }}</th>
