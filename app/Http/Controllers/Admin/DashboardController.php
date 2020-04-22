@@ -29,13 +29,13 @@ class DashboardController extends Controller
 		$agents = User::all()->where('role_id',8)->where('active',true);
 		$nb_agents = $agents->count();
 		$nb_cdd = $agents->filter(function($value, $key){
-			return $value->contract?($value->contract->tcontract_id == 1):false;
+			return $value->contract?($value->contract->tcontrat_id == 1):false;
 		})->count();
 		$nb_cdi = $agents->filter(function($value, $key){
-			return $value->contract?true:false;
+			return $value->contract?($value->contrat->tcontract_id == 2):false;
 		})->count();
 		$nb_cdp = $agents->filter(function($value, $key){
-			return $value->contract?($value->contract->tcontract_id == 3):false;
+			return $value->contract?($value->contract->tcontrat_id == 3):false;
 		})->count();
 		$data = [0=>$nb_agents, 1=>0, 2=>$nb_cdd, 3=>$nb_cdi, 4=>$nb_cdp];
 		return view('/Admin/dashboard')->with(compact('obj_clients','frns','obj_frns','nb_agents','nb_clients','obj_agents','tob_agents','data'));
