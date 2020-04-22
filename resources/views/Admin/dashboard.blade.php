@@ -46,12 +46,52 @@
                                 <th>{{ $nb_clients }}</th>
                                 <th>{{ $nb_clients - $ob }}</th>
                             </tr>
+                            <tr>
+                                <th>{{ $nname = $obj_clients->firstWhere('id',2)->type->name }}</th>
+                                <th>{{ $ob = $obj_clients->firstWhere('id',2)->objectif }}</th>
+                                <th>{{ 0 }}</th>
+                                <th>{{ - $ob }}</th>
+                            </tr>
                         </tbody>
 
                     </table>
                 </div>
             </div>
         </div>
+
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title">FOURNISSEURS</h6>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>OBJECTIF</th>
+                                <th>REALISATION</th>
+                                <th>ECART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           @foreach($frns as $frn)
+
+                               <tr>
+                                   <td>{{ $frn->name }}</td>
+                                   <td>{{ $ob = $obj_frns->firstWhere('tpartenaire_id',$frn->id)->objectif }}</td>
+                                   <td>{{ $nb = $frn->partenaires->count() }}</td>
+                                   <td>{{ $nb - $ob }} </td>
+                               </tr>
+                           @endforeach
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </div>

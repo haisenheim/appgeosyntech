@@ -12,7 +12,9 @@ class Tpartenaire extends Model
 	protected $guarded = [];
 	public $timestamps = false;
 
-
+	public function partenaires(){
+		return $this->hasMany('App\Models\Partenaire');
+	}
 
 
 }
