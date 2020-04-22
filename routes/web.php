@@ -88,13 +88,10 @@ Route::prefix('admin')
     ->group(function(){
 		// Objectifs de performance
 		Route::get('objectifs/','ObjectifController@index');
-	    Route::get('objectifs/partenaires','ObjectifController@partenaires');
-	    Route::get('objectifs/agents','ObjectifController@agents');
-	    Route::get('objectifs/delais-clients','ObjectifController@delaisClients');
-	    Route::get('objectifs/result','ObjectifController@result');
-	    Route::get('objectifs/bilan','ObjectifController@bilan');
-	    Route::get('objectifs/tresorerie','ObjectifController@tresorerie');
+
+	    Route::get('objectifs/finances','ObjectifController@finances');
 	    Route::get('objectifs/save','ObjectifController@save');
+	    Route::get('objectifs/save-finances','ObjectifController@saveFinances');
 
 
 	    //Mode Maintenance

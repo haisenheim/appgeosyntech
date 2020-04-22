@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 class="mb-0 font-size-18">OBJECTIFS DE PERFORMANCE CLIENTS</h4>
+                <h4 class="mb-0 font-size-18">OBJECTIFS DE PERFORMANCE FINANCES</h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
@@ -26,17 +26,17 @@
             <div class="col-6">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">OBJECTIFS CLIENTS</h3>
+                  <h4 class="card-title">OBJECTIFS PERFOMANCE FINANCIERE</h4>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                    <table class="table table-striped table-hover table-bordered">
                         <tbody>
-                            @foreach($tobclients as $type)
-                                <?php $obj = $obj_clients->firstWhere('tobclient_id',$type->id); ?>
+                            @foreach($tobresults as $type)
+                                <?php $obj = $obj_results->firstWhere('tobresult_id',$type->id); ?>
                                 <tr>
                                  <td>{{ $type->name }}</td>
-                                 <td class="td-value" data-val="{{ $type->id }}" data-field="tobclient_id" data-table="obtobclients" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
+                                 <td class="td-value" data-val="{{ $type->id }}" data-field="tobresult_id" data-table="obtobresults" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -49,17 +49,17 @@
 
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">OBJECTIFS AGENTS</h4>
+                  <h4 class="card-title">OBJECTIFS SANTE FINANCIERE</h4>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                    <table class="table table-striped table-hover table-bordered">
                         <tbody>
-                            @foreach($tobagents as $type)
-                                <?php $obj = $obj_agents->firstWhere('tobagent_id',$type->id); ?>
+                            @foreach($tobbilans as $type)
+                                <?php $obj = $obj_bilans->firstWhere('tobbilan_id',$type->id); ?>
                                 <tr>
                                  <td>{{ $type->name }}</td>
-                                 <td class="td-value" data-val="{{ $type->id }}" data-field="tobagent_id" data-table="obtobagents" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
+                                 <td class="td-value" data-val="{{ $type->id }}" data-field="tobbilan_id" data-table="obtobbilans" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -68,29 +68,7 @@
                 <!-- /.card-body -->
               </div>
             </div>
-            <div class="col-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">OBJECTIFS FOURNISSEURS</h4>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body">
-                   <table class="table table-striped table-hover table-bordered">
-                        <tbody>
-                            @foreach($tpartenaires as $type)
-                                <?php $obj = $obj_partenaires->firstWhere('tpartenaire_id',$type->id); ?>
-                                <tr>
-                                 <td>{{ $type->name }}</td>
-                                 <td class="td-value" data-val="{{ $type->id }}" data-field="tpartenaire_id" data-table="obtpartenaires" contenteditable="true">{{ $obj?$obj->objectif:0 }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                   </table>
-                </div>
-                <!-- /.card-body -->
-              </div>
 
-            </div>
 
             <!-- /.col -->
           </div>
