@@ -47,7 +47,7 @@
                                 <td>{{ $type->name }}</td>
 
                                 @php
-                                    $objs = $obj_tresos->where('client_id',$type->id)->all();
+                                    $objs = $obj_tresos->where('client_id',$type->id);
                                 @endphp
                                 @foreach($mois as $m)
                                       @php
