@@ -134,6 +134,45 @@
 
     </div>
 
+    <h5 style="border-bottom: 1px solid #222; padding-bottom: 20px">FINANCES</h5>
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title">DELAIS DE PAIEMENT CLIENT</h6>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bodered table-striped table-hover datatable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>OBJECTIF</th>
+                                <th>REALISATION</th>
+                                <th>ECART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($clients as $client)
+                                @php
+                                    $obj = $obj_delaiclients->firstWhere('client_id',$client->id);
+                                    $delai = $client->factures->where('annee',date('Y'))->reduce(function($carry, $item){
+                                        return $carry + $item->delai?$item->dalai->nombre:0;
+                                    });
+                                @endphp
+                                <tr>
+                                    <td>{{ $client->name }}</td>
+                                    <td>{{ $ob =$obj?$obj->objectif:0 }}</td>
+                                    <td>{{ $delai }}</td>
+                                    <td>{{ $delai - $ob }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 @endsection
