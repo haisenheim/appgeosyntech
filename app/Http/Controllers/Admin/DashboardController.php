@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Client;
+use App\Models\Depense;
 use App\Models\Objectifs\Obdelaiclient;
 use App\Models\Objectifs\Obtobagent;
 use App\Models\Objectifs\Obtobclient;
+use App\Models\Objectifs\Obtobresult;
 use App\Models\Objectifs\Obtpartenaire;
 use App\Models\Objectifs\Tobagent;
+use App\Models\Objectifs\Tobresult;
+use App\Models\Paiement;
 use App\Models\Secteur;
 use App\Models\Tpartenaire;
 use App\User;
@@ -43,6 +47,42 @@ class DashboardController extends Controller
 		$obj_delaiclients = Obdelaiclient::all()->where('annee',date('Y'));
 		$clients = Client::all();
 
-		return view('/Admin/dashboard')->with(compact('obj_clients','frns','obj_frns','nb_agents','nb_clients','obj_agents','tob_agents','data','clients','obj_delaiclients'));
+		$obj_results = Obtobresult::all()->where('annee',date('Y'));
+		$tobresults = Tobresult::all();
+		$results = $this->getResult();
+
+		return view('/Admin/dashboard')->with(compact('obj_clients','frns','obj_frns','nb_agents','nb_clients','obj_agents','tob_agents','data','clients','obj_delaiclients'))
+			->with(compact('obj_results','results','tobresults'));
 	}
+
+	private function getResult(){
+
+			$paiements = Paiement::all()->where('annee',date('Y'))->sortByDesc('created_at');
+			$depenses = Depense::all()->where('annee',date('Y'))->sortByDesc('created_at');
+
+
+		$ca = 0;
+		foreach($paiements as $paiement){
+			$ca = $ca + $paiement->montant;
+		}
+
+		$cv = 0;
+		$salaires = 0;
+		$cf = 0;
+		foreach($depenses as $depense){
+			if($depense->bulletin_id){
+				$cv = $cv + $depense->montant;
+			}else{
+				if($depense->tdepense->variable){
+					$cv = $cv + $depense->montant;
+				}else{
+					$cf = $cf + $depense->montant;
+				}
+			}
+		}
+
+		return [1=>$ca, 2=>$cv, 3=>$cf];
+	}
+
+
 }

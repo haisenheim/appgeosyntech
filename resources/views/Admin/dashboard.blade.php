@@ -134,7 +134,7 @@
 
     </div>
 
-    <h5 style="border-bottom: 1px solid #222; padding-bottom: 20px">FINANCES</h5>
+    <h5 style="border-bottom: 1px solid #222; padding-bottom: 10px; margin-bottom: 20px">FINANCES</h5>
     <div class="row">
         <div class="col-6">
             <div class="card">
@@ -168,6 +168,39 @@
                                     <td>{{ $ob =$obj?$obj->objectif:0 }}</td>
                                     <td>{{ $delai }}</td>
                                     <td>{{ $delai - $ob }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title">PERFORMANCE FINANCIERE</h6>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bodered table-striped table-hover datatable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>OBJECTIF</th>
+                                <th>REALISATION</th>
+                                <th>ECART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($tobresults as $type)
+                                @php
+                                    $obj = $obj_results->firstWhere('tobresult_id',$type->id);
+
+                                @endphp
+                                <tr>
+                                    <td>{{ $type->name }}</td>
+                                    <td>{{ $ob =$obj?$obj->objectif:0 }}</td>
+                                    <td>{{ $rs= $results[$type->id] }}</td>
+                                    <td>{{ $rs - $ob }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

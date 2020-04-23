@@ -33,7 +33,7 @@ class EtatController extends Controller
 
 	    $ca = 0;
 	    foreach($paiements as $paiement){
-		    $ca = $paiement->montant;
+		    $ca = $ca + $paiement->montant;
 	    }
 
 	    $cv = 0;
