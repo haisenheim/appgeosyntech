@@ -156,7 +156,10 @@
                                 @php
                                     $obj = $obj_delaiclients->firstWhere('client_id',$client->id);
                                     $delai = $client->factures->where('annee',date('Y'))->reduce(function($carry, $item){
-                                        $val = $item->delai?$item->dalai->nombre:0;
+                                        $val = 0;
+                                        if($item->delai){
+                                            $val = $item->delai->nombre;
+                                        }
                                         return $carry + $val ;
                                     });
                                 @endphp
