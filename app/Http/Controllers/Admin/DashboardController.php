@@ -90,18 +90,21 @@ class DashboardController extends Controller
 
 
 		$obj1 = Obtobresult::where('annee',date('Y'))->where('tobresult_id',1)->first();
+		$obj1 = $obj1?$obj1->objectif:0;
 		$obj2 = Obtobresult::where('annee',date('Y'))->where('tobresult_id',2)->first();
+		$obj2 = $obj2?$obj2->objectif:0;
 		$obj3 = Obtobresult::where('annee',date('Y'))->where('tobresult_id',3)->first();
+		$obj3 = $obj3?$obj3->objectif:0;
 		$t1 = Tobresult::find(1);
 		$t2 = Tobresult::find(2);
 		$t3 = Tobresult::find(3);
 
 		$data = [
-			1=>['name'=>$t1->name,'objectif'=>$obj1->objectif,'realisation'=>$ca,'ecart'=>$ca-$obj1->objectif],
-			2=>['name'=>$t2->name,'objectif'=>$obj2->objectif,'realisation'=>$cv,'ecart'=>$cv-$obj2->objectif],
-			3=>['name'=>"MARGE BRUTE",'objectif'=>$obj1->objectif-$obj2->objectif,'realisation'=>$ca-$cv,'ecart'=>($ca-$obj1->objectif)-($cv-$obj2->objectif)],
-			4=>['name'=>$t3->name,'objectif'=>$obj3->objectif,'realisation'=>$cf,'ecart'=>$cf-$obj3->objectif],
-			5=>['name'=>"VALEUR AJOUTEE",'objectif'=>$obj1->objectif-$obj2->objectif-$obj3->objectif,'realisation'=>$ca-$cv-$cf,'ecart'=>($ca-$obj1->objectif)-($cv-$obj2->objectif)-($cf-$obj3->objectif)],
+			1=>['name'=>$t1->name,'objectif'=>$obj1,'realisation'=>$ca,'ecart'=>$ca-$obj1],
+			2=>['name'=>$t2->name,'objectif'=>$obj2,'realisation'=>$cv,'ecart'=>$cv-$obj2],
+			3=>['name'=>"MARGE BRUTE",'objectif'=>$obj1-$obj2,'realisation'=>$ca-$cv,'ecart'=>($ca-$obj1)-($cv-$obj2)],
+			4=>['name'=>$t3->name,'objectif'=>$obj3,'realisation'=>$cf,'ecart'=>$cf-$obj3],
+			5=>['name'=>"VALEUR AJOUTEE",'objectif'=>$obj1-$obj2-$obj3,'realisation'=>$ca-$cv-$cf,'ecart'=>($ca-$obj1)-($cv-$obj2)-($cf-$obj3)],
 
 			];
 
