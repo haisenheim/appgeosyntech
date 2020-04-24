@@ -191,17 +191,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($tobresults as $type)
-                                @php
-                                    $obj = $obj_results->firstWhere('tobresult_id',$type->id);
 
-                                @endphp
+                            @foreach($results as $rst)
+
                                 <tr>
-                                    <td>{{ $type->name }}</td>
-                                    <td>{{ $ob =$obj?$obj->objectif:0 }}</td>
-                                    <td>{{ $rs= $results[$type->id] }}</td>
-                                    <td>{{ $rs - $ob }}</td>
+                                    <td>{{ $rst['name'] }}</td>
+                                    <td>{{ $rst['objectif'] }}</td>
+                                    <td>{{ $rst['realisation'] }}</td>
+                                    <td>{{ $rst['ecart'] }}</td>
                                 </tr>
+
                             @endforeach
                         </tbody>
                     </table>

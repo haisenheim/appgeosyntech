@@ -43,10 +43,17 @@ class EtatController extends Controller
 		    if($depense->bulletin_id){
 			    $cv = $cv + $depense->montant;
 		    }else{
-			    if($depense->tdepense->variable){
+			    if($depense->bill_id){
 				    $cv = $cv + $depense->montant;
-			    }else{
-				    $cf = $cf + $depense->montant;
+			    }
+
+			    else{
+				    if($depense->tdepense->variable){
+					    $cv = $cv + $depense->montant;
+				    }else{
+					    $cf = $cf + $depense->montant;
+				    }
+
 			    }
 		    }
 	    }

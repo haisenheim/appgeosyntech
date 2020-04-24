@@ -47,12 +47,11 @@ class DashboardController extends Controller
 		$obj_delaiclients = Obdelaiclient::all()->where('annee',date('Y'));
 		$clients = Client::all();
 
-		$obj_results = Obtobresult::all()->where('annee',date('Y'));
-		$tobresults = Tobresult::all();
+
 		$results = $this->getResult();
 
 		return view('/Admin/dashboard')->with(compact('obj_clients','frns','obj_frns','nb_agents','nb_clients','obj_agents','tob_agents','data','clients','obj_delaiclients'))
-			->with(compact('obj_results','results','tobresults'));
+			->with(compact('results'));
 	}
 
 	private function getResult(){
@@ -67,7 +66,7 @@ class DashboardController extends Controller
 		}
 
 		$cv = 0;
-		$salaires = 0;
+
 		$cf = 0;
 		foreach($depenses as $depense){
 			if($depense->bulletin_id){
@@ -88,7 +87,25 @@ class DashboardController extends Controller
 			}
 		}
 
-		return [1=>$ca, 2=>$cv, 3=>$cf];
+
+
+		$obj1 = Obtobresult::where('annee',date('Y'))->where('tobresult_id',1)->first();
+		$obj2 = Obtobresult::where('annee',date('Y'))->where('tobresult_id',2)->first();
+		$obj3 = Obtobresult::where('annee',date('Y'))->where('tobresult_id',3)->first();
+		$t1 = Tobresult::find(1);
+		$t2 = Tobresult::find(2);
+		$t3 = Tobresult::find(3);
+
+		$data = [
+			1=>['name'=>$t1->name,'objectif'=>$obj1->objectif,'realisation'=>$ca,'ecart'=>$ca-$obj1->objectif],
+			2=>['name'=>$t2->name,'objectif'=>$obj2->objectif,'realisation'=>$cv,'ecart'=>$cv-$obj2->objectif],
+			3=>['name'=>"MARGE BRUTE",'objectif'=>$obj1->objectif-$obj2->objectif,'realisation'=>$ca-$cv,'ecart'=>($ca-$obj1->objectif)-($cv-$obj2->objectif)],
+			4=>['name'=>$t3->name,'objectif'=>$obj3->objectif,'realisation'=>$cf,'ecart'=>$cf-$obj3->objectif],
+			5=>['name'=>"VALEUR AJOUTEE",'objectif'=>$obj1->objectif-$obj2->objectif-$obj3->objectif,'realisation'=>$ca-$cv-$cf,'ecart'=>($ca-$obj1->objectif)-($cv-$obj2->objectif)-($cf-$obj3->objectif)],
+
+			];
+
+		return $data;
 	}
 
 
