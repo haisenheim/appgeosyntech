@@ -210,12 +210,12 @@
     </div>
     <h5 style="border-bottom: 1px solid #222; padding-bottom: 10px; margin-bottom: 20px">TRESORERIE</h5>
     <div class="row">
-        <div class="col-10">
+        <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     <h6 class="card-title">FLUX MENSUELS DE TRESORERIE</h6>
                 </div>
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <?php
                         $enc = $treso[1];
                         $dec = $treso[2];
@@ -249,6 +249,29 @@
                                 <td>ECART</td>
                                 @foreach($mois as $m)
                                  <td><?= $enc[$m->id][3] ?></td>
+                                @endforeach
+                            </tr>
+
+
+                            <tr>
+                                <th rowspan="4">DECAISSEMENTS</th>
+                            </tr>
+                            <tr>
+                                <td>OBJECTIF</td>
+                                @foreach($mois as $m)
+                                 <td><?= $dec[$m->id][1] ?></td>
+                                @endforeach
+                            </tr>
+                            <tr>
+                                <td>REALISATION</td>
+                                @foreach($mois as $m)
+                                 <td><?= $dec[$m->id][2] ?></td>
+                                @endforeach
+                            </tr>
+                            <tr>
+                                <td>ECART</td>
+                                @foreach($mois as $m)
+                                 <td><?= $dec[$m->id][3] ?></td>
                                 @endforeach
                             </tr>
                         </tbody>
