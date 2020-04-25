@@ -208,6 +208,55 @@
             </div>
         </div>
     </div>
+    <h5 style="border-bottom: 1px solid #222; padding-bottom: 10px; margin-bottom: 20px">TRESORERIE</h5>
+    <div class="row">
+        <div class="col-10">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title">FLUX MENSUELS DE TRESORERIE</h6>
+                </div>
+                <div class="card-body">
+                    <?php
+                        $enc = $treso[1];
+                        $dec = $treso[2];
+                    ?>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="2"></th>
+                                @foreach($mois as $m)
+                                 <th>{{ $m->name }}</th>
+                                @endforeach
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="4">ENCAISSEMENTS</th>
+                            </tr>
+                            <tr>
+                                <td>OBJECTIF</td>
+                                @foreach($mois as $m)
+                                 <td><?= $enc[$m->id][1] ?></td>
+                                @endforeach
+                            </tr>
+                            <tr>
+                                <td>REALISATION</td>
+                                @foreach($mois as $m)
+                                 <td><?= $enc[$m->id][2] ?></td>
+                                @endforeach
+                            </tr>
+                            <tr>
+                                <td>ECART</td>
+                                @foreach($mois as $m)
+                                 <td><?= $enc[$m->id][3] ?></td>
+                                @endforeach
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 

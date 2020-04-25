@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Client;
 use App\Models\Depense;
+use App\Models\Moi;
 use App\Models\Objectifs\Obdelaiclient;
 use App\Models\Objectifs\Obtobagent;
 use App\Models\Objectifs\Obtobclient;
 use App\Models\Objectifs\Obtobresult;
+use App\Models\Objectifs\Obtobtresorerie;
 use App\Models\Objectifs\Obtpartenaire;
 use App\Models\Objectifs\Tobagent;
 use App\Models\Objectifs\Tobresult;
@@ -49,9 +51,11 @@ class DashboardController extends Controller
 
 
 		$results = $this->getResult();
+		$mois = Moi::all();
+		$treso = $this->getTreso();
 
 		return view('/Admin/dashboard')->with(compact('obj_clients','frns','obj_frns','nb_agents','nb_clients','obj_agents','tob_agents','data','clients','obj_delaiclients'))
-			->with(compact('results'));
+			->with(compact('results','mois','treso'));
 	}
 
 	private function getResult(){
@@ -109,6 +113,38 @@ class DashboardController extends Controller
 			];
 
 		return $data;
+	}
+
+
+	private function getTreso(){
+		$encaissements = Paiement::all();
+		$decaissements = Depense::all();
+		$mois = Moi::all();
+		$data = [];
+		$data2 = [];
+		foreach($mois as $m){
+			$encais = $encaissements->where('moi_id',$m->id);
+			$obj = Obtobtresorerie::where('annee',date('Y'))->where('moi_id',$m->id)->where('tobtresorerie_id',1)->first();
+			$ob = $obj?$obj->objectif:0;
+			$somme = $encais->reduce(function($carry, $item){
+
+				return $carry + $item->montant;
+			});
+		$data[$m->id] = [1=>$ob,2=>$somme,3=>$somme-$ob];
+		}
+
+		foreach($mois as $m){
+			$decais = $decaissements->where('moi_id',$m->id);
+			$obj = Obtobtresorerie::where('annee',date('Y'))->where('moi_id',$m->id)->where('tobtresorerie_id',2)->first();
+			$ob = $obj?$obj->objectif:0;
+			$somme = $decais->reduce(function($carry, $item){
+
+				return $carry + $item->montant;
+			});
+			$data2[$m->id] = [1=>$ob,2=>$somme,3=>$somme-$ob];
+		}
+
+		return [1=>$data,2=>$data2];
 	}
 
 
