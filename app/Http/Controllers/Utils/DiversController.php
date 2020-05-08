@@ -10,10 +10,15 @@ use App\Models\Comment;
 use App\Models\Devise;
 use App\Models\Earlie;
 use App\Models\Flettre;
+use App\Models\Forder;
+use App\Models\Frncotation;
 use App\Models\Investissement;
 use App\Models\Lettre;
+use App\Models\Livraison;
+use App\Models\Proforma;
 use App\Models\Projet;
 use App\Models\TagsProjet;
+use App\Models\Transcotation;
 use App\Models\Ville;
 use App\User;
 use Illuminate\Http\Request;
@@ -119,13 +124,7 @@ class DiversController extends Controller
     }
 
 
-	public function printEarlie($token){
-		$dossier = Earlie::where('token',$token)->first();
 
-		$data =['dossier'=>$dossier];
-		$pdf = PDF::loadView('Utils/Dossiers/printit',$data);
-		return $pdf->stream($dossier->name.'.pdf');
-	}
 
 	public function printProjet($token){
 		$dossier = Projet::where('token',$token)->first();
@@ -133,6 +132,46 @@ class DiversController extends Controller
 		$data =['dossier'=>$dossier];
 		$pdf = PDF::loadView('Utils/Dossiers/printit',$data);
 		return $pdf->stream($dossier->name.'.pdf');
+	}
+
+	public function printTranscotation($token){
+		//dd(phpinfo());
+		$projet = Transcotation::where('token',$token)->first();
+		$data =['projet'=>$projet];
+		$pdf = PDF::loadView('Utils/print_transcotation',$data);
+		return $pdf->stream($projet->transitaire->sigle.'.pdf');
+	}
+
+	public function printFrncotation($token){
+		//dd(phpinfo());
+		$projet = Frncotation::where('token',$token)->first();
+		$data =['projet'=>$projet];
+		$pdf = PDF::loadView('Utils/print_frncotation',$data);
+		return $pdf->stream($projet->fournisseur->sigle.'.pdf');
+	}
+
+	public function printProforma($token){
+		//dd(phpinfo());
+		$projet = Proforma::where('token',$token)->first();
+		$data =['projet'=>$projet];
+		$pdf = PDF::loadView('Utils/print_proforma',$data);
+		return $pdf->stream($projet->client->sigle.$projet->name.'.pdf');
+	}
+
+	public function printForder($token){
+		//dd(phpinfo());
+		$projet = Forder::where('token',$token)->first();
+		$data =['projet'=>$projet];
+		$pdf = PDF::loadView('Utils/print_forder',$data);
+		return $pdf->stream($projet->fournisseur->sigle.$projet->name.'.pdf');
+	}
+
+	public function printLivraison($token){
+		//dd(phpinfo());
+		$projet = Livraison::where('token',$token)->first();
+		$data =['projet'=>$projet];
+		$pdf = PDF::loadView('Utils/print_livraison',$data);
+		return $pdf->stream('BL_'.$projet->client->sigle.$projet->name.'.pdf');
 	}
 
 

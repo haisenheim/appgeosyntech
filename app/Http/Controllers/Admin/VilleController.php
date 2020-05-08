@@ -30,7 +30,7 @@ class VilleController extends Controller
        // dd($villes);
        // echo "Bonjour tout le monde!!";
        // $request->session()->flash('message','Liste des villes!!!');
-        return view('Admin/Villes/index')->with(compact('villes','pays'))->with('success','Liste des villes');
+        return view('Admin/Villes/index')->with(compact('villes','pays'));
 
     }
 
@@ -59,26 +59,7 @@ class VilleController extends Controller
         $ville = new Ville();
         $ville->name = $request['name'];
         $ville->pay_id = $request['pay_id'];
-	    $ville->longitude = $request['longitude'];
-	    $ville->latitude = $request['latitude'];
-	    if($request->imageUri){
-		    $file = $request->imageUri;
-		    $ext = $file->getClientOriginalExtension();
-		    $arr_ext = array('jpg','png','jpeg','gif');
-		    if(in_array($ext,$arr_ext)) {
-			    if (!file_exists(public_path('img') . '/villes')) {
-				    mkdir(public_path('img') . '/villes');
-			    }
-			    $token = sha1(date('ydmhis'));
-			    if (file_exists(public_path('img') . '/villes/' . $token . '.' . $ext)) {
-				    unlink(public_path('img') . '/villes/' . $token . '.' . $ext);
-			    }
-			    $name = $token . '.' . $ext;
-			    $file->move(public_path('img/villes'), $name);
-			    $ville->imageUri = 'villes/' . $name;
-		    }
 
-	    }
 
         $ville->save();
 	    $request->session()->flash('success','La ville a été correctement enregistrée !!!');

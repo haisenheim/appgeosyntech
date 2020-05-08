@@ -13,6 +13,8 @@ class Category extends Model
 	public $timestamps = false;
 
 
-
+	public function produits(){
+		return $this->hasMany('App\Models\Produit');
+	}
 
 }

@@ -1,6 +1,6 @@
 @include('includes.header')
 
-    <body data-sidebar="dark">
+    <body data-sidebar="light">
 
         <!-- Begin page -->
         <div id="layout-wrapper">
@@ -12,10 +12,10 @@
                         <div class="navbar-brand-box">
                             <a href="#" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('assets/images/logo.png') }}" alt="" height="22">
+                                    <img src="{{ asset('img/logo.png') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="20">
+                                    <img src="{{ asset('img/logo-name.png') }}" alt="" height="40">
                                 </span>
                             </a>
                         </div>
@@ -27,7 +27,7 @@
                         <!-- App Search-->
                         <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Search...">
+                                <input type="text" class="form-control" placeholder="Rechercher...">
                                 <span class="mdi mdi-magnify"></span>
                             </div>
                         </form>
@@ -69,7 +69,7 @@
                             <div class="dropdown-menu dropdown-menu-right">
                                 <!-- item-->
                                 <a class="dropdown-item" href="#"><i class="mdi mdi-face-profile font-size-16 align-middle mr-1"></i> Mon Profil</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-credit-card-outline font-size-16 align-middle mr-1"></i> Contacter l'administrateur</a>
+
                                 <a class="dropdown-item" href="/locked"><i class="mdi mdi-lock font-size-16 align-middle mr-1"></i>Verrouiller l'ecran</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/logout"><i class="mdi mdi-logout font-size-16 align-middle mr-1"></i> Se deconnecter</a>
@@ -101,26 +101,15 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-file-account-outline"></i>
-                                    <span>RESSOURCES HUM.</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="/admin/agents">AGENTS</a></li>
-                                    <li><a href="/admin/fiches">FICHES DE POINTAGE</a></li>
-                                    <li><a href="/admin/salaires">SALAIRES</a></li>
-
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="mdi mdi-account-switch"></i>
                                     <span>REL. CLIENT</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/admin/projets">PROJETS</a></li>
                                     <li><a href="/admin/clients">CLIENTS</a></li>
-                                    <li><a href="/admin/factures">FACTURES</a></li>
-                                    <li><a href="/admin/commandes">COMMANDES</a></li>
+                                    <li><a href="#">FACTURES</a></li>
+                                    <li><a href="#">COMMANDES</a></li>
+                                    <li><a href="/admin/tclients">TYPES CLIENT</a></li>
 
                                 </ul>
                             </li>
@@ -128,13 +117,28 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="mdi mdi-animation"></i>
-                                    <span>STOCK</span>
+                                    <span>APPROVISIONNEM.</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="/admin/articles">ARTICLES</a></li>
-                                    <li><a href="/admin/approvisionnements">ENTREES</a></li>
-                                    <li><a href="/admin/sorties">SORTIES</a></li>
+                                     <li><a href="/admin/forders">BONS DE COMMANDE</a></li>
+                                     <li><a href="/admin/livraisons">BONS DE LIVRAISON</a></li>
+                                    <li><a href="/admin/articles">CATALOGUE</a></li>
+                                     <li><a href="/admin/fournisseurs">FOURNISSEURS</a></li>
+                                    <li><a href="/admin/tproduits">TYPES PRODUIT</a></li>
+                                    <li><a href="/admin/categories">CATEGORIES PRODUIT</a></li>
 
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="mdi mdi-animation"></i>
+                                    <span>COTATIONS</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/admin/proformas">PROFORMAS</a></li>
+                                    <li><a href="/admin/transcotations">TRANSITAIRES</a></li>
+                                     <li><a href="/admin/frncotations">FOURNISSEURS</a></li>
                                 </ul>
                             </li>
 
@@ -168,9 +172,10 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="/admin/secteurs">SECTEURS</a></li>
-                                    <li><a href="/admin/competences">COMPETENCES</a></li>
-                                    <li><a href="/admin/postes">POSTES</a></li>
-                                    <li><a href="/admin/categories">CATEGORIES PROFESS.</a></li>
+                                    <li><a href="/admin/domaines">DOMAINES</a></li>
+                                    <li><a href="/admin/villes">VILLES</a></li>
+                                    <li><a href="/admin/pays">PAYS</a></li>
+
                                 </ul>
                             </li>
 

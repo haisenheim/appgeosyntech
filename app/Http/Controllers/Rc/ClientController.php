@@ -31,8 +31,6 @@ class ClientController extends Controller
 	    //$users= \App\User::all()->where('role_id',8);
 	    $pays = Pay::all();
 	    $clients = Client::all();
-
-
         return view('Rc/Clients/index')->with(compact('clients','pays'));
 
     }

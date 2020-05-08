@@ -16,10 +16,8 @@ class PayController extends Controller
     public function index()
     {
 	    $pays = Pay::all();
-	    // dd($villes);
-	    // echo "Bonjour tout le monde!!";
-	    // $request->session()->flash('message','Liste des villes!!!');
-	    return view('Admin/Pays/index')->with(compact('pays'))->with('success');
+
+	    return view('Admin/Pays/index')->with(compact('pays'));
     }
 
     /**
@@ -44,10 +42,6 @@ class PayController extends Controller
 		//dd($request->imageUri);
 		$ville = new Pay();
 		$ville->name = $request['name'];
-
-		$ville->longitude = $request['longitude'];
-		$ville->latitude = $request['latitude'];
-		$ville->code = $request['code'];
 
 
 		$ville->save();

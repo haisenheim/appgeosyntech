@@ -11,26 +11,34 @@ class Livraison extends Model
 
 	protected $guarded = [];
 	public $timestamps = false;
-	protected $dates = ['debut','fin'];
+	protected $dates = ['jour','created_at','updated_at'];
 
-	public function ligne(){
-		return $this->belongsTo('App\Models\Cligne');
-	}
+
 	public function user(){
 		return $this->belongsTo('App\User');
-	}
-
-	public function poste(){
-		return $this->belongsTo('App\Models\Poste');
 	}
 
 	public function client(){
 		return $this->belongsTo('App\Models\Client');
 	}
 
-	public function primes(){
-		return $this->hasMany('App\Models\Prime');
+	public function fournisseur(){
+		return $this->belongsTo('App\Models\Fournisseur');
 	}
+
+	public function transport_option(){
+		return $this->belongsTo('App\Models\TransportOption','transport_option_id');
+	}
+
+	public function lignes(){
+		return $this->hasMany('App\Models\Lignliv');
+	}
+
+	public function photos(){
+		return $this->hasMany('App\Models\Photo','livraison_id');
+	}
+
+
 
 
 	/*public function setTokenAttribute()

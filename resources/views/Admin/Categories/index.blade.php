@@ -5,12 +5,12 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 class="mb-0 font-size-18">BASE DE DONNEES DES CATEGORIES SOCIO PROFESSIONNELLES</h4>
+                <h4 class="mb-0 font-size-18">CATEGORIES DE PRODUIT </h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">SM</a></li>
-                        <li class="breadcrumb-item active">Categories socio prof.</li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">GSM</a></li>
+                        <li class="breadcrumb-item active">Categories </li>
                     </ol>
                 </div>
 
@@ -21,12 +21,12 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="">
          <div class="row">
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">CATEGORIES S.P. <a class="btn btn-primary btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
+                  <h3 class="card-title">CATEGORIES<a class="btn btn-orange btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -37,8 +37,8 @@
 
                                <ul class="list-inline " style="margin-left: 10px">
                                     <li class="list-inline-item">{!! $ville->name !!}</li>
-                                    <li class="list-inline-item"><a title="afficher" class="badge badge-info" href="#"><i class="fa fa-eye"></i></a></li>
-                                    <li class="list-inline-item"><a title="supprimer" class="badge badge-danger" href="#"><i class="fa fa-trash"></i></a></li>
+                                    <li class="list-inline-item"><a title="afficher" class="badge badge-orange" href="#"><i class="fa fa-eye"></i></a></li>
+
                                </ul>
                         @endforeach
                         </li>
@@ -57,7 +57,7 @@
 
 
            <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-sm">
+                  <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h4 class="modal-title">NOUVELLE CATEGORIE</h4>
@@ -84,7 +84,7 @@
                           </div>
                           <!-- /.card-body -->
                           <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
+                            <button type="submit" class="btn btn-orange btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
                         </form>
                       </div>

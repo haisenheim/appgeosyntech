@@ -3,9 +3,9 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>SM | SITRAD MANAGEMENT</title>
+        <title>GM | GEOSYNTECH MANAGEMENT</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="SITRAD GROUP ERP By ALLIAGES TECHNOLOGIES" name="description" />
+        <meta content="GEOSYNTECH ERP By ALLIAGES TECHNOLOGIES" name="description" />
         <meta content="CLEMENT ESSOMBA" name="author" />
         <!-- App favicon -->
 
@@ -17,6 +17,7 @@
         <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -31,7 +32,7 @@
                     <div class="col-lg-12">
                         <div class="text-center mb-5">
                             <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="120" alt="Ici le logo" ></a>
-                            <h2 style="margin-top: 20px; font-weight: bold; text-shadow: 2px 1px #eee;" class="font-size-20 text-black-90 mb-4">SITRAD MANAGEMENT</h2>
+                            <h2 style="color:darkorange; margin-top: 20px; font-weight: bold; text-shadow: 2px 1px #eee;" class="font-size-20 text-black-90 mb-4">GEOSYNTECH MANAGEMENT</h2>
                         </div>
                     </div>
                 </div>
@@ -56,16 +57,9 @@
                                                     <input name="password" type="password" class="form-control" id="password" placeholder="Saisir votre mot de passe">
                                                 </div>
 
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                                            <label class="custom-control-label" for="customControlInline">Se souvenir de moi</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                                 <div class="mt-4">
-                                                    <button class="btn btn-dark btn-block waves-effect waves-light" type="submit">Se Connecter</button>
+                                                    <button class="btn btn-orange btn-block waves-effect waves-light" type="submit">Se Connecter</button>
                                                 </div>
 
                                             </div>

@@ -19,27 +19,8 @@ class Facture extends Model
 		return $this->belongsTo('App\Models\Client', 'client_id');
 	}
 
-	public function commande(){
-		return $this->belongsTo('App\Models\Commande', 'commande_id');
-	}
 
-	public function delai(){
 
-		return $this->belongsTo('App\Models\Delai', 'delai_id');
-	}
-
-	public function payeur(){
-
-		return $this->belongsTo('App\User', 'filled_by');
-	}
-
-	public function pointages(){
-		return $this->hasMany('App\Models\Pointage');
-	}
-
-	public function bulletins(){
-		return $this->hasMany('App\Models\Bulletin','facture_id');
-	}
 
 	public function paiements(){
 		return $this->hasMany('App\Models\Paiement');
@@ -76,17 +57,6 @@ class Facture extends Model
 
 
 
-	public function getMontantAttribute(){
-		$bulletins = Bulletin::all()->where('facture_id',$this->id);
-		$m = 0;
-		foreach($bulletins as $bulletin){
-			$m = $bulletin->montant + $m;
-		}
-
-		$m = $m*(1 + $this->pourcentage/100);
-
-		return $m;
-	}
 
 	public function getVersementAttribute(){
 		$pmts = Paiement::all()->where('facture_id',$this->id);
@@ -99,12 +69,12 @@ class Facture extends Model
 		return $somme;
 	}
 
-	public function getResteAttribute(){
+	/*public function getResteAttribute(){
 		$vrs = $this->getVersementAttribute();
 		$montant = $this->getMontantAttribute();
 
 		return $montant - $vrs;
-	}
+	}*/
 
 
 

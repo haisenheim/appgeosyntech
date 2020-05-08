@@ -2,7 +2,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <?= date('Y') ?> <span>&copy; SITRAD</span>
+                                <?= date('Y') ?> <span>&copy; GEOSYNTHETICS TECHNOLOGIES</span>
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-right d-none d-sm-block">

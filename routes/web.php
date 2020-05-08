@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
+Route::get('/transitaire-cotation/print/{token}','DiversController@printTranscotation');
+
 Route::name('front.')
 	->namespace('Front')
 	->group(function(){
@@ -27,6 +29,16 @@ Route::name('front.')
 		Route::get('/chaire','FormationContoller@chaire');
 		Route::get('/secteur/formations/{token}','FormationController@getAllBySecteur');
 		Route::get('/metier/formations/{token}','FormationController@getAllByMetier');*/
+	});
+
+Route::name('util.')
+	->namespace('Utils')
+	->group(function(){
+		Route::get('/transitaire-cotation/print/{token}','DiversController@printTranscotation');
+		Route::get('/fournisseur-cotation/print/{token}','DiversController@printFrncotation');
+		Route::get('/proforma/print/{token}','DiversController@printProforma');
+		Route::get('/fournisseur-bc/print/{token}','DiversController@printForder');
+		Route::get('/livraison/print/{token}','DiversController@printLivraison');
 	});
 
 Route::get('fiche/test','FrontController@test');
@@ -71,13 +83,6 @@ Route::name('utils.')
 			Route::get('/print/projet/{token}','DiversController@printProjet');
 
 			Route::get('get-villes-pay','DiversController@getVillesByPay');
-			Route::get('get-agences-ville','DiversController@getAgencesByVille');
-			Route::get('get-audio/{token}','DiversController@getAudio')->name('audio')->middleware('auth');
-			Route::get('module/test/{token}','TestController@moduleTest');
-			Route::get('read-pdf/{token}','DiversController@readPdf');
-			Route::get('get-consultants-pay','DiversController@getConsultantsByPay');
-			Route::get('get-contributeurs-pay','DiversController@getContributeursByPay');
-			Route::get('/pointage/test/add','TestController@addPointage');
 
 		});
 
@@ -101,40 +106,74 @@ Route::prefix('admin')
 	    Route::post('maintenance/save-modele','MaintenanceController@saveModele');
 
 
-	    Route::resource('postes','PosteController');
+
 	    Route::resource('secteurs','SecteurController');
-	    Route::resource('competences','CompetenceController');
-	    Route::resource('categories','CategorieController');
+
 	    Route::resource('clients','ClientController');
 
-	    //Ressources humaines
-	    Route::get('salaires','SalaireController@index');
-	    Route::get('/bulletin/{token}','SalaireController@show');
-	    Route::get('fiches','FicheController@index');
-	    Route::get('/fiche/{token}','FicheController@show');
-	    Route::get('agents','UserController@getAgents');
-	    Route::get('agent/{token}','UserController@getAgent');
+		//Cotations
+	    Route::resource('transcotations','TranscotationController');
+	    Route::resource('frncotations','FrncotationController');
+	    Route::post('transcotation/add-produit','TranscotationController@addProduit');
+	    Route::get('transcotation/remove-produit/{id}','TranscotationController@removeProduit');
+	    Route::post('frncotation/add-produit','FrncotationController@addProduit');
+	    Route::get('frncotation/remove-produit/{id}','FrncotationController@removeProduit');
+	    Route::resource('proformas','ProformaController');
+	    Route::post('proforma/add-produit','ProformaController@addProduit');
+	    Route::get('proforma/remove-produit/{id}','ProformaController@removeProduit');
+
+	    // Bons de commandes
+	    Route::resource('forders','ForderController');
+	    Route::post('forder/add-produit','ForderController@addProduit');
+	    Route::get('forder/remove-produit/{id}','ForderController@removeProduit');
+
+	    // Bons de livraison
+	    Route::resource('livraisons','LivraisonController');
+	    Route::post('livraison/add-produit','LivraisonController@addProduit');
+	    Route::get('livraison/remove-produit/{id}','LivraisonController@removeProduit');
+	    Route::post('livraison/add-img','LivraisonController@addImg');
+	    Route::get('livraison/remove-img/{id}','LivraisonController@removeImg');
+	    Route::post('livraison/save','LivraisonController@save');
+	    Route::post('livraison/add-obs','LivraisonController@addObs');
+
 
 	    //Relation Client
 	    Route::resource('factures','FactureController');
 	    Route::resource('commandes','CommandeController');
 	    Route::resource('clients','ClientController');
+	    Route::post('/client/save','ClientController@save');
+	    Route::resource('projets','ProjetController');
+	    Route::post('/projet/save','ProjetController@save');
+	    Route::post('projet/add-domaine','ProjetController@addDomaine');
+	    Route::get('projet/remove-domaine/{id}/{token}','ProjetController@removeDomaine');
+	    Route::post('projet/add-produit','ProjetController@addProduit');
+	    Route::get('projet/remove-produit/{id}/{token}','ProjetController@removeProduit');
+
+	    Route::post('projet/add-etape','ProjetController@addEtape');
+	    Route::get('projet/remove-etape/{id}','ProjetController@removeEtape');
+
 	    Route::get('/commande/livraison/{token}','CommandeController@getLivraison');
 	    Route::get('/commande/ligne/{token}','CommandeController@showLigne');
 
 	    //Approvisionnements
-	    Route::resource('articles','ArticleController');
+	    Route::resource('articles','ProduitController');
 	    Route::resource('approvisionnements','ApprovisionnementController');
 	    Route::resource('sorties','SortieController');
+	    Route::resource('fournisseurs','FournisseurController');
+	    Route::post('/fournisseur/save','FournisseurController@save');
 
 
 	    Route::resource('users','UserController');
 	    Route::resource('pays','PayController');
+	    Route::resource('villes','VilleController');
+	    Route::resource('tclients','TclientController');
+	    Route::resource('tproduits','TproduitController');
+	    Route::resource('domaines','DomaineController');
+	    Route::resource('categories','CategorieController');
 	    Route::get('dashboard','DashboardController');
 
 
-        //Route::resource('variantesfinancements','VfinancementController');
-	    Route::post('villes/save','VilleController@save');
+
 	    Route::get('params/','ParametresController@index');
 	    Route::post('params/','ParametresController@store');
 
