@@ -19,8 +19,21 @@ class Projet extends Model
 		return $this->belongsTo('App\Models\Client', 'client_id');
 	}
 
+	public function jalons(){
+		return $this->hasMany('App\Models\Jalon','proforma_id');
+	}
+
 	public function maitre(){
 		return $this->belongsTo('App\Models\Client', 'maitreouvrage_id');
+	}
+
+	public function getProformaAttribute(){
+		$frncotation = $this->frncotations->last();
+		if($frncotation){
+			return	$frncotation->proforma;
+		}else{
+			return null;
+		}
 	}
 
 	public function cs(){
@@ -43,6 +56,14 @@ class Projet extends Model
 		return $this->belongsTo('App\Models\Region', 'region_id');
 	}
 
+	public function frncotations(){
+		return $this->hasMany('App\Models\Frncotation');
+	}
+
+	public function transcotations(){
+		return $this->hasMany('App\Models\Transcotation');
+	}
+
 	public function paiements(){
 		return $this->hasMany('App\Models\Paiement');
 	}
@@ -63,6 +84,13 @@ class Projet extends Model
 		return $this->hasMany('App\Models\ProduitProjet','projet_id');
 	}
 
+	public function documents(){
+		return $this->hasMany('App\Models\Document','projet_id');
+	}
+
+	public function comments(){
+		return $this->hasMany('App\Models\Comment','projet_id');
+	}
 
 	public function getSiteAttribute(){
 		$p = '';

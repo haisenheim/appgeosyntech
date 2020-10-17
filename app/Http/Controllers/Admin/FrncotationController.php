@@ -39,8 +39,7 @@ class FrncotationController extends Controller
         //
         $cotations = Frncotation::orderBy('created_at','desc')->paginate(12);
 	    $fournisseurs = Fournisseur::all()->where('transitaire',false);
-	    //$ioptions = ImportOption::all();
-	    //$toptions = TransportOption::all();
+
 	    $villes = Ville::all();
 
         return view('/Admin/Frncotations/index')->with(compact('cotations','fournisseurs','villes'));
@@ -76,11 +75,19 @@ class FrncotationController extends Controller
         //
 	    $data = ['semaine'=>date('W'),'moi_id'=>date('m'),'annee'=>date('Y'),'user_id'=>Auth::user()->id,
 	            'fournisseur_id'=>$request->fournisseur_id,
-		        'expected_informations'=>$request->expected_informations,
+		        'expected_informations'=>$request->expected_informations,'projet_id'=>$request->projet_id,'code'=>date('dmhiy').Auth::user()->id,
 		    'token'=>sha1(Auth::user()->id . date('Ymsidh')),
 	    ];
 
 	    $projet = Frncotation::create($data);
+
+
+	   /* $data = ['semaine'=>date('W'),'moi_id'=>date('m'),'annee'=>date('Y'),'user_id'=>Auth::user()->id,
+		    'transitaire_id'=>$request->transitaire_id,'origine_id'=>$request->origine_id,'destination_id'=>$request->destination_id,'transport_option_id'=>$request->transport_option_id,
+		    'ft40'=>$request->ft40,'ft20'=>$request->ft20,'pallets'=>$request->pallets,'expected_informations'=>$request->expected_informations,'import_option_id'=>$request->import_option_id,
+		    'token'=>sha1(Auth::user()->id . date('Ymsidh')),
+	    ];*/
+
 	    $request->session()->flash('success','Cotation créée !!!');
 	    return redirect('/admin/frncotations/'.$projet->token);
     }
@@ -97,6 +104,21 @@ class FrncotationController extends Controller
 			'price'=>request('price'),'quantity'=>request('quantity'),'produit_id'=>request('produit_id')]);
 		request()->session()->flash('success','Ok !!!');
 		return redirect()->back();
+	}
+
+
+	public function addTranscotation(Request $request)
+	{
+		//
+		$data = ['semaine'=>date('W'),'moi_id'=>date('m'),'annee'=>date('Y'),'user_id'=>Auth::user()->id,
+			'transitaire_id'=>$request->transitaire_id,'origine_id'=>$request->origine_id,'destination_id'=>$request->destination_id,'transport_option_id'=>$request->transport_option_id,
+			'ft40'=>$request->ft40,'ft20'=>$request->ft20,'pallets'=>$request->pallets,'expected_informations'=>$request->expected_informations,'import_option_id'=>$request->import_option_id,
+			'token'=>sha1(Auth::user()->id . date('Ymsidh')), 'frncotation_id'=>$request->id,
+		];
+
+		$projet = Transcotation::create($data);
+		$request->session()->flash('success','Cotation créée !!!');
+		return redirect('/admin/transcotations/');
 	}
 
 

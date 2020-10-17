@@ -4,25 +4,33 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\ExtendedController;
 use App\Models\Client;
 
 
+use App\Models\Comment;
+use App\Models\Document;
 use App\Models\Domaine;
 use App\Models\Etape;
+use App\Models\Fournisseur;
+use App\Models\ImportOption;
 use App\Models\Pay;
 use App\Models\Produit;
 use App\Models\Projet;
 use App\Models\Region;
+use App\Models\Tdocument;
+use App\Models\TransportOption;
 use App\Models\Unit;
 use App\Models\Ville;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Ramsey\Uuid\Uuid;
 
 
-
-class ProjetController extends Controller
+class ProjetController extends ExtendedController
 {
     /**
      * Display a listing of the resource.
@@ -35,8 +43,9 @@ class ProjetController extends Controller
         $projets = Projet::orderBy('created_at','desc')->paginate(12);
 	    $clients = Client::all();
 	    $regions = Region::all();
+	    $produits = Produit::all();
 	    $pays = Pay::all();
-        return view('/Admin/Projets/index')->with(compact('projets','clients','regions','pays'));
+        return view('/Admin/Projets/index')->with(compact('projets','clients','regions','pays','produits'));
     }
 
 
@@ -53,84 +62,6 @@ class ProjetController extends Controller
 	}
 
 
-
-
-	/**
-	 * @param Request $request
-	 * @return \Illuminate\Http\RedirectResponse
-	 * edit a field with a new value
-	 */
-
-	public function editFieldJson(Request $request){
-		$model = $request->model;
-		$id = $request->id;
-		$name = $request->name;
-		$value = $request->value;
-		$search = null;
-
-
-	}
-
-
-
-	// Premiere sauvegarde du dossier
-
-	public function initJson(Request $request){
-		//$dossier = new Projet();
-
-		//dd(json_decode($request->all()['dossier'])->name);
-		$dossier = json_decode($request->all()['dossier'],true);
-		$answers = isset($request->all()['answers'])?json_decode($request->all()['answers'],true):null;
-		$produits = isset($request->all()['produits'])?json_decode($request->all()['produits'],true):null;
-		$modele = isset($request->all()['modele'])?json_decode($request->all()['modele'],true):null;
-
-		//$dossier = $request->all()['dossier'];
-
-		$dossier['moi_id'] = date('m');
-		$dossier['annee'] = date('Y');
-		$dossier['author_id']= Auth::user()->id;
-		$dossier['owner_id']=Auth::user()->id;
-		$dossier['description_modele_economique'] = isset($request->all()['bm'])?$request->bm:'pas de modele';
-		$token = sha1(date('ymdhs').$dossier['owner_id']);
-		$dossier['token'] = $token;
-
-
-
-		$dossier = Earlie::create($dossier);
-		if($dossier){
-			if($produits){
-				for($i = 0; $i<count($produits);$i++){
-					$dp = new EarliesProduit();
-					//$dp->produi_id =
-					$dp->produit_id = $produits[$i];
-					$dp->earlie_id = $dossier->id;
-					$dp->save();
-				}
-			}
-
-
-			if($answers){
-				foreach($answers as $answer){
-					$an= new ChoicesEarlie();
-					$an->choice_id=$answer['choice_id'];
-					$an->earlie_id=$dossier->id;
-					$an->save();
-				}
-			}
-
-			if($modele){
-				$modele['earlie_id'] = $dossier->id;
-				$modele['token'] =sha1(date('myhsiyd').Auth::user()->id);
-				$modele = Modele::create($modele);
-
-			}
-
-
-		}
-
-		return response()->json($dossier);
-		//dd($request->all());
-	}
 
     /**
      * Store a newly created resource in storage.
@@ -177,6 +108,50 @@ class ProjetController extends Controller
 		return redirect()->back();
 	}
 
+	public function addComment(Request $request){
+
+		$data = $request->except('_token');
+		$data['user_id'] = Auth::user()->id;
+
+		Comment::updateOrCreate($data);
+		request()->session()->flash('success','Ok !!');
+		return redirect()->back();
+
+	}
+
+	public function addDocument(Request $request){
+		$type = Tdocument::find($request->type_id);
+		$documents = Document::all()->where('tdocument_id',$type->id)->where('projet_id',$request->projet_id);
+		//$dom = DB::table('produits_projets')->where(['projet_id'=>request('projet_id'),'produit_id'=>request('produit_id')])->get();
+		$token = sha1(auth()->user()->id. date('Ymdhis'));
+		$path = $this->entityDocumentCreate($request->path, Str::slug($type->name,'_'),$token);
+		if($documents->count()){
+			$document = new Document();
+			$document->name = $type->name . '_'. $documents->count();
+			$document->projet_id = $request->projet_id;
+			$document->user_id = Auth::user()->id;
+			$document->tdocument_id = $type->id;
+			//$document->token = \Faker\Provider\Uuid::uuid();
+			$document->token = $token;
+			$document->path = $path;
+			$document->save();
+			request()->session()->flash('success','Document ajoute avec succes !!!');
+			return redirect()->back();
+		}
+		$document = new Document();
+		$document->name = $type->name;
+		$document->projet_id = $request->projet_id;
+		$document->user_id = Auth::user()->id;
+		$document->token = $token;
+		$document->path = $path;
+		$document->tdocument_id = $type->id;
+		$document->save();
+
+		//$document->token = \Faker\Provider\Uuid::uuid();
+
+		request()->session()->flash('success','Document ajoute avec succes !!!');
+		return redirect()->back();
+	}
 
 	public function addProduit(){
 		$dom = DB::table('produits_projets')->where(['projet_id'=>request('projet_id'),'produit_id'=>request('produit_id')])->get();
@@ -184,7 +159,7 @@ class ProjetController extends Controller
 			request()->session()->flash('warning','Produit déjà existant !!!');
 			return redirect()->back();
 		}
-		DB::table('produits_projets')->insert(['projet_id'=>request('projet_id'),'quantity'=>request('quantity'),'produit_id'=>request('produit_id'),'unit_id'=>request('unit_id')]);
+		DB::table('produits_projets')->insert(['projet_id'=>request('projet_id'),'quantity'=>request('quantity'),'pu'=>request('pu'),'produit_id'=>request('produit_id'),'unit_id'=>request('unit_id')]);
 		request()->session()->flash('success','Ok !!!');
 		return redirect()->back();
 	}
@@ -240,9 +215,15 @@ class ProjetController extends Controller
 	    $etapes = Etape::all();
 	    $units = Unit::all();
 	    $clients = Client::all();
+	    $fournisseurs = Fournisseur::all()->where('secteur_id','!=',15);
+	    $transitaires = Fournisseur::all()->where('secteur_id',15);
+	    $tdocuments = Tdocument::all();
+	    $villes = Ville::all();
+	    $ioptions = ImportOption::all();
+	    $toptions = TransportOption::all();
 
 	    $projet = Projet::where(['token'=>$token])->first();
-	    return view('Admin/Projets/show')->with(compact('projet','produits','etapes','domaines','units','clients'));
+	    return view('Admin/Projets/show')->with(compact('projet','produits','transitaires','etapes','domaines','units','clients','tdocuments','fournisseurs','villes','toptions','ioptions'));
     }
 
     /**

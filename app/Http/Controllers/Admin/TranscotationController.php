@@ -76,12 +76,12 @@ class TranscotationController extends Controller
 	    $data = ['semaine'=>date('W'),'moi_id'=>date('m'),'annee'=>date('Y'),'user_id'=>Auth::user()->id,
 	            'transitaire_id'=>$request->transitaire_id,'origine_id'=>$request->origine_id,'destination_id'=>$request->destination_id,'transport_option_id'=>$request->transport_option_id,
 		        'ft40'=>$request->ft40,'ft20'=>$request->ft20,'pallets'=>$request->pallets,'expected_informations'=>$request->expected_informations,'import_option_id'=>$request->import_option_id,
-		    'token'=>sha1(Auth::user()->id . date('Ymsidh')),
+		    'token'=>sha1(Auth::user()->id . date('Ymsidh')),'code'=>date('dmhiy').Auth::user()->id, 'frncotation_id'=>$request->frncotation_id, 'projet_id'=>$request->projet_id,
 	    ];
 
 	    $projet = Transcotation::create($data);
 	    $request->session()->flash('success','Cotation créée !!!');
-	    return redirect('/admin/transcotations/');
+	    return redirect('/admin/transcotations/'.$projet->token);
     }
 
 

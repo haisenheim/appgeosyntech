@@ -9,6 +9,7 @@ use App\Models\Agenda;
 use App\Models\Comment;
 use App\Models\Devise;
 use App\Models\Earlie;
+use App\Models\Facture;
 use App\Models\Flettre;
 use App\Models\Forder;
 use App\Models\Frncotation;
@@ -156,6 +157,14 @@ class DiversController extends Controller
 		$data =['projet'=>$projet];
 		$pdf = PDF::loadView('Utils/print_proforma',$data);
 		return $pdf->stream($projet->client->sigle.$projet->name.'.pdf');
+	}
+
+	public function printFacture($token){
+
+		$projet = Facture::where('token',$token)->first();
+		$data =['facture'=>$projet];
+		$pdf = PDF::loadView('Utils/print_facture',$data);
+		return $pdf->stream($projet->name.'.pdf');
 	}
 
 	public function printForder($token){

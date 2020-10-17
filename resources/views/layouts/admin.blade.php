@@ -89,28 +89,63 @@
                     <div id="sidebar-menu">
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
-                            <li class="menu-title">Menu</li>
 
                             <li>
                                 <a href="/admin/dashboard" class="waves-effect">
                                     <i class="mdi mdi-home"></i>
-                                    <span>ACCUEIL</span>
+                                    <span>TABLEAU DE BORD</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/admin/articles" class="waves-effect">
+                                    <i class="mdi mdi-animation"></i>
+                                    <span>CATALOGUE</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/admin/clients" class="waves-effect">
+                                    <i class="fa fa-users"></i>
+                                    <span>CLIENTS</span>
                                 </a>
                             </li>
 
 
                             <li>
+                                <a href="/admin/fournisseurs" class="waves-effect">
+                                    <i class="fa fa-truck"></i>
+                                    <span>PRESTATAIRES</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/admin/projets" class="waves-effect">
+                                    <i class="fa fa-th"></i>
+                                    <span>GESTION DE PROJETS</span>
+                                </a>
+                            </li>
+
+                            <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-account-switch"></i>
-                                    <span>REL. CLIENT</span>
+                                    <i class="mdi mdi-file-table-box-multiple"></i>
+                                    <span>ANALYSES DATA</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="/admin/projets">PROJETS</a></li>
-                                    <li><a href="/admin/clients">CLIENTS</a></li>
-                                    <li><a href="#">FACTURES</a></li>
-                                    <li><a href="#">COMMANDES</a></li>
-                                    <li><a href="/admin/tclients">TYPES CLIENT</a></li>
+                                    <li><a href="/admin/analyses/produits">PRODUITS</a></li>
+                                    <li><a href="/admin/analyses/achats">ACHATS</a></li>
+                                    <li><a href="/admin/analyses/transit">TRANSIT</a></li>
+                                </ul>
+                            </li>
 
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="fa fa-coins"></i>
+                                    <span>FINANCES</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="/admin/factures">FACTURES</a></li>
+                                    <li><a href="#">COMMANDES</a></li>
+                                    <li><a href="#">PAIEMENTS</a></li>
                                 </ul>
                             </li>
 
@@ -124,8 +159,7 @@
                                      <li><a href="/admin/livraisons">BONS DE LIVRAISON</a></li>
                                     <li><a href="/admin/articles">CATALOGUE</a></li>
                                      <li><a href="/admin/fournisseurs">FOURNISSEURS</a></li>
-                                    <li><a href="/admin/tproduits">TYPES PRODUIT</a></li>
-                                    <li><a href="/admin/categories">CATEGORIES PRODUIT</a></li>
+
 
                                 </ul>
                             </li>
@@ -175,7 +209,10 @@
                                     <li><a href="/admin/domaines">DOMAINES</a></li>
                                     <li><a href="/admin/villes">VILLES</a></li>
                                     <li><a href="/admin/pays">PAYS</a></li>
-
+                                    <li><a href="/admin/tclients">TYPES CLIENT</a></li>
+                                    <li><a href="/admin/tproduits">TYPES PRODUIT</a></li>
+                                    <li><a href="/admin/categories">CATEGORIES PRODUIT</a></li>
+                                    <li><a href="/admin/tdocuments">TYPES DE DOCUMENT</a></li>
                                 </ul>
                             </li>
 

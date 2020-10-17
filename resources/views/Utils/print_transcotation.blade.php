@@ -149,8 +149,8 @@
                             </thead>
                             <tbody>
                                 <?php $i=1; $som=0; ?>
-                                @if($projet->lignes->count())
-                                    @foreach($projet->lignes as $prdt)
+                                @if($projet->frncotation->lignes->count())
+                                    @foreach($projet->frncotation->lignes as $prdt)
                                         <?php //dd($prdt) ?>
                                         <tr>
                                           <td>{{ $i++ }}</td>

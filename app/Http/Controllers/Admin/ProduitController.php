@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
-use App\Models\Article;
+
+use App\Models\Category;
+use App\Models\Fournisseur;
 use App\Models\Produit;
+use App\Models\Tproduit;
+use Illuminate\Http\Request;
 
 
 class ProduitController extends Controller
@@ -32,6 +36,29 @@ class ProduitController extends Controller
     {
         //
     }
+
+	public function update(Request $request){
+
+	}
+
+	public function save(Request $request){
+		$data = $request->except('_token');
+		Produit::updateOrCreate(['id'=>$request->id], $data);
+		$request->session()->flash('success','Produit enregistré !!!');
+		return redirect('/admin/articles');
+	}
+
+
+	public function edit($id)
+	{
+		//
+		$article = Produit::find($id);
+		$categories = Category::all();
+		$types = Tproduit::all();
+		$fournisseurs = Fournisseur::all();
+		//dd($article);
+		return view('Admin/Articles/edit')->with(compact('article','categories','types','fournisseurs'));
+	}
 
 
     /**

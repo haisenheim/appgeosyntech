@@ -307,16 +307,15 @@
 
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#prix" role="tab">
-                                            <i class="mdi mdi-hexagon-multiple-outline mr-1 align-middle"></i> <span class="d-none d-md-inline-block">PROFORMA</span>
+                                            <i class="mdi mdi-hexagon-multiple-outline mr-1 align-middle"></i> <span class="d-none d-md-inline-block">PRIX</span>
                                         </a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#factures" role="tab">
-                                            <i class="mdi mdi-hexagon-multiple-outline mr-1 align-middle"></i> <span class="d-none d-md-inline-block">FACTURES</span>
+                                        <a class="nav-link" data-toggle="tab" href="#proforma" role="tab">
+                                            <i class="mdi mdi-hexagon-multiple-outline mr-1 align-middle"></i> <span class="d-none d-md-inline-block">PROFORMA</span>
                                         </a>
                                     </li>
-
 
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#bcfrn" role="tab">
@@ -408,8 +407,8 @@
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                    @if($projet->frncotations->last())
-                                                    @foreach($projet->frncotations->last()->transcotations as $cotation)
+                                                    @foreach($projet->transcotations as $cotation)
+
                                                           <tr>
                                                               <td>{{ date_format($cotation->created_at,'d/m/Y') }}</td>
                                                               <td>{{ $cotation->transitaire->sigle }}</td>
@@ -424,8 +423,10 @@
                                                               </ul>
                                                               </td>
                                                           </tr>
-                                                    @endforeach
-                                                    @endif
+
+
+                                                      @endforeach
+
                                                     </tbody>
 
                                                   </table>
@@ -438,7 +439,7 @@
                                             @if(!$projet->proforma)
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h6 class="card-title">TABLEAU D'EVALUATION DES COUTS <a class="btn btn-orange btn-xs pull-right" href="#" data-toggle="modal" data-target="#modalAddJalon"><i class="fa fa-plus-circle"></i></a></h6>
+                                                    <h6 class="card-title">TABLEAU D'EVALUATION DES COUTS</h6>
                                                 </div>
                                                 <div class="card-body table-responsive">
                                                     <table class="table table-condensed table-bordered table-striped">
@@ -462,7 +463,6 @@
                                                         </thead>
                                                         <tbody>
                                                             <?php $i=1; ?>
-                                                            @if($projet->frncotations->last())
                                                             <input id="frncotation_id" type="hidden" value="{{ $projet->frncotations->last()->id }}"/>
                                                             <input type="hidden" id="projet_id" value="{{ $projet->id }}"/>
                                                             @foreach($projet->frncotations->last()->lignes as $prdt )
@@ -501,15 +501,8 @@
                                                                 <td id="total-transit">0</td>
                                                                 <td id="total-marge">0</td>
                                                             </tr>
-                                                            @endif
                                                         </tbody>
                                                     </table>
-                                                </div>
-                                                <div class="card-footer">
-                                                <h6>JALONS DE PAIEMENTS</h6>
-                                                    <ul id="list-jalons" class="list-inline">
-
-                                                    </ul>
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -617,13 +610,6 @@
                                                         </tbody>
                                                     </table>
                                                 </div>
-                                                <div class="card-footer">
-                                                    <ul id="list-jalons" class="list-inline">
-                                                        @foreach($projet->proforma->jalons as $jalon)
-                                                            <li class="list-inline-item">{{ $jalon->pourcentage }}%</li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
                                             </div>
                                             <div class="card">
                                                 <div class="card-body">
@@ -664,44 +650,9 @@
                                             </div>
                                             @endif
                                         </div>
-                                        <div class="tab-pane" id="factures" role="tabpanel">
-
-                                             <div class="card">
-                                                <div class="card-header">
-                                                  <h5 class="card-title">FACTURES</h5>
-                                                </div>
-                                                <!-- /.card-header -->
-                                                <div class="card-body">
-                                                  <table id="example1" class="table table-bordered table-hover table-condensed datatable">
-                                                    <thead>
-                                                    <tr>
-                                                      <th>&numero;</th>
-                                                      <th>JALON</th>
-                                                      <th>MONTANT</th>
-
-                                                      <th></th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        @if($projet->proforma)
-                                                        @foreach($projet->proforma->factures as $facture)
-                                                            <tr>
-                                                                <td><a href="/admin/facture/{{ $facture->token }}">{{ $facture->name }}</a></td>
-                                                                <td>{{ $facture->jalon?$facture->jalon->name:'-' }}</td>
-                                                                <td>{{ \App\Helpers\CurrencyFr::format($facture->montant) }}</td>
-                                                                <td><a href="/admin/facture/{{ $facture->token }}"><i class="fa fa-search"></i></a></td>
-                                                            </tr>
-                                                        @endforeach
-                                                        @endif
-                                                    </tbody>
-
-                                                  </table>
-                                                </div>
-                                                <!-- /.card-body -->
-                                              </div>
-
+                                        <div class="tab-pane" id="proforma" role="tabpanel">
+                                            <h6>PROFORMA</h6>
                                         </div>
-
                                         <div class="tab-pane" id="bcfrn" role="tabpanel">
                                             <h6>BON DE COMMANDE FOURNISSEUR</h6>
                                         </div>
@@ -1104,13 +1055,21 @@
                                       <label for="pay_id">TRANSITAIRE</label>
                                       <select required="required" name="transitaire_id" id="pay_id" class="form-control">
                                         <option value="0">SELECTIONNER </option>
-                                            @foreach($transitaires as $role)
+                                            @foreach($fournisseurs as $role)
                                                 <option value="{{ $role->id }}">{{ $role->name }}</option>
                                             @endforeach
                                       </select>
                                     </div>
 
-                                    <input type="hidden" name="frncotation_id" value="{{ $projet->frncotations->last()?$projet->frncotations->last()->id:0 }}"/>
+                                    <div class="form-group">
+                                      <label for="pay_id">DEMANDE DE COTATION FOURNISSEUR</label>
+                                      <select required="required" name="frncotation_id" id="pay_id" class="form-control">
+                                        <option value="0">SELECTIONNER </option>
+                                            @foreach($projet->frncotations as $role)
+                                                <option value="{{ $role->id }}">{{ $role->code }}</option>
+                                            @endforeach
+                                      </select>
+                                    </div>
                                 </div>
                                 <div class="col-md-7 col-sm-12">
                                     <div class="form-group">
@@ -1281,12 +1240,6 @@
                              <div class="col-md-12 col-sm-12">
                                 <div class="form-group">
                                     <input class="form-control" type="text" required="required" name="quantity" placeholder="Saisir la quantite. Exple: 56.93"/>
-                                </div>
-                             </div>
-
-                             <div class="col-md-12 col-sm-12">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" required="required" name="pu" placeholder="Saisir le prix unitaire. Exple: 15"/>
                                 </div>
                              </div>
 
@@ -1467,55 +1420,18 @@
                           <div class="card-footer">
                             <button type="submit" class="btn btn-orange btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
                           </div>
-
+                        </form>
                       </div>
-                      </form>
+
                     </div>
                     <!-- /.modal-content -->
                   </div>
                   <!-- /.modal-dialog -->
           </div>
-        </div>
 
-        <div class="modal fade" id="modalAddJalon">
-                  <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">DEFINIR UN JALON</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
 
-                        <input type="hidden" name="projet_id" value="{{ $projet->id }}"/>
-                          <div class="card-body">
 
-                                <div class="">
-                                    <div class="form-group">
-                                      <label for="jalon_intitule">INTITULE</label>
-                                      <input class="form-control" id="jalon_intitule" type="text"/>
-                                    </div>
-                                </div>
-
-                                <div class="">
-                                    <div class="form-group">
-                                      <label for="jalon">POURCENTAGE</label>
-                                      <input class="form-control" id="jalon" type="text"/>
-                                    </div>
-                                </div>
-
-                          <!-- /.card-body -->
-                          <div class="card-footer">
-                            <button type="button" id="btn-jalon" class="btn btn-orange btn-block"><i class="fa fa-w fa-save"></i> Enregistrer</button>
-                          </div>
-                      </div>
-                    </div>
-                    <!-- /.modal-content -->
-                  </div>
-                  <!-- /.modal-dialog -->
-          </div>
-        </div>
+    </div>
 
     <style>
 
@@ -1598,25 +1514,6 @@
             <!-- SweetAlert2 -->
 <script type="text/javascript" src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 
-<script>
-  $(function () {
-    $(".datatable").DataTable();
-  });
-
-  $('#btn-jalon').click(function(e){
-    e.preventDefault();
-    var jalon = $('#jalon').val();
-    var name = $('#jalon_intitule').val();
-    if( parseInt(jalon) > 0){
-        var li = '<li class="list-inline-item" data-name="'+ name +'" data-id='+ jalon +' > <span style="font-size: 12px;" class="badge badge-secondary">'+ name +' ('+ jalon +' %)</span> </li>';
-        $('#list-jalons').append(li);
-    }
-
-    $('#jalon').val(0);
-    $('#jalon_intitule').val('')
-    $('#modalAddJalon').modal('hide');
-  });
-</script>
 
 <script>
     $('.editable').keyup(function(){
@@ -1679,14 +1576,6 @@
         });
 
         var lignes = [];
-        var jalons = [];
-
-        $('#list-jalons li').each(function(){
-            var elt = {};
-            elt.pourcentage = $(this).data('id');
-            elt.name = $(this).data('name');
-            jalons.push(elt);
-        });
 
          $('.tr1').each(function(){
              var id = $(this).data('id');
@@ -1705,7 +1594,7 @@
             url:'/admin/proformas/',
             type:'Post',
             dataType:'JSON',
-            data:{_csrf:$('input[name="_token"]').val(), lignes:lignes, jalons:jalons,modalites_paiement:$('#modalites_paiement').text(),note_speciale:$('#note_speciale').text(), debut:$('#debut').val(),fin:$('#fin').val(), projet_id:$('#projet_id').val()},
+            data:{_csrf:$('input[name="_token"]').val(), lignes:lignes, modalites_paiement:$('#modalites_paiement').val(),note_speciale:$('#note_speciale').val(), debut:$('#debut').val(),fin:$('#fin').val(), projet_id:$('#projet_id').val()},
             beforeSend:function(xhr){
                 xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
             },
@@ -1754,3 +1643,13 @@
      
 @endsection
 
+@section('script')
+<script>
+  $(function () {
+    $(".datatable").DataTable();
+
+  });
+</script>
+
+
+@endsection

@@ -7,11 +7,11 @@
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">BASE DES FACTURES CLIENT</h1>
+            <h1 class="m-0 text-dark">BASE DES FACTURES </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">SM</a></li>
+              <li class="breadcrumb-item"><a href="/admin/dashboard">ALLIAGES ERP</a></li>
               <li class="breadcrumb-item">CLIENTS</li>
               <li class="breadcrumb-item active">FACTURES</li>
             </ol>
@@ -29,39 +29,33 @@
                   <h3 class="card-title">FACTURES</h3>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
-                   <table class="table datatable table-bordered table-hover table-striped table-condensed">
+                <div class="card-body table-responsive">
+                     <table id="example1" class="table table-bordered table-hover table-condensed datatable">
                        <thead>
-                           <tr>
-                               <th>CLIENT</th>
-                               <th>&numero;</th>
-                               <th>PERIODE</th>
-                               <th>MONTANT</th>
-                               <th>STATUT</th>
-                               <th></th>
-                           </tr>
+                       <tr>
+                         <th>&numero;</th>
+                         <th>PROJET</th>
+                         <th>JALON</th>
+                         <th>MONTANT</th>
+
+                         <th></th>
+                       </tr>
                        </thead>
                        <tbody>
-                           @foreach($factures as $liv)
 
+                           @foreach($factures as $facture)
                                <tr>
-                                   <td>{{ $liv->client?$liv->client->name:'-' }}</td>
-                                   <td>{{ $liv->name }}</td>
-
-                                   <td>{{ $liv->moi_id }} / {{ $liv->annee }} </td>
-                                   <td style="padding-right: 10px;text-align: right; font-weight: bolder">{{ number_format($liv->montant, 0,',','.') }}</td>
-                                   <td> <span class="badge badge-{{ $liv->etat['color'] }}">{{ $liv->etat['name'] }}</span> </td>
-                                   <td>
-                                       <ul class="list-inline">
-                                           <li class="list-inline-item"><a class="btn btn-xs btn-info" title="Afficher" href="/admin/factures/{{ $liv->token }}"><i class="fa fa-eye"></i></a></li>
-                                       </ul>
-                                   </td>
+                                   <td>{{ $facture->name }}</td>
+                                   <td><a href="/admin/projets/{{ $facture->projet->token }}">{{ \Illuminate\Support\Str::limit($facture->projet->name,60) }}</a></td>
+                                   <td>{{ $facture->jalon?$facture->jalon->name:'-' }}</td>
+                                   <td>{{ \App\Helpers\CurrencyFr::format($facture->montant) }}</td>
+                                   <td><a href="/admin/facture/{{ $facture->token }}"><i class="fa fa-search"></i></a></td>
                                </tr>
-
                            @endforeach
-                       </tbody>
-                   </table>
 
+                       </tbody>
+
+                     </table>
                 </div>
                 <!-- /.card-body -->
               </div>

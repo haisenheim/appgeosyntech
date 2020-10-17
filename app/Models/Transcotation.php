@@ -35,6 +35,16 @@ class Transcotation extends Model
 		return $this->hasMany('App\Models\Lcotation','transcotation_id');
 	}
 
+	public function frncotation(){
+		return $this->belongsTo('App\Models\Frncotation', 'frncotation_id');
+	}
+
+	public function projet(){
+		return $this->belongsTo('App\Models\Projet', 'projet_id');
+	}
+
+
+
 	public function ioption(){
 		return $this->belongsTo('App\Models\ImportOption','import_option_id');
 	}

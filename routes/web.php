@@ -37,6 +37,7 @@ Route::name('util.')
 		Route::get('/transitaire-cotation/print/{token}','DiversController@printTranscotation');
 		Route::get('/fournisseur-cotation/print/{token}','DiversController@printFrncotation');
 		Route::get('/proforma/print/{token}','DiversController@printProforma');
+		Route::get('/facture/print/{token}','DiversController@printFacture');
 		Route::get('/fournisseur-bc/print/{token}','DiversController@printForder');
 		Route::get('/livraison/print/{token}','DiversController@printLivraison');
 	});
@@ -46,10 +47,6 @@ Route::get('fiche/test','FrontController@test');
 
 Route::get('login/locked', 'Auth\LoginController@locked')->middleware('auth')->name('login.locked');
 Route::post('login/locked', 'Auth\LoginController@unlock')->name('login.unlock');
-
-
-
-
 
 Route::get('send-email', 'EmailController@sendEMail');
 
@@ -110,9 +107,15 @@ Route::prefix('admin')
 	    Route::resource('secteurs','SecteurController');
 
 	    Route::resource('clients','ClientController');
+	    //Route::resource('analyses','AnalyseController');
+	    Route::get('analyses/achats','AnalyseController@getAchats');
+	    Route::get('analyses/produits','AnalyseController@index');
+	    Route::get('analyses/transit','AnalyseController@getTransit');
 
 		//Cotations
+
 	    Route::resource('transcotations','TranscotationController');
+	    Route::resource('cotations','CotationController');
 	    Route::resource('frncotations','FrncotationController');
 	    Route::post('transcotation/add-produit','TranscotationController@addProduit');
 	    Route::get('transcotation/remove-produit/{id}','TranscotationController@removeProduit');
@@ -121,6 +124,9 @@ Route::prefix('admin')
 	    Route::resource('proformas','ProformaController');
 	    Route::post('proforma/add-produit','ProformaController@addProduit');
 	    Route::get('proforma/remove-produit/{id}','ProformaController@removeProduit');
+	    Route::get('facture/{token}','ProformaController@getFacture');
+	    Route::get('facture','ProformaController@getAllFactures');
+	    Route::post('facture/save','ProformaController@saveFacture');
 
 	    // Bons de commandes
 	    Route::resource('forders','ForderController');
@@ -144,6 +150,9 @@ Route::prefix('admin')
 	    Route::post('/client/save','ClientController@save');
 	    Route::resource('projets','ProjetController');
 	    Route::post('/projet/save','ProjetController@save');
+	    Route::post('/projet/add-comment','ProjetController@addComment');
+	    Route::post('/projet/add-document','ProjetController@addDocument');
+
 	    Route::post('projet/add-domaine','ProjetController@addDomaine');
 	    Route::get('projet/remove-domaine/{id}/{token}','ProjetController@removeDomaine');
 	    Route::post('projet/add-produit','ProjetController@addProduit');
@@ -157,6 +166,7 @@ Route::prefix('admin')
 
 	    //Approvisionnements
 	    Route::resource('articles','ProduitController');
+	    Route::post('articles/save','ProduitController@save');
 	    Route::resource('approvisionnements','ApprovisionnementController');
 	    Route::resource('sorties','SortieController');
 	    Route::resource('fournisseurs','FournisseurController');
@@ -168,6 +178,7 @@ Route::prefix('admin')
 	    Route::resource('villes','VilleController');
 	    Route::resource('tclients','TclientController');
 	    Route::resource('tproduits','TproduitController');
+	    Route::resource('tdocuments','TdocumentController');
 	    Route::resource('domaines','DomaineController');
 	    Route::resource('categories','CategorieController');
 	    Route::get('dashboard','DashboardController');

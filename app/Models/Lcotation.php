@@ -38,12 +38,30 @@ class Lcotation extends Model
 		return $v * $this->quantity;
 	}
 
+
+
 	public function getGrossWeigthAttribute(){
 		$pd = $this->produit->poids;
 		return $pd * $this->quantity;
 	}
 
 
+
+	public function getPriceFcfaAttribute(){
+		return $this->price * 656;
+	}
+
+	public function getTotalAttribute(){
+		return $this->price * $this->quantity;
+	}
+
+	public function getTotalFcfaAttribute(){
+		return $this->price * $this->quantity * 656;
+	}
+
+	public function getMontantAttribute(){
+		return $this->pu * $this->quantity;
+	}
 
 
 

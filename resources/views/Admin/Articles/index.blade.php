@@ -9,7 +9,7 @@
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">GM</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">GSM</a></li>
                         <li class="breadcrumb-item active">Catalogue</li>
                     </ol>
                 </div>
@@ -36,12 +36,27 @@
                    <table class="table table-bordered table-striped table-condensed table-hover datatable">
                         <thead>
                             <tr>
-                                <th>DESIGNATION</th>
-
-                                <th>FOURNISSEUR</th>
-                                <th>CATEGORIE</th>
+                                <th colspan="4"></th>
+                                <th colspan="5">EMBALLAGE</th>
+                                <th colspan="2">DOUANE</th>
                                 <th></th>
                             </tr>
+                            <tr>
+                                <th>DESIGNATION</th>
+                                <th>TYPE</th>
+                                <th>FOURNISSEUR</th>
+                                <th>CATEGORIE</th>
+
+                                <th>LONG.</th>
+                                <th>LARG.</th>
+                                <th>DIA.</th>
+                                <th>POIDS</th>
+                                <th>VOLUME</th>
+                                <th>CODE HS</th>
+                                <th>TAUX DDI</th>
+                                <th></th>
+                            </tr>
+
                         </thead>
                         <tbody>
 
@@ -52,13 +67,20 @@
                                 @foreach($value as $article)
                                   <tr>
                                       <td>{{ $article->name }} </td>
+                                      <td>{{ $article->tproduit?$article->tproduit->name:'-' }}</td>
                                       <td>{{ $article->fournisseur?$article->fournisseur->name:'-' }}</td>
                                       <td>{{ $article->category?$article->category->name:'-' }}</td>
+                                      <td>{{ number_format($article->longueur) }}</td>
+                                      <td>{{ number_format($article->largeur) }}</td>
+                                      <td>{{ number_format($article->diametre) }}</td>
+                                      <td>{{ number_format($article->poids) }}</td>
+                                      <td>{{ number_format($article->volume) }}</td>
+                                      <td>{{ $article->code_hs }}</td>
+                                      <td>{{ $article->taux_ddi }}</td>
                                       <td style="min-width: 7%;">
                                       <ul style="margin-bottom: 0" class="list-inline">
-                                        <li class="list-inline-item"><a class="btn btn-light btn-xs" href="{{route('admin.clients.show',[$article->token])}}"><i class="fa fa-search"></i></a></li>
-                                        <li class="list-inline-item"><a data-toggle="modal" data-target="#modal-edit"
-                                         class="btn btn-orange btn-xs btn-edit" href="#"><i class="fa fa-edit"></i></a></li>
+                                        <li class="list-inline-item"><a class="btn btn-light btn-xs" href="{{route('admin.articles.show',[$article->id])}}"><i class="fa fa-search"></i></a></li>
+                                        <li class="list-inline-item"><a class="btn btn-orange btn-xs btn-edit" href="{{route('admin.articles.edit',[$article->id])}}"><i class="fa fa-edit"></i></a></li>
 
                                       </ul>
                                       </td>

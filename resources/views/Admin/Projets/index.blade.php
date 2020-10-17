@@ -8,7 +8,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">SGM</a></li>
+              <li class="breadcrumb-item"><a href="#">GEOSYNTEC</a></li>
               <li class="breadcrumb-item">RELATION CLIENT</li>
               <li class="breadcrumb-item active">PROJETS</li>
             </ol>
@@ -24,9 +24,45 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">PROJETS <a class="btn btn-orange btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
+                    <hr/>
+                    <form class="form-inline" action="/admin/projets">
+
+                      <div style="padding: 0 10px" class="form-group">
+                        <label for="moi_id">CLIENT</label>
+                        <select name="client_id" class="form-control" id="moi_id">
+                            <option value="">TOUS</option>
+                            @foreach($clients as $ent)
+                               <option value="{{ $ent->id }}">{{ $ent->name }}</option>
+                            @endforeach
+                        </select>
+                      </div>
+
+
+                      <div style="padding: 0 10px" class="form-group">
+                        <label for="moi_id">PRODUIT</label>
+                        <select name="produit_id" class="form-control" id="moi_id">
+                            <option value="">TOUS</option>
+                            @foreach($produits as $ent)
+                               <option value="{{ $ent->id }}">{{ $ent->name }}</option>
+                            @endforeach
+                        </select>
+                      </div>
+
+                      <div style="padding: 0 10px" class="form-group">
+                        <label for="annee">DU</label>
+                        <input type="date" class="form-control" name="du"/>
+                      </div>
+
+                      <div style="padding: 0 10px" class="form-group">
+                        <label for="annee">AU</label>
+                        <input type="date" class="form-control" name="au"/>
+                      </div>
+                      <button type="submit" class="btn btn-orange"><i class="fa fa-search"></i></button>
+
+                  </form>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
+                <div class="card-body table-responsive">
                   <table id="example1" class="table table-bordered table-hover table-condensed datatable">
                     <thead>
                     <tr>
@@ -46,7 +82,7 @@
 
                           <tr>
                               <td>{{ date_format($projet->created_at,'d/m/Y') }}</td>
-                              <td>{{ \Illuminate\Support\Str::limit($projet->name,50) }}</td>
+                              <td><a class="link" href="{{route('admin.projets.show',[$projet->token])}}">{{ \Illuminate\Support\Str::limit($projet->name,50) }}</a></td>
                               <td>{{ $projet->maitre?$projet->maitre->name:'-' }}</td>
 
                               <td>{{ $projet->site }}</td>
@@ -54,7 +90,7 @@
 
                               <td style="min-width: 7%;">
                               <ul style="margin-bottom: 0" class="list-inline">
-                                <li class="list-inline-item"><a class="btn btn-light btn-xs" href="{{route('admin.projets.show',[$projet->token])}}"><i class="fa fa-search"></i></a></li>
+                                <li class="list-inline-item"><a class="link" href="{{route('admin.projets.show',[$projet->token])}}"><i class="fa fa-search"></i></a></li>
 
 
                               </ul>
@@ -265,6 +301,16 @@
                   </div>
                   <!-- /.modal-dialog -->
           </div>
+
+          <style>
+            .form-inline input, .form-inline select{
+                margin-left: 10px;
+            }
+
+            .form-inline label{
+                font-weight: 600;
+            }
+          </style>
 
 @endsection
 

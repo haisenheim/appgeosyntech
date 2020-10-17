@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 style="color: orange" class="mb-0 font-size-18">{{$projet->fournisseur->sigle }} <span>COTATION DU </span> <span>{{ date_format($projet->created_at,'d/m/Y') }}</span></h4>
+                <h4 style="color: orange" class="mb-0 font-size-18">{{$projet->fournisseur->sigle }} - <span>DEMANDE DE COTATION DU </span> <span>{{ date_format($projet->created_at,'d/m/Y') }}</span></h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">GSM</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">ALLIAGES ERP</a></li>
                         <li class="breadcrumb-item active">{{ $projet->fournisseur?$projet->fournisseur->name:'-' }}</li>
                     </ol>
                 </div>
@@ -26,6 +26,7 @@
 
             <div class="card">
                 <div class="card-header">
+                    <h4 class="page-header text-center mt-3">PROJET: <a href="/admin/projets/{{ $projet->projet->token }}">{{ \Illuminate\Support\Str::limit($projet->projet->name,75) }}</a></h4>
                     <ul class="list-inline pull-right">
                         <li class="list-inline-item">
                             <a href="/fournisseur-cotation/print/{{ $projet->token }}" title="imprimer" class="btn tbn-xs btn-danger"><i class="mdi mdi-printer"></i></a>

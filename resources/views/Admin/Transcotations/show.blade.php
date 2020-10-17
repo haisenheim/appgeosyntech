@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 style="color: orange" class="mb-0 font-size-18">{{$projet->transitaire->sigle }} <span>COTATION DU </span> <span>{{ date_format($projet->created_at,'d/m/Y') }}</span></h4>
+                <h4 style="color: orange" class="mb-0 font-size-18">{{$projet->transitaire->sigle }} <span>DEMANDE DE COTATION DU </span> <span>{{ date_format($projet->created_at,'d/m/Y') }}</span></h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
@@ -26,17 +26,19 @@
 
             <div class="card">
                 <div class="card-header">
+                    <h6>PROJET: <a href="/admin/projets/{{ $projet->projet->token }}">{{ \Illuminate\Support\Str::limit($projet->projet->name,75) }}</a></h6>
                     <ul class="list-inline pull-right">
                         <li class="list-inline-item">
                             <a href="/transitaire-cotation/print/{{ $projet->token }}" title="imprimer" class="btn tbn-xs btn-danger"><i class="mdi mdi-printer"></i></a>
                         </li>
                     </ul>
+                    <h6>DEMANDE DE COTATION FOURNISSEUR: <a href="/admin/frncotations/{{ $projet->frncotation->token }}">{{ $projet->frncotation->code }}</a></h6>
                 </div>
                 <div class="card-body">
 
                       <div style="border: 1px solid #7c8a96;" class="card">
                         <div class="card-header bg-secondary">
-                            <h6 style="font-weight: bolder" class=" text-white">A- DETAIL DES PRODUITS <a  class="btn btn-orange btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-produit"><i class="fa fa-plus-circle"></i></a></h6>
+                            <h6 style="font-weight: bolder" class=" text-white">A- DETAIL DES PRODUITS</h6>
                         </div>
                         <div class="card-body">
 
@@ -50,13 +52,13 @@
                                                 <th>Unites</th>
                                                 <th colspan="2">Quantites</th>
                                                 <th>Total</th>
-                                                <th></th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $i=1; $som=0; ?>
-                                            @if($projet->lignes->count())
-                                                @foreach($projet->lignes as $prdt)
+                                            @if($projet->frncotation->lignes->count())
+                                                @foreach($projet->frncotation->lignes as $prdt)
                                                     <?php //dd($prdt) ?>
                                                     <tr>
                                                       <td>{{ $i++ }}</td>
@@ -98,7 +100,6 @@
                                                             <li>Montant total: <span class="text-info">{{ number_format( ($aux=$prdt->price * $prdt->area * $prdt->quantity),2,',','.' ) }} €</span></li>
                                                         </ul>
                                                       </td>
-                                                      <td><a class="badge badge-danger" href="/admin/transcotation/remove-produit/{{$prdt->id}}"><i class="fa fa-trash"></i></a></td>
                                                     </tr>
                                                     <?php $som=$som+$aux; ?>
                                                 @endforeach
