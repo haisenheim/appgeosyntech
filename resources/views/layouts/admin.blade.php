@@ -1,6 +1,6 @@
 @include('includes.header')
 
-    <body data-sidebar="light">
+    <body data-sidebar="dark">
 
         <!-- Begin page -->
         <div id="layout-wrapper">
@@ -12,7 +12,7 @@
                         <div class="navbar-brand-box">
                             <a href="#" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('img/logo.png') }}" alt="" height="22">
+                                    <img src="{{ asset('img/logo-name.png') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
                                     <img src="{{ asset('img/logo-name.png') }}" alt="" height="40">
