@@ -99,7 +99,7 @@
 
     <header>
 
-       <img style="width: 100%; height: 100px;" src= "{{ public_path().DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'entete.png' }} " alt=""/>
+       <img style="width: 100%; height: 100px;" src= "https://app.geosyntech.cm/img/entete.png" alt=""/>
     </header>
 
     <footer>
