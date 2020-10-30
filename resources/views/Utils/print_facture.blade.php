@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 
 	<title>FACTURE</title>
-	<link rel="stylesheet" href="{{ public_path().DIRECTORY_SEPARATOR.'assets'.DIRECTORY_SEPARATOR.'css'.DIRECTORY_SEPARATOR.'bootstrap.min.css' }}"/>
+
+	<link href="https://app.geosyntech.cm/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	 <link href="https://app.geosyntech.cm/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 	 <style>
          /**
              Set the margins of the page to 0, so the footer and the header
@@ -230,7 +232,7 @@
                                     @foreach($facture->proforma->jalons as $jalon)
                                         <tr style="background-color: {{ $facture->jalon_id == $jalon->id?'green':'transparent' }}">
                                             <th>{{$jalon->name}}</th>
-
+                                            <th><span class="fa {{ $facture->jalon_id >= $jalon->id?'fas fa-times text-danger':'fas fa-check text-success' }}"></span></th>
                                             <th>{{ \App\Helpers\CurrencyFr::format($jalon->montant) }} XAF</th>
                                         </tr>
                                     @endforeach
