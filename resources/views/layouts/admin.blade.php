@@ -12,7 +12,7 @@
                         <div class="navbar-brand-box">
                             <a href="#" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('img/logo.png') }}" alt="" height="22">
+                                    <img src="{{ asset('img/logo-dark.png') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
                                     <img src="{{ asset('img/logo-name-dark.png') }}" alt="" height="40">
