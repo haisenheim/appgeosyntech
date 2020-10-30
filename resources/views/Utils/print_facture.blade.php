@@ -6,7 +6,6 @@
 	<title>FACTURE</title>
 
 	<link href="https://app.geosyntech.cm/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	 <link href="https://app.geosyntech.cm/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 	 <style>
          /**
              Set the margins of the page to 0, so the footer and the header
@@ -101,11 +100,11 @@
 
     <header>
 
-       <img style="width: 100%; height: 100px;" src= "https://app.geosyntech.cm/img/entete.png" alt=""/>
+       <img style="width: 100%; height: 120px;" src= "https://app.geosyntech.cm/img/entete_facture.png" alt=""/>
     </header>
 
     <footer>
-      <img style="width: 100%" src= "https://app.geosyntech.cm/img/pied.png" alt=""/>
+      <img style="width: 100%" src= "https://app.geosyntech.cm/img/pied_facture.png" alt=""/>
     </footer>
 
     <main>
@@ -230,9 +229,13 @@
                                         <th colspan="1">MONTANT</th>
                                     </tr>
                                     @foreach($facture->proforma->jalons as $jalon)
-                                        <tr style="background-color: {{ $facture->jalon_id == $jalon->id?'green':'transparent' }}">
+                                        <tr style="background-color: {{ $facture->jalon_id == $jalon->id?'#0ea15a':'transparent' }}">
                                             <th>{{$jalon->name}}</th>
-                                            <th><span class="fa {{ $facture->jalon_id >= $jalon->id?'fas fa-times text-danger':'fas fa-check text-success' }}"></span></th>
+                                            @if($facture->jalon_id >= $jalon->id)
+                                            <th><span style="padding: 3px; margin: 5px; color: #FFFFFF; font-size: small ">ok</span></th>
+                                            @else
+                                            <th><span style="padding: 3px; margin: 5px;  font-size: small ">x</span></th>
+                                            @endif
                                             <th>{{ \App\Helpers\CurrencyFr::format($jalon->montant) }} XAF</th>
                                         </tr>
                                     @endforeach
