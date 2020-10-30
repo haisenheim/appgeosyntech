@@ -96,7 +96,7 @@
 
      </style>
 </head>
-<body>
+<body style="background-color: #FFFFFF">
 
     <header>
 
@@ -232,9 +232,9 @@
                                         <tr style="background-color: {{ $facture->jalon_id == $jalon->id?'#0ea15a':'transparent' }}">
                                             <th>{{$jalon->name}}</th>
                                             @if($facture->jalon_id >= $jalon->id)
-                                            <th><span style="padding: 3px; margin: 5px; color: #FFFFFF; font-size: small ">ok</span></th>
+                                            <th class="text-center"><span style="padding: 3px; margin: 5px; text-align: center; font-size: small ">ok</span></th>
                                             @else
-                                            <th><span style="padding: 3px; margin: 5px;  font-size: small ">x</span></th>
+                                            <th class="text-center"><span style="padding: 3px; margin: 5px; text-align: center;  font-size: small ">x</span></th>
                                             @endif
                                             <th>{{ \App\Helpers\CurrencyFr::format($jalon->montant) }} XAF</th>
                                         </tr>
