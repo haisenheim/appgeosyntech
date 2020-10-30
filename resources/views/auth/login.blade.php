@@ -26,13 +26,13 @@
             <a href="/"><i class="mdi mdi-home-variant h2 text-white"></i></a>
         </div>
 
-        <div class="account-pages my-5 pt-5">
+        <div class="account-pages my-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center mb-5">
-                            <a href="/" class="logo"><img src="{{ asset('img/logo.png') }}" height="120" alt="Ici le logo" ></a>
-                            <h2 style="color:darkorange; margin-top: 20px; font-weight: bold; text-shadow: 2px 1px #eee;" class="font-size-20 text-black-90 mb-4">GEOSYNTECH MANAGEMENT</h2>
+                            <a href="/" class="logo"><img src="{{ asset('img/logo-alliages.png') }}" height="170" alt="Ici le logo" ></a>
+                            <h1 style="font-weight: 900; text-shadow: 2px 1px #eee; font-size: 40px; font-family: 'Eras'; color: #000000; " class="mb-4">ALLIAGES ERP</h1>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
 
 
                                                 <div class="mt-4">
-                                                    <button class="btn btn-orange btn-block waves-effect waves-light" type="submit">Se Connecter</button>
+                                                    <button class="btn btn-dark btn-block waves-effect waves-light" type="submit">Se Connecter</button>
                                                 </div>
 
                                             </div>
