@@ -96,9 +96,7 @@
      </style>
 </head>
 <body>
-
     <header>
-
        <img style="width: 100%; height: 120px;" src= "https://app.geosyntech.cm/img/entete_proforma.png" alt=""/>
     </header>
 
@@ -211,13 +209,13 @@
 
                 <div style="position: relative">
                      <div style="width: 45%; float: left; border: solid 1px #000000">
-                            <h5 style="background-color: #555; color: #FFFFFF; font-weight: 800;">NOTE SPECIALE</h5>
+                            <h6 style="background-color: #555; color: #FFFFFF; font-weight: 800;">NOTE SPECIALE</h6>
                             <p><?= $proforma->note_speciale ?></p>
 
                      </div>
 
                      <div style="width: 45%; float: left; margin-left: 5%; border: 1px solid #000000">
-                        <h5 style="background-color: #555; color: #FFFFFF; font-weight: 800;">MODALITES DE PAIEMENT</h5>
+                        <h6 style="background-color: #555; color: #FFFFFF; font-weight: 800;">MODALITES DE PAIEMENT</h6>
                         <p><?= $proforma->modalites_paiement ?></p>
 
                      </div>
