@@ -39,7 +39,7 @@
              height: 50px;
 
              /** Extra personal styles **/
-             background-color: red;
+
              color: #000;
              text-align: center;
 
@@ -99,17 +99,17 @@
 
     <header>
 
-       <img style="width: 100%; height: 100px;" src= "{{ public_path().DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'entete.png' }} " alt=""/>
+       <img style="width: 100%; height: 120px;" src= "https://app.geosyntech.cm/img/entete_proforma.png" alt=""/>
     </header>
 
     <footer>
-      <img style="width: 100%" src= "{{ public_path().DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'pied.png' }} " alt=""/>
+      <img style="width: 100%; height: 120px;" src= "https://app.geosyntech.cm/img/pied_proforma.png" alt=""/>
     </footer>
 
     <main>
         <div style="padding-top: 30px" class="container">
             <div style="margin-top: 100px; margin-right: auto; margin-left: auto; max-width: 700px; text-align: center">
-
+                <?php $projet = $proforma->projet; ?>
                <div style="width: 100%; box-sizing: border-box; padding-top: 30px; display: flex; flex-wrap: wrap; margin-top: -130px">
                     <div style="border: 1px solid #111; max-width: 40%; flex: 0 0 40%; width: 100%; position: relative; padding: 0 12px;">
                         <h6 style="font-weight: bolder; text-align: center">{{ $projet->client->name }}</h6>
@@ -148,10 +148,11 @@
 
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <?php $i=1; $som=0; ?>
-                                @if($projet->lignes->count())
-                                    @foreach($projet->lignes as $prdt)
+                                @if($proforma->frncotation->lignes->count())
+                                    @foreach($proforma->frncotation->lignes as $prdt)
                                         <?php //dd($prdt) ?>
                                         <tr>
                                           <td>{{ $i++ }}</td>
@@ -169,29 +170,31 @@
                                           <td>{{ number_format($prdt->quantity,0,',','.') }} m² </td>
 
                                           <td>
-                                               <span class="">{{ number_format($prdt->price,2,',','.') }} XAF/m²</span>
+                                               <span class="">{{ \App\Helpers\CurrencyFr::format($prdt->pu) }} XAF/m²</span>
                                           </td>
                                           <td>
-                                               <span class="">{{ number_format($prdt->montant,2,',','.') }} XAF/m²</span>
+                                               <span class="">{{ \App\Helpers\CurrencyFr::format($prdt->montant) }} XAF/m²</span>
                                           </td>
                                         </tr>
 
                                     @endforeach
                                     <tr>
-                                        <th colspan="4" style="text-align: right; font-weight: bolder">MONTANT TOTAL HT</th>
-                                        <th colspan="1" style="text-align: right; font-weight: bolder; padding-right: 20px; border-right: 1px #111 solid" class="">{{ number_format($projet->montant,0,'.',',') }} </th>
+                                        <th colspan="2"></th>
+                                        <th colspan="2" style="text-align: right; font-weight: bolder">MONTANT TOTAL HT</th>
+                                        <th colspan="1" style="text-align: right; font-weight: bolder; padding-right: 20px; border-right: 1px #111 solid" class="">{{ \App\Helpers\CurrencyFr::format($proforma->montant) }} XAF</th>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <th colspan="2">B</th>
+                                        <th colspan="2" style="text-align: right; font-weight: bolder">TVA (19,25%) :</th>
+                                        <th colspan="1" style="text-align: right; font-weight: bolder; padding-right: 20px; border-right: 1px #111 solid" class="">{{  \App\Helpers\CurrencyFr::format($proforma->montant_tva) }} XAF </th>
                                     </tr>
                                     <tr>
-                                        <th colspan="4" style="text-align: right; font-weight: bolder">VALEUR TVA (19,25%) :</th>
-                                        <th colspan="1" style="text-align: right; font-weight: bolder; padding-right: 20px; border-right: 1px #111 solid" class="">{{ number_format($projet->vtva,0,'.',',') }} </th>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="4" style="text-align: right; font-weight: bolder">VALEUR AIR  (2,2%) :</th>
-                                        <th colspan="1" style="text-align: right; font-weight: bolder; padding-right: 20px; border-right: 1px #111 solid" class="">{{ number_format($projet->vair,0,'.',',') }} </th>
-                                    </tr>
-                                    <tr class="bg-primary">
-                                        <th colspan="4" style="text-align: right; font-weight: bolder; color: #FFFFFF">MONTANT TOTAL TTC  :</th>
-                                        <th colspan="1" style="text-align: right; font-weight: bolder; padding-right: 20px; color: #FFFFFF" class="">{{ number_format($projet->total,0,'.',',') }} </th>
+                                        <th colspan="2">C</th>
+                                        <th colspan="2" style="text-align: right; font-weight: bolder">AIR  (2,2%) :</th>
+                                        <th colspan="1" style="text-align: right; font-weight: bolder; padding-right: 20px; border-right: 1px #111 solid" class="">{{ \App\Helpers\CurrencyFr::format($proforma->montant_air) }} XAF </th>
                                     </tr>
 
 
@@ -201,38 +204,24 @@
                                     </tr>
                                 @endif
                             </tbody>
+
                         </table>
                      </div>
 
 
-
-                     <div style="width: 50%">
-
-                             <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th style="background-color: #555; color: #FFFFFF; font-weight: 800;">NOTE SPECIALE</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <?= $projet->note_speciale ?>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th style="background-color: #555; color: #FFFFFF; font-weight: 800;">MODALITES DE PAIEMENT</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <?= $projet->modalites_paiement ?>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div style="position: relative">
+                     <div style="width: 45%; float: left; border: solid 1px #000000">
+                            <h5 style="background-color: #555; color: #FFFFFF; font-weight: 800;">NOTE SPECIALE</h5>
+                            <p><?= $proforma->note_speciale ?></p>
 
                      </div>
 
+                     <div style="width: 45%; float: left; margin-left: 5%; border: 1px solid #000000">
+                        <h5 style="background-color: #555; color: #FFFFFF; font-weight: 800;">MODALITES DE PAIEMENT</h5>
+                        <p><?= $proforma->modalites_paiement ?></p>
+
+                     </div>
+                </div>
                 </div>
             </div>
 

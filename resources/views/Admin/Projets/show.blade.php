@@ -1,4 +1,4 @@
-@extends('......layouts.admin')
+@extends('layouts.admin')
 
 
 @section('page-title')
@@ -533,14 +533,14 @@
                                                             <div class="col-md-6 col-sm-12">
                                                                 <div class="form-group">
                                                                   <label for="note_speciale">NOTE SPECIALE</label>
-                                                                  <textarea class="form-control editor" name="note_speciale" id="note_speciale" cols="30" rows="10"></textarea>
+                                                                  <textarea class="form-control editor" name="note_speciale" id="pf_note_speciale" cols="30" rows="10"></textarea>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6 col-sm-12">
                                                                 <div class="form-group">
                                                                   <label for="modalites_paiement">MODALITES DE PAIEMENT</label>
-                                                                  <textarea class="form-control editor" name="modalites_paiement" id="modalites_paiement" cols="30" rows="10"></textarea>
+                                                                  <textarea class="form-control editor" name="modalites_paiement" id="pf_modalites_paiement" cols="30" rows="10"></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -553,6 +553,11 @@
                                             <div class="card">
                                                 <div class="card-header">
                                                     <h6 class="card-title">TABLEAU D'EVALUATION DES COUTS</h6>
+                                                    <ul class="list-inline pull-right">
+                                                        <li class="list-inline-item">
+                                                            <a class="btn btn-xs btn-danger" href="/proforma/print/{{ $projet->proforma->token }}"><i class="fa fa-print"></i> imprimer cette proforma</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                                 <div class="card-body table-responsive">
                                                     <table class="table table-condensed table-bordered table-striped">
@@ -631,29 +636,30 @@
                                                         <div class="col-md-6 col-sm-12">
                                                             <div class="form-group">
                                                                 <label for="debut">DATE D'ETABLISSEMENT</label>
-                                                                <input type="date" name="debut" id="debut" class="form-control"/>
+                                                                <input type="date" name="debut" id="debut" value=<?php echo date_format($projet->proforma->debut,'Y-m-d'); ?> class="form-control"/>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12">
                                                             <div class="form-group">
-                                                                <label for="fin">DATE D'EXPIRATION</label>
-                                                                <input type="date" name="fin" id="fin" class="form-control"/>
+                                                                <label for="fin">DATE D'EXPIRATION </label>
+                                                                <input type="date" name="fin" id="fin" value=<?php echo date_format($projet->proforma->fin,'Y-m-d'); ?> class="form-control"/>
                                                             </div>
                                                         </div>
                                                     </div>
+
 
                                                      <div class="row">
                                                             <div class="col-md-6 col-sm-12">
                                                                 <div class="form-group">
                                                                   <label for="note_speciale">NOTE SPECIALE</label>
-                                                                  <textarea class="form-control editor" name="note_speciale" id="note_speciale" cols="30" rows="10"></textarea>
+                                                                  <textarea class="form-control editor" name="note_speciale" id="pf_note_speciale" cols="30" rows="10"><?= $projet->proforma->note_speciale ?></textarea>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6 col-sm-12">
                                                                 <div class="form-group">
-                                                                  <label for="modalites_paiement">MODALITES DE PAIEMENT</label>
-                                                                  <textarea class="form-control editor" name="modalites_paiement" id="modalites_paiement" cols="30" rows="10"><?= $projet->proforma ?></textarea>
+                                                                  <label for="pf_modalites_paiement">MODALITES DE PAIEMENT</label>
+                                                                  <textarea class="form-control editor" name="modalites_paiement" id="pf_modalites_paiement" cols="30" rows="10"><?= $projet->proforma->modalites_paiement ?></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1592,6 +1598,10 @@
     </style>
 
 <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('summernote/dist/summernote.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('summernote/lang/summernote-fr-FR.js') }}"></script>
+ <link rel="stylesheet" href="{{ asset('summernote/dist/summernote.css') }}"/>
+
 <script type="text/javascript" src="{{ asset('js/loadingOverlay.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}"/>
 <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
@@ -1601,6 +1611,10 @@
 <script>
   $(function () {
     $(".datatable").DataTable();
+    $('.editor').summernote({
+     height: 125,
+     tabsize: 2
+     });
   });
 
   $('#btn-jalon').click(function(e){
@@ -1705,7 +1719,9 @@
             url:'/admin/proformas/',
             type:'Post',
             dataType:'JSON',
-            data:{_csrf:$('input[name="_token"]').val(), lignes:lignes, jalons:jalons,modalites_paiement:$('#modalites_paiement').text(),note_speciale:$('#note_speciale').text(), debut:$('#debut').val(),fin:$('#fin').val(), projet_id:$('#projet_id').val()},
+            data:{_csrf:$('input[name="_token"]').val(), lignes:lignes, jalons:jalons,
+            modalites_paiement:$('#pf_modalites_paiement').val(),note_speciale:$('#pf_note_speciale').val(),
+            debut:$('#debut').val(),fin:$('#fin').val(), projet_id:$('#projet_id').val()},
             beforeSend:function(xhr){
                 xhr.setRequestHeader('X-CSRF-Token',$('input[name="_token"]').val());
             },

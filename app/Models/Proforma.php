@@ -57,6 +57,15 @@ class Proforma extends Model
 		return $som;
 	}
 
+	public function getMontantTvaAttribute(){
+		return $this->getMontantAttribute() * 19.25 / 100;
+
+	}
+
+	public function getMontantAirAttribute(){
+		return $this->getMontantAttribute() * 2.2 / 100;
+	}
+
 
 
 	public function getGrossVolumeAttribute(){

@@ -154,7 +154,7 @@ class DiversController extends Controller
 	public function printProforma($token){
 		//dd(phpinfo());
 		$projet = Proforma::where('token',$token)->first();
-		$data =['projet'=>$projet];
+		$data =['proforma'=>$projet];
 		$pdf = PDF::loadView('Utils/print_proforma',$data);
 		return $pdf->stream($projet->client->sigle.$projet->name.'.pdf');
 	}

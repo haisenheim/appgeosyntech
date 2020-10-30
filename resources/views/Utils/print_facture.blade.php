@@ -40,7 +40,7 @@
              height: 50px;
 
              /** Extra personal styles **/
-             background-color: red;
+
              color: #000;
              text-align: center;
 

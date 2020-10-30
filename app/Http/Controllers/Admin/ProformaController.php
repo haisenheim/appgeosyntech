@@ -59,6 +59,8 @@ class ProformaController extends Controller
 		    'frncotation_id'=>$frncotation->id
 	    ];
 
+	   // dd($data);
+
 	    $proforma = Proforma::updateOrCreate(['frncotation_id'=>$frncotation->id],$data);
 	    $lignes = $request->lignes;
 	    for($i=0;$i<count($lignes);$i++){
@@ -72,9 +74,11 @@ class ProformaController extends Controller
 
 	    $jalons = $request->jalons;
 
-	    for($i=0;$i<count($jalons);$i++){
-		   $jalon = Jalon::create(['proforma_id'=>$proforma->id,'projet_id'=>$projet->id, 'ordre'=>$i,'pourcentage'=>$jalons[$i]['pourcentage'],'name'=>$jalons[$i]['name']]);
-		    $facture = Facture::create(['name'=>date('ymdh'). $jalon->id % 100, 'jalon_id'=>$jalon->id,'proforma_id'=>$proforma->id,'projet_id'=>$projet->id,'token'=>sha1(date('Ymdhsi'). $jalon->id)]);
+	    if($jalons) {
+		    for ($i = 0; $i < count($jalons); $i++) {
+			    $jalon = Jalon::create(['proforma_id' => $proforma->id, 'projet_id' => $projet->id, 'ordre' => $i, 'pourcentage' => $jalons[$i]['pourcentage'], 'name' => $jalons[$i]['name']]);
+			    $facture = Facture::create(['name' => date('ymdh') . $jalon->id % 100, 'jalon_id' => $jalon->id, 'proforma_id' => $proforma->id, 'projet_id' => $projet->id, 'token' => sha1(date('Ymdhsi') . $jalon->id)]);
+		    }
 	    }
 
 	    return response()->json($proforma);
