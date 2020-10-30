@@ -97,11 +97,11 @@
 </head>
 <body>
     <header>
-       <img style="width: 100%; height: 120px;" src= "https://app.geosyntech.cm/img/entete_proforma.png" alt=""/>
+       <img style="width: 100%; height: 120px;" src= "https://app.geosyntech.cm/img/entete_proforma.PNG" alt=""/>
     </header>
 
     <footer>
-      <img style="width: 100%; height: 120px;" src= "https://app.geosyntech.cm/img/pied_proforma.png" alt=""/>
+      <img style="width: 100%; height: 120px;" src= "https://app.geosyntech.cm/img/pied_proforma.PNG" alt=""/>
     </footer>
 
     <main>
