@@ -103,7 +103,7 @@
     </header>
 
     <footer>
-      <img style="width: 100%" src= "{{ public_path().DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.'pied.png' }} " alt=""/>
+      <img style="width: 100%" src= "https://app.geosyntech.cm/img/pied.png" alt=""/>
     </footer>
 
     <main>
@@ -203,7 +203,7 @@
                                     </tr>
                                     <tr class="bg-success">
                                         <th colspan="2">D = A+B+C</th>
-                                        <th colspan="2" style="text-align: right; font-weight: bolder; color: #FFFFFF">JALON N <sup>0</sup> {{ $facture->jalon->ordre }} TOTAL A PAYER TTC  :</th>
+                                        <th colspan="2" style="text-align: right; font-weight: bolder; color: #FFFFFF">JALON N {{ $facture->jalon->ordre }} TOTAL A PAYER TTC  :</th>
                                         <th colspan="1" style="text-align: right; font-weight: bolder; padding-right: 20px; color: #FFFFFF" class="">{{ \App\Helpers\CurrencyFr::format($facture->net) }} XAF </th>
                                     </tr>
 
@@ -228,9 +228,9 @@
                                         <th colspan="1">MONTANT</th>
                                     </tr>
                                     @foreach($facture->proforma->jalons as $jalon)
-                                        <tr>
+                                        <tr style="background-color: {{ $facture->jalon_id == $jalon->id?'green':'transparent' }}">
                                             <th>{{$jalon->name}}</th>
-                                            <th><input style="border: solid 2px" type="checkbox" value="true"/></th>
+
                                             <th>{{ \App\Helpers\CurrencyFr::format($jalon->montant) }} XAF</th>
                                         </tr>
                                     @endforeach
