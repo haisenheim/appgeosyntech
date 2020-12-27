@@ -21,9 +21,9 @@
 
      <div class="row">
             <div class="col-12">
-              <div class="card">
+              <div class="card card-light">
                 <div class="card-header">
-                  <h3 class="card-title">PROJETS <a class="btn btn-orange btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
+                  <h3 class="text-center p-2">ANALYSE DES ACHATS</h3>
                     <hr/>
                     <form class="form-inline" action="/admin/analyses/achats">
 

@@ -22,8 +22,6 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">PROJETS <a class="btn btn-orange btn-xs pull-right" href="#" data-toggle="modal" data-target="#modal-lg"><i class="fa fa-plus-circle"></i></a></h3>
-                    <hr/>
                     <form class="form-inline" action="/admin/analyses/produits">
 
                       <div style="padding: 0 10px" class="form-group">
