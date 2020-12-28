@@ -63,7 +63,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center mb-2">
-                            <a href="/" class="logo"><img src="{{ asset('img/logo-light.jpg') }}" height="120" alt="Ici le logo" ></a>
+                            <a href="/" class="logo"><img src="{{ asset('img/logo-geo.jpeg') }}" height="120" alt="Ici le logo" ></a>
                         </div>
                     </div>
                 </div>
