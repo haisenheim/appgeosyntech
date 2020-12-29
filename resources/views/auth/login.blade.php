@@ -12,7 +12,9 @@
         <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
         <!-- Bootstrap Css -->
         <!-- Bootstrap Css -->
-        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <link href="{{ asset('assets//libs/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <script src="{{ asset('assets//libs/bootstrap/js/bootstrap.min.js') }}"></script>
         <!-- Icons Css -->
         <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
@@ -27,9 +29,9 @@
             }
 
             .bg-image{
-                background-image: url("{{ asset('img/background/img6.jpg') }}");
-                filter: blur(8px);
-                -webkit-filter:blur(8px);
+
+                filter: blur(6px);
+                -webkit-filter:blur(6px);
                 height: 100%;
                 background-position:center;
                 background-repeat: no-repeat;
@@ -52,27 +54,46 @@
                 border-radius: 50%;
 
             }
+
+            .carousel-item{
+                position: absolute;
+                height: 100%;
+                top:0;
+            }
         </style>
 
     </head>
 
     <body>
-    <div class="bg-image"></div>
+    <div class="bg-image">
+        <div id="carouselExampleSlidesOnly" data-pause="false" class="carousel slide h-100 carousel-fade" data-ride="carousel">
+          <div class="carousel-inner h-100">
+            <div style="background-image: url('{{ asset('img/background/img4.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item active">
+            </div>
+            <div style="background-image: url('{{ asset('img/background/img6.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            </div>
+            <div style="background-image: url('{{ asset('img/background/img5.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            </div>
+            <div style="background-image: url('{{ asset('img/background/img2.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            </div>
+            <div style="background-image: url('{{ asset('img/background/img7.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            </div>
+            <div style="background-image: url('{{ asset('img/background/img3.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            </div>
+          </div>
+        </div>
+
+    </div>
         <div class="login-box">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center mb-2">
-                            <a href="/" class="logo"><img src="{{ asset('img/logo-geo.jpeg') }}" height="120" alt="Ici le logo" ></a>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- end row -->
 
                 <div class="justify-content-center">
                     <div style="width: 80%; margin-left: auto; margin-right: auto"  class="">
                         <div class="" style="background-color: transparent; border: none">
-                            <div class="card-header" style="background-color: transparent">
+                            <div class="card-header" style="background-color: transparent; border-bottom: solid #ffffff 2px">
+                                <img src="{{ asset('img/logo-geo.jpeg') }}" height="120" class="w-100 mb-4" alt="Ici le logo" >
                                 <h1 class="text-center" style="font-weight: 900; text-shadow: 2px 1px #eee; font-size: 40px; font-family: 'Eras'; color: #000000; ">ALLIAGES ERP</h1>
                             </div>
                             <div class="card-body p-4">
