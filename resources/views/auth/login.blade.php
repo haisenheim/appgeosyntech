@@ -68,17 +68,17 @@
     <div class="bg-image">
         <div id="carouselExampleSlidesOnly" data-pause="false" class="carousel slide h-100 carousel-fade" data-ride="carousel">
           <div class="carousel-inner h-100">
-            <div style="background-image: url('{{ asset('img/background/img4.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item active">
+            <div style="background-image: url('{{ asset('img/background/img4.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" data-interval="15000" class="carousel-item  active">
             </div>
-            <div style="background-image: url('{{ asset('img/background/img6.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            <div style="background-image: url('{{ asset('img/background/img6.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;"  data-interval="20000" class="carousel-item">
             </div>
-            <div style="background-image: url('{{ asset('img/background/img5.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            <div style="background-image: url('{{ asset('img/background/img5.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" data-interval="20000" class="carousel-item">
             </div>
-            <div style="background-image: url('{{ asset('img/background/img2.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            <div style="background-image: url('{{ asset('img/background/img2.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" data-interval="20000" class="carousel-item">
             </div>
-            <div style="background-image: url('{{ asset('img/background/img7.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            <div style="background-image: url('{{ asset('img/background/img7.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" data-interval="20000" class="carousel-item">
             </div>
-            <div style="background-image: url('{{ asset('img/background/img3.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="carousel-item">
+            <div style="background-image: url('{{ asset('img/background/img3.jpg') }}'); height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" data-interval="20000" class="carousel-item">
             </div>
           </div>
         </div>
