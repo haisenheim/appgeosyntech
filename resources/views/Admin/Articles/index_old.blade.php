@@ -36,16 +36,24 @@
                    <table class="table table-bordered table-striped table-condensed table-hover datatable">
                         <thead>
                             <tr>
+                                <th colspan="4"></th>
+                                <th colspan="5">EMBALLAGE</th>
+                                <th colspan="2">DOUANE</th>
+                                <th></th>
+                            </tr>
+                            <tr>
                                 <th>DESIGNATION</th>
+                                <th>TYPE</th>
                                 <th>FOURNISSEUR</th>
-                                <th>FAMILLE</th>
-                                <th>RE</th>
-                                <th>SE</th>
-                                <th>FI</th>
-                                <th>ET</th>
-                                <th>DR</th>
-                                <th>PR</th>
-                                <th>EN</th>
+                                <th>CATEGORIE</th>
+
+                                <th>LONG.</th>
+                                <th>LARG.</th>
+                                <th>DIA.</th>
+                                <th>POIDS</th>
+                                <th>VOLUME</th>
+                                <th>CODE HS</th>
+                                <th>TAUX DDI</th>
                                 <th></th>
                             </tr>
 
@@ -53,25 +61,26 @@
                         <tbody>
 
                             @foreach($articles as $group=>$value)
-                                <tr class="bg-info">
-                                    <th style=" font-weight: bolder; color: #f5f5f5;"  colspan="11">{{ $group }}</th>
+                                <tr style="background-color: orangered; border: 1px solid orange">
+                                    <th style="font-weight: bolder; color: #f5f5f5;"  colspan="11">{{ $group }}</th>
                                 </tr>
                                 @foreach($value as $article)
                                   <tr>
                                       <td>{{ $article->name }} </td>
+                                      <td>{{ $article->tproduit?$article->tproduit->name:'-' }}</td>
                                       <td>{{ $article->fournisseur?$article->fournisseur->name:'-' }}</td>
                                       <td>{{ $article->category?$article->category->name:'-' }}</td>
-                                      <td class="text-center"><?= $article->re?'<span class="badge badge-light"><i class="fa fa-check-circle"></i></span>':'' ?></td>
-                                      <td class="text-center"><?= $article->se?'<span class="badge badge-light"><i class="fa fa-check-circle"></i></span>':'' ?></td>
-                                      <td class="text-center"><?= $article->fi?'<span class="badge badge-light"><i class="fa fa-check-circle"></i></span>':'' ?></td>
-                                      <td class="text-center"><?= $article->et?'<span class="badge badge-light"><i class="fa fa-check-circle"></i></span>':'' ?></td>
-                                      <td class="text-center"><?= $article->dr?'<span class="badge badge-light"><i class="fa fa-check-circle"></i></span>':'' ?></td>
-                                      <td class="text-center"><?= $article->pr?'<span class="badge badge-light"><i class="fa fa-check-circle"></i></span>':'' ?></td>
-                                      <td class="text-center"><?= $article->en?'<span class="badge badge-light"><i class="fa fa-check-circle"></i></span>':'' ?></td>
+                                      <td>{{ number_format($article->longueur) }}</td>
+                                      <td>{{ number_format($article->largeur) }}</td>
+                                      <td>{{ number_format($article->diametre) }}</td>
+                                      <td>{{ number_format($article->poids) }}</td>
+                                      <td>{{ number_format($article->volume) }}</td>
+                                      <td>{{ $article->code_hs }}</td>
+                                      <td>{{ $article->taux_ddi }}</td>
                                       <td style="min-width: 7%;">
                                       <ul style="margin-bottom: 0" class="list-inline">
                                         <li class="list-inline-item"><a class="btn btn-light btn-xs" href="{{route('admin.articles.show',[$article->id])}}"><i class="fa fa-search"></i></a></li>
-                                        <li class="list-inline-item"><a class="btn btn-info btn-xs btn-edit" href="{{route('admin.articles.edit',[$article->id])}}"><i class="fa fa-edit"></i></a></li>
+                                        <li class="list-inline-item"><a class="btn btn-orange btn-xs btn-edit" href="{{route('admin.articles.edit',[$article->id])}}"><i class="fa fa-edit"></i></a></li>
 
                                       </ul>
                                       </td>

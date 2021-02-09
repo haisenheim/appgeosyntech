@@ -69,8 +69,8 @@
 
                         <div class="col-md-4 col-sm-12">
                             <div class="form-group">
-                                <label for="name">CATEGORIES</label>
-                                <select required class="form-control" name="category_id" id="name">
+                                <label for="name">FAMILLE</label>
+                                <select required class="form-control" name="family_id" id="name">
                                     <option class="text-danger" value="">CATEGORIE</option>
                                     @foreach($categories as $categorie)
                                         <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
@@ -80,78 +80,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <fieldset>
-
-                        <div class="row">
-                            <div class="col-md-2 col-sm-12">
-                                <div class="form-group">
-                                    <label for="name">Longueur</label>
-                                    <input class="form-control" name="longueur" value="{{ $article->longueur }}" type="text" placeholder="longueur"/>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2 col-sm-12">
-                                <div class="form-group">
-                                <label for="name">Largeur</label>
-                                    <input class="form-control" name="largeur" type="text" value="{{ $article->largeur }}" placeholder="largeur"/>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2 col-sm-12">
-                                <div class="form-group">
-                                <label for="name">Diametre</label>
-                                    <input class="form-control" name="diametre" type="text" value="{{ $article->diametre }}"/>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-12">
-                                <div class="form-group">
-                                <label for="name">Poids U.</label>
-                                    <input class="form-control" name="poids" type="text" value="{{ $article->poids }}"/>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-12">
-                                <div class="form-group">
-                                <label for="name">Volume</label>
-                                    <input class="form-control" name="volume" type="text" value="{{ $article->volume }}" />
-                                </div>
-                            </div>
-                            </div>
-                            <div class="row">
-                            <div class="col-md-2 col-sm-12">
-                                <div class="form-group">
-                                <label for="name">CODE HS</label>
-                                    <input class="form-control" name="code_hs" type="text" value="{{ $article->coe_hs }}" />
-                                </div>
-                            </div>
-
-                            <div class="col-md-2 col-sm-12">
-                                <div class="form-group">
-                                <label for="name">TAUX DDI</label>
-                                    <input class="form-control" name="taux_ddi" type="text" value="{{ $article->taux_ddi }}" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <div class="form-group">
-                                <label for="name">Description Fr.</label>
-                                   <textarea class="form-control" name="description" id="description" cols="30" rows="3">{{ $article->description }}</textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-12">
-                                <div class="form-group">
-                                <label for="name">Description En.</label>
-                                   <textarea class="form-control" name="description_en" id="description_en" cols="30" rows="3">{{ $article->description_en }}</textarea>
-                                </div>
-                            </div>
-
-                        </div>
-                    </fieldset>
 
                     <div class="text-center">
                         <button class="btn btn-orange" type="submit">ENGREGISTRER</button>
